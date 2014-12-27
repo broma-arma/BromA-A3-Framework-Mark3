@@ -1,0 +1,89 @@
+
+class CfgFunctions {
+    class BRM {
+        class init {
+            file = "framework\engine\functions\engine";
+            class engine_pre{preInit = 1;};
+            class engine_post{postInit = 1;};
+            class initPlayer{postInit = 1;};
+        };
+        class engine {
+            file = "framework\engine\functions\engine";
+            class loadSettings{preInit = 1;};
+            class loadPlugins{};            
+            class logPlugins{};
+            class getDep{};
+        };
+        class ending {
+            file = "framework\engine\functions\engine";
+            class callEnding{};
+            class endingScreen{};
+            class endingGetStats{};
+        };
+        class tasks {
+            file = "framework\engine\functions\engine";
+            class commonObjectives{preInit = 1;};
+            class newTask{};
+            class setTask{};            
+        };
+        class events {
+            file = "framework\engine\events";
+            class onConnect{};
+            class onKilled{};
+            class onRespawn{};
+        };
+        class briefing {
+            file = "mission\briefings";
+            class loadBriefing{postInit = 1;};
+        };
+        class api {
+            file = "framework\engine\functions\api";
+            class newMarkerArea{};
+            class newMarkerIcon{};
+            class stripItems{};
+            class weaponAway{};
+            class assignLoadout{};
+        };
+    };
+};
+
+class CfgDebriefing
+{  
+    #include "mission\debriefing.sqf"
+};
+
+class Params {
+    #include "mission\parameters.sqf"
+};
+
+class CfgPlugins {
+    #include "framework\plugins\plugins.cpp"
+};
+
+class cfgNotifications
+{
+    class Alert
+    {
+        title = "ALERT";
+        description = "%1";
+        iconPicture="\A3\ui_f\data\map\markers\military\warning_ca.paa";
+        duration = 3;
+        priority = 9;
+    };
+    
+    class MissionBegins
+    {
+        title = "MISSION";
+        description = "Mission begins in %1 minute(s).";
+        iconPicture="\A3\UI_F\data\IGUI\Cfg\Actions\settimer_ca.paa";
+        duration = 3;
+        priority = 1;
+    };
+};
+
+respawn = 3;
+respawndelay = 4;
+respawnDialog = 0;
+disabledAI = 1;
+maxScore = 75000;
+enableDebugConsole = 1;

@@ -69,6 +69,12 @@ sideB_Name = "CSAT";          // Enemy faction.
 
 // =============================================================================
 
+sideC_Side = resistance;      // Side the enemies belong to
+sideC_Color = "green";        // Color of the enemy side.
+sideC_Name = "AAF";           // Enemy faction.
+
+// =============================================================================
+
 DAC_Res_Side = 1;                    // Side the independent are friendly to:
                                      // 0: EAST / 1: WEST / 2: NOBODY
                                      // (MUST BE THE SAME AS THE EDITOR!)

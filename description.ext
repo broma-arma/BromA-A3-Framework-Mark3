@@ -24,7 +24,8 @@ class CfgFunctions {
             file = "framework\engine\functions\engine";
             class commonObjectives{preInit = 1;};
             class newTask{};
-            class setTask{};            
+            class setTask{};   
+            class checkTasks{};
         };
         class events {
             file = "framework\engine\events";

@@ -1,14 +1,14 @@
-fn_endMission = {
-    private["_stats","_showEnding","_success"];
+[-2, {
+    private["_ending","_stats","_showEnding","_success"];
     
-    _stats = [] call BRM_fnc_endingGetStats;
-    _success = [_this select 0] call compile preprocessFile "mission\settings\endings.sqf";
-    _showEnding = [] spawn BRM_fnc_endingScreen;
-    
-    waitUntil{(scriptDone _showEnding)};
-    
-    if (isServer) then { sleep 2 };
-    [_this select 0, _success,true] spawn BIS_fnc_endMission;
-};
+    _ending = _this;
 
-if (isServer) then { [[_this select 0], "fn_endMission", true] spawn BIS_fnc_MP };
+    _stats = [] call BRM_fnc_endingGetStats;
+    _success = [_ending] call compile preprocessFile "mission\settings\endings.sqf";
+    _showEnding = [] spawn BRM_fnc_endingScreen;
+
+    waitUntil{(scriptDone _showEnding)};
+
+    if (isServer) then { sleep 2 };
+    [_ending, _success,true] spawn BIS_fnc_endMission;
+}, _this select 0] call CBA_fnc_globalExecute;

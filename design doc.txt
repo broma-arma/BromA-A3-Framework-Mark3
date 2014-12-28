@@ -46,7 +46,7 @@ By abstracting separate scripts into separate folders and functions into an API 
 	- Smarter way of assigning parameters
 	- Introduce endings
 	
-	
+	- Fix the way tasks work
 	
 	
 	

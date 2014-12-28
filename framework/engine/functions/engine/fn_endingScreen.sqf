@@ -30,7 +30,7 @@
 //    victoryReason2, margin,playerFactionName, pointsEnemySide, enemyFactionName, pointsPlayerSide, hours, minutes, seconds];  
 //// =============================================================================
 
-_msg = "AYY LMAO";
+_msg = "MISSION OVER";
 _endingScreen = str(hours)+":"+str(minutes)+":"+str(seconds);
 
 [_msg,-1,-1,10,1] call BIS_fnc_dynamicText;

@@ -6,19 +6,23 @@ class Mission
 		"map_vr",
 		"A3_Characters_F_BLUFOR",
 		"a3_characters_f",
-		"A3_Characters_F_OPFOR"
+		"A3_Characters_F_OPFOR",
+		"A3_Characters_F_Civil",
+		"A3_Characters_F_INDEP"
 	};
 	addOnsAuto[]=
 	{
 		"A3_Characters_F_BLUFOR",
 		"a3_characters_f",
 		"A3_Characters_F_OPFOR",
+		"A3_Characters_F_Civil",
+		"A3_Characters_F_INDEP",
 		"map_vr"
 	};
 	randomSeed=13980418;
 	class Intel
 	{
-		briefingName="BromA Framework MK 2 00003";
+		briefingName="BromA Framework MK 2 00007";
 		overviewText="STRONGER THAN EVER BEFORE.";
 		startWeather=0;
 		startWind=0.099999994;
@@ -36,7 +40,7 @@ class Mission
 	};
 	class Groups
 	{
-		items=5;
+		items=7;
 		class Item0
 		{
 			side="WEST";
@@ -45,7 +49,7 @@ class Mission
 				items=1;
 				class Item0
 				{
-					position[]={4000.0815,5,4373.748};
+					position[]={4000.0037,5,4373.748};
 					id=0;
 					side="WEST";
 					vehicle="B_Soldier_F";
@@ -57,44 +61,6 @@ class Mission
 		};
 		class Item1
 		{
-			side="WEST";
-			class Vehicles
-			{
-				items=1;
-				class Item0
-				{
-					position[]={4021.4426,5,4373.748};
-					id=1;
-					side="WEST";
-					vehicle="B_Soldier_F";
-					leader=1;
-					skill=0.2;
-					ammo=0;
-					text="thisguy2";
-				};
-			};
-		};
-		class Item2
-		{
-			side="EAST";
-			class Vehicles
-			{
-				items=1;
-				class Item0
-				{
-					position[]={3980.0688,5,4373.4707};
-					id=2;
-					side="EAST";
-					vehicle="O_Soldier_F";
-					leader=1;
-					skill=0.2;
-					ammo=0;
-					text="thisguy";
-				};
-			};
-		};
-		class Item3
-		{
 			side="EAST";
 			class Vehicles
 			{
@@ -102,7 +68,7 @@ class Mission
 				class Item0
 				{
 					position[]={3980.208,5,4368.1812};
-					id=3;
+					id=1;
 					side="EAST";
 					vehicle="O_Soldier_F";
 					player="PLAY CDG";
@@ -112,7 +78,7 @@ class Mission
 				};
 			};
 		};
-		class Item4
+		class Item2
 		{
 			side="WEST";
 			class Vehicles
@@ -120,14 +86,86 @@ class Mission
 				items=1;
 				class Item0
 				{
-					position[]={4021.2339,5,4367.9722};
-					id=4;
+					position[]={4000.0088,5,4367.6733};
+					id=2;
 					side="WEST";
 					vehicle="B_Soldier_F";
 					player="PLAY CDG";
 					leader=1;
 					skill=0.2;
 					ammo=0;
+				};
+			};
+		};
+		class Item3
+		{
+			side="CIV";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={3979.6135,5,4386.5913};
+					id=3;
+					side="CIV";
+					vehicle="C_man_1";
+					leader=1;
+					skill=0.60000002;
+					text="objOP";
+				};
+			};
+		};
+		class Item4
+		{
+			side="CIV";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={4000.0625,5,4387.0894};
+					id=4;
+					side="CIV";
+					vehicle="C_man_1";
+					leader=1;
+					skill=0.60000002;
+					text="objBLU";
+				};
+			};
+		};
+		class Item5
+		{
+			side="GUER";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={4016.522,5,4367.5396};
+					id=5;
+					side="GUER";
+					vehicle="I_soldier_F";
+					player="PLAY CDG";
+					leader=1;
+					skill=0.60000002;
+				};
+			};
+		};
+		class Item6
+		{
+			side="CIV";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={4016.7209,5,4386.7896};
+					id=6;
+					side="CIV";
+					vehicle="C_man_1";
+					leader=1;
+					skill=0.60000002;
+					text="objIND";
 				};
 			};
 		};

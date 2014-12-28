@@ -12,8 +12,8 @@ if ((!isPlayer _unit)&&(!isServer)) exitWith {};
 
 // RESETS ITEMS ================================================================
 
-
 removeAllItems _unit;
+removeAllWeapons _unit;
 removeAllAssignedItems _unit;
 removeUniform _unit;
 removeVest _unit;
@@ -41,30 +41,29 @@ _isRifleman = (_type == "rifleman")||(_type == "Rifleman");
 _isRiflemanAT = (_type == "at")||(_type == "Rifleman (AT)");
 _isMarksman = (_type == "marksman")||(_type == "Marksman");
 _isAutorifleman = (_type == "mg")||(_type == "Autorifleman");
+_isMGAssistant = (_type == "mgassist")||(_type == "Ammo Bearer");
 _isLifeSaver = (_type == "medic")||(_type == "Combat Life Saver");
 _isGrenadier = (_type == "grenadier")||(_type == "Grenadier");
+_isCrew = (_type == "crew")||(_type == "Crewman");
 
 // ASSIGN LOADOUTS BASED ON FACTION ============================================
 
 switch (toUpper(_faction)) do {
     
     case "BLUFOR": {
-        _weapon = (weapons player) select 0;
-        _weapon = (_weapon call BIS_fnc_weaponComponents) select 0;
-        removeAllWeapons _unit;
-        player addWeapon _weapon;
+        #include "factions\ana.sqf"
     };
     
     case "REDFOR": {
-        
+        #include "factions\jihadists.sqf"
     };
     
     case "INDFOR": {
-        
+        #include "factions\pmc.sqf"
     };
 
     case "default": {        
-        
+        #include "factions\default.sqf"
     };     
     
 };

@@ -1,9 +1,9 @@
 if (!isServer) exitWith {};
 
-_ended = false;
+missionOver = false;
 
-while {!(_ended)} do {
-    if (count mandatoryObjectivesA > 0) then {
+while {!(missionOver)} do {
+    if ((count mandatoryObjectivesA > 0)&&(!missionOver)) then {
         _count = 0;
         {
             _id = _x select 0;
@@ -19,17 +19,17 @@ while {!(_ended)} do {
             if (_losecond) exitWith {
                 [_id,"failed", true] call BRM_fnc_setTask;
                 ["defeat"] call BRM_fnc_callEnding;
-                _ended = true;
+                missionOver = true;
             };
         } forEach mandatoryObjectivesA;
 
         if (_count == (count mandatoryObjectivesA)) exitWith {
             ["victory"] call BRM_fnc_callEnding;
-            _ended = true;
+            missionOver = true;
         };
     };
     
-    if (count mandatoryObjectivesB > 0) then {
+    if ((count mandatoryObjectivesB > 0)&&(!missionOver)) then {
         _count = 0;
         {
             _id = _x select 0;
@@ -45,17 +45,17 @@ while {!(_ended)} do {
             if (_losecond) exitWith {
                 [_id,"failed", true] call BRM_fnc_setTask;
                 ["defeat"] call BRM_fnc_callEnding;
-                _ended = true;
+                missionOver = true;
             };
         } forEach mandatoryObjectivesB;
 
         if (_count == (count mandatoryObjectivesB)) exitWith {
             ["victory"] call BRM_fnc_callEnding;
-            _ended = true;
+            missionOver = true;
         };
     };
     
-    if (count mandatoryObjectivesC > 0) then {
+    if ((count mandatoryObjectivesC > 0)&&(!missionOver)) then {
         _count = 0;
         {
             _id = _x select 0;
@@ -71,13 +71,13 @@ while {!(_ended)} do {
             if (_losecond) exitWith {
                 [_id,"failed", true] call BRM_fnc_setTask;
                 ["defeat"] call BRM_fnc_callEnding;
-                _ended = true;
+                missionOver = true;
             };
         } forEach mandatoryObjectivesC;
 
         if (_count == (count mandatoryObjectivesC)) exitWith {
             ["victory"] call BRM_fnc_callEnding;
-            _ended = true;
+            missionOver = true;
         };
     };
     

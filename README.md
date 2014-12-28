@@ -23,7 +23,6 @@ By abstracting separate scripts into separate folders and functions into an API 
 	- [x] Remove all units' items (API)
 	- [x] Platoon roster (plugin)
 	- [ ] Syncronize weather with server and clients (core)
-	- [ ] Taskmaster for task handling
 	- [ ] Spectator script (plugin)
 	- [ ] Added spectators (plugin)
 	
@@ -39,8 +38,12 @@ By abstracting separate scripts into separate folders and functions into an API 
 5. CHANGELOG
 -
 	- [x] Think of a task management system
-	- [ ] Loadouts are important
+	- [x] Loadouts are important
+		- [ ] Work a system for containers/vehicles, should be easy
 	- [x] Think of a folder structure
 	- [ ] Smarter way of assigning parameters
 	- [x] Introduce endings
 	- [x] Fix the way tasks work
+	
+	- [ ] Finish the AGM plugin, hook it to parameters
+	- [ ] Start working on the DAC plugin

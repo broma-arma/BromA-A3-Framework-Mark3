@@ -4,13 +4,12 @@ class CfgFunctions {
         class init {
             file = "framework\engine\functions\engine";
             class engine_pre{preInit = 1;};
-            class engine_post{postInit = 1;};
-            class initPlayer{postInit = 1;};
+            class engine_post{postInit = 1;};            
         };
         class engine {
             file = "framework\engine\functions\engine";
             class loadSettings{preInit = 1;};
-            class loadPlugins{};            
+            class loadPlugins{};
             class logPlugins{};
             class getDep{};
         };
@@ -24,11 +23,12 @@ class CfgFunctions {
             file = "framework\engine\functions\engine";
             class commonObjectives{preInit = 1;};
             class newTask{};
-            class setTask{};   
+            class setTask{};
             class checkTasks{};
         };
         class events {
             file = "framework\engine\events";
+            class initPlayer{postInit = 1;};
             class onConnect{};
             class onKilled{};
             class onRespawn{};
@@ -43,6 +43,9 @@ class CfgFunctions {
             class newMarkerIcon{};
             class stripItems{};
             class weaponAway{};
+        };
+        class loadout {
+            file = "mission\loadouts";
             class assignLoadout{};
         };
     };

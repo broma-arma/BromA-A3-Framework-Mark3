@@ -1,7 +1,7 @@
 private["_unit","_type","_cond","_done"];
 
-_faction = _this select 0;
-_unit = _this select 1;
+_unit = _this select 0;
+_faction = _this select 1;
 _type = "";
 
 _done = _unit getVariable ["done",false];

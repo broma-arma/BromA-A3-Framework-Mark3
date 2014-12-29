@@ -18,6 +18,7 @@
 		"config.cpp" files within the module folders.
 */
 
+//#include "dac_plugin\main.cpp"
 #include "agm_plugin\main.cpp"
 #include "map_cover\main.cpp"
 #include "team_roster\main.cpp"

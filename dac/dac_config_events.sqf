@@ -25,21 +25,21 @@ switch (_TypNumber) do
             _loadout = "redfor";
             
 		_Events_Unit_S =	[ 
-								["{ ['"+_loadout+"',_x] spawn FNC_arsenalLoadout } forEach units _group;"],
+								["{ [_x, '"+_loadout+"'] spawn BRM_fnc_assignLoadout } forEach units _group;"],
 								[],
 								[],
 								[],
-								["{ ['"+_loadout+"',_x] spawn FNC_arsenalLoadout } forEach units _group;"],
-								["{ ['"+_loadout+"',_x] spawn FNC_arsenalLoadout } forEach units _group;"],
+								["{ [_x, '"+_loadout+"'] spawn BRM_fnc_assignLoadout } forEach units _group;"],
+								["{ [_x, '"+_loadout+"'] spawn BRM_fnc_assignLoadout } forEach units _group;"],
 								[]
 							];
 		_Events_Unit_V = 	[
-								["{ ['"+_loadout+"',_x] spawn FNC_arsenalLoadout } forEach units _group;"],
+								["{ [_x, '"+_loadout+"'] spawn BRM_fnc_assignLoadout } forEach units _group;"],
 								[],
 								[],
 								[],
-								["{ ['"+_loadout+"',_x] spawn FNC_arsenalLoadout } forEach units _group;"],
-								["{ ['"+_loadout+"',_x] spawn FNC_arsenalLoadout } forEach units _group;"],
+								["{ [_x, '"+_loadout+"'] spawn BRM_fnc_assignLoadout } forEach units _group;"],
+								["{ [_x, '"+_loadout+"'] spawn BRM_fnc_assignLoadout } forEach units _group;"],
 								[]
 							];
 		_Events_Unit_T = 	[
@@ -80,21 +80,21 @@ switch (_TypNumber) do
             _loadout = "blufor";
             
 		_Events_Unit_S =	[ 
-								["{ ['"+_loadout+"',_x] spawn FNC_arsenalLoadout } forEach units _group;"],
+								["{ [_x, '"+_loadout+"'] spawn BRM_fnc_assignLoadout } forEach units _group;"],
 								[],
 								[],
 								[],
-								["{ ['"+_loadout+"',_x] spawn FNC_arsenalLoadout } forEach units _group;"],
-								["{ ['"+_loadout+"',_x] spawn FNC_arsenalLoadout } forEach units _group;"],
+								["{ [_x, '"+_loadout+"'] spawn BRM_fnc_assignLoadout } forEach units _group;"],
+								["{ [_x, '"+_loadout+"'] spawn BRM_fnc_assignLoadout } forEach units _group;"],
 								[]
 							];
 		_Events_Unit_V = 	[
-								["{ ['"+_loadout+"',_x] spawn FNC_arsenalLoadout } forEach units _group;"],
+								["{ [_x, '"+_loadout+"'] spawn BRM_fnc_assignLoadout } forEach units _group;"],
 								[],
 								[],
 								[],
-								["{ ['"+_loadout+"',_x] spawn FNC_arsenalLoadout } forEach units _group;"],
-								["{ ['"+_loadout+"',_x] spawn FNC_arsenalLoadout } forEach units _group;"],
+								["{ [_x, '"+_loadout+"'] spawn BRM_fnc_assignLoadout } forEach units _group;"],
+								["{ [_x, '"+_loadout+"'] spawn BRM_fnc_assignLoadout } forEach units _group;"],
 								[]
 							];
 		_Events_Unit_T = 	[

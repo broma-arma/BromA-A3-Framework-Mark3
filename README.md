@@ -46,4 +46,7 @@ By abstracting separate scripts into separate folders and functions into an API 
 	- [x] Fix the way tasks work
 	
 	- [ ] Finish the AGM plugin, hook it to parameters
-	- [ ] Start working on the DAC plugin
+	- [x] Start working on the DAC plugin
+		- [ ] Make native functions and abstract settings into a separate file
+		- [ ] Parameters as well
+		- [ ] IMPORTANT: functions to create zones using only reference markers

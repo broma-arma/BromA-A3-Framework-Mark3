@@ -2,25 +2,27 @@
 class CfgFunctions {
     class BRM {
         class init {
-            file = "framework\engine\functions\engine";
+            file = "framework\engine\functions\engine";                        
+            class getParams{preInit = 1;};
+            class loadSettings{preInit = 1;};            
+            class initVariables{preInit = 1;};
             class engine_pre{preInit = 1;};
             class engine_post{postInit = 1;};            
         };
-        class engine {
-            file = "framework\engine\functions\engine";
-            class loadSettings{preInit = 1;};
+        class plugins {
+            file = "framework\engine\functions\engine\plugins";
             class loadPlugins{};
             class logPlugins{};
             class getDep{};
         };
         class ending {
-            file = "framework\engine\functions\engine";
+            file = "framework\engine\functions\engine\ending";
             class callEnding{};
             class endingScreen{};
             class endingGetStats{};
         };
         class tasks {
-            file = "framework\engine\functions\engine";
+            file = "framework\engine\functions\engine\tasks";
             class commonObjectives{preInit = 1;};
             class newTask{};
             class setTask{};
@@ -51,8 +53,7 @@ class CfgFunctions {
     };
 };
 
-class CfgDebriefing
-{  
+class CfgDebriefing {  
     #include "mission\debriefing.sqf"
 };
 

@@ -1,4 +1,5 @@
 if (!isServer) exitWith {};
+waitUntil{(!isNil "paramsDone")};
 
 _center = createCenter sideLogic;
 _group = createGroup _center;
@@ -16,7 +17,7 @@ _module setVariable ["CoefDamage", 1];
 _module setVariable ["CoefNonMedic", 4];
 _module setVariable ["CoefPain", 1];
 _module setVariable ["EnableOverdosing", false];
-_module setVariable ["MaxUnconsciousnessTime", 5];
+_module setVariable ["MaxUnconsciousnessTime", revive_time_param];
 _module setVariable ["PreventDeathWhileUnconscious", true];
 _module setVariable ["PreventInstaDeath", true];
 _module setVariable ["RequireDiagnosis", true];

@@ -28,11 +28,9 @@ By abstracting separate scripts into separate folders and functions into an API 
 	
 4. NEEDS TO BE REWRITTEN
 -
-	- [ ] Make players register their IDs in the server and keep a tab
 	- [ ] Abstract all plugins using defines and postinits
-	- [ ] Make objectives happen not in the editor as triggers, but rather as spawned checks for the objective
-	
-	- [ ] API will be loaded using cfgFunctions, plugins will be used with a custom class for better metadata support
+	- [x] Make objectives happen not in the editor as triggers, but rather as spawned checks for the objective
+	- [x] API will be loaded using cfgFunctions, plugins will be used with a custom class for better metadata support
 	- [ ] Smaller network footprint, leave some variable declarations that are client-side up to the client
 	
 5. CHANGELOG
@@ -41,12 +39,16 @@ By abstracting separate scripts into separate folders and functions into an API 
 	- [x] Loadouts are important
 		- [ ] Work a system for containers/vehicles, should be easy
 	- [x] Think of a folder structure
-	- [ ] Smarter way of assigning parameters
+	- [x] Smarter way of assigning parameters
 	- [x] Introduce endings
 	- [x] Fix the way tasks work
 	
-	- [ ] Finish the AGM plugin, hook it to parameters
+	- [x] Finish the AGM plugin, hook it to parameters
 	- [x] Start working on the DAC plugin
 		- [ ] Make native functions and abstract settings into a separate file
 		- [ ] Parameters as well
 		- [ ] IMPORTANT: functions to create zones using only reference markers
+	- [ ] Respawn and lives system
+		- [ ] Not many changes, should be similar to the previous framework
+		- [ ] A function to revive dead players, like a respawn wave
+		- [ ] Obviously hooked into parameters

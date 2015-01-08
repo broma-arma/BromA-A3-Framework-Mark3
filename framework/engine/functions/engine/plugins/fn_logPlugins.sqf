@@ -1,3 +1,6 @@
+FRAMEWORK_DIARY = "framework_diary";
+player createDiarySubject [FRAMEWORK_DIARY,"Framework"];
+
 _logPlugins = [];
 {
     _path = (missionConfigFile >> "CfgPlugins" >> configName(_x));

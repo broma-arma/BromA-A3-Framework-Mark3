@@ -49,7 +49,7 @@ class Mission
 				items=2;
 				class Item0
 				{
-					position[]={3999.8513,5,4368.0317};
+					position[]={3999.9978,5,4367.9736};
 					id=0;
 					side="WEST";
 					vehicle="B_Soldier_F";
@@ -61,7 +61,7 @@ class Mission
 				};
 				class Item1
 				{
-					position[]={3999.8459,5,4365.1997};
+					position[]={3999.9924,5,4365.1416};
 					id=1;
 					side="WEST";
 					vehicle="B_Soldier_F";

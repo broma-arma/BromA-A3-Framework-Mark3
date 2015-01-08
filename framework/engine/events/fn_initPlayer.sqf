@@ -1,4 +1,6 @@
-_gearInit = player getVariable "initUnit";
+_defaultValues = ["white", "blufor", "rifleman"];
+
+_gearInit = player getVariable ["initUnit", _defaultValues];
 
 _groupColor = _gearInit select 0;
 _faction = _gearInit select 1;

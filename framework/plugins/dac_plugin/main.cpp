@@ -6,7 +6,7 @@ class dac_plugin
 	required_version = 1;
 	dependencies[] = {};
 	url = "";
-	preinit = "preinit.sqf";
-	postinit = "";
+	preinit = "";
+	postinit = "postinit.sqf";
 	environment = "server";
 };

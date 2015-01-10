@@ -29,4 +29,4 @@ _module setVariable ["PreventDeathWhileUnconscious", true];
 _module setVariable ["PreventInstaDeath", true];
 _module setVariable ["RequireDiagnosis", true];
 _module setVariable ["RequireMEDEVAC", false];
-_module setVariable ["SingleBandage", true];
+_module setVariable ["SingleBandage", false];

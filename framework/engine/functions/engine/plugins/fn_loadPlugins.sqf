@@ -3,6 +3,7 @@
 ENGINE_plugins = [];
 ENGINE_preinits = [];
 ENGINE_postinits = [];
+usedPlugins = [];
 
 for "_i" from 0 to ((count LOADED_PLUGINS) - 1) do {
     private ["_plugin","_preinit","_postinit"];
@@ -39,6 +40,8 @@ for "_i" from 0 to ((count LOADED_PLUGINS) - 1) do {
         waitUntil{([_deps] call BRM_fnc_getDep)};
         
         diag_log format["== %1 LOADED PLUGIN: %2 ==============================",_env, _plugin];
+        
+        usedPlugins pushBack _plugin;
         
         if (_preinit != "") then { [] execVM format ["framework\plugins\%1\%2", _plugin, _preinit] };
         if (_postinit != "") then { [] execVM format ["framework\plugins\%1\%2", _plugin, _postinit] };    

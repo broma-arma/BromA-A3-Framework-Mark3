@@ -19,9 +19,8 @@ while {(alive player)} do {
     if (_player isKindOf "Land") then {
 
         if (!([getPos _player, "ao"] call CBA_fnc_inArea)) then {
-            hintSilent "You cannot leave the AO.";
+            hintSilent "Please remain within the Area of Operations.";
             _pos = [getPos _player, 1, ([_player, _aoPos] call BIS_fnc_dirTo)] call BIS_fnc_relPos;
-            _player setPos _pos;
             _sleep = 0;
         }
         else { _sleep = 0.25; };

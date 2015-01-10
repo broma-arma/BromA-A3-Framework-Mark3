@@ -10,5 +10,7 @@ _role = _gearInit select 2;
 
 [player, _faction, _role] call BRM_fnc_assignLoadout;
 
+currentLives = [player] spawn BRM_fnc_getLives;
+
 player addEventHandler ["Respawn", {[_this] call BRM_fnc_onRespawn}];
 player addEventHandler ["Killed", {[_this] call BRM_fnc_onKilled}];

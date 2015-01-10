@@ -6,7 +6,7 @@ class map_cover
 	required_version = 1;
 	dependencies[] = {mission_settings};
 	url = "";
-	preinit = "preinit.sqf";
-	postinit = "";
+	preinit = "";
+	postinit = "postinit.sqf";
 	environment = "server";
 };

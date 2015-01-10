@@ -2,7 +2,7 @@ class CfgFunctions {
     class BRM {
         class init {
             file = "framework\engine\functions\engine";                        
-            class getParams{preInit = 1;};
+            class setParams{preInit = 1;};
             class loadSettings{preInit = 1;};            
             class initVariables{preInit = 1;};
             class engine_pre{preInit = 1;};
@@ -20,6 +20,12 @@ class CfgFunctions {
             class endingScreen{};
             class endingGetStats{};
         };
+        class respawn {
+            file = "framework\engine\functions\engine\respawn";
+            class getLives{};
+            class removeFromMission{};
+            class callRespawn{};
+        };
         class tasks {
             file = "framework\engine\functions\engine\tasks";
             class commonObjectives{preInit = 1;};
@@ -30,7 +36,6 @@ class CfgFunctions {
         class events {
             file = "framework\engine\events";
             class initPlayer{postInit = 1;};
-            class onConnect{};
             class onKilled{};
             class onRespawn{};
         };

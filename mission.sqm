@@ -22,7 +22,7 @@ class Mission
 	randomSeed=13980418;
 	class Intel
 	{
-		briefingName="BromA Framework MK 2 00018";
+		briefingName="BromA Framework MK 2 00019";
 		overviewText="STRONGER THAN EVER BEFORE.";
 		startWeather=0;
 		startWind=0.099999994;
@@ -40,13 +40,13 @@ class Mission
 	};
 	class Groups
 	{
-		items=6;
+		items=7;
 		class Item0
 		{
 			side="WEST";
 			class Vehicles
 			{
-				items=2;
+				items=1;
 				class Item0
 				{
 					position[]={3999.9978,5,4367.9736};
@@ -59,18 +59,6 @@ class Mission
 					skill=0.60000002;
 					init="this setVariable [""initUnit"",[""blue"",""blufor"",""SL""],false];";
 				};
-				class Item1
-				{
-					position[]={3999.9924,5,4365.1416};
-					id=1;
-					side="WEST";
-					vehicle="B_Soldier_F";
-					player="PLAY CDG";
-					skill=0.60000002;
-					health=0.9294703;
-					ammo=0;
-					init="this setVariable [""initUnit"",[""red"",""blufor"",""rifleman""],false];";
-				};
 			};
 		};
 		class Item1
@@ -82,7 +70,7 @@ class Mission
 				class Item0
 				{
 					position[]={3980.208,5,4368.1812};
-					id=2;
+					id=1;
 					side="EAST";
 					vehicle="O_Soldier_F";
 					player="PLAY CDG";
@@ -102,7 +90,7 @@ class Mission
 				class Item0
 				{
 					position[]={3979.6135,5,4386.5913};
-					id=3;
+					id=2;
 					side="CIV";
 					vehicle="C_man_1";
 					leader=1;
@@ -120,7 +108,7 @@ class Mission
 				class Item0
 				{
 					position[]={4000.0625,5,4387.0894};
-					id=4;
+					id=3;
 					side="CIV";
 					vehicle="C_man_1";
 					leader=1;
@@ -138,7 +126,7 @@ class Mission
 				class Item0
 				{
 					position[]={4016.522,5,4367.5396};
-					id=5;
+					id=4;
 					side="GUER";
 					vehicle="I_soldier_F";
 					player="PLAY CDG";
@@ -158,7 +146,7 @@ class Mission
 				class Item0
 				{
 					position[]={4016.7209,5,4386.7896};
-					id=6;
+					id=5;
 					side="CIV";
 					vehicle="C_man_1";
 					leader=1;
@@ -167,10 +155,31 @@ class Mission
 				};
 			};
 		};
+		class Item6
+		{
+			side="WEST";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={3999.9924,5,4365.1416};
+					id=6;
+					side="WEST";
+					vehicle="B_Soldier_F";
+					player="PLAY CDG";
+					leader=1;
+					skill=0.60000002;
+					health=0.9294703;
+					ammo=0;
+					init="this setVariable [""initUnit"",[""red"",""blufor"",""rifleman""],false];";
+				};
+			};
+		};
 	};
 	class Markers
 	{
-		items=1;
+		items=4;
 		class Item0
 		{
 			position[]={4000.1145,5,4352.1841};
@@ -182,6 +191,27 @@ class Mission
 			a=100;
 			b=100;
 			drawBorder=1;
+		};
+		class Item1
+		{
+			position[]={4000.0251,5,4361.2783};
+			name="respawn_west";
+			type="Empty";
+			colorName="ColorWEST";
+		};
+		class Item2
+		{
+			position[]={3980.1907,5,4361.209};
+			name="respawn_east";
+			type="Empty";
+			colorName="ColorEAST";
+		};
+		class Item3
+		{
+			position[]={4016.6582,5,4361.2783};
+			name="respawn_resistance";
+			type="Empty";
+			colorName="ColorGUER";
 		};
 	};
 };

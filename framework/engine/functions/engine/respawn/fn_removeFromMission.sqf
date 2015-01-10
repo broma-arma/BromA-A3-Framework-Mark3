@@ -30,6 +30,8 @@ _unit removeItem "ItemRadio";
 
 waitUntil{!([getPlayerUID _unit, name _unit] in deadPlayersArray)};
 
+titletext ["You are respawning...", "BLACK FADED",0];
+
 player enablesimulation true;
 
 if ("agm_plugin" in usedPlugins) then {

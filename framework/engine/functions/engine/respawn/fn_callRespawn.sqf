@@ -10,26 +10,17 @@ if (count _this > 1) then {
 
 switch (typeName _target) do {
     case "STRING": {
-        _found = false;
-        _index = 0;
-
-        {
-            if ((_x select 1) == (_target)) exitWith { _found = true; _index = _forEachindex };
-        } forEach playerLives;
-        
-        if (_found) then {
-            playerLives set [_index, [(playerLives select _index) select 0, _target, _lives]];
-            publicVariable "playerLives";
-            
-            deadPlayersArray = deadPlayersArray - [[(playerLives select _index) select 0, _target]];
-            publicVariable "deadPlayersArray";
-        };
+        _index = [_target, _lives] call BRM_fnc_setLives;
+        deadPlayersArray = deadPlayersArray - [[(playerLives select _index) select 0, _target]];
+        publicVariable "deadPlayersArray";
     };
     case "SCALAR": {
-        for "_i" from 0 to (_target-1) do {            
+        for "_i" from 0 to (_target-1) do {
             if (_i <= count deadPlayersArray) then {
+                [(deadPlayersArray select _i) select 1, _lives] call BRM_fnc_setLives;                
+                    
                 deadPlayersArray = deadPlayersArray - [[(deadPlayersArray select _i) select 0, (deadPlayersArray select _i) select 1]];
-                publicVariable "deadPlayersArray";
+                publicVariable "deadPlayersArray";                                
             };
         };
     };

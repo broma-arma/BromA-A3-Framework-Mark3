@@ -48,9 +48,11 @@ By abstracting separate scripts into separate folders and functions into an API 
 		- [ ] Make native functions and abstract settings into a separate file
 		- [ ] Parameters as well
 		- [ ] IMPORTANT: functions to create zones using only reference markers
-	- [ ] Respawn and lives system
+	- [X] Respawn and lives system
 		- [X] Not many changes, should be similar to the previous framework
 		- [X] A function to revive dead players, like a respawn wave
 		- [X] Obviously hooked into parameters
-		- [ ] To finish it up, add a way to change the lives of a player through a function so it saves more time and I can finish the callRespawn function.
-		- [ ] Make sure the player is sent to the respective respawn marker, not just starting character position.
+		- [X] To finish it up, add a way to change the lives of a player through a function so it saves more time and I can finish the callRespawn function.
+		- [X] Make sure the player is sent to the respective respawn marker, not just starting character position.
+
+	- [ ] Look around the previous framework and implement some other basic feature.

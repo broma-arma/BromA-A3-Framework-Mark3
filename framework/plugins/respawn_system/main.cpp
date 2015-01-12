@@ -6,7 +6,6 @@ class respawn_system
 	required_version = 1;
 	dependencies[] = {};
 	url = "";
-	preinit = "";
-	postinit = "postinit.sqf";
-	environment = "client";
+	preinit = "preinit.sqf";
+	environment = "all";
 };

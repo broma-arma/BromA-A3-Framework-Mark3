@@ -1,8 +1,6 @@
 if (isNil "mandatoryObjectivesA") then { mandatoryObjectivesA = [] };
 if (isNil "mandatoryObjectivesB") then { mandatoryObjectivesB = [] };
 if (isNil "mandatoryObjectivesC") then { mandatoryObjectivesC = [] };
-if (isNil "deadPlayersArray") then { deadPlayersArray = [] };
-if (isNil "playerLives") then { playerLives = [] };
 
 // =============================================================================
 //          Initializes all possible groups whether they exist or not.

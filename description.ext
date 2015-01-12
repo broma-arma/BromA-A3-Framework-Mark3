@@ -1,5 +1,12 @@
 class CfgFunctions {
     class BRM {
+        class plugins {
+            file = "framework\engine\functions\engine\plugins";
+            class loadPlugins{preInit = 1;};
+            class startPlugins{};
+            class logPlugins{};
+            class getDep{};
+        };        
         class init {
             file = "framework\engine\functions\engine";                        
             class setParams{preInit = 1;};
@@ -8,11 +15,9 @@ class CfgFunctions {
             class engine_pre{preInit = 1;};
             class engine_post{postInit = 1;};            
         };
-        class plugins {
-            file = "framework\engine\functions\engine\plugins";
-            class loadPlugins{};
-            class logPlugins{};
-            class getDep{};
+        class misc {
+            file = "framework\engine\functions\misc";
+            class getSpawnPoint{};
         };
         class ending {
             file = "framework\engine\functions\engine\ending";

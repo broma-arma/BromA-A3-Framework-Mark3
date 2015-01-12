@@ -4,9 +4,8 @@ class map_cover
 	authors[] = {"Nife"};
 	version = 1;
 	required_version = 1;
-	dependencies[] = {mission_settings};
+	dependencies[] = {};
 	url = "";
-	preinit = "";
-	postinit = "postinit.sqf";
+	preinit = "preinit.sqf";
 	environment = "server";
 };

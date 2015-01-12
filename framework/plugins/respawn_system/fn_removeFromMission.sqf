@@ -40,4 +40,6 @@ if ("agm_plugin" in usedPlugins) then {
 
 [_unit] joinSilent _oldgrp;
 
-_unit setPos getMarkerPos "respawn_west";
+_respawn = [_unit] call BRM_fnc_getSpawnPoint;
+
+_unit setPos getMarkerPos _respawn;

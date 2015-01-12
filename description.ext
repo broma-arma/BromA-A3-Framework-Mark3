@@ -20,13 +20,6 @@ class CfgFunctions {
             class endingScreen{};
             class endingGetStats{};
         };
-        class respawn {
-            file = "framework\engine\functions\engine\respawn";
-            class getLives{};
-            class setLives{};
-            class removeFromMission{};
-            class callRespawn{};            
-        };
         class tasks {
             file = "framework\engine\functions\engine\tasks";
             class commonObjectives{preInit = 1;};

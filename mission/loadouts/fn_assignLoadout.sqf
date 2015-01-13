@@ -51,11 +51,11 @@ _isCrew = (_type == "crew")||(_type == "Crewman");
 switch (toUpper(_faction)) do {
     
     case "BLUFOR": {
-        #include "factions\ana.sqf"
+        #include "factions\racs.sqf"
     };
     
     case "REDFOR": {
-        #include "factions\jihadists.sqf"
+        #include "factions\sla.sqf"
     };
     
     case "INDFOR": {

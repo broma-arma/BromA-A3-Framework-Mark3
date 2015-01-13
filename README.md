@@ -56,3 +56,7 @@ By abstracting separate scripts into separate folders and functions into an API 
 		- [X] Make sure the player is sent to the respective respawn marker, not just starting character position.
 
 	- [ ] Look around the previous framework and implement some other basic feature.
+		- [X] Casualty cap
+		- [X] Remove bodies
+		... Keep looking for new modules
+		STILL A LOT OF WORK AHEAD BUT NONE MAY STOP THE DEV TRAIN

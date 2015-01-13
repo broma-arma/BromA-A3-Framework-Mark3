@@ -1,9 +1,7 @@
 if (!isServer) exitWith {};
 
-missionOver = false;
-
-while {!(missionOver)} do {
-    if ((count mandatoryObjectivesA > 0)&&(!missionOver)) then {
+while {(mission_running)} do {
+    if ((count mandatoryObjectivesA > 0)&&(mission_running)) then {
         _count = 0;
         {
             _id = _x select 0;
@@ -19,17 +17,15 @@ while {!(missionOver)} do {
             if (_losecond) exitWith {
                 [_id,"failed", true] call BRM_fnc_setTask;
                 ["defeat"] call BRM_fnc_callEnding;
-                missionOver = true;
             };
         } forEach mandatoryObjectivesA;
 
         if (_count == (count mandatoryObjectivesA)) exitWith {
             ["victory"] call BRM_fnc_callEnding;
-            missionOver = true;
         };
     };
     
-    if ((count mandatoryObjectivesB > 0)&&(!missionOver)) then {
+    if ((count mandatoryObjectivesB > 0)&&(mission_running)) then {
         _count = 0;
         {
             _id = _x select 0;
@@ -45,17 +41,15 @@ while {!(missionOver)} do {
             if (_losecond) exitWith {
                 [_id,"failed", true] call BRM_fnc_setTask;
                 ["defeat"] call BRM_fnc_callEnding;
-                missionOver = true;
             };
         } forEach mandatoryObjectivesB;
 
         if (_count == (count mandatoryObjectivesB)) exitWith {
             ["victory"] call BRM_fnc_callEnding;
-            missionOver = true;
         };
     };
     
-    if ((count mandatoryObjectivesC > 0)&&(!missionOver)) then {
+    if ((count mandatoryObjectivesC > 0)&&(mission_running)) then {
         _count = 0;
         {
             _id = _x select 0;
@@ -71,13 +65,11 @@ while {!(missionOver)} do {
             if (_losecond) exitWith {
                 [_id,"failed", true] call BRM_fnc_setTask;
                 ["defeat"] call BRM_fnc_callEnding;
-                missionOver = true;
             };
         } forEach mandatoryObjectivesC;
 
         if (_count == (count mandatoryObjectivesC)) exitWith {
             ["victory"] call BRM_fnc_callEnding;
-            missionOver = true;
         };
     };
     

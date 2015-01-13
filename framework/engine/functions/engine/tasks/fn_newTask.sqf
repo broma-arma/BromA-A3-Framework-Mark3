@@ -22,13 +22,13 @@ if (not _mandatory) then {
     _details set [1, format ["(OPTIONAL) %1", (_details select 1)]];
 } else {
     switch(true) do {
-        case (_side == sideA_Side): {
+        case (_side == side_a_side): {
             mandatoryObjectivesA set [count mandatoryObjectivesA, [_id, _wincond, _losecond]]; publicVariable "mandatoryObjectivesA";
         };
-        case (_side == sideB_Side): {
+        case (_side == side_b_side): {
             mandatoryObjectivesB set [count mandatoryObjectivesB, [_id, _wincond, _losecond]]; publicVariable "mandatoryObjectivesB";
         };
-        case (_side == sideC_Side): {
+        case (_side == side_c_side): {
             mandatoryObjectivesC set [count mandatoryObjectivesC, [_id, _wincond, _losecond]]; publicVariable "mandatoryObjectivesC";
         };
     };

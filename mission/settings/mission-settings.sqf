@@ -27,7 +27,7 @@ missionVersion =    "v0";
 //                                                                             |
 // ============================================================================
 
-missionGameMode = "coop";
+mission_game_mode = "coop";
 
 // ============================================================================
 //                          ==   LOADOUT MODE   ==                             |
@@ -57,44 +57,27 @@ loadoutStyleAI =     "arsenal";
 //   FactionName is the name which will be displayed on the ending screens.    |
 // ============================================================================
 
-sideA_Side = west;            // Side the players belong to
-sideA_Color = "blue";         // Color of the player side.
-sideA_Name = "NATO";          // Player faction name.
+side_a_side = west;            // Side the players belong to
+side_a_color = "blue";         // Color of the player side.
+side_a_name = "NATO";          // Player faction name.
 
 // =============================================================================
 
-sideB_Side = east;            // Side the enemies belong to
-sideB_Color = "red";          // Color of the enemy side.
-sideB_Name = "CSAT";          // Enemy faction.
+side_b_side = east;            // Side the enemies belong to
+side_b_color = "red";          // Color of the enemy side.
+side_b_name = "CSAT";          // Enemy faction.
 
 // =============================================================================
 
-sideC_Side = resistance;      // Side the enemies belong to
-sideC_Color = "green";        // Color of the enemy side.
-sideC_Name = "AAF";           // Enemy faction.
+side_c_side = resistance;      // Side the enemies belong to
+side_c_color = "green";        // Color of the enemy side.
+side_c_name = "AAF";           // Enemy faction.
 
 // =============================================================================
 
 DAC_Res_Side = 1;                    // Side the independent are friendly to:
                                      // 0: EAST / 1: WEST / 2: NOBODY
                                      // (MUST BE THE SAME AS THE EDITOR!)
-
-// ============================================================================
-//                            == CASUALTY CAP ==                               |
-
-//          Whenever a percentage of the selected group(s) is dead,            |
-//                       a certain ending is called.                           |
-//        http://ferstaberinde.com/f2/en/index.php?title=Casualties_Cap        |
-// ============================================================================
-useCasualtyCap = false;                         // Enable module - true or false.
-
-    casualtyGroupPlayer = [alpha_grp_blu1, alpha_grp_blu2, bravo_grp_blu1, bravo_grp_blu2, charlie_grp_blu1, charlie_grp_blu2, delta_grp_blu1, delta_grp_blu2];
-    // Casualty groups for the Player group
-    
-    casualtyGroupEnemy =  [alpha_grp_op1, alpha_grp_op2, bravo_grp_op1, bravo_grp_op2, charlie_grp_op1, charlie_grp_op2, delta_grp_op1, delta_grp_op2];
-    // Casualty group for the Enemy group - Ignore if COOP
-    
-// =============================================================================
 
 // =============================================================================
 //                         == EVADE AND ESCAPE ==                              |

@@ -1,3 +1,6 @@
+if (!mission_running) exitWith {};
+mission_running = false; publicVariable "mission_running";
+
 [-2, {
     private["_ending","_stats","_showEnding","_success"];
     

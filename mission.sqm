@@ -22,7 +22,7 @@ class Mission
 	randomSeed=13980418;
 	class Intel
 	{
-		briefingName="BromA Framework MK 2 00021";
+		briefingName="BromA Framework MK 2 000231";
 		overviewText="STRONGER THAN EVER BEFORE.";
 		startWeather=0;
 		startWind=0.099999994;
@@ -40,16 +40,16 @@ class Mission
 	};
 	class Groups
 	{
-		items=7;
+		items=6;
 		class Item0
 		{
 			side="WEST";
 			class Vehicles
 			{
-				items=1;
+				items=2;
 				class Item0
 				{
-					position[]={3999.9978,5,4367.9736};
+					position[]={3999.7336,5,4367.9902};
 					id=0;
 					side="WEST";
 					vehicle="B_Soldier_F";
@@ -57,7 +57,19 @@ class Mission
 					leader=1;
 					rank="SERGEANT";
 					skill=0.60000002;
-					init="this setVariable [""initUnit"",[""blue"",""blufor"",""SL""],false];";
+					init="this setVariable [""initUnit"",[""blue"",""blufor"",""rifleman"",""Alpha"",""alpha_grp_blu1""],false];";
+				};
+				class Item1
+				{
+					position[]={3999.7283,5,4365.1582};
+					id=1;
+					side="WEST";
+					vehicle="B_Soldier_F";
+					player="PLAY CDG";
+					skill=0.60000002;
+					health=0.9294703;
+					ammo=0;
+					init="this setVariable [""initUnit"",[""blue"",""blufor"",""rifleman"",""Alpha"",""alpha_grp_blu1""],false];";
 				};
 			};
 		};
@@ -70,14 +82,14 @@ class Mission
 				class Item0
 				{
 					position[]={3980.208,5,4368.1812};
-					id=1;
+					id=2;
 					side="EAST";
 					vehicle="O_Soldier_F";
 					player="PLAY CDG";
 					leader=1;
 					skill=0.2;
 					ammo=0;
-					init="this setVariable [""initUnit"",[""blue"",""redfor"",""SL""],false];";
+					init="this setVariable [""initUnit"",[""blue"",""redfor"",""SL"",""Alpha"",""alpha_grp_op1""],false];";
 				};
 			};
 		};
@@ -90,7 +102,7 @@ class Mission
 				class Item0
 				{
 					position[]={3979.6135,5,4386.5913};
-					id=2;
+					id=3;
 					side="CIV";
 					vehicle="C_man_1";
 					leader=1;
@@ -108,7 +120,7 @@ class Mission
 				class Item0
 				{
 					position[]={4000.0625,5,4387.0894};
-					id=3;
+					id=4;
 					side="CIV";
 					vehicle="C_man_1";
 					leader=1;
@@ -126,14 +138,14 @@ class Mission
 				class Item0
 				{
 					position[]={4016.522,5,4367.5396};
-					id=4;
+					id=5;
 					side="GUER";
 					vehicle="I_soldier_F";
 					player="PLAY CDG";
 					leader=1;
 					skill=0.2;
 					ammo=0;
-					init="this setVariable [""initUnit"",[""blue"",""indfor"",""SL""],false];";
+					init="this setVariable [""initUnit"",[""blue"",""redfor"",""SL"",""Alpha"",""alpha_grp_ind1""],false];";
 				};
 			};
 		};
@@ -146,33 +158,12 @@ class Mission
 				class Item0
 				{
 					position[]={4016.7209,5,4386.7896};
-					id=5;
+					id=6;
 					side="CIV";
 					vehicle="C_man_1";
 					leader=1;
 					skill=0.60000002;
 					text="objIND";
-				};
-			};
-		};
-		class Item6
-		{
-			side="WEST";
-			class Vehicles
-			{
-				items=1;
-				class Item0
-				{
-					position[]={3999.9924,5,4365.1416};
-					id=6;
-					side="WEST";
-					vehicle="B_Soldier_F";
-					player="PLAY CDG";
-					leader=1;
-					skill=0.60000002;
-					health=0.9294703;
-					ammo=0;
-					init="this setVariable [""initUnit"",[""red"",""blufor"",""rifleman""],false];";
 				};
 			};
 		};

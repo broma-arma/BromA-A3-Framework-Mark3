@@ -6,17 +6,17 @@ class CfgFunctions {
             class startPlugins{};
             class logPlugins{};
             class getDep{};
-        };        
+        };
         class init {
-            file = "framework\engine\functions\engine";                        
+            file = "framework\engine\functions\engine";
             class setParams{preInit = 1;};
-            class loadSettings{preInit = 1;};            
+            class loadSettings{preInit = 1;};
             class initVariables{preInit = 1;};
             class engine_pre{preInit = 1;};
-            class engine_post{postInit = 1;};            
+            class engine_post{postInit = 1;};
         };
         class misc {
-            file = "framework\engine\functions\misc";
+            file = "framework\engine\functions\engine\misc";
             class getSpawnPoint{};
         };
         class ending {
@@ -93,5 +93,4 @@ respawn = 3;
 respawndelay = 4;
 respawnDialog = 0;
 disabledAI = 1;
-maxScore = 75000;
 enableDebugConsole = 1;

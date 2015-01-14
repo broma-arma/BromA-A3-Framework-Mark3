@@ -58,5 +58,5 @@ By abstracting separate scripts into separate folders and functions into an API 
 	- [ ] Look around the previous framework and implement some other basic feature.
 		- [X] Casualty cap
 		- [X] Remove bodies
-		... Keep looking for new modules
-		STILL A LOT OF WORK AHEAD BUT NONE MAY STOP THE DEV TRAIN
+		... Keep looking for new plugins
+		STILL A LOT OF WORK AHEAD BUT NONE MAY STOP THE DEV TRAIN	

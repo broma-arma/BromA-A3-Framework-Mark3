@@ -1,3 +1,9 @@
+if (time > 30) then {
+    player_is_jip = true;
+} else {
+    player_is_jip = false;
+};
+
 _defaultValues = ["white", "blufor", "rifleman"];
 
 _initUnit = player getVariable ["initUnit", _defaultValues];
@@ -23,5 +29,8 @@ if ("agm_plugin" in usedPlugins) then {
 
 player addEventHandler ["Respawn", {[_this] call BRM_fnc_onRespawn}];
 player addEventHandler ["Killed", {[_this] call BRM_fnc_onKilled}];
+["onDisconn", "onPlayerDisconnected", { [_uid,_name] call BRM_fnc_onDisconnected }] call BIS_fnc_addStackedEventhandler;
 
 [player, toUpper(_groupColor)] spawn { sleep 10; waitUntil{(!isNull(_this select 0))}; (_this select 0) assignTeam (_this select 1) };
+
+[] spawn BRM_fnc_syncTime;

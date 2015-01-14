@@ -1,3 +1,9 @@
+respawn = 3;
+respawndelay = 4;
+respawnDialog = 0;
+disabledAI = 1;
+enableDebugConsole = 1;
+
 class CfgFunctions {
     class BRM {
         class plugins {
@@ -18,6 +24,8 @@ class CfgFunctions {
         class misc {
             file = "framework\engine\functions\engine\misc";
             class getSpawnPoint{};
+            class stampTime{};
+            class syncTime{};
         };
         class ending {
             file = "framework\engine\functions\engine\ending";
@@ -37,6 +45,7 @@ class CfgFunctions {
             class initPlayer{postInit = 1;};
             class onKilled{};
             class onRespawn{};
+            class onDisconnected{};
         };
         class briefing {
             file = "mission\briefings";
@@ -48,6 +57,14 @@ class CfgFunctions {
             class newMarkerIcon{};
             class stripItems{};
             class weaponAway{};
+            class garrisonUnits{};
+        };
+        class api_zeus {
+            file = "framework\engine\functions\api\zeus";
+            class z_setAll{};
+            class z_setMode{};
+            class z_setSkill{};
+            class z_setLoadout{};
         };
         class loadout {
             file = "mission\loadouts";
@@ -57,11 +74,11 @@ class CfgFunctions {
 };
 
 class CfgDebriefing {  
-    #include "mission\debriefing.sqf"
+    #include "mission\objectives\debriefing.sqf"
 };
 
 class Params {
-    #include "mission\parameters.sqf"
+    #include "mission\settings\parameters.sqf"
 };
 
 class CfgPlugins {
@@ -88,9 +105,3 @@ class cfgNotifications
         priority = 1;
     };
 };
-
-respawn = 3;
-respawndelay = 4;
-respawnDialog = 0;
-disabledAI = 1;
-enableDebugConsole = 1;

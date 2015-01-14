@@ -201,12 +201,14 @@ switch (param_weather) do
 0 setWindForce _MissionWindGusts;
 0 setWaves _MissionWaves;
 
+[] spawn BRM_fnc_stampTime;
+
 // =============================================================================
 //  Time limit
 // =============================================================================
 
 switch (param_time_limit) do {
-    case 0: { mission_time_limit = 999999999999 };
+    case 0: { mission_time_limit = -1 };
     case 1: { mission_time_limit = 10800 };
     case 2: { mission_time_limit = 7200 };
     case 3: { mission_time_limit = 3600 };
@@ -214,7 +216,7 @@ switch (param_time_limit) do {
     case 5: { mission_time_limit = 1800 };
     case 6: { mission_time_limit = 900 };
     case 7: { mission_time_limit = 600 };
-    case 8: { mission_time_limit = 60 };        
+    case 8: { mission_time_limit = 65 };        
 };
 publicvariable "mission_time_limit";
 
@@ -247,7 +249,7 @@ publicvariable "mission_setup_time";
 // =============================================================================
 
 switch (param_dead_civies) do {
-    case 0: { mission_dead_civies = 9999 };
+    case 0: { mission_dead_civies = -1 };
     case 1: { mission_dead_civies = 5 };
     case 2: { mission_dead_civies = 15 };
     case 3: { mission_dead_civies = 30 };

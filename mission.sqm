@@ -8,7 +8,8 @@ class Mission
 		"a3_characters_f",
 		"A3_Characters_F_OPFOR",
 		"A3_Characters_F_Civil",
-		"A3_Characters_F_INDEP"
+		"A3_Characters_F_INDEP",
+		"rds_a2port_cman"
 	};
 	addOnsAuto[]=
 	{
@@ -17,12 +18,13 @@ class Mission
 		"A3_Characters_F_OPFOR",
 		"A3_Characters_F_Civil",
 		"A3_Characters_F_INDEP",
+		"rds_a2port_cman",
 		"map_vr"
 	};
 	randomSeed=13980418;
 	class Intel
 	{
-		briefingName="BromA Framework MK 2 000231";
+		briefingName="BromA Framework MK 2 00024";
 		overviewText="STRONGER THAN EVER BEFORE.";
 		startWeather=0;
 		startWind=0.099999994;
@@ -40,7 +42,7 @@ class Mission
 	};
 	class Groups
 	{
-		items=6;
+		items=12;
 		class Item0
 		{
 			side="WEST";
@@ -49,7 +51,7 @@ class Mission
 				items=2;
 				class Item0
 				{
-					position[]={3999.7336,5,4367.9902};
+					position[]={899.51239,5,867.6167};
 					id=0;
 					side="WEST";
 					vehicle="B_Soldier_F";
@@ -57,11 +59,12 @@ class Mission
 					leader=1;
 					rank="SERGEANT";
 					skill=0.60000002;
+					text="alpha_actual";
 					init="this setVariable [""initUnit"",[""blue"",""blufor"",""rifleman"",""Alpha"",""alpha_grp_blu1""],false];";
 				};
 				class Item1
 				{
-					position[]={3999.7283,5,4365.1582};
+					position[]={899.50702,5,864.78467};
 					id=1;
 					side="WEST";
 					vehicle="B_Soldier_F";
@@ -81,7 +84,7 @@ class Mission
 				items=1;
 				class Item0
 				{
-					position[]={3980.208,5,4368.1812};
+					position[]={879.98676,5,867.80762};
 					id=2;
 					side="EAST";
 					vehicle="O_Soldier_F";
@@ -101,7 +104,7 @@ class Mission
 				items=1;
 				class Item0
 				{
-					position[]={3979.6135,5,4386.5913};
+					position[]={879.39227,5,886.21777};
 					id=3;
 					side="CIV";
 					vehicle="C_man_1";
@@ -119,7 +122,7 @@ class Mission
 				items=1;
 				class Item0
 				{
-					position[]={4000.0625,5,4387.0894};
+					position[]={899.84125,5,886.71582};
 					id=4;
 					side="CIV";
 					vehicle="C_man_1";
@@ -137,7 +140,7 @@ class Mission
 				items=1;
 				class Item0
 				{
-					position[]={4016.522,5,4367.5396};
+					position[]={916.30078,5,867.16602};
 					id=5;
 					side="GUER";
 					vehicle="I_soldier_F";
@@ -157,7 +160,7 @@ class Mission
 				items=1;
 				class Item0
 				{
-					position[]={4016.7209,5,4386.7896};
+					position[]={916.49976,5,886.41602};
 					id=6;
 					side="CIV";
 					vehicle="C_man_1";
@@ -167,13 +170,115 @@ class Mission
 				};
 			};
 		};
+		class Item6
+		{
+			side="CIV";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={893.20947,5,880.29248};
+					id=7;
+					side="CIV";
+					vehicle="RDS_Citizen1";
+					leader=1;
+					skill=0.60000002;
+				};
+			};
+		};
+		class Item7
+		{
+			side="CIV";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={896.27161,5,880.22314};
+					id=8;
+					side="CIV";
+					vehicle="RDS_Citizen1";
+					leader=1;
+					skill=0.60000002;
+				};
+			};
+		};
+		class Item8
+		{
+			side="CIV";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={898.77698,5,880.22314};
+					id=9;
+					side="CIV";
+					vehicle="RDS_Citizen1";
+					leader=1;
+					skill=0.60000002;
+				};
+			};
+		};
+		class Item9
+		{
+			side="CIV";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={901.56079,5,880.3623};
+					id=10;
+					side="CIV";
+					vehicle="RDS_Citizen1";
+					leader=1;
+					skill=0.60000002;
+				};
+			};
+		};
+		class Item10
+		{
+			side="CIV";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={904.1358,5,880.64063};
+					id=11;
+					side="CIV";
+					vehicle="RDS_Citizen1";
+					leader=1;
+					skill=0.60000002;
+				};
+			};
+		};
+		class Item11
+		{
+			side="CIV";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={906.71075,5,880.70996};
+					id=12;
+					side="CIV";
+					vehicle="RDS_Citizen1";
+					leader=1;
+					skill=0.60000002;
+				};
+			};
+		};
 	};
 	class Markers
 	{
 		items=4;
 		class Item0
 		{
-			position[]={4000.1145,5,4352.1841};
+			position[]={899.89325,5,851.81055};
 			name="AO";
 			markerType="RECTANGLE";
 			type="Empty";
@@ -185,21 +290,21 @@ class Mission
 		};
 		class Item1
 		{
-			position[]={4000.0251,5,4361.2783};
+			position[]={899.80389,5,860.90479};
 			name="respawn_west";
 			type="Empty";
 			colorName="ColorWEST";
 		};
 		class Item2
 		{
-			position[]={3980.1907,5,4361.209};
+			position[]={879.96942,5,860.83545};
 			name="respawn_east";
 			type="Empty";
 			colorName="ColorEAST";
 		};
 		class Item3
 		{
-			position[]={4016.6582,5,4361.2783};
+			position[]={916.43701,5,860.90479};
 			name="respawn_resistance";
 			type="Empty";
 			colorName="ColorGUER";

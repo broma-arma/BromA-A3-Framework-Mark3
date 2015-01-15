@@ -6,8 +6,10 @@
 
 if (!isServer && hasInterface) exitWith {};
 
-f_fnc_removeBody = compile preprocessFileLineNumbers "framework\plugins\f_remove_body\fn_removeBody.sqf";
-f_fnc_nearPlayer = compile preprocessFileLineNumbers "framework\plugins\f_remove_body\fn_nearPlayer.sqf";
+_path = _this select 0;
+
+f_fnc_removeBody = compile preprocessFileLineNumbers (_path+"fn_removeBody.sqf");
+f_fnc_nearPlayer = compile preprocessFileLineNumbers (_path+"fn_nearPlayer.sqf");
 
 // ====================================================================================
 

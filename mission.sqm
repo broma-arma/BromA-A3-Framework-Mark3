@@ -24,7 +24,7 @@ class Mission
 	randomSeed=13980418;
 	class Intel
 	{
-		briefingName="BromA Framework MK 2 00024";
+		briefingName="BromA Framework MK 2 000253";
 		overviewText="STRONGER THAN EVER BEFORE.";
 		startWeather=0;
 		startWind=0.099999994;
@@ -51,7 +51,7 @@ class Mission
 				items=2;
 				class Item0
 				{
-					position[]={899.51239,5,867.6167};
+					position[]={899.45117,5,868.28076};
 					id=0;
 					side="WEST";
 					vehicle="B_Soldier_F";
@@ -65,6 +65,7 @@ class Mission
 				class Item1
 				{
 					position[]={899.50702,5,864.78467};
+					special="NONE";
 					id=1;
 					side="WEST";
 					vehicle="B_Soldier_F";

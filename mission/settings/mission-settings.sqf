@@ -14,8 +14,8 @@
 //
 // ============================================================================
 
-missionAuthorName = "Mission Maker";
-missionVersion =    "v0";
+mission_author_name = "Mission Maker";
+mission_version =    "v0";
 
 // ============================================================================
 //                          == MISSION GAMEMODE ==                             |
@@ -66,6 +66,10 @@ side_a_name = "NATO";          // Player faction name.
 side_b_side = east;            // Side the enemies belong to
 side_b_color = "red";          // Color of the enemy side.
 side_b_name = "CSAT";          // Enemy faction.
+
+// =============================================================================
+
+mission_enable_side_c = false;
 
 // =============================================================================
 

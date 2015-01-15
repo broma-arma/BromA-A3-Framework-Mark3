@@ -7,9 +7,7 @@
     _preinit = getText( _path >> "preinit");
     _postinit = getText( _path >> "postinit");
     _dependencies = getArray( _path >> "dependencies");
-    _environment = toUpper(getText( _path >> "environment"));        
-    
-    diag_log format ["=== PLUGIN: %2 | ENV: %1", _environment, _plugin];
+    _environment = toUpper(getText( _path >> "environment"));
     
     _loadplugin = true;
     
@@ -29,9 +27,11 @@
             diag_log format["== %1 LOADED PLUGIN: %2 ==============================",_env, _plugin];
 
             usedPlugins pushBack _plugin;
+            
+            _path = "framework\plugins\"+_plugin+"\";
 
-            if (_preinit != "") then { [] execVM format ["framework\plugins\%1\%2", _plugin, _preinit] };
-            if (_postinit != "") then { [] execVM format ["framework\plugins\%1\%2", _plugin, _postinit] };    
+            if (_preinit != "") then { [_path] execVM format ["framework\plugins\%1\%2", _plugin, _preinit] };
+            if (_postinit != "") then { [_path] execVM format ["framework\plugins\%1\%2", _plugin, _postinit] };    
         };
     };
 } forEach (_this select 0);

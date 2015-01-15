@@ -14,3 +14,5 @@ _logPlugins = [];
 {
     player createDiaryRecord [FRAMEWORK_DIARY, ["Loaded plugins", _x]];
 } forEach _logPlugins;
+
+player createDiaryRecord [FRAMEWORK_DIARY, ["Loaded plugins", "<br/>These are the plugins currently being utilized in this mission: </br><br/>"]];

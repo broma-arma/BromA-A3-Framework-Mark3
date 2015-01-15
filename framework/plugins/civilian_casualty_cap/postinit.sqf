@@ -1,5 +1,7 @@
 if (mission_dead_civies == -1) exitWith {};
 
+#include "settings.sqf";
+
 if (isNil "hostile_civilians") then { hostile_civilians = [] };
 if ( isnil "dead_civilians" ) then { dead_civilians = 0 };
 
@@ -26,7 +28,7 @@ fnc_countCivDeaths = {
     _killer = _this select 1;
 
     if !(_killed in hostile_civilians) then {
-        if ((isPlayer _killer)&&(side _killer in [side_a_side])) then {
+        if ((isPlayer _killer)&&(side _killer in responsible_sides)) then {
             dead_civilians = dead_civilians + 1; publicvariable "dead_civilians";
             diag_log format ["== SERVER: %2 HAS KILLED CIVILIAN %1 =============================", name _killed, name _killer];
             [-1, {

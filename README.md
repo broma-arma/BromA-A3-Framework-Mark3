@@ -1,62 +1,49 @@
-# BromA Framework 3 Mark 3
+<p align="center">
+  **INSERT A PRETTY LOGO HERE ANY TIME SOON**<br/><br/>
+  <a href="https://github.com/Neefay/BromA-A3-Framework-Mark3/commits/master">
+    <img src="https://img.shields.io/badge/build-00025-orange.svg" alt="Current version">
+  </a>
+</p>
 
-The document below is just for myself and to keep me organized, it's a bit confusing so don't take it as is.
+The **BromA Framework** is a community effort made by the BromA group in order to establish a standard shared across all missions - which could then be customized by the content maker.
 
-## 1. WHY
-The purpose of this rewrite of the framework is to bring it to the same standards other frameworks are on, taking advantage of ArmA 3 and new scripts made for it. Also a huge reason is to make it follow a modular and scalable format, where users can write their own plugins which other users can use.
+Since this could only be made thanks to shared scripts, missions and all sorts of knowledge, this project is entirely open-source and interested users are free to play with it as much as they want.
 
-## 2. HOW
-By abstracting separate scripts into separate folders and functions into an API which are all pre-compiled, removing or adding functionalities to the framework becomes very easy.
+Also keeping up with good practices, most functionality is modular and therefore optional to the user: adding and disabling plugins from the mission is extremely easy.
 
-## 3. FEATURES
-	- [x] Loading screen
-	- [x] Cover AO Map (plugin)
-	- [ ] Assigns loadouts to areas (API)
-	- [ ] Player lives (parameter engine)
-	- [x] Team kill (plugin)
-	- [x] Create markers (API)
-	- [ ] Unit garrison (API)
-	- [ ] Zeus functions (API)
-	- [ ] AI can hear TFAR/ACRE (plugin)
-	- [ ] Teleport JIPs (plugin)
-	- [ ] Debug values (core)
-	- [x] Remove all units' items (API)
-	- [x] Platoon roster (plugin)
-	- [ ] Syncronize weather with server and clients (core)
-	- [ ] Spectator script (plugin)
-	- [ ] Added spectators (plugin)
-	
-4. NEEDS TO BE REWRITTEN
+### FEATURES
+*	Well organized and context-agnostic.
+*	Plugin system makes sharing functionality super easy.
+*	Tasks system which is very flexible and simple to understand.
+*	AGM, TFAR and DAC are fully integrated.
+*	Team killing warning.
+*	Teleporting for the mission maker.
+*	Simple loading screen to avoid desync at mission start.
+*	Limit player movement to the AO.
+*	Team Roster.
+*	Respawn system with tickets and respawn waves.
+*	Casualty Cap and Body Removal, taken from the F3 Framework with given credits.
+*	Commander Lock which makes weapons cold.
+*	Mission time limit.
+*	Setup Zone for TvTs.
+*	Spawn protection.
+*	Casualty cap for civilians.
+*	JIPs can teleport to their squadmates when joining.
+*	Very effective loadout system.
+*	Cargo made simple.
+
+The framework is as context agnostic as possible, meaning you can just change one value and your mission will change from a COOP into a TVT or even a COTVT - everything is already pre-configured to be flexible and as little as possible assumptions are made about the mission itself.
+
+### So what's left until it's finished?
 -
-	- [ ] Abstract all plugins using defines and postinits
-	- [x] Make objectives happen not in the editor as triggers, but rather as spawned checks for the objective
-	- [x] API will be loaded using cfgFunctions, plugins will be used with a custom class for better metadata support
-	- [ ] Smaller network footprint, leave some variable declarations that are client-side up to the client
-	
-5. CHANGELOG
--
-	- [x] Think of a task management system
-	- [x] Loadouts are important
-		- [ ] Work a system for containers/vehicles, should be easy
-	- [x] Think of a folder structure
-	- [x] Smarter way of assigning parameters
-	- [x] Introduce endings
-	- [x] Fix the way tasks work
-	
-	- [x] Finish the AGM plugin, hook it to parameters
-	- [x] Start working on the DAC plugin
-		- [ ] Make native functions and abstract settings into a separate file
-		- [ ] Parameters as well
-		- [ ] IMPORTANT: functions to create zones using only reference markers
-	- [X] Respawn and lives system
-		- [X] Not many changes, should be similar to the previous framework
-		- [X] A function to revive dead players, like a respawn wave
-		- [X] Obviously hooked into parameters
-		- [X] To finish it up, add a way to change the lives of a player through a function so it saves more time and I can finish the callRespawn function.
-		- [X] Make sure the player is sent to the respective respawn marker, not just starting character position.
+*	- [x] Loadouts are important
+*		- [ ] Work a system for containers/vehicles, should be easy
+*	- [x] Start working on the DAC plugin
+*		- [ ] Make native functions and abstract settings into a separate file
+*		- [ ] Parameters as well
+*		- [ ] IMPORTANT: functions to create zones using only reference markers
+*	- [ ] Work on the HC functionality.
 
-	- [ ] Look around the previous framework and implement some other basic feature.
-		- [X] Casualty cap
-		- [X] Remove bodies
-		... Keep looking for new plugins
-		STILL A LOT OF WORK AHEAD BUT NONE MAY STOP THE DEV TRAIN	
+### What then?
+
+I am very commited to document and explain the usability process of this framework so that even the most clueless user can pick it up and get cracking in a few hours at most - expect a wiki with all the API and functions, and definitely video tutorials since I'm a video learner myself.

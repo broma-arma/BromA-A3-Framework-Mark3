@@ -75,8 +75,7 @@ else
 		//===========================================|
 		//player sidechat "JipClientStart"
 		//[] execVM "myJipClientScript.sqf";
-	}
-	else
+	} else
 	{
 		//===========================================|
 		// StartScriptOnClient                       |

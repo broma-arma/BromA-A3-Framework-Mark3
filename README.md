@@ -1,5 +1,8 @@
 <p align="center">
-  **INSERT A PRETTY LOGO HERE ANY TIME SOON**<br/><br/>
+  <a href="https://github.com/Neefay/BromA-A3-Framework-Mark3">
+   <img src="http://puu.sh/eDbHl/2cd8db6b43.png" alt="BromA Framework">
+  </a>
+   <br/><br/>
   <a href="https://github.com/Neefay/BromA-A3-Framework-Mark3/commits/master">
     <img src="https://img.shields.io/badge/build-00025-orange.svg" alt="Current version">
   </a>

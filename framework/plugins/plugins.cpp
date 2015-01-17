@@ -37,3 +37,4 @@
 #include "loading_screen\main.cpp"
 #include "ao_limit\main.cpp"
 #include "mission_maker_teleport\main.cpp"
+#include "cssa3_spectator\main.cpp"

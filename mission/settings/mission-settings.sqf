@@ -84,19 +84,6 @@ DAC_Res_Side = 1;                    // Side the independent are friendly to:
                                      // (MUST BE THE SAME AS THE EDITOR!)
 
 // =============================================================================
-//                         == EVADE AND ESCAPE ==                              |
-
-//        Called when a certain group approaches a certain object.             |
-//     http://ferstaberinde.com/f2/en/index.php?title=Group_E%26E_Check        |
-// =============================================================================
-useEEcheck = false;                             // Enable module - true or false.
-
-    EEGroupName = grpNull;                          // Group to be checked.
-    EEObjectName = nil;                         // Object to be checked.
-    EEdistance = 100;                           // Proximity necessary.
-// ============================================================================= 
-
-// =============================================================================
 //                         == MODULE ENDINGS ==                                |
 
 //        These are the endings that are called when conditions are met.       |
@@ -110,26 +97,6 @@ missionwinEnd = 3;                              // Objectives completed.
 missionfailEnd = 4;                             // Critical objective failed.
 civCapEnding = 5;                               // Max number of civies killed.
 timeLimitEnding = 6;                            // Time limit reached. 
-// ============================================================================= 
-
-// =============================================================================
-//                           == BODY REMOVAL ==                                |
-
-//            Removes dead bodies after a certain amount of time.              |
-//    http://ferstaberinde.com/f2/en/index.php?title=Automatic_Body_Removal    |
-// =============================================================================
-useBodyRemoval = true;                          // Enable module - true or false.
-    f_removeBodyDelay = 60;                     // Time in seconds for removal.
-    f_doNotRemoveBodies = [];                   // Units whose body won't vanish. 
-// ============================================================================= 
-
-// =============================================================================
-//                            == COIN MODULE ==                                |
-
-//          Change settings at the broma\coinSettings.sqf file.                |
-// http://ferstaberinde.com/f2/en/index.php?title=Construction_Interface_%28COIN%29_Presets
-// =============================================================================
-useCoinModule = false;
 // =============================================================================           
 
 // =============================================================================
@@ -137,35 +104,8 @@ useCoinModule = false;
 
 //      If this value is set to false, JIPs will be removed upon joining.      |
 // =============================================================================    
-allowJIP = true;
+mission_allow_jip = true;
 // =============================================================================
-
-// =============================================================================
-//                        == SPAWN PROTECTION ==                               |
-
-//        Creates a spawn protection zone around the player(s)' respawn        |
-// ============================================================================= 
-useSpawnProtection = true;                      // Enable module - true or false.
-
-    spawnSize = 50;                              // Size of the area.
-    
-    setupSize = 50;                              // Size of the Setup Zone for TVTs - ignore if COOP        
-// =============================================================================
-
-// =============================================================================
-//                            == RESPAWN TYPE ==                               |
-//                                                                             |
-//               Where will a player who has just died go to?                  |
-//  Keep in mind that this is different from the default respawn types in the  |
-//             description.ext file, which should remain unchanged.            |
-//                                                                             |
-// Valid types are:                                                            |
-//              "BASE": sends the player to it's valid respawn marker.         |
-//              "LEADER": teleports to the group leader or other member.       |
-//              "LAST": player goes back to the spot where he died.            |
-// =============================================================================
-
-respawnType = "BASE";
 
 // =============================================================================
 //        This is a list with all playable units, for DAC to use:              |

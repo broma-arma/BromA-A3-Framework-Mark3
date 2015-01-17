@@ -5,7 +5,10 @@ _handled = false;
 
 if(_button in actionKeys "TeamSwitch") then{
 	if(not dialog) then{
-		[] call CHVD_fnc_openDialog;
+                _isDead = _x getVariable ["isDead",false];
+                if (!_isDead) then {
+                    [] call CHVD_fnc_openDialog;
+                };
 	} else{
 		closeDialog 0;
 	};

@@ -22,6 +22,13 @@ _oldgrp = group _unit;
 _unit setPos [0,0,10];
 
 player enablesimulation false;
+player allowDamage false;
+
+player setVariable ["isDead", true, true];
+
+if ("cssa3_spectator" in usedPlugins) then {
+    ["forced"] spawn CSSA3_fnc_createSpectateDialog;
+};
 
 sleep 5;
 
@@ -32,7 +39,12 @@ waitUntil{!([getPlayerUID _unit, name _unit] in deadPlayersArray)};
 
 titletext ["You are respawning...", "BLACK FADED",0];
 
+closeDialog 0;
+
 player enablesimulation true;
+player allowDamage true;
+
+player setVariable ["isDead", false, true];
 
 if ("agm_plugin" in usedPlugins) then {
     [_unit, _gear] call AGM_Respawn_fnc_restoreGear;

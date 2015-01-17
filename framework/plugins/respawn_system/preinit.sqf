@@ -7,6 +7,7 @@ BRM_fnc_callRespawn = compile preprocessFileLineNumbers (_path+"fn_callRespawn.s
 BRM_fnc_setLives = compile preprocessFileLineNumbers (_path+"fn_setLives.sqf");
 BRM_fnc_getLives = compile preprocessFileLineNumbers (_path+"fn_getLives.sqf");
 BRM_fnc_onRespawnLives = compile preprocessFileLineNumbers (_path+"fn_onRespawn.sqf");
+BRM_fnc_killPlayer = compile preprocessFileLineNumbers (_path+"fn_killPlayer.sqf");
 
 if (!isDedicated) then {
     currentLives = [player] call BRM_fnc_getLives;

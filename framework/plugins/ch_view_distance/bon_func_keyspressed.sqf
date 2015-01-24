@@ -5,7 +5,7 @@ _handled = false;
 
 if(_button in actionKeys "TeamSwitch") then{
 	if(not dialog) then{
-                _isDead = _x getVariable ["isDead",false];
+                _isDead = player getVariable ["isDead",false];
                 if (!_isDead) then {
                     [] call CHVD_fnc_openDialog;
                 };

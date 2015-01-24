@@ -11,8 +11,25 @@
 scalar = "any";DAC_Init_Camps = 0;
 
 waituntil{time > 0.3};
+waitUntil{(!isNil "mission_AI_controller")};
 
-if(isServer) then {if(local player) then {DAC_Code = 1} else {DAC_Code = 0}} else {if(isnull player) then {DAC_Code = 3} else {DAC_Code = 2}};
+[-1, { player globalChat format ["%1 checking HCC as %2.",_this select 0, _this select 1] }, [player, mission_AI_controller] ] call CBA_fnc_globalExecute;
+
+if (mission_AI_controller) then {
+    if (local player) then {
+        DAC_Code = 1;
+    } else {
+        DAC_Code = 0;
+    }
+} else {
+    if (isnull player) then {
+        DAC_Code = 3;
+    } else {
+        DAC_Code = 2;
+    };
+};
+
+[-1, { player globalChat format ["%1 has DAC_Code as %2.",_this select 0, _this select 1] }, [player, DAC_Code] ] call CBA_fnc_globalExecute;
 
 //===============|
 // DAC_Settings	 |
@@ -75,7 +92,8 @@ else
 		//===========================================|
 		//player sidechat "JipClientStart"
 		//[] execVM "myJipClientScript.sqf";
-	} else
+	}
+	else
 	{
 		//===========================================|
 		// StartScriptOnClient                       |

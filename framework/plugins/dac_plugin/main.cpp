@@ -1,12 +1,10 @@
 class dac_plugin
 {
 	name = "DAC Plugin";
-	authors[] = {"Nife"};
+	authors[] = {"Nife","GuzzenVonLidl"};
 	version = 1;
-	required_version = 1;
-	dependencies[] = {};
+	dependencies[] = {"mission-settings","headless-client"};
 	url = "";
-	preinit = "";
 	postinit = "postinit.sqf";
-	environment = "server";
+	environment = "all";
 };

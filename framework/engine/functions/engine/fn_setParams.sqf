@@ -15,9 +15,19 @@ _paramArray = paramsArray;
 } foreach _paramArray; 
 
 // =============================================================================
+//  Headless Client
+// =============================================================================
+
+switch (param_hc_enabled) do {
+    case 0: { mission_enable_hc = false };
+    case 1: { mission_enable_hc = true };
+};
+publicVariable "mission_enable_hc";
+
+// =============================================================================
 //  Date
 // =============================================================================
-switch (param_timeOfDay) do {
+switch (param_time_of_day) do {
     
     // Dawn
     case 0: { setDate [2007, 5, 11, 4, 50] };
@@ -49,8 +59,7 @@ switch (param_timeOfDay) do {
 // =============================================================================
 private ["_MissionOvercast","_MissionRain","_MissionRainbow","_MissionLightnings","_MissionWindStr","_MissionWindGusts","_MissionFog","_MissionWaves","_MissionHumidity"];
 
-switch (param_weather) do 
-{ 
+switch (param_weather) do { 
     // Clear (Calm)
     case 0: {
         _MissionOvercast = 0.01;

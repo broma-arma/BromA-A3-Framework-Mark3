@@ -18,11 +18,14 @@
 		"config.cpp" files within the module folders.
 */
 
-//#include "dac_plugin\main.cpp"
+#include "headless_client\main.cpp"
+#include "dac_plugin\main.cpp"
 #include "agm_plugin\main.cpp"
-#include "tfar_plugin\main.cpp"
+//#include "tfar_plugin\main.cpp"
 #include "respawn_system\main.cpp"
-//#include "f_casualties_cap\main.cpp"
+#include "cssa3_spectator\main.cpp"
+#include "block_tp\main.cpp"
+#include "f_casualties_cap\main.cpp"
 #include "f_remove_body\main.cpp"
 #include "map_cover\main.cpp"
 #include "spawn_protection\main.cpp"
@@ -37,4 +40,3 @@
 #include "loading_screen\main.cpp"
 #include "ao_limit\main.cpp"
 #include "mission_maker_teleport\main.cpp"
-#include "cssa3_spectator\main.cpp"

@@ -18,8 +18,7 @@ if (player in co_lock_units) then {
     player addAction ["<t color='#FF0000'>Start the mission.</t>", { [[],"freePlayers",false,true] spawn BIS_fnc_MP; },nil,0.5,true,true,"'", "(player in co_lock_units)&&!lockFree" ];
 } else {
     player spawn {
-        while {(true)} do {
-            if (lockFree) exitWith {};
+        while {!(lockFree)} do {
 
             if ( typeof vehicle player != typeof _this) then {
                 player action ["getout", vehicle player];

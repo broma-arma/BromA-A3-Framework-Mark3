@@ -1,7 +1,11 @@
 if (isNil "mandatoryObjectivesA") then { mandatoryObjectivesA = [] };
 if (isNil "mandatoryObjectivesB") then { mandatoryObjectivesB = [] };
 if (isNil "mandatoryObjectivesC") then { mandatoryObjectivesC = [] };
+
 if (isNil "mission_running") then { mission_running = true };
+
+if (isNil "mission_AI_controller") then { mission_AI_controller = false };
+if (isNil "mission_HC_enabled") then { mission_HC_enabled = false };
 
 // =============================================================================
 //          Initializes all possible groups whether they exist or not.

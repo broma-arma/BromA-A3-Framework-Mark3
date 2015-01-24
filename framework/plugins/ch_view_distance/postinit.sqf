@@ -12,8 +12,9 @@ CHVD_fnc_openDialog = compile preprocessFileLineNumbers (_path+"fn_openDialog.sq
 
 [_path] spawn {
         _path = _this select 0;
+        
 	//Wait for mission init, in case there are variables defined some place else
-	waitUntil {time > 0};
+	waitUntil {time > 1};
         
 	//Define variables, load from profileNamespace
 	CHVD_allowNoGrass = if (isNil "CHVD_allowNoGrass") then {true} else {CHVD_allowNoGrass};

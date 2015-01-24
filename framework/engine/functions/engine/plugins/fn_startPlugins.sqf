@@ -12,7 +12,7 @@
     _loadplugin = true;
     
     if ((_environment == "SERVER")&&(!isServer)) then { _loadplugin = false };
-    if ((_environment == "CLIENT")&&(isDedicated)) then { _loadplugin = false };
+    if ((_environment == "CLIENT")&&(!hasInterface)) then { _loadplugin = false };
     
     if (_loadplugin) then {
         [_preinit,_postinit,_dependencies,_plugin,_environment] spawn {

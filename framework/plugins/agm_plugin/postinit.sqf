@@ -30,4 +30,4 @@ _module setVariable ["PreventInstaDeath", true];
 _module setVariable ["RequireDiagnosis", true];
 _module setVariable ["RequireMEDEVAC", false];
 _module setVariable ["SingleBandage", false];
-_module setVariable ["DisableScreams", false];
+_module setVariable ["DisableScreams", true];

@@ -54,7 +54,7 @@ switch (toUpper(_faction)) do {
         #include "factions\racs.sqf"
     };
     
-    case "REDFOR": {
+    case "OPFOR": {
         #include "factions\sla.sqf"
     };
     

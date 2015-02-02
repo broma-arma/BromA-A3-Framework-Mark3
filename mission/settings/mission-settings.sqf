@@ -28,7 +28,6 @@ mission_version =    "v0";
 // ============================================================================
 
 mission_game_mode = "coop";
-mission_game_mode_actual = getText((missionConfigFile >> "Header") >> "gameType");
 
 // ============================================================================
 //                          ==   LOADOUT MODE   ==                             |

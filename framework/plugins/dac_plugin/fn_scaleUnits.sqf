@@ -2,8 +2,8 @@ private ["_ret"];
 
 _aliasHUGE = ["huge","insane","loads"];
 _aliasLARGE = ["large","lots","many"];
-_aliasMEDIUM = ["medium","average"];
-_aliasSMALL = ["small","little","few", "not-many"];
+_aliasMEDIUM = ["medium","average","some","regular"];
+_aliasSMALL = ["small","little","few", "not-many","couple"];
 _aliasMINISCULE = ["very-few","almost-no"];
 
 _a = _this select 0;

@@ -10,3 +10,14 @@ HeadlessController = mission_AI_controller;
 HeadlessVariable = mission_HC_enabled;
 
 if (HeadlessVariable) then { publicVariable "HeadlessVariable" };
+
+if (mission_AI_controller && !isServer) then {
+    ["ALL","CHAT", format ["Headless Client ENABLED as %1.", player]] call BRM_fnc_doLog;
+};
+
+if (mission_AI_controller) then {
+    
+    #include "core_functions.sqf"
+
+    [] call hc_fnc_loadMissionObjects;
+};

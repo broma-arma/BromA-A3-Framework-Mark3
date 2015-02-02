@@ -8,7 +8,7 @@ _done = _unit getVariable ["done",false];
 
 if (_done) exitWith {};
 
-if ((!isPlayer _unit)&&(!isServer)) exitWith {};
+if ((!isPlayer _unit)&&(!mission_AI_controller)) exitWith {};
 
 // RESETS ITEMS ================================================================
 

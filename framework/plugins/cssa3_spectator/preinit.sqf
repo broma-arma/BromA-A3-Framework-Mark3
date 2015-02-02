@@ -20,7 +20,6 @@ CSSA3_version = 0.2;
 
 //Server Init
 if (isServer) then {
-	diag_log text "[CSSA3 Notice]: CSSA3 starting. (CSSA3_init.sqf)";
 	CSSA3_beforeJIPClients = [];
 	CSSA3_allowJIP = true;
 	CSSA3_timeToJIP = 0;
@@ -34,13 +33,11 @@ if (isServer) then {
 			_player = objectFromNetId _playerNetID;
 			_CSSA3_UID = getPlayerUID _player;
 			_currentTime = time;
-			diag_log text format ["[CSSA3 Notice]: Player connected; netID: %1, Player: %2, playerUID: %3, Time Of Join: %4",_playerNetID, name _player, _CSSA3_UID, _currentTime];
 
 			if (_currentTime <= CSSA3_timeToJIP) then {
 				if !(_CSSA3_UID in CSSA3_beforeJIPClients) then
 				{
 					CSSA3_beforeJIPClients pushBack _CSSA3_UID;
-					diag_log text format ["[CSSA3 Notice]: Added %1 to JIP array. %2",_CSSA3_UID,CSSA3_beforeJIPClients];
 				};
 			};
 
@@ -48,8 +45,7 @@ if (isServer) then {
 			{
 				if ((_currentTime > CSSA3_timeToJIP) && {!(_CSSA3_UID in CSSA3_beforeJIPClients)}) then
 				{
-					diag_log text format ["[CSSA3 Notice]: Player %1 forced to spectate, joined after allowed time. Time: %2", name _player,_currentTime];
-					forceRespawn _player;
+                                    forceRespawn _player;
 				};
 			};
 		};
@@ -80,17 +76,13 @@ if (hasInterface) then {
 	CSSA3_fnc_findInNested = compile preprocessFileLineNumbers (_path + "functions\fn_findInNested.sqf");
         CSSA3_fnc_animateUnitList = compile preprocessFileLineNumbers (_path + "functions\fn_animateUnitList.sqf");
 
-	diag_log text "[CSSA3 Notice]: Functions compiled. Initiating player join. (CSSA3_init.sqf)";
-
 	//Wait until player is no longer null
 	waitUntil {(!isNull player) && {alive player}};
 	CSSA3_playerSide = side player;
 	sleep 0.1;
-	diag_log text "[CSSA3 Notice]: Player no longer null, adding eventhandlers. (CSSA3_init)";
 
 	//Add player UID to array of players who joined before out of time (_timeToJIP).
 	_sentArray = [[netID player],"CSSA3_fnc_addToJIP",false,false,false] call bis_fnc_MP;
-	diag_log text format ["[CSSA3 Notice]: Player netID: %1", netID player];
 
 	//Check if API vars are Nil.
 	_defaultSides = [blufor,opfor,civilian,resistance];

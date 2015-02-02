@@ -24,7 +24,7 @@
 
             waitUntil{([_deps] call BRM_fnc_getDep)};
 
-            diag_log format["== %1 LOADED PLUGIN: %2 ==============================",_env, _plugin];
+            ["LOCAL", "F_LOG", format["%1 LOADED PLUGIN: %2",_env, _plugin]] call BRM_fnc_doLog;
             
             _path = "framework\plugins\"+_plugin+"\";
 

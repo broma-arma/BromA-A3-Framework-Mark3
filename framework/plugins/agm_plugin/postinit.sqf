@@ -17,9 +17,9 @@ _module setVariable ["SavePreDeathGear", true];
 
 _module = _group createUnit ["AGM_ModuleMedical", [0,0,0],[],0.5,"NONE"];
 _module setVariable ["AllowChatWhileUnconscious", false];
-_module setVariable ["AllowNonmedics", false];
+_module setVariable ["AllowNonmedics", true];
 _module setVariable ["AutomaticWakeup", true];
-_module setVariable ["CoefBleeding", true];
+_module setVariable ["CoefBleeding", 1];
 _module setVariable ["CoefDamage", 1];
 _module setVariable ["CoefNonMedic", 4];
 _module setVariable ["CoefPain", 1];

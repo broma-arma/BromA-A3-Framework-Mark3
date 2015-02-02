@@ -6,7 +6,6 @@ class agm_plugin
 	required_version = 1;
 	dependencies[] = {};
 	url = "";
-	preinit = "";
 	postinit = "postinit.sqf";
 	environment = "server";
 };

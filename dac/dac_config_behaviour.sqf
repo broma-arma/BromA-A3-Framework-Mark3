@@ -29,7 +29,7 @@ switch (_this select 0) do
 		_setBldgBeh = [4,50,120,600,2];
 		_setPatrol  = ["45 + (20 * (skill _leader))","(60 + (random 60)) + ((skill _leader) * 50)"];
 		_setSearch  = ["40 + ((skill _leader) * 150)","50 + ((skill _leader) * 50)"];
-		_setSupport = [1,2];//support for other zones //arty
+		_setSupport = [1,2];//support for other zones //blufor arti
 		_setJoin    = 2;
 		_setEmpVeh  = [[150,100],[150,100]];
 		_setSupTime = ["5 + ((skill _unit) * (5 * DAC_AI_Level))",2,5];

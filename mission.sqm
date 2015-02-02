@@ -8,7 +8,8 @@ class Mission
 		"a3_characters_f",
 		"A3_Characters_F_OPFOR",
 		"A3_Characters_F_Civil",
-		"A3_Characters_F_INDEP"
+		"A3_Characters_F_INDEP",
+		"A3_Characters_F_Gamma"
 	};
 	addOnsAuto[]=
 	{
@@ -22,7 +23,7 @@ class Mission
 	randomSeed=13980418;
 	class Intel
 	{
-		briefingName="BromA Framework MK 2 0002751";
+		briefingName="BromA Framework MK 2 00028";
 		overviewText="STRONGER THAN EVER BEFORE.";
 		startWeather=0;
 		startWind=0.099999994;
@@ -40,7 +41,7 @@ class Mission
 	};
 	class Groups
 	{
-		items=7;
+		items=8;
 		class Item0
 		{
 			side="WEST";
@@ -49,7 +50,7 @@ class Mission
 				items=2;
 				class Item0
 				{
-					position[]={899.45117,5,915.90869};
+					position[]={900.07745,5,922.84375};
 					special="NONE";
 					id=0;
 					side="WEST";
@@ -63,7 +64,7 @@ class Mission
 				};
 				class Item1
 				{
-					position[]={899.46503,5,912.4126};
+					position[]={900.08734,5,911.729};
 					special="NONE";
 					id=1;
 					side="WEST";
@@ -154,25 +155,6 @@ class Mission
 		};
 		class Item5
 		{
-			side="LOGIC";
-			class Vehicles
-			{
-				items=1;
-				class Item0
-				{
-					position[]={31.316051,5,39.425781};
-					id=6;
-					side="LOGIC";
-					vehicle="HeadlessClient_F";
-					player="PLAY CDG";
-					leader=1;
-					skill=1;
-					text="HCSlot";
-				};
-			};
-		};
-		class Item6
-		{
 			side="CIV";
 			class Vehicles
 			{
@@ -180,7 +162,7 @@ class Mission
 				class Item0
 				{
 					position[]={899.98877,5,933.35449};
-					id=7;
+					id=6;
 					side="CIV";
 					vehicle="C_man_1";
 					leader=1;
@@ -189,13 +171,109 @@ class Mission
 				};
 			};
 		};
+		class Item6
+		{
+			side="LOGIC";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={51.288269,5,35.726074};
+					id=7;
+					side="LOGIC";
+					vehicle="HeadlessClient_F";
+					player="PLAY CDG";
+					leader=1;
+					skill=1;
+					text="HCSlot";
+					description="Headless Client";
+				};
+			};
+		};
+		class Item7
+		{
+			side="CIV";
+			class Vehicles
+			{
+				items=3;
+				class Item0
+				{
+					presence=0;
+					position[]={899.99573,5,946.17578};
+					id=8;
+					side="CIV";
+					vehicle="C_man_1";
+					leader=1;
+					skill=0.60000002;
+					init="[this, ""blufor"", ""SL""] call BRM_fnc_assignLoadout";
+				};
+				class Item1
+				{
+					presence=0;
+					position[]={898.48572,5,944.75781};
+					id=9;
+					side="CIV";
+					vehicle="C_man_1";
+					skill=0.60000002;
+					init="[this, ""blufor"", ""rifleman""] call BRM_fnc_assignLoadout";
+				};
+				class Item2
+				{
+					presence=0;
+					position[]={901.60394,5,944.65576};
+					id=10;
+					side="CIV";
+					vehicle="C_man_1";
+					skill=0.60000002;
+					init="[this, ""blufor"", ""MG""] call BRM_fnc_assignLoadout";
+				};
+			};
+			class Waypoints
+			{
+				items=4;
+				class Item0
+				{
+					position[]={886.83075,5,958.42139};
+					class Effects
+					{
+					};
+					showWP="NEVER";
+				};
+				class Item1
+				{
+					position[]={900.03589,5,971.90039};
+					class Effects
+					{
+					};
+					showWP="NEVER";
+				};
+				class Item2
+				{
+					position[]={913.16907,5,958.41064};
+					class Effects
+					{
+					};
+					showWP="NEVER";
+				};
+				class Item3
+				{
+					position[]={899.98633,5,946.16357};
+					type="CYCLE";
+					class Effects
+					{
+					};
+					showWP="NEVER";
+				};
+			};
+		};
 	};
 	class Markers
 	{
-		items=5;
+		items=4;
 		class Item0
 		{
-			position[]={899.89325,5,899.95947};
+			position[]={900.01794,5,899.75781};
 			name="AO";
 			markerType="RECTANGLE";
 			type="Empty";
@@ -207,7 +285,7 @@ class Mission
 		};
 		class Item1
 		{
-			position[]={899.5329,5,908.56641};
+			position[]={899.95984,5,908.51172};
 			name="respawn_west";
 			type="Empty";
 			colorName="ColorWEST";
@@ -226,40 +304,34 @@ class Mission
 			type="Empty";
 			colorName="ColorGUER";
 		};
-		class Item4
-		{
-			position[]={899.13354,5,1199.9424};
-			name="refZone";
-			type="Empty";
-		};
 	};
 	class Sensors
 	{
 		items=2;
 		class Item0
 		{
-			position[]={1049.3219,5,1200.6475};
-			a=100;
-			b=100;
+			position[]={1602.9496,5,1595.4907};
+			a=400;
+			b=400;
 			interruptable=1;
 			age="UNKNOWN";
 			name="trg2";
 			expCond="false";
-			expActiv="[thistrigger, ""create an activated friendly zone called whatever with insane amounts of infantry""] call BRM_fnc_DAC";
+			expActiv="_nul = [thistrigger, ""create an activated enemy zone called whatever with insane amounts of infantry and some vehicles""] spawn BRM_fnc_DAC";
 			class Effects
 			{
 			};
 		};
 		class Item1
 		{
-			position[]={750.46649,5,1199.8799};
-			a=100;
-			b=100;
+			position[]={1599.5739,5,970.02002};
+			a=400;
+			b=400;
 			interruptable=1;
 			age="UNKNOWN";
 			name="trg1";
 			expCond="false";
-			expActiv="[thistrigger, ""create activated enemy zone called whatever with insane amounts of infantry""] call BRM_fnc_DAC";
+			expActiv="_zone = [thistrigger, ""create an activated friendly zone called whatever with insane amounts of infantry and some vehicles""] spawn BRM_fnc_DAC";
 			class Effects
 			{
 			};

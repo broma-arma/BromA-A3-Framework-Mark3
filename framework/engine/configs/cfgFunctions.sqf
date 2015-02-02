@@ -1,6 +1,7 @@
 class BRM {
     class plugins {
-        file = "framework\engine\functions\engine\plugins";
+        file = "framework\engine\functions\engine\plugins";        
+        class doLog{};
         class loadPlugins{preInit = 1;};
         class startPlugins{};
         class logPlugins{};
@@ -50,7 +51,7 @@ class BRM {
         class newMarkerIcon{};
         class stripItems{};
         class weaponAway{};
-        class garrisonUnits{};
+        class garrisonUnits{};        
     };
     class api_zeus {
         file = "framework\engine\functions\api\zeus";

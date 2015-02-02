@@ -1,4 +1,5 @@
 if (!hasInterface) exitWith {};
+waitUntil{(!isNil "paramsDone")};
 
 _initUnit = player getVariable ["initUnit", ["white", "blufor", "rifleman", "Empty", "grpNull"]];
 
@@ -11,7 +12,7 @@ player_is_jip = (time > 30);
 
 [] spawn BRM_fnc_syncTime;
 
-[player, _faction, _role] call BRM_fnc_assignLoadout;
+//[player, _faction, _role] call BRM_fnc_assignLoadout;
 
 if (!mission_allow_jip && player_is_jip) exitWith {
     [] spawn {

@@ -1,6 +1,6 @@
 if (!(isNull player) && !(isMultiplayer)) exitWith {};
 
-if (isServer) then { callIntro = false }; publicVariable "callIntro";
+if (isServer) then { callIntro = false; publicVariable "callIntro" };
 //==============================================================================
 // Here we declare what text will be shown to the player when the game is loading.
 
@@ -12,6 +12,8 @@ _loadingScreen =
     Take your time to plan your tactics with your team-mates.";
 //==============================================================================
 
+if (!isServer) then {
+    
 // Stop the players from moving.
 player enableSimulation false;
 
@@ -28,3 +30,4 @@ sleep 7;
 titleText ["", "PLAIN"];
 
 player enableSimulation true;
+};

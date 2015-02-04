@@ -11,16 +11,16 @@ if (count _this > 1) then {
 switch (typeName _target) do {
     case "STRING": {
         _index = [_target, _lives] call BRM_fnc_setLives;
-        deadPlayersArray = deadPlayersArray - [[(playerLives select _index) select 0, _target]];
-        publicVariable "deadPlayersArray";
+        mission_dead_players = mission_dead_players - [[(mission_players_lives select _index) select 0, _target]];
+        publicVariable "mission_dead_players";
     };
     case "SCALAR": {
         for "_i" from 0 to (_target-1) do {
-            if (_i <= count deadPlayersArray) then {
-                [(deadPlayersArray select _i) select 1, _lives] call BRM_fnc_setLives;                
+            if (_i <= count mission_dead_players) then {
+                [(mission_dead_players select _i) select 1, _lives] call BRM_fnc_setLives;                
                     
-                deadPlayersArray = deadPlayersArray - [[(deadPlayersArray select _i) select 0, (deadPlayersArray select _i) select 1]];
-                publicVariable "deadPlayersArray";                                
+                mission_dead_players = mission_dead_players - [[(mission_dead_players select _i) select 0, (mission_dead_players select _i) select 1]];
+                publicVariable "mission_dead_players";                                
             };
         };
     };

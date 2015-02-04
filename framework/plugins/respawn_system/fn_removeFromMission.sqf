@@ -35,7 +35,7 @@ sleep 5;
 _unit unlinkItem "ItemRadio";
 _unit removeItem "ItemRadio";
 
-waitUntil{!([getPlayerUID _unit, name _unit] in deadPlayersArray)};
+waitUntil{!([getPlayerUID _unit, name _unit] in mission_dead_players)};
 
 titletext ["You are respawning...", "BLACK FADED",0];
 

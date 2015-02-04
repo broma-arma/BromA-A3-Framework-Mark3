@@ -8,6 +8,6 @@ TF_give_personal_radio_to_regular_soldier = false;
 
 TF_give_microdagr_to_soldier = false;
 
-if (!isDedicated) then {
+if (hasInterface) then {
     [] execVM ((_this select 0)+"fn_aiHearsTFAR.sqf");
 };

@@ -1,5 +1,5 @@
-if (isNil "deadPlayersArray") then { deadPlayersArray = [] };
-if (isNil "playerLives") then { playerLives = [] };
+if (isNil "mission_dead_players") then { mission_dead_players = [] };
+if (isNil "mission_players_lives") then { mission_players_lives = [] };
 _path = _this select 0;
 
 BRM_fnc_removeFromMission = compile preprocessFileLineNumbers (_path+"fn_removeFromMission.sqf");

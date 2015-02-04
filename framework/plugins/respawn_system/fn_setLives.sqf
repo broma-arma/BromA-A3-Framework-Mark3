@@ -10,11 +10,11 @@ if (typeName _target == "OBJECT") then { _target = name _target };
 
 {
     if ( ((_x select 1) == (_target)) ) exitWith { _found = true; _index = _forEachindex };
-} forEach playerLives;
+} forEach mission_players_lives;
 
 if (_found) then {
-    playerLives set [_index, [(playerLives select _index) select 0, _target, _lives]];
-    publicVariable "playerLives";
+    mission_players_lives set [_index, [(mission_players_lives select _index) select 0, _target, _lives]];
+    publicVariable "mission_players_lives";
 };
 
 _index

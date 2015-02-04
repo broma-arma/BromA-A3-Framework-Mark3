@@ -4,10 +4,6 @@ _unit = _this select 0;
 _faction = _this select 1;
 _type = "";
 
-_done = _unit getVariable ["done",false];
-
-if (_done) exitWith {};
-
 if ((!isPlayer _unit)&&(!mission_AI_controller)) exitWith {};
 
 // RESETS ITEMS ================================================================
@@ -19,7 +15,6 @@ removeUniform _unit;
 removeVest _unit;
 removeBackpack _unit;
 removeHeadgear _unit;
-removeGoggles _unit;
 
 // DETERMINE UNIT TYPE =========================================================
 
@@ -45,6 +40,8 @@ _isMGAssistant = (_type == "mgassist")||(_type == "Ammo Bearer");
 _isLifeSaver = (_type == "medic")||(_type == "Combat Life Saver");
 _isGrenadier = (_type == "grenadier")||(_type == "Grenadier");
 _isCrew = (_type == "crew")||(_type == "Crewman");
+_isPilot = (_type == "pilot") || (_type == "Pilot");
+_isJTAC = (_type == "JTAC") || (_type == "Recon JTAC");
 
 // ASSIGN LOADOUTS BASED ON FACTION ============================================
 
@@ -67,5 +64,3 @@ switch (toUpper(_faction)) do {
     };     
     
 };
-
-_unit setVariable ["done",true,true];

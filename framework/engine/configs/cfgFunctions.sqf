@@ -37,9 +37,11 @@ class BRM {
     class events {
         file = "framework\engine\events";
         class initPlayer{postInit = 1;};
-        class onKilled{};
-        class onRespawn{};
-        class onDisconnected{};
+        class onPlayerKilled{};
+        class onPlayerRespawn{};
+        class onPlayerHasDisconnected{};
+        class initAI{};
+        class onAIKilled{};
     };
     class briefing {
         file = "mission\briefings";

@@ -41,7 +41,7 @@ class Mission
 	};
 	class Groups
 	{
-		items=8;
+		items=9;
 		class Item0
 		{
 			side="WEST";
@@ -60,7 +60,7 @@ class Mission
 					rank="SERGEANT";
 					skill=0.60000002;
 					text="Zero69Actual";
-					init="this setVariable [""initUnit"",[""blue"",""blufor"",""rifleman"",""Alpha""],false]; alpha_grp_blu1 = group this";
+					init="this setVariable [""initUnit"",[""blue"",""auto"",""auto"",""Alpha""],false]; alpha_grp_blu1 = group this";
 				};
 				class Item1
 				{
@@ -206,7 +206,6 @@ class Mission
 					vehicle="C_man_1";
 					leader=1;
 					skill=0.60000002;
-					init="[this, ""blufor"", ""SL""] call BRM_fnc_assignLoadout";
 				};
 				class Item1
 				{
@@ -216,7 +215,6 @@ class Mission
 					side="CIV";
 					vehicle="C_man_1";
 					skill=0.60000002;
-					init="[this, ""blufor"", ""rifleman""] call BRM_fnc_assignLoadout";
 				};
 				class Item2
 				{
@@ -226,7 +224,6 @@ class Mission
 					side="CIV";
 					vehicle="C_man_1";
 					skill=0.60000002;
-					init="[this, ""blufor"", ""MG""] call BRM_fnc_assignLoadout";
 				};
 			};
 			class Waypoints
@@ -264,6 +261,26 @@ class Mission
 					{
 					};
 					showWP="NEVER";
+				};
+			};
+		};
+		class Item8
+		{
+			side="EAST";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={895.28101,5,926.71777};
+					special="NONE";
+					id=11;
+					side="EAST";
+					vehicle="O_Soldier_F";
+					leader=1;
+					skill=0.60000002;
+					ammo=0.6599288;
+					init="_init = [this, ""auto""] spawn BRM_fnc_initAI";
 				};
 			};
 		};

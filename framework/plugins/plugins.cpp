@@ -21,7 +21,7 @@
 #include "headless_client\main.cpp"
 #include "dac_plugin\main.cpp"
 #include "agm_plugin\main.cpp"
-//#include "tfar_plugin\main.cpp"
+#include "tfar_plugin\main.cpp"
 #include "respawn_system\main.cpp"
 #include "cssa3_spectator\main.cpp"
 #include "block_tp\main.cpp"

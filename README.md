@@ -4,7 +4,7 @@
   </a>
    <br/><br/>
   <a href="https://github.com/Neefay/BromA-A3-Framework-Mark3/commits/master">
-    <img src="https://img.shields.io/badge/build-00029-orange.svg" alt="Current version">
+    <img src="https://img.shields.io/badge/build-00030-orange.svg" alt="Current version">
   </a>
 </p>
 
@@ -37,15 +37,20 @@ Also keeping up with good practices, most functionality is modular and therefore
 
 The framework is as context agnostic as possible, meaning you can just change one value and your mission will change from a COOP into a TVT or even a COTVT - everything is already pre-configured to be flexible and as little as possible assumptions are made about the mission itself.
 
-### So what's left until it's finished?
+### TO DO:
 -
-*	- [x] Loadouts are important
-*		- [ ] Work a system for containers/vehicles, should be easy
-*	- [x] Start working on the DAC plugin
-*		- [ ] Make native functions and abstract settings into a separate file
-*		- [ ] Parameters as well
-*		- [ ] IMPORTANT: functions to create zones using only reference markers
-*	- [ ] Work on the HC functionality.
+*	- [ ] Work a system for containers/vehicles.
+*	- [ ] Add default pre-placed units.
+*	- [ ] Declare all units as objNulls.
+*	- [ ] Add a general plugins settings file.
+*	- [X] Make sure DAC can spawn unit with default gear.
+*	- [X] Better way to control player loadouts - switch case for all factions.
+*	- [X] Make a new loadout style with less redundancy.
+*	- [X] Bring back the old way with _primaryrifles etc.
+*	- [ ] Add all the proper endings.
+*	- [ ] Make a script to generate callsigns and radios freqs based on the mission groups.
+*	- [ ] Fix the ending screen.
+*	- [ ] Comment and document everything.
 
 ### What then?
 

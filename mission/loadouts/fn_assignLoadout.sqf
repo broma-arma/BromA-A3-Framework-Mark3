@@ -45,22 +45,7 @@ _isJTAC = (_type == "JTAC") || (_type == "Recon JTAC");
 
 // ASSIGN LOADOUTS BASED ON FACTION ============================================
 
-switch (toUpper(_faction)) do {
-    
-    case "BLUFOR": {
-        #include "factions\racs.sqf"
-    };
-    
-    case "OPFOR": {
-        #include "factions\sla.sqf"
-    };
-    
-    case "INDFOR": {
-        #include "factions\pmc.sqf"
-    };
+#include "content\loadout-functions.sqf"
+#include "content\content-list.sqf"
 
-    case "default": {        
-        #include "factions\default.sqf"
-    };     
-    
-};
+#include "faction-list.sqf"

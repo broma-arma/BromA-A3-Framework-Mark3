@@ -2,6 +2,9 @@
     
 if (!isServer) exitWith {};
 waitUntil{(!isNil "paramsArray")};
+
+mission_params_read = false; publicVariable "mission_params_read";
+
 _paramArray = paramsArray;
 {
     _paramName = (configName ((missionConfigFile >> "Params") select _forEachIndex));
@@ -9,20 +12,10 @@ _paramArray = paramsArray;
     _paramCode = ( getText (missionConfigFile >> "Params" >> _paramName >> "code"));
     _code = format[_paramCode, _paramValue];
     call compile _code;
-    if (isServer) then {
-        publicVariable _paramName;
-    };
-} foreach _paramArray; 
+    publicVariable _paramName;
+} foreach _paramArray;
 
-// =============================================================================
-//  Headless Client
-// =============================================================================
-
-switch (param_hc_enabled) do {
-    case 0: { mission_enable_hc = false };
-    case 1: { mission_enable_hc = true };
-};
-publicVariable "mission_enable_hc";
+mission_params_read = true; publicVariable "mission_params_read";
 
 // =============================================================================
 //  Date
@@ -30,28 +23,28 @@ publicVariable "mission_enable_hc";
 switch (param_time_of_day) do {
     
     // Dawn
-    case 0: { setDate [2007, 5, 11, 4, 50] };
+    case 0: { setDate [2035, 5, 11, 4, 50] };
     
     // Early Morning
-    case 1: { setDate [2007, 5, 11, 5, 50] };
+    case 1: { setDate [2035, 5, 11, 5, 50] };
     
     // Morning
-    case 2: { setDate [2007, 5, 11, 9, 00] };
+    case 2: { setDate [2035, 5, 11, 9, 00] };
     
     // Noon
-    case 3: { setDate [2007, 5, 11, 12, 0] };
+    case 3: { setDate [2035, 5, 11, 12, 0] };
     
     // Afternoon
-    case 4: { setDate [2007, 5, 11, 15, 00] };
+    case 4: { setDate [2035, 5, 11, 15, 00] };
     
     // Evening
-    case 5: { setDate [2007, 5, 11, 17, 50] };
+    case 5: { setDate [2035, 5, 11, 17, 50] };
     
     // Dusk
-    case 6: { setDate [2007, 5, 11, 18, 50] };
+    case 6: { setDate [2035, 5, 11, 18, 50] };
     
     // Night
-    case 7: { setDate [2007, 5, 11, 0, 0] };
+    case 7: { setDate [2035, 5, 11, 0, 0] };
 };
 
 // =============================================================================
@@ -213,72 +206,6 @@ switch (param_weather) do {
 [] spawn BRM_fnc_stampTime;
 
 // =============================================================================
-//  Time limit
-// =============================================================================
-
-switch (param_time_limit) do {
-    case 0: { mission_time_limit = -1 };
-    case 1: { mission_time_limit = 10800 };
-    case 2: { mission_time_limit = 7200 };
-    case 3: { mission_time_limit = 3600 };
-    case 4: { mission_time_limit = 2700 };
-    case 5: { mission_time_limit = 1800 };
-    case 6: { mission_time_limit = 900 };
-    case 7: { mission_time_limit = 600 };
-    case 8: { mission_time_limit = 65 };        
-};
-publicvariable "mission_time_limit";
-
-// =============================================================================
-//  AGM Revive Time
-// =============================================================================
-
-switch (param_revive_time) do {
-    case 0: { mission_revive_time = 10 };
-    case 1: { mission_revive_time = 120 };
-    case 2: { mission_revive_time = 300 };
-    case 3: { mission_revive_time = 600 };
-};
-publicVariable "mission_revive_time";
-
-// =============================================================================
-//  Mission setup time
-// =============================================================================
-
-switch (param_setup_time) do {
-    case 0: { mission_setup_time = 15 };
-    case 1: { mission_setup_time = 60*1 };
-    case 2: { mission_setup_time = 60*3 };
-    case 3: { mission_setup_time = 60*5 };
-    case 4: { mission_setup_time = 60*10 };
-};
-publicvariable "mission_setup_time";
-
-// =============================================================================
-//  Civilian casualty cap
-// =============================================================================
-
-switch (param_dead_civies) do {
-    case 0: { mission_dead_civies = -1 };
-    case 1: { mission_dead_civies = 5 };
-    case 2: { mission_dead_civies = 15 };
-    case 3: { mission_dead_civies = 30 };
-};
-publicVariable "mission_dead_civies";
-
-// =============================================================================
-//  Player casualty cap
-// =============================================================================
-
-switch (param_cas_cap) do {
-    case 0: { mission_cas_cap = 80 };
-    case 1: { mission_cas_cap = 90 };
-    case 2: { mission_cas_cap = 95 };
-    case 3: { mission_cas_cap = 100 };
-};
-publicVariable "mission_cas_cap";
-
-// =============================================================================
 //  Enable respawn
 // =============================================================================
 
@@ -299,17 +226,6 @@ switch (param_player_lives) do {
     case 3: { mission_player_lives = 10 };
 };
 publicVariable "mission_player_lives";
-
-// =============================================================================
-//  Allow third person
-// =============================================================================
-
-switch (param_allow_tp_veh) do {
-    case 0: { mission_allow_tp_veh = "disabled" };
-    case 1: { mission_allow_tp_veh = "everyone" };
-    case 2: { mission_allow_tp_veh = "drivers" };
-};
-publicVariable "mission_allow_tp_veh";
 
 paramsDone = true; publicVariable "paramsDone";
 };

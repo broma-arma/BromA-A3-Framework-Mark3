@@ -5,7 +5,6 @@
 //
 // =============================================================================
 
-#include "content\vanilla-weapon-list.sqf"
-#include "content\accessory-list.sqf"
-#include "content\broma-weapon-list.sqf"
-#include "content\uniform-list.sqf"
+#include "vanilla-weapon-list.sqf"
+#include "accessory-list.sqf"
+#include "broma-weapon-list.sqf"

@@ -1,3 +1,18 @@
+_defaultSide = EAST;
+
+_commonRIFLE = _AK74DESERT;
+_commonRIFLEGL = _AK74GP;
+_commonPISTOL = _Makarov;
+_commonMG = _PKP;
+_commonMARKSMAN = _SVDCAMO;
+_commonAT = _RPG26;
+_specAT = _RPG26;
+_commonSMG = _Vermin;
+_commonBACKPACK = "B_AssaultPack_mcamo_AAR";
+_commonRCO = "HLC_Optic_PSO1";
+_commonCCO = "HLC_Optic_PSO1";
+_commonMAGNIFIED = "HLC_Optic_PSO1";
+
 _uniforms = [
     "MNP_CombatUniform_NPA_Alt_B"
 ];
@@ -6,6 +21,8 @@ _myUniform = _uniforms call BIS_fnc_selectRandom;
 
 _unit forceAddUniform _myUniform;
 _headgear = "MNP_Helmet_SOVC_RU";
+
+if (!_isMan) exitWith {};
 
 // =============================================================================
 switch (true) do {

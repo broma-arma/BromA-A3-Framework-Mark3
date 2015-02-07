@@ -9,6 +9,8 @@
     values[] = {0}; texts[] = {""}; default = 0; };
     //======================================================================
     
+    class bar001 {title = ""; values[] = {0}; texts[] = {""}; default = 0; };
+    
     class p_enable_hc
     {
         title = "Enable Headless Client";
@@ -53,7 +55,7 @@
     //======================================================================
     class bar_time {
 
-    title = "TIME CONSTRAINTS =======================";
+    title = "TIME AND MISSION CONSTRAINTS =======================";
 
     values[] = {0}; texts[] = {""}; default = 0; };
     //======================================================================        
@@ -68,6 +70,7 @@
         default = 0;
         code = "param_time_limit = %1";
     };
+    
     class p_setup_time
     {
         title = "Setup Time";
@@ -75,6 +78,15 @@
         texts[] = {"15 seconds","1 minute","3 minutes","5 minutes","10 minutes"};
         default = 0;
         code = "param_setup_time = %1";
+    };
+    
+    class p_spawn_protection_time
+    {
+        title = "Spawn protection duration";
+        values[] = {0,1,2,3,4};
+        texts[] = {"Disabled", "1 minute", "15 minutes", "30 minutes", "Infinite"};
+        default = 4;
+        code = "param_spawn_protection_time = %1";
     };
 
     class bar06 {title = ""; values[] = {0}; texts[] = {""}; default = 0; };

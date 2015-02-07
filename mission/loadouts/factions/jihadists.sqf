@@ -1,3 +1,5 @@
+_defaultSide = EAST;
+
 _uniforms = [
     "U_CAF_AG_ME_ROBES_Mil_01",
     "U_CAF_AG_ME_ROBES_mil_01a",
@@ -34,6 +36,8 @@ _headgear = "H_caf_ag_turban";
 
 _unit forceAddUniform _myUniform;
 _unit addVest _myVest;
+
+if (!_isMan) exitWith {};
 
 // =============================================================================
 switch (true) do {

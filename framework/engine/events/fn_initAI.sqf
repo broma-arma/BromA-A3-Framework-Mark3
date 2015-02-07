@@ -4,20 +4,30 @@ _faction = _this select 1;
 _initialized = _unit getVariable ["unit_initialized", false];
 if (_initialized) exitWith {};
 
-_unit setVariable ["unit_side", side _unit, true];
+_unit setVariable ["unit_side", (side _unit), true];
 
 if (toUpper(_faction) == "AUTO") then {
-    switch (side _unit) do {
-        case WEST: { _faction = "BLUFOR" };
-        case EAST: { _faction = "OPFOR" };
-        case RESISTANCE: { _faction = "INDFOR" };
-        case CIVILIAN: { _faction = "CIVILIAN" };
-        default { _faction = "CIVILIAN" };
+    switch (true) do {
+        case (side _unit == side_a_side): { _faction = side_a_faction };
+        case (side _unit == side_b_side): { _faction = side_b_faction };
+        case (side _unit == side_c_side): { _faction = side_c_faction };
+        default { _faction = "default" };
     };
 };
 
-[_unit, _faction] call BRM_fnc_assignLoadout;
+if ((_faction != "CIVILIAN") && !units_AI_useVanillaGear) then {
+    [_unit, _faction] call BRM_fnc_assignLoadout;
+};
 
 _unit addEventHandler ["Killed", BRM_fnc_onAIKilled];
+
+if ("civilian_casualty_cap" in usedPlugins) then {
+    waitUntil{ (!isNil"fnc_CivFiredWeapon")&&(!isNil"fnc_countCivDeaths") };
+    
+    if (side _unit == civilian) then {
+      _unit addEventHandler ["fired", fnc_civFiredWeapon];
+      _unit addMPEventHandler ["mpkilled", fnc_countCivDeaths];
+    };
+};
 
 _unit setVariable ["unit_initialized", true, true];

@@ -46,7 +46,7 @@ if (!isDedicated) then { // player
       sleep 5;
       _timetype = "";
       if (_time < 60) then { _timetype = "seconds" } else { _timetype = "minutes" };
-      ["MissionWillBegin",[(str _time)+" "+_timetype]] call bis_fnc_showNotification;
+      ["MissionBegins",[(str _time)+" "+_timetype]] call bis_fnc_showNotification;
       
       [_startedVarName, _barrierHandle, _name] spawn {
         _startedVarName = _this select 0;

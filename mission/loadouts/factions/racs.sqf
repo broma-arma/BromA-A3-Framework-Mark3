@@ -1,4 +1,23 @@
+
+_defaultSide = WEST;
+
+_commonRIFLE = _G3SG1;
+_commonRIFLEGL = _G3KA4GL;
+_commonPISTOL = _USP;
+_commonMG = _M249PIP;
+_commonMARKSMAN = _G3SG1;
+_commonAT = _AT4;
+_specAT = _PCML;
+_commonSMG = _Vermin;
+_commonBACKPACK = "B_AssaultPack_mcamo_AAR";
+_commonRCO = _RCO;
+_commonCCO = _ACOred;
+_commonMAGNIFIED = _SOS;
+_NVG = "NVGoggles_BLUFOR";
+
 _unit forceAddUniform "MNP_CombatUniform_USMC_SD";
+
+if (!_isMan) exitWith {};
 
 // =============================================================================
 switch (true) do {
@@ -153,6 +172,6 @@ _unit addWeapon "ItemMap";
 _unit addWeapon "ItemCompass";
 _unit addWeapon "ItemWatch";
 
-_unit linkItem "tf_rf7800str";
+["SR"] call _addRadio;
 
 _unit addItem "AGM_EarBuds";

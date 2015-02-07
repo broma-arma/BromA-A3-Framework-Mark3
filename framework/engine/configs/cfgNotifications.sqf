@@ -6,7 +6,15 @@ class Alert {
     priority = 9;
 };
 
-class MissionWillBegin {
+class Timer {
+    title = "ALERT";
+    description = "%1";
+    iconPicture="\A3\UI_F\data\IGUI\Cfg\Actions\settimer_ca.paa";
+    duration = 3;
+    priority = 9;
+};
+
+class MissionBegins {
     title = "MISSION";
     description = "Mission begins in %1.";
     iconPicture="\A3\UI_F\data\IGUI\Cfg\Actions\settimer_ca.paa";

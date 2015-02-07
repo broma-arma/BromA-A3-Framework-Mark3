@@ -9,7 +9,8 @@ class Mission
 		"A3_Characters_F_OPFOR",
 		"A3_Characters_F_Civil",
 		"A3_Characters_F_INDEP",
-		"A3_Characters_F_Gamma"
+		"A3_Characters_F_Gamma",
+		"A3_Supplies_F_Heli_CargoNets"
 	};
 	addOnsAuto[]=
 	{
@@ -18,12 +19,13 @@ class Mission
 		"A3_Characters_F_OPFOR",
 		"A3_Characters_F_Civil",
 		"A3_Characters_F_INDEP",
+		"A3_Supplies_F_Heli_CargoNets",
 		"map_vr"
 	};
 	randomSeed=13980418;
 	class Intel
 	{
-		briefingName="BromA Framework MK 2 00028";
+		briefingName="BromA Framework MK 2 00030";
 		overviewText="STRONGER THAN EVER BEFORE.";
 		startWeather=0;
 		startWind=0.099999994;
@@ -41,7 +43,7 @@ class Mission
 	};
 	class Groups
 	{
-		items=9;
+		items=8;
 		class Item0
 		{
 			side="WEST";
@@ -50,7 +52,7 @@ class Mission
 				items=2;
 				class Item0
 				{
-					position[]={900.07745,5,922.84375};
+					position[]={900.00049,5,922.27295};
 					special="NONE";
 					id=0;
 					side="WEST";
@@ -264,30 +266,25 @@ class Mission
 				};
 			};
 		};
-		class Item8
+	};
+	class Vehicles
+	{
+		items=1;
+		class Item0
 		{
-			side="EAST";
-			class Vehicles
-			{
-				items=1;
-				class Item0
-				{
-					position[]={895.28101,5,926.71777};
-					special="NONE";
-					id=11;
-					side="EAST";
-					vehicle="O_Soldier_F";
-					leader=1;
-					skill=0.60000002;
-					ammo=0.6599288;
-					init="_init = [this, ""auto""] spawn BRM_fnc_initAI";
-				};
-			};
+			position[]={900.05078,5,923.75537};
+			special="NONE";
+			id=11;
+			side="EMPTY";
+			vehicle="I_CargoNet_01_ammo_F";
+			leader=1;
+			skill=0.60000002;
+			init="_cargo = [this, ""side_a"", [""medical"",""ammo"",""radio""]] spawn BRM_fnc_assignCargo";
 		};
 	};
 	class Markers
 	{
-		items=4;
+		items=5;
 		class Item0
 		{
 			position[]={900.01794,5,899.75781};
@@ -321,15 +318,21 @@ class Mission
 			type="Empty";
 			colorName="ColorGUER";
 		};
+		class Item4
+		{
+			position[]={744.19482,5,1016.9912};
+			name="mkTest";
+			type="Faction_INS";
+		};
 	};
 	class Sensors
 	{
 		items=2;
 		class Item0
 		{
-			position[]={1602.9496,5,1595.4907};
-			a=400;
-			b=400;
+			position[]={1077.4744,5,1305.5024};
+			a=150;
+			b=150;
 			interruptable=1;
 			age="UNKNOWN";
 			name="trg2";

@@ -1,4 +1,21 @@
-if (mission_game_mode != "coop") exitWith {};
+// =============================================================================
+//  Respawn protection duration parameters
+// =============================================================================
+
+waitUntil {(mission_params_read)};
+
+switch (param_spawn_protection_time) do {
+    case 0: { mission_spawn_protection_time = 1 };
+    case 1: { mission_spawn_protection_time = 1*60 };
+    case 2: { mission_spawn_protection_time = 15*60 };
+    case 3: { mission_spawn_protection_time = 30*60 };
+    case 4: { mission_spawn_protection_time = 999999999999 };
+};
+publicVariable "mission_spawn_protection_time";
+
+// =============================================================================
+
+if (mission_spawn_protection_time <= 1) exitWith {};
 
 waitUntil {!isNull player};
 
@@ -44,6 +61,27 @@ _TriggerList3 	 	= [];
 _Debug 			= false;
 
 // =============================================================================
+
+// SIDE_A ZONE
+
+_Pos			= getMarkerPos _side_a_marker;
+_SpawnProtection        = createTrigger ["EmptyDetector",_Pos]; 
+_SpawnProtection setTriggerArea [_areasize,_areasize,0,true]; 
+_SpawnProtection setTriggerActivation ["ANY","PRESENT",true];
+_SpawnProtection setTriggerStatements ["","",""];
+_TriggerList set [count _TriggerList, [_SpawnProtection, side_a_side]];
+
+side_a_spawn_marker = createMarkerLocal [str(random(100)), getPos _SpawnProtection];
+side_a_spawn_marker setMarkerShapeLocal "ELLIPSE";
+side_a_spawn_marker setMarkerColorLocal "color"+side_a_color;
+side_a_spawn_marker setMarkerPosLocal (position _SpawnProtection );
+side_a_spawn_marker setMarkerBrushLocal "SolidBorder";
+side_a_spawn_marker setMarkerAlphaLocal 0.2;
+side_a_spawn_marker setMarkerDirLocal (triggerArea _SpawnProtection select 2 );    
+side_a_spawn_marker setMarkerSizeLocal [( triggerArea _SpawnProtection select 0),(triggerArea _SpawnProtection select 1)]; 
+// =============================================================================
+
+// =============================================================================
 if (_tvtEnabled) then {
     
 // SIDE_B ZONE
@@ -55,36 +93,15 @@ _SpawnProtection2 setTriggerActivation ["ANY","PRESENT",true];
 _SpawnProtection2 setTriggerStatements ["","",""];
 _TriggerList2 set [count _TriggerList2, [_SpawnProtection2, side_b_side]];
 
-_markermain2 = createMarkerLocal [str(random(100)), getPos _SpawnProtection2];
-_markermain2 setMarkerShapeLocal "ELLIPSE";
-_markermain2 setMarkerColorLocal "color"+side_b_color;
-_markermain2 setMarkerPosLocal (position _SpawnProtection2);
-_markermain2 setMarkerBrushLocal "SolidBorder";
-_markermain2 setMarkerAlphaLocal 0.2;
-_markermain2 setMarkerDirLocal (triggerArea _SpawnProtection2 select 2);    
-_markermain2 setMarkerSizeLocal  [( triggerArea _SpawnProtection2 select 0),(triggerArea _SpawnProtection2 select 1)]; 
+side_b_spawn_marker = createMarkerLocal [str(random(100)), getPos _SpawnProtection2];
+side_b_spawn_marker setMarkerShapeLocal "ELLIPSE";
+side_b_spawn_marker setMarkerColorLocal "color"+side_b_color;
+side_b_spawn_marker setMarkerPosLocal (position _SpawnProtection2);
+side_b_spawn_marker setMarkerBrushLocal "SolidBorder";
+side_b_spawn_marker setMarkerAlphaLocal 0.2;
+side_b_spawn_marker setMarkerDirLocal (triggerArea _SpawnProtection2 select 2);    
+side_b_spawn_marker setMarkerSizeLocal  [( triggerArea _SpawnProtection2 select 0),(triggerArea _SpawnProtection2 select 1)]; 
 };
-// =============================================================================
-
-// =============================================================================
-
-// SIDE_A ZONE
-
-_Pos			= getMarkerPos _side_a_marker;
-_SpawnProtection        = createTrigger ["EmptyDetector",_Pos]; 
-_SpawnProtection setTriggerArea [_areasize,_areasize,0,true]; 
-_SpawnProtection setTriggerActivation ["ANY","PRESENT",true];
-_SpawnProtection setTriggerStatements ["","",""];
-_TriggerList set [count _TriggerList, [_SpawnProtection, side_a_side]];
-
-_markermain = createMarkerLocal [str(random(100)), getPos _SpawnProtection];
-_markermain setMarkerShapeLocal "ELLIPSE";
-_markermain setMarkerColorLocal "color"+side_a_color;
-_markermain setMarkerPosLocal (position _SpawnProtection );
-_markermain setMarkerBrushLocal "SolidBorder";
-_markermain setMarkerAlphaLocal 0.2;
-_markermain setMarkerDirLocal (triggerArea _SpawnProtection select 2 );    
-_markermain setMarkerSizeLocal  [( triggerArea _SpawnProtection select 0),(triggerArea _SpawnProtection select 1)]; 
 // =============================================================================
 
 if (mission_enable_side_c) then {
@@ -99,14 +116,14 @@ _SpawnProtection3 setTriggerActivation ["ANY","PRESENT",true];
 _SpawnProtection3 setTriggerStatements ["","",""];
 _TriggerList3 set [count _TriggerList3, [_SpawnProtection3, side_c_side]];
 
-_markermain3 = createMarkerLocal [str(random(100)), getPos _SpawnProtection3];
-_markermain3 setMarkerShapeLocal "ELLIPSE";
-_markermain3 setMarkerColorLocal "color"+side_c_color;
-_markermain3 setMarkerPosLocal (position _SpawnProtection3 );
-_markermain3 setMarkerBrushLocal "SolidBorder";
-_markermain3 setMarkerAlphaLocal 0.2;
-_markermain3 setMarkerDirLocal (triggerArea _SpawnProtection3 select 2 );    
-_markermain3 setMarkerSizeLocal  [( triggerArea _SpawnProtection3 select 0),(triggerArea _SpawnProtection3 select 1)]; 
+side_c_spawn_marker = createMarkerLocal [str(random(100)), getPos _SpawnProtection3];
+side_c_spawn_marker setMarkerShapeLocal "ELLIPSE";
+side_c_spawn_marker setMarkerColorLocal "color"+side_c_color;
+side_c_spawn_marker setMarkerPosLocal (position _SpawnProtection3 );
+side_c_spawn_marker setMarkerBrushLocal "SolidBorder";
+side_c_spawn_marker setMarkerAlphaLocal 0.2;
+side_c_spawn_marker setMarkerDirLocal (triggerArea _SpawnProtection3 select 2 );    
+side_c_spawn_marker setMarkerSizeLocal  [( triggerArea _SpawnProtection3 select 0),(triggerArea _SpawnProtection3 select 1)]; 
 
 // =============================================================================    
 };
@@ -115,7 +132,7 @@ sleep 1;
 
 _InZoneArea = [];
     
-while {true} do {
+while {(mission_spawn_protection_time > time)} do {
 
     {
         _InZoneArea = _x select 0;
@@ -255,3 +272,33 @@ while {true} do {
     
     sleep 1;
 };
+
+fnc_removeProtection = {
+    {
+        _InZoneArea = _x select 0;
+        _InZoneArea = list _InZoneArea;
+
+        if (isNil "_InZoneArea") then { _InZoneArea = [] };
+
+        if (count(_InZoneArea) > 0) then {
+            {
+                _x allowDamage true;
+
+                if(((_x isKindOf  "Air") ||(_x isKindOf  "Car")||(_x isKindOf  "Ship") ||(_x isKindOf  "Tank")||(_x isKindOf  "Helicopter")))then {
+                    if (count crew _x > 0) then {
+                        _x allowDamage true;
+                        { _x allowDamage true } forEach (crew _x);
+                    } else { _x allowDamage true };
+                };
+            } forEach _InZoneArea;
+        };
+    } forEach _this;
+};
+
+["Alert",["Spawn protection is disabled!"]] call BIS_fnc_showNotification;
+
+deleteMarker side_a_spawn_marker;
+_TriggerList call fnc_removeProtection;
+
+if (_tvtEnabled) then { deleteMarker side_b_spawn_marker; _TriggerList2 call fnc_removeProtection };
+if (mission_enable_side_c) then { deleteMarker side_c_spawn_marker; _TriggerList3 call fnc_removeProtection };

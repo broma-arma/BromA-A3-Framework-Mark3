@@ -1,7 +1,7 @@
 class spawn_protection
 {
 	name = "Spawn protection";
-	authors[] = {"Br."};
+	authors[] = {"Br.","Nife"};
 	version = 1;
 	dependencies[] = {"mission-settings"};
 	url = "";

@@ -1,5 +1,19 @@
 scriptName "headless_client";
 
+// =============================================================================
+//  Headless Client parameters
+// =============================================================================
+
+waitUntil {(mission_params_read)};
+
+switch (param_hc_enabled) do {
+    case 0: { mission_enable_hc = false };
+    case 1: { mission_enable_hc = true };
+};
+publicVariable "mission_enable_hc";
+
+// =============================================================================
+
 if (mission_enable_hc && (isServer || hasInterface)) then { mission_AI_controller = false };
 if (!mission_enable_hc && !isServer) then { mission_AI_controller = false };
 

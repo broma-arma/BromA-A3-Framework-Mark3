@@ -9,10 +9,13 @@ if (!(typeName _msg == "STRING")) then { _msg = str _msg };
 switch (toUpper(_scope)) do {
     case "LOCAL" : { _scope = 1 };
     case "SERVER" : { _scope = 0 };
+    case "SERVER_ONLY": { _scope = 2 };
     case "CLIENTS" : { _scope = -1 };
     case "ALL" : { _scope = -2 };
     default { _scope = 1 };
 };
+
+if ( (_scope == 2) && !isServer) exitWith {};
 
 switch (toUpper(_type)) do {
     case "HINT" : {

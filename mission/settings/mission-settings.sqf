@@ -31,18 +31,10 @@ mission_game_mode = "coop";
 
 // ============================================================================
 //                          ==   LOADOUT MODE   ==                             |
-
-//              Configures how the units' loadout will be loaded.              |
-//                                                                             |
-//     "classic" will load the units using the default framework method.       |
-//     "arsenal" uses arsenal loadouts and load them straight up.              |
-//     "disabled" makes units use their default loadouts.                      |
-//                                                                             |
-//     NOTE: Currently, only the Arsenal loadouts are supported for DAC AI.    |
 // ============================================================================
 
-loadoutStylePlayer = "arsenal";
-loadoutStyleAI =     "arsenal";
+units_player_useVanillaGear = false;
+units_AI_useVanillaGear = false;
 
 // ============================================================================
 //                        == PLAYERS INFORMATION ==                            |
@@ -50,22 +42,23 @@ loadoutStyleAI =     "arsenal";
 //            Edit this value with the side the players belong to.             |
 //                            Valid values are:                                |         
 //                                                                             |
-//                          west, east, resistance                             |
+//                         west, east, resistance                              |
 //
 //   Valid colors are: "blue","red","green","white","black" and "yellow".      |
 //
-//   FactionName is the name which will be displayed on the ending screens.    |
 // ============================================================================
 
 side_a_side = west;            // Side the players belong to
 side_a_color = "blue";         // Color of the player side.
+side_a_faction = "RACS";       // Faction of the players.
 side_a_name = "NATO";          // Player faction name.
 
 // =============================================================================
 
 side_b_side = east;            // Side the enemies belong to
 side_b_color = "red";          // Color of the enemy side.
-side_b_name = "CSAT";          // Enemy faction.
+side_b_faction = "sla";         // Enemy faction.
+side_b_name = "CSAT";          // Enemy faction name.
 
 // =============================================================================
 
@@ -73,9 +66,10 @@ mission_enable_side_c = false;
 
 // =============================================================================
 
-side_c_side = resistance;      // Side the enemies belong to
-side_c_color = "green";        // Color of the enemy side.
-side_c_name = "AAF";           // Enemy faction.
+side_c_side = resistance;      // Side of third faction.
+side_c_color = "green";        // Color of the third faction.
+side_c_faction = "pmc";         // Third side's faction.
+side_c_name = "AAF";           // Name of the third faction.
 
 // =============================================================================
 
@@ -103,10 +97,9 @@ timeLimitEnding = 6;                            // Time limit reached.
 //                           == ALLOW JIP ==                                   |
 
 //      If this value is set to false, JIPs will be removed upon joining.      |
-// =============================================================================    
-mission_allow_jip = true;
-// =============================================================================
+// =============================================================================   
 
-];
+mission_allow_jip = true;
+
 // =============================================================================
 // =============================================================================

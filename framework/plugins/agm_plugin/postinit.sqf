@@ -1,12 +1,20 @@
 if (!isServer) exitWith {};
-waitUntil{(!isNil "paramsDone")};
+
+// =============================================================================
+//  AGM Revive Time
+// =============================================================================
+
+waitUntil {(mission_params_read)};
 
 switch (param_revive_time) do {
     case 0: { mission_revive_time = 10 };
     case 1: { mission_revive_time = 120 };
     case 2: { mission_revive_time = 300 };
-    case 4: { mission_revive_time = 600 };
+    case 3: { mission_revive_time = 600 };
 };
+publicVariable "mission_revive_time";
+
+// =============================================================================
 
 _center = createCenter sideLogic;
 _group = createGroup _center;
@@ -30,4 +38,4 @@ _module setVariable ["PreventInstaDeath", true];
 _module setVariable ["RequireDiagnosis", true];
 _module setVariable ["RequireMEDEVAC", false];
 _module setVariable ["SingleBandage", false];
-_module setVariable ["DisableScreams", true];
+_module setVariable ["DisableScreams", false];

@@ -1,6 +1,6 @@
-_unit setFace "WhiteHead_06";
-_unit setSpeaker "Male01ENGB";
-[_unit,"PATCH_UK_BRITISH_ARMY"] call bis_fnc_setUnitInsignia;
+_defaultSide = WEST;
+
+if (!_isMan) exitWith {};
 
 // =============================================================================
 switch (true) do {
@@ -69,6 +69,10 @@ switch (true) do {
 };
 
 // ADDS ESSENTIALS =============================================================
+
+_unit setFace "WhiteHead_06";
+_unit setSpeaker "Male01ENGB";
+[_unit,"PATCH_UK_BRITISH_ARMY"] call bis_fnc_setUnitInsignia;
 
 _unit addWeapon "ItemMap";
 _unit addWeapon "ItemCompass";

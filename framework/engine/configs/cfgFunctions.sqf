@@ -15,6 +15,11 @@ class BRM {
         class engine_pre{preInit = 1;};
         class engine_post{postInit = 1;};
     };
+    class units {
+        file = "framework\engine\functions\engine\units";
+        class handleScore{};
+        class removeJIP{};
+    };
     class misc {
         file = "framework\engine\functions\engine\misc";
         class getSpawnPoint{};
@@ -53,7 +58,7 @@ class BRM {
         class newMarkerIcon{};
         class stripItems{};
         class weaponAway{};
-        class garrisonUnits{};        
+        class garrisonUnits{};
     };
     class api_zeus {
         file = "framework\engine\functions\api\zeus";
@@ -65,5 +70,6 @@ class BRM {
     class loadout {
         file = "mission\loadouts";
         class assignLoadout{};
+        class assignCargo{};
     };
 };

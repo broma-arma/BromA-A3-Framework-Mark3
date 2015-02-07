@@ -19,4 +19,5 @@ mission_DAC_module = _group createUnit ["DAC_Source_Extern", [0,0,0],[], 1,"NONE
 publicVariable "mission_DAC_module";
 
 _zone1 = [trg1, "Create an activated friendly zone named whatever, with few infantry."] spawn BRM_fnc_DAC;
+//_zone2 = [trg2, "Create an activated civilian zone named whatever, with few infantry."] spawn BRM_fnc_DAC;
 //_zone2 = [trg2, "Create an activated enemy zone named whatever, with lots of infantry and some vehicles and many tanks."] spawn BRM_fnc_DAC;

@@ -1,3 +1,5 @@
+_defaultSide = WEST;
+
 _uniforms = [
     "MNP_CombatUniform_ASA_GC2",
     "MNP_CombatUniform_ASA_GC3",
@@ -14,6 +16,8 @@ _headgear = "rhsusf_ach_bare_ess";
 
 _unit forceAddUniform _myUniform;
 _unit addVest _myVest;
+
+if (!_isMan) exitWith {};
 
 // =============================================================================
 switch (true) do {

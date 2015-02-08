@@ -4,7 +4,7 @@
   </a>
    <br/><br/>
   <a href="https://github.com/Neefay/BromA-A3-Framework-Mark3/commits/master">
-    <img src="https://img.shields.io/badge/build-00030-orange.svg" alt="Current version">
+    <img src="https://img.shields.io/badge/build-00031-orange.svg" alt="Current version">
   </a>
 </p>
 
@@ -39,7 +39,7 @@ The framework is as context agnostic as possible, meaning you can just change on
 
 ### TO DO:
 -
-*	- [ ] Work a system for containers/vehicles.
+*	- [X] Work a system for containers/vehicles.
 *	- [ ] Add default pre-placed units.
 *	- [ ] Declare all units as objNulls.
 *	- [ ] Add a general plugins settings file.
@@ -47,8 +47,11 @@ The framework is as context agnostic as possible, meaning you can just change on
 *	- [X] Better way to control player loadouts - switch case for all factions.
 *	- [X] Make a new loadout style with less redundancy.
 *	- [X] Bring back the old way with _primaryrifles etc.
+*	- [ ] Work all current loadouts to have proper variables.
 *	- [ ] Add all the proper endings.
-*	- [ ] Make a script to generate callsigns and radios freqs based on the mission groups.
+*	- [X] Make a script to generate callsigns and radios freqs based on the mission groups.
+*	- [ ] Platoon Roster needs to wait until all players are initialized and have their alias.
+*	- [ ] Look into ditching the group unitInit and use only the unit's name.
 *	- [ ] Fix the ending screen.
 *	- [ ] Comment and document everything.
 

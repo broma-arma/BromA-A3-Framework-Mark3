@@ -6,6 +6,12 @@ if (_initialized) exitWith {};
 
 _unit setVariable ["unit_side", (side _unit), true];
 
+switch (true) do {
+    case (_faction == "side_a"): { _faction = side_a_faction };
+    case (_faction == "side_b"): { _faction = side_b_faction };
+    case (_faction == "side_c"): { _faction = side_c_faction };
+};
+
 if (toUpper(_faction) == "AUTO") then {
     switch (true) do {
         case (side _unit == side_a_side): { _faction = side_a_faction };

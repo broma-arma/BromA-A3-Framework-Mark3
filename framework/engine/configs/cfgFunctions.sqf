@@ -15,10 +15,11 @@ class BRM {
         class engine_pre{preInit = 1;};
         class engine_post{postInit = 1;};
     };
-    class units {
-        file = "framework\engine\functions\engine\units";
+    class unit {
+        file = "framework\engine\functions\engine\unit";
         class handleScore{};
         class removeJIP{};
+        class setAlias{};
     };
     class misc {
         file = "framework\engine\functions\engine\misc";

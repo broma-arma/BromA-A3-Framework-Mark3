@@ -53,12 +53,18 @@ side_a_color = "blue";         // Color of the player side.
 side_a_faction = "RACS";       // Faction of the players.
 side_a_name = "NATO";          // Player faction name.
 
+// Name the player groups.
+side_a_groups = ["Zero", "Alpha", "Bravo", "Charlie", "Delta"];
+
 // =============================================================================
 
 side_b_side = east;            // Side the enemies belong to
 side_b_color = "red";          // Color of the enemy side.
-side_b_faction = "sla";         // Enemy faction.
+side_b_faction = "sla";        // Enemy faction.
 side_b_name = "CSAT";          // Enemy faction name.
+
+// Name the enemy groups.
+side_b_groups = ["Godfather", "Assassin", "Bastard", "Charger", "Destroyer"];
 
 // =============================================================================
 
@@ -68,8 +74,11 @@ mission_enable_side_c = false;
 
 side_c_side = resistance;      // Side of third faction.
 side_c_color = "green";        // Color of the third faction.
-side_c_faction = "pmc";         // Third side's faction.
+side_c_faction = "pmc";        // Third side's faction.
 side_c_name = "AAF";           // Name of the third faction.
+
+// Name the third faction's groups.
+side_c_groups = ["HQ", "Anna", "Beatrice", "Clara", "Denise"];
 
 // =============================================================================
 

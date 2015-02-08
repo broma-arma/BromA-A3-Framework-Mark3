@@ -7,7 +7,7 @@ if (_initialized) exitWith {};
 
 private["_faction","_role"];
 
-_initUnit = player getVariable ["initUnit", ["white", "NONE", "NOTHING", "Empty", "grpNull"]];
+_initUnit = player getVariable ["unitInit", ["white", "NONE", "NOTHING", "Empty", "grpNull"]];
 
 _groupColor = _initUnit select 0;
 _faction = _initUnit select 1;
@@ -18,9 +18,13 @@ player_is_jip = (time > 10);
 
 [] spawn BRM_fnc_syncTime;
 
-(group player) setGroupId [_groupName];
-
 player setVariable ["unit_side", (side player), true];
+
+switch (true) do {
+    case (_faction == "side_a"): { _faction = side_a_faction };
+    case (_faction == "side_b"): { _faction = side_b_faction };
+    case (_faction == "side_c"): { _faction = side_c_faction };
+};
 
 if (toUpper(_faction) == "AUTO") then {
     switch (true) do {
@@ -34,6 +38,8 @@ if (toUpper(_faction) == "AUTO") then {
 if (toUpper(_role) == "AUTO") then {
     _role = getText (configfile >> "CfgVehicles" >> typeOf player >> "displayName");
 };
+
+[player, _groupName, _role] call BRM_fnc_setAlias;
 
 if ((_faction != "NONE") && !units_player_useVanillaGear) then {
     [player, _faction, _role] call BRM_fnc_assignLoadout;

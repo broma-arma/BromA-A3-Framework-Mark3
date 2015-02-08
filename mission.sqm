@@ -25,7 +25,7 @@ class Mission
 	randomSeed=13980418;
 	class Intel
 	{
-		briefingName="BromA Framework MK 2 00030";
+		briefingName="BromA Framework MK 2 00031";
 		overviewText="STRONGER THAN EVER BEFORE.";
 		startWeather=0;
 		startWind=0.099999994;
@@ -43,7 +43,7 @@ class Mission
 	};
 	class Groups
 	{
-		items=8;
+		items=9;
 		class Item0
 		{
 			side="WEST";
@@ -52,7 +52,7 @@ class Mission
 				items=2;
 				class Item0
 				{
-					position[]={900.00049,5,922.27295};
+					position[]={900.00049,5,915.52197};
 					special="NONE";
 					id=0;
 					side="WEST";
@@ -60,22 +60,22 @@ class Mission
 					player="PLAYER COMMANDER";
 					leader=1;
 					rank="SERGEANT";
-					skill=0.60000002;
-					text="Zero69Actual";
-					init="this setVariable [""initUnit"",[""blue"",""auto"",""auto"",""Alpha""],false]; alpha_grp_blu1 = group this";
+					skill=1;
+					text="blu_co_0_1";
+					init="this setVariable [""unitInit"",[""blue"",""auto"",""auto"",""blu_grp_1""],false]; A_grp1_blu = (group this)";
 				};
 				class Item1
 				{
-					position[]={900.08734,5,911.729};
+					position[]={900.00781,5,911.729};
 					special="NONE";
 					id=1;
 					side="WEST";
 					vehicle="B_Soldier_F";
 					player="PLAY CDG";
-					skill=0.60000002;
-					health=0.9294703;
+					skill=1;
 					ammo=0;
-					init="this setVariable [""initUnit"",[""blue"",""blufor"",""rifleman"",""Alpha""],false]; alpha_grp_blu1 = group this";
+					text="blu_co_1_2";
+					init="this setVariable [""unitInit"",[""blue"",""blufor"",""rifleman"",""blu_grp_1""],false]; A_grp1_blu = (group this)";
 				};
 			};
 		};
@@ -87,7 +87,7 @@ class Mission
 				items=1;
 				class Item0
 				{
-					position[]={879.98676,5,915.90771};
+					position[]={604.60974,5,910.4248};
 					id=2;
 					side="EAST";
 					vehicle="O_Soldier_F";
@@ -95,7 +95,7 @@ class Mission
 					leader=1;
 					skill=0.2;
 					ammo=0;
-					init="this setVariable [""initUnit"",[""blue"",""opfor"",""SL"",""Alpha""],false]; alpha_grp_op1 = group this";
+					init="this setVariable [""unitInit"",[""blue"",""opfor"",""SL"",""Alpha""],false]; alpha_grp_op1 = group this";
 				};
 			};
 		};
@@ -125,7 +125,7 @@ class Mission
 				items=1;
 				class Item0
 				{
-					position[]={916.30078,5,915.91455};
+					position[]={1183.2241,5,906.33545};
 					id=4;
 					side="GUER";
 					vehicle="I_soldier_F";
@@ -133,7 +133,7 @@ class Mission
 					leader=1;
 					skill=0.2;
 					ammo=0;
-					init="this setVariable [""initUnit"",[""blue"",""redfor"",""SL"",""Alpha""],false]; alpha_grp_ind1 = group this";
+					init="this setVariable [""unitInit"",[""blue"",""redfor"",""SL"",""Alpha""],false]; alpha_grp_ind1 = group this";
 				};
 			};
 		};
@@ -266,15 +266,48 @@ class Mission
 				};
 			};
 		};
+		class Item8
+		{
+			side="WEST";
+			class Vehicles
+			{
+				items=2;
+				class Item0
+				{
+					position[]={893.41864,5,915.79541};
+					special="NONE";
+					id=11;
+					side="WEST";
+					vehicle="B_Soldier_F";
+					player="PLAY CDG";
+					leader=1;
+					rank="SERGEANT";
+					skill=0.60000002;
+					init="this setVariable [""unitInit"",[""blue"",""auto"",""auto"",""blu_grp_2""],false]; B_grp1_blu = (group this)";
+				};
+				class Item1
+				{
+					position[]={893.39044,5,912.02588};
+					special="NONE";
+					id=12;
+					side="WEST";
+					vehicle="B_Soldier_F";
+					player="PLAY CDG";
+					skill=0.60000002;
+					ammo=0;
+					init="this setVariable [""unitInit"",[""blue"",""blufor"",""rifleman"",""blu_grp_2""],false]; B_grp1_blu = (group this)";
+				};
+			};
+		};
 	};
 	class Vehicles
 	{
 		items=1;
 		class Item0
 		{
-			position[]={900.05078,5,923.75537};
+			position[]={899.97437,5,917.75879};
 			special="NONE";
-			id=11;
+			id=13;
 			side="EMPTY";
 			vehicle="I_CargoNet_01_ammo_F";
 			leader=1;
@@ -284,7 +317,7 @@ class Mission
 	};
 	class Markers
 	{
-		items=5;
+		items=4;
 		class Item0
 		{
 			position[]={900.01794,5,899.75781};
@@ -306,23 +339,17 @@ class Mission
 		};
 		class Item2
 		{
-			position[]={879.96942,5,908.46338};
+			position[]={604.74133,5,900.63037};
 			name="respawn_east";
 			type="Empty";
 			colorName="ColorEAST";
 		};
 		class Item3
 		{
-			position[]={916.28687,5,908.53271};
+			position[]={1184.9606,5,897.34912};
 			name="respawn_resistance";
 			type="Empty";
 			colorName="ColorGUER";
-		};
-		class Item4
-		{
-			position[]={744.19482,5,1016.9912};
-			name="mkTest";
-			type="Faction_INS";
 		};
 	};
 	class Sensors

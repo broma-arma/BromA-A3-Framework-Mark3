@@ -25,7 +25,7 @@ class Mission
 	randomSeed=13980418;
 	class Intel
 	{
-		briefingName="BromA Framework MK 2 00031";
+		briefingName="BromA Framework MK 2 000321";
 		overviewText="STRONGER THAN EVER BEFORE.";
 		startWeather=0;
 		startWind=0.099999994;
@@ -61,8 +61,8 @@ class Mission
 					leader=1;
 					rank="SERGEANT";
 					skill=1;
-					text="blu_co_0_1";
-					init="this setVariable [""unitInit"",[""blue"",""auto"",""auto"",""blu_grp_1""],false]; A_grp1_blu = (group this)";
+					text="blu_0_0_1";
+					init="this setVariable [""unitInit"",[""blue"",""*"",""*"",""*""], true];";
 				};
 				class Item1
 				{
@@ -74,8 +74,8 @@ class Mission
 					player="PLAY CDG";
 					skill=1;
 					ammo=0;
-					text="blu_co_1_2";
-					init="this setVariable [""unitInit"",[""blue"",""blufor"",""rifleman"",""blu_grp_1""],false]; A_grp1_blu = (group this)";
+					text="blu_0_0_2";
+					init="this setVariable [""unitInit"",[""blue"",""*"",""*"",""*""], true];";
 				};
 			};
 		};
@@ -95,7 +95,8 @@ class Mission
 					leader=1;
 					skill=0.2;
 					ammo=0;
-					init="this setVariable [""unitInit"",[""blue"",""opfor"",""SL"",""Alpha""],false]; alpha_grp_op1 = group this";
+					text="op_0_0_1";
+					init="this setVariable [""unitInit"",[""white"",""*"",""*"",""*""], true];";
 				};
 			};
 		};
@@ -133,7 +134,8 @@ class Mission
 					leader=1;
 					skill=0.2;
 					ammo=0;
-					init="this setVariable [""unitInit"",[""blue"",""redfor"",""SL"",""Alpha""],false]; alpha_grp_ind1 = group this";
+					text="ind_0_0_1";
+					init="this setVariable [""unitInit"",[""white"",""*"",""*"",""*""], true];";
 				};
 			};
 		};
@@ -283,7 +285,8 @@ class Mission
 					leader=1;
 					rank="SERGEANT";
 					skill=0.60000002;
-					init="this setVariable [""unitInit"",[""blue"",""auto"",""auto"",""blu_grp_2""],false]; B_grp1_blu = (group this)";
+					text="blu_5_1_1";
+					init="this setVariable [""unitInit"",[""blue"",""*"",""*"",""Recon""], true];";
 				};
 				class Item1
 				{
@@ -295,7 +298,8 @@ class Mission
 					player="PLAY CDG";
 					skill=0.60000002;
 					ammo=0;
-					init="this setVariable [""unitInit"",[""blue"",""blufor"",""rifleman"",""blu_grp_2""],false]; B_grp1_blu = (group this)";
+					text="blu_5_1_2";
+					init="this setVariable [""unitInit"",[""blue"",""*"",""*"",""Recon""], true];";
 				};
 			};
 		};

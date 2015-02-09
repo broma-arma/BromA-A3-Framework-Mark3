@@ -6,9 +6,9 @@ _groups = [];
 _hiddenGroups = [];
 
 {
-	if ((side _x == side group player) && !(_x in _groups)) then {
-		_groups = _groups + [_x];
-	};
+    if ((side _x == side group player) && !(_x in _groups) && ((count units _x) > 0)) then {
+        _groups pushBack _x;
+    };
 } forEach allGroups;
 
 _groups = _groups - _hiddenGroups;
@@ -47,7 +47,6 @@ _orbatText = "<br/><br/>============= Team Roster =============<br/>";
             _playerdesc = _player getVariable ["rosterAlias", _playerdesc];
             _orbatText = _orbatText + format["%1%2%3 (%4)%5", _padding,_rank, name _x, _playerdesc,_sign] + "<br />";
         } forEach units _x;
-        _orbatText = _orbatText + "<br/>";
     };
 } forEach _groups;
 

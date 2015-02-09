@@ -22,25 +22,104 @@ if (isNil "mission_HC_enabled") then { mission_HC_enabled = false };
 //         Initializes all playable units whether they exist or not.
 // =============================================================================
 
-if (isNil"Zero69Actual") then { Zero69Actual = objNull };
+if(isNil"blu_0_0_1")then{blu_0_0_1=objNull}; if(isNil"blu_0_0_2")then{blu_0_0_2=objNull}; if(isNil"blu_0_0_3")then{blu_0_0_3=objNull};
+
+if(isNil"blu_1_0_1")then{blu_1_0_1=objNull}; if(isNil"blu_1_0_2")then{blu_1_0_2=objNull};
+if(isNil"blu_1_1_1")then{blu_1_1_1=objNull}; if(isNil"blu_1_1_2")then{blu_1_1_2=objNull};
+if(isNil"blu_1_1_3")then{blu_1_1_3=objNull}; if(isNil"blu_1_1_4")then{blu_1_1_4=objNull};
+if(isNil"blu_1_2_1")then{blu_1_2_1=objNull}; if(isNil"blu_1_2_2")then{blu_1_2_2=objNull};
+if(isNil"blu_1_2_3")then{blu_1_2_3=objNull}; if(isNil"blu_1_2_4")then{blu_1_2_4=objNull};
+
+if(isNil"blu_2_0_1")then{blu_2_0_1=objNull}; if(isNil"blu_2_0_2")then{blu_2_0_2=objNull};
+if(isNil"blu_2_1_1")then{blu_2_1_1=objNull}; if(isNil"blu_2_1_2")then{blu_2_1_2=objNull};
+if(isNil"blu_2_1_3")then{blu_2_1_3=objNull}; if(isNil"blu_2_1_4")then{blu_2_1_4=objNull};
+if(isNil"blu_2_2_1")then{blu_2_2_1=objNull}; if(isNil"blu_2_2_2")then{blu_2_2_2=objNull};
+if(isNil"blu_2_2_3")then{blu_2_2_3=objNull}; if(isNil"blu_2_2_4")then{blu_2_2_4=objNull};
+
+if(isNil"blu_3_0_1")then{blu_3_0_1=objNull}; if(isNil"blu_3_0_2")then{blu_3_0_2=objNull};
+if(isNil"blu_3_1_1")then{blu_3_1_1=objNull}; if(isNil"blu_3_1_2")then{blu_3_1_2=objNull};
+if(isNil"blu_3_1_3")then{blu_3_1_3=objNull}; if(isNil"blu_3_1_4")then{blu_3_1_4=objNull};
+if(isNil"blu_3_2_1")then{blu_3_2_1=objNull}; if(isNil"blu_3_2_2")then{blu_3_2_2=objNull};
+if(isNil"blu_3_2_3")then{blu_3_2_3=objNull}; if(isNil"blu_3_2_4")then{blu_3_2_4=objNull};
+
+if(isNil"blu_4_0_1")then{blu_4_0_1=objNull}; if(isNil"blu_4_0_2")then{blu_4_0_2=objNull};
+if(isNil"blu_4_1_1")then{blu_4_1_1=objNull}; if(isNil"blu_4_1_2")then{blu_4_1_2=objNull};
+if(isNil"blu_4_1_3")then{blu_4_1_3=objNull}; if(isNil"blu_4_1_4")then{blu_4_1_4=objNull};
+if(isNil"blu_4_2_1")then{blu_4_2_1=objNull}; if(isNil"blu_4_2_2")then{blu_4_2_2=objNull};
+if(isNil"blu_4_2_3")then{blu_4_2_3=objNull}; if(isNil"blu_4_2_4")then{blu_4_2_4=objNull};
+
+if(isNil"op_0_0_1")then{op_0_0_1=objNull}; if(isNil"op_0_0_2")then{op_0_0_2=objNull}; if(isNil"op_0_0_3")then{op_0_0_3=objNull};
+
+if(isNil"op_1_0_1")then{op_1_0_1=objNull}; if(isNil"op_1_0_2")then{op_1_0_2=objNull};
+if(isNil"op_1_1_1")then{op_1_1_1=objNull}; if(isNil"op_1_1_2")then{op_1_1_2=objNull};
+if(isNil"op_1_1_3")then{op_1_1_3=objNull}; if(isNil"op_1_1_4")then{op_1_1_4=objNull};
+if(isNil"op_1_2_1")then{op_1_2_1=objNull}; if(isNil"op_1_2_2")then{op_1_2_2=objNull};
+if(isNil"op_1_2_3")then{op_1_2_3=objNull}; if(isNil"op_1_2_4")then{op_1_2_4=objNull};
+
+if(isNil"op_2_0_1")then{op_2_0_1=objNull}; if(isNil"op_2_0_2")then{op_2_0_2=objNull};
+if(isNil"op_2_1_1")then{op_2_1_1=objNull}; if(isNil"op_2_1_2")then{op_2_1_2=objNull};
+if(isNil"op_2_1_3")then{op_2_1_3=objNull}; if(isNil"op_2_1_4")then{op_2_1_4=objNull};
+if(isNil"op_2_2_1")then{op_2_2_1=objNull}; if(isNil"op_2_2_2")then{op_2_2_2=objNull};
+if(isNil"op_2_2_3")then{op_2_2_3=objNull}; if(isNil"op_2_2_4")then{op_2_2_4=objNull};
+
+if(isNil"op_3_0_1")then{op_3_0_1=objNull}; if(isNil"op_3_0_2")then{op_3_0_2=objNull};
+if(isNil"op_3_1_1")then{op_3_1_1=objNull}; if(isNil"op_3_1_2")then{op_3_1_2=objNull};
+if(isNil"op_3_1_3")then{op_3_1_3=objNull}; if(isNil"op_3_1_4")then{op_3_1_4=objNull};
+if(isNil"op_3_2_1")then{op_3_2_1=objNull}; if(isNil"op_3_2_2")then{op_3_2_2=objNull};
+if(isNil"op_3_2_3")then{op_3_2_3=objNull}; if(isNil"op_3_2_4")then{op_3_2_4=objNull};
+
+if(isNil"op_4_0_1")then{op_4_0_1=objNull}; if(isNil"op_4_0_2")then{op_4_0_2=objNull};
+if(isNil"op_4_1_1")then{op_4_1_1=objNull}; if(isNil"op_4_1_2")then{op_4_1_2=objNull};
+if(isNil"op_4_1_3")then{op_4_1_3=objNull}; if(isNil"op_4_1_4")then{op_4_1_4=objNull};
+if(isNil"op_4_2_1")then{op_4_2_1=objNull}; if(isNil"op_4_2_2")then{op_4_2_2=objNull};
+if(isNil"op_4_2_3")then{op_4_2_3=objNull}; if(isNil"op_4_2_4")then{op_4_2_4=objNull};
+
+if(isNil"ind_0_0_1")then{ind_0_0_1=objNull}; if(isNil"ind_0_0_2")then{ind_0_0_2=objNull}; if(isNil"ind_0_0_3")then{ind_0_0_3=objNull};
+
+if(isNil"ind_1_0_1")then{ind_1_0_1=objNull}; if(isNil"ind_1_0_2")then{ind_1_0_2=objNull};
+if(isNil"ind_1_1_1")then{ind_1_1_1=objNull}; if(isNil"ind_1_1_2")then{ind_1_1_2=objNull};
+if(isNil"ind_1_1_3")then{ind_1_1_3=objNull}; if(isNil"ind_1_1_4")then{ind_1_1_4=objNull};
+if(isNil"ind_1_2_1")then{ind_1_2_1=objNull}; if(isNil"ind_1_2_2")then{ind_1_2_2=objNull};
+if(isNil"ind_1_2_3")then{ind_1_2_3=objNull}; if(isNil"ind_1_2_4")then{ind_1_2_4=objNull};
+
+if(isNil"ind_2_0_1")then{ind_2_0_1=objNull}; if(isNil"ind_2_0_2")then{ind_2_0_2=objNull};
+if(isNil"ind_2_1_1")then{ind_2_1_1=objNull}; if(isNil"ind_2_1_2")then{ind_2_1_2=objNull};
+if(isNil"ind_2_1_3")then{ind_2_1_3=objNull}; if(isNil"ind_2_1_4")then{ind_2_1_4=objNull};
+if(isNil"ind_2_2_1")then{ind_2_2_1=objNull}; if(isNil"ind_2_2_2")then{ind_2_2_2=objNull};
+if(isNil"ind_2_2_3")then{ind_2_2_3=objNull}; if(isNil"ind_2_2_4")then{ind_2_2_4=objNull};
+
+if(isNil"ind_3_0_1")then{ind_3_0_1=objNull}; if(isNil"ind_3_0_2")then{ind_3_0_2=objNull};
+if(isNil"ind_3_1_1")then{ind_3_1_1=objNull}; if(isNil"ind_3_1_2")then{ind_3_1_2=objNull};
+if(isNil"ind_3_1_3")then{ind_3_1_3=objNull}; if(isNil"ind_3_1_4")then{ind_3_1_4=objNull};
+if(isNil"ind_3_2_1")then{ind_3_2_1=objNull}; if(isNil"ind_3_2_2")then{ind_3_2_2=objNull};
+if(isNil"ind_3_2_3")then{ind_3_2_3=objNull}; if(isNil"ind_3_2_4")then{ind_3_2_4=objNull};
+
+if(isNil"ind_4_0_1")then{ind_4_0_1=objNull}; if(isNil"ind_4_0_2")then{ind_4_0_2=objNull};
+if(isNil"ind_4_1_1")then{ind_4_1_1=objNull}; if(isNil"ind_4_1_2")then{ind_4_1_2=objNull};
+if(isNil"ind_4_1_3")then{ind_4_1_3=objNull}; if(isNil"ind_4_1_4")then{ind_4_1_4=objNull};
+if(isNil"ind_4_2_1")then{ind_4_2_1=objNull}; if(isNil"ind_4_2_2")then{ind_4_2_2=objNull};
+if(isNil"ind_4_2_3")then{ind_4_2_3=objNull}; if(isNil"ind_4_2_4")then{ind_4_2_4=objNull};
 
 // =============================================================================
 //          Initializes all possible groups whether they exist or not.
 // =============================================================================
 
-if (isNil"alpha_grp_blu1") then {alpha_grp_blu1 = grpNull}; if (isNil"alpha_grp_blu2") then {alpha_grp_blu2 = grpNull};
-if (isNil"bravo_grp_blu1") then {bravo_grp_blu1 = grpNull}; if (isNil"bravo_grp_blu2") then {bravo_grp_blu2 = grpNull};
-if (isNil"charlie_grp_blu1") then {charlie_grp_blu1 = grpNull}; if (isNil"charlie_grp_blu2") then {charlie_grp_blu2 = grpNull};
-if (isNil"delta_grp_blu1") then {delta_grp_blu1 = grpNull}; if (isNil"delta_grp_blu2") then {delta_grp_blu2 = grpNull};
+if(isNil"blu_0_0")then{blu_0_0=grpNull}; 
+if(isNil"blu_1_0")then{blu_1_0=grpNull}; if(isNil"blu_1_1")then{blu_1_1=grpNull}; if(isNil"blu_1_2")then{blu_1_2=grpNull};
+if(isNil"blu_2_0")then{blu_2_0=grpNull}; if(isNil"blu_2_1")then{blu_2_1=grpNull}; if(isNil"blu_2_2")then{blu_2_2=grpNull};
+if(isNil"blu_3_0")then{blu_3_0=grpNull}; if(isNil"blu_3_1")then{blu_3_1=grpNull}; if(isNil"blu_3_2")then{blu_3_2=grpNull};
+if(isNil"blu_4_0")then{blu_4_0=grpNull}; if(isNil"blu_4_1")then{blu_4_1=grpNull}; if(isNil"blu_4_2")then{blu_4_2=grpNull};
 
-if (isNil"alpha_grp_op1") then {alpha_grp_op1 = grpNull}; if (isNil"alpha_grp_op2") then {alpha_grp_op2 = grpNull};
-if (isNil"bravo_grp_op1") then {bravo_grp_op1 = grpNull}; if (isNil"bravo_grp_op2") then {bravo_grp_op2 = grpNull};
-if (isNil"charlie_grp_op1") then {charlie_grp_op1 = grpNull}; if (isNil"charlie_grp_op2") then {charlie_grp_op2 = grpNull};
-if (isNil"delta_grp_op1") then {delta_grp_op1 = grpNull}; if (isNil"delta_grp_op2") then {delta_grp_op2 = grpNull};
+if(isNil"op_0_0")then{op_0_0=grpNull}; 
+if(isNil"op_1_0")then{op_1_0=grpNull}; if(isNil"op_1_1")then{op_1_1=grpNull}; if(isNil"op_1_2")then{op_1_2=grpNull};
+if(isNil"op_2_0")then{op_2_0=grpNull}; if(isNil"op_2_1")then{op_2_1=grpNull}; if(isNil"op_2_2")then{op_2_2=grpNull};
+if(isNil"op_3_0")then{op_3_0=grpNull}; if(isNil"op_3_1")then{op_3_1=grpNull}; if(isNil"op_3_2")then{op_3_2=grpNull};
+if(isNil"op_4_0")then{op_4_0=grpNull}; if(isNil"op_4_1")then{op_4_1=grpNull}; if(isNil"op_4_2")then{op_4_2=grpNull};
 
-if (isNil"alpha_grp_ind1") then {alpha_grp_ind1 = grpNull}; if (isNil"alpha_grp_ind2") then {alpha_grp_ind2 = grpNull};
-if (isNil"bravo_grp_ind1") then {bravo_grp_ind1 = grpNull}; if (isNil"bravo_grp_ind2") then {bravo_grp_ind2 = grpNull};
-if (isNil"charlie_grp_ind1") then {charlie_grp_ind1 = grpNull}; if (isNil"charlie_grp_ind2") then {charlie_grp_ind2 = grpNull};
-if (isNil"delta_grp_ind1") then {delta_grp_ind1 = grpNull}; if (isNil"delta_grp_ind2") then {delta_grp_ind2 = grpNull};
+if(isNil"ind_0_0")then{ind_0_0=grpNull}; 
+if(isNil"ind_1_0")then{ind_1_0=grpNull}; if(isNil"ind_1_1")then{ind_1_1=grpNull}; if(isNil"ind_1_2")then{ind_1_2=grpNull};
+if(isNil"ind_2_0")then{ind_2_0=grpNull}; if(isNil"ind_2_1")then{ind_2_1=grpNull}; if(isNil"ind_2_2")then{ind_2_2=grpNull};
+if(isNil"ind_3_0")then{ind_3_0=grpNull}; if(isNil"ind_3_1")then{ind_3_1=grpNull}; if(isNil"ind_3_2")then{ind_3_2=grpNull};
+if(isNil"ind_4_0")then{ind_4_0=grpNull}; if(isNil"ind_4_1")then{ind_4_1=grpNull}; if(isNil"ind_4_2")then{ind_4_2=grpNull};
 
 // =============================================================================

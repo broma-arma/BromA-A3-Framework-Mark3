@@ -6,5 +6,5 @@ class auto_radio_freq
 	dependencies[] = {};
 	url = "";
 	postinit = "postinit.sqf";
-	environment = "all";
+	environment = "server";
 };

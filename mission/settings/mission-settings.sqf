@@ -54,7 +54,7 @@ side_a_faction = "RACS";       // Faction of the players.
 side_a_name = "NATO";          // Player faction name.
 
 // Name the player groups.
-side_a_groups = ["Zero", "Alpha", "Bravo", "Charlie", "Delta"];
+side_a_callsigns = ["Zero", "Alpha", "Bravo", "Charlie", "Delta"];
 
 // =============================================================================
 
@@ -64,7 +64,7 @@ side_b_faction = "sla";        // Enemy faction.
 side_b_name = "CSAT";          // Enemy faction name.
 
 // Name the enemy groups.
-side_b_groups = ["Godfather", "Assassin", "Bastard", "Charger", "Destroyer"];
+side_b_callsigns = ["Godfather", "Assassin", "Bastard", "Charger", "Destroyer"];
 
 // =============================================================================
 
@@ -78,7 +78,7 @@ side_c_faction = "pmc";        // Third side's faction.
 side_c_name = "AAF";           // Name of the third faction.
 
 // Name the third faction's groups.
-side_c_groups = ["HQ", "Anna", "Beatrice", "Clara", "Denise"];
+side_c_callsigns = ["HQ", "Anna", "Beatrice", "Clara", "Denise"];
 
 // =============================================================================
 

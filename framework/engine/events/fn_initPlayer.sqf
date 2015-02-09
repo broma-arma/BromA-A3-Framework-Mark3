@@ -8,6 +8,8 @@ if (_initialized) exitWith {};
 private["_faction","_role"];
 
 _initUnit = player getVariable ["unitInit", ["white", "NONE", "NOTHING", "Empty", "grpNull"]];
+_aliasAUTO = ["*","AUTO","ANY"];
+_aliasNONE = ["-","NONE"];
 
 _groupColor = _initUnit select 0;
 _faction = _initUnit select 1;
@@ -26,7 +28,7 @@ switch (true) do {
     case (_faction == "side_c"): { _faction = side_c_faction };
 };
 
-if (toUpper(_faction) == "AUTO") then {
+if (toUpper(_faction) in _aliasAUTO) then {
     switch (true) do {
         case (side player == side_a_side): { _faction = side_a_faction };
         case (side player == side_b_side): { _faction = side_b_faction };
@@ -35,13 +37,15 @@ if (toUpper(_faction) == "AUTO") then {
     };
 };
 
-if (toUpper(_role) == "AUTO") then {
+if (toUpper(_role) in _aliasAUTO) then {
     _role = getText (configfile >> "CfgVehicles" >> typeOf player >> "displayName");
 };
 
-[player, _groupName, _role] call BRM_fnc_setAlias;
+if (player_is_jip) then {
+    [player, _groupName, _role] call BRM_fnc_setAlias;
+};
 
-if ((_faction != "NONE") && !units_player_useVanillaGear) then {
+if ((!(_faction in _aliasNONE)) && !units_player_useVanillaGear) then {
     [player, _faction, _role] call BRM_fnc_assignLoadout;
 };
 

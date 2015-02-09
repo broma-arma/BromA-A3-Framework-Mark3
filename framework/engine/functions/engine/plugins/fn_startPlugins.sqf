@@ -16,6 +16,9 @@
     
     if (_loadplugin) then {
         [_preinit,_postinit,_dependencies,_plugin,_environment] spawn {
+            waitUntil{!isNil "mission_groups_init"};
+            waitUntil{(mission_groups_init)};
+                
             _preinit = _this select 0;
             _postinit = _this select 1;
             _deps = _this select 2;

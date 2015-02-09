@@ -16,10 +16,12 @@ class BRM {
         class engine_post{postInit = 1;};
     };
     class unit {
-        file = "framework\engine\functions\engine\unit";
+        file = "framework\engine\functions\engine\unit";        
         class handleScore{};
         class removeJIP{};
         class setAlias{};
+        class setGrpIDGlobal;
+        class defineGroups{postInit = 1;};        
     };
     class misc {
         file = "framework\engine\functions\engine\misc";

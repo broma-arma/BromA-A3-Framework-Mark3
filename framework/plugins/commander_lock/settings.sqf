@@ -1,1 +1,1 @@
-co_lock_units = [Zero69Actual];
+co_lock_units = [blu_0_0_1, op_0_0_1, ind_0_0_1];

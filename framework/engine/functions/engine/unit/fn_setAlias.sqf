@@ -1,4 +1,4 @@
-private ["_side","_number","_sideGroup","_role"];
+private ["_side","_number","_sideGroup","_role","_groupName","_groupNameNumber"];
 
 _unit = _this select 0;
 _group = _this select 1;
@@ -6,20 +6,23 @@ _role = _this select 2;
 
 _playerUnit = [str(_unit), "_"] call CBA_fnc_split;
 
+_unitSide = _playerUnit select 0;
+_groupCallsign = _playerUnit select 1;
 _groupNumber = _playerUnit select 2;
-_playerNumber = _playerUnit select 3;
+_unitNumber = _playerUnit select 3;
 
-if (_groupNumber == "0") then { _groupNumber = "" };
+_isLeader = (isFormationLeader _unit);
+_groupName = _group;
+_actualGroup = (_groupNumber == "0");
+_autoNamed = (_group in _aliasAUTO);
 
-_test = [_group, "_"] call CBA_fnc_find;
+_aliasAUTO = ["*","AUTO","ANY"];
 
-if (_test > -1) then {
-    _groupsplit = [_group, "_"] call CBA_fnc_split;
+if (!_autoNamed) then { _groupNumber = "" };
 
-    _side = _groupsplit select 0;
-    _number = parseNumber(_groupsplit select 2);
+if (_autoNamed) then {
 
-    switch (_side) do {
+    switch (_unitSide) do {
         case ("blu"): { _side = WEST };
         case ("op"): { _side = EAST };
         case ("ind"): { _side = RESISTANCE };
@@ -27,37 +30,33 @@ if (_test > -1) then {
     };
     
     switch (true) do {
-        case (_side == side_a_side): { _sideGroup = side_a_groups };
-        case (_side == side_b_side): { _sideGroup = side_b_groups };
-        case (_side == side_c_side): { _sideGroup = side_c_groups };
+        case (_side == side_a_side): { _group = side_a_callsigns select (parseNumber(_groupCallsign)) };
+        case (_side == side_b_side): { _group = side_b_callsigns select (parseNumber(_groupCallsign)) };
+        case (_side == side_c_side): { _group = side_c_callsigns select (parseNumber(_groupCallsign)) };
     };
-    
-    _group = _sideGroup select _number;
-    
-    if (_groupNumber != "") then { _groupNumber = " " + _groupNumber };
-    
-    _group = _group + _groupNumber;
+
+    if (_actualGroup) then { _groupNameNumber = "" } else { _groupNameNumber = " " + _groupNumber };
+    _groupName = _group + _groupNameNumber;
 };
 
-[-1, { (_this select 0) setGroupId [_this select 1] }, [(group _unit), _group]] call CBA_fnc_globalExecute;
-
-_isLeader = (isFormationLeader _unit);
-
-if (_isLeader) then { _playerNumber = "" } else { _playerNumber = "'"+(_playerNumber) };
+if (_actualGroup) then { _groupNumber = "" };
+if ( (_isLeader) && !(_actualGroup) && (_autoNamed) ) then { _groupNumber = _groupNumber + " " };
+if (_isLeader) then { _unitNumber = "" } else { _unitNumber = "'"+(_unitNumber) };
 
 _aliasACTUAL = ["CO", "Officer", "SL", "Squad Leader"];
 _aliasFTL = ["FTL", "Team Leader"];
 
-switch(true) do {    
+switch(true) do {
+    case (_actualGroup && _isLeader): { _role = "Actual" };
     case (_role in _aliasACTUAL): { _role = "Actual" };
     case (_role in _aliasFTL): { _role = "FTL" };
-    case (_isLeader): { _role = "Leader" };
-    default { _role = [_role] call CBA_fnc_capitalize };
+    case (_isLeader): { _role = "Leader" };    
 };
 
-if (_playerNumber != "") then { _playerNumber = _playerNumber + " " };
-_groupNumber = [_groupNumber, " ", ""] call CBA_fnc_replace;
+if (_unitNumber != "") then { _unitNumber = _unitNumber + " " };
 
-_rosterAlias = format ["%1 %2%3%4", _group, _groupNumber, _playerNumber, _role];
+_rosterAlias = format ["%1 %2%3%4", _group, _groupNumber, _unitNumber, _role];
+
+[[(group _unit), _groupName],"BRM_fnc_setGrpIDGlobal",true,true] call BIS_fnc_MP;
 
 _unit setVariable ["rosterAlias", _rosterAlias, true];

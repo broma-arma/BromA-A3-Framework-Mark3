@@ -4,7 +4,7 @@
   </a>
    <br/><br/>
   <a href="https://github.com/Neefay/BromA-A3-Framework-Mark3/commits/master">
-    <img src="https://img.shields.io/badge/build-00031-orange.svg" alt="Current version">
+    <img src="https://img.shields.io/badge/build-00032-orange.svg" alt="Current version">
   </a>
 </p>
 
@@ -39,9 +39,15 @@ The framework is as context agnostic as possible, meaning you can just change on
 
 ### TO DO:
 -
+*	- [ ] BUG: "param_setup_time" not published over network.
+*	- [ ] BUG: ALL parameters are fucked and not being broadcast over network, double check.
+*	- [ ] BUG: "mission_spawn_protection_time" not published over network.
+*	- [ ] BUG: Radio freq plugin reads the wrong groups. GEE I WONDER WHAT IS THE ISSUE HERE?!?!?!??!
+*	- [ ] BUG: Unit's group not published over network - God, I just LOVE debugging locality issues!
+*	- [ ] TEST EVERYTHING WITH OTHER PLAYERS. Enough new features for now.
 *	- [X] Work a system for containers/vehicles.
 *	- [ ] Add default pre-placed units.
-*	- [ ] Declare all units as objNulls.
+*	- [X] Declare all units as objNulls.
 *	- [ ] Add a general plugins settings file.
 *	- [X] Make sure DAC can spawn unit with default gear.
 *	- [X] Better way to control player loadouts - switch case for all factions.
@@ -50,8 +56,8 @@ The framework is as context agnostic as possible, meaning you can just change on
 *	- [ ] Work all current loadouts to have proper variables.
 *	- [ ] Add all the proper endings.
 *	- [X] Make a script to generate callsigns and radios freqs based on the mission groups.
-*	- [ ] Platoon Roster needs to wait until all players are initialized and have their alias.
-*	- [ ] Look into ditching the group unitInit and use only the unit's name.
+*	- [X] Delegate unit alias to the server / JIPs initialize their own groups afterwards.
+*	- [X] Look into ditching the group unitInit and use only the unit's name.
 *	- [ ] Fix the ending screen.
 *	- [ ] Comment and document everything.
 

@@ -1,9 +1,8 @@
 0 spawn {
     
-if (!isServer) exitWith {};
 waitUntil{(!isNil "paramsArray")};
 
-mission_params_read = false; publicVariable "mission_params_read";
+mission_params_read = false;
 
 _paramArray = paramsArray;
 {
@@ -15,7 +14,9 @@ _paramArray = paramsArray;
     publicVariable _paramName;
 } foreach _paramArray;
 
-mission_params_read = true; publicVariable "mission_params_read";
+mission_params_read = true;
+
+if (!isServer) exitWith {};
 
 // =============================================================================
 //  Date
@@ -210,8 +211,8 @@ switch (param_weather) do {
 // =============================================================================
 
 switch (param_allow_respawn) do {
-    case 0: { mission_allow_respawn = true };
-    case 1: { mission_allow_respawn = false };
+    case 0: { mission_allow_respawn = false };
+    case 1: { mission_allow_respawn = true };
 };
 publicVariable "mission_allow_respawn";
 

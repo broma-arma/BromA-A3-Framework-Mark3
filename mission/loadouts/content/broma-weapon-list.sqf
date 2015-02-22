@@ -107,6 +107,7 @@ _M60 = ["hlc_lmg_M60E4","hlc_100Rnd_762x51_B_M60E4"];
 
 _30rndMK262 = "RH_30Rnd_556x45_Mk262";
 _10rnd762AR10 = "RH_20Rnd_762x51_AR10";
+_32rnd9mm = "RH_32Rnd_9mm_M822";
 
 // =============================================================================
 // WEAPONS
@@ -134,6 +135,11 @@ _MK12 = ["RH_mk12mod1",_30rnd556];
 _SAMR = ["RH_samr",_30rnd556];
 
 _AR10 = ["RH_ar10",_30rnd556];
+
+_SBR9 = ["RH_sbr9", _32rnd9mm];
+_SBR9des = ["RH_sbr9_des", _32rnd9mm];
+_SBR9tg = ["RH_sbr9_tg", _32rnd9mm];
+_SBR9wdl = ["RH_sbr9_wdl", _32rnd9mm];
 
 // =============================================================================
 // =============================================================================
@@ -259,7 +265,6 @@ _RHSM16A4 = ["rhs_weap_m16a4",_30rnd556STANAG];
 _RHSM16A42 = ["rhs_weap_m16a4_carryhandle",_30rnd556STANAG];
 _RHSM4 = ["rhs_weap_m4_carryhandle",_30rnd556STANAG];
 _RHSM4GL = ["rhs_m4_m320",_30rnd556STANAG,_40mm];
-
 
 _SVD = ["rhs_weap_svdp",_10rnd762SVD];
 _SVDCAMO = ["rhs_weap_svdp_wd",_10rnd762SVD];

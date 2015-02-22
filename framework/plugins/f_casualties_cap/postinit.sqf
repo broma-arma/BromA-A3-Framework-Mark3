@@ -4,7 +4,7 @@ _path = _this select 0;
 //  Player casualty cap
 // =============================================================================
 
-waitUntil {(mission_params_read)};
+waitUntil{!isNil"param_cas_cap"};
 
 switch (param_cas_cap) do {
     case 0: { mission_cas_cap = 80 };

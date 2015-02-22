@@ -1,6 +1,6 @@
-class mission_maker_teleport
+class mission_maker_tools
 {
-	name = "Mission maker teleport";
+	name = "Mission maker tools";
 	authors[] = {"Nife"};
 	version = 1;
 	dependencies[] = {};

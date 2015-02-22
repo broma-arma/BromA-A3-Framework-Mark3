@@ -21,13 +21,14 @@ class BRM {
         class removeJIP{};
         class setAlias{};
         class setGrpIDGlobal;
+        class setHitFace{};
         class defineGroups{postInit = 1;};        
     };
     class misc {
         file = "framework\engine\functions\engine\misc";
         class getSpawnPoint{};
         class stampTime{};
-        class syncTime{};
+        class syncTime{};        
     };
     class ending {
         file = "framework\engine\functions\engine\ending";

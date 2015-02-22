@@ -1,3 +1,5 @@
+uiSleep 1;
+
 mission_valid_groups = [];
 mission_valid_groups_BLU = [];
 mission_valid_groups_OP = [];

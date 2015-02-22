@@ -25,7 +25,7 @@ class Mission
 	randomSeed=13980418;
 	class Intel
 	{
-		briefingName="BromA Framework MK 2 000321";
+		briefingName="BromA Framework MK 2 0003317";
 		overviewText="STRONGER THAN EVER BEFORE.";
 		startWeather=0;
 		startWind=0.099999994;
@@ -52,7 +52,7 @@ class Mission
 				items=2;
 				class Item0
 				{
-					position[]={900.00049,5,915.52197};
+					position[]={900.10022,5,931.68164};
 					special="NONE";
 					id=0;
 					side="WEST";
@@ -66,7 +66,7 @@ class Mission
 				};
 				class Item1
 				{
-					position[]={900.00781,5,911.729};
+					position[]={900.10754,5,927.88867};
 					special="NONE";
 					id=1;
 					side="WEST";
@@ -108,7 +108,7 @@ class Mission
 				items=1;
 				class Item0
 				{
-					position[]={879.41486,5,933.39404};
+					position[]={879.1156,5,903.96777};
 					id=3;
 					side="CIV";
 					vehicle="C_man_1";
@@ -147,7 +147,7 @@ class Mission
 				items=1;
 				class Item0
 				{
-					position[]={916.49976,5,933.38232};
+					position[]={916.2005,5,903.95605};
 					id=5;
 					side="CIV";
 					vehicle="C_man_1";
@@ -165,7 +165,7 @@ class Mission
 				items=1;
 				class Item0
 				{
-					position[]={899.98877,5,933.35449};
+					position[]={899.68951,5,903.92822};
 					id=6;
 					side="CIV";
 					vehicle="C_man_1";
@@ -276,7 +276,7 @@ class Mission
 				items=2;
 				class Item0
 				{
-					position[]={893.41864,5,915.79541};
+					position[]={893.51837,5,931.95508};
 					special="NONE";
 					id=11;
 					side="WEST";
@@ -290,7 +290,7 @@ class Mission
 				};
 				class Item1
 				{
-					position[]={893.39044,5,912.02588};
+					position[]={893.49017,5,928.18555};
 					special="NONE";
 					id=12;
 					side="WEST";
@@ -309,14 +309,14 @@ class Mission
 		items=1;
 		class Item0
 		{
-			position[]={899.97437,5,917.75879};
+			position[]={906.85724,5,933.61914};
 			special="NONE";
 			id=13;
 			side="EMPTY";
 			vehicle="I_CargoNet_01_ammo_F";
 			leader=1;
 			skill=0.60000002;
-			init="_cargo = [this, ""side_a"", [""medical"",""ammo"",""radio""]] spawn BRM_fnc_assignCargo";
+			init="_cargo = [this, ""side_a"", [""medical"",""ammo"",""radio"", ""at""]] spawn BRM_fnc_assignCargo";
 		};
 	};
 	class Markers
@@ -375,9 +375,9 @@ class Mission
 		};
 		class Item1
 		{
-			position[]={1599.5739,5,970.02002};
-			a=400;
-			b=400;
+			position[]={1001.4974,5,986.91211};
+			a=100;
+			b=100;
 			interruptable=1;
 			age="UNKNOWN";
 			name="trg1";

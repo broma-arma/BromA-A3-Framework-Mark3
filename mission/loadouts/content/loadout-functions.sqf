@@ -10,40 +10,19 @@ if (_isMan) then {
     _isLeader = isFormationLeader _unit;
 };
 
-// Medical and items stuff -----------------------------------------------------
-_bandage = "AGM_Bandage";
-_morphine = "AGM_Morphine";
-_epi = "AGM_Epipen";
-_bloodbag = "AGM_Bloodbag";
-_medkit = "ACE_Medkit";
-_wsmoke = "SmokeShell";
-_gsmoke = "SmokeShellGreen";
-_rsmoke = "SmokeShellRed";
-_bchemlight = "chemlight_blue";
-_rchemlight = "chemlight_red";
-_gchemlight = "chemlight_green";
-_grenade = "HandGrenade";
-_minigrenade = "MiniGrenade";
-_IRstrobe = "B_IR_Grenade";
-
-//             0             1                2
-_optics = ["Binocular","Rangefinder","Laserdesignator"];
-//             0 battery
-_battery = ["Laserbatteries"];
-
 // Some nifty functions to save time -------------------------------------------
-_addBinocs = {
+_addOptics = {
     _kind = _this select 0;
     if _isMan then {
         switch(_kind) do {
             case "binoc": { _unit addWeapon (_optics select 0)};
-            case "rangefinder": { _unit addWeapon (_optics select 1);};
+            case "rangefinder": { if ("agm_plugin" in usedPlugins) then { _unit addWeapon "AGM_Vector" } else { _unit addWeapon (_optics select 1) }};
             case "laserdesignator": { _unit addWeapon (_optics select 2); _unit addMagazine (_battery select 0)};
         };
     } else {
         switch(_kind) do {
             case "binoc": { _unit addWeaponCargoGlobal (_optics select 0)};
-            case "rangefinder": { _unit addWeaponCargoGlobal (_optics select 1);};
+            case "rangefinder": { if ("agm_plugin" in usedPlugins) then { _unit addWeaponCargoGlobal "AGM_Vector" } else { _unit addWeaponCargoGlobal (_optics select 1) }};
             case "laserdesignator": { _unit addWeaponCargoGlobal (_optics select 2); _unit addMagazineCargoGlobal (_battery select 0)};
         };    
     };
@@ -103,11 +82,10 @@ _addEmptyBackpack = {
 };
 
 _useUniform = {
-    _set = _this select 0;
-    _headgear = (_set select 0);
-    _uniform = (_set select 1);
-    _vest = (_set select 2);
-    _backpack = (_set select 3);
+    _headgear = (_this select 0);
+    _uniform = (_this select 1);
+    _vest = (_this select 2);
+    _backpack = (_this select 3);
     
     switch(_headgear) do {
         case ("keep"): {};
@@ -117,7 +95,7 @@ _useUniform = {
     switch(_uniform) do {
         case ("keep"): {};
         case ("empty"): { removeUniform _unit };
-        default { removeUniform _unit; [[{}, _unit addUniform _uniform], "BIS_fnc_spawn", true] call BIS_fnc_MP }
+        default { removeUniform _unit; [[{}, _unit forceaddUniform _uniform], "BIS_fnc_spawn", true] call BIS_fnc_MP }
     };    
     switch(_vest) do {
         case ("keep"): {};
@@ -127,7 +105,7 @@ _useUniform = {
     switch(_backpack) do {
         case ("keep"): {};
         case ("empty"): { removeBackpack _unit };
-        default { removeBackpack _unit; _unit addBackpack _backpack};
+        default { removeBackpack _unit; [_backpack] call _addEmptyBackpack };
     };    
     
 };
@@ -136,8 +114,27 @@ _addAmmo = {
     _kind = _this select 0;
     _amount = _this select 1;
     if _isMan then {
-        if (typeName _kind == "ARRAY") then { for "_i" from 1 to _amount do { if ((vest _unit)=="") then {_unit addMagazine (_kind select 1)} else {_unit addItemToVest (_kind select 1)}};
-        } else { for "_i" from 1 to _amount do {if ((vest _unit)=="") then {_unit addMagazine _kind} else {_unit addItemToVest _kind}}};
+        if (typeName _kind == "ARRAY") then {
+            for "_i" from 1 to _amount do { 
+                if ((vest _unit) == "") then {
+                    _unit addMagazine (_kind select 1);
+                } else { 
+                    if (_unit canAddItemToVest (_kind select 1)) exitWith { _unit addItemToVest (_kind select 1) };
+                    if (_unit canAddItemToBackpack (_kind select 1)) exitWith { _unit addItemToBackpack (_kind select 1) };
+                    if (_unit canAddItemToUniform (_kind select 1)) exitWith { _unit addItemToUniform (_kind select 1) };
+                };
+            };
+        } else { 
+            for "_i" from 1 to _amount do { 
+                if ((vest _unit) == "") then { 
+                    _unit addMagazine _kind;
+                } else { 
+                    if (_unit canAddItemToVest (_kind)) exitWith { _unit addItemToVest (_kind) };
+                    if (_unit canAddItemToBackpack (_kind)) exitWith { _unit addItemToBackpack (_kind) };
+                    if (_unit canAddItemToUniform (_kind)) exitWith { _unit addItemToUniform (_kind) };
+                };
+            };
+        };
     } else {
         if (typeName _kind == "ARRAY") then { _unit addMagazineCargoGlobal [(_kind select 1),_amount];
         } else { _unit addMagazineCargoGlobal [_kind,_amount] };
@@ -154,6 +151,10 @@ _addItem = {
         if (typeName _kind == "ARRAY") then { _unit addItemCargoGlobal [(_kind select 1),_amount];
         } else { _unit addItemCargoGlobal [_kind,_amount] };
     };
+};
+
+_linkItem = {
+    { _unit linkItem _x } forEach _this;
 };
 
 _addWeapon = {
@@ -207,7 +208,8 @@ _addWeaponKit = {
 };
 
 _addMedicBasics = {
-    [[_unit,[_bandage,6],[_morphine,2],[_epi,2]]] call _addToUniform;
+    _basics = _this select 0;
+    [[_unit,[_bandage, _basics select 0],[_morphine, _basics select 1],[_epi, _basics select 2]]] call _addToUniform;
 };
 
 _addtoCargo = {

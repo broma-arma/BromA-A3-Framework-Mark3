@@ -78,7 +78,7 @@ side_c_faction = "pmc";        // Third side's faction.
 side_c_name = "AAF";           // Name of the third faction.
 
 // Name the third faction's groups.
-side_c_callsigns = ["HQ", "Anna", "Beatrice", "Clara", "Denise"];
+side_c_callsigns = ["Papa", "Anna", "Beatrice", "Clara", "Denise"];
 
 // =============================================================================
 

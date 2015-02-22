@@ -8,3 +8,5 @@
 #include "vanilla-weapon-list.sqf"
 #include "accessory-list.sqf"
 #include "broma-weapon-list.sqf"
+#include "broma-misc-list.sqf"
+#include "broma-people-list.sqf"

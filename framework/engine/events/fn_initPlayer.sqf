@@ -1,5 +1,8 @@
 if (!hasInterface) exitWith {};
 waitUntil{(!isNil "paramsDone")};
+waitUntil{!(isNull player)};
+
+["LOCAL", "F_LOG", format ["INITIALIZING PLAYER '%1' (%2)", name player, player]] call BRM_fnc_doLog;
 
 _initialized = player getVariable ["unit_initialized",false];
 
@@ -7,16 +10,18 @@ if (_initialized) exitWith {};
 
 private["_faction","_role"];
 
-_initUnit = player getVariable ["unitInit", ["white", "NONE", "NOTHING", "Empty", "grpNull"]];
+_initUnit = player getVariable ["unitInit", ["white", "*", "*", "*", "*"]];
 _aliasAUTO = ["*","AUTO","ANY"];
-_aliasNONE = ["-","NONE"];
+_aliasNONE = ["-","NONE","VANILLA"];
 
 _groupColor = _initUnit select 0;
 _faction = _initUnit select 1;
 _role = _initUnit select 2;
 _groupName = _initUnit select 3;
 
-player_is_jip = (time > 10);
+player_is_jip = (time > 0.1);
+
+["LOCAL", "F_LOG", format ["JIP STATUS: %1 | TIME: %2", player_is_jip, time]] call BRM_fnc_doLog;
 
 [] spawn BRM_fnc_syncTime;
 
@@ -45,7 +50,7 @@ if (player_is_jip) then {
     [player, _groupName, _role] call BRM_fnc_setAlias;
 };
 
-if ((!(_faction in _aliasNONE)) && !units_player_useVanillaGear) then {
+if ((!(_faction in _aliasNONE)) && (!units_player_useVanillaGear)) then {
     [player, _faction, _role] call BRM_fnc_assignLoadout;
 };
 
@@ -55,9 +60,9 @@ if (!mission_allow_jip && player_is_jip) exitWith {
 
 if ("agm_plugin" in usedPlugins) then {
     switch (_role) do {
-        case "medic": { _player setVariable ["AGM_IsMedic", true, true] };
-        case "pilot": { _player setVariable ["AGM_GForceCoef", 0.75, true] };
-        case "engineer": { _player setVariable ["AGM_IsEOD", true, true] };
+        case "medic": { player setVariable ["AGM_IsMedic", true, true] };
+        case "pilot": { player setVariable ["AGM_GForceCoef", 0.75, true] };
+        case "engineer": { player setVariable ["AGM_IsEOD", true, true] };
     };
 };
 
@@ -74,5 +79,7 @@ player addEventHandler ["Killed", BRM_fnc_onPlayerKilled];
 
     waitUntil{ (_player) assignTeam (_color) };
 };
+
+["LOCAL", "F_LOG", "PLAYER INITIALIZED"] call BRM_fnc_doLog;
 
 player setVariable ["unit_initialized", true, true];

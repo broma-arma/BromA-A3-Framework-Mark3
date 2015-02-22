@@ -1,4 +1,4 @@
-if (!HeadlessController) exitWith {};
+if (!mission_AI_controller) exitWith {};
 
 sleep 0.5;
 

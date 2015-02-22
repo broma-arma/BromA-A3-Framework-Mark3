@@ -25,6 +25,7 @@ if ((_faction != "CIVILIAN") && !units_AI_useVanillaGear) then {
     [_unit, _faction] call BRM_fnc_assignLoadout;
 };
 
+_unit addEventHandler ["Hit", BRM_fnc_setHitFace];
 _unit addEventHandler ["Killed", BRM_fnc_onAIKilled];
 
 if ("civilian_casualty_cap" in usedPlugins) then {

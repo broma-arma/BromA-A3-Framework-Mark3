@@ -1,4 +1,37 @@
+
+// INFO ========================================================================
+/*
+    The Afghanistan National Army, tasked with defendinding the country from
+    Mujahideen forces all the while molesting everything from goats to little boys.
+    Backed the US forces with mixed old soviet equipment.
+*/
+
 _defaultSide = WEST;
+_defaultVoice = [_voiceFARSI];
+_defaultFace = [_facePERSIAN];
+_defaultInsignia = "PATCH_AFG_LOCAL_POLICE";
+
+// WEAPONS =====================================================================
+
+_commonRIFLE = _M16A4;
+_commonRIFLEGL = _M16A4GL;
+_commonPISTOL = _USP;
+_commonMG = _PKP;
+_commonMARKSMAN = _M16A4M;
+_commonAT = _AT4;
+_specAT = _MAAWS;
+_commonSMG = _M16A3;
+_commonRCO = "RH_ta31rco";
+_commonCCO = "FHQ_optic_AIM";
+_commonMAGNIFIED = _SOS;
+_NVG = "NVGoggles_BLUFOR";
+
+// UNIFORMS ====================================================================
+
+_vests = [
+    "MNP_Vest_OD_A",
+    "MNP_Vest_OD_B"
+];
 
 _uniforms = [
     "MNP_CombatUniform_ASA_GC2",
@@ -6,103 +39,174 @@ _uniforms = [
     "MNP_CombatUniform_ASA_GC"
 ];
 
-_vests = [
-    "V_PlateCarrier1_blk"
-];
+_randomUNIFORM = _uniforms call BIS_fnc_selectRandom;
+_randomVEST = _vests call BIS_fnc_selectRandom;
 
-_myUniform = _uniforms call BIS_fnc_selectRandom;
-_myVest = _vests call BIS_fnc_selectRandom;
-_headgear = "rhsusf_ach_bare_ess";
+_commonHEAD = "rhsusf_ach_bare_ess";
+_leaderHEAD = "rhsusf_ach_bare_headset";
+_officerHEAD = "H_Beret_blk";
+_medicHEAD = "H_Bandanna_cbr";
 
-_unit forceAddUniform _myUniform;
-_unit addVest _myVest;
+_commonUNIFORM = _randomUNIFORM;
+_officerUNIFORM = _randomUNIFORM;
 
-if (!_isMan) exitWith {};
+_commonVEST = _randomVEST;
+_officerVEST = _commonVEST;
+_ftlVEST = _commonVEST;
+_slVEST = _commonVEST;
+_mgVEST = _commonVEST;
+_grenadierVEST = _commonVEST;
+_medicVEST = _commonVEST;
+
+_commonBACKPACK = "B_AssaultPack_rgr";
 
 // =============================================================================
+if (!_isMan) exitWith {};
 switch (true) do {
 // =============================================================================    
     
-    case (_isOfficer): {
-        _unit addWeapon "Binocular";
-        for "_i" from 1 to 8 do {_unit addItemToVest "hlc_30Rnd_545x39_B_AK";};    
-        _unit addBackpack "tf_anprc155_coyote";                
-        
-        _unit addWeapon "hlc_rifle_aks74";
-        _unit addPrimaryWeaponItem "HLC_Optic_PSO1";        
+    case (_isOfficer): {   
+        [_officerHEAD, _officerUNIFORM, _officerVEST, "empty"] call _useUniform;
+        [[_unit,[_wsmoke,2],[_rsmoke,2],[_mapTools,1]]] call _addtoVest;
+        [_commonRIFLE, _countRIFLE] call _addWeaponKit;
+        [_commonPISTOL, _countPISTOL] call _addWeaponKit;
+        ["laserdesignator"] call _addOptics;
+        ["LR"] call _addRadio;
+        ["BP"] call _addRadio;
     };
     
     case (_isSquadLeader): {
-        _unit addWeapon "Binocular";
-        for "_i" from 1 to 8 do {_unit addItemToVest "hlc_30Rnd_545x39_B_AK";};
-       _unit addBackpack "tf_anprc155_coyote";
-       
-        _unit addWeapon "hlc_rifle_aks74";
-        _unit addPrimaryWeaponItem "HLC_Optic_PSO1";         
+        [_leaderHEAD, _commonUNIFORM, _slVEST, "empty"] call _useUniform;
+        [[_unit,[_wsmoke,2],[_rsmoke,2],[_mapTools,1]]] call _addtoVest;
+        [_commonRIFLE, _countRIFLE] call _addWeaponKit;
+        [_commonPISTOL, _countPISTOL] call _addWeaponKit;
+        ["primary", _commonRCO] call _attachToWeapon;
+        ["rangefinder"] call _addOptics;
+        ["LR"] call _addRadio;
+        ["BP"] call _addRadio;
     };
     
-    case (_isTeamLeader): { 
-        _unit addWeapon "Binocular";
-        for "_i" from 1 to 8 do {_unit addItemToVest "hlc_30Rnd_545x39_B_AK";};
-        _unit addWeapon "hlc_rifle_aks74";        
+    case (_isTeamLeader): {
+        [_leaderHEAD, _commonUNIFORM, _ftlVEST, "empty"] call _useUniform;
+        [[_unit,[_wsmoke,2],[_rsmoke,2]]] call _addtoVest;
+        [_commonRIFLE, _countRIFLE] call _addWeaponKit;
+        [_commonPISTOL, _countPISTOL] call _addWeaponKit;
+        ["binoc"] call _addOptics;
+        ["LR"] call _addRadio;
     };
     
-    case (_isRifleman): {        
-        for "_i" from 1 to 8 do {_unit addItemToVest "hlc_30Rnd_545x39_B_AK";};
-        _unit addWeapon "hlc_rifle_ak74";
+    case (_isRTO): {
+        [_commonHEAD, _commonUNIFORM, _commonVEST, "empty"] call _useUniform;
+        [[_unit,[_wsmoke,2], [_grenade,_countGRENADES],[_mapTools,1]]] call _addtoVest;
+        [_commonRIFLE, _countRIFLE] call _addWeaponKit;
+        ["laserdesignator"] call _addOptics;
+        ["BP"] call _addRadio;
+    };    
+    
+    case (_isRifleman): {
+        [_commonHEAD, _commonUNIFORM, _commonVEST, "empty"] call _useUniform;
+        [[_unit,[_wsmoke,2],[_grenade,_countGRENADES]]] call _addtoVest;
+        [_commonRIFLE, _countRIFLE] call _addWeaponKit;
     };
     
-    case (_isRiflemanAT): {        
-        _unit addBackpack "rhs_rpg";
-        for "_i" from 1 to 4 do {_unit addItemToBackpack "rhs_rpg7_PG7VL_mag";};
-        for "_i" from 1 to 4 do {_unit addItemToVest "hlc_30Rnd_545x39_B_AK";};
-        
-        _unit addWeapon "rhs_weap_rpg7";
-        _unit addWeapon "hlc_rifle_aks74";
+    case (_isDemo): {
+        [_commonHEAD, _commonUNIFORM, _commonVEST, _bigBACKPACK] call _useUniform;
+        [[_unit, [_clacker,1],[_mineDetector,1],[_defusalKit,1]]] call _addtoUniform;
+        [[_unit,[_apMINE,2],[_apBoundingMINE,2]]] call _addtoVest;
+        [[_unit,[_C4,3],[_satchelCharge,1],[_deadManSwitch,1]]] call _addtoBackpack;
+        [_commonRIFLE, _countRIFLELOW] call _addWeaponKit;
+    };    
+    
+    case (_isRiflemanAT): {
+        [_commonHEAD, _commonUNIFORM, _commonVEST, _bigBACKPACK] call _useUniform;
+        [[_unit,[_wsmoke,2], [_rsmoke,2]]] call _addtoVest;
+        [_commonRIFLE, _countRIFLELOW] call _addWeaponKit;
+        [_specAT] call _addWeapon;
+        [[_unit, [_specAT select 1, _countAT] ]] call _addToBackpack;
     };
     
     case (_isMarksman): {
-        _unit addWeapon "hlc_rifle_aks74";
-        _unit addPrimaryWeaponItem "HLC_Optic_PSO1";  
-        for "_i" from 1 to 8 do {_unit addItemToVest "hlc_30Rnd_545x39_B_AK";};
-    };    
+        [_commonHEAD, _marksmanUNIFORM, _marksmanVEST, "empty"] call _useUniform;
+        [[_unit,[_wsmoke,2], [_rsmoke,2]]] call _addtoVest;
+        [_commonRIFLE, _countRIFLE] call _addWeaponKit;
+        ["primary", _commonRCO] call _attachToWeapon;
+    };
     
     case (_isAutorifleman): {
-
-        _unit addBackpack "B_AssaultPack_cbr";
-        for "_i" from 1 to 3 do {_unit addItemToBackpack "rhs_100Rnd_762x54mmR";};
-        _unit addWeapon "rhs_weap_pkp";
+        [_commonHEAD, _mgUNIFORM, _mgVEST, _commonBACKPACK] call _useUniform;
+        [[_unit,[_wsmoke,2],[_spareBarrel,1]]] call _addtoVest;
+        [_commonMG, _countMG] call _addWeaponKit;
+    };
+    
+    case (_isGrenadier): {
+        [_commonHEAD, _commonUNIFORM, _grenadierVEST, _commonBACKPACK] call _useUniform;
+        [[_unit,[_wsmoke,2],[_rsmoke,2]]] call _addtoVest;
+        [[_unit,[_commonRIFLEGL select 2, _count40mm]]] call _addtoBackpack;
+        [_commonRIFLEGL, _countRIFLELOW] call _addWeaponKit;
     };
     
     case (_isLifeSaver): {
-        _headgear = "MNP_Boonie_ASA";
-        _unit addWeapon "hlc_rifle_aks74";
-        for "_i" from 1 to 4 do {_unit addItemToVest "hlc_30Rnd_545x39_B_AK";};        
-            
-        _unit addBackpack "B_AssaultPack_blk";
-        for "_i" from 1 to 20 do {_unit addItemToBackpack "AGM_Bandage";};
-        for "_i" from 1 to 10 do {_unit addItemToBackpack "AGM_Morphine";};
-        for "_i" from 1 to 10 do {_unit addItemToBackpack "AGM_Epipen";};
-        for "_i" from 1 to 3 do {_unit addItemToBackpack "AGM_Bloodbag";};
-        for "_i" from 1 to 4 do {_unit addItemToBackpack "SmokeShellGreen";};      
+        [_medicHEAD, _medicUNIFORM, _medicVEST, _commonBACKPACK] call _useUniform;
+        [[_unit,[_wsmoke,2], [_gsmoke,3]]] call _addtoVest;
+        [[_unit,[_bandage,_countBANDAGE], [_morphine,_countMORPHINE],[_epi,_countEPI],[_bloodbag,_countBLOODBAG]]] call _addtoBackpack;
+        [_commonRIFLE, _countRIFLELOW] call _addWeaponKit;
+        _defaultInsignia = "MedB";
     };
     
+    case (_isPilot): {
+        [_pilotHEAD, _pilotUNIFORM, "empty", _parachute] call _useUniform;
+        [[_unit,[_wsmoke,2],[_rsmoke,2],[_mapTools,1]]] call _addtoVest;
+        [_commonPISTOL, _countPISTOL] call _addWeaponKit;
+    };
+    
+    case (_isHelicopterCrew): {
+        [_helicrewHEAD, _helicrewUNIFORM, "empty", _parachute] call _useUniform;
+        [[_unit,[_wsmoke,2],[_rsmoke,2]]] call _addtoVest;
+        [_commonSMG, _countRIFLELOW] call _addWeaponKit;
+    };
+    
+    case (_isHelicopterPilot): {
+        [_helipilotHEAD, _helicrewUNIFORM, "empty", _parachute] call _useUniform;
+        [[_unit,[_wsmoke,2],[_rsmoke,2]]] call _addtoVest;
+        [_commonSMG, _countRIFLELOW] call _addWeaponKit;
+    };     
+    
+    case (_isCrewman): {
+        [_crewmanHEAD, _crewUNIFORM, "empty", "empty"] call _useUniform;
+        [[_unit,[_wsmoke,2]]] call _addtoVest;
+        [_commonSMG, _countRIFLELOW] call _addWeaponKit;
+        if (_isLeader) then { ["BP"] call _addRadio };
+    };
+    
+    case (_isSniper): {
+        [_sniperHEAD, _sniperUNIFORM, _commonVEST, "empty"] call _useUniform;
+        [[_unit,[_wsmoke,2],[_mapTools,1],[_kestrel,1]]] call _addtoVest;
+        [_commonSNIPER, _countSNIPER] call _addWeaponKit;
+        ["primary", _commonMAGNIFIED] call _attachToWeapon;
+        if (_isLeader) then { ["BP"] call _addRadio };
+    };
+    
+    case (_isSpotter): {
+        [_sniperHEAD, _sniperUNIFORM, _commonVEST, _commonBACKPACK] call _useUniform;
+        [[_unit,[_wsmoke,2],[_rsmoke,2],[_gsmoke,2],[_mapTools,1],[_kestrel,1]]] call _addtoVest;
+        [[_unit,[_commonSNIPER select 1, (_countSNIPER*2)]]] call _addtoBackpack;
+        [_commonRIFLE, _countRIFLELOW] call _addWeaponKit;
+        ["laserdesignator"] call _addOptics;
+    };    
+    
     default {
-        for "_i" from 1 to 8 do {_unit addItemToVest "hlc_30Rnd_545x39_B_AK";};
-        _unit addWeapon "hlc_rifle_ak74"; 
+        [_commonHEAD, _commonUNIFORM, _commonVEST, "empty"] call _useUniform;
+        [[_unit,[_wsmoke,2],[_grenade,3]]] call _addtoVest;
+        [_commonRIFLE, 5] call _addWeaponKit;
     };
 };
 
-for "_i" from 1 to 3 do {_unit addItemToVest "AGM_Bandage";};
-for "_i" from 1 to 1 do {_unit addItemToVest "AGM_Morphine";};
-for "_i" from 1 to 1 do {_unit addItemToVest "AGM_Epipen";};
-_unit addHeadgear _headgear;
-
 // ADDS ESSENTIALS =============================================================
 
-_unit addWeapon "ItemMap";
-_unit addWeapon "ItemCompass";
-_unit addWeapon "ItemWatch";
-_unit addWeapon "tf_fadak";
-_unit addItem "AGM_EarBuds";
-[_unit,"PATCH_AFG_LOCAL_POLICE"] call bis_fnc_setUnitInsignia;
+[[_unit,[_bandage, 2], [_morphine,1],[_epi, 1]]] call _addtoUniform;
+
+["ItemMap", "ItemCompass", "ItemWatch", _NVG] call _linkItem;
+
+["SR"] call _addRadio;
+
+if ("agm_plugin" in usedPlugins) then { [[_unit, [_earBuds,1]]] call _addtoUniform };

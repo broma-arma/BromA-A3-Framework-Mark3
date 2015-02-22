@@ -10,6 +10,8 @@ BRM_fnc_onRespawnLives = compile preprocessFileLineNumbers (_path+"fn_onRespawn.
 BRM_fnc_killPlayer = compile preprocessFileLineNumbers (_path+"fn_killPlayer.sqf");
 
 if (hasInterface) then {
+    waitUntil{!(isNull player)};
+    
     currentLives = [player] call BRM_fnc_getLives;
 
     player addEventHandler ["Respawn", {[player] call BRM_fnc_onRespawnLives}];

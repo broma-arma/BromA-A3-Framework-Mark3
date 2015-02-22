@@ -4,7 +4,7 @@ if (!isServer) exitWith {};
 //  AGM Revive Time
 // =============================================================================
 
-waitUntil {(mission_params_read)};
+waitUntil{!isNil"param_revive_time"};
 
 switch (param_revive_time) do {
     case 0: { mission_revive_time = 10 };

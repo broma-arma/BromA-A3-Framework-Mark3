@@ -15,7 +15,7 @@
     {
         title = "Enable Headless Client";
         values[] = {0,1};
-        texts[] = {"DISABLED","ENABLED"};
+        texts[] = {"Disabled","Enabled"};
         default = 0;
         code = "param_hc_enabled = %1";
     };    
@@ -71,6 +71,15 @@
         code = "param_time_limit = %1";
     };
     
+    class p_time_accel
+    {
+        title = "Time acceleration";
+        values[] = {0,1,2,3,4};
+        texts[] = {"1x","2x","5x","10x","100x"};
+        default = 0;
+        code = "param_time_accel = %1";
+    };    
+    
     class p_setup_time
     {
         title = "Setup Time";
@@ -88,6 +97,15 @@
         default = 4;
         code = "param_spawn_protection_time = %1";
     };
+    
+    class p_dead_civies
+    {
+        title = "Tolerance with civilian deaths";
+        values[] = {0,1,2,3};
+        texts[] = {"Disabled","Low","Medium","High"};
+        default = 0;
+        code = "param_dead_civies = %1";
+    };     
 
     class bar06 {title = ""; values[] = {0}; texts[] = {""}; default = 0; };
 
@@ -132,8 +150,8 @@
     {
         title = "Allow respawning";
         values[] = {0,1};
-        texts[] = {"Enabled","Disabled"};
-        default = 1;
+        texts[] = {"Disabled", "Enabled"};
+        default = 0;
         code = "param_allow_respawn = %1";
     };     
 
@@ -162,16 +180,7 @@
     {
         title = "DAC AI Skill";
         values[] = {0,1,2,3,4};
-        texts[] = {"Ignored","Very Low","Low","Medium","High"};
+        texts[] = {"Disabled","Very Low","Low","Medium","High"};
         default = 4;
         code = "param_dac_ai_level = %1";
     };
-
-    class p_dead_civies
-    {
-        title = "Tolerance with civilian deaths";
-        values[] = {0,1,2,3};
-        texts[] = {"Ignored","Low","Medium","High"};
-        default = 0;
-        code = "param_dead_civies = %1";
-    }; 

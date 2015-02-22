@@ -2,7 +2,7 @@
 //  Allow third person parameters
 // =============================================================================
 
-waitUntil {(mission_params_read)};
+waitUntil{!isNil"param_allow_tp_veh"};
 
 switch (param_allow_tp_veh) do {
     case 0: { mission_allow_tp_veh = "disabled" };

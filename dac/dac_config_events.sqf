@@ -74,6 +74,61 @@ switch (_TypNumber) do
                                             []
                                         ];
 	};
+
+	case 2:
+	{
+            _loadout = "auto";
+            
+		_Events_Unit_S =	[ 
+                                            ["{ [_x, '"+_loadout+"'] spawn BRM_fnc_initAI } forEach units _group;"],
+                                            [],
+                                            [],
+                                            [],
+                                            ["{ [_x, '"+_loadout+"'] spawn BRM_fnc_initAI } forEach units _group;"],
+                                            ["{ [_x, '"+_loadout+"'] spawn BRM_fnc_initAI } forEach units _group;"],
+                                            []
+                                        ];
+		_Events_Unit_V = 	[
+                                            ["{ [_x, '"+_loadout+"'] spawn BRM_fnc_initAI } forEach units _group;"],
+                                            [],
+                                            [],
+                                            [],
+                                            ["{ [_x, '"+_loadout+"'] spawn BRM_fnc_initAI } forEach units _group;"],
+                                            ["{ [_x, '"+_loadout+"'] spawn BRM_fnc_initAI } forEach units _group;"],
+                                            []
+                                        ];
+		_Events_Unit_T = 	[
+                                            [],
+                                            [],
+                                            [],
+                                            []
+                                        ];
+		_Events_Unit_A = 	[
+                                            [],
+                                            [],
+                                            [],
+                                            []
+                                        ];
+		_Events_Unit_C = 	[
+                                            [],
+                                            [],
+                                            [],
+                                            [],
+                                            [],
+                                            []
+                                        ];
+		_Events_Unit_H = 	[
+                                            [],
+                                            [],
+                                            [],
+                                            []
+                                        ];
+		_Events_Vehicle =	[
+                                            [],
+                                            [],
+                                            []
+                                        ];
+	};
 // =============================================================================
 
 

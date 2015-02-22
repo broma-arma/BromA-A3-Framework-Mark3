@@ -3,7 +3,7 @@
 //  Civilian casualty cap parameter
 // =============================================================================
 
-waitUntil {(mission_params_read)};
+waitUntil{!isNil"param_dead_civies"};
 
 switch (param_dead_civies) do {
     case 0: { mission_dead_civilian_limit = -1 };

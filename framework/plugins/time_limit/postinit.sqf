@@ -3,7 +3,7 @@
 //  Time limit parameter
 // =============================================================================
 
-waitUntil {(mission_params_read)};
+waitUntil{!isNil"param_time_limit"};
 
 switch (param_time_limit) do {
     case 0: { mission_time_limit = -1 };

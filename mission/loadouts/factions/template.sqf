@@ -1,49 +1,112 @@
 
 // INFO ========================================================================
 /*
-    The Sahrani Liberation Army aim to dismantle the monarchy in the southern
-    region and unite the entire island under a communist regime back by Russia.
-    Mostly uses Russian equipment and tactics.
+    This is the template you can use to create your own loadouts.
+    
+    Customize it as you wish.
 */
 
-_defaultSide = EAST;
-_defaultVoice = [_voiceBRITISH];
-_defaultFace = [_faceWHITE];
-_defaultInsignia = "PATCH_RUS_BORDER_GUARD";
+_defaultSide = WEST;
+_defaultVoice = [_voiceALTIAN, _voiceAMERICAN, _voiceBRITISH, _voiceFARSI, _voiceRUSSIAN];
+_defaultFace = [_faceGREEK, _faceWHITE, _faceBLACK, _faceASIAN, _facePERSIAN];
+_defaultInsignia = "111thID";
 
 // WEAPONS =====================================================================
 
-_commonRIFLE = _AK74DESERT;
-_commonRIFLEGL = _AK74GP;
-_commonPISTOL = _Makarov;
-_commonMG = _PKP;
-_commonMARKSMAN = _SVDCAMO;
-_commonAT = _RPG26;
-_specAT = _RPG26;
-_commonSMG = _Vermin;
-_commonRCO = "rhs_acc_pso1m2";
-_commonCCO = "rhs_acc_ekp1";
-_commonMAGNIFIED = "rhs_acc_1p29";
+_commonRIFLE = _Mk20;
+_commonRIFLEGL = _Mk20GL;
+_commonPISTOL = _Rook;
+_commonMG = _Zafir;
+_commonMARKSMAN = _Mk20;
+_commonSNIPER = _GM6;
+_commonAT = _RPG42;
+_specAT = _RPG42;
+_commonSMG = _Mk20C;
+_commonRCO = _ARCO;
+_commonCCO = _EOT;
+_commonMAGNIFIED = _SOS;
+_NVG = _NVGEN1;
+
+// AMMO COUNT ==================================================================
+
+_countRIFLE = 7;
+_countRIFLELOW = 4;
+_countPISTOL = 2;
+_countMG = 3;
+_countSNIPER = 5;
+_countAT = 3;
+_countGRENADES = 3;
+_count40mm = 20;
+
+_countBANDAGE = 30;
+_countMORPHINE = 20;
+_countEPI = 20;
+_countBLOODBAG = 10;
 
 // UNIFORMS ====================================================================
 
-_commonHEAD = "MNP_Helmet_SOVC_RU";
-_leaderHEAD = "MNP_Helmet_SOVC_RU";
-_officerHEAD = "rhs_fieldcap_digi";
-_medicHEAD = "MNP_Helmet_SOVC_RU";
+_headsLIST = [
+    "H_Bandanna_khk",
+    "H_Bandanna_mcamo",
+    "H_Bandanna_sgg",
+    "H_Bandanna_sand"
+];
 
-_commonUNIFORM =  "MNP_CombatUniform_NPA_Alt_B";
-_officerUNIFORM =  "MNP_CombatUniform_NPA_Alt_B";
+_uniformsLIST = [
+    "U_C_Poloshirt_blue",
+    "U_C_Poloshirt_burgundy",
+    "U_C_Poloshirt_redwhite",
+    "U_C_Poloshirt_salmon",
+    "U_C_Poloshirt_stripped",
+    "U_C_Poloshirt_tricolour"
+];
 
-_commonVEST = "rhs_6b23_ML_rifleman";
-_officerVEST = "rhs_6b23_ML_6sh92_radio";
-_ftlVEST = "rhs_6b23_ML_6sh92_vog";
-_slVEST = "rhs_6b23_ML_6sh92_radio";
-_mgVEST = "rhs_6b23_ML_rifleman";
-_grenadierVEST = "rhs_6b23_ML_rifleman";
-_medicVEST = "rhs_6b23_ML_medic";
+_vestsLIST = [
+    "V_BandollierB_blk",
+    "V_BandollierB_cbr",
+    "V_BandollierB_rgr",
+    "V_BandollierB_khk",
+    "V_BandollierB_oli"
+];
 
-_commonBACKPACK = "B_AssaultPack_mcamo_AAR";
+_randomHEAD = _headsLIST call BIS_fnc_selectRandom;
+_randomUNIFORM = _uniformsLIST call BIS_fnc_selectRandom;
+_randomVEST = _vestsLIST call BIS_fnc_selectRandom;
+
+_commonHEAD = _randomHEAD;
+_leaderHEAD = _commonHEAD;
+_officerHEAD = _commonHEAD;
+_medicHEAD = "H_Bandanna_cbr";
+_crewmanHEAD = "rhsusf_cvc_ess";
+_pilotHEAD = "rhsusf_hgu56p";
+_helicrewHEAD = "rhsusf_hgu56p_mask";
+_helipilotHEAD = "rhsusf_hgu56p";
+_sniperHEAD = _commonHEAD;
+_demoHEAD = _commonHEAD;
+
+_commonUNIFORM = _randomUNIFORM;
+_officerUNIFORM = "U_BG_Guerilla2_3";
+_pilotUNIFORM = "U_B_PilotCoveralls";
+_sniperUNIFORM = "U_B_GhillieSuit";
+_marksmanUNIFORM = _commonUNIFORM;
+_helicrewUNIFORM = _commonUNIFORM;
+_crewUNIFORM = _commonUNIFORM;
+_mgUNIFORM = _commonUNIFORM;
+_medicUNIFORM = "U_Marshal";
+_demoUNIFORM = _commonUNIFORM;
+
+_commonVEST = _randomVEST;
+_officerVEST = _commonVEST;
+_ftlVEST = _commonVEST;
+_slVEST = _commonVEST;
+_mgVEST = _commonVEST;
+_grenadierVEST = _commonVEST;
+_medicVEST = _commonVEST;
+_demoVEST = _commonVEST;
+_marksmanVEST = _commonVEST;
+
+_commonBACKPACK = "B_AssaultPack_rgr";
+_bigBACKPACK = "B_Carryall_ocamo";
 
 // =============================================================================
 if (!_isMan) exitWith {};
@@ -76,6 +139,7 @@ switch (true) do {
         [[_unit,[_wsmoke,2],[_rsmoke,2]]] call _addtoVest;
         [_commonRIFLE, _countRIFLE] call _addWeaponKit;
         [_commonPISTOL, _countPISTOL] call _addWeaponKit;
+        ["primary", _commonCCO] call _attachToWeapon;
         ["binoc"] call _addOptics;
         ["LR"] call _addRadio;
     };

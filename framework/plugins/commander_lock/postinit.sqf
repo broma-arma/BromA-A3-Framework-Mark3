@@ -17,11 +17,9 @@ if (player in co_lock_units) then {
         
         locked_sides = locked_sides - [side player]; publicVariable "locked_sides";
         [-1, {
-            removeBulletsEH = 0;
-
             if (_this == side player) then {
                 ["Alert",["The commander declares the mission as go!"]] call bis_fnc_showNotification;
-                player removeEventHandler ["Fired", removeBulletsEH];
+                player removeEventHandler ["Fired", 1];
             };
         }, side player] call CBA_fnc_globalExecute;
         

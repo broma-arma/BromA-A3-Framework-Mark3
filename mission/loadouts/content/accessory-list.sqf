@@ -86,3 +86,28 @@ _FHQMARSTAN = "FHQ_optic_MARS_tan";
 _FHQANPE = "FHQ_acc_ANPEQ15";
 _FHQANPEBLK = "FHQ_acc_ANPEQ15_black";
 _FHQLLM = "FHQ_acc_LLM01L";
+
+// =============================================================================
+
+// NIGHT-VISION
+
+_PVS14 = "rhsusf_ANPVS_14";
+_PVS15 = "rhsusf_ANPVS_15";
+
+_NVGEN1 = "AGM_NVG_Gen1";
+
+_NVGEN2 = "AGM_NVG_Gen2";
+
+_NVGEN3OP = "NVGoggles_OPFOR";
+_NVGEN3IND = "NVGoggles_INDEP";
+_NVGEN3BLU = "NVGoggles_BLUFOR";
+
+_NVGEN4 = "AGM_NVG_Gen4";
+
+_NVWIDE = "AGM_NVG_Wide";
+
+// =============================================================================
+
+// OTHERS
+
+_parachute = "B_Parachute";

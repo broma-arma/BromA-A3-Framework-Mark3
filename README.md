@@ -4,7 +4,7 @@
   </a>
    <br/><br/>
   <a href="https://github.com/Neefay/BromA-A3-Framework-Mark3/commits/master">
-    <img src="https://img.shields.io/badge/build-00032-orange.svg" alt="Current version">
+    <img src="https://img.shields.io/badge/build-00033-orange.svg" alt="Current version">
   </a>
 </p>
 
@@ -37,29 +37,42 @@ Also keeping up with good practices, most functionality is modular and therefore
 
 The framework is as context agnostic as possible, meaning you can just change one value and your mission will change from a COOP into a TVT or even a COTVT - everything is already pre-configured to be flexible and as little as possible assumptions are made about the mission itself.
 
-### TO DO:
+### TO DO (priority order):
 -
-*	- [ ] BUG: "param_setup_time" not published over network.
-*	- [ ] BUG: ALL parameters are fucked and not being broadcast over network, double check.
-*	- [ ] BUG: "mission_spawn_protection_time" not published over network.
-*	- [ ] BUG: Radio freq plugin reads the wrong groups. GEE I WONDER WHAT IS THE ISSUE HERE?!?!?!??!
-*	- [ ] BUG: Unit's group not published over network - God, I just LOVE debugging locality issues!
-*	- [ ] TEST EVERYTHING WITH OTHER PLAYERS. Enough new features for now.
-*	- [X] Work a system for containers/vehicles.
+*	- [ ] BUG: HC isn't working anymore, AGAIN. Sometimes it works, sometimes it gives a DAC WP generation failure. IT'S A MYSTERY!
+		- Make sure HC loads before anything else.
+*	- [ ] JIP BUG: Groups and units aren't loaded correctly upon joining.
+*	- [X] JIP BUG: Respawn plugin not working for JIPs.
+*	- [X] JIP BUG: If you JIP as a certain group, you will not get your correct loadout.
+*	- [X] BUG: Parameters orders are inverted, my fault.
+*	- [ ] BUG: If two units join the same automatically named group, they will be called *.
 *	- [ ] Add default pre-placed units.
-*	- [X] Declare all units as objNulls.
 *	- [ ] Add a general plugins settings file.
+*	- [ ] Add all the proper endings.
+*	- [ ] Fix the ending screen.
+*	- [ ] Work all current loadouts to have proper variables.
+		- [ ] Loadouts still need Crewmen, Snipers and Pilots and maybe other things.
+*	- [ ] There are a bunch of new pre-set units, maybe add them DAC default units with vehicles included.		
+*	- [ ] Rewrite the casualty cap to account for units, acquired from inputted groups.
+*	- [X] Make it so all relevant groups are declared for each side, maybe as blu/op/ind_mainunits?
+*	- [X] BUG: ALL parameters are fucked and not being broadcast over network, double check.
+*	- [X] BUG: Radio freq plugin reads the wrong groups. GEE I WONDER WHAT IS THE ISSUE HERE?!?!?!??!
+*	- [X] BUG: Unit's group not published over network - God, I just LOVE debugging locality issues!
+*	- [X] JIP BUG: Apparently everything freezes upon JIPing? Really messed up, gotta investigate with another player.
+*	- [X] Work a system for containers/vehicles.
+*	- [X] Declare all units as objNulls.
 *	- [X] Make sure DAC can spawn unit with default gear.
 *	- [X] Better way to control player loadouts - switch case for all factions.
 *	- [X] Make a new loadout style with less redundancy.
 *	- [X] Bring back the old way with _primaryrifles etc.
-*	- [ ] Work all current loadouts to have proper variables.
-*	- [ ] Add all the proper endings.
 *	- [X] Make a script to generate callsigns and radios freqs based on the mission groups.
 *	- [X] Delegate unit alias to the server / JIPs initialize their own groups afterwards.
 *	- [X] Look into ditching the group unitInit and use only the unit's name.
-*	- [ ] Fix the ending screen.
 *	- [ ] Comment and document everything.
+
+NEED HELP TO TEST:
+
+*	- [X] Nothing for now.
 
 ### What then?
 

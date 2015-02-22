@@ -1,49 +1,73 @@
 
 // INFO ========================================================================
 /*
-    The Sahrani Liberation Army aim to dismantle the monarchy in the southern
-    region and unite the entire island under a communist regime back by Russia.
-    Mostly uses Russian equipment and tactics.
+    During the politically turmoiled times prior to the formation of the CSAT,
+    many soldiers from the surrounding regions grew increasingly displeased
+    with the fanatical frenzy that drove the new government and decided to disband
+    in order to found their own private military effort.
+    Now with the war at its height, the organization known as "Ahkma" operates
+    on several fronts fighting and aiding both CSAT and NATO alike, much to
+    each dismay. 
+    What the winner side make of them, only the future can tell.
 */
 
-_defaultSide = EAST;
-_defaultVoice = [_voiceBRITISH];
-_defaultFace = [_faceWHITE];
-_defaultInsignia = "PATCH_RUS_BORDER_GUARD";
+_defaultSide = RESISTANCE;
+_defaultVoice = [_voiceFARSI];
+_defaultFace = [_facePERSIAN, _faceASIAN];
+_defaultInsignia = "PATCH_MORALE_WORLD_COMPROMISE";
 
 // WEAPONS =====================================================================
 
-_commonRIFLE = _AK74DESERT;
-_commonRIFLEGL = _AK74GP;
-_commonPISTOL = _Makarov;
-_commonMG = _PKP;
-_commonMARKSMAN = _SVDCAMO;
-_commonAT = _RPG26;
-_specAT = _RPG26;
-_commonSMG = _Vermin;
-_commonRCO = "rhs_acc_pso1m2";
-_commonCCO = "rhs_acc_ekp1";
-_commonMAGNIFIED = "rhs_acc_1p29";
+_commonRIFLE = _G3KA4;
+_commonRIFLEGL = _G3KA4GL;
+_commonPISTOL = _G17;
+_commonMG = _Mk200;
+_commonMARKSMAN = _G3KA4;
+_commonAT = _AT4;
+_specAT = _RPG42;
+_commonSMG = _G3A3;
+_commonRCO = "optic_Arco";
+_commonCCO = "FHQ_optic_MicroCCO_low";
+_commonMAGNIFIED = "FHQ_optic_ACOG";
+_NVG = "NVGoggles_BLUFOR";
 
 // UNIFORMS ====================================================================
 
-_commonHEAD = "MNP_Helmet_SOVC_RU";
-_leaderHEAD = "MNP_Helmet_SOVC_RU";
-_officerHEAD = "rhs_fieldcap_digi";
-_medicHEAD = "MNP_Helmet_SOVC_RU";
+_vests = [
+    "V_HarnessO_brn",
+    "V_HarnessO_gry"
+];
 
-_commonUNIFORM =  "MNP_CombatUniform_NPA_Alt_B";
-_officerUNIFORM =  "MNP_CombatUniform_NPA_Alt_B";
+_uniforms = [
+    "MNP_CombatUniform_Militia_DB",
+    "MNP_CombatUniform_Militia_C",
+    "MNP_CombatUniform_Militia_DA",
+    "MNP_CombatUniform_Militia_C",
+    "MNP_CombatUniform_Militia_DE",
+    "MNP_CombatUniform_Militia_F",
+    "MNP_CombatUniform_Militia_DB"
+];
 
-_commonVEST = "rhs_6b23_ML_rifleman";
-_officerVEST = "rhs_6b23_ML_6sh92_radio";
-_ftlVEST = "rhs_6b23_ML_6sh92_vog";
-_slVEST = "rhs_6b23_ML_6sh92_radio";
-_mgVEST = "rhs_6b23_ML_rifleman";
-_grenadierVEST = "rhs_6b23_ML_rifleman";
-_medicVEST = "rhs_6b23_ML_medic";
+_randomUNIFORM = _uniforms call BIS_fnc_selectRandom;
+_randomVEST = _vests call BIS_fnc_selectRandom;
 
-_commonBACKPACK = "B_AssaultPack_mcamo_AAR";
+_commonHEAD = "TRYK_H_woolhat";
+_leaderHEAD = "H_Cap_blk";
+_officerHEAD = "H_Beret_blk";
+_medicHEAD = "MNP_Boonie_Jigsaw";
+
+_commonUNIFORM = _randomUNIFORM;
+_officerUNIFORM = _randomUNIFORM;
+
+_commonVEST = _randomVEST;
+_officerVEST = _commonVEST;
+_ftlVEST = _commonVEST;
+_slVEST = _commonVEST;
+_mgVEST = _commonVEST;
+_grenadierVEST = "V_HarnessOGL_brn";
+_medicVEST = _commonVEST;
+
+_commonBACKPACK = "B_AssaultPack_blk";
 
 // =============================================================================
 if (!_isMan) exitWith {};

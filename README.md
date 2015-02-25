@@ -51,8 +51,8 @@ The framework is as context agnostic as possible, meaning you can just change on
 *	- [ ] Add all the proper endings.
 *	- [ ] Fix the ending screen.
 *	- [ ] Work all current loadouts to have proper variables.
-		- [ ] Loadouts still need Crewmen, Snipers and Pilots and maybe other things.
-*	- [ ] There are a bunch of new pre-set units, maybe add them DAC default units with vehicles included.		
+		- [X] Loadouts still need Crewmen, Snipers and Pilots and maybe other things.
+*	- [X] There are a bunch of new pre-set units, maybe add them DAC default units with vehicles included.		
 *	- [ ] Rewrite the casualty cap to account for units, acquired from inputted groups.
 *	- [X] Make it so all relevant groups are declared for each side, maybe as blu/op/ind_mainunits?
 *	- [X] BUG: ALL parameters are fucked and not being broadcast over network, double check.

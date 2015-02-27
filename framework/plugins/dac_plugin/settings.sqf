@@ -1,3 +1,5 @@
+
+if (isNil "DAC_STRPlayers") then { 
 // =============================================================================
 //        This is a list with all playable units, for DAC to use:              |
 //                     add or remove as necessary.                             |
@@ -101,3 +103,4 @@ DAC_STRPlayers = [
                              
 // =============================================================================
 ];
+};

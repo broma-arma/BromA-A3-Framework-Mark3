@@ -1,5 +1,6 @@
-// Define needed variables
+
 if (isNull player) then {waitUntil{!isNull player}};
+waitUntil{(mission_groups_init)};
 
 private ["_orbatText", "_groups", "_precompileGroups"];
 _groups = [];
@@ -50,5 +51,4 @@ _orbatText = "<br/><br/>============= Team Roster =============<br/>";
     };
 } forEach _groups;
 
-//player createDiarySubject ["team_roster","Team Roster"];
 player createDiaryRecord ["Diary", ["Team Roster", _orbatText]];

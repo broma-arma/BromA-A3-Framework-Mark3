@@ -1,5 +1,7 @@
 private ["_side","_number","_sideGroup","_role","_groupName","_groupNameNumber"];
 
+_aliasAUTO = ["*","AUTO","ANY"];
+
 _unit = _this select 0;
 _group = _this select 1;
 _role = _this select 2;
@@ -15,8 +17,6 @@ _isLeader = (isFormationLeader _unit);
 _groupName = _group;
 _actualGroup = (_groupNumber == "0");
 _autoNamed = (_group in _aliasAUTO);
-
-_aliasAUTO = ["*","AUTO","ANY"];
 
 if (!_autoNamed) then { _groupNumber = "" };
 
@@ -46,7 +46,7 @@ if (_isLeader) then { _unitNumber = "" } else { _unitNumber = "'"+(_unitNumber) 
 _aliasACTUAL = ["CO", "Officer", "SL", "Squad Leader"];
 _aliasFTL = ["FTL", "Team Leader"];
 
-switch(true) do {
+switch (true) do {
     case (_actualGroup && _isLeader): { _role = "Actual" };
     case (_role in _aliasACTUAL): { _role = "Actual" };
     case (_role in _aliasFTL): { _role = "FTL" };
@@ -57,6 +57,7 @@ if (_unitNumber != "") then { _unitNumber = _unitNumber + " " };
 
 _rosterAlias = format ["%1 %2%3%4", _group, _groupNumber, _unitNumber, _role];
 
+(group _unit) setGroupId [_groupName];
 [[(group _unit), _groupName],"BRM_fnc_setGrpIDGlobal",true,true] call BIS_fnc_MP;
 
 _unit setVariable ["rosterAlias", _rosterAlias, true];

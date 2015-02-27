@@ -28,7 +28,8 @@ class BRM {
         file = "framework\engine\functions\engine\misc";
         class getSpawnPoint{};
         class stampTime{};
-        class syncTime{};        
+        class syncTime{};
+        class getSideInfo{};
     };
     class ending {
         file = "framework\engine\functions\engine\ending";

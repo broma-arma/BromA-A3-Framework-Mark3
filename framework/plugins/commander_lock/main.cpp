@@ -6,5 +6,5 @@ class commander_lock
 	dependencies[] = {};
 	url = "";
 	postinit = "postinit.sqf";
-	environment = "client";
+	environment = "all";
 };

@@ -1,5 +1,8 @@
 if (!isServer) exitWith {};
 
+waitUntil{(!isNil "mission_settings_loaded")};
+waitUntil{(mission_settings_loaded)};
+
 mission_groups_init = false; publicVariable "mission_groups_init";
 
 private["_unitstoCheck"];

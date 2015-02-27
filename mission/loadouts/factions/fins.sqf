@@ -1,31 +1,30 @@
 
 // INFO ========================================================================
 /*
-    The Sahrani Liberation Army aim to dismantle the monarchy in the southern
-    region and unite the entire island under a communist regime back by Russia.
-    Mostly uses Russian equipment and tactics.
+    This is the template you can use to create your own loadouts.
+    
+    Customize it as you wish.
 */
 
-_defaultSide = EAST;
-_defaultVoice = [_voiceBRITISH];
-_defaultFace = [_faceWHITE];
-_defaultName = [_nameSPANISH];
-_defaultInsignia = "PATCH_RUS_BORDER_GUARD";
+_defaultSide = WEST;
+_defaultVoice = [_voiceALTIAN, _voiceAMERICAN, _voiceBRITISH, _voiceFARSI, _voiceRUSSIAN];
+_defaultFace = [_faceGREEK, _faceWHITE, _faceBLACK, _faceASIAN, _facePERSIAN];
+_defaultInsignia = "111thID";
 
 // WEAPONS =====================================================================
 
-_commonRIFLE = _AK74DESERT;
-_commonRIFLEGL = _AK74GP;
-_commonPISTOL = _Makarov;
-_commonMG = _PKP;
-_commonMARKSMAN = _SVDCAMO;
-_commonSNIPER = _GM6;
-_commonAT = _RPG26;
-_specAT = _RPG26;
-_commonSMG = _Vermin;
-_commonRCO = "rhs_acc_pso1m2";
-_commonCCO = "rhs_acc_ekp1";
-_commonMAGNIFIED = "rhs_acc_1p29";
+_commonRIFLE = _G3KA4;
+_commonRIFLEGL = _G3KA4GL;
+_commonPISTOL = _G17;
+_commonMG = _Minimi765;
+_commonMARKSMAN = _G3KA4;
+_commonSNIPER = _SVDS;
+_commonAT = _AT4;
+_specAT = _MAAWS;
+_commonSMG = _Mk20C;
+_commonRCO = "optic_MRCO";
+_commonCCO = _EOT;
+_commonMAGNIFIED = "rhs_acc_pso1m2";
 _NVG = _NVGEN1;
 
 // AMMO COUNT ==================================================================
@@ -47,20 +46,34 @@ _countBLOODBAG = 10;
 // UNIFORMS ====================================================================
 
 
-_commonHEAD = "MNP_Helmet_SOVC_RU";
-_leaderHEAD = "MNP_Helmet_SOVC_RU";
-_officerHEAD = "rhs_fieldcap_digi";
-_medicHEAD = "MNP_Helmet_SOVC_RU";
+_uniformsLIST = [
+    "MNP_CombatUniform_Fin_A",
+    "MNP_CombatUniform_Fin_B"
+];
+
+_vestsLIST = [
+    "MNP_Vest_FIN_1",
+    "MNP_Vest_FIN_2"
+];
+
+
+_randomUNIFORM = _uniformsLIST call BIS_fnc_selectRandom;
+_randomVEST = _vestsLIST call BIS_fnc_selectRandom;
+
+_commonHEAD = "MNP_Helmet_FIN_T";
+_leaderHEAD = _commonHEAD;
+_officerHEAD = "H_MilCap_dgtl"; 
+_medicHEAD = "H_Bandanna_cbr";
 _crewmanHEAD = "rhsusf_cvc_ess";
 _pilotHEAD = "rhsusf_hgu56p";
 _helicrewHEAD = "rhsusf_hgu56p_mask";
 _helipilotHEAD = "rhsusf_hgu56p";
-_sniperHEAD = _commonHEAD;
+_sniperHEAD = "MNP_Boonie_FIN";
 _demoHEAD = _commonHEAD;
 
-_commonUNIFORM =  "MNP_CombatUniform_NPA_Alt_B";
-_officerUNIFORM =  "MNP_CombatUniform_NPA_Alt_B";
-_pilotUNIFORM = "U_B_PilotCoveralls";
+_commonUNIFORM = _randomUNIFORM;
+_officerUNIFORM = _commonUNIFORM;
+_pilotUNIFORM = _commonUNIFORM;
 _sniperUNIFORM = _commonUNIFORM;
 _marksmanUNIFORM = _commonUNIFORM;
 _helicrewUNIFORM = _commonUNIFORM;
@@ -69,18 +82,18 @@ _mgUNIFORM = _commonUNIFORM;
 _medicUNIFORM = _commonUNIFORM;
 _demoUNIFORM = _commonUNIFORM;
 
-_commonVEST = "rhs_6b23_ML_rifleman";
-_officerVEST = "rhs_6b23_ML_6sh92_radio";
-_ftlVEST = "rhs_6b23_ML_6sh92_vog";
-_slVEST = "rhs_6b23_ML_6sh92_radio";
-_mgVEST = "rhs_6b23_ML_rifleman";
-_grenadierVEST = "rhs_6b23_ML_rifleman";
-_medicVEST = "rhs_6b23_ML_medic";
+_commonVEST = _randomVEST;
+_officerVEST = _commonVEST;
+_ftlVEST = _commonVEST;
+_slVEST = _commonVEST;
+_mgVEST = _commonVEST;
+_grenadierVEST = _commonVEST;
+_medicVEST = _commonVEST;
 _demoVEST = _commonVEST;
 _marksmanVEST = _commonVEST;
 
-_commonBACKPACK = "B_AssaultPack_mcamo_AAR";
-_bigBACKPACK = "B_Carryall_ocamo";
+_commonBACKPACK = "MNP_B_WD_FP";
+_bigBACKPACK = "MNP_B_WD_CA";
 
 // =============================================================================
 if (!_isMan) exitWith {};
@@ -113,6 +126,7 @@ switch (true) do {
         [[_unit,[_wsmoke,2],[_rsmoke,2]]] call _addtoVest;
         [_commonRIFLE, _countRIFLE] call _addWeaponKit;
         [_commonPISTOL, _countPISTOL] call _addWeaponKit;
+        ["primary", _commonCCO] call _attachToWeapon;
         ["binoc"] call _addOptics;
         ["LR"] call _addRadio;
     };

@@ -10,6 +10,7 @@
 _defaultSide = WEST;
 _defaultVoice = [_voiceBRITISH];
 _defaultFace = [_faceWHITE];
+_defaultName = [_nameSPANISH];
 _defaultInsignia = "PATCH_USA_USMC_FORCE_RECON";
 
 // WEAPONS =====================================================================

@@ -5,6 +5,6 @@ class team_kill
 	version = 1;
 	dependencies[] = {};
 	url = "";
-	preinit = "preinit.sqf";
+	postinit = "postinit.sqf";
 	environment = "client";
 };

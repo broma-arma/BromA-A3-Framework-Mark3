@@ -1,8 +1,7 @@
-
-
+mission_settings_loaded = false;
 // =============================================================================
 /*
-    This is where you set the module parameters for your mission, have fun!    
+    This is where you edit the mission values for your mission, have fun!    
 */
 // =============================================================================
 
@@ -74,7 +73,7 @@ mission_enable_side_c = false;
 
 side_c_side = resistance;      // Side of third faction.
 side_c_color = "green";        // Color of the third faction.
-side_c_faction = "pmc";        // Third side's faction.
+side_c_faction = "ahkma-pmc";  // Third side's faction.
 side_c_name = "AAF";           // Name of the third faction.
 
 // Name the third faction's groups.
@@ -111,4 +110,8 @@ timeLimitEnding = 6;                            // Time limit reached.
 mission_allow_jip = true;
 
 // =============================================================================
+//  Load the plugin settings file.
 // =============================================================================
+#include "plugin-settings.sqf"
+// =============================================================================
+mission_settings_loaded = true;

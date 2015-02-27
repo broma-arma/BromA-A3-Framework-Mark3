@@ -30,7 +30,7 @@ _formatFreqs = {
     _groups = _this;
     _ret = "";
     {
-        _add = format ["%1 - ch. %2 SR<br/>",(_x select 0),(_x select 2)];
+        _add = format ["%1 - ch. %2<br/>",(_x select 0),(_x select 2)];
         _ret = _ret + _add;
     } forEach _groups;
     _ret

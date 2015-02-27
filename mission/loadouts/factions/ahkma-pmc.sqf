@@ -1,28 +1,30 @@
 
 // INFO ========================================================================
 /*
-    During the politically turmoiled times prior to the formation of the CSAT,
+   During the politically turmoiled times prior to the formation of the CSAT,
     many soldiers from the surrounding regions grew increasingly displeased
     with the fanatical frenzy that drove the new government and decided to disband
     in order to found their own private military effort.
     Now with the war at its height, the organization known as "Ahkma" operates
     on several fronts fighting and aiding both CSAT and NATO alike, much to
     each dismay. 
-    What the winner side make of them, only the future can tell.
+    What will the winner side make of them, only the future can tell.
 */
 
 _defaultSide = RESISTANCE;
 _defaultVoice = [_voiceFARSI];
 _defaultFace = [_facePERSIAN, _faceASIAN];
+_defaultName = [_nameARABIC, _nameCHINESE];
 _defaultInsignia = "PATCH_MORALE_WORLD_COMPROMISE";
 
 // WEAPONS =====================================================================
 
 _commonRIFLE = _G3KA4;
-_commonRIFLEGL = _G3KA4GL;
+_commonRIFLEGL = _G3KA4;
 _commonPISTOL = _G17;
 _commonMG = _Mk200;
 _commonMARKSMAN = _G3KA4;
+_commonSNIPER = _SVDS;
 _commonAT = _AT4;
 _specAT = _RPG42;
 _commonSMG = _G3A3;
@@ -31,14 +33,25 @@ _commonCCO = "FHQ_optic_MicroCCO_low";
 _commonMAGNIFIED = "FHQ_optic_ACOG";
 _NVG = "NVGoggles_BLUFOR";
 
+// AMMO COUNT ==================================================================
+
+_countRIFLE = 7;
+_countRIFLELOW = 4;
+_countPISTOL = 2;
+_countMG = 3;
+_countSNIPER = 5;
+_countAT = 3;
+_countGRENADES = 3;
+_count40mm = 20;
+
+_countBANDAGE = 30;
+_countMORPHINE = 20;
+_countEPI = 20;
+_countBLOODBAG = 10;
+
 // UNIFORMS ====================================================================
 
-_vests = [
-    "V_HarnessO_brn",
-    "V_HarnessO_gry"
-];
-
-_uniforms = [
+_uniformsLIST = [
     "MNP_CombatUniform_Militia_DB",
     "MNP_CombatUniform_Militia_C",
     "MNP_CombatUniform_Militia_DA",
@@ -48,16 +61,35 @@ _uniforms = [
     "MNP_CombatUniform_Militia_DB"
 ];
 
-_randomUNIFORM = _uniforms call BIS_fnc_selectRandom;
-_randomVEST = _vests call BIS_fnc_selectRandom;
+_vestsLIST = [
+    "V_HarnessO_brn",
+    "V_HarnessO_gry"
+];
+
+_randomUNIFORM = _uniformsLIST call BIS_fnc_selectRandom;
+_randomVEST = _vestsLIST call BIS_fnc_selectRandom;
 
 _commonHEAD = "TRYK_H_woolhat";
 _leaderHEAD = "H_Cap_blk";
 _officerHEAD = "H_Beret_blk";
 _medicHEAD = "MNP_Boonie_Jigsaw";
+_crewmanHEAD = "rhsusf_cvc_ess";
+_pilotHEAD = "rhsusf_hgu56p";
+_helicrewHEAD = "rhsusf_hgu56p_mask";
+_helipilotHEAD = "rhsusf_hgu56p";
+_sniperHEAD = _commonHEAD;
+_demoHEAD = _commonHEAD;
 
 _commonUNIFORM = _randomUNIFORM;
 _officerUNIFORM = _randomUNIFORM;
+_pilotUNIFORM = "U_B_PilotCoveralls";
+_sniperUNIFORM = _randomUNIFORM;
+_marksmanUNIFORM = _commonUNIFORM;
+_helicrewUNIFORM = _commonUNIFORM;
+_crewUNIFORM = _commonUNIFORM;
+_mgUNIFORM = _commonUNIFORM;
+_medicUNIFORM = _randomUNIFORM;
+_demoUNIFORM = _commonUNIFORM;
 
 _commonVEST = _randomVEST;
 _officerVEST = _commonVEST;
@@ -66,8 +98,11 @@ _slVEST = _commonVEST;
 _mgVEST = _commonVEST;
 _grenadierVEST = "V_HarnessOGL_brn";
 _medicVEST = _commonVEST;
+_demoVEST = _commonVEST;
+_marksmanVEST = _commonVEST;
 
 _commonBACKPACK = "B_AssaultPack_blk";
+_bigBACKPACK = "B_Bergen_blk";
 
 // =============================================================================
 if (!_isMan) exitWith {};

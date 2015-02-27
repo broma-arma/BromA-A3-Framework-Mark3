@@ -1,6 +1,7 @@
-if (!hasInterface) exitWith {};
 waitUntil{(!isNil "paramsDone")};
 waitUntil{!(isNull player)};
+waitUntil{(alive player)};
+if (!hasInterface) exitWith {};
 
 ["LOCAL", "F_LOG", format ["INITIALIZING PLAYER '%1' (%2)", name player, player]] call BRM_fnc_doLog;
 
@@ -34,12 +35,7 @@ switch (true) do {
 };
 
 if (toUpper(_faction) in _aliasAUTO) then {
-    switch (true) do {
-        case (side player == side_a_side): { _faction = side_a_faction };
-        case (side player == side_b_side): { _faction = side_b_faction };
-        case (side player == side_c_side): { _faction = side_c_faction };
-        default { _faction = "default" };
-    };
+    _faction = [(side player), "faction"] call BRM_fnc_getSideInfo;
 };
 
 if (toUpper(_role) in _aliasAUTO) then {
@@ -75,9 +71,9 @@ player addEventHandler ["Killed", BRM_fnc_onPlayerKilled];
     _role = _this select 1;
     _color = _this select 2;
 
-    sleep 10;
+    sleep 5;
 
-    waitUntil{ (_player) assignTeam (_color) };
+    [-1, { (_this select 0) assignTeam (_this select 1)}, [_player, _color]] call CBA_fnc_globalExecute;
 };
 
 ["LOCAL", "F_LOG", "PLAYER INITIALIZED"] call BRM_fnc_doLog;

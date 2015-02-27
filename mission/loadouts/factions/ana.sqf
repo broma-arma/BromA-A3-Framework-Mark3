@@ -9,6 +9,7 @@
 _defaultSide = WEST;
 _defaultVoice = [_voiceFARSI];
 _defaultFace = [_facePERSIAN];
+_defaultName = [_nameARABIC];
 _defaultInsignia = "PATCH_AFG_LOCAL_POLICE";
 
 // WEAPONS =====================================================================
@@ -18,6 +19,7 @@ _commonRIFLEGL = _M16A4GL;
 _commonPISTOL = _USP;
 _commonMG = _PKP;
 _commonMARKSMAN = _M16A4M;
+_commonSNIPER = _GM6;
 _commonAT = _AT4;
 _specAT = _MAAWS;
 _commonSMG = _M16A3;
@@ -26,29 +28,60 @@ _commonCCO = "FHQ_optic_AIM";
 _commonMAGNIFIED = _SOS;
 _NVG = "NVGoggles_BLUFOR";
 
+// AMMO COUNT ==================================================================
+
+_countRIFLE = 7;
+_countRIFLELOW = 4;
+_countPISTOL = 2;
+_countMG = 3;
+_countSNIPER = 5;
+_countAT = 3;
+_countGRENADES = 3;
+_count40mm = 20;
+
+_countBANDAGE = 30;
+_countMORPHINE = 20;
+_countEPI = 20;
+_countBLOODBAG = 10;
+
 // UNIFORMS ====================================================================
 
-_vests = [
-    "MNP_Vest_OD_A",
-    "MNP_Vest_OD_B"
-];
 
-_uniforms = [
+_uniformsLIST = [
     "MNP_CombatUniform_ASA_GC2",
     "MNP_CombatUniform_ASA_GC3",
     "MNP_CombatUniform_ASA_GC"
 ];
 
-_randomUNIFORM = _uniforms call BIS_fnc_selectRandom;
-_randomVEST = _vests call BIS_fnc_selectRandom;
+_vestsLIST = [
+    "MNP_Vest_OD_A",
+    "MNP_Vest_OD_B"
+];
+
+_randomUNIFORM = _uniformsLIST call BIS_fnc_selectRandom;
+_randomVEST = _vestsLIST call BIS_fnc_selectRandom;
 
 _commonHEAD = "rhsusf_ach_bare_ess";
 _leaderHEAD = "rhsusf_ach_bare_headset";
 _officerHEAD = "H_Beret_blk";
 _medicHEAD = "H_Bandanna_cbr";
+_crewmanHEAD = "rhsusf_cvc_ess";
+_pilotHEAD = "rhsusf_hgu56p";
+_helicrewHEAD = "rhsusf_hgu56p_mask";
+_helipilotHEAD = "rhsusf_hgu56p";
+_sniperHEAD = _commonHEAD;
+_demoHEAD = _commonHEAD;
 
 _commonUNIFORM = _randomUNIFORM;
 _officerUNIFORM = _randomUNIFORM;
+_pilotUNIFORM = "U_B_PilotCoveralls";
+_sniperUNIFORM = _randomUNIFORM;
+_marksmanUNIFORM = _commonUNIFORM;
+_helicrewUNIFORM = _commonUNIFORM;
+_crewUNIFORM = _commonUNIFORM;
+_mgUNIFORM = _commonUNIFORM;
+_medicUNIFORM = _randomUNIFORM;
+_demoUNIFORM = _commonUNIFORM;
 
 _commonVEST = _randomVEST;
 _officerVEST = _commonVEST;
@@ -57,8 +90,11 @@ _slVEST = _commonVEST;
 _mgVEST = _commonVEST;
 _grenadierVEST = _commonVEST;
 _medicVEST = _commonVEST;
+_demoVEST = _commonVEST;
+_marksmanVEST = _commonVEST;
 
 _commonBACKPACK = "B_AssaultPack_rgr";
+_bigBACKPACK = "B_Carryall_ocamo";
 
 // =============================================================================
 if (!_isMan) exitWith {};

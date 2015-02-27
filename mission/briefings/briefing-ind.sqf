@@ -6,11 +6,11 @@
 if (!_autoRadio) then {
     _radioFreqs = 
     "
-    Alpha - ch.1 SR<br/>
-    Bravo - ch.2 SR<br/>
-    Charlie - ch.3 SR<br/>
-    Delta - ch.4 SR<br/>
-    Zero - ch.9 SR<br/>
+    Alpha - ch.1<br/>
+    Bravo - ch.2<br/>
+    Charlie - ch.3<br/>
+    Delta - ch.4<br/>
+    Zero - ch.9<br/>
     ";
 };
 
@@ -25,7 +25,7 @@ _radioText = format [
 === <font color='#fad425'>LONG RANGE</font color> ===<br/><br/>
 <font color='#fad425'>Infantry:</font color><br/>
 <br/>
-Main command net: ch.1 LR<br/>
+Main command net: ch.1<br/>
 
 ", _radioFreqs];
 

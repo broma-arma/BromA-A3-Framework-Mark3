@@ -13,12 +13,7 @@ switch (true) do {
 };
 
 if (toUpper(_faction) == "AUTO") then {
-    switch (true) do {
-        case (side _unit == side_a_side): { _faction = side_a_faction };
-        case (side _unit == side_b_side): { _faction = side_b_faction };
-        case (side _unit == side_c_side): { _faction = side_c_faction };
-        default { _faction = "default" };
-    };
+    _faction = [(side _unit), "faction"] call BRM_fnc_getSideInfo;
 };
 
 if ((_faction != "CIVILIAN") && !units_AI_useVanillaGear) then {

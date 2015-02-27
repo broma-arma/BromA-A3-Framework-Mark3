@@ -1,10 +1,16 @@
-private["_unit","_type","_cond","_done"];
+private["_unit","_type","_cond","_done","_defaultName","_doFirstName","_doLastName","_doFinalName"];
 
 _unit = _this select 0;
 _faction = _this select 1;
 _type = "";
 
 if ((!isPlayer _unit)&&(!mission_AI_controller)) exitWith {};
+
+switch (true) do {
+    case (_faction == "side_a"): { _faction = side_a_faction };
+    case (_faction == "side_b"): { _faction = side_b_faction };
+    case (_faction == "side_c"): { _faction = side_c_faction };
+};
 
 // RESETS ITEMS ================================================================
 
@@ -71,17 +77,32 @@ _defaultFace = _defaultFace call BIS_fnc_selectRandom;
 _doVoice = _defaultVoice call BIS_fnc_selectRandom;
 _doFace = _defaultFace call BIS_fnc_selectRandom;
 
+if (!isNil "_defaultName") then {
+    _defaultName = _defaultName call BIS_fnc_selectRandom;
+    _doFirstName = (_defaultName select 0) call BIS_fnc_selectRandom;
+    _doLastName = (_defaultName select 1) call BIS_fnc_selectRandom;
+    _doFinalName = _doFirstName + " " + _doLastName;
+} else {
+    _doFinalName = "default";
+};
+
 [-1, {
     _unit = _this select 0;
     _voice = _this select 1;
     _face = _this select 2;
-    _insignia = _this select 3;
+    _name = _this select 3;
+    _insignia = _this select 4;
     
     if !(isPlayer _unit) then {
         _unit setFace _face;
         _unit setSpeaker _voice;
+        _unit setPitch ([0.85, 1.15] call BIS_fnc_randomNum);
+        if (_name != "default") then {
+            if ("agm_plugin" in usedPlugins) then { _unit setVariable ["AGM_Name", _name, true] };
+            _unit setName _name;
+        };        
     };
     if (_insignia != "none") then {
         [_unit, _insignia] call BIS_fnc_setUnitInsignia;
     };
-}, [_unit, _doVoice, _doFace, _defaultInsignia]] call CBA_fnc_globalExecute;
+}, [_unit, _doVoice, _doFace, _doFinalName, _defaultInsignia]] call CBA_fnc_globalExecute;

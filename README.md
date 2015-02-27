@@ -4,7 +4,7 @@
   </a>
    <br/><br/>
   <a href="https://github.com/Neefay/BromA-A3-Framework-Mark3/commits/master">
-    <img src="https://img.shields.io/badge/build-00033-orange.svg" alt="Current version">
+    <img src="https://img.shields.io/badge/build-000342-orange.svg" alt="Current version">
   </a>
 </p>
 
@@ -39,20 +39,30 @@ The framework is as context agnostic as possible, meaning you can just change on
 
 ### TO DO (priority order):
 -
-*	- [ ] BUG: HC isn't working anymore, AGAIN. Sometimes it works, sometimes it gives a DAC WP generation failure. IT'S A MYSTERY!
+*	- [X] BUG: HC isn't working anymore, AGAIN. Sometimes it works, sometimes it gives a DAC WP generation failure. IT'S A MYSTERY!
 		- Make sure HC loads before anything else.
-*	- [ ] JIP BUG: Groups and units aren't loaded correctly upon joining.
+*	- [X] JIP BUG: Groups and units aren't loaded correctly upon joining.
 *	- [X] JIP BUG: Respawn plugin not working for JIPs.
 *	- [X] JIP BUG: If you JIP as a certain group, you will not get your correct loadout.
 *	- [X] BUG: Parameters orders are inverted, my fault.
-*	- [ ] BUG: If two units join the same automatically named group, they will be called *.
+*	- [X] BUG: If two units join the same automatically named group, they will be called *.
+*	- [?] BUG: JIPs won't be able to fire even after the lock has been lifted.
+*	- [X] Platoon Roster main group names isn't working for the server(?)/singleplayer(?)
+*	- [ ] BUG: Framework is now hanging because of something, might be the Commander Lock, I dunno.
+*	- [ ] I might have to reconsider the whole dependency system for plugins, weird behavior.
+*	- [?] Radio Freq generator needs to be finished | 
+		- I need to reconsider what needs to be designated.
+*	- [X] Commander lock needs to be finished to account for TVT.
+*	- [ ] Final improvements to DAC so that works with camps, difficulty settings and other factions.
 *	- [ ] Add default pre-placed units.
-*	- [ ] Add a general plugins settings file.
+*	- [X] Add a general plugins settings file.
 *	- [ ] Add all the proper endings.
 *	- [ ] Fix the ending screen.
-*	- [ ] Work all current loadouts to have proper variables.
-		- [ ] Loadouts still need Crewmen, Snipers and Pilots and maybe other things.
-*	- [ ] There are a bunch of new pre-set units, maybe add them DAC default units with vehicles included.		
+*	- [X] Work all current loadouts to have proper variables.
+		- [X] Loadouts still need Crewmen, Snipers and Pilots and maybe other things.
+*	- [ ] Make a list of names and surnames divided by background and assign them to the units.
+	*	- [ ] Finish the rest of the names.
+*	- [X] There are a bunch of new pre-set units, maybe add them DAC default units with vehicles included.
 *	- [ ] Rewrite the casualty cap to account for units, acquired from inputted groups.
 *	- [X] Make it so all relevant groups are declared for each side, maybe as blu/op/ind_mainunits?
 *	- [X] BUG: ALL parameters are fucked and not being broadcast over network, double check.

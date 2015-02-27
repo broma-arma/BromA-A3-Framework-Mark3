@@ -51,6 +51,69 @@ switch (_TypNumber) do
   };
 
 //-------------------------------------------------------------------------------------------------
+// RHS MSV (A3) 
+  case 4:
+  {
+    _Unit_Pool_S = ["rhs_msv_crew","rhs_pilot_combat_heli","rhs_msv_sergeant","rhs_msv_at","rhs_msv_LAT","rhs_msv_rifleman","rhs_msv_machinegunner","rhs_msv_grenadier","rhs_msv_medic","rhs_msv_engineer","rhs_msv_rifleman"];
+    _Unit_Pool_V = ["RHS_Ural_MSV_01","RHS_UAZ_MSV_01","rhs_btr70_msv","rhs_btr80_msv"];
+    _Unit_Pool_T = ["rhs_bmp1_tv","rhs_bmp2_tv","rhs_t72bb_tv","rhs_t80bv"];
+    _Unit_Pool_A = [];
+  };
+//-------------------------------------------------------------------------------------------------
+// RHS VDV (A3) 
+  case 5:
+  {
+    _Unit_Pool_S = ["rhs_vdv_crew","rhs_pilot_combat_heli","rhs_vdv_sergeant","rhs_msv_at","rhs_vdv_LAT","rhs_vdv_rifleman","rhs_vdv_machinegunner","rhs_vdv_grenadier","rhs_vdv_medic","rhs_vdv_engineer","rhs_vdv_rifleman"];
+    _Unit_Pool_V = ["rhs_gaz66_vdv","rhs_uaz_open_vdv","rhs_btr70_msv","rhs_btr60_vdv"];
+    _Unit_Pool_T = ["rhs_bmd1","rhs_bmd2","rhs_bmd4_vdv","rhs_bmd4ma_vdv"];
+    _Unit_Pool_A = [];
+  };
+//-------------------------------------------------------------------------------------------------
+// RHS US ARMY WOODLAND (A3) 
+  case 6:
+  {
+    _Unit_Pool_S = ["rhsusf_army_ocp_crewman","rhsusf_army_ocp_helipilot","rhsusf_army_ocp_squadleader","rhsusf_army_ocp_riflemanat","rhsusf_army_ocp_rifleman","rhsusf_army_ocp_rifleman","rhsusf_army_ocp_autorifleman","rhsusf_army_ocp_grenadier","rhsusf_army_ocp_medic","rhsusf_army_ocp_engineer","rhsusf_army_ocp_rifleman"];
+    _Unit_Pool_V = ["rhsusf_m1025_w_m2","rhsusf_m998_w_4dr_fulltop","rhsusf_m998_w_2dr_halftop","rhsusf_m113_usarmy"];
+    _Unit_Pool_T = ["RHS_M2A2_wd","RHS_M2A3_BUSKI_wd","rhsusf_m1a1aimwd_usarmy","rhsusf_m1a1aim_tuski_wd"];
+    _Unit_Pool_A = [];
+  };
+//-------------------------------------------------------------------------------------------------
+// RHS US ARMY DESERT (A3) 
+  case 7:
+  {
+    _Unit_Pool_S = ["rhsusf_army_ucp_crewman","rhsusf_army_ucp_helipilot","rhsusf_army_ucp_squadleader","rhsusf_army_ucp_riflemanat","rhsusf_army_ucp_rifleman","rhsusf_army_ucp_rifleman","rhsusf_army_ucp_autorifleman","rhsusf_army_ucp_grenadier","rhsusf_army_ucp_medic","rhsusf_army_ucp_engineer","rhsusf_army_ucp_rifleman"];
+    _Unit_Pool_V = ["rhsusf_m1025_d_m2","rhsusf_m998_d_4dr_fulltop","rhsusf_m998_d_2dr_halftop","rhsusf_m113d_usarmy"];
+    _Unit_Pool_T = ["RHS_M2A2","RHS_M2A3_BUSKI","rhsusf_m1a1aimd_usarmy","rhsusf_m1a1aim_tuski_d"];
+    _Unit_Pool_A = [];
+  };
+//-------------------------------------------------------------------------------------------------
+// Molation Army (A3) 
+  case 8:
+  {
+    _Unit_Pool_S = ["ibr_mol_soldier_crew","ibr_mol_soldier_pilot","ibr_mol_soldier_sl","ibr_mol_soldier_at","ibr_mol_soldier_rifleman","ibr_mol_soldier_rifleman","ibr_mol_soldier_ar","ibr_mol_soldier_gl","ibr_mol_soldier_rifleman"];
+    _Unit_Pool_V = ["rhs_gaz66_vdv","rhs_uaz_vdv","rhs_btr60_vdv"];
+    _Unit_Pool_T = ["rhs_bmp1_tv","rhs_bmp2_tv","rhs_t72ba_tv"];
+    _Unit_Pool_A = [];
+  };
+//-------------------------------------------------------------------------------------------------
+// Afrenian Army (A3) 
+  case 9:
+  {
+    _Unit_Pool_S = ["ibr_afr_soldier_crew","ibr_afr_soldier_pilot","ibr_afr_soldier_sl","ibr_afr_soldier_at","ibr_afr_soldier_rifleman","ibr_afr_soldier_rifleman","ibr_afr_soldier_ar","ibr_afr_soldier_gl","ibr_afr_soldier_rifleman"];
+    _Unit_Pool_V = ["rhsusf_m1025_d_m2","rhsusf_m998_d_4dr_fulltop","rhsusf_m998_d_2dr_halftop","rhsusf_m113d_usarmy"];
+    _Unit_Pool_T = ["rhs_bmp1_tv","rhs_bmp2_tv","rhs_t72ba_tv"];
+    _Unit_Pool_A = [];
+  };
+//-------------------------------------------------------------------------------------------------
+// RHS Insurgents (A3) 
+  case 10:
+  {
+    _Unit_Pool_S = ["rhs_g_Soldier_F","rhs_g_Soldier_F","rhs_g_Soldier_SL_F","rhs_g_Soldier_AT_F","rhs_g_Soldier_F","rhs_g_Soldier_AR_F","rhs_g_medic_F","rhs_g_Soldier_GL_F","rhs_g_Soldier_SL_F"];
+    _Unit_Pool_V = ["rhs_gaz66_vdv","rhs_uaz_vdv","rhs_btr60_vdv"];
+    _Unit_Pool_T = ["rhs_bmp1_tv","rhs_bmp2_tv","rhs_t72ba_tv"];
+    _Unit_Pool_A = [];
+  };
+//-------------------------------------------------------------------------------------------------
   Default
   {
     if(DAC_Basic_Value != 5) then

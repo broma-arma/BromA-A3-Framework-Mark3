@@ -58,11 +58,17 @@ The framework is as context agnostic as possible, meaning you can just change on
 *	- [X] Add a general plugins settings file.
 *	- [ ] Add all the proper endings.
 *	- [ ] Fix the ending screen.
+<<<<<<< HEAD
 *	- [X] Work all current loadouts to have proper variables.
 		- [X] Loadouts still need Crewmen, Snipers and Pilots and maybe other things.
 *	- [ ] Make a list of names and surnames divided by background and assign them to the units.
 	*	- [ ] Finish the rest of the names.
 *	- [X] There are a bunch of new pre-set units, maybe add them DAC default units with vehicles included.
+=======
+*	- [ ] Work all current loadouts to have proper variables.
+*	- [X] Loadouts still need Crewmen, Snipers and Pilots and maybe other things.
+*	- [X] There are a bunch of new pre-set units, maybe add them DAC default units with vehicles included.		
+>>>>>>> b0b9afa8e7316f8b24b9c206aeed546bead4f750
 *	- [ ] Rewrite the casualty cap to account for units, acquired from inputted groups.
 *	- [X] Make it so all relevant groups are declared for each side, maybe as blu/op/ind_mainunits?
 *	- [X] BUG: ALL parameters are fucked and not being broadcast over network, double check.

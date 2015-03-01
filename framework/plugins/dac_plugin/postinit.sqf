@@ -1,15 +1,15 @@
 
 _path = _this select 0;
 
+waitUntil{!(isNil "mission_AI_controller")};
+if (!mission_AI_controller) exitWith {};
+
 if (isNil "mission_dac_zones") then { mission_dac_zones = [] };
 
 BRM_fnc_DAC = compile preprocessFileLineNumbers (_path+"fn_DAC.sqf");
 BRM_fnc_createDACZone = compile preprocessFileLineNumbers (_path+"fn_createDACZone.sqf");
 BRM_fnc_scaleUnits = compile preprocessFileLineNumbers (_path+"fn_scaleUnits.sqf");
 BRM_fnc_getDACSide = compile preprocessFileLineNumbers (_path+"fn_getDACSide.sqf");
-
-waitUntil{!(isNil "mission_AI_controller")};
-if (!mission_AI_controller) exitWith {};
 
 ["ALL","CHAT", format ["%1 managing DAC.", player]] call BRM_fnc_doLog;
 

@@ -16,12 +16,18 @@ while {(mission_running)} do {
             };
             if (_losecond) exitWith {
                 [_id,"failed", true] call BRM_fnc_setTask;
-                ["defeat"] call BRM_fnc_callEnding;
+                if (mission_game_mode != "tvt") then {
+                    ["defeat"] call BRM_fnc_callEnding;
+                };
             };
         } forEach mandatoryObjectivesA;
 
         if (_count == (count mandatoryObjectivesA)) exitWith {
-            ["victory"] call BRM_fnc_callEnding;
+            if (mission_game_mode != "tvt") then {
+                ["victory"] call BRM_fnc_callEnding;
+            } else {
+                ["side_a"] call BRM_fnc_callEnding;
+            };
         };
     };
     
@@ -40,12 +46,18 @@ while {(mission_running)} do {
             };
             if (_losecond) exitWith {
                 [_id,"failed", true] call BRM_fnc_setTask;
-                ["defeat"] call BRM_fnc_callEnding;
+                if (mission_game_mode != "tvt") then {
+                    ["defeat"] call BRM_fnc_callEnding;
+                };
             };
         } forEach mandatoryObjectivesB;
 
         if (_count == (count mandatoryObjectivesB)) exitWith {
-            ["victory"] call BRM_fnc_callEnding;
+            if (mission_game_mode != "tvt") then {
+                ["victory"] call BRM_fnc_callEnding;
+            } else {
+                ["side_b"] call BRM_fnc_callEnding;
+            };
         };
     };
     
@@ -64,12 +76,18 @@ while {(mission_running)} do {
             };
             if (_losecond) exitWith {
                 [_id,"failed", true] call BRM_fnc_setTask;
-                ["defeat"] call BRM_fnc_callEnding;
+                if (mission_game_mode != "tvt") then {
+                    ["defeat"] call BRM_fnc_callEnding;
+                };
             };
         } forEach mandatoryObjectivesC;
 
         if (_count == (count mandatoryObjectivesC)) exitWith {
-            ["victory"] call BRM_fnc_callEnding;
+            if (mission_game_mode != "tvt") then {
+                ["victory"] call BRM_fnc_callEnding;
+            } else {
+                ["side_c"] call BRM_fnc_callEnding;
+            };
         };
     };
     

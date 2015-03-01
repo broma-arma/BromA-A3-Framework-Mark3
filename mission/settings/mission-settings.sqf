@@ -1,16 +1,16 @@
 mission_settings_loaded = false;
-// =============================================================================
-/*
-    This is where you edit the mission values for your mission, have fun!    
-*/
-// =============================================================================
+// ============================================================================
+//                                                                             |
+//    This is where you edit the mission values for your mission, have fun!    |
+//                                                                             |
+// ============================================================================
 
 // ============================================================================
 //                       == CREDITS AND VERSION ==                             |
-//
-//      Before we get started, write down the author name and the mission
-//          version just so you can keep track of the credits easier!
-//
+//                                                                             |
+//      Before we get started, write down the author name and the mission      |
+//          version just so you can keep track of the credits easier!          |
+//                                                                             |
 // ============================================================================
 
 mission_author_name = "Mission Maker";
@@ -18,7 +18,7 @@ mission_version =    "v0";
 
 // ============================================================================
 //                          == MISSION GAMEMODE ==                             |
-
+//                                                                             |
 //                      What is the type of mission?                           |
 //              "coop" - Cooperative missions, players against AI.             |         
 //         "tvt" - Team vs Team, each group of players fight each other.       |
@@ -30,6 +30,9 @@ mission_game_mode = "coop";
 
 // ============================================================================
 //                          ==   LOADOUT MODE   ==                             |
+//                                                                             |
+//           Determines if players will get any loadouts at all.               |
+//                                                                             |
 // ============================================================================
 
 units_player_useVanillaGear = false;
@@ -37,14 +40,14 @@ units_AI_useVanillaGear = false;
 
 // ============================================================================
 //                        == PLAYERS INFORMATION ==                            |
-
+//                                                                             |
 //            Edit this value with the side the players belong to.             |
 //                            Valid values are:                                |         
 //                                                                             |
 //                         west, east, resistance                              |
-//
+//                                                                             |
 //   Valid colors are: "blue","red","green","white","black" and "yellow".      |
-//
+//                                                                             |
 // ============================================================================
 
 side_a_side = west;            // Side the players belong to
@@ -85,13 +88,14 @@ DAC_Res_Side = 1;                    // Side the independent are friendly to:
                                      // 0: EAST / 1: WEST / 2: NOBODY
                                      // (MUST BE THE SAME AS THE EDITOR!)
 
-// =============================================================================
-//                         == MODULE ENDINGS ==                                |
-
+// ============================================================================
+//                              == ENDINGS ==                                  |
+//                                                                             |
 //        These are the endings that are called when conditions are met.       |
-
-//            Some can be ignored if you aren't using its module.              |
-// =============================================================================
+//                                                                             |
+//            Some can be ignored if you aren't using the plugin.              |
+//                                                                             |
+// ============================================================================
 genericEnding = 1;                              // Default ending.
 casualtyEnding = 1;                             // Maximum casualties reached - default TVT ending!
 EEending = 4;                                   // Evade and Escape ending.
@@ -101,11 +105,12 @@ civCapEnding = 5;                               // Max number of civies killed.
 timeLimitEnding = 6;                            // Time limit reached. 
 // =============================================================================           
 
-// =============================================================================
+// ============================================================================
 //                           == ALLOW JIP ==                                   |
-
+//                                                                             |
 //      If this value is set to false, JIPs will be removed upon joining.      |
-// =============================================================================   
+//                                                                             |
+// ============================================================================   
 
 mission_allow_jip = true;
 

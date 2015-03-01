@@ -30,12 +30,14 @@ class BRM {
         class stampTime{};
         class syncTime{};
         class getSideInfo{};
+        class colorToHex{};
     };
     class ending {
         file = "framework\engine\functions\engine\ending";
         class callEnding{};
         class endingScreen{};
         class endingGetStats{};
+        class endingGetContext{};
     };
     class tasks {
         file = "framework\engine\functions\engine\tasks";

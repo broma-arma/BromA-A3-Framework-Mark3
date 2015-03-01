@@ -1,3 +1,5 @@
+if (dialog) then { closeDialog 0 };
+
 //_msg1 = format [
 //// =============================================================================    
 //    
@@ -30,18 +32,24 @@
 //    victoryReason2, margin,playerFactionName, pointsEnemySide, enemyFactionName, pointsPlayerSide, hours, minutes, seconds];  
 //// =============================================================================
 
-_msg = "MISSION OVER";
-_endingScreen = str(hours)+":"+str(minutes)+":"+str(seconds);
+_title = (mission_ending_details select 3);
+_reason = format [(mission_ending_details select 4), (mission_ending_details select 0), (mission_ending_details select 1)];
+_color = [mission_ending_personal select 1] call BRM_fnc_colorToHex;
 
-[_msg,-1,-1,10,1] call BIS_fnc_dynamicText;
+// =============================================================================
+_msg = format ["
+<t size='1.3' color='%3'>%1</t><br/>
+<t size='0.8' color='#FFFFFF'>- %2 -</t>"
+// =============================================================================    
+,_title, _reason, _color];
+
+[_msg,-1,-1,15,1] call BIS_fnc_dynamicText;
 
 [""] call BIS_fnc_dynamicText;
-titleText [_endingScreen, "BLACK"];
+
 player enablesimulation false;
+titleText ["niggers are smelly", "BLACK"];
 
 sleep 10;
 
 titleText [" ", "PLAIN DOWN", 2];
-if (dialog) then { closeDialog 0 };
-
-true

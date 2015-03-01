@@ -84,24 +84,17 @@
 //
 //};
 // =============================================================================
-//[] call FNC_process_color;
-// =============================================================================
 //  Lets the server calculate mission time so there is no desync between players.
 
-if (isServer) then {
-    _hours = time / 3600,
-    _remainder = time % 3600,
-    _minutes = _remainder / 60,
-    _seconds = _remainder % 60;
+_hours = time / 3600;
+_remainder = time % 3600;
+_minutes = _remainder / 60;
+_seconds = _remainder % 60;
 
-    hours = round(_hours);
-    minutes = round(_minutes);
-    seconds = round(_seconds);
-
-    publicVariable "hours";
-    publicVariable "minutes";
-    publicVariable "seconds";
-};
+_hours = round(_hours);
+_minutes = round(_minutes);
+_seconds = round(_seconds);
 // =============================================================================
 
-true
+mission_ending_stats = [_hours,_minutes,_seconds];
+publicVariable "mission_ending_stats";

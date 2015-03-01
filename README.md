@@ -4,7 +4,7 @@
   </a>
    <br/><br/>
   <a href="https://github.com/Neefay/BromA-A3-Framework-Mark3/commits/master">
-    <img src="https://img.shields.io/badge/build-0003411-orange.svg" alt="Current version">
+    <img src="https://img.shields.io/badge/build-00035-orange.svg" alt="Current version">
   </a>
 </p>
 
@@ -58,6 +58,8 @@ The framework is as context agnostic as possible, meaning you can just change on
 *	- [X] Add a general plugins settings file.
 *	- [ ] Add all the proper endings.
 *	- [ ] Fix the ending screen.
+*	- [ ] Add a counter for player kills, with side MVPs and personal kills.
+*	- [ ] Fix the view distance script with a version without the missing font.
 *	- [X] Work all current loadouts to have proper variables.
 		- [X] Loadouts still need Crewmen, Snipers and Pilots and maybe other things.
 *	- [ ] Make a list of names and surnames divided by background and assign them to the units.

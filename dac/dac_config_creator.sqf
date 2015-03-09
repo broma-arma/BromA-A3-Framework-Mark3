@@ -11,7 +11,6 @@
 scalar = "any";DAC_Init_Camps = 0;
 
 waitUntil{(!isNil "mission_AI_controller")};
-waituntil{time > 0.3};
 
 if (mission_AI_controller) then {    
     if (local player) then {

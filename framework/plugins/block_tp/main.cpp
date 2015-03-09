@@ -1,10 +1,10 @@
 class block_tp
 {
 	name = "Block third-person";
-	authors[] = {"Nife"};
 	version = 1;
-	dependencies[] = {"mission-settings"};
-	url = "";
+	authors[] = {"Nife"};	
+	description = "Simple script meant to stop players who do not meet certain conditions (being a driver/commander) from using third person mode.";
+	conditions[] = {"mission_settings","mission_params_read"};
 	postinit = "postinit.sqf";
-	environment = "client";
+	user = "client";
 };

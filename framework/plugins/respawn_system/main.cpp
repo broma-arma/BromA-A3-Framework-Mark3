@@ -1,10 +1,10 @@
 class respawn_system
 {
 	name = "Respawn System";
-	authors[] = {"Nife"};
 	version = 1;
-	dependencies[] = {};
-	url = "";
+	authors[] = {"Nife"};
+	description = "Manages and keeps track of players lives, ensuring they can respawn for only a finite amount of times, and making sure that once these lives run out they stay dead even upon attempts to reconnect.";
+	conditions[] = {};
 	preinit = "preinit.sqf";
-	environment = "all";
+	user = "all";
 };

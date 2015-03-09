@@ -1,10 +1,10 @@
 class time_accel
 {
 	name = "Time Acceleration";
-	authors[] = {"Nife"};
 	version = 1;
-	dependencies[] = {};
-	url = "";
+	authors[] = {"Nife"};
+	description = "Creates a module that accelerates time as determined by mission paramters.";
+	conditions[] = {"(time > 0.1)"};
 	postinit = "postinit.sqf";
-	environment = "server";
+	user = "server";
 };

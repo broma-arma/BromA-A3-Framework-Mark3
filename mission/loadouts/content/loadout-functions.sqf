@@ -33,7 +33,7 @@ _attachToWeapon = {
     _kind = _this select 1;
     switch (_type) do {
         case "primary": { _unit addPrimaryWeaponItem _kind };
-        case "secondary": { _unit addSecondaryWeaponItem _kind };
+        case "secondary": { _unit addHandgunItem _kind };
     };
 };
 
@@ -222,6 +222,7 @@ _addtoCargo = {
             case("weapon"): { _unit addWeaponCargoGlobal [((_array select _i)select 0),((_array select _i)select 1)]};
             case("magazine"): { _unit addMagazineCargoGlobal [((_array select _i)select 0),((_array select _i)select 1)]};
             case("item"): { _unit addItemCargoGlobal [((_array select _i)select 0),((_array select _i)select 1)]};
+            case("backpack"): { _unit addBackpackCargoGlobal [((_array select _i)select 0),((_array select _i)select 1)]};
         };
     };
 };

@@ -1,10 +1,10 @@
 class ao_limit
 {
 	name = "AO Limit";
-	authors[] = {"Nife"};
 	version = 1;
-	url = "";
-	dependencies[] = {};
+	authors[] = {"Nife"};
+	description = "Displays a message(or anything nastier) to players who leave the designated Area of Operations.";
+	conditions[] = {"(time > 5)"};
 	postinit = "postinit.sqf";
-	environment = "client";
+	user = "client";
 };

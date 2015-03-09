@@ -3,8 +3,6 @@
 //  AGM Revive Time
 // =============================================================================
 
-waitUntil{!isNil"param_revive_time"};
-
 switch (param_revive_time) do {
     case 0: { mission_revive_time = 10 };
     case 1: { mission_revive_time = 120 };

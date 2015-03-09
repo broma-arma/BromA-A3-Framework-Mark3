@@ -11,5 +11,6 @@ if (((currentLives) == 0) || !(mission_allow_respawn)) then {
 
     [player] spawn BRM_fnc_removeFromMission;    
 } else {
+    player setVariable ["unit_deaths", (player getVariable ["unit_deaths",0])+1,true];
     [player, (currentLives-1)] call BRM_fnc_setLives;
 };

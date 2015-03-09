@@ -1,11 +1,11 @@
 class blank_plugin
 {
 	name = "Blank Plugin";
-	authors[] = {"Nife"};
 	version = 1;
-	dependencies[] = {};
-	url = "";
+	authors[] = {"Nife"};
+	description = "The world is your oyster.";
+	conditions[] = {};
 	preinit = "preinit.sqf";
 	postinit = "postinit.sqf";
-	environment = "all";
+	user = "all";
 };

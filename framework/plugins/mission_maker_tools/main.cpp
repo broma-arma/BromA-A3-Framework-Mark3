@@ -1,10 +1,10 @@
 class mission_maker_tools
 {
 	name = "Mission maker tools";
-	authors[] = {"Nife"};
 	version = 1;
-	dependencies[] = {};
-	url = "";
+	authors[] = {"Nife"};
+	description = "Handy scripts like Teleporting and opening the Arsenal script available to the mission maker while in the editor.";
+	conditions[] = {"!(isMultiplayer)"};
 	preinit = "preinit.sqf";
-	environment = "client";
+	user = "client";
 };

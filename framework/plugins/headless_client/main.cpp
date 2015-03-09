@@ -1,10 +1,10 @@
 class headless_client
 {
 	name = "Headless Client";
+	authors[] = {"Nife"};
 	version = 1;
-	authors[] = {"Naught","Nife"};	
-	description = "Suite of functions made to facilitate the usage of the Headless Client and its environment variables.";
-	conditions[] = {"mission_settings","mission_params_read"};
+	dependencies[] = {"mission-settings"};
+	url = "";
 	postinit = "postinit.sqf";
-	user = "all";
+	environment = "all";
 };

@@ -1,3 +1,10 @@
+if !(mission_game_mode == "coop") exitWith {};
+
+sleep 1;
+
+waitUntil{!isNil "player_is_jip"};
+
+if (!player_is_jip) exitWith {};
 
 Revive_TelepSquad = { 
 	Private["_revive_Keypressed"];

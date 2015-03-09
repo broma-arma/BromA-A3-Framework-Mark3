@@ -1,10 +1,10 @@
 class team_kill
 {
 	name = "Team Kill";
+	authors[] = {"Nife"};
 	version = 1;
-	authors[] = {"Nife"};	
-	description = "Alerts both the perpetrator and the victim whenever a friendly fire incident takes place.";
-	conditions[] = {};
+	dependencies[] = {};
+	url = "";
 	postinit = "postinit.sqf";
-	user = "client";
+	environment = "client";
 };

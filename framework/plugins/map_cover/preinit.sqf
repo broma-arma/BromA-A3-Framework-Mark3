@@ -1,3 +1,4 @@
+if (!isServer) exitWith {};
 
 _center = createCenter sideLogic;
 _group = createGroup _center;

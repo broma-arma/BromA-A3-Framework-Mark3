@@ -1,10 +1,10 @@
 class ch_view_distance
 {
 	name = "View distance changer";
+	authors[] = {"Champ-1"};
 	version = 1;
-	authors[] = {"Champ-1"};	
-	description = "Allows for the player to change his view/object draw distance. Default key is U.";
-	conditions[] = {};
+	dependencies[] = {};
+	url = "";
 	postinit = "postinit.sqf";
-	user = "client";
+	environment = "client";
 };

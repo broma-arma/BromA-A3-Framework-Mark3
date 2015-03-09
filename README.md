@@ -4,7 +4,7 @@
   </a>
    <br/><br/>
   <a href="https://github.com/Neefay/BromA-A3-Framework-Mark3/commits/master">
-    <img src="https://img.shields.io/badge/build-000354-orange.svg" alt="Current version">
+    <img src="https://img.shields.io/badge/build-00035-orange.svg" alt="Current version">
   </a>
 </p>
 
@@ -40,7 +40,7 @@ The framework is as context agnostic as possible, meaning you can just change on
 ### TO DO (priority order):
 -
 *	- [X] BUG: HC isn't working anymore, AGAIN. Sometimes it works, sometimes it gives a DAC WP generation failure. IT'S A MYSTERY!
-*	- [X] """FIXED""" this feature for the 348327428995th time.
+		- Make sure HC loads before anything else.
 *	- [X] JIP BUG: Groups and units aren't loaded correctly upon joining.
 *	- [X] JIP BUG: Respawn plugin not working for JIPs.
 *	- [X] JIP BUG: If you JIP as a certain group, you will not get your correct loadout.
@@ -48,10 +48,24 @@ The framework is as context agnostic as possible, meaning you can just change on
 *	- [X] BUG: If two units join the same automatically named group, they will be called *.
 *	- [?] BUG: JIPs won't be able to fire even after the lock has been lifted.
 *	- [X] Platoon Roster main group names isn't working for the server(?)/singleplayer(?)
-*	- [X] BUG: Optional objectives aren't completed: they must be CANCELED, only obligatory are FAILED.
+*	- [ ] BUG: Framework is now hanging because of something, might be the Commander Lock, I dunno.
+*	- [ ] I might have to reconsider the whole dependency system for plugins, weird behavior.
+*	- [?] Radio Freq generator needs to be finished | 
+		- I need to reconsider what needs to be designated.
 *	- [X] Commander lock needs to be finished to account for TVT.
+*	- [ ] Final improvements to DAC so that works with camps, difficulty settings and other factions.
+*	- [ ] Add default pre-placed units.
 *	- [X] Add a general plugins settings file.
-*	- [X] Fix the ending screen.
+*	- [ ] Add all the proper endings.
+*	- [ ] Fix the ending screen.
+*	- [ ] Add a counter for player kills, with side MVPs and personal kills.
+*	- [ ] Fix the view distance script with a version without the missing font.
+*	- [X] Work all current loadouts to have proper variables.
+		- [X] Loadouts still need Crewmen, Snipers and Pilots and maybe other things.
+*	- [ ] Make a list of names and surnames divided by background and assign them to the units.
+		- [ ] Finish the rest of the names.
+*	- [X] There are a bunch of new pre-set units, maybe add them DAC default units with vehicles included.
+*	- [ ] Rewrite the casualty cap to account for units, acquired from inputted groups.
 *	- [X] Make it so all relevant groups are declared for each side, maybe as blu/op/ind_mainunits?
 *	- [X] BUG: ALL parameters are fucked and not being broadcast over network, double check.
 *	- [X] BUG: Radio freq plugin reads the wrong groups. GEE I WONDER WHAT IS THE ISSUE HERE?!?!?!??!
@@ -66,40 +80,10 @@ The framework is as context agnostic as possible, meaning you can just change on
 *	- [X] Make a script to generate callsigns and radios freqs based on the mission groups.
 *	- [X] Delegate unit alias to the server / JIPs initialize their own groups afterwards.
 *	- [X] Look into ditching the group unitInit and use only the unit's name.
-*	- [X] Work all current loadouts to have proper variables: Loadouts still need Crewmen, Snipers and Pilots and maybe other things.
-*	- [X] There are a bunch of new pre-set units, maybe add them DAC default units with vehicles included.
-*	- [X] Fix the view distance script with a version without the missing font.
-*	- [X] Make an intro file with several different intros.
-*	- [X] Plugins declare their post/preinits as scriptNames, based off their config names.
-*	- [X] BUG: Framework is now hanging on Dedicated because of something, might be the Commander Lock, I dunno.
-*	- [X] Final improvements to DAC so that works with camps, difficulty settings and other factions.
-*	- [X] Easy way for players to execute custom scripts.
-*	- [X] Ask Knite to make DAC configs for units based on difficulty.
-*	- [X] Decide on a good squad structure.
-*	- [X] Add all new classes to the existing loadouts.
-*	- [X] Add default pre-placed units.
-*	- [X] Add all the proper endings.
-*	- [X] Fix the way endings work.
-*	- [X] Add a counter for player kills, with side MVPs and personal kills.
-*	- [X] Finish the ending screen.
-*	- [X] Scoring is not working 100%.
-*	- [X] Fix HC enabled messages.
-*	- [X] Improve the ending screen.
-*	- [X] Mission details like mission maker and name.
-*	- [X] Simpler way of making zones.
-*	- [X] Fix OPFOR/IND callsigns.
-*	- [X] Configure vehicles with loadouts
-*	- [X] Make a list of names and surnames divided by background and assign them to the units.
-*	- [ ] Work on a new framework logo.
-*	- [ ] Design a list of things every mission needs.
 *	- [ ] Comment and document everything.
 
 NEED HELP TO TEST:
 
-*	- [ ] Test casualty cap for TvTs.
-*	- [ ] Test Team Kill messages.
-*	- [ ] Test if percentage verbose is working is intended.
-*	- [ ] Test JIP score.
 *	- [X] Nothing for now.
 
 ### What then?

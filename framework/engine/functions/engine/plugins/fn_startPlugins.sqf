@@ -6,8 +6,8 @@
     _authors = str(getArray( _path >> "authors"));
     _preinit = getText( _path >> "preinit");
     _postinit = getText( _path >> "postinit");
-    _dependencies = getArray( _path >> "conditions");
-    _environment = toUpper(getText( _path >> "user"));
+    _dependencies = getArray( _path >> "dependencies");
+    _environment = toUpper(getText( _path >> "environment"));
     
     _loadplugin = true;
     
@@ -30,17 +30,9 @@
             ["LOCAL", "F_LOG", format["%1 LOADED PLUGIN: %2",_env, _plugin]] call BRM_fnc_doLog;
             
             _path = "framework\plugins\"+_plugin+"\";
-            
-            _scriptname = "plugin_" + _plugin;
-            
-            _scriptpost = _scriptname + "_post";
-            _scriptpre = _scriptname + "_pre";
-            
-            _prepath = format ["framework\plugins\%1\%2", _plugin, _preinit];
-            _postpath = format ["framework\plugins\%1\%2", _plugin, _postinit];
 
-            call compile format ["if (_preinit != '') then { %2 = [_path] execVM '%1' }", _prepath, _scriptpre];
-            call compile format ["if (_postinit != '') then { %2 = [_path] execVM '%1' }", _postpath, _scriptpost];
+            if (_preinit != "") then { [_path] execVM format ["framework\plugins\%1\%2", _plugin, _preinit] };
+            if (_postinit != "") then { [_path] execVM format ["framework\plugins\%1\%2", _plugin, _postinit] };    
         };
     };
 } forEach (_this select 0);

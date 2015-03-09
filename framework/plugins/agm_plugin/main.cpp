@@ -1,10 +1,11 @@
 class agm_plugin
 {
 	name = "AGM Plugin";
+	authors[] = {"Nife"};
 	version = 1;
-	authors[] = {"Nife"};	
-	description = "Based on parameters and mission settings, configures whatever desired AGM modules, including Medical and respawning system.";
-	conditions[] = {"mission_settings","mission_params_read"};
+	required_version = 1;
+	dependencies[] = {};
+	url = "";
 	postinit = "postinit.sqf";
-	user = "server";
+	environment = "server";
 };

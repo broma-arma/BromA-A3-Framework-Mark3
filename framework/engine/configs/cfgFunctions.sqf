@@ -30,6 +30,7 @@ class BRM {
         class stampTime{};
         class syncTime{};
         class getSideInfo{};
+        class colorToHex{};
     };
     class ending {
         file = "framework\engine\functions\engine\ending";
@@ -65,9 +66,6 @@ class BRM {
         class stripItems{};
         class weaponAway{};
         class garrisonUnits{};
-        class showText{};
-        class colorToHex{};
-        class verboseArray{};        
     };
     class api_zeus {
         file = "framework\engine\functions\api\zeus";

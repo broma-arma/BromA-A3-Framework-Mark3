@@ -30,26 +30,16 @@ if (isServer) then {
     _unit = _object;
     private [
     "_defaultSide","_commonRIFLE","_commonRIFLEGL","_commonPISTOL","_commonMG",
-    "_commonMARKSMAN","_commonSNIPER","_commonAT","_specAT","_commonSMG","_commonBACKPACK",
-    "_commonRCO","_commonCCO","_commonMAGNIFIED","_NVG","_countRifleCARGO", "_countPistolCARGO",
-    "_countMgCARGO", "_countSniperCARGO", "_countATCARGO", "_countGrenadesCARGO", "_count40mmCARGO",
-    "_countBandageCARGO", "_countMorphineCARGO", "_countEpiCARGO", "_countBloodbagCARGO"];
+    "_commonMARKSMAN","_commonAT","_specAT","_commonSMG","_commonBACKPACK",
+    "_commonRCO","_commonCCO","_commonMAGNIFIED","_NVG"];
     
     #include "content\loadout-functions.sqf"
-    #include "content\content-list.sqf"    
+    #include "content\content-list.sqf"
     
-    _aliasBLUFOR = ["blufor","west"];
-    _aliasOPFOR = ["opfor","redfor","east"];
-    _aliasRESISTANCE = ["independent","resistance","indfor","guerilla"];
-    _aliasCIVILIAN = ["civilian","civilians","civies"];
-
-    switch (true) do {
-        case (_faction == "side_a"): { _faction = side_a_faction };
-        case (_faction == "side_b"): { _faction = side_b_faction };
-        case (_faction == "side_c"): { _faction = side_c_faction };
-        case (_faction in _aliasBLUFOR): { _faction = [west, "FACTION"] call BRM_fnc_getSideInfo; _factionSide = west };
-        case (_faction in _aliasOPFOR): { _faction = [east, "FACTION"] call BRM_fnc_getSideInfo; _factionSide = east };
-        case (_faction in _aliasRESISTANCE): { _faction = [resistance, "FACTION"] call BRM_fnc_getSideInfo; _factionSide = resistance };
+    switch(_faction) do {
+        case ("side_a"): { _factionSide = side_a_side; _faction = side_a_faction };
+        case ("side_b"): { _factionSide = side_b_side; _faction = side_b_faction };
+        case ("side_c"): { _factionSide = side_c_side; _faction = side_c_faction };
         default {
             switch (true) do {
                 case (_faction == side_a_faction): { _factionSide = side_a_side };
@@ -57,7 +47,7 @@ if (isServer) then {
                 case (_faction == side_c_faction): { _factionSide = side_c_side };
                 default { _factionSide = "" };
             };
-        };        
+        };
     };
     
     #include "faction-list.sqf"

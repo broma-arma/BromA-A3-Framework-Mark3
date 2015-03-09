@@ -17,12 +17,12 @@ removeAllWeapons _unit;
 
 _oldgrp = group _unit;
 
-player enablesimulation false;
-player allowDamage false;
-
 [_unit] joinSilent grpnull;
 
 _unit setPos [0,0,10];
+
+player enablesimulation false;
+player allowDamage false;
 
 player setVariable ["isDead", true, true];
 

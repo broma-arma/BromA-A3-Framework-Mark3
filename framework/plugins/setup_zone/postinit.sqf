@@ -4,6 +4,8 @@ _path = _this select 0;
 //  Mission setup time parameter
 // =============================================================================
 
+waitUntil{!isNil"param_setup_time"};
+
 switch (param_setup_time) do {
     case 0: { mission_setup_time = 15 };
     case 1: { mission_setup_time = 60*1 };

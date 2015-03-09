@@ -13,10 +13,11 @@ if ((vehicle _unit) == (vehicle _attacker)) exitWith {};
 
 if ((name _attacker) == "Error: No Unit") exitWith {};
 
-if (_damage > _limit) then {
-    if (([_side, _sideAtk] call BIS_fnc_areFriendly)&&(!(name _unit == name _attacker))) exitWith {
+if (_damage > _limit) then {    
+
+    if ((_sideUnit == _sideAtk)&&(!(name _unit == name _attacker))) exitWith {
         
-        [-2, {
+        [-2, {             
             _attacker = (_this select 0);
             _unit= (_this select 1);
             _msg = format ["FRIENDLY FIRE: %2 has wounded %1!",name _unit, name _attacker];

@@ -1,8 +1,14 @@
+respawn = 3;
+respawnDialog = 0;
+respawnTemplates[] = {"Base"};
+respawndelay = 4;
+disabledAI = 1;
+enableDebugConsole = 1;
 
-#include "mission\mission-info.sqf"
+loadScreen = "mission\images\loading-screen.jpg";
 
 // ============================================================================================
-// Load dialog files.
+// Load the dialog files.
 #include "framework\engine\dialogs\loadDialogs.cpp"
 #include "framework\plugins\cssa3_spectator\header.hpp"
 // ============================================================================================

@@ -9,47 +9,138 @@
 //////////////////////////////
 
 private [
-			"_TypNumber","_TempArray","_Events_Vehicle","_loadout",
+			"_TypNumber","_TempArray","_Events_Vehicle",
 			"_Events_Unit_S","_Events_Unit_V","_Events_Unit_T","_Events_Unit_A","_Events_Unit_C","_Events_Unit_H"
 		];
 
 			_TypNumber = _this select 0;_TempArray = [];
-                        
-_init = { format ["{ [_x, '%1'] spawn BRM_fnc_initAI } forEach units _group;", _this] };
 
 switch (_TypNumber) do
 {
 //-------------------------------------------------------------------------------------------------------------------------------------------
 //------------ Events => Create | ReachWP | NotAliveGroup | NotAliveUnit | (BeforeReduce) | (AfterBuildUp)  | (DetectEnemys) ----------------
 //-------------------------------------------------------------------------------------------------------------------------------------------
+	case 1:
+	{
+            _loadout = "auto";
+            
+		_Events_Unit_S =	[ 
+                                            ["{ [_x, '"+_loadout+"'] spawn BRM_fnc_initAI } forEach units _group;"],
+                                            [],
+                                            [],
+                                            [],
+                                            ["{ [_x, '"+_loadout+"'] spawn BRM_fnc_initAI } forEach units _group;"],
+                                            ["{ [_x, '"+_loadout+"'] spawn BRM_fnc_initAI } forEach units _group;"],
+                                            []
+                                        ];
+		_Events_Unit_V = 	[
+                                            ["{ [_x, '"+_loadout+"'] spawn BRM_fnc_initAI } forEach units _group;"],
+                                            [],
+                                            [],
+                                            [],
+                                            ["{ [_x, '"+_loadout+"'] spawn BRM_fnc_initAI } forEach units _group;"],
+                                            ["{ [_x, '"+_loadout+"'] spawn BRM_fnc_initAI } forEach units _group;"],
+                                            []
+                                        ];
+		_Events_Unit_T = 	[
+                                            [],
+                                            [],
+                                            [],
+                                            []
+                                        ];
+		_Events_Unit_A = 	[
+                                            [],
+                                            [],
+                                            [],
+                                            []
+                                        ];
+		_Events_Unit_C = 	[
+                                            [],
+                                            [],
+                                            [],
+                                            [],
+                                            [],
+                                            []
+                                        ];
+		_Events_Unit_H = 	[
+                                            [],
+                                            [],
+                                            [],
+                                            []
+                                        ];
+		_Events_Vehicle =	[
+                                            [],
+                                            [],
+                                            []
+                                        ];
+	};
 
-	case 1: { _loadout = "auto" };
-
-	case 2: { _loadout = "vanilla" };
-        
-        case 3: { _loadout = "RACS" };
-        case 4: { _loadout = "SLA" };
-        case 5: { _loadout = "MUJAHIDEEN" };
-        case 6: { _loadout = "ANA" };
-        case 7: { _loadout = "AHKMA-PMC" };
-        
+	case 2:
+	{
+            _loadout = "auto";
+            
+		_Events_Unit_S =	[ 
+                                            ["{ [_x, '"+_loadout+"'] spawn BRM_fnc_initAI } forEach units _group;"],
+                                            [],
+                                            [],
+                                            [],
+                                            ["{ [_x, '"+_loadout+"'] spawn BRM_fnc_initAI } forEach units _group;"],
+                                            ["{ [_x, '"+_loadout+"'] spawn BRM_fnc_initAI } forEach units _group;"],
+                                            []
+                                        ];
+		_Events_Unit_V = 	[
+                                            ["{ [_x, '"+_loadout+"'] spawn BRM_fnc_initAI } forEach units _group;"],
+                                            [],
+                                            [],
+                                            [],
+                                            ["{ [_x, '"+_loadout+"'] spawn BRM_fnc_initAI } forEach units _group;"],
+                                            ["{ [_x, '"+_loadout+"'] spawn BRM_fnc_initAI } forEach units _group;"],
+                                            []
+                                        ];
+		_Events_Unit_T = 	[
+                                            [],
+                                            [],
+                                            [],
+                                            []
+                                        ];
+		_Events_Unit_A = 	[
+                                            [],
+                                            [],
+                                            [],
+                                            []
+                                        ];
+		_Events_Unit_C = 	[
+                                            [],
+                                            [],
+                                            [],
+                                            [],
+                                            [],
+                                            []
+                                        ];
+		_Events_Unit_H = 	[
+                                            [],
+                                            [],
+                                            [],
+                                            []
+                                        ];
+		_Events_Vehicle =	[
+                                            [],
+                                            [],
+                                            []
+                                        ];
+	};
 // =============================================================================
 
-	default { 
-                    if (DAC_Basic_Value != 5) then {
-                        DAC_Basic_Value = 5; publicvariable "DAC_Basic_Value";
-                        hintc "Error: DAC_Config_Events > No valid config number";
-                    };
-                };
-};
 
-_Events_Unit_S =	[[_loadout call _init],[],[],[],[_loadout call _init],[_loadout call _init],[]];
-_Events_Unit_V = 	[[_loadout call _init],[],[],[],[_loadout call _init],[_loadout call _init],[]];
-_Events_Unit_T = 	[[],[],[],[]];
-_Events_Unit_A = 	[[],[],[],[]];
-_Events_Unit_C = 	[[],[],[],[],[],[]];
-_Events_Unit_H = 	[[],[],[],[]];
-_Events_Vehicle =	[[],[],[]];
+	Default {
+				if(DAC_Basic_Value != 5) then
+				{
+					DAC_Basic_Value = 5;publicvariable "DAC_Basic_Value";
+					hintc "Error: DAC_Config_Events > No valid config number";
+				};
+				if(true) exitwith {};
+			};
+};
 
 _TempArray = [_Events_Unit_S,_Events_Unit_V,_Events_Unit_T,_Events_Unit_A,_Events_Unit_C,_Events_Unit_H,_Events_Vehicle];
 _TempArray

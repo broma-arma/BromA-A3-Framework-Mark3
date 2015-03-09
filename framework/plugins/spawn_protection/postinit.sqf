@@ -1,7 +1,8 @@
-
 // =============================================================================
 //  Respawn protection duration parameters
 // =============================================================================
+
+waitUntil{!isNil"param_spawn_protection_time"};
 
 switch (param_spawn_protection_time) do {
     case 0: { mission_spawn_protection_time = 1 };

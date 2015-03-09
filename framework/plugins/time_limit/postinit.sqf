@@ -3,6 +3,8 @@
 //  Time limit parameter
 // =============================================================================
 
+waitUntil{!isNil"param_time_limit"};
+
 switch (param_time_limit) do {
     case 0: { mission_time_limit = -1 };
     case 1: { mission_time_limit = 10800 };

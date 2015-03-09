@@ -8,7 +8,7 @@ switch (true) do {
     case (_side == side_a_side): { _side = "side_a" + "_" + _info };
     case (_side == side_b_side): { _side = "side_b" + "_" + _info };
     case (_side == side_c_side): { _side = "side_c" + "_" + _info };
-    default { _side = "civ" };
+    default { _side = "CIVILIAN" };
 };
 
 call compile format ["_ret = %1", _side];

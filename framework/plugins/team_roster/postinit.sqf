@@ -1,6 +1,6 @@
-_path = _this select 0;
 
 if (isNull player) then {waitUntil{!isNull player}};
+waitUntil{(mission_groups_init)};
 
 private ["_orbatText", "_groups", "_precompileGroups"];
 _groups = [];
@@ -26,17 +26,13 @@ _orbatText = "<br/><br/>============= Team Roster =============<br/>";
         {
             private["_padding","_playerdesc","_playerLeader","_sign","_rank"];
             _player = _x;
-            
-            _color = (_x getVariable ["unitInit", ["white"]]) select 0;
-            
-            _color = [_color] call BRM_fnc_colorToHex;
 
             _playerdesc = [str(_player), "_", " "] call CBA_fnc_replace;
             _playerLeader = isFormationLeader _player;
             _isMedic = getNumber (configFile >> "cfgVehicles" >> typeOf _x >> "attendant");
 
             if (_playerLeader) then { _padding = "" } else { _padding = "     " };
-            if (_IsMedic == 1) then { _sign = " (<img image='"+_path+"med_icon.paa' width='16' heigth='16' />)" } else { _sign = "" };
+            if (_IsMedic == 1) then { _sign = " (<img image='plugins\team_roster\med_icon.paa' width='16' heigth='16' />)" } else { _sign = "" };
 
             switch (rankID _x) do {
                 case 0: {_rank = "Pvt. "};
@@ -50,8 +46,7 @@ _orbatText = "<br/><br/>============= Team Roster =============<br/>";
             };
             
             _playerdesc = _player getVariable ["rosterAlias", _playerdesc];
-            _orbatText = _orbatText + format["%1%2<font color='%6'>%3</font> (%4)%5", _padding,_rank, name _x, _playerdesc,_sign,_color] + "<br />";
-            //_orbatText = _orbatText + format["%1%2%3 (%4)%5", _padding,_rank, name _x, _playerdesc,_sign] + "<br />";
+            _orbatText = _orbatText + format["%1%2%3 (%4)%5", _padding,_rank, name _x, _playerdesc,_sign] + "<br />";
         } forEach units _x;
     };
 } forEach _groups;

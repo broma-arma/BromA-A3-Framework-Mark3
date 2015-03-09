@@ -1,8 +1,6 @@
 
 #include "settings.sqf"
 
-sleep 1;
-
 if (co_lock_tvt_mode) then { co_lock_text_select = 1 } else { co_lock_text_select = 0 };
 
 co_lock_text_start = ["Start the mission.", "Ready your side."];

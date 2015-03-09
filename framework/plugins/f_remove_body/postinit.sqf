@@ -1,8 +1,10 @@
-
-// ====================================================================================
 // F3 - Automatic Body Removal
 // Credits: Please see the F3 online manual (http://www.ferstaberinde.com/f3/en/)
 // ====================================================================================
+
+// RUN THE SCRIPT ONLY SERVER SIDE AND ON HEADLESS CLIENT
+
+if (!isServer && hasInterface) exitWith {};
 
 _path = _this select 0;
 

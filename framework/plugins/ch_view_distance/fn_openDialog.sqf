@@ -1,6 +1,8 @@
-_dialog = createDialog "CHVD_dialog";
-if (!_dialog) exitWith {systemChat "Error: Can't open 'CH View Distance' dialog."};
+CHdialog = createDialog "CHVD_dialog";
+if (!CHdialog) exitWith {systemChat "Error: Can't open 'CH View Distance' dialog."};
 disableSerialization;
+
+ctrlSetText[1000,format["VIEW DISTANCE SETTINGS | FPS: %1",round(diag_fps)]];
 
 {
 	ctrlSetText _x;

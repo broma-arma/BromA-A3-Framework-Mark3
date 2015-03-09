@@ -1,7 +1,4 @@
-
-// =============================================================================
-//  Time Acceleration parameters
-// =============================================================================
+waitUntil{!isNil"param_time_accel"};
 
 switch (param_time_accel) do {
     case 0: { mission_time_accel = 1 };
@@ -13,6 +10,8 @@ switch (param_time_accel) do {
 publicVariable "mission_time_accel";
 
 // =============================================================================
+
+sleep 1;
 
 _center = createCenter sideLogic;
 _group = createGroup _center;

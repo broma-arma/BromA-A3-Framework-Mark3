@@ -67,6 +67,15 @@ switch (_TypNumber) do
 							["DAC_t_PinusP3s_F",1,0,0.1,0,0,"",[0,"ColorGreen"]]
 						];
 	};
+        
+	case 5:
+	{
+            _Object_Pool =  [
+                                [15,1],
+                                ["RHS_M2StaticMG_WD",1,0,0.0,0,0,"",[0,"ColorGreen"]],
+                                ["RHS_MK19_TriPod_WD",1,0,0.0,0,0,"",[0,"ColorGreen"]]
+                            ];
+	};        
 //-------------------------------------------------------------------------------------------------
 	Default {
 				if(DAC_Basic_Value != 5) then

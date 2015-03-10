@@ -1,10 +1,10 @@
 class jip_teleport
 {
 	name = "JIP teleport";
-	authors[] = {"columdrum","Nife"};
 	version = 1;
-	dependencies[] = {};
-	url = "";
+	authors[] = {"columdrum","Nife"};
+	description = "Teleports JIPs to their nearest living team-member.";
+	conditions[] = {"(mission_game_mode == 'coop')", "(player_is_jip)", "(time > 1)"};
 	postinit = "postinit.sqf";
-	environment = "client";
+	user = "client";
 };

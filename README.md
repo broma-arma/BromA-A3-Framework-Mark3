@@ -4,7 +4,7 @@
   </a>
    <br/><br/>
   <a href="https://github.com/Neefay/BromA-A3-Framework-Mark3/commits/master">
-    <img src="https://img.shields.io/badge/build-000354-orange.svg" alt="Current version">
+    <img src="https://img.shields.io/badge/build-00356-blue.svg" alt="Current version">
   </a>
 </p>
 

@@ -7,8 +7,8 @@
 */
 
 _defaultSide = WEST;
-_defaultVoice = [_voiceALTIAN, _voiceAMERICAN, _voiceBRITISH, _voiceFARSI, _voiceRUSSIAN];
-_defaultFace = [_faceGREEK, _faceWHITE, _faceBLACK, _faceASIAN, _facePERSIAN];
+_defaultVoice = [_voiceRUSSIAN];
+_defaultFace = [_faceWHITE];
 _defaultInsignia = "111thID";
 
 // WEAPONS =====================================================================
@@ -25,6 +25,8 @@ _commonSMG = _Mk20C;
 _commonRCO = "optic_MRCO";
 _commonCCO = _EOT;
 _commonMAGNIFIED = "rhs_acc_pso1m2";
+_commonSUPPRESSOR = "muzzle_snds_B";
+_commonPISTOLSUPPRESSOR = "RH_gemtech9";
 _NVG = _NVGEN1;
 
 // AMMO COUNT ==================================================================
@@ -38,10 +40,23 @@ _countAT = 3;
 _countGRENADES = 3;
 _count40mm = 20;
 
-_countBANDAGE = 30;
-_countMORPHINE = 20;
-_countEPI = 20;
-_countBLOODBAG = 10;
+_countRifleCARGO = 30;
+_countPistolCARGO = 10;
+_countMgCARGO = 20;
+_countSniperCARGO = 30;
+_countATCARGO = 15;
+_countGrenadesCARGO = 20;
+_count40mmCARGO = 40;
+
+_countBANDAGE = 20;
+_countMORPHINE = 15;
+_countEPI = 10;
+_countBLOODBAG = 5;
+
+_countBandageCARGO = 40;
+_countMorphineCARGO = 30;
+_countEpiCARGO = 20;
+_countBloodbagCARGO = 10;
 
 // UNIFORMS ====================================================================
 
@@ -70,6 +85,7 @@ _helicrewHEAD = "rhsusf_hgu56p_mask";
 _helipilotHEAD = "rhsusf_hgu56p";
 _sniperHEAD = "MNP_Boonie_FIN";
 _demoHEAD = _commonHEAD;
+_reconHEAD = "MNP_Boonie_FIN";
 
 _commonUNIFORM = _randomUNIFORM;
 _officerUNIFORM = _commonUNIFORM;
@@ -81,6 +97,7 @@ _crewUNIFORM = _commonUNIFORM;
 _mgUNIFORM = _commonUNIFORM;
 _medicUNIFORM = _commonUNIFORM;
 _demoUNIFORM = _commonUNIFORM;
+_reconUNIFORM = _commonUNIFORM;
 
 _commonVEST = _randomVEST;
 _officerVEST = _commonVEST;
@@ -91,9 +108,13 @@ _grenadierVEST = _commonVEST;
 _medicVEST = _commonVEST;
 _demoVEST = _commonVEST;
 _marksmanVEST = _commonVEST;
+_reconVEST = _commonVEST;
 
 _commonBACKPACK = "MNP_B_WD_FP";
 _bigBACKPACK = "MNP_B_WD_CA";
+
+_HMG = "RHS_M2_Gun_Bag";
+_tripod = "RHS_M2_Tripod_Bag";
 
 // =============================================================================
 if (!_isMan) exitWith {};
@@ -130,6 +151,18 @@ switch (true) do {
         ["binoc"] call _addOptics;
         ["LR"] call _addRadio;
     };
+    
+    case (_isReconLeader): {
+        [_reconHEAD, _reconUNIFORM, _reconVEST, "empty"] call _useUniform;
+        [[_unit,[_wsmoke,2],[_rsmoke,2],[_gsmoke,2],[_rchemlight,2],[_bchemlight,2],[_wflare,2],[_mapTools,1]]] call _addtoVest;
+        ["laserdesignator"] call _addOptics;
+        [_commonRIFLE, _countRIFLELOW] call _addWeaponKit;
+        [_commonPISTOL, _countPISTOL] call _addWeaponKit;
+        ["primary", _commonSUPPRESSOR] call _attachToWeapon;
+        ["secondary", _commonPISTOLSUPPRESSOR] call _attachToWeapon;
+        ["LR"] call _addRadio;
+        ["BP"] call _addRadio;        
+    };       
     
     case (_isRTO): {
         [_commonHEAD, _commonUNIFORM, _commonVEST, "empty"] call _useUniform;
@@ -188,6 +221,46 @@ switch (true) do {
         [_commonRIFLE, _countRIFLELOW] call _addWeaponKit;
         _defaultInsignia = "MedB";
     };
+    
+    case (_isMMG): {
+        [_commonHEAD, _commonUNIFORM, _commonVEST, _HMG] call _useUniform;
+        [[_unit,[_wsmoke,2]]] call _addtoVest;
+        [_commonRIFLE, _countRIFLE] call _addWeaponKit;
+    };
+    
+    case (_isMMGTripod): {
+        [_commonHEAD, _commonUNIFORM, _commonVEST, _tripod] call _useUniform;
+        [[_unit,[_wsmoke,2]]] call _addtoVest;
+        [_commonRIFLE, _countRIFLE] call _addWeaponKit;
+    };
+    
+    case (_isRecon): {
+        [_reconHEAD, _reconUNIFORM, _reconVEST, "empty"] call _useUniform;
+        ["binoc"] call _addOptics;
+        [[_unit,[_wsmoke,2],[_rsmoke,2],[_gsmoke,2],[_rchemlight,2],[_bchemlight,2],[_wflare,2],[_mapTools,1]]] call _addtoVest;        
+        [_commonRIFLE, _countRIFLE] call _addWeaponKit;
+        ["primary", _commonSUPPRESSOR] call _attachToWeapon;     
+    };
+    
+    case (_isReconMedic): {
+        [_medicHEAD, _reconUNIFORM, _reconVEST, _commonBACKPACK] call _useUniform;
+        ["binoc"] call _addOptics;
+        [[_unit,[_wsmoke,2],[_rsmoke,2],[_gsmoke,2],[_mapTools,1]]] call _addtoVest;        
+        [[_unit,[_bandage,_countBANDAGE], [_morphine,_countMORPHINE],[_epi,_countEPI],[_bloodbag,_countBLOODBAG]]] call _addtoBackpack;
+        [_commonRIFLE, _countRIFLE] call _addWeaponKit;
+        ["primary", _commonSUPPRESSOR] call _attachToWeapon;
+        _defaultInsignia = "MedB";
+    };    
+    
+    case (_isReconDemo): {
+        [_reconHEAD, _reconUNIFORM, _reconVEST, _bigBACKPACK] call _useUniform;
+        ["binoc"] call _addOptics;
+        [[_unit, [_clacker,1],[_mineDetector,1],[_defusalKit,1]]] call _addtoUniform;
+        [[_unit,[_wsmoke,2],[_rsmoke,2],[_gsmoke,2],[_mapTools,1]]] call _addtoVest;
+        [[_unit,[_C4,3],[_satchelCharge,1],[_deadManSwitch,1]]] call _addtoBackpack;
+        [_commonRIFLE, _countRIFLELOW] call _addWeaponKit;
+        ["primary", _commonSUPPRESSOR] call _attachToWeapon;     
+    };        
     
     case (_isPilot): {
         [_pilotHEAD, _pilotUNIFORM, "empty", _parachute] call _useUniform;

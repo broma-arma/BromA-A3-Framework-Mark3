@@ -1,10 +1,11 @@
 // ====================================================================================
 // BRIEFING GOES ON HERE
-//[] execVM CUSTOM_FILES_PATH+"credits.sqf";
 
 private ["_radioFreqs"];
 
 _autoRadio = ("auto_radio_freq" in usedPlugins);
+
+[] execVM "framework\credits.sqf";
 
 switch (side player) do {
     case WEST : {

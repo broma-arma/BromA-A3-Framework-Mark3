@@ -46,6 +46,9 @@ switch (param_time_of_day) do {
     
     // Night
     case 7: { setDate [2035, 5, 11, 0, 0] };
+    
+    // Random
+    case 8: { setDate [2035, 5, 11, floor(random(23)), floor(random(60))] };
 };
 
 // =============================================================================
@@ -194,6 +197,18 @@ switch (param_weather) do {
         _MissionWaves = 0;
         _MissionHumidity = 0.7;
     };
+    // Random
+    case 11: {
+        _MissionOvercast = (random(1));
+        _MissionRain = (random(1));
+        _MissionRainbow = (random(1));
+        _MissionLightnings = (random(1));
+        _MissionWindStr = (random(1));
+        _MissionWindGusts = (random(1));
+        _MissionFog = (random(1));
+        _MissionWaves = (random(1));
+        _MissionHumidity = (random(1));
+    };        
 };
 
 0 setOvercast _MissionOvercast;

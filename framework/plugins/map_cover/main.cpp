@@ -1,10 +1,10 @@
 class map_cover
 {
 	name = "Map Cover";
-	authors[] = {"Nife"};
 	version = 1;
-	dependencies[] = {};
-	url = "";
+	authors[] = {"Nife"};
+	description = "Covers the AO of the mission.";
+	conditions[] = {};
 	preinit = "preinit.sqf";
-	environment = "server";
+	user = "server";
 };

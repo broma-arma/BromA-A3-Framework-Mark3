@@ -5,11 +5,12 @@ Does not allow a player to leave the AO
 */
 
 private ["_sleep", "_pos", "_aoPos", "_player"];
-sleep 5;  //wait until mission starts
 
 _pos = [0,0,0];
 _aoPos = [(getMarkerPos "ao") select 0, (getMarkerPos "ao") select 1, 0];
 _sleep = 0.25;
+
+#include "settings.sqf"
 
 while {(alive player)} do {
     _player = vehicle player;
@@ -19,9 +20,10 @@ while {(alive player)} do {
     if (_player isKindOf "Land") then {
 
         if (!([getPos _player, "ao"] call CBA_fnc_inArea)) then {
-            hintSilent "Please remain within the Area of Operations.";
             _pos = [getPos _player, 1, ([_player, _aoPos] call BIS_fnc_dirTo)] call BIS_fnc_relPos;
             _sleep = 0;
+            
+            call left_ao_do;
         }
         else { _sleep = 0.25; };
     };

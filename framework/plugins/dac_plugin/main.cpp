@@ -1,10 +1,10 @@
 class dac_plugin
 {
-	name = "DAC Plugin";
-	authors[] = {"Nife","GuzzenVonLidl"};
+	name = "DAC Plugin";	
 	version = 1;
-	dependencies[] = {};
-	url = "";
+	authors[] = {"Nife"};
+	description = "Adds easier and simpler ways to configure and create DAC zones, with focus on verbosity and lack of long strings of numbers - also compatible with Headless Client.";
+	conditions[] = {"mission_AI_controller","mission_settings","mission_params_read"};
 	postinit = "postinit.sqf";
-	environment = "all";
+	user = "all";
 };

@@ -1,10 +1,10 @@
 class team_roster
 {
 	name = "Team Roster";
-	authors[] = {"Nife"};
 	version = 1;
-	url = "";
-	dependencies[] = {};
+	authors[] = {"Nife"};
+	description = "Creates a handy list of all friendly units separated by group name and position.";
+	conditions[] = {"mission_groups_init"};
 	postinit = "postinit.sqf";
-	environment = "client";
+	user = "all";
 };

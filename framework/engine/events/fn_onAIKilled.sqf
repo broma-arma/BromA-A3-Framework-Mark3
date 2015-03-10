@@ -5,4 +5,4 @@ if ("f_remove_body" in usedPlugins) then {
     _unit spawn f_fnc_removeBody;
 };
 
-[_unit] call BRM_fnc_handleScore;
+[_unit, _killer] call BRM_fnc_handleScore;

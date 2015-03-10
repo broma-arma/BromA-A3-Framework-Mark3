@@ -1,10 +1,10 @@
 class loading_screen
 {
 	name = "Loading screen";
-	authors[] = {"Nife"};
 	version = 1;
-	dependencies[] = {};
-	url = "";
+	authors[] = {"Nife"};
+	description = "Displays a short test screen to avoid players from shooting each other while loading the mission.";
+	conditions[] = {"(isMultiplayer)"};
 	postinit = "postinit.sqf";
-	environment = "client";
+	user = "client";
 };

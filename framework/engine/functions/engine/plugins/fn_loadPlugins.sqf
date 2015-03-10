@@ -5,6 +5,8 @@ ENGINE_preinits = [];
 ENGINE_postinits = [];
 usedPlugins = [];
 
+framework_version = call compile preprocessFile "framework\version.txt";
+
 for "_i" from 0 to ((count LOADED_PLUGINS) - 1) do {
     private ["_plugin","_preinit","_postinit"];
     _plugin = configName(LOADED_PLUGINS select _i);

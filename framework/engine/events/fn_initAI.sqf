@@ -1,6 +1,8 @@
 _unit = _this select 0;
 _faction = _this select 1;
 
+if !(_unit isKindOf "CAManBase") exitWith {};
+
 _initialized = _unit getVariable ["unit_initialized", false];
 if (_initialized) exitWith {};
 
@@ -13,10 +15,10 @@ switch (true) do {
 };
 
 if (toUpper(_faction) == "AUTO") then {
-    _faction = [(side _unit), "faction"] call BRM_fnc_getSideInfo;
+    _faction = [(side _unit), "FACTION"] call BRM_fnc_getSideInfo;
 };
 
-if ((_faction != "CIVILIAN") && !units_AI_useVanillaGear) then {
+if ( !(_faction == "CIVILIAN") && !(_faction == "VANILLA") && !units_AI_useVanillaGear) then {
     [_unit, _faction] call BRM_fnc_assignLoadout;
 };
 
@@ -24,7 +26,7 @@ _unit addEventHandler ["Hit", BRM_fnc_setHitFace];
 _unit addEventHandler ["Killed", BRM_fnc_onAIKilled];
 
 if ("civilian_casualty_cap" in usedPlugins) then {
-    waitUntil{ (!isNil"fnc_CivFiredWeapon")&&(!isNil"fnc_countCivDeaths") };
+    waitUntil{(!isNil"fnc_CivFiredWeapon")&&(!isNil"fnc_countCivDeaths")};
     
     if (side _unit == civilian) then {
       _unit addEventHandler ["fired", fnc_civFiredWeapon];

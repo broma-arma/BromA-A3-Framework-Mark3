@@ -11,6 +11,6 @@ player createDiaryRecord ["Diary", ["Credits","
 current mission "+mission_author_name+" made by "+mission_version+".
 <br/>
 <br/>
-                      <img image='framework\engine\assets\images\framework-logo.paa' width='64' height='64'/><br/>
+                      <img image='framework\engine\assets\images\framework-logo.paa' width='512' height='128'/><br/>
 Made possible using the BromA Framework, assembled by the BromA Mission Making Team @ http://bro.ma.
 - all credits given to their respective creators."]];

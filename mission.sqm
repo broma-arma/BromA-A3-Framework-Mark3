@@ -16,7 +16,6 @@ class Mission
 		"A3_Air_F_Heli_Light_01",
 		"A3_Air_F_Beta_Heli_Transport_01",
 		"A3_Air_F_Beta_Heli_Transport_02",
-		"A3_Air_F_Heli_Heli_Transport_03",
 		"A3_Soft_F_HEMTT",
 		"A3_Armor_F_Panther",
 		"A3_Soft_F_Gamma_HEMTT",
@@ -39,7 +38,8 @@ class Mission
 		"A3_Soft_F_Gamma_TruckHeavy",
 		"A3_Soft_F_MRAP_03",
 		"A3_Armor_F_EPB_APC_tracked_03",
-		"A3_Air_F_EPB_Heli_Light_03"
+		"A3_Air_F_EPB_Heli_Light_03",
+		"MNP_OPFOR_CONFIG"
 	};
 	addOnsAuto[]=
 	{
@@ -54,7 +54,6 @@ class Mission
 		"A3_Air_F_Heli_Light_01",
 		"A3_Air_F_Beta_Heli_Transport_01",
 		"A3_Air_F_Beta_Heli_Transport_02",
-		"A3_Air_F_Heli_Heli_Transport_03",
 		"A3_Soft_F_HEMTT",
 		"A3_Armor_F_Panther",
 		"A3_Soft_F_Gamma_HEMTT",
@@ -83,7 +82,7 @@ class Mission
 	randomSeed=13980418;
 	class Intel
 	{
-		briefingName="> SANDBOX 250 - BromA Framework MK 3 BETA 0036";
+		briefingName="> SANDBOX 250 - BromA Framework MK 3 BETA 00365";
 		overviewText="Edit this description with a short explanation and important details about your mission.";
 		startWeather=0;
 		startWind=0.099999994;
@@ -110,7 +109,8 @@ class Mission
 				items=3;
 				class Item0
 				{
-					position[]={899.9375,5,915.32764};
+					position[]={899.91248,5,915.8772};
+					azimut=1.3632232;
 					special="NONE";
 					id=0;
 					side="WEST";
@@ -4379,7 +4379,7 @@ class Mission
 	};
 	class Vehicles
 	{
-		items=51;
+		items=50;
 		class Item0
 		{
 			position[]={902.72217,5,918.38086};
@@ -4388,6 +4388,7 @@ class Mission
 			side="EMPTY";
 			vehicle="B_CargoNet_01_ammo_F";
 			leader=1;
+			lock="UNLOCKED";
 			skill=1;
 			init="_cargo = [this, ""blufor"", [""medical"",""ammo"",""radio"", ""at""]] spawn BRM_fnc_assignCargo";
 		};
@@ -4398,6 +4399,7 @@ class Mission
 			id=256;
 			side="EMPTY";
 			vehicle="B_MRAP_01_F";
+			lock="UNLOCKED";
 			skill=0.60000002;
 			init="_cargo = [this, ""blufor"", [""ammo""]] spawn BRM_fnc_assignCargo";
 		};
@@ -4407,6 +4409,7 @@ class Mission
 			id=257;
 			side="EMPTY";
 			vehicle="B_Heli_Light_01_F";
+			lock="UNLOCKED";
 			skill=0.60000002;
 			init="_cargo = [this, ""blufor"", [""parachutes""]] spawn BRM_fnc_assignCargo";
 		};
@@ -4416,6 +4419,7 @@ class Mission
 			id=258;
 			side="EMPTY";
 			vehicle="B_Heli_Transport_01_F";
+			lock="UNLOCKED";
 			skill=0.60000002;
 			init="_cargo = [this, ""blufor"", [""ammo"",""medical"",""at"",""parachutes""]] spawn BRM_fnc_assignCargo";
 		};
@@ -4425,403 +4429,440 @@ class Mission
 			id=259;
 			side="EMPTY";
 			vehicle="I_Heli_Transport_02_F";
+			lock="UNLOCKED";
 			skill=0.60000002;
 			init="_cargo = [this, ""indfor"", [""ammo"",""at"",""medical"",""parachutes""]] spawn BRM_fnc_assignCargo";
 		};
 		class Item5
 		{
-			position[]={926.95844,5,796.56689};
+			position[]={894.35919,5,775.23926};
 			id=260;
 			side="EMPTY";
-			vehicle="B_Heli_Transport_03_F";
-			skill=0.60000002;
-			init="_cargo = [this, ""blufor"", [""ammo"",""medical"",""at"",""parachutes""]] spawn BRM_fnc_assignCargo";
-		};
-		class Item6
-		{
-			position[]={894.35919,5,775.23926};
-			id=261;
-			side="EMPTY";
 			vehicle="B_Heli_Light_01_armed_F";
+			lock="UNLOCKED";
 			skill=0.60000002;
 			init="_cargo = [this, ""blufor"", [""parachutes""]] spawn BRM_fnc_assignCargo";
 		};
-		class Item7
+		class Item6
 		{
 			position[]={893.56207,5,861.36768};
-			id=262;
+			id=261;
 			side="EMPTY";
 			vehicle="B_Truck_01_transport_F";
+			lock="UNLOCKED";
+			skill=0.60000002;
+			init="_cargo = [this, ""blufor"", [""ammo""]] spawn BRM_fnc_assignCargo";
+		};
+		class Item7
+		{
+			position[]={900.7027,5,861.97803};
+			id=262;
+			side="EMPTY";
+			vehicle="B_Truck_01_covered_F";
+			lock="UNLOCKED";
 			skill=0.60000002;
 			init="_cargo = [this, ""blufor"", [""ammo""]] spawn BRM_fnc_assignCargo";
 		};
 		class Item8
 		{
-			position[]={900.7027,5,861.97803};
+			position[]={901.29059,5,848.15332};
 			id=263;
 			side="EMPTY";
-			vehicle="B_Truck_01_covered_F";
+			vehicle="B_MRAP_01_hmg_F";
+			lock="UNLOCKED";
 			skill=0.60000002;
-			init="_cargo = [this, ""blufor"", [""ammo""]] spawn BRM_fnc_assignCargo";
 		};
 		class Item9
 		{
-			position[]={901.29059,5,848.15332};
+			position[]={909.05402,5,848.15283};
 			id=264;
 			side="EMPTY";
-			vehicle="B_MRAP_01_hmg_F";
+			vehicle="B_MRAP_01_gmg_F";
+			lock="UNLOCKED";
 			skill=0.60000002;
 		};
 		class Item10
 		{
-			position[]={909.05402,5,848.15283};
+			position[]={901.4201,5,835.44141};
 			id=265;
 			side="EMPTY";
-			vehicle="B_MRAP_01_gmg_F";
-			skill=0.60000002;
-		};
-		class Item11
-		{
-			position[]={901.4201,5,835.44141};
-			id=266;
-			side="EMPTY";
 			vehicle="B_APC_Tracked_01_rcws_F";
+			lock="UNLOCKED";
 			skill=0.60000002;
 			init="_cargo = [this, ""blufor"", [""ammo"",""medical""]] spawn BRM_fnc_assignCargo";
 		};
-		class Item12
+		class Item11
 		{
 			position[]={893.59039,5,877.50488};
-			id=267;
+			id=266;
 			side="EMPTY";
 			vehicle="B_Truck_01_ammo_F";
+			lock="UNLOCKED";
 			skill=0.60000002;
 			init="_cargo = [this, ""blufor"", [""ammo_big"", ""at""]] spawn BRM_fnc_assignCargo";
 		};
-		class Item13
+		class Item12
 		{
 			position[]={901.63654,5,877.24805};
-			id=268;
+			id=267;
 			side="EMPTY";
 			vehicle="B_Truck_01_fuel_F";
+			lock="UNLOCKED";
 			skill=0.60000002;
 		};
-		class Item14
+		class Item13
 		{
 			position[]={910.1109,5,877.24805};
-			id=269;
+			id=268;
 			side="EMPTY";
 			vehicle="B_Truck_01_medical_F";
+			lock="UNLOCKED";
 			skill=0.60000002;
 			init="_cargo = [this, ""blufor"", [""medical""]] spawn BRM_fnc_assignCargo";
 		};
-		class Item15
+		class Item14
 		{
 			position[]={916.9588,5,877.07715};
-			id=270;
+			id=269;
 			side="EMPTY";
 			vehicle="B_Truck_01_Repair_F";
+			lock="UNLOCKED";
+			skill=0.60000002;
+		};
+		class Item15
+		{
+			position[]={893.31403,5,835.93555};
+			id=270;
+			side="EMPTY";
+			vehicle="B_MBT_01_TUSK_F";
+			lock="UNLOCKED";
 			skill=0.60000002;
 		};
 		class Item16
 		{
-			position[]={893.31403,5,835.93555};
+			position[]={926.19293,5,775.02686};
 			id=271;
 			side="EMPTY";
-			vehicle="B_MBT_01_TUSK_F";
+			vehicle="B_Heli_Attack_01_F";
+			lock="UNLOCKED";
 			skill=0.60000002;
+			init="_cargo = [this, ""blufor"", [""parachutes""]] spawn BRM_fnc_assignCargo";
 		};
 		class Item17
 		{
-			position[]={926.19293,5,775.02686};
+			position[]={894.37579,5,751.25342};
 			id=272;
 			side="EMPTY";
-			vehicle="B_Heli_Attack_01_F";
+			vehicle="B_Plane_CAS_01_F";
+			lock="UNLOCKED";
 			skill=0.60000002;
 			init="_cargo = [this, ""blufor"", [""parachutes""]] spawn BRM_fnc_assignCargo";
 		};
 		class Item18
 		{
-			position[]={894.37579,5,751.25342};
+			position[]={2952.4836,5,831.53271};
 			id=273;
 			side="EMPTY";
-			vehicle="B_Plane_CAS_01_F";
-			skill=0.60000002;
-			init="_cargo = [this, ""blufor"", [""parachutes""]] spawn BRM_fnc_assignCargo";
-		};
-		class Item19
-		{
-			position[]={2952.4836,5,831.53271};
-			id=274;
-			side="EMPTY";
 			vehicle="I_Plane_Fighter_03_CAS_F";
+			lock="UNLOCKED";
 			skill=0.60000002;
 			init="_cargo = [this, ""indfor"", [""parachutes""]] spawn BRM_fnc_assignCargo";
 		};
-		class Item20
+		class Item19
 		{
 			position[]={2950.9558,5,923.76416};
-			id=275;
+			id=274;
 			side="EMPTY";
 			vehicle="I_APC_Wheeled_03_cannon_F";
+			lock="UNLOCKED";
 			skill=0.60000002;
 			init="_cargo = [this, ""indfor"", [""ammo""]] spawn BRM_fnc_assignCargo";
 		};
-		class Item21
+		class Item20
 		{
 			position[]={2950.9277,5,909.96338};
-			id=276;
+			id=275;
 			side="EMPTY";
 			vehicle="I_MBT_03_cannon_F";
+			lock="UNLOCKED";
 			skill=0.60000002;
 		};
-		class Item22
+		class Item21
 		{
 			position[]={4994.4619,5,974.17871};
-			id=277;
+			id=276;
 			side="EMPTY";
 			vehicle="O_Truck_03_ammo_F";
+			lock="UNLOCKED";
 			skill=0.60000002;
 			init="_cargo = [this, ""opfor"", [""ammo_big"", ""at""]] spawn BRM_fnc_assignCargo";
 		};
-		class Item23
+		class Item22
 		{
 			position[]={5001.9277,5,974.38086};
-			id=278;
+			id=277;
 			side="EMPTY";
 			vehicle="O_Truck_03_fuel_F";
+			lock="UNLOCKED";
 			skill=0.60000002;
 		};
-		class Item24
+		class Item23
 		{
 			position[]={5019.1353,5,973.88867};
-			id=279;
+			id=278;
 			side="EMPTY";
 			vehicle="O_Truck_03_medical_F";
+			lock="UNLOCKED";
 			skill=0.60000002;
 			init="_cargo = [this, ""opfor"", [""medical""]] spawn BRM_fnc_assignCargo";
 		};
-		class Item25
+		class Item24
 		{
 			position[]={5009.8721,5,974.37207};
-			id=280;
+			id=279;
 			side="EMPTY";
 			vehicle="O_Truck_03_repair_F";
+			lock="UNLOCKED";
 			skill=0.60000002;
 		};
-		class Item26
+		class Item25
 		{
 			position[]={4995.4053,5,942.24512};
-			id=281;
+			id=280;
 			side="EMPTY";
 			vehicle="O_MRAP_02_F";
+			lock="UNLOCKED";
 			skill=0.60000002;
 			init="_cargo = [this, ""opfor"", [""ammo""]] spawn BRM_fnc_assignCargo";
 		};
-		class Item27
+		class Item26
 		{
 			position[]={5003.2861,5,942.2998};
-			id=282;
+			id=281;
 			side="EMPTY";
 			vehicle="O_MRAP_02_gmg_F";
+			lock="UNLOCKED";
+			skill=0.60000002;
+		};
+		class Item27
+		{
+			position[]={5010.7607,5,942.52148};
+			id=282;
+			side="EMPTY";
+			vehicle="O_MRAP_02_hmg_F";
+			lock="UNLOCKED";
 			skill=0.60000002;
 		};
 		class Item28
 		{
-			position[]={5010.7607,5,942.52148};
+			position[]={5019.4917,5,956.80957};
 			id=283;
 			side="EMPTY";
-			vehicle="O_MRAP_02_hmg_F";
+			vehicle="O_Truck_02_transport_F";
+			lock="UNLOCKED";
 			skill=0.60000002;
+			init="_cargo = [this, ""opfor"", [""ammo""]] spawn BRM_fnc_assignCargo";
 		};
 		class Item29
 		{
-			position[]={5019.4917,5,956.80957};
+			position[]={5010.3047,5,958.44629};
 			id=284;
 			side="EMPTY";
-			vehicle="O_Truck_02_transport_F";
+			vehicle="O_Truck_02_covered_F";
+			lock="UNLOCKED";
 			skill=0.60000002;
 			init="_cargo = [this, ""opfor"", [""ammo""]] spawn BRM_fnc_assignCargo";
 		};
 		class Item30
 		{
-			position[]={5010.3047,5,958.44629};
+			position[]={4994.877,5,957.87305};
 			id=285;
 			side="EMPTY";
-			vehicle="O_Truck_02_covered_F";
+			vehicle="O_Truck_03_transport_F";
+			lock="UNLOCKED";
 			skill=0.60000002;
 			init="_cargo = [this, ""opfor"", [""ammo""]] spawn BRM_fnc_assignCargo";
 		};
 		class Item31
 		{
-			position[]={4994.877,5,957.87305};
+			position[]={5002.832,5,957.40576};
 			id=286;
 			side="EMPTY";
-			vehicle="O_Truck_03_transport_F";
+			vehicle="O_Truck_03_covered_F";
+			lock="UNLOCKED";
 			skill=0.60000002;
 			init="_cargo = [this, ""opfor"", [""ammo""]] spawn BRM_fnc_assignCargo";
 		};
 		class Item32
 		{
-			position[]={5002.832,5,957.40576};
+			position[]={4995.7319,5,927.72852};
 			id=287;
 			side="EMPTY";
-			vehicle="O_Truck_03_covered_F";
+			vehicle="O_APC_Tracked_02_cannon_F";
+			lock="UNLOCKED";
 			skill=0.60000002;
-			init="_cargo = [this, ""opfor"", [""ammo""]] spawn BRM_fnc_assignCargo";
 		};
 		class Item33
 		{
-			position[]={4995.7319,5,927.72852};
+			position[]={5005.4033,5,928.80127};
 			id=288;
 			side="EMPTY";
-			vehicle="O_APC_Tracked_02_cannon_F";
+			vehicle="O_MBT_02_cannon_F";
+			lock="UNLOCKED";
 			skill=0.60000002;
 		};
 		class Item34
 		{
-			position[]={5005.4033,5,928.80127};
+			position[]={5014.269,5,927.86621};
 			id=289;
 			side="EMPTY";
-			vehicle="O_MBT_02_cannon_F";
+			vehicle="O_APC_Wheeled_02_rcws_F";
+			lock="UNLOCKED";
 			skill=0.60000002;
 		};
 		class Item35
 		{
-			position[]={5014.269,5,927.86621};
+			position[]={4995.6714,5,909.18311};
 			id=290;
 			side="EMPTY";
-			vehicle="O_APC_Wheeled_02_rcws_F";
+			vehicle="O_Heli_Attack_02_F";
+			lock="UNLOCKED";
 			skill=0.60000002;
+			init="_cargo = [this, ""opfor"", [""parachutes""]] spawn BRM_fnc_assignCargo";
 		};
 		class Item36
 		{
-			position[]={4995.6714,5,909.18311};
+			position[]={5012.6577,5,907.79639};
 			id=291;
 			side="EMPTY";
-			vehicle="O_Heli_Attack_02_F";
+			vehicle="O_Heli_Light_02_v2_F";
+			lock="UNLOCKED";
 			skill=0.60000002;
 			init="_cargo = [this, ""opfor"", [""parachutes""]] spawn BRM_fnc_assignCargo";
 		};
 		class Item37
 		{
-			position[]={5012.6577,5,907.79639};
+			position[]={4999.8262,5,884.51953};
 			id=292;
 			side="EMPTY";
-			vehicle="O_Heli_Light_02_v2_F";
+			vehicle="O_Plane_CAS_02_F";
+			lock="UNLOCKED";
 			skill=0.60000002;
 			init="_cargo = [this, ""opfor"", [""parachutes""]] spawn BRM_fnc_assignCargo";
 		};
 		class Item38
 		{
-			position[]={4999.8262,5,884.51953};
+			position[]={2952.0427,5,971.03857};
 			id=293;
 			side="EMPTY";
-			vehicle="O_Plane_CAS_02_F";
-			skill=0.60000002;
-			init="_cargo = [this, ""opfor"", [""parachutes""]] spawn BRM_fnc_assignCargo";
-		};
-		class Item39
-		{
-			position[]={2952.0427,5,971.03857};
-			id=294;
-			side="EMPTY";
 			vehicle="I_Truck_02_ammo_F";
+			lock="UNLOCKED";
 			skill=0.60000002;
 			init="_cargo = [this, ""indfor"", [""ammo_big"", ""at""]] spawn BRM_fnc_assignCargo";
 		};
-		class Item40
+		class Item39
 		{
 			position[]={2964.4758,5,972.08301};
-			id=295;
+			id=294;
 			side="EMPTY";
 			vehicle="I_Truck_02_fuel_F";
+			lock="UNLOCKED";
 			skill=0.60000002;
 		};
-		class Item41
+		class Item40
 		{
 			position[]={2989.2075,5,971.06689};
-			id=296;
+			id=295;
 			side="EMPTY";
 			vehicle="I_Truck_02_medical_F";
+			lock="UNLOCKED";
 			skill=0.60000002;
 			init="_cargo = [this, ""indfor"", [""medical""]] spawn BRM_fnc_assignCargo";
 		};
-		class Item42
+		class Item41
 		{
 			position[]={2976.9543,5,971.67188};
-			id=297;
+			id=296;
 			side="EMPTY";
 			vehicle="I_Truck_02_box_F";
+			lock="UNLOCKED";
 			skill=0.60000002;
 		};
-		class Item43
+		class Item42
 		{
 			position[]={2950.5706,5,939.39453};
-			id=298;
+			id=297;
 			side="EMPTY";
 			vehicle="I_MRAP_03_F";
+			lock="UNLOCKED";
 			skill=0.60000002;
 			init="_cargo = [this, ""indfor"", [""ammo""]] spawn BRM_fnc_assignCargo";
 		};
-		class Item44
+		class Item43
 		{
 			position[]={2959.3577,5,940.12793};
-			id=299;
+			id=298;
 			side="EMPTY";
 			vehicle="I_MRAP_03_hmg_F";
+			lock="UNLOCKED";
+			skill=0.60000002;
+		};
+		class Item44
+		{
+			position[]={2968.8542,5,939.77686};
+			id=299;
+			side="EMPTY";
+			vehicle="I_MRAP_03_gmg_F";
+			lock="UNLOCKED";
 			skill=0.60000002;
 		};
 		class Item45
 		{
-			position[]={2968.8542,5,939.77686};
+			position[]={2951.4958,5,953.65186};
 			id=300;
 			side="EMPTY";
-			vehicle="I_MRAP_03_gmg_F";
+			vehicle="I_Truck_02_transport_F";
+			lock="UNLOCKED";
 			skill=0.60000002;
+			init="_cargo = [this, ""indfor"", [""ammo""]] spawn BRM_fnc_assignCargo";
 		};
 		class Item46
 		{
-			position[]={2951.4958,5,953.65186};
+			position[]={2962.905,5,954.08643};
 			id=301;
 			side="EMPTY";
-			vehicle="I_Truck_02_transport_F";
+			vehicle="I_Truck_02_covered_F";
+			lock="UNLOCKED";
 			skill=0.60000002;
 			init="_cargo = [this, ""indfor"", [""ammo""]] spawn BRM_fnc_assignCargo";
 		};
 		class Item47
 		{
-			position[]={2962.905,5,954.08643};
+			position[]={2961.009,5,924.7373};
 			id=302;
 			side="EMPTY";
-			vehicle="I_Truck_02_covered_F";
+			vehicle="I_APC_tracked_03_cannon_F";
+			lock="UNLOCKED";
 			skill=0.60000002;
 			init="_cargo = [this, ""indfor"", [""ammo""]] spawn BRM_fnc_assignCargo";
 		};
 		class Item48
 		{
-			position[]={2961.009,5,924.7373};
+			position[]={2974.6301,5,887.08643};
 			id=303;
 			side="EMPTY";
-			vehicle="I_APC_tracked_03_cannon_F";
-			skill=0.60000002;
-			init="_cargo = [this, ""indfor"", [""ammo""]] spawn BRM_fnc_assignCargo";
-		};
-		class Item49
-		{
-			position[]={2974.6301,5,887.08643};
-			id=304;
-			side="EMPTY";
 			vehicle="I_Heli_light_03_unarmed_F";
+			lock="UNLOCKED";
 			skill=0.60000002;
 			init="_cargo = [this, ""indfor"", [""ammo"",""at"",""medical"",""parachutes""]] spawn BRM_fnc_assignCargo";
 		};
-		class Item50
+		class Item49
 		{
 			position[]={2950.1462,5,857.49609};
-			id=305;
+			id=304;
 			side="EMPTY";
 			vehicle="I_Heli_light_03_F";
+			lock="UNLOCKED";
 			skill=0.60000002;
 			init="_cargo = [this, ""indfor"", [""ammo"",""at"",""medical"",""parachutes""]] spawn BRM_fnc_assignCargo";
 		};

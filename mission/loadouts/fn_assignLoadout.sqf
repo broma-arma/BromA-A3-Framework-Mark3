@@ -58,7 +58,7 @@ _isLifeSaver = (_type == "medic")||(_type == "Combat Life Saver");
 _isGrenadier = (_type == "grenadier")||(_type == "Grenadier");
 _isHelicopterPilot = (_type == "helipilot")||(_type == "Helicopter Pilot");
 _isHelicopterCrew = (_type == "helicrew")||(_type == "Helicopter Crew");
-_isEngineer = (_type == "engineer")||(_type == "Engineer");
+_isEngineer = (_type == "engineer")||(_type == "Engineer")||(_type == "Repair Specialist");
 _isCrewman = (_type == "crew")||(_type == "driver")||(_type == "gunner")||(_type == "commander")||(_type == "loader")||(_type == "Crewman");
 _isPilot = (_type == "pilot")||(_type == "Pilot");
 _isRTO = (_type == "RTO")||(_type == "JTAC")||(_type == "Recon JTAC");

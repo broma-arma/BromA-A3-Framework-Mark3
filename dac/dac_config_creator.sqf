@@ -26,6 +26,14 @@ if (mission_AI_controller) then {
     };
 };
 
+_markers = 2;
+_com = [1,2,3,0];
+
+if (isMultiplayer) then {
+    _markers = 0;
+    _com = [0,0,0,0];
+};
+
 //===============|
 // DAC_Settings	 |
 //===============|=============================================================================================|
@@ -37,17 +45,17 @@ if (mission_AI_controller) then {
     if(isNil "DAC_AI_Spawn")            then {		DAC_AI_Spawn		= [[10,5,5],[10,5,15],0,120,250,0]			};
     if(isNil "DAC_Delete_Value") 	then {		DAC_Delete_Value	= [[180,150],[180,150],6000]				};
     if(isNil "DAC_Del_PlayerBody") 	then {		DAC_Del_PlayerBody	= [0,0]							};
-    if(isNil "DAC_Com_Values")          then {		DAC_Com_Values		= [1,2,3,0]						};
+    if(isNil "DAC_Com_Values")          then {		DAC_Com_Values		= _com  						};
     if(isNil "DAC_AI_AddOn")            then {		DAC_AI_AddOn		= 1							};
     if(isNil "DAC_AI_Level")            then {		DAC_AI_Level		= 3							};
     if(isNil "DAC_Res_Side")            then {		DAC_Res_Side		= 0							};
-    if(isNil "DAC_Marker") 		then {		DAC_Marker		= 2							};
+    if(isNil "DAC_Marker") 		then {		DAC_Marker		= _markers              				};
     if(isNil "DAC_WP_Speed")            then {		DAC_WP_Speed		= 0.01							};
     if(isNil "DAC_Join_Action")         then {		DAC_Join_Action		= false							};
     if(isNil "DAC_Fast_Init")           then {		DAC_Fast_Init		= true							};
     if(isNil "DAC_Player_Marker")	then {		DAC_Player_Marker	= false							};
     if(isNil "DAC_Direct_Start")	then {		DAC_Direct_Start	= false							};
-    if(isNil "DAC_Activate_Sound")	then {		DAC_Activate_Sound	= true							};
+    if(isNil "DAC_Activate_Sound")	then {		DAC_Activate_Sound	= false							};
     if(isNil "DAC_Auto_UnitCount")	then {		DAC_Auto_UnitCount	= [20,10]						};
     if(isNil "DAC_Player_Support")	then {		DAC_Player_Support	= [10,[4,2000,3,1000]]					};
     if(isNil "DAC_SaveDistance")	then {		DAC_SaveDistance	= [500,["DAC_Save_Pos"]]				};

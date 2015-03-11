@@ -1,11 +1,12 @@
 <p align="center">
   <a href="https://github.com/Neefay/BromA-A3-Framework-Mark3">
-   <img src="http://puu.sh/eDbHl/2cd8db6b43.png" alt="BromA Framework">
+   <img src="http://puu.sh/gvlTb/65f8e16440.png" alt="BromA Framework">
   </a>
    <br/><br/>
   <a href="https://github.com/Neefay/BromA-A3-Framework-Mark3/commits/master">
     <img src="https://img.shields.io/badge/build-00356-blue.svg" alt="Current version">
   </a>
+  <img src="https://img.shields.io/badge/stable-yes-green.svg" alt="Stable">
 </p>
 
 The **BromA Framework** is a community effort made by the BromA group in order to establish a standard shared across all missions - which could then be customized by the content maker.
@@ -90,6 +91,11 @@ The framework is as context agnostic as possible, meaning you can just change on
 *	- [X] Fix OPFOR/IND callsigns.
 *	- [X] Configure vehicles with loadouts
 *	- [X] Make a list of names and surnames divided by background and assign them to the units.
+*	- [ ] Make sure DAC markers are disabled on MP.
+*	- [ ] Remove DLC Chinook.
+*	- [ ] Add way to have DAC zones support each other.
+*	- [ ] Test  way to have the loading screen count player fps.
+*	- [ ] Repair Specialist loadout is missing.
 *	- [ ] Work on a new framework logo.
 *	- [ ] Design a list of things every mission needs.
 *	- [ ] Comment and document everything.

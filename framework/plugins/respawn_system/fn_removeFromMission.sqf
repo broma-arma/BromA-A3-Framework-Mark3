@@ -5,6 +5,10 @@ if ("agm_plugin" in usedPlugins) then {
     _gear = [_unit] call AGM_Respawn_fnc_getAllGear;
 };
 
+if ("tfar_plugin" in usedPlugins) then {
+    _unit setVariable ["tf_unable_to_use_radio", true];
+};
+
 sleep 1;
 
 removeVest _unit;
@@ -48,6 +52,10 @@ player setVariable ["isDead", false, true];
 
 if ("agm_plugin" in usedPlugins) then {
     [_unit, _gear] call AGM_Respawn_fnc_restoreGear;
+};
+
+if ("tfar_plugin" in usedPlugins) then {
+    _unit setVariable ["tf_unable_to_use_radio", false];
 };
 
 [_unit] joinSilent _oldgrp;

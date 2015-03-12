@@ -15,7 +15,8 @@ private [
 
 			_TypNumber = _this select 0;_TempArray = [];
                         
-_init = { format ["{ [_x, '%1'] spawn BRM_fnc_initAI } forEach units _group;", _this] };
+_initGroup = { format ["{ [_x, '%1'] spawn BRM_fnc_initAI } forEach units _group;", _this] };
+_initUnit = { format ["[_unit, '%1'] spawn BRM_fnc_initAI", _this] };
 
 switch (_TypNumber) do
 {
@@ -43,8 +44,8 @@ switch (_TypNumber) do
                 };
 };
 
-_Events_Unit_S =	[[_loadout call _init],[],[],[],[_loadout call _init],[_loadout call _init],[]];
-_Events_Unit_V = 	[[_loadout call _init],[],[],[],[_loadout call _init],[_loadout call _init],[]];
+_Events_Unit_S =	[[_loadout call _initGroup],[],[],[],[],[_loadout call _initUnit],[]];
+_Events_Unit_V = 	[[_loadout call _initGroup],[],[],[],[],[_loadout call _initUnit],[]];
 _Events_Unit_T = 	[[],[],[],[]];
 _Events_Unit_A = 	[[],[],[],[]];
 _Events_Unit_C = 	[[],[],[],[],[],[]];

@@ -1,7 +1,7 @@
 _unit = _this select 0;
 _killer = _this select 1;
 
-_side = _unit getVariable ["unit_side", CIVILIAN];
+_side = _unit getVariable ["unit_side", side _unit];
 _sideKiller = _killer getVariable ["unit_side", side _killer];
 
 switch (_side) do {

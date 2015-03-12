@@ -67,7 +67,8 @@ class BRM {
         class garrisonUnits{};
         class showText{};
         class colorToHex{};
-        class verboseArray{};        
+        class verboseArray{}; 
+        class addIfNew{};
     };
     class api_zeus {
         file = "framework\engine\functions\api\zeus";

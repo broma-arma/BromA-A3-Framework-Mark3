@@ -5,6 +5,15 @@ if ("loading_screen" in usedPlugins) then {
     waitUntil{!isNil "loading_screen_finished" };
 } else { sleep 0.1 };
 
+_play = true;
+
+if ("respawn_system" in usedPlugins) then {
+    waitUntil{!isNil "player_current_lives" };
+    if (player_current_lives == 0) then { _play = false };
+};
+
+if (!_play) exitWith {};
+
 _posPlayer = [getpos player select 0, getpos player select 1, getpos player select 2];
 
 switch (intro_cutscene) do {

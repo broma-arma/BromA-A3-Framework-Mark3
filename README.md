@@ -4,7 +4,7 @@
   </a>
    <br/><br/>
   <a href="https://github.com/Neefay/BromA-A3-Framework-Mark3/commits/master">
-    <img src="https://img.shields.io/badge/build-00365-blue.svg" alt="Current version">
+    <img src="https://img.shields.io/badge/build-00366-blue.svg" alt="Current version">
   </a>
   <img src="https://img.shields.io/badge/stable-yes-green.svg" alt="Stable">
 </p>
@@ -52,6 +52,9 @@ The framework is as context agnostic as possible, meaning you can just change on
 *	- [X] Test  way to have the loading screen count player fps.
 *	- [X] Repair Specialist loadout is missing.
 *	- [X] Work on a new framework logo.
+*	- [X] BUG: Team Kill not appearing.
+*	- [ ] BUG: Dead players can still reslot.
+*	- [ ] BUG: Dead enemies number isn't right.
 *	- [ ] Design a list of things every mission needs.
 *	- [ ] Comment and document everything.
 

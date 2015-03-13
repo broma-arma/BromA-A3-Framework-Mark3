@@ -12,7 +12,9 @@ if ("respawn_system" in usedPlugins) then {
     if (player_current_lives == 0) then { _play = false };
 };
 
-if (!_play) exitWith {};
+intro_cutscene_over = false;
+
+if (!_play) exitWith { intro_cutscene_over = true };
 
 _posPlayer = [getpos player select 0, getpos player select 1, getpos player select 2];
 
@@ -51,3 +53,5 @@ switch (intro_cutscene) do {
         enableSaving [false, false];
     };
 };
+
+intro_cutscene_over = true;

@@ -89,7 +89,7 @@ TF_give_microdagr_to_soldier = false;
 // ============================================================================
 
 // What units are authorized to ready their team.
-co_lock_units = [blu_0_0_1, op_0_0_1, ind_0_0_1];
+co_lock_units = "[blu_0_0_1, op_0_0_1, ind_0_0_1]";
 
 // If this is enabled, the mission won't start until all sides are ready.
 co_lock_tvt_mode = false;
@@ -162,12 +162,12 @@ spawn_protection_area = 50;
 
 setup_zone_area = 50;
 
-// =============================================================================
+// ============================================================================
 //        This is a list with all playable units, for DAC to use:              |
 //                     add or remove as necessary.                             |
-
+//                                                                             |
 //                 Chances are you can just leave this alone.                  |
-// =============================================================================
+// ============================================================================
 DAC_STRPlayers = [
 //                     ==== BLUFOR 1st PLATOON ====
 

@@ -1,7 +1,9 @@
 
+sleep 3;
+
 #include "settings.sqf"
 
-sleep 1;
+call compile format ["co_lock_units = %1", co_lock_units];
 
 if (co_lock_tvt_mode) then { co_lock_text_select = 1 } else { co_lock_text_select = 0 };
 

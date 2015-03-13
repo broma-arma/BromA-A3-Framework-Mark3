@@ -8,6 +8,7 @@
     _postinit = getText( _path >> "postinit");
     _dependencies = getArray( _path >> "conditions");
     _environment = toUpper(getText( _path >> "user"));
+    _time = (_this select 1);
     
     _loadplugin = true;
     
@@ -15,7 +16,7 @@
     if ((_environment == "CLIENT")&&(!hasInterface)) then { _loadplugin = false };
     
     if (_loadplugin) then {
-        [_preinit,_postinit,_dependencies,_plugin,_environment] spawn {
+        [_preinit,_postinit,_dependencies,_plugin,_environment, _time] spawn {
             waitUntil{!isNil "mission_groups_init"};
             waitUntil{(mission_groups_init)};
                 
@@ -24,6 +25,7 @@
             _deps = _this select 2;
             _plugin = _this select 3;
             _env = _this select 4;
+            _time = _this select 5;
 
             waitUntil{([_deps] call BRM_fnc_getDep)};
 
@@ -33,14 +35,18 @@
             
             _scriptname = "plugin_" + _plugin;
             
-            _scriptpost = _scriptname + "_post";
-            _scriptpre = _scriptname + "_pre";
-            
-            _prepath = format ["framework\plugins\%1\%2", _plugin, _preinit];
-            _postpath = format ["framework\plugins\%1\%2", _plugin, _postinit];
-
-            call compile format ["if (_preinit != '') then { %2 = [_path] execVM '%1' }", _prepath, _scriptpre];
-            call compile format ["if (_postinit != '') then { %2 = [_path] execVM '%1' }", _postpath, _scriptpost];
+            switch (toUpper(_time)) do {
+                case "PRE": {
+                    _scriptpre = _scriptname + "_pre";    
+                    _prepath = format ["framework\plugins\%1\%2", _plugin, _preinit];
+                    call compile format ["if (_preinit != '') then { %2 = [_path] execVM '%1' }", _prepath, _scriptpre];
+                };
+                case "POST": {
+                    _scriptpost = _scriptname + "_post";
+                    _postpath = format ["framework\plugins\%1\%2", _plugin, _postinit];
+                    call compile format ["if (_postinit != '') then { %2 = [_path] execVM '%1' }", _postpath, _scriptpost];
+                };
+            };
         };
     };
 } forEach (_this select 0);

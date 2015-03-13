@@ -6,4 +6,4 @@ _missionName = getText(missionConfigFile >> "Mission" >> "Mission" >> "Intel" >>
 
 startTime = diag_tickTime;
 
-[ENGINE_preinits] call BRM_fnc_startPlugins;
+[ENGINE_preinits, "pre"] call BRM_fnc_startPlugins;

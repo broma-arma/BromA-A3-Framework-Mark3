@@ -55,6 +55,7 @@ The framework is as context agnostic as possible, meaning you can just change on
 *	- [X] BUG: Team Kill not appearing.
 *	- [X] BUG: Dead players can still reslot.
 *	- [X] BUG: Dead enemies number isn't right.
+*	- [ ] Write plugin to prevent reslotting.
 *	- [ ] BUG: Headless Client isn't working again. Seriously, who had that one coming?
 *	- [X] Sync AGM Status and Position per Player ID.
 *	- [ ] Design a list of things every mission needs.

@@ -14,6 +14,7 @@
 #include "spawn_protection\main.cpp"
 #include "setup_zone\main.cpp"
 #include "jip_teleport\main.cpp"
+#include "prevent_reslot\main.cpp"
 #include "ch_view_distance\main.cpp"
 #include "commander_lock\main.cpp"
 #include "civilian_casualty_cap\main.cpp"

@@ -4,7 +4,7 @@
   </a>
    <br/><br/>
   <a href="https://github.com/Neefay/BromA-A3-Framework-Mark3/commits/master">
-    <img src="https://img.shields.io/badge/build-003620-blue.svg" alt="Current version">
+    <img src="https://img.shields.io/badge/build-0037-blue.svg" alt="Current version">
   </a>
   <img src="https://img.shields.io/badge/stable-yes-green.svg" alt="Stable">
 </p>
@@ -55,7 +55,7 @@ The framework is as context agnostic as possible, meaning you can just change on
 *	- [X] BUG: Team Kill not appearing.
 *	- [X] BUG: Dead players can still reslot.
 *	- [X] BUG: Dead enemies number isn't right.
-*	- [ ] Write plugin to prevent reslotting.
+*	- [X] Write plugin to prevent reslotting.
 *	- [ ] BUG: Headless Client isn't working again. Seriously, who had that one coming?
 *	- [X] Sync AGM Status and Position per Player ID.
 *	- [ ] Design a list of things every mission needs.

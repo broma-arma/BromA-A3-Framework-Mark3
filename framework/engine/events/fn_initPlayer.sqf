@@ -1,6 +1,6 @@
-waitUntil{(!isNil "paramsDone")};
 if (!hasInterface) exitWith {};
 waitUntil{!(isNull player)};
+waitUntil{(!isNil "paramsDone")};
 
 ["LOCAL", "F_LOG", format ["INITIALIZING PLAYER '%1' (%2)", name player, player]] call BRM_fnc_doLog;
 

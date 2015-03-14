@@ -1,4 +1,4 @@
-[ENGINE_postinits, "post"] call BRM_fnc_startPlugins;
+[ENGINE_postinits, "post"] spawn BRM_fnc_startPlugins;
 
 [ENGINE_plugins] call BRM_fnc_logPlugins;
 

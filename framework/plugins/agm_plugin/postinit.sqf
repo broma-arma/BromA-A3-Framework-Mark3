@@ -1,3 +1,4 @@
+_path = _this select 0;
 
 // =============================================================================
 //  AGM Revive Time
@@ -14,6 +15,8 @@ publicVariable "mission_revive_time";
 // =============================================================================
 
 #include "settings.sqf"
+
+BRM_fnc_AGM_Revive = compile preprocessFileLineNumbers (_path+"fn_AGM_Revive.sqf");
 
 _center = createCenter sideLogic;
 _group = createGroup _center;

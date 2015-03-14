@@ -17,8 +17,10 @@
     
     if (_loadplugin) then {
         [_preinit,_postinit,_dependencies,_plugin,_environment, _time] spawn {
-            waitUntil{!isNil "mission_groups_init"};
-            waitUntil{(mission_groups_init)};
+            if (hasInterface) then {
+                waitUntil{!isNil "mission_groups_init"};
+                waitUntil{(mission_groups_init)};
+            };
                 
             _preinit = _this select 0;
             _postinit = _this select 1;

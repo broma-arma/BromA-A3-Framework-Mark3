@@ -32,29 +32,27 @@ if (_index >= 0) then {
 
     player setDir (_stats select _count); _count = _count + 1;
     
-    player setPosATL (_stats select _count); _count = _count + 1;
+    _playerPos = (_stats select _count); _count = _count + 1;
     player setDamage (_stats select _count); _count = _count + 1;
     
     _vehicle = (_stats select _count); _count = _count + 1;
     _vehicleSeat = (_stats select _count); _count = _count + 1;
+    _playerGear = (_stats select _count); _count = _count + 1;
     
-    if (_vehicle != vehicle player) then {
-        [-1, { (_this select 0) enableSimulation (_this select 1) }, [_vehicle, false]] call CBA_fnc_globalExecute;
-        switch (_vehicleSeat) do {
-            case "CARGO": { if (_vehicle emptyPositions "cargo" > 0) then { player moveInCargo _vehicle } };
-            case "DRIVER": { if (_vehicle emptyPositions "driver" > 0) then { player moveInDriver _vehicle } };
-            case "GUNNER": { if (_vehicle emptyPositions "gunner" > 0) then { player moveInGunner _vehicle } };
-            case "COMMANDER": { if (_vehicle emptyPositions "commander" > 0) then { player moveInCommander _vehicle } };
-            default {
-                if (_vehicle emptyPositions "cargo" == 0) then {
-                    player moveInCargo _vehicle;
-                } else {
-                    _vehiclePos = getPosATL _vehicle;
-                    player setPosATL [(_vehiclePos select 0) + random(5), (_vehiclePos select 1)  + random(5), 0];
-                };
-            };
+    [player, _playerGear] call BRM_fnc_setGear;
+    
+    [_vehicle, _vehicleSeat] spawn BRM_fnc_moveToVehicle;
+    
+    if (!(vehicle player == _vehicle)) then {
+        while {!(vehicle player == _vehicle) && (alive _vehicle)} do {
+            [_vehicle, _vehicleSeat] spawn BRM_fnc_moveToVehicle;
+            sleep 3;
         };
-        sleep 1;
-        [-1, { (_this select 0) enableSimulation (_this select 1) }, [_vehicle, true]] call CBA_fnc_globalExecute;
+
+        if (!alive _vehicle) then {
+            ["LOCAL", "CHAT", "Your last known vehicle is currently destroyed."] call BRM_fnc_doLog;
+        };
+    } else {
+        player setPos _playerPos;
     };
 };

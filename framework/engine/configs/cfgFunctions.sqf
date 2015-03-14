@@ -69,6 +69,7 @@ class BRM {
         class colorToHex{};
         class verboseArray{}; 
         class addIfNew{};
+        class unitFromName{};
     };
     class api_zeus {
         file = "framework\engine\functions\api\zeus";

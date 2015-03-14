@@ -15,17 +15,18 @@ _sleep = 0.25;
 while {(alive player)} do {
     _player = vehicle player;
     _isDead = player getVariable ["isDead",false];
-    if (_isDead) exitWith {};
     
-    if (_player isKindOf "Land") then {
+    if (!_isDead) then {
+        if (_player isKindOf "Land") then {
 
-        if (!([getPos _player, "ao"] call CBA_fnc_inArea)) then {
-            _pos = [getPos _player, 1, ([_player, _aoPos] call BIS_fnc_dirTo)] call BIS_fnc_relPos;
-            _sleep = 0;
-            
-            call left_ao_do;
-        }
-        else { _sleep = 0.25; };
+            if (!([getPos _player, "ao"] call CBA_fnc_inArea)) then {
+                _pos = [getPos _player, 1, ([_player, _aoPos] call BIS_fnc_dirTo)] call BIS_fnc_relPos;
+                _sleep = 0;
+
+                call left_ao_do;
+            }
+            else { _sleep = 0.25; };
+        };
     };
 
     sleep _sleep;

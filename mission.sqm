@@ -38,8 +38,7 @@ class Mission
 		"A3_Soft_F_Gamma_TruckHeavy",
 		"A3_Soft_F_MRAP_03",
 		"A3_Armor_F_EPB_APC_tracked_03",
-		"A3_Air_F_EPB_Heli_Light_03",
-		"MNP_OPFOR_CONFIG"
+		"A3_Air_F_EPB_Heli_Light_03"
 	};
 	addOnsAuto[]=
 	{
@@ -82,7 +81,7 @@ class Mission
 	randomSeed=13980418;
 	class Intel
 	{
-		briefingName="> SANDBOX 250 - BromA Framework MK 3 BETA 00377";
+		briefingName="> SANDBOX 250 - BromA Framework MK 3 BETA 003719";
 		overviewText="Edit this description with a short explanation and important details about your mission.";
 		startWeather=0.099999994;
 		startWind=0.099999994;

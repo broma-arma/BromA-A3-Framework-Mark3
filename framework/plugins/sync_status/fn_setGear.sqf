@@ -83,22 +83,17 @@ if(format["%1", _backpack] != "") then {
   } forEach _backpackitems;
 };
 
+_assignedItems = _assignedItems - [_binocular];
 
-// primaryWeapon
-if (_primaryweapon != "") then {
-  {
-    _unit addMagazine _x;
-  } forEach _primaryweaponmagazine;
+// items
+{_unit linkItem _x} forEach _assignedItems;
 
-  _unit addWeapon _primaryweapon;
+_unit addWeapon _binocular;
 
-  {
-    if (_x != "") then {
-      _unit addPrimaryWeaponItem _x;
-    };
-  } forEach _primaryweaponitems;
+if ("Laserdesignator" in assignedItems _unit) then {
+  _unit selectWeapon "Laserdesignator";
+  if (currentMagazine _unit == "") then {_unit addMagazine "Laserbatteries";};
 };
-
 
 // secondaryWeapon
 if (_secondaryweapon != "") then {
@@ -115,7 +110,6 @@ if (_secondaryweapon != "") then {
   } forEach _secondaryweaponitems;
 };
 
-
 // handgun
 if (_handgunweapon != "") then {
   {
@@ -131,15 +125,17 @@ if (_handgunweapon != "") then {
   } forEach _handgunweaponitems;
 };
 
+// primaryWeapon
+if (_primaryweapon != "") then {
+  {
+    _unit addMagazine _x;
+  } forEach _primaryweaponmagazine;
 
-_assignedItems = _assignedItems - [_binocular];
+  _unit addWeapon _primaryweapon;
 
-// items
-{_unit linkItem _x} forEach _assignedItems;
-
-_unit addWeapon _binocular;
-
-if ("Laserdesignator" in assignedItems _unit) then {
-  _unit selectWeapon "Laserdesignator";
-  if (currentMagazine _unit == "") then {_unit addMagazine "Laserbatteries";};
+  {
+    if (_x != "") then {
+      _unit addPrimaryWeaponItem _x;
+    };
+  } forEach _primaryweaponitems;
 };

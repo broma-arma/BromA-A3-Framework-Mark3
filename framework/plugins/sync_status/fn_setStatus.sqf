@@ -43,14 +43,11 @@ if (_index >= 0) then {
     
     [_vehicle, _vehicleSeat] spawn BRM_fnc_moveToVehicle;
     
-    if (!(vehicle player == _vehicle)) then {
+    if !(str _vehicle == "<NULL-object>") then {
         while {!(vehicle player == _vehicle) && (alive _vehicle)} do {
             [_vehicle, _vehicleSeat] spawn BRM_fnc_moveToVehicle;
+            if (!alive _vehicle) exitWith { player setPos _playerPos };
             sleep 3;
-        };
-
-        if (!alive _vehicle) then {
-            ["LOCAL", "CHAT", "Your last known vehicle is currently destroyed."] call BRM_fnc_doLog;
         };
     } else {
         player setPos _playerPos;

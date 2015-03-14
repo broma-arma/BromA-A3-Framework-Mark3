@@ -9,5 +9,3 @@ BRM_fnc_createDACZone = compile preprocessFileLineNumbers (_path+"fn_createDACZo
 BRM_fnc_createDACCamp = compile preprocessFileLineNumbers (_path+"fn_createDACCamp.sqf");
 BRM_fnc_scaleUnits = compile preprocessFileLineNumbers (_path+"fn_scaleUnits.sqf");
 BRM_fnc_getDACStat = compile preprocessFileLineNumbers (_path+"fn_getDACStat.sqf");
-
-//["LOCAL","CHAT", "DAC functions compiled."] call BRM_fnc_doLog;

@@ -1,4 +1,8 @@
 
+class CfgFunctions {
+    #include "framework\engine\configs\cfgFunctions.sqf"
+};
+
 #include "mission\mission-info.sqf"
 
 // ============================================================================================
@@ -13,10 +17,6 @@ class Mission {
 
 class Params {
     #include "mission\settings\parameters.sqf"
-};
-
-class CfgFunctions {
-    #include "framework\engine\configs\cfgFunctions.sqf"
 };
 
 class CfgDebriefing {

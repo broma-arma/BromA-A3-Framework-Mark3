@@ -10,8 +10,10 @@ _seats = ["cargo", "gunner", "driver", "commander"] } else { _seats = [_vehicleS
 { call compile format [
 "if (_vehicle emptyPositions '%1' > 0) then { 
 [-1, { (_this select 0) enableSimulation (_this select 1) }, [_vehicle, false]] call CBA_fnc_globalExecute;
+_vehicle allowDamage false;
 player moveIn%1 _vehicle;
-sleep 1;
+sleep 3;
+_vehicle allowDamage true;
 [-1, { (_this select 0) enableSimulation (_this select 1) }, [_vehicle, true]] call CBA_fnc_globalExecute;
 }"
 , _x] } forEach _seats;

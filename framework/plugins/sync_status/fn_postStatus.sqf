@@ -58,7 +58,7 @@ _playerDir = getDir _unit;
 _playerPos = getPosATL _unit;
 _playerDamage = getDammage _unit;
 
-_playerVehicle = vehicle _unit;
+_playerVehicle = _unit getVariable "player_current_vehicle";
 
 switch (true) do {
     case (_unit == commander _playerVehicle): { _playerVehicleSeat = "COMMANDER" };
@@ -67,7 +67,7 @@ switch (true) do {
     default { _playerVehicleSeat = "CARGO" };
 };
 
-_playerGear = [player] call BRM_fnc_getGear;
+_playerGear = _unit getVariable "player_current_gear";
 
 _packetPlayer pushBack _playerDir;
 _packetPlayer pushBack _playerPos;
@@ -76,7 +76,7 @@ _packetPlayer pushBack _playerVehicle;
 _packetPlayer pushBack _playerVehicleSeat;
 _packetPlayer pushBack _playerGear;
 
-[0, { 
+[0, {
      _index = (count mission_player_status);
 
      { if ((_x select 0) == (_this select 0)) then { _index = _forEachIndex } } forEach mission_player_status;

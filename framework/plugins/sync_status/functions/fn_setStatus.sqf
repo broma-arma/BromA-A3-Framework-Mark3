@@ -40,7 +40,7 @@ if (_index >= 0) then {
     _vehicleSeat = (_stats select _count); _count = _count + 1;
     _playerGear = (_stats select _count); _count = _count + 1;
     
-    if (_playerUnit == player) then {
+    if (_playerUnit == str player) then {
         [player, _playerGear] call BRM_SyncStatus_fnc_setGear;
     };
     

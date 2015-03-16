@@ -8,7 +8,7 @@ if (hasInterface) then {
 
         0 spawn {
             player setVariable ["player_current_vehicle", (vehicle player), true];
-            player setVariable ["player_current_unit", player, true];
+            player setVariable ["player_current_unit", str player, true];
             player setVariable ["player_current_gear", [player] call BRM_SyncStatus_fnc_getGear, true];
             while {(alive player)} do {
                 player setVariable ["player_current_gear", [player] call BRM_SyncStatus_fnc_getGear, true];

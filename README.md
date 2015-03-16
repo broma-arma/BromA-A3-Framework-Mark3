@@ -4,7 +4,7 @@
   </a>
    <br/><br/>
   <a href="https://github.com/Neefay/BromA-A3-Framework-Mark3/commits/master">
-    <img src="https://img.shields.io/badge/build-00387-blue.svg" alt="Current version">
+    <img src="https://img.shields.io/badge/build-003813-blue.svg" alt="Current version">
   </a>
   <img src="https://img.shields.io/badge/stable-yes-green.svg" alt="Stable">
 </p>
@@ -60,6 +60,7 @@ The framework is as context agnostic as possible, meaning you can just change on
 *	- [X] Sync AGM Status and Position per Player ID.
 *	- [X] Finish Chair plugin.
 *	- [X] Finish the loading screen.
+*	- [X] Platoon roster names are broken.
 *	- [ ] Start working on the documentation.
 *	- [ ] Design a list of things every mission needs.
 *	- [ ] Comment and document everything.

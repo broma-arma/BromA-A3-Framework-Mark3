@@ -1,4 +1,4 @@
-take_chair_cond = "((_this getVariable ['chair_holding', 'nothing']) == 'nothing')&&!(_target getVariable ['chair_occupied', false])&&!(_this getVariable ['unit_sitting',false])";
+take_chair_cond = "( (((getPos _this) distance (getPos _target)) < 2) && (_this getVariable ['chair_holding', 'nothing']) == 'nothing')&&!(_target getVariable ['chair_occupied', false])&&!(_this getVariable ['unit_sitting',false])";
 
 chair_plugin_chairs = ["Land_CampingChair_V1_F"];
 

@@ -1,8 +1,11 @@
 class CSSA3
 {
+	class init {
+		file = "framework\plugins\cssa3_spectator\functions";
+		class postinit {postInit = 1;};	
+	};
 	class Functions {
 		file = "framework\plugins\cssa3_spectator\functions";
-		class postinit {postInit = 1;};		
 		class classExists {};
 		class draw3DHUD {};
 		class MainSpectateFunctions {};

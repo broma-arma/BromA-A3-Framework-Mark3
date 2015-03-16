@@ -86,3 +86,4 @@ _packetPlayer pushBack _playerGear;
      mission_player_status set [_index, _this];
      publicVariable "mission_player_status";
 }, _packetPlayer] call CBA_fnc_globalExecute;
+

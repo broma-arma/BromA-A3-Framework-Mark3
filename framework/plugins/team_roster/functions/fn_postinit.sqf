@@ -1,6 +1,10 @@
 if !(hasInterface) exitWith {};
-waitUntil{!isNil "mission_groups_init"};
+
+0 spawn {
 if (isNull player) then {waitUntil{!isNull player}};
+
+waitUntil{!isNil "mission_groups_init"};
+waitUntil{(mission_groups_init)};
 
 private ["_orbatText", "_groups", "_precompileGroups"];
 _groups = [];
@@ -56,3 +60,4 @@ _orbatText = "<br/><br/>============= Team Roster =============<br/>";
 } forEach _groups;
 
 player createDiaryRecord ["Diary", ["Team Roster", _orbatText]];
+};

@@ -35,11 +35,14 @@ if (_index >= 0) then {
     _playerPos = (_stats select _count); _count = _count + 1;
     player setDamage (_stats select _count); _count = _count + 1;
     
+    _playerUnit = (_stats select _count); _count = _count + 1;
     _vehicle = (_stats select _count); _count = _count + 1;
     _vehicleSeat = (_stats select _count); _count = _count + 1;
     _playerGear = (_stats select _count); _count = _count + 1;
     
-    [player, _playerGear] call BRM_SyncStatus_fnc_setGear;
+    if (_playerUnit == player) then {
+        [player, _playerGear] call BRM_SyncStatus_fnc_setGear;
+    };
     
     [_vehicle, _vehicleSeat] spawn BRM_SyncStatus_fnc_moveToVehicle;
     

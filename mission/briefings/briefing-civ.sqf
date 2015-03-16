@@ -3,38 +3,6 @@
 // don't forget to add a "<br/"> every time you want to break a line down.
 // =============================================================================
 
-if (!_autoRadio) then {
-    _radioFreqs = 
-    "
-    Alpha - ch.1<br/>
-    Bravo - ch.2<br/>
-    Charlie - ch.3<br/>
-    Delta - ch.4<br/>
-    Zero - ch.9<br/>
-    ";
-};
-
-_radioText = format [ 
-"
--------------------------------------------------------------- <br/>
-=== <font color='#fad425'>SHORT RANGE</font color> ===<br/><br/>
-<font color='#fad425'>Infantry:</font color><br/>
-<br/>
-%1
---------------------------------------------------------------<br/>
-=== <font color='#fad425'>LONG RANGE</font color> ===<br/><br/>
-<font color='#fad425'>Infantry:</font color><br/>
-<br/>
-Main command net: ch.1<br/>
-
-", _radioFreqs];
-
-player createDiaryRecord ["Diary",["
-
-Radio information and Callsigns
-
-",_radioText]];
-
 // =============================================================================
 player createDiaryRecord ["Diary",["
 

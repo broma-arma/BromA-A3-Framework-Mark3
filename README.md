@@ -4,7 +4,7 @@
   </a>
    <br/><br/>
   <a href="https://github.com/Neefay/BromA-A3-Framework-Mark3/commits/master">
-    <img src="https://img.shields.io/badge/build-00386-blue.svg" alt="Current version">
+    <img src="https://img.shields.io/badge/build-00387-blue.svg" alt="Current version">
   </a>
   <img src="https://img.shields.io/badge/stable-yes-green.svg" alt="Stable">
 </p>
@@ -59,8 +59,8 @@ The framework is as context agnostic as possible, meaning you can just change on
 *	- [X] BUG: Headless Client isn't working again. Seriously, who had that one coming?
 *	- [X] Sync AGM Status and Position per Player ID.
 *	- [X] Finish Chair plugin.
+*	- [X] Finish the loading screen.
 *	- [ ] Start working on the documentation.
-*	- [ ] Finish the loading screen.
 *	- [ ] Design a list of things every mission needs.
 *	- [ ] Comment and document everything.
 

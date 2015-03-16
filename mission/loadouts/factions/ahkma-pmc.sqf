@@ -16,7 +16,7 @@ _defaultSide = RESISTANCE;
 _defaultVoice = [_voiceFARSI];
 _defaultFace = [_facePERSIAN, _faceASIAN];
 _defaultName = [_nameARABIC, _nameCHINESE];
-_defaultInsignia = "PATCH_MORALE_WORLD_COMPROMISE";
+_defaultInsignia = "USP_PATCH_MORALE_WORLD_COMPROMISE";
 
 // WEAPONS =====================================================================
 

@@ -83,7 +83,7 @@ class Mission
 	randomSeed=13980418;
 	class Intel
 	{
-		briefingName="> SANDBOX 250 - BromA Framework MK 3 BETA 00382";
+		briefingName="> SANDBOX 250 - BromA Framework MK 3 BETA 00386";
 		overviewText="Edit this description with a short explanation and important details about your mission.";
 		startWeather=0.099999994;
 		startWind=0.099999994;
@@ -4380,7 +4380,7 @@ class Mission
 	};
 	class Vehicles
 	{
-		items=51;
+		items=54;
 		class Item0
 		{
 			position[]={902.72217,5,918.38086};
@@ -4869,13 +4869,39 @@ class Mission
 		};
 		class Item50
 		{
-			position[]={898.16864,5,916.375};
-			azimut=-60.344898;
+			position[]={896.38782,5,916.375};
+			azimut=3.4181499;
 			id=305;
 			side="EMPTY";
 			vehicle="Land_CampingChair_V1_F";
 			skill=0.60000002;
-			init="this addAction [""<t color='#0099FF'>Sit down</t>"",""framework\engine\functions\api\fn_chairSitDown.sqf""]";
+		};
+		class Item51
+		{
+			position[]={897.45953,5,916.3252};
+			azimut=3.4181499;
+			id=306;
+			side="EMPTY";
+			vehicle="Land_CampingChair_V1_F";
+			skill=0.60000002;
+		};
+		class Item52
+		{
+			position[]={895.20062,5,916.39111};
+			azimut=3.4181499;
+			id=307;
+			side="EMPTY";
+			vehicle="Land_CampingChair_V1_F";
+			skill=0.60000002;
+		};
+		class Item53
+		{
+			position[]={894.02985,5,916.42432};
+			azimut=3.4181499;
+			id=308;
+			side="EMPTY";
+			vehicle="Land_CampingChair_V1_F";
+			skill=0.60000002;
 		};
 	};
 	class Markers

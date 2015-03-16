@@ -5,7 +5,7 @@
 		name = "Chair Plugin";
 		version = 1;
 		authors[] = {"Nife","MacRae"};
-		description = "Let's you carry a chair around and sit on it.";
+		description = "Lets you carry a chair around and sit on it.";
 	};
 #endif
 

@@ -10,7 +10,7 @@ _defaultSide = WEST;
 _defaultVoice = [_voiceFARSI];
 _defaultFace = [_facePERSIAN];
 _defaultName = [_nameARABIC];
-_defaultInsignia = "PATCH_AFG_LOCAL_POLICE";
+_defaultInsignia = "USP_PATCH_AFG_LOCAL_POLICE";
 
 // WEAPONS =====================================================================
 

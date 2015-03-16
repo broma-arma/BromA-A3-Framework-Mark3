@@ -1,15 +1,21 @@
 take_chair_cond = "((_this getVariable ['chair_holding', 'nothing']) == 'nothing')&&!(_target getVariable ['chair_occupied', false])&&!(_this getVariable ['unit_sitting',false])";
 
+chair_plugin_chairs = ["Land_CampingChair_V1_F"];
+
 chair_sitting_positions = [
-["Crew", 1], ["ChopperLight_CB_idle1shaky_H", 1.8], ["ChopperHeavy_R_Static_H", 1.8], ["commander_apctracked1aa_H", 2.7],
-["commander_apctracked3_out", 1.7]
+["Crew", 1]
 ];
 
+#include "includes\settings.sqf"
+
 player setVariable ["unit_sitting", false, false];
+player setVariable ["chair_holding", "nothing", false];
 
 if (!isServer) exitWith {};
 
-#include "includes\settings.sqf"
+publicVariable "take_chair_cond";
+publicVariable "chair_plugin_chairs";
+publicVariable "chair_sitting_positions";
 
 chair_plugin_list = nearestObjects [[0,0,0], chair_plugin_chairs, 300000];
 

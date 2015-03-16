@@ -1,3 +1,1 @@
-_unit = _this;
-
-((speed _unit < 15) && (alive _unit))
+((speed _this < 15) && (alive _this) && (vehicle _this == _this))

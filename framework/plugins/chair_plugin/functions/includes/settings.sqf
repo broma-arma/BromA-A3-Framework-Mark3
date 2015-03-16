@@ -1,0 +1,1 @@
+chair_plugin_chairs = ["Land_CampingChair_V1_F"];

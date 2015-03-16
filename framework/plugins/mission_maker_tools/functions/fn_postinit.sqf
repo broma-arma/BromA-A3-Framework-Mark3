@@ -1,5 +1,5 @@
 
-if !(isMultiplayer) exitWith {};
+if (isMultiplayer) exitWith {};
 
 fnc_teleport = {
     #include "mapTeleport.sqf"

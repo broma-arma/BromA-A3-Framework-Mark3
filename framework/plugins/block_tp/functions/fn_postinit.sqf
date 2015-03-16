@@ -1,3 +1,5 @@
+if (true) exitWith {};
+
 if (difficultyEnabled "3rdPersonView") then {
     0 spawn {
         while {(mission_allow_tp_veh != "everyone")} do {

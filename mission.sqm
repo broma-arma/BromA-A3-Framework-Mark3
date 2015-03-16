@@ -83,7 +83,7 @@ class Mission
 	randomSeed=13980418;
 	class Intel
 	{
-		briefingName="> SANDBOX 250 - BromA Framework MK 3 BETA 00381";
+		briefingName="> SANDBOX 250 - BromA Framework MK 3 BETA 00382";
 		overviewText="Edit this description with a short explanation and important details about your mission.";
 		startWeather=0.099999994;
 		startWind=0.099999994;

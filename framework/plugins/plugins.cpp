@@ -5,6 +5,7 @@
 #include "cssa3_spectator\main.cpp"
 #include "block_tp\main.cpp"
 #include "time_accel\main.cpp"
+#include "chair_plugin\main.cpp"
 //#include "f_casualties_cap\main.cpp"
 #include "f_remove_body\main.cpp"
 #include "map_cover\main.cpp"

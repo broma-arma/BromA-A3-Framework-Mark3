@@ -104,7 +104,7 @@ co_lock_tvt_mode = false;
 f_var_removeBodyDelay = 120;
 
 // How far do they have to be from a player.
-f_var_removeBodyDistance = 100;
+f_var_removeBodyDistance = 300;
 
 // ============================================================================
 //                       == F2's CASUALTY CAP ==                               |

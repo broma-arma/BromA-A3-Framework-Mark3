@@ -1,19 +1,15 @@
 class BRM {
     class plugins {
-        file = "framework\engine\functions\engine\plugins";        
-        class doLog{};
-        class loadPlugins{preInit = 1;};
-        class startPlugins{};
-        class logPlugins{};
-        class getDep{};
+        file = "framework\engine\functions\engine\plugins";
+        class logPlugins{postInit = 1;};
     };
     class init {
-        file = "framework\engine\functions\engine";
+        file = "framework\engine\functions\engine\init";
+        class doLog{};
         class setParams{preInit = 1;};
         class loadSettings{preInit = 1;};
         class initVariables{preInit = 1;};
         class engine_pre{preInit = 1;};
-        class engine_post{postInit = 1;};
     };
     class unit {
         file = "framework\engine\functions\engine\unit";        
@@ -29,7 +25,7 @@ class BRM {
         class getSpawnPoint{};
         class stampTime{};
         class syncTime{};
-        class getSideInfo{};
+        class getSideInfo{};        
     };
     class ending {
         file = "framework\engine\functions\engine\ending";

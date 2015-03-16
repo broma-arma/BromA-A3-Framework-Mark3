@@ -1,6 +1,15 @@
 
 class CfgFunctions {
-    #include "framework\engine\configs\cfgFunctions.sqf"
+        #include "framework\engine\configs\cfgFunctions.sqf"
+        #define BRM_PLUGIN_FUNCTIONS
+            #include "framework\plugins\plugins.cpp"
+        #undef BRM_PLUGIN_FUNCTIONS
+        class BRM_endLoading {
+            class Functions {
+                file = "framework\engine\functions\engine\init";
+                class endLoading {postInit = 1;};
+            };
+        };
 };
 
 #include "mission\mission-info.sqf"
@@ -8,7 +17,10 @@ class CfgFunctions {
 // ============================================================================================
 // Load dialog files.
 #include "framework\engine\dialogs\loadDialogs.cpp"
-#include "framework\plugins\cssa3_spectator\header.hpp"
+
+#define BRM_PLUGIN_DIALOGS
+    #include "framework\plugins\plugins.cpp"
+#undef BRM_PLUGIN_DIALOGS
 // ============================================================================================
 
 class Mission {
@@ -16,7 +28,7 @@ class Mission {
 };
 
 class Params {
-    #include "mission\settings\parameters.sqf"
+    #include "params.sqf"
 };
 
 class CfgDebriefing {
@@ -24,9 +36,14 @@ class CfgDebriefing {
 };
 
 class CfgPlugins {
+    #define BRM_PLUGIN_META
     #include "framework\plugins\plugins.cpp"
+    #undef BRM_PLUGIN_META
 };
 
 class cfgNotifications {
     #include "framework\engine\configs\cfgNotifications.sqf"
+    #define BRM_PLUGIN_NOTIFICATIONS
+        #include "framework\plugins\plugins.cpp"
+    #undef BRM_PLUGIN_NOTIFICATIONS
 };

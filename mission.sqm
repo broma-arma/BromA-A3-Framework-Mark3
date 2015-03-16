@@ -38,7 +38,8 @@ class Mission
 		"A3_Soft_F_Gamma_TruckHeavy",
 		"A3_Soft_F_MRAP_03",
 		"A3_Armor_F_EPB_APC_tracked_03",
-		"A3_Air_F_EPB_Heli_Light_03"
+		"A3_Air_F_EPB_Heli_Light_03",
+		"A3_Structures_F_Civ_Camping"
 	};
 	addOnsAuto[]=
 	{
@@ -76,12 +77,13 @@ class Mission
 		"A3_Soft_F_MRAP_03",
 		"A3_Armor_F_EPB_APC_tracked_03",
 		"A3_Air_F_EPB_Heli_Light_03",
+		"A3_Structures_F_Civ_Camping",
 		"map_vr"
 	};
 	randomSeed=13980418;
 	class Intel
 	{
-		briefingName="> SANDBOX 250 - BromA Framework MK 3 BETA 003719";
+		briefingName="> SANDBOX 250 - BromA Framework MK 3 BETA 0038";
 		overviewText="Edit this description with a short explanation and important details about your mission.";
 		startWeather=0.099999994;
 		startWind=0.099999994;
@@ -4378,7 +4380,7 @@ class Mission
 	};
 	class Vehicles
 	{
-		items=50;
+		items=51;
 		class Item0
 		{
 			position[]={902.72217,5,918.38086};
@@ -4864,6 +4866,16 @@ class Mission
 			lock="UNLOCKED";
 			skill=0.60000002;
 			init="_cargo = [this, ""indfor"", [""ammo"",""at"",""medical"",""parachutes""]] spawn BRM_fnc_assignCargo";
+		};
+		class Item50
+		{
+			position[]={898.16864,5,916.375};
+			azimut=-60.344898;
+			id=305;
+			side="EMPTY";
+			vehicle="Land_CampingChair_V1_F";
+			skill=0.60000002;
+			init="this addAction [""<t color='#0099FF'>Sit down</t>"",""framework\engine\functions\api\fn_chairSitDown.sqf""]";
 		};
 	};
 	class Markers

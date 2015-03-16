@@ -26,8 +26,8 @@ if (!_initialized) then {
     _unit addEventHandler ["Hit", BRM_fnc_setHitFace];
     _unit addEventHandler ["Killed", BRM_fnc_onAIKilled];
 
-    if (("civilian_casualty_cap" in usedPlugins)&&(mission_dead_civilian_limit > -1)) then {
-        if (side _unit == civilian) then {
+    if (("civilian_casualty_cap" in usedPlugins)) then {
+        if ((mission_dead_civilian_limit > -1)&&(side _unit == civilian)) then {
             waitUntil{(!isNil"fnc_civFiredWeapon")&&(!isNil"fnc_countCivDeaths")};
 
           _unit addEventHandler ["fired", fnc_civFiredWeapon];

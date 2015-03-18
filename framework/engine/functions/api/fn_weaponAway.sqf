@@ -1,18 +1,29 @@
 /*
- * Author: commy2
- *
- * The unit will put its current weapon away.
- *
- * Argument:
- * 0: What unit should put the current weapon on back? (Object)
- *
- * Return value:
- * None.
- */
+================================================================================
 
-_vehicle = vehicle player;
-if !(player getVariable ["AGM_CanTreat", true]) exitWith {};
+NAME:
+    BRM_fnc_weaponAway
+    
+AUTHOR(s):
+    commy2
 
-sleep 5;
+DESCRIPTION:
+    The unit will put its current weapon away.
 
-player action ["SwitchWeapon", _vehicle, _vehicle, 99];
+PARAMETERS:
+    0 - What unit should put the current weapon on back? (OBJECT)
+    
+USAGE:
+    [player] call BRM_fnc_weaponAway
+    
+RETURNS:
+    Nothing.
+
+================================================================================
+*/
+
+_unit = _this select 0;
+_vehicle = vehicle _unit;
+if !(_unit getVariable ["AGM_CanTreat", true]) exitWith {};
+
+_unit action ["SwitchWeapon", _vehicle, _vehicle, 99];

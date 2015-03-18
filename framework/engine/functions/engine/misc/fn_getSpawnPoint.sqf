@@ -1,3 +1,27 @@
+/*
+================================================================================
+
+NAME:
+    BRM_fnc_getSpawnPoint
+    
+AUTHOR(s):
+    Nife
+
+DESCRIPTION:
+    Returns the unit's respawn point based on its side.
+
+PARAMETERS:
+    0 - Unit (OBJECT)
+    
+USAGE:
+    _myRespawn = [player] call BRM_fnc_getSpawnPoint
+    
+RETURNS:
+    Respawn point name. (STRING)
+
+================================================================================
+*/
+
 private["_ret"];
 _unit = _this select 0;
 

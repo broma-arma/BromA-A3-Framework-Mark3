@@ -1,3 +1,10 @@
+
+// ============================================================================
+//                                                                             |
+//     Initializes all main Framework functions, including inits and API.      |
+//                                                                             |
+// ============================================================================
+
 class BRM {
     class plugins {
         file = "framework\engine\functions\engine\plugins";
@@ -46,7 +53,6 @@ class BRM {
         class initPlayer{postInit = 1;};
         class onPlayerKilled{};
         class onPlayerRespawn{};
-        class onPlayerHasDisconnected{};
         class initAI{};
         class onAIKilled{};
     };

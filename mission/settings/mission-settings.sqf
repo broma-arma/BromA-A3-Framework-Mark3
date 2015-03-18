@@ -1,4 +1,5 @@
 mission_settings_loaded = false;
+
 // ============================================================================
 //                                                                             |
 //    This is where you edit the mission values for your mission, have fun!    |

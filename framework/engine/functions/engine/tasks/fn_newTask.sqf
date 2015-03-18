@@ -1,3 +1,44 @@
+/*
+================================================================================
+
+NAME:
+    BRM_fnc_newTask
+    
+AUTHOR(s):
+    Nife
+
+DESCRIPTION:
+    Adds a new task.
+
+PARAMETERS:
+    0 - Assignees: who will the task be assigned to. (SIDE/GROUP/UNIT)
+    1 - The ID of the task. (STRING)
+    2 - The details of the task. (ARRAY)
+        0 - Task title. (STRING)
+        1 - Description. (STRING)
+    3 - Conditions. (ARRAY)
+        0 - Condition for assignment. (STRING, but must evaluate to BOOLEAN)
+        1 - Condition for completion. (STRING, but must evaluate to BOOLEAN)
+        2 - Condition for failure. (STRING, but must evaluate to BOOLEAN)
+    4 - Mandatory for victory: failure means failure to the rest of the mission.
+    (BOOLEAN)
+    
+USAGE:
+    [
+        side_a_side,
+        "newTaskVIPKill", 
+        ["Kill the VIP.", 
+        "We need to make sure he doesn't spills the beans."],
+        ["(true)","!(alive VIP)", "(VIPhasEscaped)"],
+        true
+    ] spawn BRM_fnc_newTask;
+    
+RETURNS:
+    Nothing.
+
+================================================================================
+*/
+
 _side = _this select 0;
 _id = _this select 1;
 _details = _this select 2;

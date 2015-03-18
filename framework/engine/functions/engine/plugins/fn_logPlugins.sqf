@@ -1,11 +1,32 @@
+/*
+================================================================================
+
+NAME:
+    BRM_fnc_logPlugins
+    
+AUTHOR(s):
+    Nife
+
+DESCRIPTION:
+    Reads and logs all plugins based on their meta-data attributes.
+
+PARAMETERS:
+    Nothing.
+    
+USAGE:
+    [] call BRM_fnc_logPlugins
+    
+RETURNS:
+    Nothing;
+
+================================================================================
+*/
+
 #define LOADED_PLUGINS (missionConfigFile >> "CfgPlugins")
+framework_version = call compile preprocessFile "framework\version.txt";
 
 ENGINE_plugins = [];
-ENGINE_preinits = [];
-ENGINE_postinits = [];
 usedPlugins = [];
-
-framework_version = call compile preprocessFile "framework\version.txt";
 
 for "_i" from 0 to ((count LOADED_PLUGINS) - 1) do {
     private ["_plugin","_preinit","_postinit"];

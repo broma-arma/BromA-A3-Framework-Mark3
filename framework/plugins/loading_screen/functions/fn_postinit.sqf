@@ -22,6 +22,7 @@ if ((!isMultiplayer)||(!hasInterface)) exitWith {};
       _fps = round(diag_fps);
       _timeout = _timeout - 1;
     };
+    sleep 1;
 
     titleText ["", "PLAIN"];
 

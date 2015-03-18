@@ -22,7 +22,7 @@ HeadlessController = mission_AI_controller;
 
 0 spawn {
     waitUntil {!(isNil "mission_AI_controller_name")};
-    ["LOCAL","CHAT", format ["Headless Client is already enabled as %1.", mission_AI_controller_name]] call BRM_fnc_doLog;
+    ["LOCAL","CHAT", format ["AI Controller is currently enabled as %1.", mission_AI_controller_name]] call BRM_fnc_doLog;
 };
 
 if (mission_AI_controller) then {

@@ -1,9 +1,41 @@
+/*
+================================================================================
+
+NAME:
+    BRM_fnc_endingScreen
+    
+AUTHOR(s):
+    Nife
+
+DESCRIPTION:
+    After all stats and personal context is calculated, display everything
+    in a formatted fashion to the player.
+
+PARAMETERS:
+    None.
+    
+USAGE:
+    [] spawn BRM_fnc_endingScreen;
+    
+RETURNS:
+    Nothing.
+
+================================================================================
+*/
+
+// Closes all dialogs
+
 if (dialog) then { closeDialog 0 };
 
 _title = (mission_ending_details select 3);
 _reasonColor = format [(mission_ending_details select 4), (mission_ending_details select 0) select 1, (mission_ending_details select 1) select 1, (mission_ending_details select 6)];
 _reason = format [(mission_ending_details select 4), (mission_ending_details select 0) select 0, (mission_ending_details select 1) select 0, (mission_ending_details select 6)];
 _color = [mission_ending_personal select 1] call BRM_fnc_colorToHex;
+
+// How long to display the screen
+_displayTime = 15;
+
+// How to format time.
 _time = [time, "H:MM:SS"] call CBA_fnc_formatElapsedTime;
 
 _thirdSideStats = "";
@@ -12,6 +44,7 @@ if (mission_enable_side_c) then {
     _thirdSideStats = format ["|| %1 casualties: %2", side_c_name, mission_dead_side_c];
 };
 
+// Formats a player's final score.
 _personalScore = format ["PERSONAL SCORE: %1 kills and %2 deaths. ", player getVariable ["unit_score",0], player getVariable ["unit_deaths",0]];
 
 _endingScreen = format [
@@ -22,7 +55,7 @@ _endingScreen = format [
 // =============================================================================
 
                           "=======  %1  =======" + "\n\n"
-    +                              "%2" + "\n\n"                    // The margin.
+    +                              "%2" + "\n\n"                       // The margin.
     +                      "MISSION STATS:\n\n"
     +           "%3 casualties: %4  ||  %5 casualties: %6 %7" + "\n\n" // Here we take the each side name and the number of casualties
     +                           "%8" + "\n\n"
@@ -43,7 +76,9 @@ _msg = format ["
 <t size='1.3' color='%3'>%1</t><br/>
 <t size='0.8' color='#FFFFFF'>- %2 -</t>"
 ,_title, _reasonColor, _color];
-// =============================================================================    
+// =============================================================================
+
+// Displays the ending screen.
 
 [_msg,-1,-1,15,1] call BIS_fnc_dynamicText;
 
@@ -52,6 +87,6 @@ _msg = format ["
 player enablesimulation false;
 titleText [_endingScreen, "BLACK"];
 
-sleep 15;
+sleep _displayTime;
 
 titleText [" ", "PLAIN DOWN", 2];

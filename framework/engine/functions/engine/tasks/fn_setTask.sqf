@@ -1,3 +1,28 @@
+/*
+================================================================================
+
+NAME:
+    BRM_fnc_setTask
+    
+AUTHOR(s):
+    Nife
+
+DESCRIPTION:
+    Sets a Task's state over the network.
+
+PARAMETERS:
+    0 - Task ID (STRING)
+    1 - Desired state (STRING)
+    
+USAGE:
+    ["myTaskID", "FAILED"] call BRM_fnc_setTask
+    
+RETURNS:
+    Nothing.
+
+================================================================================
+*/
+
 _task = _this select 0;
 _state = _this select 1;
 

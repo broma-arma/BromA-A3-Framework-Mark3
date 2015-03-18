@@ -6,6 +6,14 @@ chair_sitting_positions = [
 ["Crew", 1]
 ];
 
+MAC_fnc_switchMove = {
+    private["_object","_anim"];
+    _object = _this select 0;
+    _anim = _this select 1;
+
+    _object switchMove _anim;
+};
+
 #include "includes\settings.sqf"
 
 player setVariable ["unit_sitting", false, false];

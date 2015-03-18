@@ -1,3 +1,28 @@
+/*
+================================================================================
+
+NAME:
+    BRM_fnc_setParams
+    
+AUTHOR(s):
+    Fer
+
+DESCRIPTION:
+    Reads all mission parameters and assigns them to their attributed variables.
+    Also processes Time and Weather related parameters.
+
+PARAMETERS:
+    None.
+    
+USAGE:
+    [] call BRM_fnc_setParams.
+    
+RETURNS:
+    Nothing.
+
+================================================================================
+*/
+
 0 spawn {
     
 waitUntil{(!isNil "paramsArray")};
@@ -18,9 +43,9 @@ mission_params_read = true;
 
 if (!isServer) exitWith {};
 
-// =============================================================================
-//  Date
-// =============================================================================
+// ============================================================================
+//  Date                                                                       |
+// ============================================================================
 switch (param_time_of_day) do {
     
     // Dawn
@@ -51,9 +76,10 @@ switch (param_time_of_day) do {
     case 8: { setDate [2035, 5, 11, floor(random(23)), floor(random(60))] };
 };
 
-// =============================================================================
-//  Weather conditions
-// =============================================================================
+// ============================================================================
+//  Weather conditions                                                         |
+// ============================================================================
+
 private ["_MissionOvercast","_MissionRain","_MissionRainbow","_MissionLightnings","_MissionWindStr","_MissionWindGusts","_MissionFog","_MissionWaves","_MissionHumidity"];
 
 switch (param_weather) do { 
@@ -221,27 +247,6 @@ switch (param_weather) do {
 
 [] spawn BRM_fnc_stampTime;
 
-// =============================================================================
-//  Enable respawn
-// =============================================================================
-
-switch (param_allow_respawn) do {
-    case 0: { mission_allow_respawn = false };
-    case 1: { mission_allow_respawn = true };
-};
-publicVariable "mission_allow_respawn";
-
-// =============================================================================
-//  Player lives
-// =============================================================================
-
-switch (param_player_lives) do {
-    case 0: { mission_player_lives = 1 };
-    case 1: { mission_player_lives = 3 };
-    case 2: { mission_player_lives = 5 };
-    case 3: { mission_player_lives = 10 };
-};
-publicVariable "mission_player_lives";
-
-paramsDone = true; publicVariable "paramsDone";
+paramsDone = true; 
+publicVariable "paramsDone";
 };

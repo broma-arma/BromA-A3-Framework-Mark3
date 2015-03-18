@@ -1,3 +1,29 @@
+/*
+================================================================================
+
+NAME:
+    BRM_fnc_initPlayer
+    
+AUTHOR(s):
+    Nife
+
+DESCRIPTION:
+    Function called by the player to initialize itself.
+
+PARAMETERS:
+    None. All parameters are taken from the unit's "unitInit" object variable.
+    
+USAGE:
+    [] call BRM_fnc_initPlayer
+    
+RETURNS:
+    Nothing.
+
+================================================================================
+*/
+
+// Waits until initialization is safe. =========================================
+
 if (!hasInterface) exitWith {};
 waitUntil{!(isNull player)};
 waitUntil{(!isNil "paramsDone")};
@@ -6,9 +32,13 @@ waitUntil{(!isNil "paramsDone")};
 
 _initialized = player getVariable ["unit_initialized",false];
 
+// Checks if player hasn't already been initialized. ===========================
+
 if (_initialized) exitWith {};
 
 private["_faction","_role"];
+
+// Reads player's init line. ===================================================
 
 _initUnit = player getVariable ["unitInit", ["white", "*", "*", "*", "*"]];
 _aliasAUTO = ["*","AUTO","ANY"];
@@ -19,11 +49,21 @@ _faction = _initUnit select 1;
 _role = _initUnit select 2;
 _groupName = _initUnit select 3;
 
+// Assigns JIP status. =========================================================
+
 player_is_jip = (time > 0.1);
+
+if (!mission_allow_jip && player_is_jip) exitWith {
+    [player] spawn BRM_fnc_removeJIP;
+};
 
 ["LOCAL", "F_LOG", format ["JIP STATUS: %1 | TIME: %2", player_is_jip, time]] call BRM_fnc_doLog;
 
+// Synchronize time with the server. ===========================================
+
 [] spawn BRM_fnc_syncTime;
+
+// Adds player to relevant lists and registers its original side. ==============
 
 player setVariable ["unit_side", (side player), true];
 
@@ -32,6 +72,8 @@ switch (true) do {
     case (side player == side_b_side): { if !(player in mission_players_B) then { mission_players_B pushBack player; publicVariable "mission_players_B" } };
     case (side player == side_c_side): { if !(player in mission_players_C) then { mission_players_C pushBack player; publicVariable "mission_players_C" } };
 };
+
+// Reads player faction and assigns the unit loadout. ==========================
 
 switch (true) do {
     case (_faction == "side_a"): { _faction = side_a_faction };
@@ -47,17 +89,17 @@ if (toUpper(_role) in _aliasAUTO) then {
     _role = getText (configfile >> "CfgVehicles" >> typeOf player >> "displayName");
 };
 
-if (player_is_jip) then {
-    [player, _groupName, _role] call BRM_fnc_setAlias;
-};
-
 if ((!(_faction in _aliasNONE)) && (!units_player_useVanillaGear)) then {
     [player, _faction, _role] call BRM_fnc_assignLoadout;
 };
 
-if (!mission_allow_jip && player_is_jip) exitWith {
-    [player] spawn BRM_fnc_removeJIP;
+// Assigns alias to other units and groups. ====================================
+
+if (player_is_jip) then {
+    [player, _groupName, _role] call BRM_fnc_setAlias;
 };
+
+// Initializes score related variables. ========================================
 
 _score = 0;
 
@@ -65,6 +107,8 @@ _score = 0;
 
 player setVariable ["unit_score", player getVariable ["unit_score", _score]];
 player setVariable ["unit_deaths", player getVariable ["unit_deaths",0]];
+
+// Assigns AGM related variables. ==============================================
 
 if ("agm_plugin" in usedPlugins) then {
     switch (_role) do {
@@ -74,9 +118,12 @@ if ("agm_plugin" in usedPlugins) then {
     };
 };
 
+// Adds Event Handlers with pre-configured functions. ==========================
+
 player addEventHandler ["Respawn", BRM_fnc_onPlayerRespawn];
 player addEventHandler ["Killed", BRM_fnc_onPlayerKilled];
-["onDisconn", "onPlayerDisconnected", { [_uid,_name] call BRM_fnc_onPlayerHasDisconnected }] call BIS_fnc_addStackedEventhandler;
+
+// Changes the player's assigned color within its group. =======================
 
 [player, _role, toUpper(_groupColor)] spawn {
     _player = _this select 0;
@@ -87,6 +134,8 @@ player addEventHandler ["Killed", BRM_fnc_onPlayerKilled];
 
     [-1, { (_this select 0) assignTeam (_this select 1)}, [_player, _color]] call CBA_fnc_globalExecute;
 };
+
+// Finishes initialization sequence. ===========================================
 
 ["LOCAL", "F_LOG", "PLAYER INITIALIZED"] call BRM_fnc_doLog;
 

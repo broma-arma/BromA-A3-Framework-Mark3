@@ -1,21 +1,35 @@
-	
+/*
+================================================================================
 
-    // Infantry Occupy House
-    // by Zenophon
-    // Released under Creative Commons Attribution-NonCommercial 4.0 International (CC BY-NC 4.0)
-    // http://creativecommons.org/licenses/by-nc/4.0/
-     
-    // Teleports the units to random windows of the building(s) within the distance
-    // Faces units in the right direction and orders them to stand up or crouch on a roof
-    // Units will only fill the building to as many positions as are at windows
-    // Multiple buildings can be filled either evenly or to the limit of each sequentially
-    // Usage : Call
-    // Params: 1. Array, the building(s) nearest this position is used
-    //         2. Array of objects, the units that will garrison the building(s)
-    //         3. Scalar, radius in which to fill building(s), -1 for only nearest building
-    //         4. Boolean, true to put units on the roof, false for only inside
-    //         5. Boolean, true to fill all buildings in radius evenly, false for one by one
-    // Return: Array of objects, the units that were not garrisoned
+NAME:
+    BRM_fnc_garrisonUnits
+    
+AUTHOR(s):
+    Zenophon  
+        Released under Creative Commons Attribution-NonCommercial 4.0 International (CC BY-NC 4.0)
+        http://creativecommons.org/licenses/by-nc/4.0/
+
+DESCRIPTION:
+    Teleports the units to random windows of the building(s) within the distance
+    Faces units in the right direction and orders them to stand up or crouch on a roof
+    Units will only fill the building to as many positions as are at windows
+    Multiple buildings can be filled either evenly or to the limit of each sequentially
+
+PARAMETERS:
+    0 - The building(s) nearest this position is used (ARRAY)
+    1 - Array of objects, the units that will garrison the building(s) (ARRAY)
+    2 - Radius in which to fill building(s), -1 for only nearest building (SCALAR)
+    3 - true to put units on the roof, false for only inside (BOOLEAN)
+    4 - true to fill all buildings in radius evenly, false for one by one (BOOLEAN)
+    
+USAGE:
+    [getMarkerPos "myPosition", myArrayOfUnits, -1, true, true] call BRM_fnc_garrisonUnits
+    
+RETURNS:
+    Array of objects, the units that were not garrisoned (ARRAY)
+
+================================================================================
+*/
      
     #define I(X) X = X + 1;
     #define EYE_HEIGHT 1.53

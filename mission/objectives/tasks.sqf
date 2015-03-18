@@ -1,3 +1,13 @@
+
+// ============================================================================
+//                                                                             |
+//         Use this script to execute the functions related to objectives      |
+//     and tasks, but keep in mind they will only be executed server-side.     |
+//                                                                             |
+//         For more help on the Task system, read the documentation.           |
+//                                                                             |
+// ============================================================================
+
 if (!isServer) exitWith {};
 waitUntil{scriptDone(mission_settings)};
 // =============================================================================
@@ -22,14 +32,7 @@ side_a_side,
 true
 ] spawn BRM_fnc_newTask;
 
-//[
-//side_a_side,
-//"newTaskBLU2", 
-//["Keep the Surfer alive.", 
-//"My description 1"],
-//["(true)","(alive tgt3)", "(not alive tgt3)"],
-//false
-//] spawn BRM_fnc_newTask;
+/*
 
 [
 side_b_side, 
@@ -40,14 +43,15 @@ side_b_side,
 true
 ] spawn BRM_fnc_newTask;
 
-//[
-//side_c_side, 
-//"newTaskIND1", 
-//["Kill the Surfer.", 
-//"My description 1"],
-//["(true)","(not alive tgt3)"],
-//true
-//] spawn BRM_fnc_newTask;
+[
+side_c_side, 
+"newTaskIND1", 
+["Kill the Surfer.", 
+"My description 1"],
+["(true)","(not alive tgt3)"],
+true
+] spawn BRM_fnc_newTask;
+*/
 
 [] spawn BRM_fnc_checkTasks;
 

@@ -1,3 +1,29 @@
+/*
+================================================================================
+
+NAME:
+    BRM_fnc_setAlias
+    
+AUTHOR(s):
+    Nife
+
+DESCRIPTION:
+    Assigns an alias to a unit and its group.
+
+PARAMETERS:
+    0 - Unit. (OBJECT)
+    1 - Group. (GROUP)
+    2 - Unit's role. (STRING)
+    
+USAGE:
+    [] call BRM_fnc_setAlias
+    
+RETURNS:
+    Nothing.
+
+================================================================================
+*/
+
 private ["_side","_number","_sideGroup","_role","_groupName","_groupNameNumber"];
 
 _aliasAUTO = ["*","AUTO","ANY"];

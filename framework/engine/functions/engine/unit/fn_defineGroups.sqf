@@ -1,3 +1,28 @@
+/*
+================================================================================
+
+NAME:
+    BRM_fnc_defineGroups
+    
+AUTHOR(s):
+    Nife
+
+DESCRIPTION:
+    Server-side script that assigns proper callsigns and identification
+    to all units and groups.
+
+PARAMETERS:
+    None.
+    
+USAGE:
+    [] call BRM_fnc_defineGroups
+    
+RETURNS:
+    Nothing.
+
+================================================================================
+*/
+
 if (!isServer) exitWith {};
 
 waitUntil{(!isNil "mission_settings_loaded")};

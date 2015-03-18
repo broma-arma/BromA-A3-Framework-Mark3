@@ -1,3 +1,28 @@
+/*
+================================================================================
+
+NAME:
+    BRM_fnc_handleScore
+    
+AUTHOR(s):
+    Nife
+
+DESCRIPTION:
+    Adds or subtracts the proper score from a unit.
+
+PARAMETERS:
+    0 - Unit killed. (OBJECT)
+    1 - Killer of said unit. (OBJECT)
+    
+USAGE:
+    [player, myKiller] call BRM_fnc_handleScore
+    
+RETURNS:
+    Nothing.
+
+================================================================================
+*/
+
 _unit = _this select 0;
 _killer = _this select 1;
 

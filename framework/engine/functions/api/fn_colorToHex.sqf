@@ -1,3 +1,27 @@
+/*
+================================================================================
+
+NAME:
+    BRM_fnc_colorToHex
+    
+AUTHOR(s):
+    Nife
+
+DESCRIPTION:
+    Converts a color name to its hexadecimal equivalent.
+    
+PARAMETERS:
+    0 - Color name (STRING)
+
+USAGE:
+    myColor = ["red"] call BRM_fnc_colorToHex
+    
+RETURNS:
+    Color hex code (STRING)
+
+================================================================================
+*/
+
 private ["_ret"];
 
 switch (_this select 0) do {

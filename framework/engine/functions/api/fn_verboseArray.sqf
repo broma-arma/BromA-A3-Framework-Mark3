@@ -1,3 +1,28 @@
+/*
+================================================================================
+
+NAME:
+    BRM_fnc_verboseArray
+    
+AUTHOR(s):
+    Nife
+
+DESCRIPTION:
+    Converts an array into an english reading format.
+    
+PARAMETERS:
+    0 - Array (ARRAY)
+
+USAGE:
+    myReadArray = [["Nife","Royal","Knite"]] call BRM_fnc_colorToHex
+    >> "Nife, Royal and Knite"
+    
+RETURNS:
+    Verbosed array (STRING)    
+
+================================================================================
+*/
+
 _array = _this select 0;
 _str = "";
 {

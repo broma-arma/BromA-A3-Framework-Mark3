@@ -1,3 +1,10 @@
+
+// ============================================================================
+//                                                                             |
+//           Include all endings related to your mission here.                 |
+//                                                                             |
+// ============================================================================
+
 #define GROUPLOGO "mission\images\group-logo.paa"
 #define CREDITS "Thank you for playing.<br/><br/>Made with the BromA Framework A3."
 

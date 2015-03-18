@@ -1,5 +1,5 @@
 
-//if (true) exitWith {};
+if (!isMultiplayer) exitWith {};
 if (!isServer) exitWith {};
 
 0 spawn {

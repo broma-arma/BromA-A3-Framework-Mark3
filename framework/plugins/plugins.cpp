@@ -1,3 +1,23 @@
+
+/*
+================================================================================
+
+NAME:
+    Plugin List.
+    
+AUTHOR(s):
+    All collaborators.
+
+DESCRIPTION:
+    This is where the magic happens: simply comment any line you want
+	and the Plugin will be entirely included into the mission.
+
+USAGE:
+    #include "my_plugin\main.cpp"
+
+================================================================================
+*/
+
 #include "agm_plugin\main.cpp"
 #include "tfar_plugin\main.cpp"
 #include "respawn_system\main.cpp"

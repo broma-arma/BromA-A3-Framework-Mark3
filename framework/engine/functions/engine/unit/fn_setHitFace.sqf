@@ -1,5 +1,29 @@
+/*
+================================================================================
+
+NAME:
+    BRM_fnc_setHitFace
+    
+AUTHOR(s):
+    Nife
+
+DESCRIPTION:
+    Changes the expression of a unit who's just been damaged to look either hurt
+    or dead.
+
+PARAMETERS:
+    0 - Unit. (OBJECT)
+    
+USAGE:
+    [player] call BRM_fnc_setHitFace
+    
+RETURNS:
+    Nothing.
+
+================================================================================
+*/
+
 _unit = _this select 0;
-_damage = _this select 2;
 _status = "dead";
 
 [_unit, _status] spawn {

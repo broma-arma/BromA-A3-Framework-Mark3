@@ -1,5 +1,31 @@
+/*
+================================================================================
+
+NAME:
+    BRM_fnc_endingGetContext
+    
+AUTHOR(s):
+    Nife
+
+DESCRIPTION:
+    Decides based on the current ending whether the player is considered
+    victorious or not.
+
+PARAMETERS:
+    None.
+    
+USAGE:
+    [] call BRM_fnc_endingGetContext;
+    
+RETURNS:
+    Nothing.
+
+================================================================================
+*/
 
 private["_titleColor"];
+
+// Stringifies both sides and colors them accordingly.
 
 _fncStringSides = {
     _str = "";
@@ -26,6 +52,8 @@ _fncStringSidesColor = {
     } forEach _this;
     _str
 };
+
+// Sets the values to the relevant variables.
 
 _success = ((side player in (mission_ending_details select 0)) && !(side player in (mission_ending_details select 1)));
 

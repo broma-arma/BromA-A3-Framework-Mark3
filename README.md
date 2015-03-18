@@ -4,7 +4,7 @@
   </a>
    <br/><br/>
   <a href="https://github.com/Neefay/BromA-A3-Framework-Mark3/commits/master">
-    <img src="https://img.shields.io/badge/build-003813-blue.svg" alt="Current version">
+    <img src="https://img.shields.io/badge/build-00391-blue.svg" alt="Current version">
   </a>
   <img src="https://img.shields.io/badge/stable-yes-green.svg" alt="Stable">
 </p>
@@ -22,12 +22,12 @@ Also keeping up with good practices, most functionality is modular and therefore
 *	AGM, TFAR and DAC are fully integrated.
 *	Team killing warning.
 *	Teleporting for the mission maker.
-*	Simple loading screen to avoid desync at mission start.
+*	Loading screen to avoid desync at mission start.
 *	Limit player movement to the AO.
 *	Team Roster.
 *	Respawn system with tickets and respawn waves.
 *	Casualty Cap and Body Removal, taken from the F3 Framework with given credits.
-*	Commander Lock which makes weapons cold.
+*	Commander Lock.
 *	Mission time limit.
 *	Setup Zone for TvTs.
 *	Spawn protection.
@@ -61,7 +61,7 @@ The framework is as context agnostic as possible, meaning you can just change on
 *	- [X] Finish Chair plugin.
 *	- [X] Finish the loading screen.
 *	- [X] Platoon roster names are broken.
-*	- [ ] Start working on the documentation.
+*	- [X] Start working on the documentation.
 *	- [ ] Design a list of things every mission needs.
 *	- [ ] Comment and document everything.
 

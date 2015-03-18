@@ -14,7 +14,7 @@ fnc_stopAI = {
 };
 
 fnc_initAI = {
-    { if (!(isPlayer _x)&&(_x isKindOf "CAManBase")) then { [_x, "auto"] spawn BRM_fnc_initAI }  } forEach allUnits;
+    { if (!(isPlayer _x)&&(_x isKindOf "CAManBase")) then { [_x, "auto"] call BRM_fnc_initAI }  } forEach allUnits;
 };
 
 teleportAction = player addaction ["Teleport", fnc_teleport,"", 0, false, true];

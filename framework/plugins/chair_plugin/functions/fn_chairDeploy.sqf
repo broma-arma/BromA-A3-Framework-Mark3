@@ -1,3 +1,26 @@
+/*
+================================================================================
+
+NAME:
+    BRM_ChairPlugin_chairDeploy
+    
+AUTHOR(s):
+    Nife
+
+DESCRIPTION:
+    Puts down a chair a unit might be carrying.
+    
+PARAMETERS:
+    0 - Player (OBJECT)
+
+USAGE:
+    [player] spawn BRM_ChairPlugin_chairDeploy
+    
+RETURNS:
+    Nothing.
+
+================================================================================
+*/
 
 _unit = _this;
 

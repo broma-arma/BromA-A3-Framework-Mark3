@@ -1,3 +1,27 @@
+/*
+================================================================================
+
+NAME:
+    BRM_fnc_initVariables
+    
+AUTHOR(s):
+    Nife
+
+DESCRIPTION:
+    Initializes all environment variables related to the Framework, such as 
+    units, groups, object arrays and settings.
+
+PARAMETERS:
+    None.
+    
+USAGE:
+    [] call BRM_fnc_initVariables;
+    
+RETURNS:
+    Nothing.
+
+================================================================================
+*/
 
 if (isNil "tasks_a") then { tasks_a = [] };
 if (isNil "tasks_b") then { tasks_b = [] };
@@ -27,9 +51,9 @@ if (isNil "mission_running") then { mission_running = true };
 if (isNil "mission_AI_controller") then { mission_AI_controller = false };
 if (isNil "mission_HC_enabled") then { mission_HC_enabled = false };
 
-// =============================================================================
-//         Initializes all playable units whether they exist or not.
-// =============================================================================
+// ============================================================================
+//         Initializes all playable units whether they exist or not.           |
+// ============================================================================
 
 if(isNil"blu_0_0_1")then{blu_0_0_1=objNull}; if(isNil"blu_0_0_2")then{blu_0_0_2=objNull}; if(isNil"blu_0_0_3")then{blu_0_0_3=objNull};
 
@@ -196,9 +220,9 @@ if(isNil"ind_13_1_5")then{ind_13_1_5=objNull};
 if(isNil"ind_14_2_1")then{ind_14_2_1=objNull}; if(isNil"ind_14_2_2")then{ind_14_2_2=objNull};
 if(isNil"ind_14_2_1")then{ind_14_2_1=objNull}; if(isNil"ind_14_2_2")then{ind_14_2_2=objNull};
 
-// =============================================================================
-//          Initializes all possible groups whether they exist or not.
-// =============================================================================
+// ============================================================================
+//          Initializes all possible groups whether they exist or not.         |
+// ============================================================================
 
 if(isNil"blu_0_0")then{blu_0_0=grpNull}; 
 if(isNil"blu_1_0")then{blu_1_0=grpNull}; if(isNil"blu_1_1")then{blu_1_1=grpNull}; if(isNil"blu_1_2")then{blu_1_2=grpNull};

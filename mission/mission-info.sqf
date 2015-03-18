@@ -1,23 +1,23 @@
 
+// ============================================================================
+//                                                                             |
+//       Edit this file with the relevant information about your mission.      |
+//                                                                             |
+// ============================================================================
+
+// Mission type. ===============================================================
+
 // https://community.bistudio.com/wiki/Multiplayer_Game_Types
 gameType = COOP;
 
-minPlayers = 2;
-maxPlayers = 50;
+// Mission and Author's name, loading description and loading picture. =========
 
 onLoadName = "MISSION NAME";
 author = "MISSION MAKER";
 onLoadMission = "Made with the Broma Framework A3";
 loadScreen = "mission\images\loading-screen.jpg";
-onLoadMissionTime = 0;
 
-respawn = "BASE";
-respawnDialog = 0;
-respawnTemplates[] = {"Base"};
-respawndelay = 4;
-disabledAI = 1;
-enableDebugConsole = 1;
-saving = 0;
+// Disables certain radio channels in the mission. =============================
 
 disableChannels[]={0,1,2};
 
@@ -28,3 +28,17 @@ disableChannels[]={0,1,2};
    4 = Vehicle
    5 = Direct
    6 = System */
+   
+// I don't recommend messing with these. =======================================
+   
+minPlayers = 2;
+maxPlayers = 50;
+respawn = "BASE";
+respawnDialog = 0;
+respawnTemplates[] = {"Base"};
+respawndelay = 4;
+disabledAI = 1;
+enableDebugConsole = 1;
+saving = 0;
+
+// =============================================================================

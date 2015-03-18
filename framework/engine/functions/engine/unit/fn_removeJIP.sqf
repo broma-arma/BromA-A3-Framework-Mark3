@@ -1,3 +1,27 @@
+/*
+================================================================================
+
+NAME:
+    BRM_fnc_removeJIP
+    
+AUTHOR(s):
+    Nife
+
+DESCRIPTION:
+    Displays a message to any players who aren't allowed to Join in Progress.
+
+PARAMETERS:
+    0 - Player (OBJECT)
+    
+USAGE:
+    [player] call BRM_fnc_removeJIP
+    
+RETURNS:
+    Nothing.
+
+================================================================================
+*/
+
 _unit = _this select 0;
 if ("respawn_system" in usedPlugins) then {
     waitUntil{!isNil "BRM_fnc_killPlayer"};

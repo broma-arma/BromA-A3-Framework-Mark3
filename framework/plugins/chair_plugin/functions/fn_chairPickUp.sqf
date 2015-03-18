@@ -1,3 +1,27 @@
+/*
+================================================================================
+
+NAME:
+    BRM_ChairPlugin_chairPickUp
+    
+AUTHOR(s):
+    Nife
+
+DESCRIPTION:
+    Picks up a chair and waits until it's dropped.
+    
+PARAMETERS:
+    0 - Chair (OBJECT)
+    1 - Player (OBJECT)
+
+USAGE:
+    [objChair, player] spawn BRM_ChairPlugin_chairPickUp
+    
+RETURNS:
+    Nothing.
+
+================================================================================
+*/
 
 _chair = _this select 0; 
 _unit = _this select 1; 

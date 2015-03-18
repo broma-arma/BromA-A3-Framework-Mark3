@@ -1,3 +1,31 @@
+/*
+================================================================================
+
+NAME:
+    BRM_fnc_doLog
+    
+AUTHOR(s):
+    Nife
+
+DESCRIPTION:
+    Logs or displays any desired value, targetting any desired environment.
+
+PARAMETERS:
+    0 - Scope or environment where the argument will be logged. (STRING)
+    1 - The type of logging. (STRING)
+    2 - The value to be logged. (ANY)
+    
+USAGE:
+    ["ALL", "HINT", "Loaded the message!"] call BRM_fnc_doLog;
+    ["LOCAL", "LOG", (name player)] call BRM_fnc_doLog;
+    ["SERVER", "F_LOG", "All events initialized."] call BRM_fnc_doLog;
+    
+RETURNS:
+    Nothing.
+
+================================================================================
+*/
+
 private ["_scope","_type","_msg"];
 
 _scope = _this select 0;

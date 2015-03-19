@@ -95,6 +95,13 @@ co_lock_units = "[blu_0_0_1, op_0_0_1, ind_0_0_1]";
 co_lock_tvt_mode = false;
 
 // ============================================================================
+//                        == BLOCK THIRD PERSON ==                             |
+// ============================================================================
+
+// These units will be allowed to use Third Person regardless of settings.
+tp_allowed_units = [];
+
+// ============================================================================
 //                       == F2's BODY REMOVAL ==                               |
 //                                                                             |
 //                    Removes the bodies of dead units.                        |

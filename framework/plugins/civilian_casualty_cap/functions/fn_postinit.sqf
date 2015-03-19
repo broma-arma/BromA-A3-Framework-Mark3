@@ -49,8 +49,19 @@ fnc_countCivDeaths = {
 
     // Checks if the max number of civies is beyond the limit
     if (dead_civilians_side_a >= mission_dead_civilian_limit) then {
-        ["defeat"] call BRM_fnc_callEnding;
+        if (mission_game_mode == "COOP") then {
+            ["defeat"] call BRM_fnc_callEnding;
+        } else {
+            ["side_a_defeat"] call BRM_fnc_callEnding;
+        };
     };
+    if (dead_civilians_side_b >= mission_dead_civilian_limit) then {
+        ["side_b_defeat"] call BRM_fnc_callEnding;
+    };
+    
+    if (dead_civilians_side_c >= mission_dead_civilian_limit) then {
+        ["side_c_defeat"] call BRM_fnc_callEnding;
+    };    
 };
 
 publicVariable "fnc_civFiredWeapon";

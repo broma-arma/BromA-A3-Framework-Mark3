@@ -18,7 +18,7 @@ if (isServer) then {
     publicVariable "co_lock_allSidesReady";
 
     {
-        if (!(side _x in locked_sides)) then {
+        if ((!(side _x in locked_sides))&&!(str _x == "<NULL-object>")) then {
             locked_sides pushBack (side _x);
         };
     } forEach co_lock_units;
@@ -28,6 +28,8 @@ if (isServer) then {
 };
 
 if ( (!(side player in locked_sides)) || !(hasInterface) ) exitWith {};
+
+player_co_locked = true;
 
 if (player in co_lock_units) then {
 
@@ -67,6 +69,7 @@ if (player in co_lock_units) then {
             };
             sleep 0.5;
         };
+        player_co_locked = false;
         player removeEventHandler ["Fired", removeBulletsEH];
     };
 };

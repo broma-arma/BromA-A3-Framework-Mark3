@@ -29,6 +29,8 @@ mission_running = false; publicVariable "mission_running";
 
 // Calls the event globally on both clients and server.
 
+sleep 3;
+
 [-2, {
     private["_ending","_stats","_showEnding","_success"];
 

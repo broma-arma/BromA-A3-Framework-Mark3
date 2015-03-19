@@ -1,7 +1,9 @@
 
 if (difficultyEnabled "3rdPersonView") then {
     0 spawn {
-        while {(mission_allow_tp_veh != "everyone")} do {
+        #include "includes\settings.sqf"
+            
+        while {((mission_allow_tp_veh != "everyone")&&!(player in tp_allowed_units))} do {
             _veh = (vehicle player);
             _inVeh = (_veh != player);
             _isTP = (cameraView == "EXTERNAL");

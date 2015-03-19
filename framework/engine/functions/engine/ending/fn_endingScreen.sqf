@@ -23,7 +23,7 @@ RETURNS:
 ================================================================================
 */
 
-// Closes all dialogs
+// Closes all dialogs ==========================================================
 
 if (dialog) then { closeDialog 0 };
 
@@ -32,10 +32,12 @@ _reasonColor = format [(mission_ending_details select 4), (mission_ending_detail
 _reason = format [(mission_ending_details select 4), (mission_ending_details select 0) select 0, (mission_ending_details select 1) select 0, (mission_ending_details select 6)];
 _color = [mission_ending_personal select 1] call BRM_fnc_colorToHex;
 
-// How long to display the screen
+// How long to display the screen ==============================================
+
 _displayTime = 15;
 
-// How to format time.
+// How to format time. =========================================================
+
 _time = [time, "H:MM:SS"] call CBA_fnc_formatElapsedTime;
 
 _thirdSideStats = "";
@@ -44,7 +46,8 @@ if (mission_enable_side_c) then {
     _thirdSideStats = format ["|| %1 casualties: %2", side_c_name, mission_dead_side_c];
 };
 
-// Formats a player's final score.
+// Formats a player's final score. =============================================
+
 _personalScore = format ["PERSONAL SCORE: %1 kills and %2 deaths. ", player getVariable ["unit_score",0], player getVariable ["unit_deaths",0]];
 
 _endingScreen = format [
@@ -78,7 +81,11 @@ _msg = format ["
 ,_title, _reasonColor, _color];
 // =============================================================================
 
-// Displays the ending screen.
+// Displays the ending screen. =================================================
+
+[0,2,false,true] call BIS_fnc_cinemaBorder;
+
+sleep 3;
 
 [_msg,-1,-1,15,1] call BIS_fnc_dynamicText;
 
@@ -86,6 +93,7 @@ _msg = format ["
 
 player enablesimulation false;
 titleText [_endingScreen, "BLACK"];
+[1,1,false,true] call BIS_fnc_cinemaBorder;
 
 sleep _displayTime;
 

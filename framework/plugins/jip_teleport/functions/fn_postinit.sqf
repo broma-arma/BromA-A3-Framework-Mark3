@@ -77,4 +77,8 @@ Revive_Keypressedcode = {
 	false;
 };
 
+if ("intros" in usedPlugins) then {
+    waitUntil{(intro_cutscene_over)};
+};
+
 [] spawn Revive_TelepSquad;

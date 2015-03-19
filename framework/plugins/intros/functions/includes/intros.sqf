@@ -30,3 +30,7 @@ case "CINEMA": {
 
     enableSaving [false, false];
 };
+
+case "CUSTOM": {
+
+};

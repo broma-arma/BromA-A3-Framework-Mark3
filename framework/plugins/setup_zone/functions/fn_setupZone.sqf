@@ -14,7 +14,13 @@ if (isServer) then { // server
     _side = _this select 1;
     _startedVarName = _this select 2;
     
-    sleep _time; // wait for setup to end
+    if ("commander_lock" in usedPlugins) then {
+        if (co_lock_tvt_mode) then {
+            waitUntil{(co_lock_allSidesReady)};
+        };
+    } else {    
+        sleep _time; // wait for setup to end
+    };
     
     missionNamespace setVariable [_startedVarName, true];
     publicVariable _startedVarName;
@@ -41,12 +47,18 @@ if (!isDedicated) then { // player
       if (_side == side_c_side) then { _name setMarkerColorLocal "color"+side_c_color };
 
       // make barrier
-      _barrierHandle = [_pos, _radius, _radius, _dir, "rectangle", "You cannot leave the setup area until the time is over."] call BRM_fnc_register_zone;
+      _barrierHandle = [_pos, _radius, _radius, _dir, "rectangle", "You cannot leave the setup area until the time is over."] call BRM_SetupZone_fnc_registerZone;
       
       sleep 5;
       _timetype = "";
-      if (_time < 60) then { _timetype = "seconds" } else { _timetype = "minutes" };
-      ["MissionBegins",[(str _time)+" "+_timetype]] call bis_fnc_showNotification;
+      if !("commander_lock" in usedPlugins) then {
+              if (_time < 60) then { _timetype = "seconds" } else { _timetype = "minutes" };
+              ["MissionBegins",[(str _time)+" "+_timetype]] call bis_fnc_showNotification;
+      } else {
+        if (co_lock_tvt_mode) then {
+            ["Alert",["The mission will begin when all teams are ready."]] call bis_fnc_showNotification;
+        };
+      };
       
       [_startedVarName, _barrierHandle, _name] spawn {
         _startedVarName = _this select 0;
@@ -57,7 +69,11 @@ if (!isDedicated) then { // player
 
         sandi_barrier_barriers set [_barrierHandle, 0];
         deleteMarkerLocal _markerName;
-        ["Alert",["Mission is starting!"]] call bis_fnc_showNotification;
+        if !("commander_lock" in usedPlugins) then {
+            if (co_lock_tvt_mode) then {
+                ["Alert",["Mission is starting!"]] call bis_fnc_showNotification;  
+            };            
+        };        
       };
     };
   };

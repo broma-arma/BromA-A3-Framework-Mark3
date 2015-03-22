@@ -157,7 +157,7 @@ friendly_fire_count_AI = false;
 // ============================================================================
 
 // How long players have until their current slot is locked (in seconds).
-mission_preventreslot_timer = 5 * 60;
+mission_preventreslot_timer = 5*60;
 
 // ============================================================================
 //                            == CIVILIAN CAP ==                               |

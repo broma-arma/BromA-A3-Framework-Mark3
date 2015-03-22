@@ -55,7 +55,9 @@ _fncStringSidesColor = {
 
 // Sets the values to the relevant variables.
 
-_success = ((side player in (mission_ending_details select 0)) && !(side player in (mission_ending_details select 1)));
+_side = player getVariable ["unit_side", side player];
+
+_success = ((_side in (mission_ending_details select 0)) && !(_side in (mission_ending_details select 1)));
 
 if (_success) then { _titleColor = "green" } else { _titleColor = "red" };
 

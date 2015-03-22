@@ -83,7 +83,7 @@ class Mission
 	randomSeed=13980418;
 	class Intel
 	{
-		briefingName="> SANDBOX 250 - BromA Framework MK 3 BETA 0040";
+		briefingName="> SANDBOX 250 - BromA Framework MK 3 BETA 0042";
 		overviewText="Edit this description with a short explanation and important details about your mission.";
 		startWeather=0.099999994;
 		startWind=0.099999994;
@@ -4359,8 +4359,8 @@ class Mission
 					leader=1;
 					skill=1;
 					text="civ_0_0_1";
-					init="this setVariable [""unitInit"",[""white"",""SPRG"",""reporter"",""SPRG News""], true];";
-					description="SPRG News - Reporter";
+					init="this setVariable [""unitInit"",[""white"",""SPRG"",""reporter"",""SPRG Report""], true];";
+					description="SPRG Report - Reporter";
 				};
 				class Item1
 				{
@@ -4372,8 +4372,8 @@ class Mission
 					player="PLAY CDG";
 					skill=1;
 					text="civ_0_0_2";
-					init="this setVariable [""unitInit"",[""white"",""SPRG"",""cameraman"",""SPRG News""], true];";
-					description="SPRG News - Cameraman";
+					init="this setVariable [""unitInit"",[""white"",""SPRG"",""cameraman"",""SPRG Report""], true];";
+					description="SPRG Report - Cameraman";
 				};
 			};
 		};
@@ -4943,7 +4943,7 @@ class Mission
 	};
 	class Sensors
 	{
-		items=7;
+		items=2;
 		class Item0
 		{
 			position[]={949.35413,5,950.07275};
@@ -4959,69 +4959,12 @@ class Mission
 		};
 		class Item1
 		{
-			position[]={448.38052,5,950.48877};
-			a=250;
-			b=250;
-			interruptable=1;
-			age="UNKNOWN";
-			name="z1";
-			expCond="mission_ai_controller && time > 3";
-			class Effects
-			{
-			};
-		};
-		class Item2
-		{
 			position[]={1049.8856,5,950.10645};
 			interruptable=1;
 			age="UNKNOWN";
 			name="oz1";
 			expCond="false";
 			expActiv="obj = [""oz1"",10,0,0,5,0,[],""""] spawn DAC_Objects";
-			class Effects
-			{
-			};
-		};
-		class Item3
-		{
-			position[]={649.82288,5,1849.9473};
-			interruptable=1;
-			age="UNKNOWN";
-			name="trg_4";
-			expCond="mission_ai_controller && time > 3";
-			class Effects
-			{
-			};
-		};
-		class Item4
-		{
-			position[]={449.86676,5,1550.8394};
-			interruptable=1;
-			age="UNKNOWN";
-			name="trg_1";
-			expCond="mission_ai_controller && time > 3";
-			class Effects
-			{
-			};
-		};
-		class Item5
-		{
-			position[]={750.02722,5,1450.0479};
-			interruptable=1;
-			age="UNKNOWN";
-			name="trg_2";
-			expCond="mission_ai_controller && time > 3";
-			class Effects
-			{
-			};
-		};
-		class Item6
-		{
-			position[]={949.54462,5,1650.0469};
-			interruptable=1;
-			age="UNKNOWN";
-			name="trg_3";
-			expCond="mission_ai_controller && time > 3";
 			class Effects
 			{
 			};

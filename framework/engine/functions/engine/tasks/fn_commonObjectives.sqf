@@ -43,20 +43,3 @@ gl_fnc_checkCasualties = {
 	} count allUnits;
 	_aliveCount < (_totalCount * ((_limit - 1) / 100))
 };
-
-brm_fnc_tasksState = {
-    private ["_tasks","_state","_return","_count"];
-    _tasks = _this select 0;    
-    _return = "ongoing";
-    _count = 0;
-    {
-        switch([_x] call BIS_fnc_taskState) do {
-            case "failed": { _count = -1 };
-            case "succeeded": { _count = _count + 1 };
-        };
-        player sidechat str ([_x] call BIS_fnc_taskState);
-    } forEach _tasks;
-    if (_count == (count _tasks)) then { _return = "succeeded" };
-    if (_count == -1) then { _return = "failed" };    
-    _return
-};

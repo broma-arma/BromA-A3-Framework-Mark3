@@ -1,3 +1,4 @@
+0 spawn {
 #include "includes\settings.sqf"
 
 call compile format ["co_lock_units = %1", co_lock_units];
@@ -72,4 +73,5 @@ if (player in co_lock_units) then {
         player_co_locked = false;
         player removeEventHandler ["Fired", removeBulletsEH];
     };
+};
 };

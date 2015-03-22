@@ -1,7 +1,7 @@
 
 // INFO ========================================================================
 /*
-    SPRG News is the most dedicated team of impetious war-crawlers, ready to turn
+    SPRG Report is the most dedicated team of impetious war-crawlers, ready to turn
     massacres and genocides into coverage for the highest paying news station.
     Ever since the conflict between CSAT and NATO broke out, their schedule has
     been very, very busy.

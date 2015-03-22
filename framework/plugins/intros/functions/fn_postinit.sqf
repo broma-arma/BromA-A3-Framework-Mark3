@@ -1,9 +1,10 @@
 if ((!isMultiplayer)||(!hasInterface)) exitWith {};
 
+intro_cutscene_over = false;
+
 0 spawn {
     
 _play = true;
-intro_cutscene_over = false;
 
 if (isNil "intro_cutscene") then { intro_cutscene = "ESTABLISHING" };
 

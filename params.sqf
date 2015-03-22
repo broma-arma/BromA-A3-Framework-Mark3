@@ -16,7 +16,7 @@
         title = "Time";
         values[] = {0,1,2,3,4,5,6,7,8};
         texts[] = {"Dawn","Early morning","Morning","Noon","Afternoon","Evening","Dusk","Night","Random"};
-        default = 4;
+        default = 1;
         code = "param_time_of_day = %1";
     };
     
@@ -25,7 +25,7 @@
         title = "Weather";
         values[] = {0,1,2,3,4,5,6,7,8,9,10,11};
         texts[] = {"Clear (Calm)","Clear (Light Winds)","Clear (Strong Winds)","Overcast (Calm)","Overcast (Light Winds)","Overcast (Strong Winds)","Rain (Light Winds)","Rain (Strong Winds)","Storm","Light Fog","Heavy Fog","Random"};
-        default = 11;
+        default = 1;
         code = "param_weather = %1";
     };
 

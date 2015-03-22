@@ -73,6 +73,7 @@ _playerGear = _unit getVariable "player_current_gear";
 _packetPlayer pushBack _playerDir;
 _packetPlayer pushBack _playerPos;
 _packetPlayer pushBack _playerDamage;
+
 _packetPlayer pushBack _playerUnit;
 _packetPlayer pushBack _playerVehicle;
 _packetPlayer pushBack _playerVehicleSeat;

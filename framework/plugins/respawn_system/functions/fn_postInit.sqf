@@ -1,6 +1,5 @@
 
 if (hasInterface) then {
-    waitUntil{!(isNull player)};
     
     player_current_lives = [player] call BRM_RespawnSystem_fnc_getLives;
 

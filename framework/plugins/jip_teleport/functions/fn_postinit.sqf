@@ -1,9 +1,10 @@
 if !(hasInterface) exitWith {};
 if !(player_is_jip) exitWith {};
 
+0 spawn {
+
 Revive_TelepSquad = { 
 	Private["_revive_Keypressed"];
-	sleep 5;
 	if (alive player) then {
 		_revive_Keypressed = (findDisplay 46) displayAddEventHandler ["KeyUp","_this call Revive_Keypressedcode"];
                 cutText ["Press the SPACE BAR within the next 5 minutes to teleport with your squad/allies.","PLAIN DOWN",2];
@@ -55,7 +56,6 @@ Revive_Keypressedcode = {
 
                         if (_vehtg == _target) then { player setPosATL _tmpos; _done = true } else {
                             _vehtg engineOn true;
-                            sleep 1;                            
                             switch(true) do {
                                 case (_vehtg emptyPositions "driver" > 0) : { player moveinDriver _vehtg; _done = true };
                                 case (_vehtg emptyPositions "commander" > 0) : { player moveinCommander _vehtg; _done = true };
@@ -77,8 +77,6 @@ Revive_Keypressedcode = {
 	false;
 };
 
-if ("intros" in usedPlugins) then {
-    waitUntil{(intro_cutscene_over)};
+    sleep 20;
+    [] spawn Revive_TelepSquad;
 };
-
-[] spawn Revive_TelepSquad;

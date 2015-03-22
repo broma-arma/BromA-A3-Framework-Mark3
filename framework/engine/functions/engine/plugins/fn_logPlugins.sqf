@@ -28,19 +28,18 @@ framework_version = call compile preprocessFile "framework\version.txt";
 ENGINE_plugins = [];
 usedPlugins = [];
 
+plugins_loaded = false;
+
 for "_i" from 0 to ((count LOADED_PLUGINS) - 1) do {
     private ["_plugin","_preinit","_postinit"];
     _plugin = configName(LOADED_PLUGINS select _i);
-    _preinit = getText((missionConfigFile >> "CfgPlugins") >> _plugin >> "preinit");
-    _postinit = getText((missionConfigFile >> "CfgPlugins") >> _plugin >> "postinit");
-    
+
     usedPlugins pushBack _plugin;
-    
-    if (_preinit != "") then { ENGINE_preinits pushBack (LOADED_PLUGINS select _i) };
-    if (_postinit != "") then { ENGINE_postinits pushBack (LOADED_PLUGINS select _i) };
-    
+
     ENGINE_plugins pushBack (LOADED_PLUGINS select _i);
 };
+
+plugins_loaded = true;
 
 FRAMEWORK_DIARY = "framework_diary";
 player createDiarySubject [FRAMEWORK_DIARY,"Framework"];

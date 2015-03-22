@@ -21,7 +21,7 @@ switch (toUpper(_faction)) do {
     };
     
     case "SPRG": {
-        #include "factions\sprg-news.sqf" 
+        #include "factions\sprg-report.sqf" 
     };
 
     case "DEFAULT": { 

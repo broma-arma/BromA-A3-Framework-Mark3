@@ -1,6 +1,11 @@
-if (hasInterface) then {
-    0 spawn {
-        waitUntil{!(isNull player)};
+if (isServer) then {
+    mission_player_status = [];
+    
+    addMissionEventHandler ["HandleDisconnect", BRM_SyncStatus_fnc_postStatus];
+};
+
+0 spawn {
+    if (hasInterface) then {    
 
         sleep 3;
 

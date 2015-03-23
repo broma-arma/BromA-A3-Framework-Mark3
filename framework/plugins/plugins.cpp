@@ -18,6 +18,8 @@ USAGE:
 ================================================================================
 */
 
+//#include "prevent_reslot\main.cpp"
+
 #include "headless_client\main.cpp"
 #include "dac_plugin\main.cpp"
 #include "agm_plugin\main.cpp"
@@ -33,7 +35,6 @@ USAGE:
 #include "map_cover\main.cpp"
 #include "spawn_protection\main.cpp"
 #include "setup_zone\main.cpp"
-#include "prevent_reslot\main.cpp"
 #include "ch_view_distance\main.cpp"
 #include "civilian_casualty_cap\main.cpp"
 #include "time_limit\main.cpp"

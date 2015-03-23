@@ -65,7 +65,7 @@ The framework is as context agnostic as possible, meaning you can just change on
 *	- [ ] Design a list of things every mission needs.
 *	- [ ] Comment and document everything.
 *	- [ ] Make loadouts for several mission themes.
-	- USM (Marines)
+	- [X]USM (Marines)
 
 NEED HELP TO TEST:
 

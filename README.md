@@ -66,6 +66,9 @@ The framework is as context agnostic as possible, meaning you can just change on
 *	- [ ] Comment and document everything.
 *	- [ ] Make loadouts for several mission themes.
 	- [X] USM (Marines)
+	- [X] Takistani Militia (Taliban/Middle East Militia)
+	- [ ] PMC (Generic PMC)
+	- [ ] Chedaki (Eastern Militia)
 
 NEED HELP TO TEST:
 

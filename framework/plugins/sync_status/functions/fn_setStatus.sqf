@@ -26,8 +26,16 @@ if (_index >= 0) then {
         player setVariable ["AGM_Painkiller", (_stats select _count), true]; _count = _count + 1;
         player setVariable ["AGM_Pain", (_stats select _count), true]; _count = _count + 1;
 
-        player setVariable ["AGM_isUnconscious", (_stats select _count), true]; _count = _count + 1;
+        _isUncon = (_stats select _count); _count = _count + 1;
+        
+        if (_isUncon) then {
+            [player] call AGM_Medical_fnc_knockOut;
+        } else {
+            [player] call AGM_Medical_fnc_wakeUp;
+        };
+        
         player setVariable ["AGM_isOverdosing", (_stats select _count), true]; _count = _count + 1;
+        player setVariable ["AGM_hasEarPlugsIn", (_stats select _count), true]; _count = _count + 1;
     };
 
     player setDir (_stats select _count); _count = _count + 1;

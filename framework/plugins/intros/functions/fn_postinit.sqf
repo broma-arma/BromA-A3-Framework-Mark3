@@ -1,4 +1,6 @@
-if ((!isMultiplayer)||(!hasInterface)) exitWith {};
+if ((!isMultiplayer)||(!hasInterface)) exitWith { intro_cutscene_over = true; };
+
+if (player_is_jip) exitWith { intro_cutscene_over = true; };
 
 intro_cutscene_over = false;
 

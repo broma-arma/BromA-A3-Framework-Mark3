@@ -1,8 +1,9 @@
 
-private ["_unit", "_uid"];
+private ["_unit", "_uid","_name"];
 
 _unit = _this select 0;
 _uid = _this select 2;
+_name = _this select 3;
 
 private 
 ["_tfarGlobalVolume", "_tfarVoiceVolume", "_tfarAbleUseRadio", 
@@ -44,6 +45,7 @@ if ("agm_plugin" in usedPlugins) then {
 
     _agmIsUnconscious = _unit getVariable ["AGM_isUnconscious", false];
     _agmIsOverdosing = _unit getVariable ["AGM_isOverdosing", false];
+    _agmEarplugs = _unit getVariable ["AGM_hasEarPlugsIn", false];
 
     _packetPlayer pushBack _agmCaptive;
     _packetPlayer pushBack _agmBlood;
@@ -52,6 +54,7 @@ if ("agm_plugin" in usedPlugins) then {
     _packetPlayer pushBack _agmPain;
     _packetPlayer pushBack _agmIsUnconscious;
     _packetPlayer pushBack _agmIsOverdosing;
+    _packetPlayer pushBack _agmEarplugs;
 };
 
 _playerDir = getDir _unit;
@@ -68,7 +71,7 @@ switch (true) do {
     default { _playerVehicleSeat = "CARGO" };
 };
 
-_playerGear = _unit getVariable "player_current_gear";
+_playerGear = [_unit] call BRM_SyncStatus_fnc_getGear;
 
 _packetPlayer pushBack _playerDir;
 _packetPlayer pushBack _playerPos;
@@ -79,12 +82,12 @@ _packetPlayer pushBack _playerVehicle;
 _packetPlayer pushBack _playerVehicleSeat;
 _packetPlayer pushBack _playerGear;
 
-[0, {
-     _index = (count mission_player_status);
+ _index = (count mission_player_status);
 
-     { if ((_x select 0) == (_this select 0)) then { _index = _forEachIndex } } forEach mission_player_status;
+ { if ((_x select 0) == (_packetPlayer select 0)) then { _index = _forEachIndex } } forEach mission_player_status;
 
-     mission_player_status set [_index, _this];
-     publicVariable "mission_player_status";
-}, _packetPlayer] call CBA_fnc_globalExecute;
+ ["LOCAL", "CHAT", format ["PLAYER %1 DISCONNECTED: %2", _name, str _packetPlayer]] call BRM_fnc_doLog;
+ ["LOCAL", "LOG", format ["PLAYER %1 DISCONNECTED: %2", _name, str _packetPlayer]] call BRM_fnc_doLog;
 
+ mission_player_status set [_index, _packetPlayer];
+ publicVariable "mission_player_status";

@@ -1,10 +1,10 @@
 
 // VOICES ======================================================================
 
-_voiceALTIAN = ["Male01GRE","Male02GRE","Male03GRE","Male04GRE","Male05GRE","Male06GRE"];
-_voiceAMERICAN = ["Male01ENG","Male02ENG","Male03ENG","Male04ENG","Male05ENG","Male06ENG","Male07ENG","Male08ENG","Male09ENG","Male10ENG","Male11ENG","Male12ENG"];
-_voiceBRITISH = ["Male01ENGB","Male02ENGB","Male03ENGB","Male04ENGB","Male05ENGB"];
-_voiceFARSI = ["Male01PER","Male02PER","Male03PER","Male04PER"];
+_voiceALTIAN = ["Male01GRE","Male02GRE","Male03GRE","Male04GRE","Male05GRE"];
+_voiceAMERICAN = ["Male01ENG","Male02ENG","Male03ENG","Male04ENG","Male05ENG","Male06ENG","Male07ENG","Male08ENG","Male09ENG","Male10ENG","Male11ENG"];
+_voiceBRITISH = ["Male01ENGB","Male02ENGB","Male03ENGB","Male04ENGB"];
+_voiceFARSI = ["Male01PER","Male02PER","Male03PER"];
 _voiceRUSSIAN = ["rhs_Male01RUS","rhs_Male02RUS","rhs_Male03RUS","rhs_Male04RUS","rhs_Male05RUS"];
 
 _allVoices = [_voiceALTIAN, _voiceAMERICAN, _voiceBRITISH, _voiceFARSI, _voiceRUSSIAN];

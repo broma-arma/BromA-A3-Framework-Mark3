@@ -46,6 +46,8 @@ sleep 3;
     // Players wait until server is finished.
     waitUntil{!isNil "mission_ending_details"};
     
+    player allowDamage false;
+    
     // Players get their own personal results according to the ending.
     [] call BRM_fnc_endingGetContext;
 

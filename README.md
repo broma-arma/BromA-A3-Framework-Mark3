@@ -67,8 +67,10 @@ The framework is as context agnostic as possible, meaning you can just change on
 *	- [ ] Make loadouts for several mission themes.
 	- [X] USM (Marines)
 	- [X] Takistani Militia (Taliban/Middle East Militia)
-	- [ ] PMC (Generic PMC)
-	- [ ] Chedaki (Eastern Militia)
+	- [X] PMC (Generic PMC)
+	- [X] Chedaki (Eastern Militia)
+	- [ ] UN Troops
+	- [ ] Takistani Army (Middle East 90s Army)
 
 NEED HELP TO TEST:
 

@@ -44,6 +44,9 @@ _29rnd300BLK = "29rnd_300BLK_STANAG";
 _29rnd300BLKT = "29rnd_300BLK_STANAG_T";
 _29rnd300BLKS = "29rnd_300BLK_STANAG_T";
 
+_30rnd556AUG = "hlc_30Rnd_556x45_B_AUG";
+_25rnd9mmAUG = "hlc_25Rnd_9x19mm_M882_AUG";
+
 _GPHE = "hlc_VOG25_AK";
 
 // =============================================================================
@@ -92,13 +95,25 @@ _AR15 = ["hlc_rifle_vendimus",_30rnd556AR15];
 _SAMR = ["hlc_rifle_SAMR",_30rnd556AR15];
 _HONEYBADGER = ["hlc_rifle_honeybadger",_29rnd300BLK];
 
+_AUGSR = ["hlc_rifle_augsr_t",_30rnd556AUG];
+_AUGHBAR = ["hlc_rifle_augsrhbar_t",_30rnd556AUG];
+_AUGA1PARA = ["hlc_rifle_augpara_t",_25rnd9mmAUG];
+_AUGAA1 = ["hlc_rifle_auga1_t",_30rnd556AUG];
+_AUGAA1HBAR = ["hlc_rifle_aughbar_t",_30rnd556AUG];
+_AUGA2PARA = ["hlc_rifle_auga2para_t",_25rnd9mmAUG];
+_AUGA2 = ["hlc_rifle_auga2_t",_30rnd556AUG];
+_AUGA2HBAR = ["hlc_rifle_auga2lsw_t",_30rnd556AUG];
+_AUGA3 = ["hlc_rifle_auga3",_30rnd556AUG];
+_AUGA3GL = ["hlc_rifle_auga3_GL",_30rnd556AUG];
+
+
+
 _RPK = ["hlc_rifle_rpk",_45rnd762];
 
 _M60 = ["hlc_lmg_M60E4","hlc_100Rnd_762x51_B_M60E4"];
 
 // =============================================================================
 // =============================================================================
-
 //                               RH ARMALITES
 
 // =============================================================================
@@ -108,7 +123,8 @@ _M60 = ["hlc_lmg_M60E4","hlc_100Rnd_762x51_B_M60E4"];
 _30rndMK262 = "RH_30Rnd_556x45_Mk262";
 _10rnd762AR10 = "RH_20Rnd_762x51_AR10";
 _32rnd9mm = "RH_32Rnd_9mm_M822";
-
+_30rnd556M855 = "RH_30Rnd_556x45_M855A1";
+_60rnd556M855 = "RH_60Rnd_556x45_M855A1";
 // =============================================================================
 // WEAPONS
 
@@ -117,6 +133,12 @@ _M4GL = ["RH_m4_m203",_30rnd556,_40mm];
 
 _M4A1 = ["RH_m4a1_ris",_30rnd556];
 _M4A1GL = ["RH_m4a1_ris_m203",_30rnd556,_40mm];
+
+_HK416D10 = ["RH_Hk416s",_30rnd556M855];
+_HK416D14 = ["RH_Hk416",_30rnd556M855];
+_HK416C = ["RH_Hk416c",_30rnd556M855];
+
+_M27IAR = ["RH_M27IAR",_60rnd556M855];
 
 _M16A1 = ["RH_m16a1",_30rnd556];
 _M16A1GL = ["RH_m16a1gl",_30rnd556,_40mm];
@@ -140,6 +162,8 @@ _SBR9 = ["RH_sbr9", _32rnd9mm];
 _SBR9des = ["RH_sbr9_des", _32rnd9mm];
 _SBR9tg = ["RH_sbr9_tg", _32rnd9mm];
 _SBR9wdl = ["RH_sbr9_wdl", _32rnd9mm];
+
+_VitorSBR = ["RH_M4sbr_b",_30rnd556M855];
 
 // =============================================================================
 // =============================================================================
@@ -245,6 +269,8 @@ _30rnd556STANAGT = "rhs_mag_30Rnd_556x45_M855A1_Stanag_Tracer_Red";
 _100rnd762 = "rhsusf_100Rnd_762x51";
 _100rnd556 = "rhsusf_100Rnd_556x45_soft_pouch";
 
+_8rndBuck = "rhsusf_8Rnd_00Buck";
+
 _RPGVL = "rhs_rpg7_PG7VL_mag";
 _Igla9K38 = "rhs_mag_9k38_rocket";
 _FGM8Jav = "rhs_fgm148_magazine_AT";
@@ -261,7 +287,7 @@ _AK74FOLDED = ["rhs_weap_ak74m_folded",_30rnd545AK];
 _AK74DESERT = ["rhs_weap_ak74m_desert",_30rnd545AK];
 _AK74GP = ["rhs_weap_ak74m_gp25",_30rnd545AK,_VOG25];
 
-_RHSM16A4 = ["rhs_weap_m16a4",_30rnd556STANAG];
+_RHSM16A4 = ["rhs_weap_m16a4_carryhandle",_30rnd556STANAG];
 _RHSM16A42 = ["rhs_weap_m16a4_carryhandle",_30rnd556STANAG];
 _RHSM4 = ["rhs_weap_m4_carryhandle",_30rnd556STANAG];
 _RHSM4GL = ["rhs_m4_m320",_30rnd556STANAG,_40mm];
@@ -274,7 +300,10 @@ _M240B = ["rhs_weap_m240B",_100rnd762];
 _M249PIP = ["rhs_weap_m249_pip",_100rnd556];
 _M320 = ["rhs_weap_M320",_40mm];
 
+_M590 = ["rhs_weap_M590_8RD",_8rndBuck];
+
 _PKP = ["rhs_weap_pkp",_100rnd762PKP];
+_PKM = ["rhs_weap_pkm",_100rnd762PKP];
 
 // =============================================================================
 // =============================================================================

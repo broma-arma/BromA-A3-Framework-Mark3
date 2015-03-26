@@ -106,8 +106,6 @@ _AUGA2HBAR = ["hlc_rifle_auga2lsw_t",_30rnd556AUG];
 _AUGA3 = ["hlc_rifle_auga3",_30rnd556AUG];
 _AUGA3GL = ["hlc_rifle_auga3_GL",_30rnd556AUG];
 
-
-
 _RPK = ["hlc_rifle_rpk",_45rnd762];
 
 _M60 = ["hlc_lmg_M60E4","hlc_100Rnd_762x51_B_M60E4"];

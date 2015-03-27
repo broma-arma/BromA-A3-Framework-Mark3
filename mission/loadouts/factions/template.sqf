@@ -9,6 +9,7 @@
 _defaultSide = WEST;
 _defaultVoice = [_voiceALTIAN, _voiceAMERICAN, _voiceBRITISH, _voiceFARSI, _voiceRUSSIAN];
 _defaultFace = [_faceGREEK, _faceWHITE, _faceBLACK, _faceASIAN, _facePERSIAN];
+_defaultName = [_nameAMERICAN]; // incomplete list
 _defaultInsignia = "111thID";
 
 // WEAPONS =====================================================================
@@ -82,6 +83,9 @@ _vestsLIST = [
     "V_BandollierB_rgr",
     "V_BandollierB_khk",
     "V_BandollierB_oli"
+];
+
+_gogglesLIST = [
 ];
 
 _randomHEAD = _headsLIST call BIS_fnc_selectRandom;
@@ -332,3 +336,5 @@ switch (true) do {
 ["SR"] call _addRadio;
 
 if ("agm_plugin" in usedPlugins) then { [[_unit, [_earBuds,1]]] call _addtoUniform };
+
+if (count _gogglesLIST > 0) then { _randomGOGGLE = _goggleLIST call BIS_fnc_selectRandom; _unit addGoggles _randomGOGGLE };

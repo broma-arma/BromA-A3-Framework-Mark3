@@ -22,10 +22,10 @@ _commonSNIPER = _SVD;
 _commonAT = _RPG26;
 _specAT = _RPG7;
 _commonSMG = _AKS74U;
-_commonRCO = _ARCO;
-_commonCCO = _EOT;
-_commonMAGNIFIED = _SOS;
-_commonSUPPRESSOR = "muzzle_snds_M";
+_commonRCO = "HLC_Optic_1p29";
+_commonCCO = "hlc_optic_kobra";
+_commonMAGNIFIED = "HLC_Optic_PSO1";
+_commonSUPPRESSOR = "hlc_muzzle_762SUP_AK";
 _commonPISTOLSUPPRESSOR = "muzzle_snds_L";
 _NVG = _NVGEN1;
 
@@ -61,31 +61,46 @@ _countBloodbagCARGO = 10;
 // UNIFORMS ====================================================================
 
 _headsLIST = [
-    "H_Bandanna_khk",
-	"H_caf_ag_boonie_01",
-	"H_caf_ag_boonie_02",
-	"H_caf_ag_beanie",
-	""
+    "H_caf_ag_boonie_01",
+    "H_caf_ag_boonie_02",
+    "H_caf_ag_beanie"
 ];
 
 _uniformsLIST = [
     "U_CAF_AG_EEUR_FATIGUES_03b",
-	"U_CAF_AG_EEUR_FATIGUES_02",
-	"U_CAF_AG_EEUR_FATIGUES_03",
+    "U_CAF_AG_EEUR_FATIGUES_02",
+    "U_CAF_AG_EEUR_FATIGUES_03",
+    "U_CAF_AG_EEUR_FATIGUES_03c",
+    "MNP_CombatUniform_ASA_GC3_B",
+    "MNP_CombatUniform_ASA_GC3",
+    "MNP_CombatUniform_Militia_C",
+    "MNP_CombatUniform_RO4_Sh",
+    "TRYK_U_B_AOR2_OD_CombatUniform",
+    "TRYK_U_B_PCUODHs",
+    "TRYK_U_B_PCUGs_OD",
+    "rds_uniform_Woodlander2"
 ];
 
 _vestsLIST = [
     "TRYK_V_ChestRig",
-	"TRYK_V_ChestRig_L"
+    "TRYK_V_ChestRig_L"
 ];
+
+_goggleLIST = [
+    "rhs_balaclava",
+    "G_Balaclava_blk",
+    "G_Balaclava_oli"
+];
+
 
 _randomHEAD = _headsLIST call BIS_fnc_selectRandom;
 _randomUNIFORM = _uniformsLIST call BIS_fnc_selectRandom;
 _randomVEST = _vestsLIST call BIS_fnc_selectRandom;
+_randomGOGGLE = _goggleLIST call BIS_fnc_selectRandom;
 
-_commonHEAD = _randomHEAD;
-_leaderHEAD = _commonHEAD;
-_officerHEAD = _commonHEAD;
+_commonHEAD = "empty";
+_leaderHEAD = "MNP_Beret_2PARA";
+_officerHEAD = "MNP_Beret_2PARA";
 _medicHEAD = _commonHEAD;
 _crewmanHEAD = "rhs_tsh4_ess";
 _pilotHEAD = _commonHEAD;
@@ -121,8 +136,10 @@ _reconVEST = _commonVEST;
 _commonBACKPACK = "rhs_sidor";
 _bigBACKPACK = "TRYK_B_Alicepack";
 
-_HMG = "";
-_tripod = "";
+if !(_isLeader) then { _unit addGoggles _randomGOGGLE };
+
+_HMG = "RHS_NSV_Gun_Bag";
+_tripod = "RHS_NSV_Tripod_Bag";
 
 // =============================================================================
 if (!_isMan) exitWith {};
@@ -322,7 +339,7 @@ switch (true) do {
 
 [[_unit,[_bandage, 2], [_morphine,1],[_epi, 1]]] call _addtoUniform;
 
-["ItemMap", "ItemCompass", "ItemWatch", _NVG] call _linkItem;
+["ItemMap", "ItemCompass", "ItemWatch"] call _linkItem;
 
 ["SR"] call _addRadio;
 

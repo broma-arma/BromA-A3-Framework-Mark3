@@ -5,6 +5,7 @@ Modular Gear Script made by Nife and Royal for BromA
 */
 private ["_isLeader","_bandage","_morphine","_epi","_medkit","_wsmoke","_gsmoke","_rsmoke","_backpack","_addBinocs","_addRadio","_addAmmo","_addWeapon","_wep","_ammoamount","_isMan"];
 
+_isLeader = false;
 _isMan = _unit isKindOf "Man";
 if (_isMan) then {
     _isLeader = isFormationLeader _unit;
@@ -243,7 +244,7 @@ _addRadioToCargo = {
                 switch(_kind) do {
                     case "SR": { _radio = "tf_rf7800str" };
                     case "LR": { _radio = "tf_anprc152" };
-                    case "BP": { _radio = "tf_rt1523g"; _isBP = true };
+                    case "BP": { _radio = "tf_rt1523g_big"; _isBP = true };
                 };
             };
             case EAST: {

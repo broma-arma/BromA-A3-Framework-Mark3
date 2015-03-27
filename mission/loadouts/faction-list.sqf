@@ -12,6 +12,22 @@ switch (toUpper(_faction)) do {
         #include "factions\mujahideen.sqf" 
     };
     
+    case "CHEDAKI": {
+        #include "factions\chedaki.sqf"
+    };
+    
+    case "MARINESWDL": {
+        #include "factions\marinewdl.sqf"
+    };    
+    
+    case "IONPMC": {
+        #include "factions\ionpmc.sqf"
+    };    
+    
+    case "TKMILITIA": {
+        #include "factions\tkmilitia.sqf"
+    };    
+    
     case "ANA": { 
         #include "factions\ana.sqf" 
     };

@@ -1,6 +1,7 @@
 
 if (!isMultiplayer) exitWith {};
 if (!isServer) exitWith {};
+if (mission_cas_cap == -1) exitWith {};
 
 0 spawn {
 

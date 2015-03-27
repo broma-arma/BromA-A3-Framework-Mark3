@@ -52,9 +52,8 @@ if (_index >= 0) then {
         [player, _playerGear] call BRM_SyncStatus_fnc_setGear;
     };
     
-    [_vehicle, _vehicleSeat] spawn BRM_SyncStatus_fnc_moveToVehicle;
-    
     if !(str _vehicle == "<NULL-object>") then {
+        [_vehicle, _vehicleSeat] spawn BRM_SyncStatus_fnc_moveToVehicle;
         while {!(vehicle player == _vehicle) && (alive _vehicle)} do {
             [_vehicle, _vehicleSeat] spawn BRM_SyncStatus_fnc_moveToVehicle;
             if (!alive _vehicle) exitWith { player setPos _playerPos };
@@ -64,3 +63,6 @@ if (_index >= 0) then {
         player setPos _playerPos;
     };
 };
+
+// [player,0,getplayerUID player, name player] spawn BRM_SyncStatus_fnc_postStatus
+// [player] spawn BRM_SyncStatus_fnc_setStatus;

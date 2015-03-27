@@ -1,3 +1,7 @@
+if (!isServer) exitWith {};
+
+0 spawn {
+
 uiSleep 1;
 
 mission_valid_groups = [];
@@ -40,3 +44,5 @@ mission_radiochannels_BLU = mission_valid_groups_BLU call _formatFreqs; publicVa
 mission_radiochannels_OP = mission_valid_groups_OP call _formatFreqs; publicVariable "mission_radiochannels_OP";
 mission_radiochannels_IND = mission_valid_groups_IND call _formatFreqs; publicVariable "mission_radiochannels_IND";
 mission_radiochannels_CIV = mission_valid_groups_CIV call _formatFreqs; publicVariable "mission_radiochannels_CIV";
+
+};

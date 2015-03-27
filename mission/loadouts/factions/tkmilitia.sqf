@@ -9,6 +9,7 @@
 _defaultSide = EAST;
 _defaultVoice = [_voiceFARSI];
 _defaultFace = [_facePERSIAN];
+_defaultName = [_nameARABIC];
 _defaultInsignia = "";
 
 // WEAPONS =====================================================================
@@ -22,10 +23,10 @@ _commonSNIPER = _SVD;
 _commonAT = _RPG26;
 _specAT = _RPG7;
 _commonSMG = _AKS74U;
-_commonRCO = _ARCO;
-_commonCCO = _EOT;
-_commonMAGNIFIED = _SOS;
-_commonSUPPRESSOR = "muzzle_snds_M";
+_commonRCO = "HLC_Optic_1p29";
+_commonCCO = "hlc_optic_kobra";
+_commonMAGNIFIED = "HLC_Optic_PSO1";
+_commonSUPPRESSOR = "hlc_muzzle_762SUP_AK";
 _commonPISTOLSUPPRESSOR = "muzzle_snds_L";
 _NVG = _NVGEN1;
 
@@ -62,20 +63,20 @@ _countBloodbagCARGO = 10;
 
 _headsLIST = [
     "TRYK_H_pakol2",
-	"H_caf_ag_boonie_01",
-	"H_Bandanna_sand",
-	"H_ShemagOpen_khk"
+    "H_caf_ag_boonie_01",
+    "H_ShemagOpen_tan",
+    "H_ShemagOpen_khk"
 ];
 
 _uniformsLIST = [
     "MNP_CombatUniform_Militia_DC",
-	"MNP_CombatUniform_Militia_DE",
-	"MNP_CombatUniform_Militia_DB",
+    "MNP_CombatUniform_Militia_DE",
+    "MNP_CombatUniform_Militia_DB"
 ];
 
 _vestsLIST = [
     "TRYK_V_ChestRig",
-	"TRYK_V_ChestRig_L"
+    "TRYK_V_ChestRig_L"
 ];
 
 _randomHEAD = _headsLIST call BIS_fnc_selectRandom;
@@ -120,8 +121,8 @@ _reconVEST = _commonVEST;
 _commonBACKPACK = "rhs_sidor";
 _bigBACKPACK = "TRYK_B_Alicepack";
 
-_HMG = "";
-_tripod = "";
+_HMG = "RHS_NSV_Gun_Bag";
+_tripod = "RHS_NSV_Tripod_Bag";
 
 // =============================================================================
 if (!_isMan) exitWith {};
@@ -321,7 +322,7 @@ switch (true) do {
 
 [[_unit,[_bandage, 2], [_morphine,1],[_epi, 1]]] call _addtoUniform;
 
-["ItemMap", "ItemCompass", "ItemWatch", _NVG] call _linkItem;
+["ItemMap", "ItemCompass", "ItemWatch"] call _linkItem;
 
 ["SR"] call _addRadio;
 

@@ -9,6 +9,7 @@
 _defaultSide = resistance;
 _defaultVoice = [_voiceALTIAN, _voiceAMERICAN, _voiceBRITISH, _voiceFARSI, _voiceRUSSIAN];
 _defaultFace = [_faceGREEK, _faceWHITE, _faceBLACK, _faceASIAN, _facePERSIAN];
+_defaultName = [_nameAMERICAN];
 _defaultInsignia = "";
 
 // WEAPONS =====================================================================
@@ -62,19 +63,20 @@ _countBloodbagCARGO = 10;
 
 _headsLIST = [
     "TRYK_ESS_CAP",
-	"H_Cap_blk_ION",
-	"TRYK_H_headsetcap_blk",
-	"TRYK_R_CAP_BLK"
+    "H_Cap_blk_ION",
+    "TRYK_R_CAP_BLK"
 ];
 
 _uniformsLIST = [
     "TRYK_U_B_Denim_T_BK",
-	"TRYK_U_B_BLK_T_WH",
-	"TRYK_U_B_Denim_T_WH",
+    "TRYK_U_B_BLK_T_WH",
+    "TRYK_U_B_Denim_T_WH"
 ];
 
 _vestsLIST = [
-    "TRYK_V_Bulletproof_BLK"
+    "TRYK_V_tacv1_BK",
+    "TRYK_V_tacv1_CY",
+    "TRYK_V_tacv1"
 ];
 
 _randomHEAD = _headsLIST call BIS_fnc_selectRandom;
@@ -82,9 +84,9 @@ _randomUNIFORM = _uniformsLIST call BIS_fnc_selectRandom;
 _randomVEST = _vestsLIST call BIS_fnc_selectRandom;
 
 _commonHEAD = _randomHEAD;
-_leaderHEAD = _commonHEAD;
-_officerHEAD = _commonHEAD;
-_medicHEAD = _commonHEAD;
+_leaderHEAD = "TRYK_H_headsetcap_blk";
+_officerHEAD = "empty";
+_medicHEAD = "empty";
 _crewmanHEAD = _commonHEAD;
 _pilotHEAD = _commonHEAD;
 _helicrewHEAD = _commonHEAD;
@@ -119,8 +121,8 @@ _reconVEST = _commonVEST;
 _commonBACKPACK = "TRYK_B_Belt_BLK";
 _bigBACKPACK = "TRYK_B_Kitbag_blk";
 
-_HMG = "";
-_tripod = "";
+_HMG = "RHS_M2_Gun_Bag";
+_tripod = "RHS_M2_Tripod_Bag";
 
 // =============================================================================
 if (!_isMan) exitWith {};

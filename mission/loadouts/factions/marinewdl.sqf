@@ -9,21 +9,22 @@
 _defaultSide = WEST;
 _defaultVoice = [_voiceAMERICAN];
 _defaultFace = [_faceWHITE, _faceBLACK, _faceASIAN];
+_defaultName = [_nameAMERICAN];
 _defaultInsignia = "";
 
 // WEAPONS =====================================================================
 
-_commonRIFLE = _M16A4;
-_commonRIFLEGL = _M16A4GL;
+_commonRIFLE = _RHSM4;
+_commonRIFLEGL = _RHSM4GL;
 _commonPISTOL = _M1911;
 _commonMG = _M249PIP;
-_commonMARKSMAN = _M21;
+_commonMARKSMAN = _M14SOPMOD;
 _commonSNIPER = _M21;
 _commonAT = _M136;
 _specAT = _MAAWS;
-_commonSMG = _M16A4;
-_commonRCO = _ARCO;
-_commonCCO = _EOT;
+_commonSMG = _RHSM4;
+_commonRCO = "rhsusf_acc_ACOG_USMC";
+_commonCCO = "RH_eotech553";
 _commonMAGNIFIED = _SOS;
 _commonSUPPRESSOR = "muzzle_snds_M";
 _commonPISTOLSUPPRESSOR = "muzzle_snds_L";
@@ -61,17 +62,17 @@ _countBloodbagCARGO = 10;
 // UNIFORMS ====================================================================
 
 _headsLIST = [
-    "rhsusf_mich_helmet_marpatwd_alt",
+    "rhsusf_mich_helmet_marpatwd_alt"
 ];
 
 _uniformsLIST = [
     "TRYK_U_B_MARPAT_Wood_Tshirt",
-	"TRYK_U_B_MARPAT_Wood"
+    "TRYK_U_B_MARPAT_Wood"
 ];
 
 _vestsLIST = [
     "TRYK_V_PlateCarrier_coyo_L",
-	"TRYK_V_PlateCarrier_coyo"
+    "TRYK_V_PlateCarrier_coyo"
 ];
 
 _randomHEAD = _headsLIST call BIS_fnc_selectRandom;
@@ -116,8 +117,8 @@ _reconVEST = _commonVEST;
 _commonBACKPACK = "TRYK_B_Kitbag_Base";
 _bigBACKPACK = "TRYK_B_Kitbag_Base";
 
-_HMG = "";
-_tripod = "";
+_HMG = "RHS_M2_Gun_Bag";
+_tripod = "RHS_M2_Tripod_Bag";
 
 // =============================================================================
 if (!_isMan) exitWith {};

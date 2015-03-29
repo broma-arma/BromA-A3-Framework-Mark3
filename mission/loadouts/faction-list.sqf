@@ -18,7 +18,11 @@ switch (toUpper(_faction)) do {
     
     case "MARINESWDL": {
         #include "factions\marinewdl.sqf"
-    };    
+    };   
+    
+    case "MARINESDESERT": {
+        #include "factions\marinesdesert.sqf"
+    };     
     
     case "IONPMC": {
         #include "factions\ionpmc.sqf"

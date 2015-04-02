@@ -318,9 +318,12 @@ _RPG26 = ["rhs_weap_rpg26","rhs_rpg26_mag"];
 // =============================================================================
 // =============================================================================
 
-//                           	CARL GUSTAV PACK
+//                           	TF47 LAUNCHERS
 
 // =============================================================================
 // =============================================================================
 
-_MAAWS = ["M3CG", "MAAWS_HEAT", "MAAWS_HEDP"];
+_MAAWS = ["tf47_m3maaws", "tf47_m3maaws_HEAT", "tf47_m3maaws_HEDP","tf47_m3maaws_HE","tf47_m3maaws_SMOKE","tf47_m3maaws_ILLUM"];
+_AT4CSHEAT = ["tf47_at4_m_HEAT","tf47_at4_heat"];
+_AT4CSHEDP = ["tf47_at4_m_HEDP","tf47_at4_HEDP"];
+_AT4CSHP = ["tf47_at4_m_HP","tf47_at4_HP"];

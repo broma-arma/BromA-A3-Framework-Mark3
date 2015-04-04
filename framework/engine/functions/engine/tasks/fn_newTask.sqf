@@ -65,7 +65,7 @@ _ndetails set [0, _details select 1];
 _ndetails set [1, _details select 0];
 _ndetails set [2, ""];
 
-[[_side, _id, _ndetails, nil, false, 0, true],"BIS_fnc_taskCreate",nil,true] call BIS_fnc_MP;
+[_side, _id, _ndetails, nil, false, 0, true] call BIS_fnc_taskCreate;
 
 if (typeName _side == "OBJECT") then { _side = side _side };
 

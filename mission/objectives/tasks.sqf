@@ -32,6 +32,15 @@ side_a_side,
 true
 ] spawn BRM_fnc_newTask;
 
+[
+side_a_side, 
+"newTaskBLU2", 
+["Kill Nikos, maybe?", 
+"Nikos needs to die. Or not. It's up to you - doesn't matter either way."],
+["(true)","(not alive nikos_npc)"],
+false
+] spawn BRM_fnc_newTask;
+
 /*
 
 [

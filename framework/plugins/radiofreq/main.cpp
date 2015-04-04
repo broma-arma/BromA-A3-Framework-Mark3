@@ -1,6 +1,6 @@
 
 #ifdef BRM_PLUGIN_META
-	class auto_radio_freq
+	class radiofreq
 	{
 		name = "Radio channel generator";
 		version = 1;

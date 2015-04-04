@@ -18,14 +18,11 @@ USAGE:
 ================================================================================
 */
 
-//#include "prevent_reslot\main.cpp"
-
 #include "headless_client\main.cpp"
 #include "dac_plugin\main.cpp"
 #include "agm_plugin\main.cpp"
 #include "tfar_plugin\main.cpp"
 #include "respawn_system\main.cpp"
-//#include "auto_radio_freq\main.cpp"
 #include "cssa3_spectator\main.cpp"
 #include "block_tp\main.cpp"
 #include "time_accel\main.cpp"
@@ -38,6 +35,7 @@ USAGE:
 #include "ch_view_distance\main.cpp"
 #include "civilian_casualty_cap\main.cpp"
 #include "time_limit\main.cpp"
+#include "prevent_reslot\main.cpp"
 #include "sync_status\main.cpp"
 #include "friendly_fire\main.cpp"
 #include "ao_limit\main.cpp"
@@ -47,3 +45,4 @@ USAGE:
 #include "loading_screen\main.cpp"
 #include "jip_teleport\main.cpp"
 #include "commander_lock\main.cpp"
+#include "radiofreq\main.cpp"

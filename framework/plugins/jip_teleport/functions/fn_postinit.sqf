@@ -2,8 +2,12 @@ if !(hasInterface) exitWith {};
 if !(player_is_jip) exitWith {};
 
 0 spawn {
+    
+if ("prevent_reslot" in usedPlugins) then {
+    waitUntil{(player getVariable ["unit_valid_slot", false])};
+};
 
-Revive_TelepSquad = { 
+Revive_TelepSquad = {
 	Private["_revive_Keypressed"];
 	if (alive player) then {
 		_revive_Keypressed = (findDisplay 46) displayAddEventHandler ["KeyUp","_this call Revive_Keypressedcode"];
@@ -77,6 +81,5 @@ Revive_Keypressedcode = {
 	false;
 };
 
-    sleep 20;
     [] spawn Revive_TelepSquad;
 };

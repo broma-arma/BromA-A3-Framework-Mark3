@@ -64,12 +64,16 @@ fnc_countCivDeaths = {
     };    
 };
 
+publicVariable "fnc_deadHostileCivilian";
 publicVariable "fnc_civFiredWeapon";
+publicVariable "fnc_countCivDeaths";
 
-// Add killed EventHandler to all civilians.
-{
-    if (side _x == civilian) then {
-      _x addEventHandler ["fired", fnc_civFiredWeapon];
-      _x addMPEventHandler ["mpkilled", fnc_countCivDeaths];
-    };
-} foreach allUnits;
+0 spawn {
+    // Add killed EventHandler to all civilians.
+    {
+        if (side _x == civilian) then {
+          _x addEventHandler ["fired", fnc_civFiredWeapon];
+          _x addMPEventHandler ["mpkilled", fnc_countCivDeaths];
+        };
+    } foreach allUnits;
+};

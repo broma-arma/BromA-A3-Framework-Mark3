@@ -4,7 +4,7 @@
   </a>
    <br/><br/>
   <a href="https://github.com/Neefay/BromA-A3-Framework-Mark3/commits/master">
-    <img src="https://img.shields.io/badge/build-0044-blue.svg" alt="Current version">
+    <img src="https://img.shields.io/badge/build-004520-blue.svg" alt="Current version">
   </a>
   <img src="https://img.shields.io/badge/stable-yes-green.svg" alt="Stable">
 </p>
@@ -40,29 +40,7 @@ The framework is as context agnostic as possible, meaning you can just change on
 
 ### TO DO (priority order):
 -
-*	- [X] Improve the ending screen.
-*	- [X] Mission details like mission maker and name.
-*	- [X] Simpler way of making zones.
-*	- [X] Fix OPFOR/IND callsigns.
-*	- [X] Configure vehicles with loadouts
-*	- [X] Make a list of names and surnames divided by background and assign them to the units.
-*	- [X] BUG: Units are initializing over and over.
-*	- [X] Make sure DAC markers are disabled on MP.
-*	- [X] Remove DLC Chinook.
-*	- [X] Test  way to have the loading screen count player fps.
-*	- [X] Repair Specialist loadout is missing.
-*	- [X] Work on a new framework logo.
-*	- [X] BUG: Team Kill not appearing.
-*	- [X] BUG: Dead players can still reslot.
-*	- [X] BUG: Dead enemies number isn't right.
-*	- [X] Write plugin to prevent reslotting.
-*	- [X] BUG: Headless Client isn't working again. Seriously, who had that one coming?
-*	- [X] Sync AGM Status and Position per Player ID.
-*	- [X] Finish Chair plugin.
-*	- [X] Finish the loading screen.
-*	- [X] Platoon roster names are broken.
 *	- [X] Start working on the documentation.
-*	- [ ] Design a list of things every mission needs.
 *	- [ ] Comment and document everything.
 *	- [ ] Make loadouts for several mission themes.
 	- [X] USM (Marines)
@@ -71,14 +49,6 @@ The framework is as context agnostic as possible, meaning you can just change on
 	- [X] Chedaki (Eastern Militia)
 	- [ ] UN Troops
 	- [ ] Takistani Army (Middle East 90s Army)
-
-NEED HELP TO TEST:
-
-*	- [ ] Test casualty cap for TvTs.
-*	- [X] Test Team Kill messages.
-*	- [ ] Test if percentage verbose is working is intended.
-*	- [ ] Test JIP score.
-*	- [X] Nothing for now.
 
 ### What then?
 

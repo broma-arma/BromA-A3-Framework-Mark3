@@ -4996,7 +4996,7 @@ class Mission
 			age="UNKNOWN";
 			text="Executes code to the units inside the trigger.";
 			expCond="true";
-			expActiv="_nul = [thisTrigger, ""(side _x == civlian)"", ""[_x, 'side_a'] call BRM_fnc_initAI""] spawn BRM_fnc_callCodeArea";
+			expActiv="_nul = [thisTrigger, ""(side _x == civilian)"", ""[_x, 'side_a'] call BRM_fnc_initAI""] spawn BRM_fnc_callCodeArea";
 			class Effects
 			{
 			};

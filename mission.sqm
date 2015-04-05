@@ -83,7 +83,7 @@ class Mission
 	randomSeed=13980418;
 	class Intel
 	{
-		briefingName="> SANDBOX 250 - BromA Framework MK 3 BETA 004520";
+		briefingName="> SANDBOX 250 - BromA Framework MK 3 BETA 004521";
 		overviewText="Edit this description with a short explanation and important details about your mission.";
 		startWeather=0.099999994;
 		startWind=0.099999994;
@@ -4391,7 +4391,7 @@ class Mission
 					vehicle="C_Nikos_aged";
 					leader=1;
 					skill=0.60000002;
-					text="nikos";
+					text="nikos_npc";
 				};
 			};
 		};

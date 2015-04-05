@@ -83,17 +83,14 @@ _msg = format ["
 
 // Displays the ending screen. =================================================
 
-[0,2,false,true] call BIS_fnc_cinemaBorder;
-
 sleep 3;
 
 [_msg,-1,-1,15,1] call BIS_fnc_dynamicText;
 
 [""] call BIS_fnc_dynamicText;
 
-player enablesimulation false;
+titleText ["", "BLACK"];
 titleText [_endingScreen, "BLACK"];
-[1,1,false,true] call BIS_fnc_cinemaBorder;
 
 sleep _displayTime;
 

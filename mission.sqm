@@ -83,7 +83,7 @@ class Mission
 	randomSeed=13980418;
 	class Intel
 	{
-		briefingName="> SANDBOX 250 - BromA Framework MK 3 BETA 004521";
+		briefingName="> SANDBOX 250 - BromA Framework MK 3 BETA 004530";
 		overviewText="Edit this description with a short explanation and important details about your mission.";
 		startWeather=0.099999994;
 		startWind=0.099999994;
@@ -4961,7 +4961,7 @@ class Mission
 	};
 	class Sensors
 	{
-		items=2;
+		items=3;
 		class Item0
 		{
 			position[]={949.35413,5,950.07275};
@@ -4983,6 +4983,20 @@ class Mission
 			name="oz1";
 			expCond="false";
 			expActiv="obj = [""oz1"",10,0,0,5,0,[],""""] spawn DAC_Objects";
+			class Effects
+			{
+			};
+		};
+		class Item2
+		{
+			position[]={897.65625,5,919.08398};
+			a=2;
+			b=2;
+			interruptable=1;
+			age="UNKNOWN";
+			text="Executes code to the units inside the trigger.";
+			expCond="true";
+			expActiv="_nul = [thisTrigger, ""(side _x == civlian)"", ""[_x, 'side_a'] call BRM_fnc_initAI""] spawn BRM_fnc_callCodeArea";
 			class Effects
 			{
 			};

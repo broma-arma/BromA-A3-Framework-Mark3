@@ -72,6 +72,7 @@ class BRM {
         class verboseArray{}; 
         class addIfNew{};
         class unitFromName{};
+        class callCodeArea{};
     };
     class api_zeus {
         file = "framework\engine\functions\api\zeus";

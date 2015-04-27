@@ -24,6 +24,5 @@ RETURNS:
 
 _unit = _this select 0;
 _vehicle = vehicle _unit;
-if !(_unit getVariable ["AGM_CanTreat", true]) exitWith {};
 
 _unit action ["SwitchWeapon", _vehicle, _vehicle, 99];

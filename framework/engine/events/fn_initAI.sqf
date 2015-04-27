@@ -54,7 +54,7 @@ if (!_initialized) then {
     
     // Assigns the Unit's loadout depending on mission settings. ===============
 
-    if ( !(_faction == "CIVILIAN") && !(_faction == "VANILLA") && !units_AI_useVanillaGear) then {
+    if (!(_faction == "VANILLA") && !units_AI_useVanillaGear) then {
         [_unit, _faction] call BRM_fnc_assignLoadout;
     };
 

@@ -27,8 +27,6 @@ RETURNS:
     
 waitUntil{(!isNil "paramsArray")};
 
-mission_params_read = false;
-
 _paramArray = paramsArray;
 {
     _paramName = (configName ((missionConfigFile >> "Params") select _forEachIndex));
@@ -38,6 +36,15 @@ _paramArray = paramsArray;
     call compile _code;
     publicVariable _paramName;
 } foreach _paramArray;
+
+waitUntil{(!isNil "plugins_loaded")};
+waitUntil{(plugins_loaded)};
+
+mission_AGM_enabled = (("agm_plugin" in usedPlugins) && (param_gameplay_mod == 1));
+mission_ACE3_enabled = (("ace3_plugin" in usedPlugins) && (param_gameplay_mod == 2));
+
+mission_TFAR_enabled = (("tfar_plugin" in usedPlugins) && (param_radio_mod == 1));
+mission_ACRE2_enabled = (("acre2_plugin" in usedPlugins) && (param_radio_mod == 2));
 
 mission_params_read = true;
 

@@ -28,4 +28,16 @@ _state = _this select 1;
 
 if (!(([_task] call BIS_fnc_taskState) == _state)) then {
     [_task, _state, true] call BIS_fnc_taskSetState;
+    
+    _index = -1;
+    
+    { if (_task == (_x select 0)) exitWith { _index = _forEachIndex } } forEach tasks_callbacks;
+    
+    if (_index > -1) then {
+        switch (toUpper(_state)) do {
+            case "SUCCEEDED": { call compile (((tasks_callbacks select _index) select 1) select 1) };
+            case "FAILED": { call compile (((tasks_callbacks select _index) select 1) select 2) };
+            case "CANCELED": { call compile (((tasks_callbacks select _index) select 1) select 2) };
+        };
+    };
 };

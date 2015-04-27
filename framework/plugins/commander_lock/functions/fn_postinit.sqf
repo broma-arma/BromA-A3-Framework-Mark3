@@ -33,8 +33,17 @@ if ( (!(side player in locked_sides)) || !(hasInterface) ) exitWith {};
 player_co_locked = true;
 
 if (player in co_lock_units) then {
+    
+    alertColor = "Alert";
+    _color = "#FF0000";
+    switch (side player) do {
+        case WEST: { alertColor = "AlertBLU"; _color = ["blue"] call BRM_fnc_colorToHex; };
+        case EAST: { alertColor = "AlertOP"; _color = ["red"] call BRM_fnc_colorToHex; };
+        case RESISTANCE: { alertColor = "AlertIND"; _color = ["green"] call BRM_fnc_colorToHex; };
+    };         
 
-    player addAction ["<t color='#FF0000'>"+ co_lock_text_start + "</t>", {
+    player addAction ["<t color='"+_color+"'>"+ co_lock_text_start + "</t>", {   
+        
         locked_sides = locked_sides - [side player]; publicVariable "locked_sides";
         if (count locked_sides <= 0) then { co_lock_allSidesReady = true; publicVariable "co_lock_allSidesReady" };
 
@@ -44,7 +53,7 @@ if (player in co_lock_units) then {
             } else {
                 _sidename = [(side player), "name"] call BRM_fnc_getSideInfo;
                 _msg = format ["%1 is ready to begin the mission.", _sidename];
-                [-1, { ["Alert",[_this]] call bis_fnc_showNotification }, _msg] call CBA_fnc_globalExecute;
+                [-1, { [_this select 1,[_this select 0]] call bis_fnc_showNotification }, [_msg, alertColor]] call CBA_fnc_globalExecute;
             };
         } else {
             [-1, {

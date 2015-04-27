@@ -16,12 +16,12 @@ switch (toUpper(_faction)) do {
         #include "factions\chedaki.sqf"
     };
     
-    case "MARINESWDL": {
-        #include "factions\marinewdl.sqf"
+    case "MARINES": {
+        #include "factions\marines.sqf"
     };   
     
-    case "MARINESDESERT": {
-        #include "factions\marinesdesert.sqf"
+    case "VDV": {
+        #include "factions\vdv.sqf"
     };     
     
     case "IONPMC": {
@@ -35,6 +35,26 @@ switch (toUpper(_faction)) do {
     case "ANA": { 
         #include "factions\ana.sqf" 
     };
+    
+    case "FINNS": { 
+        #include "factions\finns.sqf" 
+    };  
+    
+    case "CSAT": { 
+        #include "factions\csat.sqf" 
+    };  
+
+    case "NATO": { 
+        #include "factions\nato.sqf" 
+    }; 
+    
+    case "AAF": { 
+        #include "factions\aaf.sqf" 
+    };
+    
+    case "FIA": { 
+        #include "factions\fia.sqf" 
+    };    
     
     case "AHKMA-PMC": { 
         #include "factions\ahkma-pmc.sqf" 

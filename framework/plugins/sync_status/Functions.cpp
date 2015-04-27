@@ -9,7 +9,5 @@ class BRM_SyncStatus
 		class postStatus {};
 		class setStatus {};
 		class moveToVehicle {};
-		class getGear {};
-		class setGear {};
 	};
 };

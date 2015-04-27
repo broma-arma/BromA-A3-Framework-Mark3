@@ -1,11 +1,9 @@
 private["_gear"];
 _unit = _this select 0;
 
-if ("agm_plugin" in usedPlugins) then {
-    _gear = [_unit] call AGM_Respawn_fnc_getAllGear;
-};
+_gear = [_unit] call BRM_fnc_getGear;
 
-if ("tfar_plugin" in usedPlugins) then {
+if (mission_TFAR_enabled) then {
     _unit setVariable ["tf_unable_to_use_radio", true];
 };
 
@@ -39,27 +37,25 @@ sleep 5;
 _unit unlinkItem "ItemRadio";
 _unit removeItem "ItemRadio";
 
-waitUntil{!([getPlayerUID _unit, name _unit] in mission_dead_players)};
+waitUntil{!([getPlayerUID _unit, name _unit, (_unit getVariable "unit_side")] in mission_dead_players)};
 
 titletext ["You are respawning...", "BLACK FADED",0];
 
 closeDialog 0;
 
-player enablesimulation true;
-player allowDamage true;
-
 player setVariable ["isDead", false, true];
 
-if ("agm_plugin" in usedPlugins) then {
-    [_unit, _gear] call AGM_Respawn_fnc_restoreGear;
-};
+[_unit, _gear] call BRM_fnc_setGear;
 
-if ("tfar_plugin" in usedPlugins) then {
+if (mission_TFAR_enabled) then {
     _unit setVariable ["tf_unable_to_use_radio", false];
 };
 
 [_unit] joinSilent _oldgrp;
 
-_respawn = [_unit] call BRM_RespawnSystem_fnc_getSpawnPoint;
+_respawn = [_unit] call BRM_fnc_getSpawnPoint;
 
 _unit setPos getMarkerPos _respawn;
+
+player enablesimulation true;
+player allowDamage true;

@@ -47,10 +47,12 @@ class BRM {
         class newTask{};
         class setTask{};
         class checkTasks{};
+        class readExtraction{postInit = 1;};
     };
     class events {
         file = "framework\engine\events";
         class initPlayer{postInit = 1;};
+        class initSpectator{};
         class onPlayerKilled{};
         class onPlayerRespawn{};
         class initAI{};
@@ -73,6 +75,9 @@ class BRM {
         class addIfNew{};
         class unitFromName{};
         class callCodeArea{};
+        class setGear{};
+        class getGear{};
+        class playGlobal{};
     };
     class api_zeus {
         file = "framework\engine\functions\api\zeus";

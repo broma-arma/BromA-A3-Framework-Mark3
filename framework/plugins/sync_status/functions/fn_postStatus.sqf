@@ -5,8 +5,9 @@ _unit = _this select 0;
 _uid = _this select 2;
 _name = _this select 3;
 
-_validSlot = _unit getVariable "unit_valid_slot";
+_validSlot = _unit getVariable ["unit_valid_slot", false];
 
+if ([_uid, _name] in mission_dead_players) exitWith {};
 if (!_validSlot) exitWith {};
 
 private 
@@ -20,7 +21,7 @@ _packetPlayer = [];
 
 _packetPlayer pushBack _uid;
 
-if ("tfar_plugin" in usedPlugins) then {
+if (mission_TFAR_enabled) then {
 
     _tfarGlobalVolume = _unit getVariable ["tf_globalVolume", 1];
     _tfarVoiceVolume = _unit getVariable ["tf_voiceVolume", 1];
@@ -31,7 +32,7 @@ if ("tfar_plugin" in usedPlugins) then {
     _packetPlayer pushBack _tfarAbleUseRadio;
 };
 
-if ("acre2_plugin" in usedPlugins) then {
+if (mission_TFAR_enabled) then {
     _acreIsDisabled = _unit getVariable ["acre_sys_core_isDisabled", false];
     _acreGlobalVolume = _unit getVariable ["acre_sys_core_globalVolume", 1];
 
@@ -39,7 +40,7 @@ if ("acre2_plugin" in usedPlugins) then {
     _packetPlayer pushBack _acreGlobalVolume;
 };
 
-if ("agm_plugin" in usedPlugins) then {
+if (mission_AGM_enabled) then {
     _agmCaptive = _unit getVariable ["AGM_isCaptive", false];
 
     _agmBlood = _unit getVariable ["AGM_Blood", 1];
@@ -75,7 +76,7 @@ switch (true) do {
     default { _playerVehicleSeat = "CARGO" };
 };
 
-_playerGear = [_unit] call BRM_SyncStatus_fnc_getGear;
+_playerGear = [_unit] call BRM_fnc_getGear;
 
 _packetPlayer pushBack _playerDir;
 _packetPlayer pushBack _playerPos;

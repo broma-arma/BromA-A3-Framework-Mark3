@@ -33,6 +33,16 @@ switch (_TypNumber) do
         case 5: { _loadout = "MUJAHIDEEN" };
         case 6: { _loadout = "ANA" };
         case 7: { _loadout = "AHKMA-PMC" };
+        case 8: { _loadout = "CHEDAKI" };
+        case 9: { _loadout = "MARINES" };
+        case 10: { _loadout = "IONPMC" };
+        case 11: { _loadout = "TKMILITIA" };
+        case 12: { _loadout = "FINNS" };
+        case 13: { _loadout = "CSAT" };
+        case 14: { _loadout = "NATO" };
+        case 15: { _loadout = "AAF" };
+        case 16: { _loadout = "FIA" };
+        case 17: { _loadout = "VDV" };
         
 // =============================================================================
 

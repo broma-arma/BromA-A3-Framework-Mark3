@@ -5,7 +5,7 @@ switch(_x) do
         [[_object,"magazine",
             [_bchemlight,25],
             [_rchemlight,25],
-            [_gchemlight,25],                
+            [_gchemlight,25],
             [_wsmoke,25],
             [_rsmoke,25],
             [_gsmoke,25]
@@ -16,7 +16,28 @@ switch(_x) do
             [_epi, _countEpiCARGO],
             [_bloodbag, _countBloodbagCARGO]
         ]] spawn _addtoCargo;                
-    };           
+    };
+    case "medical_adv":
+    {
+        if (mission_ACE3_enabled) then {
+            [[_object,"item",
+                [_fieldDressing, _countBandageCARGO],
+                [_packingBandage, _countBandageCARGO],
+                [_elasticBandage, _countBandageCARGO],
+                [_personalAidKit, _countBandageCARGO],
+                [_quickClot, _countBandageCARGO],
+                [_tourniquet, _countBandageCARGO],
+                [_morphine, _countMorphineCARGO],
+                [_atrophine, _countMorphineCARGO],
+                [_epi, _countEpiCARGO],
+                [_saline1000, _countBloodbagCARGO],
+                [_blood1000, _countBloodbagCARGO],
+                [_plasma1000, _countBloodbagCARGO],
+                [_surgKit, _countBloodbagCARGO],
+                [_bodyBag, _countBloodbagCARGO]
+            ]] spawn _addtoCargo;
+        };
+    };    
     case "ammo":
     {
         [[_object,"magazine",

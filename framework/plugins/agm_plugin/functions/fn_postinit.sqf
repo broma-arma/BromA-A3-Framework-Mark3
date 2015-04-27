@@ -1,3 +1,5 @@
+
+if !(isClass(configFile>>"CfgPatches">>"AGM_MEDICAL")) exitWith {};
 if (!isServer) exitWith {};
 
 #include "includes\settings.sqf"
@@ -18,10 +20,10 @@ _module setVariable ["CoefDamage", agm_settings_CoefDamage];
 _module setVariable ["CoefNonMedic", agm_settings_CoefNonMedic];
 _module setVariable ["CoefPain", agm_settings_CoefPain];
 _module setVariable ["EnableOverdosing", false];
-_module setVariable ["MaxUnconsciousnessTime", mission_revive_time];
+_module setVariable ["MaxUnconsciousnessTime", mission_agm_revive_time];
 _module setVariable ["PreventDeathWhileUnconscious", agm_settings_PreventDeathWhileUnconscious];
-_module setVariable ["PreventInstaDeath", agm_settings_PreventInstaDeath];
+_module setVariable ["PreventInstaDeath", mission_agm_insta_death];
 _module setVariable ["RequireDiagnosis", agm_settings_RequireDiagnosis];
 _module setVariable ["RequireMEDEVAC", false];
-_module setVariable ["SingleBandage", agm_settings_SingleBandage];
+_module setVariable ["SingleBandage", mission_agm_single_bandage];
 _module setVariable ["DisableScreams", agm_settings_DisableScreams];

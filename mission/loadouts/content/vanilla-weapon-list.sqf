@@ -44,7 +44,7 @@ _Mk18 = ["srifle_EBR_F",_20rnd762];
 
 _GM6 = ["srifle_GM6_F","5Rnd_127x108_APDS_Mag"];
 
-_M320 = ["srifle_LRR_F","7Rnd_408_Mag"];
+_M200 = ["srifle_LRR_F","7Rnd_408_Mag"];
 
 _P07 = ["hgun_P07_F","16Rnd_9x21_Mag"];
 
@@ -70,7 +70,7 @@ _KatibaGL = ["arifle_Katiba_GL_F",_30rnd65green,_40mm];
 
 _KatibaC = ["arifle_Katiba_C_F",_30rnd65green];
 
-_Zafir = ["LMG_Zafir_F",_150rnd762];
+_Zafir = ["LMG_Zafir_F", "150Rnd_762x54_Box"];
 
 _Sting = ["SMG_02_F",_30rnd9mm];
 
@@ -85,9 +85,14 @@ _RPG42 = ["launch_RPG32_F","RPG32_F","RPG32_HE_F"];
 // =============================================================================
 // AAF WEAPONS
 
-_Mk20 = ["arifle_Mk20_F",_30rnd556];
-_Mk20C = ["arifle_Mk20C_F",_30rnd556];
-_Mk20GL = ["arifle_Mk20_GL_F",_30rnd556,_40mm];
+_Mk20 = ["arifle_Mk20_plain_F",_30rnd556];
+_Mk20Camo = ["arifle_Mk20_F",_30rnd556];
+
+_Mk20C = ["arifle_Mk20C_plain_F",_30rnd556];
+_Mk20CCamo = ["arifle_Mk20C_F",_30rnd556];
+
+_Mk20GL = ["arifle_Mk20_GL_plain_F",_30rnd556,_40mm];
+_Mk20GLCamo = ["arifle_Mk20_GL_F",_30rnd556,_40mm];
 
 _ACP45 = ["hgun_ACPC2_F","9Rnd_45ACP_Mag"];
 

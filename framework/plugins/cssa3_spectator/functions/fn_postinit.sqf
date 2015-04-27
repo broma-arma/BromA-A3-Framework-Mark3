@@ -23,33 +23,6 @@ if (isServer) then {
 	CSSA3_beforeJIPClients = [];
 	CSSA3_allowJIP = true;
 	CSSA3_timeToJIP = 0;
-
-	CSSA3_fnc_addToJIP = {
-		private ["_playerNetID","_CSSA3_UID","_player","_currentTime"];
-
-		if (isServer) then
-		{
-			_playerNetID = _this select 0;
-			_player = objectFromNetId _playerNetID;
-			_CSSA3_UID = getPlayerUID _player;
-			_currentTime = time;
-
-			if (_currentTime <= CSSA3_timeToJIP) then {
-				if !(_CSSA3_UID in CSSA3_beforeJIPClients) then
-				{
-					CSSA3_beforeJIPClients pushBack _CSSA3_UID;
-				};
-			};
-
-			if !(CSSA3_allowJIP) exitWith
-			{
-				if ((_currentTime > CSSA3_timeToJIP) && {!(_CSSA3_UID in CSSA3_beforeJIPClients)}) then
-				{
-                                    forceRespawn _player;
-				};
-			};
-		};
-	};
 };
 
 //Player Init
@@ -60,9 +33,6 @@ if (hasInterface) then {
 	waitUntil {(!isNull player) && {alive player}};
 	CSSA3_playerSide = side player;
 	sleep 0.1;
-
-	//Add player UID to array of players who joined before out of time (_timeToJIP).
-	_sentArray = [[netID player],"CSSA3_fnc_addToJIP",false,false,false] call bis_fnc_MP;
 
 	//Check if API vars are Nil.
 	_defaultSides = [blufor,opfor,civilian,resistance];

@@ -3,7 +3,20 @@
 Modular Gear Script made by Nife and Royal for BromA
 
 */
-private ["_isLeader","_bandage","_morphine","_epi","_medkit","_wsmoke","_gsmoke","_rsmoke","_backpack","_addBinocs","_addRadio","_addAmmo","_addWeapon","_wep","_ammoamount","_isMan"];
+
+private 
+["_isLeader","_bandage","_morphine","_epi","_bloodbag","_radio","_medkit","_wsmoke","_gsmoke","_rsmoke",
+"_backpack","_addBinocs","_addRadio","_addAmmo","_addWeapon","_wep","_ammoamount","_isMan",
+"_fieldDressing", "_packingBandage", "_elasticBandage","_quickClot", "_personalAidKit",
+"_tourniquet", "_atrophine", "_saline1000", "_saline500", "_saline250","_blood1000", 
+"_blood500", "_blood250", "_plasma1000", "_plasma500", "_plasma250", "_surgKit", "_bodyBag",
+"_wFLARE", "_rFLARE", "_gFLARE", "_yFLARE", "_cableTie", "_uavBattery", "_mapTools",
+"_spareBarrel", "_kestrel", "_IRStrobe", "_clacker", "_M26clacker", "_defusalKit", 
+"_deadManSwitch", "_earBuds", "_cellphone", "_microDAGR", "_NVGEN1", "_NVGEN2",
+"_NVGEN4", "_NVWIDE", "_suppliesMEDIC", "_suppliesNORMAL", "_countBANDAGE",
+"_countMORPHINE", "_countEPI", "_countBLOODBAG", "_countBandageCARGO",
+"_countMorphineCARGO", "_countEpiCARGO", "_countBloodbagCARGO", "_countBANDAGEPACKING"
+];
 
 _isLeader = false;
 _isMan = _unit isKindOf "Man";
@@ -17,15 +30,27 @@ _addOptics = {
     if _isMan then {
         switch(_kind) do {
             case "binoc": { _unit addWeapon (_optics select 0)};
-            case "rangefinder": { if ("agm_plugin" in usedPlugins) then { _unit addWeapon "AGM_Vector" } else { _unit addWeapon (_optics select 1) }};
+            case "rangefinder": {
+                switch (true) do {
+                    case (mission_AGM_enabled): { _unit addWeapon "AGM_Vector" };
+                    case (mission_ACE3_enabled): { _unit addWeapon "ACE_Vector" };
+                    default { _unit addWeapon (_optics select 1) };
+                };
+            };
             case "laserdesignator": { _unit addWeapon (_optics select 2); _unit addMagazine (_battery select 0)};
         };
     } else {
         switch(_kind) do {
             case "binoc": { _unit addWeaponCargoGlobal (_optics select 0)};
-            case "rangefinder": { if ("agm_plugin" in usedPlugins) then { _unit addWeaponCargoGlobal "AGM_Vector" } else { _unit addWeaponCargoGlobal (_optics select 1) }};
+            case "rangefinder": {
+                switch (true) do {
+                    case (mission_AGM_enabled): { _unit addWeaponCargoGlobal "AGM_Vector" };
+                    case (mission_ACE3_enabled): { _unit addWeaponCargoGlobal "ACE_Vector" };
+                    default { _unit addWeaponCargoGlobal (_optics select 1) };
+                };
+            };
             case "laserdesignator": { _unit addWeaponCargoGlobal (_optics select 2); _unit addMagazineCargoGlobal (_battery select 0)};
-        };    
+        };
     };
 };
 
@@ -41,30 +66,40 @@ _attachToWeapon = {
 _addRadio = {
     _kind = _this select 0;
     
-    if ("tfar_plugin" in usedPlugins) then {
-        _side = side _unit;
-        switch(_side) do {
-            case WEST: {
-                switch(_kind) do {
-                    case "SR": { _unit linkItem "tf_rf7800str" };
-                    case "LR": { _unit addItem "tf_anprc152" };
-                    case "BP": { removeBackpack _unit; _unit addBackPack "tf_rt1523g" };
+    switch (true) do {
+        case (mission_TFAR_enabled): {
+            _side = side _unit;
+            switch(_side) do {
+                case WEST: {
+                    switch(_kind) do {
+                        case "SR": { _unit linkItem "tf_rf7800str" };
+                        case "LR": { _unit addItem "tf_anprc152" };
+                        case "BP": { removeBackpack _unit; _unit addBackPack "tf_rt1523g" };
+                    };
                 };
+                case EAST: {
+                    switch(_kind) do {
+                        case "SR": { _unit linkItem "tf_pnr1000a" };
+                        case "LR": { _unit addItem "tf_fadak" };
+                        case "BP": { removeBackpack _unit; _unit addBackPack "tf_mr3000" };
+                    };
+                };     
+                case RESISTANCE: {
+                    switch(_kind) do {
+                        case "SR": { _unit linkItem "tf_anprc154" };
+                        case "LR": { _unit addItem "tf_anprc148jem" };
+                        case "BP": { removeBackpack _unit; _unit addBackPack "tf_anprc155" };
+                    };
+                };            
+            };        
+        };
+        
+        case (mission_ACRE2_enabled): {
+            switch(_kind) do {
+                case "SR": { _unit addItem "ACRE_PRC343" };
+                case "LR": { _unit addItem "ACRE_PRC148" };
+                case "BP": { [_commonBACKPACK] call _addEmptyBackpack; _unit addItemToBackpack "ACRE_PRC117F" };
             };
-            case EAST: {
-                switch(_kind) do {
-                    case "SR": { _unit linkItem "tf_pnr1000a" };
-                    case "LR": { _unit addItem "tf_fadak" };
-                    case "BP": { removeBackpack _unit; _unit addBackPack "tf_mr3000" };
-                };
-            };     
-            case RESISTANCE: {
-                switch(_kind) do {
-                    case "SR": { _unit linkItem "tf_anprc154" };
-                    case "LR": { _unit addItem "tf_anprc148jem" };
-                    case "BP": { removeBackpack _unit; _unit addBackPack "tf_anprc155" };
-                };
-            };            
         };
     };
 };
@@ -126,7 +161,7 @@ _addAmmo = {
                 };
             };
         } else { 
-            for "_i" from 1 to _amount do { 
+            for "_i" from 1 to _amount do {
                 if ((vest _unit) == "") then { 
                     _unit addMagazine _kind;
                 } else { 
@@ -238,35 +273,42 @@ _addRadioToCargo = {
     
     private ["_radio"];
     
-    if ("tfar_plugin" in usedPlugins) then {
-        switch(_side) do {
-            case WEST: {
-                switch(_kind) do {
-                    case "SR": { _radio = "tf_rf7800str" };
-                    case "LR": { _radio = "tf_anprc152" };
-                    case "BP": { _radio = "tf_rt1523g_big"; _isBP = true };
+    switch (true) do {
+        case (mission_TFAR_enabled): {
+            switch(_side) do {
+                case WEST: {
+                    switch(_kind) do {
+                        case "SR": { _radio = "tf_rf7800str" };
+                        case "LR": { _radio = "tf_anprc152" };
+                        case "BP": { _radio = "tf_rt1523g"; _isBP = true };
+                    };
+                };
+                case EAST: {
+                    switch(_kind) do {
+                        case "SR": { _radio = "tf_pnr1000a" };
+                        case "LR": { _radio = "tf_fadak" };
+                        case "BP": { _radio = "tf_mr3000"; _isBP = true };
+                    };
+                };     
+                case RESISTANCE: {
+                    switch(_kind) do {
+                        case "SR": { _radio = "tf_anprc154" };
+                        case "LR": { _radio = "tf_anprc148jem" };
+                        case "BP": { _radio = "tf_anprc155"; _isBP = true };
+                    };
                 };
             };
-            case EAST: {
-                switch(_kind) do {
-                    case "SR": { _radio = "tf_pnr1000a" };
-                    case "LR": { _radio = "tf_fadak" };
-                    case "BP": { _radio = "tf_mr3000"; _isBP = true };
-                };
-            };     
-            case RESISTANCE: {
-                switch(_kind) do {
-                    case "SR": { _radio = "tf_anprc154" };
-                    case "LR": { _radio = "tf_anprc148jem" };
-                    case "BP": { _radio = "tf_anprc155"; _isBP = true };
-                };
-            };            
         };
         
-        if (_isBP) then {
-            _unit addBackpackCargoGlobal [_radio, _amount];
-        } else {
-            _unit addItemCargoGlobal [_radio, _amount];
+        case (mission_ACRE2_enabled): {
+            switch(_kind) do {
+                case "SR": { _radio = "ACRE_PRC343" };
+                case "LR": { _radio = "ACRE_PRC148" };
+                case "BP": { _radio = "ACRE_PRC117F" };
+            };
         };
-    };    
+    };
+    
+    if (_isBP) then { _unit addBackpackCargoGlobal [_radio, _amount];
+    } else { _unit addItemCargoGlobal [_radio, _amount] };
 };

@@ -5,10 +5,47 @@
 
 // MEDICAL =====================================================================
 
-_bandage = "AGM_Bandage";
-_morphine = "AGM_Morphine";
-_epi = "AGM_Epipen";
-_bloodbag = "AGM_Bloodbag";
+switch (true) do {
+    case (mission_AGM_enabled): {
+        _bandage = "AGM_Bandage";
+        _morphine = "AGM_Morphine";
+        _epi = "AGM_Epipen";
+        _bloodbag = "AGM_Bloodbag";         
+    };
+    case (mission_ACE3_enabled): {
+        _fieldDressing = "ACE_fieldDressing";
+        _bandage = _fieldDressing;
+        _packingBandage = "ACE_packingBandage";
+        _elasticBandage = "ACE_elasticBandage";
+        
+        _quickClot = "ACE_quikclot";
+        _personalAidKit = "ACE_personalAidKit";
+        
+        _tourniquet = "ACE_tourniquet";
+        
+        _morphine = "ACE_morphine";
+        _atrophine = "ACE_atropine";
+        _epi = "ACE_epinephrine";
+        
+        _saline1000 = "ACE_salineIV";
+        _saline500 = "ACE_salineIV_500";
+        _saline250 = "ACE_salineIV_250";
+        
+        _blood1000 = "ACE_bloodIV";
+        _blood500 = "ACE_bloodIV_500";
+        _blood250 = "ACE_bloodIV_250";
+        
+        _plasma1000 = "ACE_plasmaIV";
+        _plasma500 = "ACE_plasmaIV_500";
+        _plasma250 = "ACE_plasmaIV_250";
+        
+        _bloodbag = _blood1000;
+        
+        _surgKit = "ACE_surgicalKit";
+        
+        _bodyBag = "ACE_bodyBag";
+    };    
+};
 
 // GRENADES ====================================================================
 
@@ -28,11 +65,6 @@ _rCHEMLIGHT = "chemlight_red";
 _gCHEMLIGHT = "chemlight_green";
 _bCHEMLIGHT = "chemlight_blue";
 
-_wFLARE = "AGM_HandFlare_White";
-_rFLARE = "AGM_HandFlare_Red";
-_gFLARE = "AGM_HandFlare_Green";
-_yFLARE = "AGM_HandFlare_Yellow";
-
 _irGRENADEblufor = "B_IR_Grenade";
 _irGRENADEopfor = "O_IR_Grenade";
 _irGRENADEindfor = "I_IR_Grenade";
@@ -48,6 +80,27 @@ _FLASHBANGopfor = "rhs_mag_fakel";
 _FLASHBANGopforS = "rhs_mag_fakels";
 _flashbangZarya = "rhs_mag_zarya2";
 _flashbangPlamyam = "rhs_mag_plamyam";
+
+switch (true) do {
+    case (mission_AGM_enabled): {
+        _wFLARE = "AGM_HandFlare_White";
+        _rFLARE = "AGM_HandFlare_Red";
+        _gFLARE = "AGM_HandFlare_Green";
+        _yFLARE = "AGM_HandFlare_Yellow";        
+    };
+    case (mission_ACE3_enabled): {
+        _wFLARE = "ACE_HandFlare_White";
+        _rFLARE = "ACE_HandFlare_Red";
+        _gFLARE = "ACE_HandFlare_Green";
+        _yFLARE = "ACE_HandFlare_Yellow";
+    };   
+    default {
+        _wFLARE = "";
+        _rFLARE = "";
+        _gFLARE = "";
+        _yFLARE = "";
+    };
+};
 
 // EXPLOSIVES ==================================================================
 
@@ -82,17 +135,52 @@ _satchelCharge = "SatchelCharge_Remote_Mag";
 
 _mineDetector = "MineDetector";
 _toolKit = "ToolKit";
-_cableTie = "AGM_CableTie";
-_uavBattery = "AGM_UAVBattery";
-_mapTools = "AGM_MapTools";
-_spareBarrel = "AGM_SpareBarrel";
-_kestrel = "AGM_ItemKestrel";
-_IRStrobe = "AGM_IR_Strobe_Item";
-_clacker = "AGM_Clacker";
-_M26clacker = "AGM_M26_Clacker";
-_defusalKit = "AGM_DefusalKit";
-_deadManSwitch = "AGM_DeadManSwitch";
-_earBuds = "AGM_EarBuds";
+
+switch (true) do {
+    case (mission_AGM_enabled): {
+        _cableTie = "AGM_CableTie";
+        _uavBattery = "AGM_UAVBattery";
+        _mapTools = "AGM_MapTools";
+        _spareBarrel = "AGM_SpareBarrel";
+        _kestrel = "AGM_ItemKestrel";
+        _IRStrobe = "AGM_IR_Strobe_Item";
+        _clacker = "AGM_Clacker";
+        _M26clacker = "AGM_M26_Clacker";
+        _defusalKit = "AGM_DefusalKit";
+        _deadManSwitch = "AGM_DeadManSwitch";
+        _earBuds = "AGM_EarBuds";      
+    };
+    case (mission_ACE3_enabled): {
+        _spareBarrel = "ACE_SpareBarrel";
+        _IRStrobe = "ACE_IR_Strobe_Item";
+        _cableTie = "ACE_CableTie";
+        _clacker = "ACE_Clacker";
+        _M26clacker = "ACE_M26_Clacker";
+        _defusalKit = "ACE_DefusalKit";
+        _deadManSwitch = "ACE_DeadManSwitch";
+        _cellphone = "ACE_Cellphone";
+        _earBuds = "ACE_EarPlugs";
+        _microDAGR = "ACE_microDAGR";
+        _mapTools = "ACE_MapTools";
+        _uavBattery = "ACE_UAVBattery";
+        _kestrel = "ACE_Kestrel";
+    }; 
+    default {
+        _spareBarrel = "";
+        _IRStrobe = "";
+        _cableTie = "";
+        _clacker = "";
+        _M26clacker = "";
+        _defusalKit = "";
+        _deadManSwitch = "";
+        _cellphone = "";
+        _earBuds = "";
+        _microDAGR = "";
+        _mapTools = "";
+        _uavBattery = "";
+        _kestrel = "";    
+    };
+};
 
 // ETC =========================================================================
 

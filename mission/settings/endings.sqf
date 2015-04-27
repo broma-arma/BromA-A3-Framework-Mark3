@@ -22,7 +22,7 @@ switch (_this select 0) do {
     {
         _winningSides = [side_b_side, side_c_side];
         _losingSides = [side_a_side];
-        _showStats = false;
+        _showStats = true;
         _title = "Mission failed.";
         _reason = "%2 failed the mission.";
         _endNumber = 2;
@@ -60,7 +60,7 @@ switch (_this select 0) do {
     case "side_b_victory":
     {
         _winningSides = [side_b_side];
-        _losingSides = [side_c_side, side_c_side];
+        _losingSides = [side_a_side, side_c_side];
         _showStats = true;
         _title = "Mission over.";
         _reason = "%1 won the mission and defeated %2.";
@@ -85,7 +85,7 @@ switch (_this select 0) do {
 // ============================================================================    
     case "side_a_defeat": 
     {
-        _winningSides = [side_b_side, side_c_side];;
+        _winningSides = [side_b_side, side_c_side];
         _losingSides = [side_a_side];
         _showStats = true;
         _title = "Mission over.";
@@ -98,7 +98,7 @@ switch (_this select 0) do {
 // ============================================================================    
     case "side_b_defeat":
     {
-        _winningSides = [side_c_side, side_c_side];
+        _winningSides = [side_a_side, side_c_side];
         _losingSides = [side_b_side];
         _showStats = true;
         _title = "Mission over.";
@@ -135,5 +135,11 @@ switch (_this select 0) do {
 
 // =============================================================================
 
+// =============================================================================
+if !(mission_enable_side_c) then {
+    _winningSides = _winningSides - [side_c_side];
+    _losingSides = _losingSides - [side_c_side];
+};
 mission_ending_details = [_winningSides, _losingSides, _showStats, _title, _reason, _endNumber];
 publicVariable "mission_ending_details";
+// =============================================================================

@@ -15,6 +15,7 @@ class BRM_RespawnSystem
 		class getLives {};
 		class setLives {};
 		class callRespawn {};
+		class callRespawnSide {};
 		class killPlayer {};
 	};
 };

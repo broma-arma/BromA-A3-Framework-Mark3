@@ -1,34 +1,39 @@
 
 // INFO ========================================================================
 /*
-    This is the template you can use to create your own loadouts.
-    
-    Customize it as you wish.
+    In the wake of civil war, the Jerusalem Cease Fire of 2030 mandated the 
+    creation of an armed defence force to secure the sovereign territory of 
+    The Republic of Altis and Stratis.
 */
 
-_defaultSide = WEST;
-_defaultVoice = [_voiceAMERICAN];
-_defaultFace = [_faceWHITE, _faceBLACK, _faceASIAN];
+_defaultSide = RESISTANCE;
+_defaultVoice = [_voiceALTIAN];
+_defaultFace = [_faceGREEK];
 _defaultName = [_nameAMERICAN];
 _defaultInsignia = "";
 
 // WEAPONS =====================================================================
 
-_commonRIFLE = _RHSM4;
-_commonRIFLEGL = _RHSM4GL;
-_commonPISTOL = _M1911;
-_commonMG = _M249PIP;
-_commonMARKSMAN = _M14SOPMOD;
-_commonSNIPER = _M21;
-_commonAT = _M136;
-_specAT = _MAAWS;
-_commonSMG = _RHSM4;
-_commonRCO = "rhsusf_acc_ACOG_USMC";
-_commonCCO = "RH_eotech553";
+_MKCamo = true;
+
+_rr=_Mk20;_rg=_Mk20GL;_rc=_MK20C;
+if (_MKCamo) then { _rr=_Mk20Camo;_rg=_Mk20GLCamo;_rc=_MK20CCamo; };
+
+_commonRIFLE = _rr;
+_commonRIFLEGL = _rg;
+_commonPISTOL = _ACP45;
+_commonMG = _Mk200;
+_commonMARKSMAN = _Mk18;
+_commonSNIPER = _GM6;
+_commonAT = _PCML;
+_specAT = _PCML;
+_commonSMG = _rc;
+_commonRCO = "optic_MRCO";
+_commonCCO = "optic_ACO_grn";
 _commonMAGNIFIED = _SOS;
 _commonSUPPRESSOR = "muzzle_snds_M";
 _commonPISTOLSUPPRESSOR = "muzzle_snds_L";
-_NVG = _NVGEN1;
+_NVG = _NVGEN3IND;
 
 // AMMO COUNT ==================================================================
 
@@ -49,76 +54,100 @@ _countATCARGO = 15;
 _countGrenadesCARGO = 20;
 _count40mmCARGO = 40;
 
-_countBANDAGE = 20;
-_countMORPHINE = 15;
-_countEPI = 10;
-_countBLOODBAG = 5;
+// MEDICAL SUPPLIES ============================================================
 
-_countBandageCARGO = 40;
-_countMorphineCARGO = 30;
-_countEpiCARGO = 20;
-_countBloodbagCARGO = 10;
+switch (true) do {
+    
+    case (mission_AGM_enabled): {
+
+        _countBANDAGE = 20;
+        _countMORPHINE = 15;
+        _countEPI = 10;
+        _countBLOODBAG = 5;
+
+        _countBandageCARGO = 40;
+        _countMorphineCARGO = 30;
+        _countEpiCARGO = 20;
+        _countBloodbagCARGO = 10;    
+            
+        _suppliesMEDIC = [[_unit,[_bandage,_countBANDAGE], [_morphine,_countMORPHINE],[_epi,_countEPI],[_bloodbag,_countBLOODBAG]]];
+        _suppliesNORMAL = [[_unit,[_bandage, 2], [_morphine,1],[_epi, 1]]];
+    };
+    
+    case (mission_ACE3_enabled): {
+        
+        _countBANDAGE = 25;
+        _countMORPHINE = 20;
+        _countEPI = 10;
+        _countCAT = 20;
+        _countBLOODBAG = 3;
+
+        _countBandageCARGO = 40;
+        _countMorphineCARGO = 30;
+        _countEpiCARGO = 20;
+        _countBloodbagCARGO = 10;
+        
+        switch (param_ace3_medical_level) do {
+            
+            case 0: { // SIMPLE
+                _suppliesMEDIC = [[_unit,[_fieldDressing,_countBANDAGE], [_morphine,_countMORPHINE],[_epi,_countEPI],[_bloodbag,_countBLOODBAG]]];
+                _suppliesNORMAL = [[_unit,[_fieldDressing, 2], [_morphine,1],[_epi, 1]]];
+            };
+            case 1: { // ADVANCED
+                _suppliesMEDIC = [[_unit,[_packingBandage,_countBANDAGE], [_morphine,_countMORPHINE],[_epi,_countEPI],[_saline250,_countBLOODBAG]]];
+                _suppliesNORMAL = [[_unit,[_fieldDressing, 2],[_packingBandage, 1],[_tourniquet, 1],[_morphine,1],[_epi,1]]];
+            };
+        };
+    };
+    
+    default {
+        _suppliesMEDIC = [[_unit,["FirstAidKit",20],["Medikit",1]]];
+        _suppliesNORMAL = [[_unit,["FirstAidKit",3]]];
+    };    
+};
 
 // UNIFORMS ====================================================================
 
-_headsLIST = [
-    "rhsusf_mich_helmet_marpatwd_alt"
-];
-
-_uniformsLIST = [
-    "TRYK_U_B_MARPAT_Wood_Tshirt",
-    "TRYK_U_B_MARPAT_Wood"
-];
-
-_vestsLIST = [
-    "TRYK_V_PlateCarrier_coyo_L",
-    "TRYK_V_PlateCarrier_coyo"
-];
-
-_randomHEAD = _headsLIST call BIS_fnc_selectRandom;
-_randomUNIFORM = _uniformsLIST call BIS_fnc_selectRandom;
-_randomVEST = _vestsLIST call BIS_fnc_selectRandom;
-
-_commonHEAD = _randomHEAD;
-_leaderHEAD = "rhsusf_mich_helmet_marpatwd_alt_headset";
-_officerHEAD = "rhsusf_mich_helmet_marpatwd_alt_headset";
+_commonHEAD = "H_HelmetIA";
+_leaderHEAD = _commonHEAD;
+_officerHEAD = "H_MilCap_dgtl";
 _medicHEAD = _commonHEAD;
-_crewmanHEAD = "rhsusf_cvc_green_ess";
-_pilotHEAD = _commonHEAD;
-_helicrewHEAD = _commonHEAD;
-_helipilotHEAD = _commonHEAD;
+_crewmanHEAD = "H_HelmetCrew_I";
+_pilotHEAD = "H_PilotHelmetFighter_I";
+_helicrewHEAD = "H_CrewHelmetHeli_I";
+_helipilotHEAD = "H_PilotHelmetHeli_I";
 _sniperHEAD = _commonHEAD;
 _demoHEAD = _commonHEAD;
-_reconHEAD = _commonHEAD;
+_reconHEAD = "H_Booniehat_dgtl";
 
-_commonUNIFORM = _randomUNIFORM;
-_officerUNIFORM = _commonUNIFORM;
-_pilotUNIFORM = _commonUNIFORM;
-_sniperUNIFORM = _commonUNIFORM;
-_marksmanUNIFORM = _commonUNIFORM;
-_helicrewUNIFORM = _commonUNIFORM;
+_commonUNIFORM = "U_I_CombatUniform";
+_officerUNIFORM = "U_I_OfficerUniform";
+_pilotUNIFORM = "U_I_PilotCoveralls";
+_sniperUNIFORM = "U_I_GhillieSuit";
+_marksmanUNIFORM = _officerUNIFORM;
+_helicrewUNIFORM = "U_I_PilotCoveralls";
 _crewUNIFORM = _commonUNIFORM;
 _mgUNIFORM = _commonUNIFORM;
 _medicUNIFORM = _commonUNIFORM;
 _demoUNIFORM = _commonUNIFORM;
-_reconUNIFORM = _commonUNIFORM;
+_reconUNIFORM = "U_I_CombatUniform_shortsleeve";
 
-_commonVEST = _randomVEST;
-_officerVEST = _commonVEST;
+_commonVEST = "V_Chestrig_oli";
+_officerVEST = "V_BandollierB_oli";
 _ftlVEST = _commonVEST;
 _slVEST = _commonVEST;
 _mgVEST = _commonVEST;
-_grenadierVEST = _commonVEST;
+_grenadierVEST = "V_PlateCarrierIA2_dgtl";
 _medicVEST = _commonVEST;
 _demoVEST = _commonVEST;
 _marksmanVEST = _commonVEST;
-_reconVEST = _commonVEST;
+_reconVEST = "V_PlateCarrierIA1_dgtl";
 
-_commonBACKPACK = "TRYK_B_Kitbag_Base";
-_bigBACKPACK = "TRYK_B_Kitbag_Base";
+_commonBACKPACK = "B_AssaultPack_dgtl";
+_bigBACKPACK = "B_Carryall_oli";
 
-_HMG = "RHS_M2_Gun_Bag";
-_tripod = "RHS_M2_Tripod_Bag";
+_HMG = "I_HMG_01_A_high_weapon_F";
+_tripod = "I_HMG_01_support_F";
 
 // =============================================================================
 if (!_isMan) exitWith {};
@@ -128,6 +157,7 @@ switch (true) do {
     case (_isOfficer): {   
         [_officerHEAD, _officerUNIFORM, _officerVEST, "empty"] call _useUniform;
         [[_unit,[_wsmoke,2],[_rsmoke,2],[_mapTools,1]]] call _addtoVest;
+        ["ItemGPS"] call _linkItem;
         [_commonRIFLE, _countRIFLE] call _addWeaponKit;
         [_commonPISTOL, _countPISTOL] call _addWeaponKit;
         ["laserdesignator"] call _addOptics;
@@ -163,6 +193,7 @@ switch (true) do {
         [_commonRIFLE, _countRIFLELOW] call _addWeaponKit;
         [_commonPISTOL, _countPISTOL] call _addWeaponKit;
         ["primary", _commonSUPPRESSOR] call _attachToWeapon;
+        ["primary", _commonRCO] call _attachToWeapon;
         ["secondary", _commonPISTOLSUPPRESSOR] call _attachToWeapon;
         ["LR"] call _addRadio;
         ["BP"] call _addRadio;        
@@ -201,7 +232,7 @@ switch (true) do {
     case (_isMarksman): {
         [_commonHEAD, _marksmanUNIFORM, _marksmanVEST, "empty"] call _useUniform;
         [[_unit,[_wsmoke,2], [_rsmoke,2]]] call _addtoVest;
-        [_commonRIFLE, _countRIFLE] call _addWeaponKit;
+        [_commonMARKSMAN, _countRIFLE] call _addWeaponKit;
         ["primary", _commonRCO] call _attachToWeapon;
     };
     
@@ -221,7 +252,7 @@ switch (true) do {
     case (_isLifeSaver): {
         [_medicHEAD, _medicUNIFORM, _medicVEST, _commonBACKPACK] call _useUniform;
         [[_unit,[_wsmoke,2], [_gsmoke,3]]] call _addtoVest;
-        [[_unit,[_bandage,_countBANDAGE], [_morphine,_countMORPHINE],[_epi,_countEPI],[_bloodbag,_countBLOODBAG]]] call _addtoBackpack;
+        _suppliesMEDIC call _addtoBackpack;
         [_commonRIFLE, _countRIFLELOW] call _addWeaponKit;
         _defaultInsignia = "MedB";
     };
@@ -250,7 +281,7 @@ switch (true) do {
         [_medicHEAD, _reconUNIFORM, _reconVEST, _commonBACKPACK] call _useUniform;
         ["binoc"] call _addOptics;
         [[_unit,[_wsmoke,2],[_rsmoke,2],[_gsmoke,2],[_mapTools,1]]] call _addtoVest;        
-        [[_unit,[_bandage,_countBANDAGE], [_morphine,_countMORPHINE],[_epi,_countEPI],[_bloodbag,_countBLOODBAG]]] call _addtoBackpack;
+        _suppliesMEDIC call _addtoBackpack;
         [_commonRIFLE, _countRIFLE] call _addWeaponKit;
         ["primary", _commonSUPPRESSOR] call _attachToWeapon;
         _defaultInsignia = "MedB";
@@ -316,10 +347,10 @@ switch (true) do {
 
 // ADDS ESSENTIALS =============================================================
 
-[[_unit,[_bandage, 2], [_morphine,1],[_epi, 1]]] call _addtoUniform;
+_suppliesNORMAL call _addtoUniform;
 
 ["ItemMap", "ItemCompass", "ItemWatch", _NVG] call _linkItem;
 
 ["SR"] call _addRadio;
 
-if ("agm_plugin" in usedPlugins) then { [[_unit, [_earBuds,1]]] call _addtoUniform };
+if ((mission_AGM_enabled)||(mission_ACE3_enabled)) then { [[_unit, [_earBuds,1]]] call _addtoUniform };

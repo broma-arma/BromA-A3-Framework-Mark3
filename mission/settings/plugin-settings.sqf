@@ -14,6 +14,19 @@
 intro_cutscene = "ESTABLISHING";
 
 // ============================================================================
+//                          == RESPAWN SYSTEM ==                               |
+// ============================================================================
+
+// How many lives each side will get. Leave at -1 if you want it to be tied
+// to the parameter.
+
+// Remember that respawning must still be enabled in the parameters.
+
+mission_lives_side_a = -1;
+mission_lives_side_b = -1;
+mission_lives_side_c = -1;
+
+// ============================================================================
 //                         == CH VIEW DISTANCE ==                              |
 // ============================================================================
 
@@ -27,61 +40,6 @@ CHVD_maxView = 12000;
 CHVD_maxObj = 12000;
 
 // ============================================================================
-//                                                                             |
-//                       == AGM MEDICAL SETTINGS ==                            |
-//                                                                             |
-// ============================================================================
-
-// Non-medic units can use epinephrine and blood bags.
-agm_settings_AllowNonmedics = true;
-
-// Unconcious units wake up by themselves after a while.
-agm_settings_AutomaticWakeup = true;
-
-// How much a unit bleeds, default 1.
-agm_settings_CoefBleeding = 1;
-
-// How much damage a unit takes, default 1.
-agm_settings_CoefDamage = 1;
-
-// How harder it is for non-medics to perform medical actions, default 1.
-agm_settings_CoefNonMedic = 4;
-
-// How much pain a unit feels, default 1.
-agm_settings_CoefPain = 1;
-
-// Player units who are unconcious will not die after being shot again.
-agm_settings_PreventDeathWhileUnconscious = true;
-
-// Player units won't die before going unconcious.
-agm_settings_PreventInstaDeath = true;
-
-// Require a diagnosis before treating a wounded unit.
-agm_settings_RequireDiagnosis = false;
-
-// Require only a single bandage to treat a unit.
-agm_settings_SingleBandage = false;
-
-// Disables screams of pain.
-agm_settings_DisableScreams = false;
-
-// ============================================================================
-//                                                                             |
-//                   == TASK FORCE RADIO ALPHA SETTINGS ==                     |
-//                                                                             |
-// ============================================================================
-
-tf_same_sw_frequencies_for_side = true;
-
-tf_same_lr_frequencies_for_side = true;
-
-tf_no_auto_long_range_radio = true;
-
-TF_give_personal_radio_to_regular_soldier = false;
-
-TF_give_microdagr_to_soldier = false;
-
-// ============================================================================
 //                          == COMMANDER LOCK ==                               |
 //                                                                             |
 // This module stops all of a side's units from entering vehicles or shooting, |
@@ -89,7 +47,7 @@ TF_give_microdagr_to_soldier = false;
 // ============================================================================
 
 // What units are authorized to ready their team.
-co_lock_units = "[blu_0_0_1, op_0_0_1, ind_0_0_1]";
+co_lock_units = "[blu_0_0_1, blu_1_0_1, op_0_0_1, op_1_0_1, ind_0_0_1, ind_1_0_1]";
 
 // If this is enabled, the mission won't start until all sides are ready.
 co_lock_tvt_mode = false;
@@ -120,14 +78,14 @@ f_var_removeBodyDistance = 300;
 //        http://ferstaberinde.com/f2/en/index.php?title=Casualties_Cap        |
 // ============================================================================
 
-casualty_group_a = "[blu_1_0, blu_1_1, blu_1_2, blu_2_0, blu_2_1, blu_2_2, blu_3_0, blu_3_1, blu_3_2, blu_4_0, blu_4_1, blu_4_2]";
-// Casualty groups for the first side.
+casualty_group_BLU = "[blu_0_0, blu_1_0, blu_1_1, blu_1_2, blu_2_0, blu_2_1, blu_2_2, blu_3_0, blu_3_1, blu_3_2, blu_4_0, blu_4_1, blu_4_2]";
+// Casualty groups for BLUFOR.
 
-casualty_group_b = "[op_1_0, op_1_1, op_1_2, op_2_0, op_2_1, op_2_2, op_3_0, op_3_1, op_3_2, op_4_0, op_4_1, op_4_2]";
-// Casualty group for the second side.
+casualty_group_OP = "[op_0_0, op_1_0, op_1_1, op_1_2, op_2_0, op_2_1, op_2_2, op_3_0, op_3_1, op_3_2, op_4_0, op_4_1, op_4_2]";
+// Casualty group for OPFOR.
 
-casualty_group_c = "[ind_1_0, ind_1_1, ind_1_2, ind_2_0, ind_2_1, ind_2_2, ind_3_0, ind_3_1, ind_3_2, ind_4_0, ind_4_1, ind_4_2]";
-// Casualty group for the third side.
+casualty_group_IND = "[ind_0_0, ind_1_0, ind_1_1, ind_1_2, ind_2_0, ind_2_1, ind_2_2, ind_3_0, ind_3_1, ind_3_2, ind_4_0, ind_4_1, ind_4_2]";
+// Casualty group for INDFOR.
     
 // ============================================================================
 //                              == TIME LIMIT ==                               |

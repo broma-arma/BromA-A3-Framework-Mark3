@@ -27,7 +27,7 @@ mission_version =    "v0";
 //                                                                             |
 // ============================================================================
 
-mission_game_mode = "COOP";
+mission_game_mode = "coop";
 
 // ============================================================================
 //                          ==   LOADOUT MODE   ==                             |
@@ -53,8 +53,8 @@ units_AI_useVanillaGear = false;
 
 side_a_side = west;                 // Side the players belong to
 side_a_color = "blue";              // Color of the player side.
-side_a_faction = "RACS";            // Faction of the players.
-side_a_name = "BLUE FORCES";        // Player faction name.
+side_a_faction = "NATO";            // Faction of the players.
+side_a_name = "NATO Troops";        // Player faction name.
 
 // Name the player groups.
 side_a_callsigns = ["Zero", "Alpha", "Bravo", "Charlie", "Delta", "Razor", "Sierra", "Wizard", "Shocker", "Paradise", "Meteor", "Lancer", "Titan", "Havoc", "Pegasus"];
@@ -63,8 +63,8 @@ side_a_callsigns = ["Zero", "Alpha", "Bravo", "Charlie", "Delta", "Razor", "Sier
 
 side_b_side = east;                 // Side the enemies belong to
 side_b_color = "red";               // Color of the enemy side.
-side_b_faction = "SLA";             // Enemy faction.
-side_b_name = "OPPOSING FORCES";    // Enemy faction name.
+side_b_faction = "CSAT";            // Enemy faction.
+side_b_name = "CSAT Forces";        // Enemy faction name.
 
 // Name the enemy groups.
 side_b_callsigns = ["Godfather", "Anaconda", "Boa", "Cobra", "Dragon",  "Raven", "Scorpion", "Weasel", "Sparrow", "Pelican", "Moose", "Lion", "Tiger", "Hawk", "Phoenix"];
@@ -77,8 +77,8 @@ mission_enable_side_c = false;
 
 side_c_side = resistance;           // Side of third faction.
 side_c_color = "green";             // Color of the third faction.
-side_c_faction = "ahkma-pmc";       // Third side's faction.
-side_c_name = "AAF";                // Name of the third faction.
+side_c_faction = "AAF";             // Third side's faction.
+side_c_name = "AAF Units";          // Name of the third faction.
 
 // Name the third faction's groups.
 side_c_callsigns = ["Papa", "Anna", "Beatrice", "Clara", "Denise",  "Rose", "Sarah", "Whitney", "Shirley", "Penny", "Mary", "Lucy", "Tanya", "Helen", "Petunia"];
@@ -88,13 +88,45 @@ side_c_callsigns = ["Papa", "Anna", "Beatrice", "Clara", "Denise",  "Rose", "Sar
 DAC_Res_Side = 1;                    // Side the independent are friendly to:
                                      // 0: EAST / 1: WEST / 2: NOBODY
                                      // (MUST BE THE SAME AS THE EDITOR!)
+                                     
+// ============================================================================
+//                           ==   EXTRACTION   ==                              |
+//                                                                             |
+//    Determines what sides will only win their mission after extracting to    |
+//                      a designated point on the map.                         |
+//                                                                             |
+// ============================================================================
+
+// Sides that must extract after finishing their main objectives.
+mission_require_extraction = [side_a_side];
+
+// Extraction objects for each side. Can be a Game Logic or regular vehicle/object.
+// Any objects named "blu/op/ind_extraction_N" will be added automatically.
+
+mission_extraction_points_a = [];
+mission_extraction_points_b = [];
+mission_extraction_points_c = [];
+
+// Enables music playing during the extraction - a random one will be chosen.
+mission_extraction_enable_music = true;
+
+mission_extraction_tracks = 
+["LeadTrack01_F", "LeadTrack02_F", "LeadTrack03_F", "LeadTrack01_F_Heli",
+"LeadTrack01_F_Mark", "LeadTrack05_F", "LeadTrack02_F_EPB"];
+
+// Declare here the groups that must extract.
+
+mission_extraction_BLU = ["blu_0_0","blu_1_0","blu_1_1","blu_1_2","blu_2_0","blu_2_1","blu_2_2","blu_3_0","blu_3_1","blu_3_2","blu_4_0","blu_4_1","blu_4_2"];
+mission_extraction_OP = ["op_0_0","op_1_0","op_1_1","op_1_2","op_2_0","op_2_1","op_2_2","op_3_0","op_3_1","op_3_2","op_4_0","op_4_1","op_4_2"];
+mission_extraction_IND = ["ind_0_0","ind_1_0","ind_1_1","ind_1_2","ind_2_0","ind_2_1","ind_2_2","ind_3_0","ind_3_1","ind_3_2","ind_4_0","ind_4_1","ind_4_2"];
+mission_extraction_CIV = ["civ_0_0"];                                     
 
 // ============================================================================
 //                              == ENDINGS ==                                  |
 //                                                                             |
 //        These are the endings that are called when conditions are met.       |
 //                                                                             |
-//            Some can be ignored if you aren't using the plugin.              |
+//         Some can be ignored if you aren't using the related plugin.         |
 //                                                                             |
 // ============================================================================
 
@@ -126,9 +158,28 @@ endings_tvt_side_c_defeat = "side_a_defeat";    // (TVT) Side C wins the mission
 mission_allow_jip = true;
 
 // =============================================================================
-//  Load the plugin settings file.
+//  Load the ACE3 settings file.
 // =============================================================================
+#include "mods-settings\ace3-settings.sqf"
 
+// =============================================================================
+//  Load the AGM settings file.
+// =============================================================================
+#include "mods-settings\agm-settings.sqf"
+
+// =============================================================================
+//  Load the TFAR settings file.
+// =============================================================================
+#include "mods-settings\tfar-settings.sqf"
+
+// =============================================================================
+//  Load the ACRE2 settings file.
+// =============================================================================
+#include "mods-settings\acre2-settings.sqf"
+
+// =============================================================================
+//  Load the Framework plugins settings file.
+// =============================================================================
 #include "plugin-settings.sqf"
 
 // =============================================================================

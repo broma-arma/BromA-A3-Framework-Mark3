@@ -14,6 +14,8 @@ sleep 1;
 
 if (hasInterface) then {
     
+    if (player_is_spectator) exitWith {};
+    
     _index = -1;
     
     _takenIndex = 0;
@@ -28,7 +30,7 @@ if (hasInterface) then {
             player setVariable ["unit_valid_slot", true, true];
             sleep mission_preventreslot_timer;
 
-            ["Alert",["Your slot has been locked for the remainder of the mission."]] call bis_fnc_showNotification;
+            ["Alert",["Your slot has been locked for the remainder of the mission."]] call BIS_fnc_showNotification;
 
             [0, {
                  _index = (count mission_player_slots);

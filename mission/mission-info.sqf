@@ -5,11 +5,17 @@
 //                                                                             |
 // ============================================================================
 
+class Header {
+   
 // Mission type. ===============================================================
 
 // https://community.bistudio.com/wiki/Multiplayer_Game_Types
-gameType = COOP;
+gameType = coop;
 
+// You can ignore these.
+minPlayers = 2;
+maxPlayers = 50;
+};
 // Mission and Author's name, loading description and loading picture. =========
 
 onLoadName = "MISSION NAME";
@@ -30,9 +36,7 @@ disableChannels[]={0,1,2};
    6 = System */
    
 // I don't recommend messing with these. =======================================
-   
-minPlayers = 2;
-maxPlayers = 50;
+
 respawn = "BASE";
 respawnDialog = 0;
 respawnTemplates[] = {"Base"};

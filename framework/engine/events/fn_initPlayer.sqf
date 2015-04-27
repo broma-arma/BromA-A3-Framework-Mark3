@@ -26,13 +26,36 @@ RETURNS:
 
 if (!hasInterface) exitWith {};
 waitUntil{!(isNull player)};
-waitUntil{!(isNil "paramsDone")};
+waitUntil{!(isNil "mission_params_read")};
 
-["LOCAL", "F_LOG", format ["INITIALIZING PLAYER '%1' (%2)", name player, player]] call BRM_fnc_doLog;
+_playerLog = format ["INITIALIZING PLAYER '%1' (%2)", name player, player];
 
-_initialized = player getVariable ["unit_initialized",false];
+["LOCAL", "F_LOG", _playerLog] call BRM_fnc_doLog;
+["SERVER", "F_LOG", _playerLog] call BRM_fnc_doLog;
+
+// Assigns JIP status. =========================================================
+
+player_is_jip = (time > 0.1);
+
+if (!mission_allow_jip && player_is_jip) exitWith {
+    [player] spawn BRM_fnc_removeJIP;
+};
+
+["LOCAL", "F_LOG", format ["JIP STATUS: %1 | TIME: %2", player_is_jip, time]] call BRM_fnc_doLog;
+
+// Synchronize time with the server. ===========================================
+
+[] spawn BRM_fnc_syncTime;
+
+// Removes spectators from the game. ===========================================
+
+player_is_spectator = player getVariable ["is_spectator", false];
+
+if (player_is_spectator) exitWith { [player] call BRM_fnc_initSpectator };
 
 // Checks if player hasn't already been initialized. ===========================
+
+_initialized = player getVariable ["unit_initialized",false];
 
 if (_initialized) exitWith {};
 
@@ -48,20 +71,6 @@ _groupColor = _initUnit select 0;
 _faction = _initUnit select 1;
 _role = _initUnit select 2;
 _groupName = _initUnit select 3;
-
-// Assigns JIP status. =========================================================
-
-player_is_jip = (time > 0.1);
-
-if (!mission_allow_jip && player_is_jip) exitWith {
-    [player] spawn BRM_fnc_removeJIP;
-};
-
-["LOCAL", "F_LOG", format ["JIP STATUS: %1 | TIME: %2", player_is_jip, time]] call BRM_fnc_doLog;
-
-// Synchronize time with the server. ===========================================
-
-[] spawn BRM_fnc_syncTime;
 
 // Adds player to relevant lists and registers its original side. ==============
 
@@ -110,7 +119,7 @@ player setVariable ["unit_deaths", player getVariable ["unit_deaths",0]];
 
 // Assigns AGM related variables. ==============================================
 
-if ("agm_plugin" in usedPlugins) then {
+if (mission_AGM_enabled) then {
     switch (_role) do {
         case "medic": { player setVariable ["AGM_IsMedic", true, true] };
         case "pilot": { player setVariable ["AGM_GForceCoef", 0.75, true] };

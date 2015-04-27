@@ -286,7 +286,8 @@ _AK74DESERT = ["rhs_weap_ak74m_desert",_30rnd545AK];
 _AK74GP = ["rhs_weap_ak74m_gp25",_30rnd545AK,_VOG25];
 
 _RHSM16A4 = ["rhs_weap_m16a4_carryhandle",_30rnd556STANAG];
-_RHSM16A42 = ["rhs_weap_m16a4_carryhandle",_30rnd556STANAG];
+_RHSM16A42 = ["rhs_weap_m16a4_grip",_30rnd556STANAG];
+_RHSM16A4GL = ["rhs_weap_m16a4_carryhandle_M203", _30rnd556STANAG,_40mm];
 _RHSM4 = ["rhs_weap_m4_carryhandle",_30rnd556STANAG];
 _RHSM4GL = ["rhs_m4_m320",_30rnd556STANAG,_40mm];
 

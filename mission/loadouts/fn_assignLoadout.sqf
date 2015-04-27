@@ -113,7 +113,10 @@ if (!isNil "_defaultName") then {
         _unit setSpeaker _voice;
         _unit setPitch ([0.85, 1.15] call BIS_fnc_randomNum);
         if (_name != "default") then {
-            if ("agm_plugin" in usedPlugins) then { _unit setVariable ["AGM_Name", _name, true] };
+            switch (true) do {
+                case (mission_ACE3_enabled): { _unit setVariable ["ACE_Name", _name, true] };
+                case (mission_AGM_enabled): { _unit setVariable ["AGM_Name", _name, true] };
+            };
             _unit setName _name;
         };        
     };

@@ -3,6 +3,7 @@
 // version 2
 
 if !(hasInterface) exitWith {};
+if !(isClass(configFile>>"CfgPatches">>"task_force_radio")) exitWith {};
 
 0 spawn {
     

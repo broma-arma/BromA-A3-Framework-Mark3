@@ -161,6 +161,40 @@ _nameSPANISH = [
     "Soto","Delgado","Pena","Rios","Alvarado","Sandoval","Contreras","Valdez","Guerrero","Ortega"]
 ];
 
+_nameRUSSIAN = [
+
+    // NAMES
+    [
+        "Boris","Dobry","Dusan","Egor","Feodore","Fyodor","Gavrie","Gleb","Ivan","Konstantin",
+        "Kostas","Kostya","Lesta","Magar","Maksim","Mikhail","Miloslav","Nikhil","Oksana",
+        "Olga","Sacha","Sarkis","Semyon","Sergei","Timur","Ulan","Ustin","Vadim","Valeri",
+        "Valerian","Vanya","Venedict","Vladilen","Vlas","Wassily","Xenik","Yerik","Yevgeni",
+        "Yurchik","Yuri","Boris","Dobry","Dusan","Egor","Feodore","Fyodor","Gavrie","Gleb",
+        "Ivan","Konstantin","Kostas","Kostya","Lesta","Magar","Maksim","Mikhail","Miloslav",
+        "Nikhil","Oksana","Olga","Sacha","Sarkis","Semyon","Sergei","Timur","Ulan","Ustin",
+        "Vadim","Valeri","Valerian","Vanya","Venedict","Vladilen","Vlas","Wassily","Xenik",
+        "Yerik","Yevgeni","Yurchik","Yuri","Boris","Dobry","Dusan","Egor","Feodore","Fyodor",
+        "Gavrie","Gleb","Ivan","Konstantin","Kostas","Kostya","Lesta","Magar","Maksim","Mikhail",
+        "Miloslav","Nikhil","Oksana","Olga","Sacha","Sarkis","Semyon","Sergei","Timur","Ulan",
+        "Ustin","Vadim","Valeri","Valerian","Vanya","Venedict","Vladilen","Vlas","Wassily",
+        "Xenik","Yerik","Yevgeni","Yurchik","Yuri"
+    ]
+    ,
+    // SURNAMES
+    [
+        "Abramov","Adamovich","Agin","Aksamit","Angeloff","Antonoff","Babin",
+        "Babinski","Balaban","Banasik","Baran","Bardin","Belinsky","Belkin","Below",
+        "Belsky","Berezin","Bobko","Bogdanovich","Bolotin","Borin","Bunin","Burak",
+        "Popov","Popovich","Pozniak","Primack","Prokop","Pyzik","Rakowski","Rodin",
+        "Roman","Romanoff","Romanowski","Rudnitsky","Rusak","Russak","Sadowski",
+        "Samarin","Savin","Shimko","Shostak","Shubin","Simonich","Sliva","Slivka",
+        "Slutsky","Slutzky","Smolin","Sokol","Sokoloff","Sokolov","Sokolski","Sorokin",
+        "Stankevich","Taras","Topolski","Tunick","Tur","Turchin","Urban","Volkov",
+        "Wolsky","Yudin","Yurkovich","Zaleski","Zalesky","Zaretsky","Zlotnik"
+    ]
+];
+
+
 _name = [
 
     // NAMES

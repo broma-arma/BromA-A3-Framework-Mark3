@@ -8,5 +8,7 @@ class BRM_TimeLimit
 
 	class Functions {
 		file = "framework\plugins\time_limit\functions";
+		class addTime {};
+		class removeTime {};
 	};
 }; 

@@ -6,3 +6,12 @@ class p_time_limit
 	default = 0;
 	code = "param_time_limit = %1";
 };
+
+class p_time_added
+{
+	title = "Time added per objective";
+	values[] = {0,1,2,3,4};
+	texts[] = {"Disabled","5 minutes","15 minutes","30 minutes","1 hour"};
+	default = 0;
+	code = "param_time_added = %1";
+};

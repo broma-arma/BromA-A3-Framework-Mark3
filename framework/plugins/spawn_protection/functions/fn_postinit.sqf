@@ -12,7 +12,7 @@ waitUntil {!isNull player};
 private["_side_a_marker","_side_b_marker","_side_c_marker","_tvtEnabled"];
 
 _areasize = spawn_protection_area;
-_tvtEnabled = (mission_game_mode == "tvt");
+_tvtEnabled = !(mission_game_mode == "coop");
 
 switch(side_a_side) do {
     case WEST: { _side_a_marker = "respawn_west" };

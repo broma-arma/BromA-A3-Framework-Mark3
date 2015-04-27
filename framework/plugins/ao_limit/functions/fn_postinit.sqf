@@ -7,6 +7,8 @@ Does not allow a player to leave the AO
 if !(hasInterface) exitWith {};
 
 0 spawn {
+    
+if (player_is_spectator) exitWith {};
 
 private ["_sleep", "_pos", "_aoPos", "_player"];
 

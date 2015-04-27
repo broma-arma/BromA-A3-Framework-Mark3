@@ -1,14 +1,17 @@
 
 // INFO ========================================================================
 /*
-    This is the template you can use to create your own loadouts.
-    
-    Customize it as you wish.
+    Although the communist insurgency has its roots as an underground movement, 
+    it is now a conventional force with military structure and weapon platforms 
+    captured from the Chernarussian government or provided by arms dealers. 
+
+    This has given the Chedaki enough power to start a coup against the government.
 */
 
 _defaultSide = EAST;
 _defaultVoice = [_voiceRUSSIAN];
 _defaultFace = [_faceWHITE];
+_defaultName = [_nameRUSSIAN];
 _defaultInsignia = "";
 
 // WEAPONS =====================================================================
@@ -48,15 +51,57 @@ _countATCARGO = 15;
 _countGrenadesCARGO = 20;
 _count40mmCARGO = 40;
 
-_countBANDAGE = 20;
-_countMORPHINE = 15;
-_countEPI = 10;
-_countBLOODBAG = 5;
+// MEDICAL SUPPLIES ============================================================
 
-_countBandageCARGO = 40;
-_countMorphineCARGO = 30;
-_countEpiCARGO = 20;
-_countBloodbagCARGO = 10;
+switch (true) do {
+    
+    case (mission_AGM_enabled): {
+
+        _countBANDAGE = 20;
+        _countMORPHINE = 15;
+        _countEPI = 10;
+        _countBLOODBAG = 5;
+
+        _countBandageCARGO = 40;
+        _countMorphineCARGO = 30;
+        _countEpiCARGO = 20;
+        _countBloodbagCARGO = 10;    
+            
+        _suppliesMEDIC = [[_unit,[_bandage,_countBANDAGE], [_morphine,_countMORPHINE],[_epi,_countEPI],[_bloodbag,_countBLOODBAG]]];
+        _suppliesNORMAL = [[_unit,[_bandage, 2], [_morphine,1],[_epi, 1]]];
+    };
+    
+    case (mission_ACE3_enabled): {
+        
+        _countBANDAGE = 25;
+        _countMORPHINE = 20;
+        _countEPI = 10;
+        _countCAT = 20;
+        _countBLOODBAG = 3;
+
+        _countBandageCARGO = 40;
+        _countMorphineCARGO = 30;
+        _countEpiCARGO = 20;
+        _countBloodbagCARGO = 10;
+        
+        switch (param_ace3_medical_level) do {
+            
+            case 0: { // SIMPLE
+                _suppliesMEDIC = [[_unit,[_fieldDressing,_countBANDAGE], [_morphine,_countMORPHINE],[_epi,_countEPI],[_bloodbag,_countBLOODBAG]]];
+                _suppliesNORMAL = [[_unit,[_fieldDressing, 2], [_morphine,1],[_epi, 1]]];
+            };
+            case 1: { // ADVANCED
+                _suppliesMEDIC = [[_unit,[_packingBandage,_countBANDAGE], [_morphine,_countMORPHINE],[_epi,_countEPI],[_saline250,_countBLOODBAG]]];
+                _suppliesNORMAL = [[_unit,[_fieldDressing, 2],[_packingBandage, 1],[_tourniquet, 1],[_morphine,1],[_epi,1]]];
+            };
+        };
+    };
+    
+    default {
+        _suppliesMEDIC = [[_unit,["FirstAidKit",20],["Medikit",1]]];
+        _suppliesNORMAL = [[_unit,["FirstAidKit",3]]];
+    };    
+};
 
 // UNIFORMS ====================================================================
 
@@ -222,7 +267,7 @@ switch (true) do {
     case (_isMarksman): {
         [_commonHEAD, _marksmanUNIFORM, _marksmanVEST, "empty"] call _useUniform;
         [[_unit,[_wsmoke,2], [_rsmoke,2]]] call _addtoVest;
-        [_commonRIFLE, _countRIFLE] call _addWeaponKit;
+        [_commonMARKSMAN, _countRIFLE] call _addWeaponKit;
         ["primary", _commonRCO] call _attachToWeapon;
     };
     
@@ -242,7 +287,7 @@ switch (true) do {
     case (_isLifeSaver): {
         [_medicHEAD, _medicUNIFORM, _medicVEST, _commonBACKPACK] call _useUniform;
         [[_unit,[_wsmoke,2], [_gsmoke,3]]] call _addtoVest;
-        [[_unit,[_bandage,_countBANDAGE], [_morphine,_countMORPHINE],[_epi,_countEPI],[_bloodbag,_countBLOODBAG]]] call _addtoBackpack;
+        _suppliesMEDIC call _addtoBackpack;
         [_commonRIFLE, _countRIFLELOW] call _addWeaponKit;
         _defaultInsignia = "MedB";
     };
@@ -271,7 +316,7 @@ switch (true) do {
         [_medicHEAD, _reconUNIFORM, _reconVEST, _commonBACKPACK] call _useUniform;
         ["binoc"] call _addOptics;
         [[_unit,[_wsmoke,2],[_rsmoke,2],[_gsmoke,2],[_mapTools,1]]] call _addtoVest;        
-        [[_unit,[_bandage,_countBANDAGE], [_morphine,_countMORPHINE],[_epi,_countEPI],[_bloodbag,_countBLOODBAG]]] call _addtoBackpack;
+        _suppliesMEDIC call _addtoBackpack;
         [_commonRIFLE, _countRIFLE] call _addWeaponKit;
         ["primary", _commonSUPPRESSOR] call _attachToWeapon;
         _defaultInsignia = "MedB";
@@ -337,10 +382,10 @@ switch (true) do {
 
 // ADDS ESSENTIALS =============================================================
 
-[[_unit,[_bandage, 2], [_morphine,1],[_epi, 1]]] call _addtoUniform;
+_suppliesNORMAL call _addtoUniform;
 
 ["ItemMap", "ItemCompass", "ItemWatch"] call _linkItem;
 
 ["SR"] call _addRadio;
 
-if ("agm_plugin" in usedPlugins) then { [[_unit, [_earBuds,1]]] call _addtoUniform };
+if ((mission_AGM_enabled)||(mission_ACE3_enabled)) then { [[_unit, [_earBuds,1]]] call _addtoUniform };

@@ -7,6 +7,8 @@ if (isServer) then {
 
 0 spawn {
     if (hasInterface) then {
+        
+        if (player_is_spectator) exitWith {};
 
         sleep 3;
 

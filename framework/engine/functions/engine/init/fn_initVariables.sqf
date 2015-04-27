@@ -27,9 +27,19 @@ if (isNil "tasks_a") then { tasks_a = [] };
 if (isNil "tasks_b") then { tasks_b = [] };
 if (isNil "tasks_c") then { tasks_c = [] };
 
-if (isNil "tasks_mandatory_a") then { tasks_mandatory_a = [] };
-if (isNil "tasks_mandatory_b") then { tasks_mandatory_b = [] };
-if (isNil "tasks_mandatory_c") then { tasks_mandatory_c = [] };
+if (isNil "tasks_primary_a") then { tasks_primary_a = [] };
+if (isNil "tasks_primary_b") then { tasks_primary_b = [] };
+if (isNil "tasks_primary_c") then { tasks_primary_c = [] };
+
+if (isNil "tasks_secondary_a") then { tasks_secondary_a = [] };
+if (isNil "tasks_secondary_b") then { tasks_secondary_b = [] };
+if (isNil "tasks_secondary_c") then { tasks_secondary_c = [] };
+
+if (isNil "tasks_callbacks") then { tasks_callbacks = [] };
+
+if (isNil "tasks_done_a") then { tasks_done_a = [] };
+if (isNil "tasks_done_b") then { tasks_done_b = [] };
+if (isNil "tasks_done_c") then { tasks_done_c = [] };
 
 if (isNil "mission_dead_west") then { mission_dead_west = 0 };
 if (isNil "mission_dead_east") then { mission_dead_east = 0 };

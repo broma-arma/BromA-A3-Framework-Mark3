@@ -61,15 +61,13 @@ _logPlugins = [];
 
 reverse _logPlugins;
 
-{
-    player createDiaryRecord [FRAMEWORK_DIARY, ["Framework", _x]];
-} forEach _logPlugins;
-player createDiaryRecord [FRAMEWORK_DIARY, ["Framework", "<br/>These are the plugins currently being utilized in this mission: </br>"]];
-
-0 spawn {
+_logPlugins spawn {
     waitUntil {!isNil "framework_init_time"};
+    { player createDiaryRecord [FRAMEWORK_DIARY, ["Framework", _x]] } forEach _this;
+    player createDiaryRecord [FRAMEWORK_DIARY, ["Framework", "<br/>These are the plugins currently being utilized in this mission: </br>"]];    
+    
     player createDiaryRecord [FRAMEWORK_DIARY, ["Framework", "======================================"]];
     player createDiaryRecord [FRAMEWORK_DIARY, ["Framework", format ["Initialized in %1 seconds.", framework_init_time]]];
     player createDiaryRecord [FRAMEWORK_DIARY, ["Framework", format ["BromA Framework MK 3 - version %1", framework_version]]];
-    player createDiaryRecord [FRAMEWORK_DIARY, ["Framework", "<br/>======================================"]];
+    player createDiaryRecord [FRAMEWORK_DIARY, ["Framework", "<br/>======================================"]];    
 };

@@ -20,8 +20,15 @@ PARAMETERS:
         0 - Condition for assignment. (STRING, but must evaluate to BOOLEAN)
         1 - Condition for completion. (STRING, but must evaluate to BOOLEAN)
         2 - Condition for failure. (STRING, but must evaluate to BOOLEAN)
-    4 - Mandatory for victory: failure means failure to the rest of the mission.
-    (BOOLEAN)
+    4 - Task priority. (NUMBER)
+        0: Task will be declared "OPTIONAL" and is irrelevant to the mission.
+        1: Similar to "OPTIONAL", but they behave as the middle ground,
+        without failing the mission and not being essential to win.
+        2: Essential tasks, which cannot be failed and must be completed.
+    5 - Task event callback. (ARRAY)
+        0 - Code executed when the task is assigned to the players. (STRING, but must evaluate to CODE)
+        1 - Code executed whenever the mission is completed. (STRING, but must evaluate to CODE)
+        2 - Code executed whenever the mission fails.
     
 USAGE:
     [
@@ -30,7 +37,8 @@ USAGE:
         ["Kill the VIP.", 
         "We need to make sure he doesn't spills the beans."],
         ["(true)","!(alive VIP)", "(VIPhasEscaped)"],
-        true
+        1,
+        ["","goodVariable = true","hint 'Oops, something bad is going to happen!"]
     ] spawn BRM_fnc_newTask;
     
 RETURNS:
@@ -43,21 +51,26 @@ _side = _this select 0;
 _id = _this select 1;
 _details = _this select 2;
 _cond = _this select 3;
-
-_mandatory = _this select 4;
+_priority = _this select 4;
+_callback = _this select 5;
 
 _assign = _cond select 0;
 _wincond = _cond select 1;
 _losecond = "false";
 
+tasks_callbacks pushBack [_id, _callback];
+
 call compile format ["waitUntil{%1}", _assign];
+
+call compile (_callback select 0);
 
 if (count _cond > 2) then {
     _losecond = _cond select 2;
 };
 
-if (not _mandatory) then {
-    _details set [0, format ["(OPTIONAL) %1", (_details select 0)]];
+switch (_priority) do {
+    case 0: { _details set [0, format ["(OPTIONAL) %1", (_details select 0)]]; };
+    case 2: { _details set [0, format ["(!) %1", (_details select 0)]]; }
 };
 
 _ndetails = [];
@@ -72,20 +85,23 @@ if (typeName _side == "OBJECT") then { _side = side _side };
 switch (true) do {
     case (_side == side_a_side): {
         tasks_a pushBack [_id, _wincond, _losecond]; publicVariable "tasks_a";
-        if (_mandatory) then {
-        tasks_mandatory_a pushBack _id; publicVariable "tasks_mandatory_a";
+        switch (_priority) do {
+            case 1: { tasks_secondary_a pushBack _id; publicVariable "tasks_secondary_a" };
+            case 2: { tasks_primary_a pushBack _id; publicVariable "tasks_primary_a" };
         };
     };
     case (_side == side_b_side): {
         tasks_b pushBack [_id, _wincond, _losecond]; publicVariable "tasks_b";
-        if (_mandatory) then {
-        tasks_mandatory_b pushBack _id; publicVariable "tasks_mandatory_b";
+        switch (_priority) do {
+            case 1: { tasks_secondary_b pushBack _id; publicVariable "tasks_secondary_b" };
+            case 2: { tasks_primary_b pushBack _id; publicVariable "tasks_primary_b" };
         };
     };
     case (_side == side_c_side): {
         tasks_c pushBack [_id, _wincond, _losecond]; publicVariable "tasks_c";
-        if (_mandatory) then {
-        tasks_mandatory_c pushBack _id; publicVariable "tasks_mandatory_c";
+        switch (_priority) do {
+            case 1: { tasks_secondary_c pushBack _id; publicVariable "tasks_secondary_c" };
+            case 2: { tasks_primary_c pushBack _id; publicVariable "tasks_primary_c" };
         };
     };
 }; 

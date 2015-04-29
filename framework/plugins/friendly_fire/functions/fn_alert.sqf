@@ -6,8 +6,8 @@ _unit = _this select 0;
 _attacker = _this select 1;
 _damage = _this select 2;
 
-_sideUnit = side _unit;
-_sideAtk = side _attacker;
+_sideUnit = _unit getVariable ["unit_side", side _unit];
+_sideAtk = _attacker getVariable ["unit_side", side _attacker];
 
 _limit = 0.2;
 
@@ -19,7 +19,7 @@ if (((!isPlayer _unit)||(!isPlayer _attacker))&&(!friendly_fire_count_AI)) exitW
 
 if (_damage > _limit) then {
         
-    if (([_sideUnit, _sideAtk] call BIS_fnc_areFriendly)&&(!(name _unit == name _attacker))) exitWith {
+    if ((_sideUnit == _sideAtk)&&(!(name _unit == name _attacker))) exitWith {
         
         _msg = format ["FRIENDLY FIRE: %2 has wounded %1!",name _unit, name _attacker];
         

@@ -63,6 +63,10 @@ switch (toUpper(_faction)) do {
     case "SPRG": {
         #include "factions\sprg-report.sqf" 
     };
+    
+    case "NORSF": { 
+        #include "factions\norsf.sqf" 
+    };
 
     case "DEFAULT": { 
         #include "factions\template.sqf" 

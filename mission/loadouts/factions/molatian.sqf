@@ -161,7 +161,7 @@ _marksmanVEST = _commonVEST;
 _reconVEST = _commonVEST;
 
 _commonBACKPACK = "TRYK_B_Alicepack";
-_bigBACKPACK = "B_Carryall_ocamo";
+_bigBACKPACK = "TRYK_B_Alicepack";
 
 _HMG = "RHS_M2_Gun_Bag";
 _tripod = "RHS_M2_Tripod_Bag";

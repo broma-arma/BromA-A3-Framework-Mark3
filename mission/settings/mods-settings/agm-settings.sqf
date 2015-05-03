@@ -31,3 +31,6 @@ agm_settings_RequireDiagnosis = false;
 
 // Disables screams of pain.
 agm_settings_DisableScreams = false;
+
+// Require only a single bandage to treat a unit.
+agm_settings_SingleBandage = false;

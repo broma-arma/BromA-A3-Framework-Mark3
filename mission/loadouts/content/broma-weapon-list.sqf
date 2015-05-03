@@ -268,6 +268,8 @@ _30rnd556STANAGT = "rhs_mag_30Rnd_556x45_M855A1_Stanag_Tracer_Red";
 _100rnd762 = "rhsusf_100Rnd_762x51";
 _100rnd556 = "rhsusf_100Rnd_556x45_soft_pouch";
 
+_30rnd762AKM = "rhs_30Rnd_762x39mm";
+
 _8rndBuck = "rhsusf_8Rnd_00Buck";
 
 _RPGVL = "rhs_rpg7_PG7VL_mag";
@@ -292,6 +294,11 @@ _RHSM16A4GL = ["rhs_weap_m16a4_carryhandle_M203", _30rnd556STANAG,_40mm];
 _RHSM4 = ["rhs_weap_m4_carryhandle",_30rnd556STANAG];
 _RHSM4GL = ["rhs_m4_m320",_30rnd556STANAG,_40mm];
 _RHSM4GL203 = ["rhs_weap_m4_m203",_30rnd556STANAG,_40mm];
+
+_RHSAKM = ["rhs_weap_akm",_30rnd762AKM];
+_RHSAKMGL = ["rhs_weap_akm_gp25",_30rnd762AKM,_VOG25];
+_RHSAKMS = ["rhs_weap_akms",_30rnd762AKM];
+_RHSAKMSGL = ["rhs_weap_akms_gp25",_30rnd762AKM,_VOG25];
 
 _SVD = ["rhs_weap_svdp",_10rnd762SVD];
 _SVDCAMO = ["rhs_weap_svdp_wd",_10rnd762SVD];

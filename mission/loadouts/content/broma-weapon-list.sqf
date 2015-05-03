@@ -239,6 +239,7 @@ _Python = ["RH_python","RH_6Rnd_357_Mag"];
 _Bull = ["RH_bullb","RH_6Rnd_454_Mag"];
 _tec9 = ["RH_tec9","RH_32Rnd_9x19_tec"];
 _UZI = ["RH_muzi","RH_30Rnd_9x19_UZI"];
+_Fiveseven = ["RH_fn57","RH_20Rnd_57x28_FN"];
 
 // =============================================================================
 // =============================================================================
@@ -290,6 +291,7 @@ _RHSM16A42 = ["rhs_weap_m16a4_grip",_30rnd556STANAG];
 _RHSM16A4GL = ["rhs_weap_m16a4_carryhandle_M203", _30rnd556STANAG,_40mm];
 _RHSM4 = ["rhs_weap_m4_carryhandle",_30rnd556STANAG];
 _RHSM4GL = ["rhs_m4_m320",_30rnd556STANAG,_40mm];
+_RHSM4GL203 = ["rhs_weap_m4_m203",_30rnd556STANAG,_40mm];
 
 _SVD = ["rhs_weap_svdp",_10rnd762SVD];
 _SVDCAMO = ["rhs_weap_svdp_wd",_10rnd762SVD];
@@ -325,6 +327,7 @@ _RPG26 = ["rhs_weap_rpg26","rhs_rpg26_mag"];
 // =============================================================================
 
 _MAAWS = ["tf47_m3maaws", "tf47_m3maaws_HEAT", "tf47_m3maaws_HEDP","tf47_m3maaws_HE","tf47_m3maaws_SMOKE","tf47_m3maaws_ILLUM"];
-_AT4CSHEAT = ["tf47_at4_m_HEAT","tf47_at4_heat"];
-_AT4CSHEDP = ["tf47_at4_m_HEDP","tf47_at4_HEDP"];
-_AT4CSHP = ["tf47_at4_m_HP","tf47_at4_HP"];
+_AT4CSHEAT = ["tf47_at4_heat","tf47_at4_m_HEAT"];
+_AT4CSHEDP = ["tf47_at4_m_HEDP","tf47_at4_m_HEDP"]; 
+_AT4CSHP = ["tf47_at4_m_HP","tf47_at4_m_HP"];
+

@@ -47,6 +47,7 @@ The framework is as context agnostic as possible, meaning you can just change on
 	- [X] Takistani Militia (Taliban/Middle East Militia)
 	- [X] PMC (Generic PMC)
 	- [X] Chedaki (Eastern Militia)
+	- [X] Norwegian Special Forces
 	- [ ] UN Troops
 	- [ ] Takistani Army (Middle East 90s Army)
 

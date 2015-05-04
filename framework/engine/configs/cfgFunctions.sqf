@@ -25,7 +25,7 @@ class BRM {
         class setAlias{};
         class setGrpIDGlobal;
         class setHitFace{};
-        class defineGroups{postInit = 1;};        
+        class defineGroups{postInit = 1;};
     };
     class misc {
         file = "framework\engine\functions\engine\misc";
@@ -43,7 +43,6 @@ class BRM {
     };
     class tasks {
         file = "framework\engine\functions\engine\tasks";
-        class commonObjectives{preInit = 1;};
         class newTask{};
         class setTask{};
         class checkTasks{};

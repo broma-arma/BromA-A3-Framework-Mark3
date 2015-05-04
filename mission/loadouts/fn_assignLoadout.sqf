@@ -108,6 +108,7 @@ if (!isNil "_defaultName") then {
     _name = _this select 3;
     _insignia = _this select 4;
     
+    // if !(_unit in playableUnits) then { // Test this out
     if !(isPlayer _unit) then {
         _unit setFace _face;
         _unit setSpeaker _voice;

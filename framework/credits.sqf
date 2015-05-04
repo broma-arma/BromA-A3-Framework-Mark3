@@ -12,9 +12,9 @@
 mission_author_name = [mission_author_name] call BRM_fnc_verboseArray;
 
 player createDiaryRecord ["Diary", ["Credits","
-current mission " + mission_author_name + " made by " + mission_version + ".
+current mission " + mission_version + " made by " + mission_author_name + ".
 <br/>
 <br/>
 <img image='framework\engine\assets\images\framework-logo.paa' width='512' height='128'/><br/>
-Made possible using the BromA Framework, assembled by the BromA Mission Making Team @ http://bro.ma.
+Made possible using the BromA Framework, assembled by the BromA Mission Making Team @ http://broma.co.uk
 - all credits given to their respective creators."]];

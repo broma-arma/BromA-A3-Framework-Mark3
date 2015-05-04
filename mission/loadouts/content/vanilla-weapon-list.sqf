@@ -15,7 +15,7 @@ _30rndACP = "30Rnd_45ACP_Mag_SMG_01";
 _20rndUW = "20Rnd_556x45_UW_mag";
 _30rnd9mm = "30Rnd_9x21_Mag";
 _20rnd762 = "20Rnd_762x51_Mag";
-_10rnd762 = "10Rnd_762x51_Mag";
+_10rnd762 = "10Rnd_762x54_Mag";
 _40mm = "1Rnd_HE_Grenade_shell";
 
 // =============================================================================

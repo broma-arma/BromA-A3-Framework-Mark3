@@ -5,9 +5,9 @@
     Customize it as you wish.
 */
 
-_defaultSide = WEST;
-_defaultVoice = [_voiceALTIAN, _voiceAMERICAN, _voiceBRITISH, _voiceFARSI, _voiceRUSSIAN];
-_defaultFace = [_faceGREEK, _faceWHITE, _faceBLACK, _faceASIAN, _facePERSIAN];
+_defaultSide = EAST;
+_defaultVoice = [_voiceALTIAN, _voiceFARSI];
+_defaultFace = [_faceBLACK];
 _defaultName = [_nameAMERICAN]; // incomplete list
 _defaultInsignia = "";
 
@@ -27,7 +27,7 @@ _commonCCO = "hlc_optic_kobra";
 _commonMAGNIFIED = "HLC_Optic_PSO1";
 _commonSUPPRESSOR = "hlc_muzzle_762SUP_AK";
 _commonPISTOLSUPPRESSOR = "muzzle_snds_L";
-_NVG = _NVGEN1;
+_NVG = "";
 
 // AMMO COUNT ==================================================================
 

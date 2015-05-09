@@ -28,7 +28,7 @@ _commonCCO = _EOT;
 _commonMAGNIFIED = _SOS;
 _commonSUPPRESSOR = "muzzle_snds_M";
 _commonPISTOLSUPPRESSOR = "muzzle_snds_L";
-_NVG = _NVGEN3;
+_NVG = _NVGEN3IND;
 
 // AMMO COUNT ==================================================================
 

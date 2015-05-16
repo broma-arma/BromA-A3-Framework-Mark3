@@ -27,7 +27,7 @@ _module setVariable ["level", mission_ace3_medical_level];
 _module setVariable ["medicSetting", mission_ace3_medical_level];
 _module setVariable ["allowLitterCreation", ACE_medicalTreatment_allowLitter];
 _module setVariable ["litterCleanUpDelay", ACE_medicalTreatment_litterRemove];
-_module setVariable ["enableScreams", ACE_Medical_enableFor];
+_module setVariable ["enableScreams", ACE_Medical_enableScreams];
 _module setVariable ["playerDamageThreshold", ACE_Medical_playerDamage];
 _module setVariable ["AIDamageThreshold", ACE_Medical_aiDamage];
 _module setVariable ["enableUnsconsiousnessAI", ACE_Medical_unconAI];

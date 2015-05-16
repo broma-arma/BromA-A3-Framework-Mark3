@@ -16,7 +16,7 @@ _module setVariable ["RemoveDeadBodiesDisconnected", true];
 
 //ACE 3 Revive Settings
 _module = _group createUnit ["ACE_moduleReviveSettings", [0,0,0],[],0.5,"NONE"];
-_module setVariable ["enableRevive", true];
+_module setVariable ["enableRevive", 1];
 _module setVariable ["maxReviveTime", mission_ace3_revive_time];
 _module setVariable ["amountOfReviveLives", mission_ace3_revive_lives];
 
@@ -33,6 +33,7 @@ _module setVariable ["AIDamageThreshold", ACE_Medical_aiDamage];
 _module setVariable ["enableUnsconsiousnessAI", ACE_Medical_unconAI];
 _module setVariable ["preventInstaDeath", ACE_Medical_preventInstaDeath];
 _module setVariable ["bleedingCoefficient", ACE_Medical_bleeding];
+_module setVariable ["painCoefficient", ACE_Medical_pain];
 _module setVariable ["keepLocalSettingsSynced", true];
 
 
@@ -40,11 +41,10 @@ _module setVariable ["keepLocalSettingsSynced", true];
 _module = _group createUnit ["ACE_moduleAdvancedMedicalSettings", [0,0,0],[],0.5,"NONE"];
 _module setVariable ["enableFor", ACE_Medical_enableFor];
 _module setVariable ["enableAdvancedWounds", ACE_Medical_advWounds];
-_module setVariable ["enableVehicleCrashes", ACE_Medical_unconAI];
+_module setVariable ["enableVehicleCrashes", ACE_Medical_Veh];
 _module setVariable ["medicSetting_PAK", ACE_medicalTreatment_usePAK];
 _module setVariable ["consumeItem_PAK", ACE_medicalTreatment_consumePAK];
 _module setVariable ["useLocation_PAK", ACE_medicalTreatment_usePAKLocation];
 _module setVariable ["medicSetting_SurgicalKit", ACE_medicalTreatment_useSurgKit];
 _module setVariable ["consumeItem_SurgicalKit", ACE_medicalTreatment_consumeSurgKit];
 _module setVariable ["useLocation_SurgicalKit", ACE_medicalTreatment_useSurgKitLocation];
-_module setVariable ["enableOverdosing", ACE_medicalTreatment_enableOverdose];

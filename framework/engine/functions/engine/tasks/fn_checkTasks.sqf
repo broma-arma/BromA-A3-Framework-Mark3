@@ -77,7 +77,7 @@ while {(mission_running)} do {
         
         if ((_count == (count tasks_primary_a)) && (count tasks_primary_a >= 1)) then {
             
-            if (side_a_side in mission_require_extraction) then {
+            if (side_a_side in mission_require_extraction && "f_evade_escape" in usedPlugins) then {
                 if (!a_extracting) then {
                     [extraction_a select 0, extraction_a select 1, 100, "mission_require_extraction = mission_require_extraction - [side_a_side]"] spawn f_evade_escape_fnc_reachObject;
 
@@ -146,7 +146,7 @@ while {(mission_running)} do {
         
         if ((_count == (count tasks_primary_b)) && (count tasks_primary_b >= 1)) then {
             
-            if (side_b_side in mission_require_extraction) then {
+            if (side_b_side in mission_require_extraction && "f_evade_escape" in usedPlugins) then {
                 if (!b_extracting) then {
                     [extraction_b select 0, extraction_b select 1, 100, "mission_require_extraction = mission_require_extraction - [side_b_side]"] spawn f_evade_escape_fnc_reachObject;
 
@@ -213,7 +213,7 @@ while {(mission_running)} do {
         
         if ((_count == (count tasks_primary_c)) && (count tasks_primary_c >= 1)) then {
             
-            if (side_c_side in mission_require_extraction) then {
+            if (side_c_side in mission_require_extraction && "f_evade_escape" in usedPlugins) then {
                 if (!b_extracting) then {
                     [extraction_c select 0, extraction_c select 1, 100, "mission_require_extraction = mission_require_extraction - [side_c_side]"] spawn f_evade_escape_fnc_reachObject;
 

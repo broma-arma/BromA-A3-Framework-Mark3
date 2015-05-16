@@ -25,6 +25,8 @@ RETURNS:
 // Waits until initialization is safe. =========================================
 
 if (!hasInterface) exitWith {};
+finishMissionInit;
+waitUntil {(player == player)};
 waitUntil{!(isNull player)};
 waitUntil{!(isNil "mission_params_read")};
 
@@ -37,8 +39,11 @@ _playerLog = format ["INITIALIZING PLAYER '%1' (%2)", name player, player];
 
 player_is_jip = (time > 0.1);
 
+player_is_spectator = player getVariable ["is_spectator", false];
+
 if (!mission_allow_jip && player_is_jip) exitWith {
     [player] spawn BRM_fnc_removeJIP;
+    player setVariable ["unit_initialized", true, true];
 };
 
 ["LOCAL", "F_LOG", format ["JIP STATUS: %1 | TIME: %2", player_is_jip, time]] call BRM_fnc_doLog;
@@ -48,8 +53,6 @@ if (!mission_allow_jip && player_is_jip) exitWith {
 [] spawn BRM_fnc_syncTime;
 
 // Removes spectators from the game. ===========================================
-
-player_is_spectator = player getVariable ["is_spectator", false];
 
 if (player_is_spectator) exitWith { [player] call BRM_fnc_initSpectator };
 

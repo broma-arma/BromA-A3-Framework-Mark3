@@ -70,7 +70,7 @@ ACE_Medical_Veh = true;
 ACE_medicalTreatment_usePAK = 1;
 
 // Consume PAK on treatment
-// 0 = yes; 1 = no
+// 0 = no; 1 = yes
 ACE_medicalTreatment_consumePAK = 0;
 
 // Locations enabled for PAK use
@@ -82,6 +82,7 @@ ACE_medicalTreatment_usePAKLocation = 0;
 ACE_medicalTreatment_useSurgKit = 1;
 
 // Consume a Surgical Kit on treatment
+// 0 = no; 1 = yes
 ACE_medicalTreatment_consumeSurgKit = 0;
 
 // Locations enabled for Surgical Kit use

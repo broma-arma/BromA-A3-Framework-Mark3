@@ -23,7 +23,7 @@ switch (_updateType) do {
 		sliderSetPosition [_slider1, _sliderPos min CHVD_maxView];
 		ctrlSetText [_text1, str round (_sliderPos min CHVD_maxView)];
 		sliderSetRange [_slider2, 0, _sliderPos min CHVD_maxView];
-			
+			ctrlSetText[1000,format["VIEW DISTANCE SETTINGS | FPS: %1",round(diag_fps)]];
 		call compile format ["%1 = %2", _varType1, _sliderPos min CHVD_maxView];
 		call compile format ["profileNamespace setVariable ['%1',%1]", _varType1];
 		
@@ -40,7 +40,7 @@ switch (_updateType) do {
 	case 2: {		
 		sliderSetPosition [_slider1, _sliderPos min CHVD_maxObj];
 		ctrlSetText [_text1, str round (_sliderPos min CHVD_maxObj)];
-			
+			ctrlSetText[1000,format["VIEW DISTANCE SETTINGS | FPS: %1",round(diag_fps)]];
 		call compile format ["%1 = %2", _varType1, _sliderPos min CHVD_maxObj];
 		call compile format ["profileNamespace setVariable ['%1',%1]", _varType1];
 			

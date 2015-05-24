@@ -1,36 +1,4 @@
-    
-    //=========================================================================
-    class bar01 {title = ""; values[] = {0}; texts[] = {""}; default = 0; };
-    //========================================================================= 
-    
-    class bar_missionmods {
- 
-    title = "CORE MODIFICATIONS ====================";
-
-    values[] = {0}; texts[] = {""}; default = 0; };
-    
-    //=========================================================================
-    class bar02 {title = ""; values[] = {0}; texts[] = {""}; default = 0; };
-    //=========================================================================
-    
-    class p_gameplay_mod
-    {
-        title = "Gameplay";
-        values[] = {0,1,2};
-        texts[] = {"Vanilla","AGM","ACE3"};
-        default = 1;
-        code = "param_gameplay_mod = %1";
-    };
-    
-    class p_radio_mod
-    {
-        title = "Radio system";
-        values[] = {0,1,2};
-        texts[] = {"Vanilla","TFAR","ACRE2"};
-        default = 1;
-        code = "param_radio_mod = %1";
-    };    
-    
+   
     //=========================================================================
     class bar03 {title = ""; values[] = {0}; texts[] = {""}; default = 0; };
     //=========================================================================

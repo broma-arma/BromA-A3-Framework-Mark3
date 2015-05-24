@@ -32,7 +32,7 @@ if (mission_TFAR_enabled) then {
     _packetPlayer pushBack _tfarAbleUseRadio;
 };
 
-if (mission_TFAR_enabled) then {
+if (mission_ACRE2_enabled) then {
     _acreIsDisabled = _unit getVariable ["acre_sys_core_isDisabled", false];
     _acreGlobalVolume = _unit getVariable ["acre_sys_core_globalVolume", 1];
 

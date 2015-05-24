@@ -34,7 +34,7 @@ switch (_CampTyp) do {
 		_campUserObj   = [];
 		_campRandomObj = [];
 		_campWall      = ["FenceWood",[-2,35],[40,40,1],[7,0,0,4],[1,0.1],[1,90]];
-		_campObjInit   = [[],[format ["[_x, 'BLUFOR', %1] spawn BRM_fnc_assignCargo", _ammoBoxes]],["campObjsSTATIC pushBack [_x, '"+_loadout+"']"],[_loadout call _init],[],[],[]];
+		_campObjInit   = [[],[format ["[0, { [(_this select 0), 'OPFOR', (_this select 1)] spawn BRM_fnc_assignCargo }, [_x, %1]] call CBA_fnc_globalExecute", _ammoBoxes]],["campObjsSTATIC pushBack [_x, '"+_loadout+"']"],[_loadout call _init],[],[],[]];
 	};
 //-------------------------------------------------------------------------------------------------------------------------
 	case 1: // BLUFOR CAMP
@@ -49,7 +49,7 @@ switch (_CampTyp) do {
 		_campUserObj   = [];
 		_campRandomObj = [];
 		_campWall      = ["FenceWood",[-2,35],[40,40,1],[7,0,0,4],[1,0.1],[1,90]];
-		_campObjInit   = [[],[format ["[_x, 'BLUFOR', %1] spawn BRM_fnc_assignCargo", _ammoBoxes]],["campObjsSTATIC pushBack [_x, '"+_loadout+"']"],[_loadout call _init],[],[],[]];
+		_campObjInit   = [[],[format ["[0, { [(_this select 0), 'BLUFOR', (_this select 1)] spawn BRM_fnc_assignCargo }, [_x, %1]] call CBA_fnc_globalExecute", _ammoBoxes]],["campObjsSTATIC pushBack [_x, '"+_loadout+"']"],[_loadout call _init],[],[],[]];
 	};
 //-------------------------------------------------------------------------------------------------------------------------
 	case 2: // INDFOR CAMP
@@ -64,7 +64,7 @@ switch (_CampTyp) do {
 		_campUserObj   = [];
 		_campRandomObj = [];
 		_campWall      = ["FenceWood",[-2,35],[40,40,1],[7,0,0,4],[1,0.1],[1,90]];
-		_campObjInit   = [[],[format ["[_x, 'INDFOR', %1] spawn BRM_fnc_assignCargo", _ammoBoxes]],["campObjsSTATIC pushBack [_x, '"+_loadout+"']"],[_loadout call _init],[],[],[]];
+		_campObjInit   = [[],[format ["[0, { [(_this select 0), 'INDFOR', (_this select 1)] spawn BRM_fnc_assignCargo }, [_x, %1]] call CBA_fnc_globalExecute", _ammoBoxes]],["campObjsSTATIC pushBack [_x, '"+_loadout+"']"],[_loadout call _init],[],[],[]];
 	};        
 //-------------------------------------------------------------------------------------------------------------------------
 	default {

@@ -1,6 +1,6 @@
 
 _ignoredWords = ["hey","please","a","an","with","also","and","but","however","of","amounts","amount","named","called", 
-                "respawns","respawn","reinforcements","supporting","assisting","helping"];
+                "respawns","respawn","reinforcements","supporting","assisting","helping","of","in","on","network","ID"];
 
 _aliasRANDOM = ["whatever","anything","random"];
 
@@ -19,6 +19,11 @@ _aliasSkillEASY = ["rookie","amateur","novice","stupid","dumb","easy"];
 _aliasSkillSTEALTH = ["stealth", "stealthy", "silent", "cowardly"];
 _aliasSkillNORMAL = ["average","decent","trained","normal"];
 _aliasSkillHARD = ["elite","professional","smart","hard"];
+
+_aliasTIER1 = ["group","groups","unit","units","team","teams"];
+_aliasTIER2 = ["fire-team","fire-teams"];
+_aliasTIER3 = ["section","sections"];
+_aliasTIER4 = ["squad","squads"];
 
 _aliasHUGE = ["huge","insane","loads"];
 _aliasLARGE = ["large","lots","many"];

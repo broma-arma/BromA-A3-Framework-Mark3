@@ -22,7 +22,7 @@ call compile format ["
 %1 = createTrigger ['EmptyDetector', %13];
 %1 setTriggerArea [%9, %10, %11, %12];
 %1 setTriggerActivation ['NONE', 'NOT PRESENT', false];
-_statement = ""null=['%1',[%2,0,%4],[],[],[],[%3,1,50,0,100,%5,[%6]],[%7,%7,%8,%7]] spawn DAC_Zone"";
+_statement = ""null=['%1',[%2,0,%4],[],[],[],[%3,3,50,0,100,%5,[%6]],[%7,%7,%8,%7]] spawn DAC_Zone"";
 %1 setTriggerStatements ['(time > 6)', _statement, ''];", _name, _id, _status, _faction, _respawns, _reinforce, _side, _skill, _ax, _ay, _aa, _as, _pos];
 
 mission_dac_camps pushBack _name; 

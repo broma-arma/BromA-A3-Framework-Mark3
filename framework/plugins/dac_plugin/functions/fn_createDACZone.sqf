@@ -27,6 +27,6 @@ call compile format ["
 _statement = ""null=['%1',[%2,%3,%4], %5, %6, %7, %8, [%9, %9, %10,0]] spawn DAC_Zone"";
 %1 setTriggerStatements ['(time > 5)', _statement, ''];", _name, _id, _status, _faction, _arg1, _arg2, _arg3, _arg4, _side, _skill, _ax, _ay, _aa, _as, _pos];
 
-mission_dac_zones pushBack _name; 
+mission_dac_zones pushBack [_name,_id]; 
 
 publicVariable "mission_dac_zones";

@@ -32,11 +32,9 @@ switch (_command) do {
         _side = _arguments select 4;
         _kind = _arguments select 5;
         _name = _arguments select 6;
+        _id = _arguments select 7;
 
-        switch (true) do {
-            case (_name in _aliasRANDOM): { _id = floor(random(99999)); _name = "DAC_zone_" + str(_id) };
-            default { _id = floor(random(99999)) };
-        };
+        if (_name in _aliasRANDOM) then { _name = "DACZone" + str(floor(random(99999))) };
 
         switch (true) do {
             case (_side in _aliasOPFOR): { _side = 0 };
@@ -103,66 +101,141 @@ switch (_command) do {
 
         switch (true) do {
             case (_kind == "zone"): {
-                _arg1size = _arguments select 7;
-                _arg1 = _arguments select 8;
+                
+                if (_id in _aliasRANDOM) then {
+                    _id = floor(random(999999));
+                } else {
+                    _id = parseNumber _id;
+                };                    
+                
+                _argamount = _arguments select 8;
+                _argtype = _arguments select 9;
+                _arg = _arguments select 10;
+                
+                _argindex = 0;
+                _argamount = parseNumber _argamount;
+                
+                switch (true) do {
+                    case (_argtype in _aliasTIER1): { _argtype = 1 };
+                    case (_argtype in _aliasTIER2): { _argtype = 2 };
+                    case (_argtype in _aliasTIER3): { _argtype = 3 };
+                    case (_argtype in _aliasTIER4): { _argtype = 4 };
+                };
 
                 switch (true) do {
-                    case (_arg1 in _aliasINFANTRY): { _units set [0, ([_arg1size] call BRM_DAC_fnc_scaleUnits)] };
-                    case (_arg1 in _aliasVEHICLES): { _units set [1, ([_arg1size] call BRM_DAC_fnc_scaleUnits)] };
-                    case (_arg1 in _aliasTANKS): { _units set [2, ([_arg1size] call BRM_DAC_fnc_scaleUnits)] };
-                    case (_arg1 in _aliasAIRCRAFTS): { _units set [3, ([_arg1size] call BRM_DAC_fnc_scaleUnits)] };
+                    case (_arg in _aliasINFANTRY): { _argindex = 0 };
+                    case (_arg in _aliasVEHICLES): { _argindex = 1 };
+                    case (_arg in _aliasTANKS): { _argindex = 2 };
+                    case (_arg in _aliasAIRCRAFTS): { _argindex = 3 };
                 };
+                
+                _units set [_argindex, [_argamount,_argtype,10,40]];
 
-                if ( count _arguments >= 11 ) then {    
-                    _arg2 = toLower(_arguments select 10);
-                    _arg2size = toLower(_arguments select 9);
+                if ( count _arguments >= 14 ) then {
+                    _argamount = _arguments select 11;
+                    _argtype = _arguments select 12;
+                    _arg = _arguments select 13;
+
+                    _argindex = 0;
+                    _argamount = parseNumber _argamount;
 
                     switch (true) do {
-                        case (_arg2 in _aliasINFANTRY): { _units set [0, ([_arg2size] call BRM_DAC_fnc_scaleUnits)] };
-                        case (_arg2 in _aliasVEHICLES): { _units set [1, ([_arg2size] call BRM_DAC_fnc_scaleUnits)] };
-                        case (_arg2 in _aliasTANKS): { _units set [2, ([_arg2size] call BRM_DAC_fnc_scaleUnits)] };
-                        case (_arg2 in _aliasAIRCRAFTS): { _units set [3, ([_arg2size] call BRM_DAC_fnc_scaleUnits)] };
+                        case (_argtype in _aliasTIER1): { _argtype = 1 };
+                        case (_argtype in _aliasTIER2): { _argtype = 2 };
+                        case (_argtype in _aliasTIER3): { _argtype = 3 };
+                        case (_argtype in _aliasTIER4): { _argtype = 4 };
                     };
-                };
-
-                if ( count _arguments >= 13 ) then {
-                    _arg3 = toLower(_arguments select 12);
-                    _arg3size = toLower(_arguments select 11);
 
                     switch (true) do {
-                        case (_arg3 in _aliasINFANTRY): { _units set [0, ([_arg3size] call BRM_DAC_fnc_scaleUnits)] };
-                        case (_arg3 in _aliasVEHICLES): { _units set [1, ([_arg3size] call BRM_DAC_fnc_scaleUnits)] };
-                        case (_arg3 in _aliasTANKS): { _units set [2, ([_arg3size] call BRM_DAC_fnc_scaleUnits)] };
-                        case (_arg3 in _aliasAIRCRAFTS): { _units set [3, ([_arg3size] call BRM_DAC_fnc_scaleUnits)] };
+                        case (_arg in _aliasINFANTRY): { _argindex = 0 };
+                        case (_arg in _aliasVEHICLES): { _argindex = 1 };
+                        case (_arg in _aliasTANKS): { _argindex = 2 };
+                        case (_arg in _aliasAIRCRAFTS): { _argindex = 3 };
                     };
+
+                    _units set [_argindex, [_argamount,_argtype,10,40]];
                 };
 
-                if (count _arguments >= 15 ) then {
-                    _arg4 = toLower(_arguments select 14);
-                    _arg4size = toLower(_arguments select 13);
+                if ( count _arguments >= 17 ) then {
+                    _argamount = _arguments select 14;
+                    _argtype = _arguments select 15;
+                    _arg = _arguments select 16;
+
+                    _argindex = 0;
+                    _argamount = parseNumber _argamount;
 
                     switch (true) do {
-                        case (_arg4 in _aliasINFANTRY): { _units set [0, ([_arg4size] call BRM_DAC_fnc_scaleUnits)] };
-                        case (_arg4 in _aliasVEHICLES): { _units set [1, ([_arg4size] call BRM_DAC_fnc_scaleUnits)] };
-                        case (_arg4 in _aliasTANKS): { _units set [2, ([_arg4size] call BRM_DAC_fnc_scaleUnits)] };
-                        case (_arg4 in _aliasAIRCRAFTS): { _units set [3, ([_arg4size] call BRM_DAC_fnc_scaleUnits)] };
-                    };    
+                        case (_argtype in _aliasTIER1): { _argtype = 1 };
+                        case (_argtype in _aliasTIER2): { _argtype = 2 };
+                        case (_argtype in _aliasTIER3): { _argtype = 3 };
+                        case (_argtype in _aliasTIER4): { _argtype = 4 };
+                    };
+
+                    switch (true) do {
+                        case (_arg in _aliasINFANTRY): { _argindex = 0 };
+                        case (_arg in _aliasVEHICLES): { _argindex = 1 };
+                        case (_arg in _aliasTANKS): { _argindex = 2 };
+                        case (_arg in _aliasAIRCRAFTS): { _argindex = 3 };
+                    };
+
+                    _units set [_argindex, [_argamount,_argtype,10,40]];
+                };
+
+                if (count _arguments >= 20 ) then {
+                    _argamount = _arguments select 17;
+                    _argtype = _arguments select 18;
+                    _arg = _arguments select 19;
+
+                    _argindex = 0;
+                    _argamount = parseNumber _argamount;
+
+                    switch (true) do {
+                        case (_argtype in _aliasTIER1): { _argtype = 1 };
+                        case (_argtype in _aliasTIER2): { _argtype = 2 };
+                        case (_argtype in _aliasTIER3): { _argtype = 3 };
+                        case (_argtype in _aliasTIER4): { _argtype = 4 };
+                    };
+
+                    switch (true) do {
+                        case (_arg in _aliasINFANTRY): { _argindex = 0 };
+                        case (_arg in _aliasVEHICLES): { _argindex = 1 };
+                        case (_arg in _aliasTANKS): { _argindex = 2 };
+                        case (_arg in _aliasAIRCRAFTS): { _argindex = 3 };
+                    };
+
+                    _units set [_argindex, [_argamount,_argtype,10,40]];
                 };
 
                 [_name, _id, _status, _faction, _units select 0, _units select 1, _units select 2, _units select 3, _side, _skill, _area, _pos] spawn BRM_DAC_fnc_createDACZone;
             };
+            
             case ((_kind == "camp") || (_kind == "camps")): {
-                _respawns = parseNumber (_arguments select 7);                
-                _units = _arguments select 8;
+                
+                sleep 2;
                 
                 _reinforce = [];
                 
-                { if (_forEachIndex >= 9) then { _reinforce pushBack _x } } forEach _arguments;
+                if !(_id in _aliasRANDOM) then {
+                    
+                    _id = parseNumber _id;
+                    {
+                        if ((_x select 1) == _id) then {
+                            _reinforce pushBack (_x select 0);
+                        };
+                    } forEach mission_dac_zones;
+                };
+                
+                _id = floor(random(999999));
+                        
+                _respawns = parseNumber (_arguments select 8);
+                _units = _arguments select 9;
+                
+                { if (_forEachIndex >= 10) then { _reinforce pushBack _x } } forEach _arguments;
                 
                 _newString = "";
                 
                 if (count _reinforce > 0) then {
-                    { 
+                    {
                         _punct = ",";
                         if (_forEachIndex >= (count _reinforce)-1) then { _punct = "" };
                         _newString = _newString + _x + _punct;

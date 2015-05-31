@@ -4,7 +4,7 @@
 // =============================================================================
 
 switch (param_ace3_revive_time) do {
-    case 0: { mission_ace3_revive_time = 1 };
+    case 0: { mission_ace3_revive_time = 1 ; mission_ace3_revive_enable = 0 };
     case 1: { mission_ace3_revive_time = 120 };
     case 2: { mission_ace3_revive_time = 300 };
     case 3: { mission_ace3_revive_time = 600 };
@@ -16,7 +16,7 @@ switch (param_ace3_revive_time) do {
 // =============================================================================
 
 switch (param_ace3_revive_lives) do {
-    case 0: { mission_ace3_revive_lives = 0 };
+    case 0: { mission_ace3_revive_lives = 0 ; mission_ace3_revive_enable = 0 };
     case 1: { mission_ace3_revive_lives = 1 };
     case 2: { mission_ace3_revive_lives = 3 };
     case 3: { mission_ace3_revive_lives = 5 };
@@ -28,8 +28,8 @@ switch (param_ace3_revive_lives) do {
 // =============================================================================
 
 switch (param_ace3_medical_level) do {
-    case 0: { mission_ace3_medical_level = 1 };
-    case 1: { mission_ace3_medical_level = 2 };
+    case 0: { mission_ace3_medical_level = 1; };
+    case 1: { mission_ace3_medical_level = 2; };
 };
 
 // =============================================================================

@@ -43,12 +43,3 @@ ace_medical_useLocation_SurgicalKit = ACE_medicalTreatment_useSurgKitLocation;
 
 // le server stuff times
 if (!isServer) exitWith {};
-
-_center = createCenter sideLogic;
-_group = createGroup _center;
-
-
-//ACE 3 Respawn
-_module = _group createUnit ["ACE_ModuleRespawn", [0,0,0],[],0.5,"NONE"];
-_module setVariable ["SavePreDeathGear", true];
-_module setVariable ["RemoveDeadBodiesDisconnected", true];

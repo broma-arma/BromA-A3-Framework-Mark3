@@ -24,6 +24,7 @@ USAGE:
 #include "agm_plugin\main.cpp"
 #include "tfar_plugin\main.cpp"
 #include "acre2_plugin\main.cpp"
+#include "spawn_ai\main.cpp"
 #include "respawn_system\main.cpp"
 #include "cssa3_spectator\main.cpp"
 #include "block_tp\main.cpp"

@@ -25,7 +25,7 @@ switch (_CampTyp) do {
 	case 0: // OPFOR CAMP
 	{
             _loadout = "auto";
-            _ammoBoxes = ["medical","ammobox"];
+            _ammoBoxes = ["medical","ammo"];
             
 		_campBasic     = ["FlagCarrierOPFOR_EP1",["FirePlace_burning_f",15,10,0],["Land_BagBunker_Tower_F",10,0,0],["Logic",10,15,0],0];
 		_campAmmo      = [["O_CargoNet_01_ammo_F",20,2,0],["O_CargoNet_01_ammo_F",20,0,0]];
@@ -34,13 +34,13 @@ switch (_CampTyp) do {
 		_campUserObj   = [];
 		_campRandomObj = [];
 		_campWall      = ["FenceWood",[-2,35],[40,40,1],[7,0,0,4],[1,0.1],[1,90]];
-		_campObjInit   = [[],[format ["[0, { [(_this select 0), 'OPFOR', (_this select 1)] spawn BRM_fnc_assignCargo }, [_x, %1]] call CBA_fnc_globalExecute", _ammoBoxes]],["campObjsSTATIC pushBack [_x, '"+_loadout+"']"],[_loadout call _init],[],[],[]];
+		_campObjInit   = [[],[format ["[0, { [(_this select 0), 'opfor', (_this select 1)] spawn BRM_fnc_assignCargo }, [_x, %1]] call CBA_fnc_globalExecute", _ammoBoxes]],["campObjsSTATIC pushBack [_x, '"+_loadout+"']"],[_loadout call _init],[],[],[]];
 	};
 //-------------------------------------------------------------------------------------------------------------------------
 	case 1: // BLUFOR CAMP
 	{
             _loadout = "auto";
-            _ammoBoxes = ["medical","ammobox"];
+            _ammoBoxes = ["medical","ammo"];
             
 		_campBasic     = ["FlagCarrierBLUFOR_EP1",["FirePlace_burning_f",15,10,0],["Land_BagBunker_Tower_F",10,0,0],["Logic",10,15,0],0];
 		_campAmmo      = [["B_CargoNet_01_ammo_F",20,2,0],["B_CargoNet_01_ammo_F",20,0,0]];
@@ -49,13 +49,13 @@ switch (_CampTyp) do {
 		_campUserObj   = [];
 		_campRandomObj = [];
 		_campWall      = ["FenceWood",[-2,35],[40,40,1],[7,0,0,4],[1,0.1],[1,90]];
-		_campObjInit   = [[],[format ["[0, { [(_this select 0), 'BLUFOR', (_this select 1)] spawn BRM_fnc_assignCargo }, [_x, %1]] call CBA_fnc_globalExecute", _ammoBoxes]],["campObjsSTATIC pushBack [_x, '"+_loadout+"']"],[_loadout call _init],[],[],[]];
+		_campObjInit   = [[],[format ["[0, { [(_this select 0), 'blufor', (_this select 1)] spawn BRM_fnc_assignCargo }, [_x, %1]] call CBA_fnc_globalExecute", _ammoBoxes]],["campObjsSTATIC pushBack [_x, '"+_loadout+"']"],[_loadout call _init],[],[],[]];
 	};
 //-------------------------------------------------------------------------------------------------------------------------
 	case 2: // INDFOR CAMP
 	{
             _loadout = "auto";
-            _ammoBoxes = ["medical","ammobox"];
+            _ammoBoxes = ["medical","ammo"];
             
 		_campBasic     = ["FlagCarrierINDFOR_EP1",["FirePlace_burning_f",15,10,0],["Land_BagBunker_Tower_F",10,0,0],["Logic",10,15,0],0];
 		_campAmmo      = [["I_CargoNet_01_ammo_F",20,2,0],["I_CargoNet_01_ammo_F",20,0,0]];
@@ -64,7 +64,7 @@ switch (_CampTyp) do {
 		_campUserObj   = [];
 		_campRandomObj = [];
 		_campWall      = ["FenceWood",[-2,35],[40,40,1],[7,0,0,4],[1,0.1],[1,90]];
-		_campObjInit   = [[],[format ["[0, { [(_this select 0), 'INDFOR', (_this select 1)] spawn BRM_fnc_assignCargo }, [_x, %1]] call CBA_fnc_globalExecute", _ammoBoxes]],["campObjsSTATIC pushBack [_x, '"+_loadout+"']"],[_loadout call _init],[],[],[]];
+		_campObjInit   = [[],[format ["[0, { [(_this select 0), 'indfor', (_this select 1)] spawn BRM_fnc_assignCargo }, [_x, %1]] call CBA_fnc_globalExecute", _ammoBoxes]],["campObjsSTATIC pushBack [_x, '"+_loadout+"']"],[_loadout call _init],[],[],[]];
 	};        
 //-------------------------------------------------------------------------------------------------------------------------
 	default {

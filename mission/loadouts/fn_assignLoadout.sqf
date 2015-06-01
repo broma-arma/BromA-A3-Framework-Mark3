@@ -51,7 +51,7 @@ _isSquadLeader = (_type == "SL")||(_type == "Squad Leader");
 _isTeamLeader = (_type == "FTL")||(_type == "Team Leader");
 _isRifleman = (_type == "rifleman")||(_type == "Rifleman");
 _isRiflemanAT = (_type == "at")||(_type == "Rifleman (AT)");
-_isMarksman = (_type == "marksman")||(_type == "Marksman");
+_isMarksman = (_type == "marksman")||(_type == "Marksman")||(_type == "Sharpshooter");
 _isAutorifleman = (_type == "mg")||(_type == "Autorifleman");
 _isAutoriflemanAsst = (_type == "mmgasst")||(_type == "Asst. Autorifleman");
 _isLifeSaver = (_type == "medic")||(_type == "Combat Life Saver");

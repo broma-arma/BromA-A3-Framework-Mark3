@@ -67,7 +67,6 @@ Revive_Keypressedcode = {
                                 case (_vehtg emptyPositions "cargo" > 0) : { player moveinCargo _vehtg; _done = true };
                                 case (_vehtg emptyPositions "cargo" == 0) : { 
                                     cutText ["You squad leader is in a full vehicle - wait for an empty seat.","PLAIN DOWN",2];
-                                    [-1, { (_this select 0) vehiclechat format ["%1 is attempting to JIP into your vehicle which is full - please free some space.",(_this select 1)] }, _vehtg, player] call CBA_fnc_globalExecute;
                                     _done = false; 
                                 };
                             };

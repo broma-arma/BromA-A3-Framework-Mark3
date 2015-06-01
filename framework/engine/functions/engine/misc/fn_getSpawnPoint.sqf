@@ -23,9 +23,11 @@ RETURNS:
 */
 
 private["_ret"];
-_unit = _this select 0;
 
-switch (side _unit) do {
+_unit = _this select 0;
+_side = _unit getVariable ["unit_side", (side player)];
+
+switch (_side) do {
     case WEST: { _ret = "respawn_west" };
     case EAST: { _ret = "respawn_east" };
     case RESISTANCE: { _ret = "respawn_resistance" };

@@ -9,23 +9,23 @@
 _defaultSide = resistance;
 _defaultVoice = [_voiceALTIAN, _voiceAMERICAN, _voiceBRITISH, _voiceFARSI, _voiceRUSSIAN];
 _defaultFace = [_faceGREEK, _faceWHITE, _faceBLACK, _faceASIAN, _facePERSIAN];
-_defaultName = [_nameAMERICAN];
+_defaultName = [_nameAMERICAN, _nameAFRICAN ,_nameARABIC, _nameRUSSIAN];
 _defaultInsignia = "";
 
 // WEAPONS =====================================================================
 
-_commonRIFLE = _VitorSBR;
+_commonRIFLE = _AR15RU;
 _commonRIFLEGL = _M16A2GL;
 _commonPISTOL = _G17;
-_commonMG = _M27IAR;
-_commonMARKSMAN = _SAMR;
-_commonSNIPER = _SAMR;
-_commonAT = _M136;
+_commonMG = _M249PIP;
+_commonMARKSMAN = _SR25;
+_commonSNIPER = _SR25;
+_commonAT = _AT4;
 _specAT = _MAAWS;
-_commonSMG = _VitorSBR;
-_commonRCO = _ARCO;
-_commonCCO = _EOT;
-_commonMAGNIFIED = _SOS;
+_commonSMG = _PDW;
+_commonRCO = "RH_ta31rco";
+_commonCCO = "FHQ_optic_AIM";
+_commonMAGNIFIED = "RH_leu_mk4";
 _commonSUPPRESSOR = "muzzle_snds_M";
 _commonPISTOLSUPPRESSOR = "muzzle_snds_L";
 _NVG = _NVGEN3IND;
@@ -106,12 +106,26 @@ switch (true) do {
 _headsLIST = [
     "TRYK_ESS_CAP",
     "H_Cap_blk_ION",
-    "TRYK_R_CAP_BLK"
+    "TRYK_R_CAP_BLK",
+    "TRYK_H_EARMUFF",
+    "TRYK_R_CAP_BLK",
+    "TRYK_R_CAP_TAN",
+    "TRYK_H_woolhat",
+    "TRYK_H_woolhat_br"
 ];
 
 _uniformsLIST = [
     "TRYK_U_B_Denim_T_BK",
     "TRYK_U_B_BLK_T_WH",
+    "TRYK_U_B_Denim_T_WH",
+    "TRYK_U_B_BLK_OD_Rollup_CombatUniform",
+    "TRYK_U_B_BLK_tan_Rollup_CombatUniform",
+    "TRYK_U_B_wh_blk_Rollup_CombatUniform",
+    "TRYK_U_B_wh_OD_Rollup_CombatUniform",
+    "TRYK_U_B_wh_tan_Rollup_CombatUniform",
+    "TRYK_U_B_BLK_T_BK",
+    "TRYK_U_B_BLK_T_WH",
+    "TRYK_U_B_Denim_T_BK",
     "TRYK_U_B_Denim_T_WH"
 ];
 

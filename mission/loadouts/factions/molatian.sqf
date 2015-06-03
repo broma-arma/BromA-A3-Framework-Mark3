@@ -6,9 +6,9 @@
 */
 
 _defaultSide = EAST;
-_defaultVoice = [_voiceALTIAN, _voiceFARSI];
+_defaultVoice = [_voiceENGLISH];
 _defaultFace = [_faceBLACK];
-_defaultName = [_nameAMERICAN]; // incomplete list
+_defaultName = [_nameAFRICAN];
 _defaultInsignia = "";
 
 // WEAPONS =====================================================================
@@ -22,10 +22,10 @@ _commonSNIPER = _SVD;
 _commonAT = _RPG26;
 _specAT = _RPG7;
 _commonSMG = _RHSAKMS;
-_commonRCO = "HLC_Optic_1p29";
-_commonCCO = "hlc_optic_kobra";
-_commonMAGNIFIED = "HLC_Optic_PSO1";
-_commonSUPPRESSOR = "hlc_muzzle_762SUP_AK";
+_commonRCO = "rhs_acc_pso1m2";
+_commonCCO = "";
+_commonMAGNIFIED = "rhs_acc_pso1m2";
+_commonSUPPRESSOR = "rhs_acc_dtk4long";
 _commonPISTOLSUPPRESSOR = "muzzle_snds_L";
 _NVG = "";
 
@@ -104,9 +104,8 @@ switch (true) do {
 
 _headsLIST = [
     "ibr_mol_helmet",
-	"H_Booniehat_oli",
-	"H_Shemag_olive",
-	""
+    "H_Shemag_olive",
+    ""
 ];
 
 _uniformsLIST = [
@@ -135,7 +134,7 @@ _helicrewHEAD = "rhs_zsh7a_mike";
 _helipilotHEAD = "rhs_zsh7a_mike";
 _sniperHEAD = _commonHEAD;
 _demoHEAD = _commonHEAD;
-_reconHEAD = _commonHEAD;
+_reconHEAD = "H_Booniehat_oli";
 
 _commonUNIFORM = _randomUNIFORM;
 _officerUNIFORM = _commonUNIFORM;
@@ -184,7 +183,8 @@ switch (true) do {
     case (_isSquadLeader): {
         [_leaderHEAD, _commonUNIFORM, _slVEST, "empty"] call _useUniform;
         [[_unit,[_wsmoke,2],[_rsmoke,2],[_mapTools,1]]] call _addtoVest;
-        [_commonRIFLE, _countRIFLE] call _addWeaponKit;
+        [_RHSAKMSGL, _countRIFLE] call _addWeaponKit;
+        [[_unit,[_commonRIFLEGL select 2, _count40mm]]] call _addtoVest;
         [_commonPISTOL, _countPISTOL] call _addWeaponKit;
         ["primary", _commonRCO] call _attachToWeapon;
         ["rangefinder"] call _addOptics;

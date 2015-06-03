@@ -6,7 +6,7 @@
 */
 
 _defaultSide = EAST;
-_defaultVoice = [_voiceENGLISH];
+_defaultVoice = [_voiceAMERICAN];
 _defaultFace = [_faceBLACK];
 _defaultName = [_nameAFRICAN];
 _defaultInsignia = "";

@@ -14,10 +14,10 @@ _defaultInsignia = "none";
 
 // WEAPONS =====================================================================
 
-_commonRIFLE = _AKM;
-_commonRIFLEGL = _AKMGL;
+_commonRIFLE = _RHSAKM;
+_commonRIFLEGL = _RHSAKMGL;
 _commonPISTOL = _Makarov;
-_commonMG = _RPK;
+_commonMG = _PKM;
 _commonMARKSMAN = _SVDCAMO;
 _commonSNIPER = _GM6;
 _commonAT = _RPG26;
@@ -103,36 +103,33 @@ switch (true) do {
 
 // UNIFORMS ====================================================================
 
+_headsLIST = [
+	"TRYK_H_pakol2",
+	"LOP_H_Turban",
+	"LOP_H_Turban_mask",
+	"LOP_H_Pakol",
+	"H_ShemagOpen_tan",
+	"H_ShemagOpen_khk",
+	"LOP_H_Shemag_BLK",
+	""
+];
+
 _uniformsLIST = [
-    "U_CAF_AG_ME_ROBES_Mil_01",
-    "U_CAF_AG_ME_ROBES_mil_01a",
-    "U_CAF_AG_ME_ROBES_01b",
-    "U_CAF_AG_ME_ROBES_01c",
-    "U_CAF_AG_ME_ROBES_01d",
-    "U_CAF_AG_ME_ROBES_01c",
-    "U_CAF_AG_ME_ROBES_02",
-    "U_CAF_AG_ME_ROBES_02a",
-    "U_CAF_AG_ME_ROBES_02b",
-    "U_CAF_AG_ME_ROBES_02c",
-    "U_CAF_AG_ME_ROBES_03",
-    "U_CAF_AG_ME_ROBES_03a",
-    "U_CAF_AG_ME_ROBES_03b",
-    "U_CAF_AG_ME_ROBES_03c",
-    "U_CAF_AG_ME_ROBES_04",
-    "U_CAF_AG_ME_ROBES_04a",
-    "U_CAF_AG_ME_ROBES_04b",
-    "U_CAF_AG_ME_ROBES_04c",
-    "U_CAF_AG_ME_ROBES_04d"
+	"TRYK_ZARATAKI",
+	"TRYK_ZARATAKI2",
+	"TRYK_ZARATAKI3",
+	"LOP_U_ISTS_Fatigue_04",
+	"LOP_U_ISTS_Fatigue_01"
 ];
 
 _vestsLIST = [
-    "V_TacVest_blk",
-    "V_TacVest_brn",
-    "V_TacVest_camo",
-    "V_TacVest_khk",
-    "V_TacVest_oli"
+    "TRYK_V_ChestRig",
+    "TRYK_V_ChestRig_L",
+    "TRYK_LOC_AK_chestrig_TAN",
+    "TRYK_LOC_AK_chestrig_OD"
 ];
 
+_randomHEAD = _headsLIST call BIS_fnc_selectRandom;
 _randomUNIFORM = _uniformsLIST call BIS_fnc_selectRandom;
 _randomVEST = _vestsLIST call BIS_fnc_selectRandom;
 
@@ -147,17 +144,17 @@ _mgVEST = _randomVEST;
 _grenadierVEST = _randomVEST;
 _medicVEST = _randomVEST;
 
-_commonHEAD = "H_caf_ag_turban";
-_leaderHEAD = "H_caf_ag_wrap";
-_officerHEAD = "H_caf_ag_wrap";
-_medicHEAD = "H_caf_ag_paktol";
-_crewmanHEAD = "rhsusf_cvc_ess";
-_pilotHEAD = "rhsusf_hgu56p";
-_helicrewHEAD = _commonHEAD;
-_helipilotHEAD = _commonHEAD;
+_commonHEAD = _randomHEAD;
+_leaderHEAD = "TRYK_H_pakol2";
+_officerHEAD = "TRYK_H_pakol2";
+_medicHEAD = _commonHEAD;
+_crewmanHEAD = "rhs_tsh4";
+_pilotHEAD = "rhs_tsh4";
+_helicrewHEAD = "rhs_tsh4";
+_helipilotHEAD = "rhs_tsh4";
 _sniperHEAD = _commonHEAD;
 _demoHEAD = _commonHEAD;
-_reconHEAD = "H_caf_ag_paktol_04";
+_reconHEAD = "LOP_H_Turban_mask";
 
 _commonUNIFORM = _randomUNIFORM;
 _officerUNIFORM = _randomUNIFORM;
@@ -182,8 +179,8 @@ _demoVEST = _commonVEST;
 _marksmanVEST = _commonVEST;
 _reconVEST = _commonVEST;
 
-_commonBACKPACK = "B_AssaultPack_blk";
-_bigBACKPACK = "B_Carryall_ocamo";
+_commonBACKPACK = "TRYK_B_Alicepack";
+_bigBACKPACK = "TRYK_B_Alicepack";
 
 _HMG = "RHS_NSV_Gun_Bag";
 _tripod = "RHS_NSV_Tripod_Bag";

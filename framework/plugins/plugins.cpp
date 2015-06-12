@@ -22,6 +22,7 @@ USAGE:
 #include "dac_plugin\main.cpp"
 #include "ace3_plugin\main.cpp"
 #include "agm_plugin\main.cpp"
+#include "alive_db\main.cpp"
 #include "tfar_plugin\main.cpp"
 #include "acre2_plugin\main.cpp"
 #include "spawn_ai\main.cpp"

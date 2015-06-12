@@ -14,12 +14,12 @@ _defaultInsignia = "none";
 
 // WEAPONS =====================================================================
 
-_commonRIFLE = _RHSAKM;
-_commonRIFLEGL = _RHSAKMGL;
+_commonRIFLE = _AKM;
+_commonRIFLEGL = _AKMGL;
 _commonPISTOL = _Makarov;
 _commonMG = _PKM;
 _commonMARKSMAN = _SVDCAMO;
-_commonSNIPER = _GM6;
+_commonSNIPER = _SVDCAMO;
 _commonAT = _RPG26;
 _specAT = _RPG26;
 _commonSMG = _AKS74U;
@@ -104,22 +104,26 @@ switch (true) do {
 // UNIFORMS ====================================================================
 
 _headsLIST = [
-	"TRYK_H_pakol2",
-	"LOP_H_Turban",
-	"LOP_H_Turban_mask",
-	"LOP_H_Pakol",
-	"H_ShemagOpen_tan",
-	"H_ShemagOpen_khk",
-	"LOP_H_Shemag_BLK",
-	""
+    "TRYK_H_pakol2",
+    "LOP_H_Turban",
+    "LOP_H_Turban_mask",
+    "LOP_H_Pakol",
+    "H_ShemagOpen_tan",
+    "H_ShemagOpen_khk",
+    "LOP_H_Shemag_BLK"
 ];
 
 _uniformsLIST = [
-	"TRYK_ZARATAKI",
-	"TRYK_ZARATAKI2",
-	"TRYK_ZARATAKI3",
-	"LOP_U_ISTS_Fatigue_04",
-	"LOP_U_ISTS_Fatigue_01"
+    "TRYK_ZARATAKI",
+    "TRYK_ZARATAKI2",
+    "TRYK_ZARATAKI3",
+    "LOP_U_TAK_Civ_Fatigue_01",
+    "LOP_U_TAK_Civ_Fatigue_02",
+    "LOP_U_TAK_Civ_Fatigue_04",
+    "LOP_U_AM_Fatigue_01",
+    "LOP_U_AM_Fatigue_02",
+    "LOP_U_AM_Fatigue_03",
+    "LOP_U_AM_Fatigue_04"
 ];
 
 _vestsLIST = [

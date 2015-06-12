@@ -14,7 +14,7 @@ Transport vehicle [array filled with vehicles]
 Starting point [markers]
 End point [markers]
 
-[WEST, "AUTO", 0, 2, 4, 0.5, "AWARE", "WHITE", "ATTACK", false, ["pt1"], ["pt2"]] call BRM_SpawnAI_fnc_infantry;
+[EAST, "AUTO", 0, 4, 2, 0.5, "SAFE", "YELLOW", "ATTACK", false, ["point1"], ["point2","point3"]] spawn BRM_SpawnAI_fnc_infantry;
 
 */
 
@@ -67,7 +67,7 @@ for "_i" from 0 to _amount do {
     for "_j" from 0 to _size do {
         private ["_unitIndex"];
         
-        if (_i == 0) then {
+        if (_j == 0) then {
             if (_type == 0) then {
             switch (_groupType) do {
                 case "duo": { _unitIndex = 3 };
@@ -89,23 +89,19 @@ for "_i" from 0 to _amount do {
         
         [_unit, _loadout] spawn BRM_fnc_initAI;
         
-        _unitMarker = ["local", getPos _unit, "hd_dot", "Color"+_color, "", [2,2], 0, 1] call BRM_fnc_newMarkerIcon;
-        
-        [_unitMarker, _unit] spawn {
-            _marker = _this select 0;
-            _unit = _this select 1;
+        [_unit, _color] spawn {
+            _unit = _this select 0;
+            _color = _this select 1;            
+                
+            _marker = ["local", getPos _unit, "hd_dot", "Color"+_color, "", [2,2], 0, 1] call BRM_fnc_newMarkerIcon;
             
-            while {((getMarkerSize _marker) select 0) > 0.1} do {
-                _marker setMarkerSize [(((getMarkerSize _marker) select 0) - 0.01), (((getMarkerSize _marker) select 0) - 0.01)];
-                sleep 0.5;
+            while {(alive _unit)} do {
+                sleep 0.1;
                 _marker setMarkerPos getPos _unit;
             };
             deleteMarker _marker;
         };        
     };
-    
-    _group setBehaviour _behavior;
-    _group setCombatMode _combat;
     
     ["LOCAL", "CHAT", format["Group %1 with %2 units finished generating.", _group, count units _group]] call BRM_fnc_doLog;
     
@@ -114,4 +110,7 @@ for "_i" from 0 to _amount do {
         case "DEFEND": { [(units _group) select 0, _endPos, 50] call CBA_fnc_taskDefend };
         case "PATROL": { [(units _group) select 0, _endPos, 50] call CBA_fnc_taskPatrol };
     };
+    
+    _group setBehaviour _behavior;
+    _group setCombatMode _combat;    
 };

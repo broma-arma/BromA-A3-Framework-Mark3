@@ -17,18 +17,18 @@ _defaultInsignia = "USP_PATCH_AFG_LOCAL_POLICE";
 _commonRIFLE = _RHSM16A4;
 _commonRIFLEGL = _RHSM16A4GL;
 _commonPISTOL = _USP;
-_commonMG = _PKP;
-_commonMARKSMAN = _M16A4M;
-_commonSNIPER = _GM6;
+_commonMG = _PKM;
+_commonSNIPER = _SVD;
+_commonSNIPER = _SVD;
 _commonAT = _AT4;
 _specAT = _MAAWS;
 _commonSMG = _M16A3;
-_commonRCO = "RH_ta31rco";
-_commonCCO = "FHQ_optic_AIM";
-_commonMAGNIFIED = _SOS;
-_commonSUPPRESSOR = "RH_qdss_nt4";
+_commonRCO = "rhsusf_acc_eotech_552";
+_commonCCO = "rhsusf_acc_eotech_552";
+_commonMAGNIFIED = "rhs_acc_pso1m2";
+_commonSUPPRESSOR = "rhsusf_acc_rotex5_grey";
 _commonPISTOLSUPPRESSOR = "RH_aacusp";
-_NVG = _NVGEN2;
+_NVG = "rhsusf_ANPVS_14";
 
 // AMMO COUNT ==================================================================
 
@@ -105,9 +105,10 @@ switch (true) do {
 
 
 _uniformsLIST = [
-    "MNP_CombatUniform_ASA_GC2",
-    "MNP_CombatUniform_ASA_GC3",
-    "MNP_CombatUniform_ASA_GC"
+    "LOP_U_AA_Fatigue_01",
+    "LOP_U_AA_Fatigue_01_slv",
+    "LOP_U_AA_Fatigue_02",
+    "LOP_U_AA_Fatigue_02_slv"
 ];
 
 _vestsLIST = [

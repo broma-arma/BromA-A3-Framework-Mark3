@@ -11,7 +11,7 @@ _defaultFace = [_faceWHITE, _faceBLACK, _faceASIAN];
 _defaultName = [_nameAMERICAN];
 _defaultInsignia = "USP_PATCH_USA_USMC";
 
-_enableWoodlandCammo = true;
+_enableWoodlandCammo = false;
 
 // WEAPONS =====================================================================
 
@@ -24,8 +24,8 @@ _commonSNIPER = _M200;
 _commonAT = _AT4CSHEAT;
 _specAT = _MAAWS;
 _commonSMG = _RHSM4;
-_commonRCO = "RH_ta31rmr";
-_commonCCO = "FHQ_optic_HWS";
+_commonRCO = "rhsusf_acc_ACOG_USMC";
+_commonCCO = "rhsusf_acc_eotech_552";
 _commonMAGNIFIED = "optic_LRPS";
 _commonSUPPRESSOR = "rhsusf_acc_rotex5_grey";
 _commonPISTOLSUPPRESSOR = "RH_m9qd";
@@ -103,17 +103,16 @@ switch (true) do {
 };
 
 // UNIFORMS ====================================================================
-
-_lp = "d"; if(_enableWoodlandCammo)then{_lp ="wd"};
+_lp="d";_camo="ucp"; if(_enableWoodlandCammo)then{_lp ="wd";_camo="ocp"};
 
 _headsLIST = [
     "rhsusf_mich_helmet_marpat"+_lp,
-	"rhsusf_mich_helmet_marpat"+_lp+"_alt"
+    "rhsusf_mich_helmet_marpat"+_lp+"_alt"
 ];
 
 _goggleLIST = [
-	"TRYK_SPGEAR_Glasses",
-	""
+    "TRYK_SPGEAR_Glasses",
+    "empty"
 ];
 
 _randomHEAD = _headsLIST call BIS_fnc_selectRandom;
@@ -143,13 +142,13 @@ _medicUNIFORM = _commonUNIFORM;
 _demoUNIFORM = _commonUNIFORM;
 _reconUNIFORM = _commonUNIFORM;
 
-_commonVEST = "rhsusf_spc";
-_officerVEST = _commonVEST;
-_ftlVEST = _commonVEST;
-_slVEST = _commonVEST;
+_commonVEST ="rhsusf_iotv_"+_camo+"_Rifleman";
+_officerVEST = "rhsusf_iotv_"+_camo+"_Squadleader";
+_ftlVEST = "rhsusf_iotv_"+_camo+"_Squadleader";
+_slVEST = "rhsusf_iotv_"+_camo+"_Squadleader";
 _mgVEST = _commonVEST;
-_grenadierVEST = _commonVEST;
-_medicVEST = _commonVEST;
+_grenadierVEST = "rhsusf_iotv_"+_camo+"_Grenadier";
+_medicVEST = "rhsusf_iotv_"+_camo+"_Medic";
 _demoVEST = _commonVEST;
 _marksmanVEST = _commonVEST;
 _reconVEST = _commonVEST;

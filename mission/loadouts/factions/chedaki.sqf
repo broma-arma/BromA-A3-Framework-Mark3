@@ -106,24 +106,12 @@ switch (true) do {
 // UNIFORMS ====================================================================
 
 _headsLIST = [
-    "H_caf_ag_boonie_01",
-    "H_caf_ag_boonie_02",
-    "H_caf_ag_beanie"
+    "empty"
 ];
 
 _uniformsLIST = [
-    "U_CAF_AG_EEUR_FATIGUES_03b",
-    "U_CAF_AG_EEUR_FATIGUES_02",
-    "U_CAF_AG_EEUR_FATIGUES_03",
-    "U_CAF_AG_EEUR_FATIGUES_03c",
-    "MNP_CombatUniform_ASA_GC3_B",
-    "MNP_CombatUniform_ASA_GC3",
-    "MNP_CombatUniform_Militia_C",
-    "MNP_CombatUniform_RO4_Sh",
-    "TRYK_U_B_AOR2_OD_CombatUniform",
-    "TRYK_U_B_PCUODHs",
-    "TRYK_U_B_PCUGs_OD",
-    "rds_uniform_Woodlander2"
+    "LOP_U_ChDKZ_Fatigue_04",
+    "LOP_U_ChDKZ_Fatigue_01"
 ];
 
 _vestsLIST = [
@@ -144,10 +132,10 @@ _randomVEST = _vestsLIST call BIS_fnc_selectRandom;
 _randomGOGGLE = _goggleLIST call BIS_fnc_selectRandom;
 
 _commonHEAD = "empty";
-_leaderHEAD = "MNP_Beret_2PARA";
-_officerHEAD = "MNP_Beret_2PARA";
+_leaderHEAD = "rhs_fieldcap_digi";
+_officerHEAD = "LOP_H_ChDKZ_Beret";
 _medicHEAD = _commonHEAD;
-_crewmanHEAD = "rhs_tsh4_ess";
+_crewmanHEAD = "rhs_tsh4_bala";
 _pilotHEAD = _commonHEAD;
 _helicrewHEAD = _commonHEAD;
 _helipilotHEAD = _commonHEAD;
@@ -156,16 +144,18 @@ _demoHEAD = _commonHEAD;
 _reconHEAD = _commonHEAD;
 
 _commonUNIFORM = _randomUNIFORM;
-_officerUNIFORM = _commonUNIFORM;
+_SLUNIFORM = "LOP_U_ChDKZ_Fatigue_Commander";
+_FTLUNIFORM = "LOP_U_ChDKZ_Fatigue_03";
+_officerUNIFORM = "LOP_U_ChDKZ_Fatigue_Bardak";
 _pilotUNIFORM = _commonUNIFORM;
-_sniperUNIFORM = _commonUNIFORM;
+_sniperUNIFORM = "LOP_U_ChDKZ_Fatigue_03";
 _marksmanUNIFORM = _commonUNIFORM;
 _helicrewUNIFORM = _commonUNIFORM;
 _crewUNIFORM = _commonUNIFORM;
-_mgUNIFORM = _commonUNIFORM;
+_mgUNIFORM = "LOP_U_ChDKZ_Fatigue_02";
 _medicUNIFORM = _commonUNIFORM;
 _demoUNIFORM = _commonUNIFORM;
-_reconUNIFORM = _commonUNIFORM;
+_reconUNIFORM = "LOP_U_ChDKZ_Fatigue_03";
 
 _commonVEST = _randomVEST;
 _officerVEST = _commonVEST;

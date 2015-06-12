@@ -29,7 +29,7 @@ _commonCCO = _ACOred;
 _commonMAGNIFIED = _M14SCOPE;
 _commonSUPPRESSOR = "hlc_muzzle_snds_g3";
 _commonPISTOLSUPPRESSOR = "RH_aacusp";
-_NVG = _NVGEN2;
+_NVG = "rhsusf_ANPVS_14";
 
 // AMMO COUNT ==================================================================
 
@@ -104,6 +104,13 @@ switch (true) do {
 
 // UNIFORMS ====================================================================
 
+_uniformsLIST = [
+    "LOP_U_RACS_Fatigue_01",
+    "LOP_U_RACS_Fatigue_01_slv"
+];
+
+_randomUNIFORM = _uniformsLIST call BIS_fnc_selectRandom;
+
 _commonHEAD = "rhsusf_ach_bare_semi_ess";
 _leaderHEAD = "rhsusf_ach_bare_semi_headset_ess";
 _officerHEAD = "rhsusf_patrolcap_ocp";
@@ -116,8 +123,8 @@ _sniperHEAD = _commonHEAD;
 _demoHEAD = _commonHEAD;
 _reconHEAD = "rhs_Booniehat_marpatd";
 
-_commonUNIFORM = "MNP_CombatUniform_USMC_SD";
-_officerUNIFORM = "MNP_CombatUniform_USMC_SD";
+_commonUNIFORM = _randomUNIFORM;
+_officerUNIFORM = _commonUNIFORM;
 _pilotUNIFORM = "U_B_PilotCoveralls";
 _sniperUNIFORM = "U_B_GhillieSuit";
 _marksmanUNIFORM = _commonUNIFORM;

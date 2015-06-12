@@ -18,7 +18,7 @@ _defaultInsignia = "USP_PATCH_USA_TAB_RANGER_1BN_UCP";
 	"ocp" 
 */
 
-_camo = "ocp";
+_camo = "ucp";
 
 // WEAPONS =====================================================================
 
@@ -31,8 +31,8 @@ _commonSNIPER = _M200;
 _commonAT = _AT4CSHEAT;
 _specAT = _MAAWS;
 _commonSMG = _RHSM4;
-_commonRCO = "RH_ta31rmr";
-_commonCCO = "FHQ_optic_HWS";
+_commonRCO = "rhsusf_acc_ACOG3";
+_commonCCO = "rhsusf_acc_eotech_552";
 _commonMAGNIFIED = "optic_LRPS";
 _commonSUPPRESSOR = "rhsusf_acc_rotex5_grey";
 _commonPISTOLSUPPRESSOR = "RH_m9qd";
@@ -112,20 +112,20 @@ switch (true) do {
 // UNIFORMS ====================================================================
 
 _headsLIST = [
-	"rhsusf_ach_helmet_"+_camo,
-	"rhsusf_ach_helmet_ESS_"+_camo,
-	"rhsusf_ach_helmet_headset_"+_camo
+    "rhsusf_ach_helmet_"+_camo,
+    "rhsusf_ach_helmet_ESS_"+_camo,
+    "rhsusf_ach_helmet_headset_"+_camo
 ];
 
 _vestsLIST = [
     "rhsusf_iotv_"+_camo+"_SAW",
-	"rhsusf_iotv_"+_camo+"_Rifleman"
+    "rhsusf_iotv_"+_camo+"_Rifleman"
 ];
 
 _goggleLIST = [
     "TRYK_Shemagh_shade",
-	"TRYK_Shemagh",
-	""
+    "TRYK_Shemagh",
+    "empty"
 ];
 
 _randomHEAD = _headsLIST call BIS_fnc_selectRandom;
@@ -147,7 +147,7 @@ _reconHEAD = "rhs_Booniehat_"+_camo;
 _commonUNIFORM = "rhs_uniform_cu_"+_camo;
 _officerUNIFORM = _commonUNIFORM;
 _pilotUNIFORM = "TRYK_OVERALL_SAGE";
-_sniperUNIFORM = "U_B_FullGhillie_lsh";
+_sniperUNIFORM = "U_B_GhillieSuit";
 _marksmanUNIFORM = _commonUNIFORM;
 _helicrewUNIFORM = "TRYK_OVERALL_SAGE";
 _crewUNIFORM = _commonUNIFORM;
@@ -156,7 +156,7 @@ _medicUNIFORM = _commonUNIFORM;
 _demoUNIFORM = _commonUNIFORM;
 _reconUNIFORM = _commonUNIFORM;
 
-_commonVEST = _randomVEST;
+_commonVEST = "rhsusf_iotv_"+_camo+"_Rifleman";
 _officerVEST = "rhsusf_iotv_"+_camo+"_Squadleader";
 _ftlVEST = "rhsusf_iotv_"+_camo+"_Squadleader";
 _slVEST = "rhsusf_iotv_"+_camo+"_Squadleader";

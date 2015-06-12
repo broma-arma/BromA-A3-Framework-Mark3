@@ -105,7 +105,7 @@ switch (true) do {
 _headsLIST = [
     "ibr_mol_helmet",
     "H_Shemag_olive",
-    ""
+    "empty"
 ];
 
 _uniformsLIST = [

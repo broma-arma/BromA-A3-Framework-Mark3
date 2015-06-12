@@ -36,7 +36,7 @@ _module setVariable ["litterCleanUpDelay", 1800];
 _module setVariable ["enableScreams", true];
 _module setVariable ["playerDamageThreshold", 1];
 _module setVariable ["AIDamageThreshold", 1];
-_module setVariable ["enableUnsconsiousnessAI", 0];
+_module setVariable ["enableUnconsciousnessAI", 0];
 _module setVariable ["preventInstaDeath", true];
 _module setVariable ["bleedingCoefficient", 1];
 _module setVariable ["painCoefficient", 1];

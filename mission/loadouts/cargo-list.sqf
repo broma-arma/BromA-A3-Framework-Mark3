@@ -77,7 +77,7 @@ switch(_x) do
 
     case "at":
     {				
-        [[_object,"magazines",
+        [[_object,"magazine",
             [_specAT select 1,_countATCARGO]
         ]] spawn _addtoCargo;
         [[_object,"weapon",

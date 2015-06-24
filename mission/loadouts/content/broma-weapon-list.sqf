@@ -298,7 +298,7 @@ _SVDCAMO = ["rhs_weap_svdp_wd",_10rnd762SVD];
 _SVDS = ["rhs_weap_svds",_10rnd762SVD];
 
 _M240B = ["rhs_weap_m240B",_100rnd762];
-_M249PIP = ["rhs_weap_m249_pip",_100rnd556];
+_M249PIP = ["rhs_weap_m249_pip_S",_100rnd556];
 _M320 = ["rhs_weap_M320",_40mm];
 
 _M590 = ["rhs_weap_M590_8RD",_8rndBuck];

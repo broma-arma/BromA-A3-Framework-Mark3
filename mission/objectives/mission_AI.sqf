@@ -13,9 +13,14 @@
 
 waitUntil{(mission_AI_controller)};
 
+if ("spawn_ai" in usedPlugins) then { waitUntil{(!isNil "BRM_SpawnAI_fnc_infantry")};
+
+
+};
+
 if ("dac_plugin" in usedPlugins) then { waitUntil{(!isNil "BRM_DAC_fnc_new")};
     
-    [trg1, "Create an activated normal default friendly zone named zone1 on network 1, with 2 squads of infantry."] spawn BRM_DAC_fnc_new;
+    [trg1, "Create an activated normal default friendly zone named zone1 on network 1, with 1 group of infantry."] spawn BRM_DAC_fnc_new;
     
     /* ================================================   
     

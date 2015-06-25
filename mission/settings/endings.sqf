@@ -36,7 +36,7 @@ switch (_this select 0) do {
         _winningSides = [];
         _losingSides = [];
         _showStats = true;
-        _title = "A team is combat ineffective.";
+        _title = "A team has been defeated.";
         _reason = "%1 achieved %3 victory over %2.";
         _endNumber = 2;
     };

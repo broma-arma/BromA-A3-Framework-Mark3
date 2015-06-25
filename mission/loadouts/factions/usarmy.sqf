@@ -8,7 +8,7 @@
 
 _defaultSide = WEST;
 _defaultVoice = [_voiceAMERICAN];
-_defaultFace = [_faceWHITE, _faceBLACK, _faceASIAN];
+_defaultFace = [_faceWHITE, _faceBLACK];
 _defaultName = [_nameAMERICAN];
 _defaultInsignia = "USP_PATCH_USA_TAB_RANGER_1BN_UCP";
 

@@ -14,7 +14,7 @@ private ["_sleep", "_pos", "_aoPos", "_player"];
 
 _pos = [0,0,0];
 _aoPos = [(getMarkerPos "ao") select 0, (getMarkerPos "ao") select 1, 0];
-_sleep = 0.25;
+_sleep = 1;
 
 #include "includes\settings.sqf"
 
@@ -27,11 +27,11 @@ while {(alive player)} do {
 
             if (!([getPos _player, "ao"] call CBA_fnc_inArea)) then {
                 _pos = [getPos _player, 1, ([_player, _aoPos] call BIS_fnc_dirTo)] call BIS_fnc_relPos;
-                _sleep = 0;
+                _sleep = 0.1;
 
                 call left_ao_do;
             }
-            else { _sleep = 0.25; };
+            else { _sleep = 1 };
         };
     };
 

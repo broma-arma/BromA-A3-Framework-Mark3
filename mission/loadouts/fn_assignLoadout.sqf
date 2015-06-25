@@ -108,6 +108,8 @@ if (!isNil "_defaultName") then {
     _name = _this select 3;
     _insignia = _this select 4;
     
+    waitUntil{(time > 3)};
+    
     if !(isPlayer _unit) then {
         _unit setFace _face;
         _unit setSpeaker _voice;

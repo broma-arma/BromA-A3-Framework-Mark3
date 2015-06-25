@@ -27,6 +27,17 @@ mission_lives_side_b = -1;
 mission_lives_side_c = -1;
 
 // ============================================================================
+//                             == AI SPAWNING ==                               |
+// ============================================================================
+
+// Enable AI Caching.
+
+AI_spawn_enable_caching = true;
+
+// Distance from players in which the AI will start to be cached.
+AI_spawn_cache_distance = 1500;
+
+// ============================================================================
 //                         == CH VIEW DISTANCE ==                              |
 // ============================================================================
 

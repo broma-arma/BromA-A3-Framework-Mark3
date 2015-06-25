@@ -18,7 +18,7 @@ maxPlayers = 50;
 };
 // Mission and Author's name, loading description and loading picture. =========
 
-onLoadName = "MISSION NAME";
+onLoadName = "Mission Name";
 author = "MISSION MAKER";
 onLoadMission = "Made with the Broma Framework A3";
 loadScreen = "mission\images\loading-screen.jpg";

@@ -29,7 +29,9 @@ _module setVariable ["amountOfReviveLives", 1];
 
 //ACE 3 Medical
 _module = _group createUnit ["ACE_moduleMedicalSettings", [0,0,0],[],0.5,"NONE"];
+
 _module setVariable ["level", 1];
+_module setVariable ["remoteControlledAI", true];
 _module setVariable ["medicSetting", 1];
 _module setVariable ["allowLitterCreation", true];
 _module setVariable ["litterCleanUpDelay", 1800];
@@ -54,3 +56,9 @@ _module setVariable ["useLocation_PAK", 0];
 _module setVariable ["medicSetting_SurgicalKit", 1];
 _module setVariable ["consumeItem_SurgicalKit", 0];
 _module setVariable ["useLocation_SurgicalKit", 0];
+_module setVariable ["healHitPointAfterAdvBandage", false];
+_module setVariable ["painIsOnlySuppressed", true];
+
+_module = _group createUnit ["ace_captives_moduleSettings", [0,0,0],[],0.5,"NONE"];
+_module setVariable ["allowHandcuffOwnSide", false];
+_module setVariable ["allowSurrender", false];

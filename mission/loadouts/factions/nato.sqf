@@ -13,7 +13,7 @@ _defaultInsignia = "";
 
 // WEAPONS =====================================================================
 
-_blackMX = false;
+_blackMX = true;
 
 _rr=_MX;_rg=_MXGL;_rm=_MXSW;_rk=_MXM;_rc=_MXC;
 if (_blackMX) then { _rr=_MXBlack;_rg=_MXGLBlack;_rm=_MXSWBlack;_rk=_MXMBlack;_rc=_MXCBlack; };

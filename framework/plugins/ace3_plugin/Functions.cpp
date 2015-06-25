@@ -9,5 +9,6 @@ class BRM_ACE3
 	class Functions {
 		file = "framework\plugins\ace3_plugin\functions";
 		class ACE_RevivePlayer {};
+		class addACEHelp {};
 	};
 }; 

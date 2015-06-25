@@ -40,6 +40,9 @@ ace_medical_medicSetting_SurgicalKit = ACE_medicalTreatment_useSurgKit;
 ace_medical_consumeItem_SurgicalKit = ACE_medicalTreatment_consumeSurgKit;
 ace_medical_useLocation_SurgicalKit = ACE_medicalTreatment_useSurgKitLocation;
 
+if (hasInterface) then {
+    [] call BRM_ACE3_fnc_addACEHelp;
+};
 
 // le server stuff times
 if (!isServer) exitWith {};

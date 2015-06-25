@@ -7,7 +7,7 @@
 
 _defaultSide = WEST;
 _defaultVoice = [_voiceAMERICAN];
-_defaultFace = [_faceWHITE, _faceBLACK, _faceASIAN];
+_defaultFace = [_faceWHITE, _faceBLACK];
 _defaultName = [_nameAMERICAN];
 _defaultInsignia = "USP_PATCH_USA_USMC";
 
@@ -142,13 +142,13 @@ _medicUNIFORM = _commonUNIFORM;
 _demoUNIFORM = _commonUNIFORM;
 _reconUNIFORM = _commonUNIFORM;
 
-_commonVEST ="rhsusf_iotv_"+_camo+"_Rifleman";
-_officerVEST = "rhsusf_iotv_"+_camo+"_Squadleader";
-_ftlVEST = "rhsusf_iotv_"+_camo+"_Squadleader";
-_slVEST = "rhsusf_iotv_"+_camo+"_Squadleader";
+_commonVEST = "rhsusf_spc";
+_officerVEST = _commonVEST;
+_ftlVEST = _commonVEST;
+_slVEST = _commonVEST;
 _mgVEST = _commonVEST;
-_grenadierVEST = "rhsusf_iotv_"+_camo+"_Grenadier";
-_medicVEST = "rhsusf_iotv_"+_camo+"_Medic";
+_grenadierVEST = _commonVEST;
+_medicVEST = _commonVEST;
 _demoVEST = _commonVEST;
 _marksmanVEST = _commonVEST;
 _reconVEST = _commonVEST;

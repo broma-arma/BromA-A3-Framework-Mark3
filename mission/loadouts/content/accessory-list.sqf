@@ -108,16 +108,16 @@ switch (true) do {
         _NVWIDE = "ACE_NVG_Wide";
     };
     default {
-        _NVGEN1 = "NVGoggles_BLUFOR";
-        _NVGEN2 = "NVGoggles_BLUFOR";
-        _NVGEN4 = "NVGoggles_BLUFOR";
-        _NVWIDE = "NVGoggles_BLUFOR";    
+        _NVGEN1 = "NVGoggles";
+        _NVGEN2 = "NVGoggles";
+        _NVGEN4 = "NVGoggles";
+        _NVWIDE = "NVGoggles";    
     };
 };
 
 _NVGEN3OP = "NVGoggles_OPFOR";
 _NVGEN3IND = "NVGoggles_INDEP";
-_NVGEN3BLU = "NVGoggles_BLUFOR";
+_NVGEN3BLU = "NVGoggles";
 
 // =============================================================================
 

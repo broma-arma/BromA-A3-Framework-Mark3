@@ -7,6 +7,7 @@
 // VANILLA
 
 // Suppressors
+
 _sup65 = "muzzle_snds_H";
 _sup9mm = "muzzle_snds_L";
 _sup45 = "muzzle_snds_acp";
@@ -15,6 +16,7 @@ _sup762 = "muzzle_snds_B";
 _supLMG = "muzzle_snds_H_MG";
 
 // Scopes
+
 _ARCO = "optic_Arco";
 _RCO = "optic_Hamr";
 _ACOred = "optic_Aco";
@@ -27,6 +29,7 @@ _TWS = "optic_tws";
 _TWSmg = "optic_tws_mg";
 
 // Flashlights/Lasers
+
 _flashlight = "acc_flashlight";
 _laser = "acc_pointer_IR";
 
@@ -58,6 +61,7 @@ _GOSHAWK = "hlc_optic_goshawk";
 // FHQ
 
 // Scopes
+
 _FHQACOG = "FHQ_optic_ACOG";
 _FHQACOGTAN = "FHQ_optic_ACOG_tan";
 _FHQAIMPOINT = "FHQ_optic_AIM";
@@ -83,6 +87,7 @@ _FHQMARS = "FHQ_optic_MARS";
 _FHQMARSTAN = "FHQ_optic_MARS_tan";
 
 // Flashlights/Lasers
+
 _FHQANPE = "FHQ_acc_ANPEQ15";
 _FHQANPEBLK = "FHQ_acc_ANPEQ15_black";
 _FHQLLM = "FHQ_acc_LLM01L";

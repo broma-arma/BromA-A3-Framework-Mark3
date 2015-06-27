@@ -27,10 +27,10 @@ if ("dac_plugin" in usedPlugins) then { waitUntil{(!isNil "BRM_DAC_fnc_new")};
     EXAMPLES OF AI ZONES:
     
     Easy enemies:
-    [trg1, "Create an activated easy default enemy zone named anything on network rnadom, with 1 squad of infantry."] spawn BRM_DAC_fnc_new;
+    [trg1, "Create an activated easy default enemy zone named anything on network random, with 1 squad of infantry."] spawn BRM_DAC_fnc_new;
     
     Difficult enemies with combined arms:
-    [trg2, "Create an activated hard default enemy zone named anything on network random, with 2 squads of infantry, 2 fireteams of vehicles and 1 group of armor."] spawn BRM_DAC_fnc_new;
+    [trg2, "Create an activated hard default enemy zone named anything on network random, with 2 squads of infantry, 2 fire-teams of vehicles and 1 group of armor."] spawn BRM_DAC_fnc_new;
     
     Named zone assigned to a network:
     [trg3, "Create an activated normal default friendly zone named NamedZone1 on network 2, with 2 squads of vehicles."] spawn BRM_DAC_fnc_new;

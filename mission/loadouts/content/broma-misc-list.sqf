@@ -81,6 +81,10 @@ _FLASHBANGopforS = "rhs_mag_fakels";
 _flashbangZarya = "rhs_mag_zarya2";
 _flashbangPlamyam = "rhs_mag_plamyam";
 
+_CS = "rhs_mag_m7a3_cs";
+
+_INCENDIARY = "rhs_mag_an_m14_th3";
+
 switch (true) do {
     case (mission_AGM_enabled): {
         _wFLARE = "AGM_HandFlare_White";

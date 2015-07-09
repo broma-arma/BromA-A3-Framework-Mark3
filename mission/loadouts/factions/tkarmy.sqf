@@ -122,8 +122,8 @@ _reconHEAD = _commonHEAD;
 
 _commonUNIFORM = "LOP_U_AFR_Fatigue_02";
 _officerUNIFORM = "MNP_CombatUniform_Rebel_B";
-_pilotUNIFORM = _commonUNIFORM
-_sniperUNIFORM = _commonUNIFORM
+_pilotUNIFORM = _commonUNIFORM;
+_sniperUNIFORM = _commonUNIFORM;
 _marksmanUNIFORM = _commonUNIFORM;
 _helicrewUNIFORM = _commonUNIFORM;
 _crewUNIFORM = _commonUNIFORM;

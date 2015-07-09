@@ -4,7 +4,7 @@
   </a>
    <br/><br/>
   <a href="https://github.com/Neefay/BromA-A3-Framework-Mark3/commits/master">
-    <img src="https://img.shields.io/badge/build-0059-blue.svg" alt="Current version">
+    <img src="https://img.shields.io/badge/build-0060-blue.svg" alt="Current version">
   </a>
   <img src="https://img.shields.io/badge/stable-yes-green.svg" alt="Stable">
 </p>
@@ -49,8 +49,8 @@ The framework is as context agnostic as possible, meaning you can just change on
 	- [X] Chedaki (Eastern Militia)
 	- [X] Norwegian Special Forces
 	- [X] Molatian Rebels (African Militia)
-	- [ ] UN Troops
-	- [ ] Takistani Army (Middle East 90s Army)
+	- [X] UN Troops
+	- [X] Takistani Army (Middle East 90s Army)
 
 ### What then?
 

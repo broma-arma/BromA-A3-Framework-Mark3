@@ -1,32 +1,38 @@
+
 // INFO ========================================================================
 /*
-    Mostly equipped with soviet-era weapons and armored vehicles, the Molatian Army seeks
-	to protect and serve their nation's sovereign interests in the region of Duala.
+
+    The United Nations Charter gives the United Nations Security Council the power and responsibility
+	to take collective action to maintain international peace and security. For this reason, the international
+	community usually looks to the Security Council to authorize peacekeeping operations.
+	
+	Remember to not use your weapon until the UN Secretariat gives you permission to fire. aka never
+	
 */
 
-_defaultSide = EAST;
-_defaultVoice = [_voiceAMERICAN];
-_defaultFace = [_faceBLACK];
-_defaultName = [_nameAFRICAN];
-_defaultInsignia = "";
+_defaultSide = RESISTANCE;
+_defaultVoice = [_voiceALTIAN, _voiceAMERICAN, _voiceBRITISH, _voiceFARSI, _voiceRUSSIAN];
+_defaultFace = [_faceGREEK, _faceWHITE, _faceBLACK, _faceASIAN, _facePERSIAN];
+_defaultName = [_nameAMERICAN]; // incomplete list
+_defaultInsignia = "USP_PATCH_UN_BELIEVE";
 
 // WEAPONS =====================================================================
 
-_commonRIFLE = _RHSAKM;
-_commonRIFLEGL = _RHSAKMGL;
+_commonRIFLE = _FNLAR;
+_commonRIFLEGL = _AKMGL;
 _commonPISTOL = _Makarov;
 _commonMG = _PKM;
-_commonMARKSMAN = _SVD;
-_commonSNIPER = _SVD;
+_commonMARKSMAN = _SVDS;
+_commonSNIPER = _Hecate;
 _commonAT = _RPG26;
-_specAT = _RPG7;
-_commonSMG = _RHSAKMS;
-_commonRCO = "rhs_acc_pso1m2";
-_commonCCO = "";
-_commonMAGNIFIED = "rhs_acc_pso1m2";
-_commonSUPPRESSOR = "rhs_acc_dtk4long";
-_commonPISTOLSUPPRESSOR = "muzzle_snds_L";
-_NVG = "";
+_specAT = _RPG7PGO;
+_commonSMG = _AKS74U;
+_commonRCO = "hlc_optic_suit";
+_commonCCO = "hlc_optic_suit";
+_commonMAGNIFIED = "R3F_NF42";
+_commonSUPPRESSOR = "muzzle_snds_M";
+_commonPISTOLSUPPRESSOR = "rhs_acc_1pn93_1";
+_NVG = _NVGEN2;
 
 // AMMO COUNT ==================================================================
 
@@ -101,68 +107,49 @@ switch (true) do {
 
 // UNIFORMS ====================================================================
 
-_headsLIST = [
-    "ibr_mol_helmet",
-    "H_Shemag_olive",
-    "empty"
-];
-
-_uniformsLIST = [
-    "ibr_mol_army_uniform"
-];
-
-_vestsLIST = [
-    "TRYK_V_ChestRig",
-    "TRYK_V_ChestRig_L"
-];
-
-_gogglesLIST = [
-];
-
-_randomHEAD = _headsLIST call BIS_fnc_selectRandom;
-_randomUNIFORM = _uniformsLIST call BIS_fnc_selectRandom;
-_randomVEST = _vestsLIST call BIS_fnc_selectRandom;
-
-_commonHEAD = _randomHEAD;
-_leaderHEAD = "ibr_mol_redberet";
-_officerHEAD = "ibr_mol_redberet";
+_commonHEAD = "MNP_Helmet_PAGST_UN";
+_leaderHEAD = _commonHEAD;
+_officerHEAD = "H_MilCap_blue";
 _medicHEAD = _commonHEAD;
-_crewmanHEAD = "rhs_tsh4";
-_pilotHEAD = "rhs_zsh7a_mike";
+_crewmanHEAD = "rhsusf_cvc_green_helmet";
+_pilotHEAD = "rhs_zsh7a";
 _helicrewHEAD = "rhs_zsh7a_mike";
 _helipilotHEAD = "rhs_zsh7a_mike";
 _sniperHEAD = _commonHEAD;
 _demoHEAD = _commonHEAD;
-_reconHEAD = "H_Booniehat_oli";
+_reconHEAD = _commonHEAD;
 
-_commonUNIFORM = _randomUNIFORM;
-_officerUNIFORM = _commonUNIFORM;
-_pilotUNIFORM = _commonUNIFORM;
-_sniperUNIFORM = _commonUNIFORM;
-_marksmanUNIFORM = _commonUNIFORM;
-_helicrewUNIFORM = _commonUNIFORM;
+_commonUNIFORM = "LOP_U_AFR_Fatigue_04_slv";
+_officerUNIFORM = "LOP_U_AFR_Fatigue_04";
+_pilotUNIFORM = "TRYK_OVERALL_SAGE_BLKboots_nk";
+_sniperUNIFORM = "U_B_GhillieSuit";
+_marksmanUNIFORM = "TRYK_OVERALL_SAGE_BLKboots_nk";
+_helicrewUNIFORM = "TRYK_OVERALL_SAGE_BLKboots_nk";
 _crewUNIFORM = _commonUNIFORM;
 _mgUNIFORM = _commonUNIFORM;
-_medicUNIFORM = _commonUNIFORM;
+_medicUNIFORM = "LOP_U_AFR_Fatigue_04";
 _demoUNIFORM = _commonUNIFORM;
 _reconUNIFORM = _commonUNIFORM;
 
-_commonVEST = _randomVEST;
-_officerVEST = _commonVEST;
+_commonVEST = "TRYK_V_ChestRig_L";
+_officerVEST = "TRYK_V_ChestRig";
 _ftlVEST = _commonVEST;
-_slVEST = _commonVEST;
+_slVEST = "TRYK_V_ChestRig";
 _mgVEST = _commonVEST;
+_heliVEST = "V_TacVest_blk";
 _grenadierVEST = _commonVEST;
-_medicVEST = _commonVEST;
+_medicVEST = "TRYK_V_ChestRig";
 _demoVEST = _commonVEST;
-_marksmanVEST = _commonVEST;
+_marksmanVEST = "TRYK_V_ChestRig";
 _reconVEST = _commonVEST;
 
 _commonBACKPACK = "TRYK_B_Alicepack";
-_bigBACKPACK = "TRYK_B_Alicepack";
+_bigBACKPACK = "TRYK_B_Carryall_wood";
 
 _HMG = "RHS_M2_Gun_Bag";
 _tripod = "RHS_M2_Tripod_Bag";
+
+_unit addGoggles "TRYK_Spset_PHC2_Glasses";
 
 // =============================================================================
 if (!_isMan) exitWith {};
@@ -182,8 +169,7 @@ switch (true) do {
     case (_isSquadLeader): {
         [_leaderHEAD, _commonUNIFORM, _slVEST, "empty"] call _useUniform;
         [[_unit,[_wsmoke,2],[_rsmoke,2],[_mapTools,1]]] call _addtoVest;
-        [_RHSAKMSGL, _countRIFLE] call _addWeaponKit;
-        [[_unit,[_commonRIFLEGL select 2, _count40mm]]] call _addtoVest;
+        [_commonRIFLE, _countRIFLE] call _addWeaponKit;
         [_commonPISTOL, _countPISTOL] call _addWeaponKit;
         ["primary", _commonRCO] call _attachToWeapon;
         ["rangefinder"] call _addOptics;
@@ -239,8 +225,7 @@ switch (true) do {
         [_commonHEAD, _commonUNIFORM, _commonVEST, _bigBACKPACK] call _useUniform;
         [[_unit,[_wsmoke,2], [_rsmoke,2]]] call _addtoVest;
         [_commonRIFLE, _countRIFLELOW] call _addWeaponKit;
-        [_specAT] call _addWeapon;
-        [[_unit, [_specAT select 1, _countAT] ]] call _addToBackpack;
+        [_commonAT] call _addWeapon;
     };
     
     case (_isMarksman): {
@@ -318,13 +303,13 @@ switch (true) do {
     };
     
     case (_isHelicopterCrew): {
-        [_helicrewHEAD, _helicrewUNIFORM, "empty", _parachute] call _useUniform;
+        [_helicrewHEAD, _helicrewUNIFORM, _heliVEST, _parachute] call _useUniform;
         [[_unit,[_wsmoke,2],[_rsmoke,2]]] call _addtoVest;
         [_commonSMG, _countRIFLELOW] call _addWeaponKit;
     };
     
     case (_isHelicopterPilot): {
-        [_helipilotHEAD, _helicrewUNIFORM, "empty", _parachute] call _useUniform;
+        [_helipilotHEAD, _helicrewUNIFORM, _heliVEST, _parachute] call _useUniform;
         [[_unit,[_wsmoke,2],[_rsmoke,2]]] call _addtoVest;
         [_commonSMG, _countRIFLELOW] call _addWeaponKit;
     };     

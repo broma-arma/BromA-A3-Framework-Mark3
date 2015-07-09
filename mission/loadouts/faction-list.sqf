@@ -75,6 +75,14 @@ switch (toUpper(_faction)) do {
     case "MOLATION": { 
         #include "factions\molatian.sqf" 
     };
+	
+	case "UN": { 
+        #include "factions\un.sqf" 
+    };
+	
+	case "TKARMY": { 
+        #include "factions\tkarmy.sqf" 
+    };
 
     case "DEFAULT": { 
         #include "factions\template.sqf" 

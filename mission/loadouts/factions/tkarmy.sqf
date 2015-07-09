@@ -1,32 +1,36 @@
+
 // INFO ========================================================================
 /*
-    Mostly equipped with soviet-era weapons and armored vehicles, the Molatian Army seeks
-	to protect and serve their nation's sovereign interests in the region of Duala.
+    Formed after the socialist victory of the Takistani Civil War in 1992, the Takistani Army is the 
+	socialist military force of Takistan.
+	
+	Mostly equipped with cold-war era western equipment and vehicles.
+	
 */
 
 _defaultSide = EAST;
-_defaultVoice = [_voiceAMERICAN];
-_defaultFace = [_faceBLACK];
-_defaultName = [_nameAFRICAN];
-_defaultInsignia = "";
+_defaultVoice = [_voiceFARSI];
+_defaultFace = [_faceGREEK, _facePERSIAN];
+_defaultName = [_nameARABIC]; // incomplete list
+_defaultInsignia = "USP_PATCH_IRN_ARMY_13REVGRD";
 
 // WEAPONS =====================================================================
 
-_commonRIFLE = _RHSAKM;
-_commonRIFLEGL = _RHSAKMGL;
+_commonRIFLE = _FNFAL;
+_commonRIFLEGL = _M16A2GL;
 _commonPISTOL = _Makarov;
 _commonMG = _PKM;
-_commonMARKSMAN = _SVD;
-_commonSNIPER = _SVD;
-_commonAT = _RPG26;
-_specAT = _RPG7;
-_commonSMG = _RHSAKMS;
-_commonRCO = "rhs_acc_pso1m2";
-_commonCCO = "";
-_commonMAGNIFIED = "rhs_acc_pso1m2";
-_commonSUPPRESSOR = "rhs_acc_dtk4long";
-_commonPISTOLSUPPRESSOR = "muzzle_snds_L";
-_NVG = "";
+_commonMARKSMAN = _SVDS;
+_commonSNIPER = _Hecate;
+_commonAT = _RPG7PGO;
+_specAT = _RPG7PGO;
+_commonSMG = _AKS74U;
+_commonRCO = "hlc_optic_suit";
+_commonCCO = "hlc_optic_suit";
+_commonMAGNIFIED = "R3F_NF42";
+_commonSUPPRESSOR = "muzzle_snds_M";
+_commonPISTOLSUPPRESSOR = "rhs_acc_1pn93_1";
+_NVG = _NVGEN2;
 
 // AMMO COUNT ==================================================================
 
@@ -101,65 +105,46 @@ switch (true) do {
 
 // UNIFORMS ====================================================================
 
-_headsLIST = [
-    "ibr_mol_helmet",
-    "H_Shemag_olive",
-    "empty"
-];
-
-_uniformsLIST = [
-    "ibr_mol_army_uniform"
-];
-
-_vestsLIST = [
-    "TRYK_V_ChestRig",
-    "TRYK_V_ChestRig_L"
-];
-
 _gogglesLIST = [
 ];
 
-_randomHEAD = _headsLIST call BIS_fnc_selectRandom;
-_randomUNIFORM = _uniformsLIST call BIS_fnc_selectRandom;
-_randomVEST = _vestsLIST call BIS_fnc_selectRandom;
-
-_commonHEAD = _randomHEAD;
-_leaderHEAD = "ibr_mol_redberet";
-_officerHEAD = "ibr_mol_redberet";
+_commonHEAD = "LOP_H_SSh68Helmet_OLV";
+_leaderHEAD = _commonHEAD;
+_officerHEAD = "tf47_beret";
 _medicHEAD = _commonHEAD;
 _crewmanHEAD = "rhs_tsh4";
-_pilotHEAD = "rhs_zsh7a_mike";
+_pilotHEAD = "rhs_zsh7a";
 _helicrewHEAD = "rhs_zsh7a_mike";
 _helipilotHEAD = "rhs_zsh7a_mike";
 _sniperHEAD = _commonHEAD;
 _demoHEAD = _commonHEAD;
-_reconHEAD = "H_Booniehat_oli";
+_reconHEAD = _commonHEAD;
 
-_commonUNIFORM = _randomUNIFORM;
-_officerUNIFORM = _commonUNIFORM;
-_pilotUNIFORM = _commonUNIFORM;
-_sniperUNIFORM = _commonUNIFORM;
+_commonUNIFORM = "LOP_U_AFR_Fatigue_02";
+_officerUNIFORM = "MNP_CombatUniform_Rebel_B";
+_pilotUNIFORM = _commonUNIFORM
+_sniperUNIFORM = _commonUNIFORM
 _marksmanUNIFORM = _commonUNIFORM;
 _helicrewUNIFORM = _commonUNIFORM;
 _crewUNIFORM = _commonUNIFORM;
 _mgUNIFORM = _commonUNIFORM;
-_medicUNIFORM = _commonUNIFORM;
+_medicUNIFORM = _commonUNIFORM
 _demoUNIFORM = _commonUNIFORM;
 _reconUNIFORM = _commonUNIFORM;
 
-_commonVEST = _randomVEST;
-_officerVEST = _commonVEST;
+_commonVEST = "TRYK_V_ChestRig_L";
+_officerVEST = "TRYK_V_ChestRig";
 _ftlVEST = _commonVEST;
-_slVEST = _commonVEST;
-_mgVEST = _commonVEST;
+_slVEST = "TRYK_V_ChestRig";
+_mgVEST = "TRYK_V_ChestRig";
 _grenadierVEST = _commonVEST;
-_medicVEST = _commonVEST;
+_medicVEST = "TRYK_V_ChestRig";
 _demoVEST = _commonVEST;
-_marksmanVEST = _commonVEST;
+_marksmanVEST = "TRYK_V_ChestRig";
 _reconVEST = _commonVEST;
 
 _commonBACKPACK = "TRYK_B_Alicepack";
-_bigBACKPACK = "TRYK_B_Alicepack";
+_bigBACKPACK = "B_Carryall_oli";
 
 _HMG = "RHS_M2_Gun_Bag";
 _tripod = "RHS_M2_Tripod_Bag";
@@ -182,8 +167,7 @@ switch (true) do {
     case (_isSquadLeader): {
         [_leaderHEAD, _commonUNIFORM, _slVEST, "empty"] call _useUniform;
         [[_unit,[_wsmoke,2],[_rsmoke,2],[_mapTools,1]]] call _addtoVest;
-        [_RHSAKMSGL, _countRIFLE] call _addWeaponKit;
-        [[_unit,[_commonRIFLEGL select 2, _count40mm]]] call _addtoVest;
+        [_commonRIFLE, _countRIFLE] call _addWeaponKit;
         [_commonPISTOL, _countPISTOL] call _addWeaponKit;
         ["primary", _commonRCO] call _attachToWeapon;
         ["rangefinder"] call _addOptics;
@@ -247,7 +231,7 @@ switch (true) do {
         [_commonHEAD, _marksmanUNIFORM, _marksmanVEST, "empty"] call _useUniform;
         [[_unit,[_wsmoke,2], [_rsmoke,2]]] call _addtoVest;
         [_commonMARKSMAN, _countRIFLE] call _addWeaponKit;
-        ["primary", _commonRCO] call _attachToWeapon;
+        ["primary", "rhs_acc_pso1m2"] call _attachToWeapon;
     };
     
     case (_isAutorifleman): {

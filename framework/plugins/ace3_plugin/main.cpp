@@ -5,7 +5,7 @@
 		name = "ACE3 Plugin";
 		version = 1;
 		authors[] = {"nigel"};	
-		description = "Allows for the easy configuration for the ACE3 mod settings, including Medical system and other modules.";
+		description = "Allows for the easy configuration for the ACE3 mod settings, including the mod's Medical system and other modules.";
 	};
 #endif
 

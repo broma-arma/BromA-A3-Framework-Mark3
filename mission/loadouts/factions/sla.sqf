@@ -1,9 +1,12 @@
 
 // INFO ========================================================================
 /*
-    The Sahrani Liberation Army aim to dismantle the monarchy in the southern
-    region and unite the entire island under a communist regime back by Russia.
+
+    The Sahrani Liberation Army aims to dismantle the monarchy in the southern
+    region and unite the entire island under a communist regime backed by Russia.
+	
     Mostly uses Russian equipment and tactics.
+	
 */
 
 _defaultSide = EAST;

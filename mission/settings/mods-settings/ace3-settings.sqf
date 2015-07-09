@@ -25,19 +25,19 @@ ACE_medicalTreatment_litterRemove = 3000;
 // true/false
 ACE_Medical_screams = true;
 
-// Damage a player can take before being killed
+// Damage a player can sustain before being killed
 // default : 1
 ACE_Medical_playerDamage = 1;
 
-// Damage the ai can take before being killed
+// Damage the AI can sustain before being killed
 // default : 1
 ACE_Medical_aiDamage = 1;
 
-// Enables AI going unconcious.
+// Enables unconscious states for AI-controlled units.
 // 0 = disabled; 1 = 50/50; 2 = enabled
 ACE_Medical_unconAI = 0;
 
-// Prevents units from dying instantly and makes them unconcious instead.
+// Prevents units from dying instantly and makes them unconscious instead.
 // true/false
 ACE_Medical_preventInstaDeath = true;
 

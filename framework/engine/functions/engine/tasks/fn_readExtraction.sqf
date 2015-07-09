@@ -8,7 +8,7 @@ AUTHOR(s):
     Nife
 
 DESCRIPTION:
-    Read all extraction points in the map and marks them properly.
+    Reads all the extraction points in the map and marks them properly.
 
 PARAMETERS:
     None.

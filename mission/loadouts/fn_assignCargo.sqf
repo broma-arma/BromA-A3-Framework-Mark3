@@ -1,6 +1,6 @@
 // ============================================================================================
 //
-//	This script allows to load cargo into any type of vehicle that you place in the editor.
+//	This script allows for loading of cargo into any type of vehicle that is placed in the editor.
 //
 //      nul = [this,"faction","ammo"] execVM "mission\loadout\init-cargo.sqf";
 //

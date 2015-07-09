@@ -8,7 +8,7 @@ AUTHOR(s):
     Nife
 
 DESCRIPTION:
-    Logs or displays any desired value, targetting any desired environment.
+    Logs or displays any desired value, targeting any desired environment.
 
 PARAMETERS:
     0 - Scope or environment where the argument will be logged. (STRING)

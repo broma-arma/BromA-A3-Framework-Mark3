@@ -1,8 +1,10 @@
 // INFO ========================================================================
 /*
-    This is the template you can use to create your own loadouts.
-    
-    Customize it as you wish.
+
+    Formed after the increasing risk of terrorist activity against Norwegian sovereign interests,
+	the Norwegian Special Forces operate inside and outside of their national borders performing
+	key strikes, covert military operations and reconnaisance for the country's main armed branch.
+	
 */
 
 _defaultSide = resistance;

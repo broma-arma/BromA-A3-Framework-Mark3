@@ -3,7 +3,7 @@
 // =============================================================================
 
 // =============================================================================
-// SOME AMMO
+// AMMUNITION
 
 _30rnd65red = "30Rnd_65x39_caseless_mag";
 _30rnd65green = "30Rnd_65x39_caseless_green";
@@ -97,7 +97,7 @@ _Mk20GLCamo = ["arifle_Mk20_GL_F",_30rnd556,_40mm];
 _ACP45 = ["hgun_ACPC2_F","9Rnd_45ACP_Mag"];
 
 // =============================================================================
-// MOSTLY LAUNCHERS
+// LAUNCHERS
 
 _TitanAA = ["launch_I_Titan_F","Titan_AA"];
 _TitanAT = ["launch_I_Titan_short_F","Titan_AT","Titan_AP"];

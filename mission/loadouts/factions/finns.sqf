@@ -1,8 +1,9 @@
 
 // INFO ========================================================================
 /*
-    Tasked with the defence of Finland's national borders and sovereign interests, the Finnish Armed Forces
-	are a highly-mobilized military force with large combined-arms capabilities.
+    This is the template you can use to create your own loadouts.
+    
+    Customize it as you wish.
 */
 
 _defaultSide = WEST;

@@ -5,7 +5,7 @@
 		name = "Blank Plugin";
 		version = 1;
 		authors[] = {""};
-		description = "Hello world!";
+		description = "The world is your oyster.";
 	};
 #endif
 

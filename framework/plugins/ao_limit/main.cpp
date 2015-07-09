@@ -5,7 +5,7 @@
 		name = "AO Limit";
 		version = 1;
 		authors[] = {"Nife"};
-		description = "Displays a message (or anything nastier) to players who leave the designated Area of Operations.";
+		description = "Displays a message(or anything nastier) to players who leave the designated Area of Operations.";
 	};
 #endif
 

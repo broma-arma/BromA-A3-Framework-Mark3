@@ -2,9 +2,8 @@
 // INFO ========================================================================
 /*
     The Royal Army Corps of Sahrani is the main military force of the 
-    Kingdom of South Sahrani, engaged in a fight against their communist neighbours -
+    Kingdom of South Sahrani, and engaged in a fight against their communist neighbors,
     the Sahrani Liberation Army located north of the island.
-	
     They are aligned with US forces, borrowing their equipment and tactics.
 */
 

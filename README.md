@@ -4,7 +4,7 @@
   </a>
    <br/><br/>
   <a href="https://github.com/Neefay/BromA-A3-Framework-Mark3/commits/master">
-    <img src="https://img.shields.io/badge/build-0059-blue.svg" alt="Current version">
+    <img src="https://img.shields.io/badge/build-0058-blue.svg" alt="Current version">
   </a>
   <img src="https://img.shields.io/badge/stable-yes-green.svg" alt="Stable">
 </p>
@@ -17,7 +17,7 @@ Also keeping up with good practices, most functionality is modular and therefore
 
 ### FEATURES
 *	AGM, TFAR and DAC are fully integrated.
-*	Cargo loading made simple.
+*	Cargo made simple.
 *	Casualty Cap and Body Removal, taken from the F3 Framework with given credits.
 *	Casualty Cap for civilians.
 *	Commander Lock.
@@ -54,4 +54,4 @@ The framework is as context agnostic as possible, meaning you can just change on
 
 ### What then?
 
-I am very committed to document and explain the usability process of this framework so that even the most clueless user can pick it up and get cracking in a few hours at most - expect a wiki with all the API and functions, and definitely video tutorials since I'm a video learner myself.
+I am very commited to document and explain the usability process of this framework so that even the most clueless user can pick it up and get cracking in a few hours at most - expect a wiki with all the API and functions, and definitely video tutorials since I'm a video learner myself.

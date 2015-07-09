@@ -8,7 +8,7 @@
 // Non-medic units can use epinephrine and blood bags.
 agm_settings_AllowNonmedics = true;
 
-// Unconscious units wake up by themselves after a while.
+// Unconcious units wake up by themselves after a while.
 agm_settings_AutomaticWakeup = true;
 
 // How much a unit bleeds, default 1.
@@ -23,7 +23,7 @@ agm_settings_CoefNonMedic = 4;
 // How much pain a unit feels, default 1.
 agm_settings_CoefPain = 1;
 
-// Player units who are unconscious will not die after being shot again.
+// Player units who are unconcious will not die after being shot again.
 agm_settings_PreventDeathWhileUnconscious = true;
 
 // Require a diagnosis before treating a wounded unit.

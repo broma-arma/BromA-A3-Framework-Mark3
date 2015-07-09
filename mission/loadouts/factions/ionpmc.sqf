@@ -1,8 +1,9 @@
 
 // INFO ========================================================================
 /*
-	Originally founded as Black Element USA in September 1998, ION is a private military company specialising in 
-	security solutions and providing services tailored to specialist and high-risk environments.
+    This is the template you can use to create your own loadouts.
+    
+    Customize it as you wish.
 */
 
 _defaultSide = resistance;

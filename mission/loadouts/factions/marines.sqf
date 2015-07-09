@@ -1,8 +1,7 @@
 // INFO ========================================================================
 /*
 
-   The United States Marine Corps (USMC) is a branch of the United States Armed Forces responsible for providing power projection
-   from the sea, using the mobility of the U.S. Navy to rapidly deliver combined-arms task forces.
+    US Marines.
     
 */
 

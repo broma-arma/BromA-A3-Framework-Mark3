@@ -1,7 +1,8 @@
 // INFO ========================================================================
 /*
-    Mostly equipped with soviet-ear weapons and armored vehicles, the Molatian Army seeks
-	to protect and serve their nation's sovereign interests in the region of Duala.
+    This is the template you can use to create your own loadouts.
+    
+    Customize it as you wish.
 */
 
 _defaultSide = EAST;

@@ -7,7 +7,7 @@
 		name = "Map Cover";
 		version = 1;
 		authors[] = {"Nife"};
-		description = "Highlights the AO in the map by enclosing it and darkening the unused part.";
+		description = "Covers the AO of the mission.";
 	};
 #endif
 

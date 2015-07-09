@@ -1,9 +1,8 @@
 
 // INFO ========================================================================
 /*
-    The Afghanistan National Army, tasked with defending the country from
+    The Afghanistan National Army, tasked with defendinding the country from
     Mujahideen forces all the while molesting everything from goats to little boys.
-	
     Backed the US forces with mixed old soviet equipment.
 */
 

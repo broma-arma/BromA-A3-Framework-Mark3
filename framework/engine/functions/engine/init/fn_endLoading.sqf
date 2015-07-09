@@ -10,7 +10,7 @@ AUTHOR(s):
 DESCRIPTION:
     Marks the ending of the loading of the Framework and writes the 
     initialization time to the local log.
-    Also calls surrogate initializations for those who are used to the old style
+    Also calls surrogate Inits for those who are used to the old style
     of initializing scripts and disables randomization in civilians.
 
 PARAMETERS:

@@ -2,16 +2,14 @@
 // INFO ========================================================================
 /*
    During the politically turmoiled times prior to the formation of the CSAT,
-   many soldiers from the surrounding regions grew increasingly displeased
-   with the fanatical frenzy that drove the new government and decided to disband
-   in order to found their own private military effort.
-   
-   Now with the war at its height, the organization known as "Ahkma" operates
-   on several fronts fighting and aiding both CSAT and NATO alike, much to
-   each dismay.
-   
-   What will the winner side make of them, only the future can tell, but for now,
-   business is booming.
+    many soldiers from the surrounding regions grew increasingly displeased
+    with the fanatical frenzy that drove the new government and decided to disband
+    in order to found their own private military effort.
+    Now with the war at its height, the organization known as "Ahkma" operates
+    on several fronts fighting and aiding both CSAT and NATO alike, much to
+    each dismay. 
+    What will the winner side make of them, only the future can tell, but for now,
+    business are booming.
 */
 
 _defaultSide = RESISTANCE;

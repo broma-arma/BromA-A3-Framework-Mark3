@@ -18,9 +18,9 @@ maxPlayers = 50;
 };
 // Mission and Author's name, loading description and loading picture. =========
 
-onLoadName = "MISSION NAME";
+onLoadName = "Mission Name";
 author = "MISSION MAKER";
-onLoadMission = "Powered by BromA Mark3 Framework for A3";
+onLoadMission = "Made with the Broma Framework A3";
 loadScreen = "mission\images\loading-screen.jpg";
 
 // Disables certain radio channels in the mission. =============================

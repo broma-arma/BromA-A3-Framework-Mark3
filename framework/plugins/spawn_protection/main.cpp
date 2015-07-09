@@ -5,7 +5,7 @@
 		name = "Spawn protection";
 		version = 1;
 		authors[] = {"Br.","Nife"};	
-		description = "Creates a protection zone around the insertion point, which can last forever or as long as the mission parameters determine, ensuring neither players or friendly vehicles can take damage while inside.";
+		description = "Creates a protection zone around the insertion point, which can last forever or as long as the mission paramters determine, ensuring neither players or friendly vehicles can take damage while within.";
 	};
 #endif
 

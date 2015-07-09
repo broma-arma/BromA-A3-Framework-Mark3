@@ -46,3 +46,15 @@ if (hasInterface) then {
 
 // le server stuff times
 if (!isServer) exitWith {};
+
+_center = createCenter sideLogic;
+_group = createGroup _center;
+
+//ACE 3 Respawn
+_module = _group createUnit ["ACE_ModuleRespawn", [0,0,0],[],0.5,"NONE"];
+_module setVariable ["SavePreDeathGear", true];
+_module setVariable ["RemoveDeadBodiesDisconnected", true];
+//ACE 3 Captives
+_module = _group createUnit ["ace_captives_moduleSettings", [0,0,0],[],0.5,"NONE"];
+_module setVariable ["allowHandcuffOwnSide", false];
+_module setVariable ["allowSurrender", false];

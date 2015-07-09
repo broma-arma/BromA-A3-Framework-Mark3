@@ -5,7 +5,7 @@
 		name = "Prevent Reslotting";
 		version = 1;
 		authors[] = {"Nife"};
-		description = "As soon enough time has passed, the players current slotted unit will be locked, blocking any attemps to change it.";
+		description = "As soon enough time has passed, the player's currently slotted unit will be locked, blocking any attempts to change it.";
 	};
 #endif
 

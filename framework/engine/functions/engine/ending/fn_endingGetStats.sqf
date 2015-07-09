@@ -9,8 +9,8 @@ AUTHOR(s):
 
 DESCRIPTION:
     Here we calculate the number of deaths in the mission in a percentage:
-    depending on how many players died for each side, the "margin" variable
-    will be change accordingly to reflect the winner, and for how much.
+    depending on how many players died for each side. The "margin" variable
+    will be change accordingly to reflect the winner and for how much.
 
 PARAMETERS:
     None.

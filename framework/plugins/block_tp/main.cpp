@@ -4,7 +4,7 @@
 		name = "Block third-person";
 		version = 1;
 		authors[] = {"Nife"};	
-		description = "Simple script meant to stop players who do not meet certain conditions (being a driver/commander) from using third person mode.";
+		description = "Simple script meant to stop players from using third person mode if they do not meet certain conditions. (Being a vehicle driver/commander)";
 	};
 #endif
 

@@ -8,7 +8,7 @@ AUTHOR(s):
     Nife
 
 DESCRIPTION:
-    Sets a Task's state over the network.
+    Sets a task's state over the network.
 
 PARAMETERS:
     0 - Task ID (STRING)

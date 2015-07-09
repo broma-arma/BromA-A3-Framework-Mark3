@@ -12,7 +12,7 @@
 mission_author_name = [mission_author_name] call BRM_fnc_verboseArray;
 
 player createDiaryRecord ["Diary", ["Credits","
-current mission " + mission_version + " made by " + mission_author_name + ".
+Current mission version " + mission_version + " made by " + mission_author_name + ".
 <br/>
 <br/>
 <img image='framework\engine\assets\images\framework-logo.paa' width='512' height='128'/><br/>

@@ -2,7 +2,8 @@
 // INFO ========================================================================
 /*
 
-    Russian VDV forces, with selectable camouflage.
+    Originally a soviet military unit, the Russian Airborne Troops or VDV is a military branch of the Armed Forces of 
+	the Russian Federation tasked with rapid combined-arms deployment with a focus on airborne infantry.
     
 */
 

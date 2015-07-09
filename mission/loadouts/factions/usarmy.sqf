@@ -2,7 +2,9 @@
 // INFO ========================================================================
 /*
 
-    US Army 2014.
+    The United States Army (USA), officially designated as the "Army of the United States" is the largest branch of the 
+	United States Armed Forces with the primary task of performing land-based military operations in armed conflict and
+	peacetime operations.
     
 */
 

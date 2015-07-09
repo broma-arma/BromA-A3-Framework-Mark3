@@ -2,7 +2,7 @@
 ================================================================================
 
 NAME:
-    BRM_ACE_fnc_AGM_RevivePlayer
+   BRM_ACE_fnc_ACE_RevivePlayer
     
 AUTHOR(s):
     Nife

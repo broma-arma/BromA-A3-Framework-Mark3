@@ -59,7 +59,7 @@ ACE_Medical_enableFor = 0;
 
 // Enable wounds reopening.
 // true/false
-ACE_Medical_advWounds = false;
+ACE_Medical_advWounds = true;
 
 // Enable damage from vehicle crashes
 // true/false
@@ -71,7 +71,7 @@ ACE_medicalTreatment_usePAK = 1;
 
 // Consume PAK on treatment
 // 0 = no; 1 = yes
-ACE_medicalTreatment_consumePAK = 0;
+ACE_medicalTreatment_consumePAK = 1;
 
 // Locations enabled for PAK use
 // 0 = anywhere; 1 = medical vehicles; 2 = medical facilities; 3 = medical vehicles and facilities; 4 = disabled
@@ -87,4 +87,4 @@ ACE_medicalTreatment_consumeSurgKit = 0;
 
 // Locations enabled for Surgical Kit use
 // 0 = anywhere; 1 = medical vehicles; 2 = medical facilities; 3 = medical vehicles and facilities; 4 = disabled
-ACE_medicalTreatment_useSurgKitLocation = 3;
+ACE_medicalTreatment_useSurgKitLocation = 0;

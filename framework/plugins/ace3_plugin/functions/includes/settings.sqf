@@ -23,5 +23,5 @@ if (isNil "ACE_medicalTreatment_useSurgKit") then { ACE_medicalTreatment_useSurg
 if (isNil "ACE_medicalTreatment_consumeSurgKit") then { ACE_medicalTreatment_consumeSurgKit = 0 };
 if (isNil "ACE_medicalTreatment_useSurgKitLocation") then { ACE_medicalTreatment_useSurgKitLocation = 3 };
 //medical fix
-if (isNil "ACE_Medical_hotfix") then { ACE_Medical_hotfix = true };
+if (isNil "ACE_Medical_hotfix") then { ACE_Medical_hotfix = false };
 

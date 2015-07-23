@@ -34,4 +34,13 @@ class p_ace3_everyone_medic
 	code = "param_ace3_everyone_medic = %1";
 };
 
+class p_ace3_medical_hotfix
+{
+	title = "(ACE3) Advanced Medical Hotfix";
+	values[] = {0,1};
+	texts[] = {"Disabled","Enabled"};
+	default = 0;
+	code = "param_ace3_medical_hotfix = %1";
+};
+
 class p_ace3_bar1 {title = ""; values[] = {0}; texts[] = {""}; default = 0; };

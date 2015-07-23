@@ -72,7 +72,7 @@ if (hasInterface) then {
 	if (mission_ace3_everyone_medic) then {
 	player setvariable ["ACE_medical_medicClass", mission_ace3_everyone_medic, true];};
 	// FIX FOR ACE 3.1.1 advanced medical
-	if !(mission_ace3_medical_hotfix) exitWith {};
+	if !(ACE_Medical_hotfix) exitWith {};
     [] spawn {
 	    med_fix = true;
 	    while {med_fix} do {waitUntil {sleep 5; (damage player) > 0.1 && (damage player) < 0.9};

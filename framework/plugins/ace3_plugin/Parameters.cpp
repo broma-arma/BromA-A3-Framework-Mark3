@@ -25,4 +25,22 @@ class p_ace3_revive_lives
 	code = "param_ace3_revive_lives = %1";
 };
 
+class p_ace3_everyone_medic
+{
+	title = "(ACE3) Everyone as a medic";
+	values[] = {0,1};
+	texts[] = {"Disabled","Enabled"};
+	default = 1;
+	code = "param_ace3_everyone_medic = %1";
+};
+
+class p_ace3_medical_hotfix
+{
+	title = "(ACE3) Advanced Medical Hotfix";
+	values[] = {0,1};
+	texts[] = {"Disabled","Enabled"};
+	default = 0;
+	code = "param_ace3_medical_hotfix = %1";
+};
+
 class p_ace3_bar1 {title = ""; values[] = {0}; texts[] = {""}; default = 0; };

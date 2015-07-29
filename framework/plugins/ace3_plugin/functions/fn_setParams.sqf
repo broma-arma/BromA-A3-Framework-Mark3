@@ -41,14 +41,6 @@ switch (param_ace3_everyone_medic) do {
     case 1: { mission_ace3_everyone_medic = true; };
 };
 
-// =============================================================================
-//  ACE Advanced Medical hotfix
-// =============================================================================
-
-switch (param_ace3_medical_hotfix) do {
-    case 0: { ACE_Medical_hotfix = false; };
-    case 1: { ACE_Medical_hotfix = true; };
-};
 
 // =============================================================================
 

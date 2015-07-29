@@ -73,11 +73,5 @@ if (hasInterface) then {
 	player setvariable ["ACE_medical_medicClass", 1, true];};
 	// FIX FOR ACE 3.1.1 advanced medical
 	if !(ACE_Medical_hotfix) exitWith {};
-    [] spawn {
-	    med_fix = true;
-	    while {med_fix} do {waitUntil {sleep 5; (damage player) > 0.1 && (damage player) < 0.9};
-            player setDamage 0;
-            sleep 1;
-	    };
     };
 };

@@ -74,5 +74,4 @@ if (hasInterface) then {
     [] call BRM_ACE3_fnc_addACEHelp;
 	if (mission_ace3_everyone_medic) then {
 	player setvariable ["ACE_medical_medicClass", 1, true];};
-    };
 };

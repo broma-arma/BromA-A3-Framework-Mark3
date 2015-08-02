@@ -38,10 +38,12 @@ ace_medical_enableVehicleCrashes = ACE_Medical_Veh;
 ace_medical_medicSetting_PAK = ACE_medicalTreatment_usePAK;
 ace_medical_consumeItem_PAK = ACE_medicalTreatment_consumePAK;
 ace_medical_useLocation_PAK = ACE_medicalTreatment_usePAKLocation;
+ace_medical_useCondition_PAK = 0;
 ace_medical_medicSetting_SurgicalKit = ACE_medicalTreatment_useSurgKit;
 ace_medical_consumeItem_SurgicalKit = ACE_medicalTreatment_consumeSurgKit;
 ace_medical_useLocation_SurgicalKit = ACE_medicalTreatment_useSurgKitLocation;
 ace_medical_useLocation_SurgicalKit = ACE_medicalTreatment_useSurgKitLocation;
+ace_medical_useCondition_SurgicalKit = 0;
 ace_medical_healHitPointAfterAdvBandage = false;
 ace_medical_painIsOnlySuppressed = false;
 
@@ -59,7 +61,8 @@ ace_map_mapShowCursorCoordinates = false;
 ace_map_mapIllumination = true;
 ace_map_mapLimitZoom = false;
 ace_winddeflection_enabled = true;//disables wind deflection
-
+ace_finger_enabled = true;
+ace_finger_maxRange = 4;
 
 //ACE 3 Respawn Settings
 

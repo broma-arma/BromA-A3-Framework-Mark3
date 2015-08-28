@@ -408,6 +408,39 @@ _PKM = ["rhs_weap_pkm",_100rnd762PKP];
 
 // =============================================================================
 // =============================================================================
+
+//                           	3CB BAF WEAPONS 
+
+// =============================================================================
+// =============================================================================
+
+_L110A2 = ["UK3CB_BAF_L110A2","UK3CB_BAF_100Rnd"];
+_L110A2GRIP = ["UK3CB_BAF_L110A2_FIST","UK3CB_BAF_100Rnd"];
+_L115A3 = ["UK3CB_BAF_L115A3","UK3CB_BAF_L115A3_Mag"];
+_L115A3CAMO = ["UK3CB_BAF_L115A3_Ghillie","UK3CB_BAF_L115A3_Mag"];
+_L128A1 = ["UK3CB_BAF_L128A1","UK3CB_BAF_L128A1_Slugs"];
+_L129A1 = ["UK3CB_BAF_L129A1_AFG","UK3CB_BAF_20Rnd"];
+_L129A1GRIP = ["UK3CB_BAF_L129A1_Grippod","UK3CB_BAF_20Rnd"];
+_L22 = ["UK3CB_BAF_L22","UK3CB_BAF_30Rnd"];
+_L22A2 = ["UK3CB_BAF_L22A2","UK3CB_BAF_30Rnd"];
+_L7A2 = ["UK3CB_BAF_L7A2","UK3CB_BAF_75Rnd"];
+_L82A1 = ["UK3CB_BAF_L82A1","UK3CB_BAF_10Rnd_127x99mm"];
+_L85A2 = ["UK3CB_BAF_L85A2","UK3CB_BAF_30Rnd"];
+_L85A2AFG = ["UK3CB_BAF_L85A2_RIS_AFG","UK3CB_BAF_30Rnd"];
+_L85A2EMAG = ["UK3CB_BAF_L85A2_EMAG","UK3CB_BAF_30Rnd"];
+_L85A2RIS = ["UK3CB_BAF_L85A2_RIS","UK3CB_BAF_30Rnd"];
+_L85A2GL = ["UK3CB_BAF_L85A2_UGL","UK3CB_BAF_30Rnd",_40mm];
+_L86A2 = ["UK3CB_BAF_L86A2","UK3CB_BAF_30Rnd"];
+_L86A3 = ["UK3CB_BAF_L86A3","UK3CB_BAF_30Rnd"];
+_L91A1 = ["UK3CB_BAF_L91A1","UK3CB_BAF_30Rnd_9mm"];
+_L92A1 = ["UK3CB_BAF_L92A1","UK3CB_BAF_30Rnd_9mm"];
+
+_L131A1 = ["UK3CB_BAF_L131A1","UK3CB_BAF_17Rnd_9mm"];
+
+_NLAW_3CB = ["UK3CB_BAF_NLAW_Launcher"];
+
+// =============================================================================
+// =============================================================================
 //                               RHS AT
 
 _STINGER = ["rhs_weap_fim92",_FIM92];

@@ -51,6 +51,9 @@ The framework is as context agnostic as possible, meaning you can just change on
 	- [X] Molatian Rebels (African Militia)
 	- [X] UN Troops
 	- [X] Takistani Army (Middle East 90s Army)
+	- [X] CDF (Eastern NSWP Army)
+	- [X] Russian Armed Forces
+	- [X] British Armed Forces
 
 ### What then?
 

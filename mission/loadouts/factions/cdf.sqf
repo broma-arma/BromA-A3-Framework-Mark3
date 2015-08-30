@@ -109,14 +109,14 @@ switch (true) do {
 
 _headsLIST = [
     "LOP_H_6B27M_ess_CDF",
-    "TRYK_B_Alicepack"
+    "LOP_H_6B27M_CDF"
 ];
 
 _randomHEAD = _headsLIST call BIS_fnc_selectRandom;
 
 _commonHEAD = _randomHEAD;
 _leaderHEAD = _randomHEAD;
-_officerHEAD = "rhs_fieldcap";
+_officerHEAD = _randomHEAD;
 _medicHEAD = _commonHEAD;
 _crewmanHEAD = "rhs_tsh4_ess";
 _pilotHEAD = "rhs_zsh7a";
@@ -124,7 +124,7 @@ _helicrewHEAD = "rhs_zsh7a_mike";
 _helipilotHEAD = "rhs_zsh7a_mike";
 _sniperHEAD = _commonHEAD;
 _demoHEAD = _commonHEAD;
-_reconHEAD = "rhs_beanie_green";
+_reconHEAD = "H_Booniehat_khk";
 
 _commonUNIFORM = "LOP_U_CDF_Fatigue_01";
 _officerUNIFORM = _commonUNIFORM;
@@ -143,15 +143,15 @@ _commonVEST = "LOP_V_6B23_6Sh92_CDF";
 _officerVEST = "LOP_V_6B23_CrewOfficer_CDF";
 _ftlVEST = _commonVEST;
 _slVEST = "LOP_V_6B23_CrewOfficer_CDF";
-_mgVEST = "rhs_6b23_rifleman";
-_grenadierVEST = "rhs_6b23_6sh92_vog";
+_mgVEST = _commonVEST;
+_grenadierVEST = _commonVEST;
 _medicVEST = "LOP_V_6B23_Medic_CDF";
 _demoVEST = _commonVEST;
 _marksmanVEST = _commonVEST;
 _reconVEST = _commonVEST;
 
 _commonBACKPACK = "rhs_sidor";
-_bigBACKPACK = "rhs_assault_umbts";
+_bigBACKPACK = "TRYK_B_Alicepack";
 
 _HMG = "RHS_NSV_Gun_Bag";
 _tripod = "RHS_NSV_Tripod_Bag";

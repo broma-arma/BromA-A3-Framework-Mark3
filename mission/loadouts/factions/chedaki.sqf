@@ -106,6 +106,9 @@ switch (true) do {
 // UNIFORMS ====================================================================
 
 _headsLIST = [
+    "H_Booniehat_oli",
+	"H_Bandanna_khk",
+	"rhs_beanie_green",
     "empty"
 ];
 
@@ -115,8 +118,9 @@ _uniformsLIST = [
 ];
 
 _vestsLIST = [
-    "TRYK_V_ChestRig",
-    "TRYK_V_ChestRig_L"
+    "LOP_U_ChDKZ_Fatigue_04",
+	"LOP_U_ChDKZ_Fatigue_02",
+    "LOP_U_ChDKZ_Fatigue_01"
 ];
 
 _goggleLIST = [

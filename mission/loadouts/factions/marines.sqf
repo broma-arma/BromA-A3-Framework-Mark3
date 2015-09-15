@@ -143,16 +143,16 @@ _medicUNIFORM = _commonUNIFORM;
 _demoUNIFORM = _commonUNIFORM;
 _reconUNIFORM = _commonUNIFORM;
 
-_commonVEST = "rhsusf_spc";
-_officerVEST = _commonVEST;
-_ftlVEST = _commonVEST;
-_slVEST = _commonVEST;
-_mgVEST = _commonVEST;
+_commonVEST = "rhsusf_spc_rifleman";
+_officerVEST = "rhsusf_spc";
+_ftlVEST = "rhsusf_spc_teamleader"	;
+_slVEST = "rhsusf_spc_squadleader";
+_mgVEST = "rhsusf_spc_mg";
 _grenadierVEST = _commonVEST;
-_medicVEST = _commonVEST;
+_medicVEST = "rhsusf_spc_corpsman";
 _demoVEST = _commonVEST;
-_marksmanVEST = _commonVEST;
-_reconVEST = _commonVEST;
+_marksmanVEST = "rhsusf_spc_marksman";
+_reconVEST = "rhsusf_spc_light";
 
 _commonBACKPACK = "rhsusf_assault_eagleaiii_coy";
 _bigBACKPACK = "rhsusf_assault_eagleaiii_coy";

@@ -56,3 +56,5 @@ _unit setVariable ["ACE_medical_hasLostBlood", 0, true];
 _unit setVariable ["ACE_medical_isBleeding", false, true];
 _unit setVariable ["ACE_medical_hasPain", false, true];
 _unit setVariable ["ACE_medical_painSuppress", 0, true];
+_parts = ["hitHead","hitBody","hitHands","hitLegs"];
+{_unit setHitPointDamage [_x, 0]}count _parts;

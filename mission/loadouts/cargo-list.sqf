@@ -15,7 +15,7 @@ switch(_x) do
             [_morphine, _countMorphineCARGO],
             [_epi, _countEpiCARGO],
             [_bloodbag, _countBloodbagCARGO]
-        ]] spawn _addtoCargo;                
+        ]] spawn _addtoCargo;
     };
     case "medical_adv":
     {
@@ -37,7 +37,7 @@ switch(_x) do
                 [_bodyBag, _countBloodbagCARGO]
             ]] spawn _addtoCargo;
         };
-    };    
+    };
     case "ammo":
     {
         [[_object,"magazine",
@@ -55,7 +55,7 @@ switch(_x) do
         ]] spawn _addtoCargo;
         [[_object,"item",
             ["AGM_EarBuds",25]
-        ]] spawn _addtoCargo;                
+        ]] spawn _addtoCargo;
     };
 
     case "ammo_big":
@@ -76,24 +76,24 @@ switch(_x) do
     };
 
     case "at":
-    {				
+    {
         [[_object,"magazine",
             [_specAT select 1,_countATCARGO]
         ]] spawn _addtoCargo;
         [[_object,"weapon",
             [_specAT select 0, 3]
-        ]] spawn _addtoCargo;                    
+        ]] spawn _addtoCargo;
     };
-    
+
     case "radio": {
         [_object, "SR", _factionSide, 50] spawn _addRadioToCargo;
         [_object, "LR", _factionSide, 20] spawn _addRadioToCargo;
         [_object, "BP", _factionSide, 5] spawn _addRadioToCargo;
     };
-    
+
     case "parachutes": {
         [[_object,"backpack",
             [_parachute , 15]
-        ]] spawn _addtoCargo;    
+        ]] spawn _addtoCargo;
     };
 };

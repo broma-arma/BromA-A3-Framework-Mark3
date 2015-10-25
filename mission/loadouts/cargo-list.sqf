@@ -47,15 +47,20 @@ switch(_x) do
             [_commonSNIPER select 1,_countSNIPERCARGO],
             [_commonSMG select 1,_countRifleCARGO],
             [_specAT select 1, _countATCARGO],
-            [_40mm, _count40mmCARGO],
+            [_commonRIFLEGL select 2, _count40mmCARGO],
             [_grenade, _countGRENADESCARGO],
             [_wsmoke,25],
             [_rsmoke,25],
             [_gsmoke,25]
         ]] spawn _addtoCargo;
         [[_object,"item",
+<<<<<<< HEAD
             ["AGM_EarBuds",25]
         ]] spawn _addtoCargo;
+=======
+            ["ACE_EarPlugs",25]
+        ]] spawn _addtoCargo;                
+>>>>>>> origin/master
     };
 
     case "ammo_big":
@@ -67,7 +72,7 @@ switch(_x) do
             [_commonSNIPER select 1,_countSNIPERCARGO * 3],
             [_commonSMG select 1,_countRifleCARGO * 3],
             [_specAT select 1, _countATCARGO * 3],
-            [_40mm, _count40mmCARGO * 3],
+            [_commonRIFLEGL select 2, _count40mmCARGO * 3],
             [_grenade, _countGRENADESCARGO * 3],
             [_wsmoke,25 * 3],
             [_rsmoke,25 * 3],

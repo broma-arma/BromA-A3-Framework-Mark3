@@ -3,7 +3,7 @@
 
 NAME:
     BRM_fnc_initAI
-    
+
 AUTHOR(s):
     Nife
 
@@ -13,11 +13,11 @@ DESCRIPTION:
 PARAMETERS:
     0 - Target unit. (OBJECT)
     1 - Faction the unit belongs to. (STRING)
-    
+
 USAGE:
     [aiUnit, "SLA"] call BRM_fnc_initAI;
     [this, "RACS"] call BRM_fnc_initAI;
-    
+
 RETURNS:
     Nothing.
 
@@ -34,8 +34,7 @@ if !(_unit isKindOf "CAManBase") exitWith {};
 _initialized = _unit getVariable ["unit_initialized", false];
 
 if (!_initialized) then {
-    
-        
+
     // Determines the unit's faction. ==========================================
 
     _unit setVariable ["unit_side", (side _unit), true];
@@ -49,9 +48,9 @@ if (!_initialized) then {
     if (toUpper(_faction) == "AUTO") then {
         _faction = [(side _unit), "FACTION"] call BRM_fnc_getSideInfo;
     };
-    
+
     if (typeName _faction != "STRING") then { _faction = str _faction };
-    
+
     // Assigns the Unit's loadout depending on mission settings. ===============
 
     if (!(_faction == "VANILLA") && !units_AI_useVanillaGear) then {
@@ -59,10 +58,10 @@ if (!_initialized) then {
     };
 
     // Adds the relevant Event Handlers. =======================================
-    
+
     _unit addEventHandler ["Hit", BRM_fnc_setHitFace];
     _unit addEventHandler ["Killed", BRM_fnc_onAIKilled];
-    
+
     // Adds the Civilian Casualty Cap EHs. =====================================
 
     if (("civilian_casualty_cap" in usedPlugins)) then {
@@ -73,8 +72,8 @@ if (!_initialized) then {
           _unit addMPEventHandler ["mpkilled", fnc_countCivDeaths];
         };
     };
-    
+
     // Finishes loading. =======================================================
-    
+
     _unit setVariable ["unit_initialized", true, true];
 };

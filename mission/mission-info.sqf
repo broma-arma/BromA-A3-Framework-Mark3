@@ -6,7 +6,7 @@
 // ============================================================================
 
 class Header {
-   
+
 // Mission type. ===============================================================
 
 // https://community.bistudio.com/wiki/Multiplayer_Game_Types
@@ -20,7 +20,7 @@ maxPlayers = 50;
 
 onLoadName = "MISSION NAME";
 author = "MISSION MAKER";
-onLoadMission = "Powered by BromA Mark3 Framework for A3";
+onLoadMission = "Powered by BromA Framework Mark 3 for ArmA 3";
 loadScreen = "mission\images\loading-screen.jpg";
 
 // Disables certain radio channels in the mission. =============================
@@ -34,7 +34,7 @@ disableChannels[]={0,1,2};
    4 = Vehicle
    5 = Direct
    6 = System */
-   
+
 // I don't recommend messing with these. =======================================
 
 respawn = "BASE";

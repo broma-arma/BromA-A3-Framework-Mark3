@@ -54,13 +54,8 @@ switch(_x) do
             [_gsmoke,25]
         ]] spawn _addtoCargo;
         [[_object,"item",
-<<<<<<< HEAD
-            ["AGM_EarBuds",25]
+            [_earBuds, 25]
         ]] spawn _addtoCargo;
-=======
-            ["ACE_EarPlugs",25]
-        ]] spawn _addtoCargo;                
->>>>>>> origin/master
     };
 
     case "ammo_big":

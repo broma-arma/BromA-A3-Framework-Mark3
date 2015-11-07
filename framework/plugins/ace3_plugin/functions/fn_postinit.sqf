@@ -75,6 +75,6 @@ if (hasInterface) then {
 	if (mission_ace3_everyone_medic) then {
 	player setvariable ["ACE_medical_medicClass", 1, true];};
 	if (mission_ace3_legs) then {
-	fix_legs = ["leg_fix","<t color='#ff0000'>Apply splint to broken leg</t>","",{[10, [], {player setHitPointDamage ["HitLegs", 0];}, {}, "Fixing Legs"] call ace_common_fnc_progressBar;},{(player getHitPointDamage "HitLegs") > 0}] call ace_interact_menu_fnc_createAction;
+	fix_legs = ["leg_fix","<t color='#ff0000'>Apply splint to broken leg</t>","",{[10, [], {player setHitPointDamage ["HitLegs", 0];}, {}, "Fixing Legs"] call ace_common_fnc_progressBar;},{(player getHitPointDamage "HitLegs") >= 0.5}] call ace_interact_menu_fnc_createAction;
 	[typeOf player, 1, ["ACE_SelfActions"], fix_legs] call ace_interact_menu_fnc_addActionToClass;;};
 };

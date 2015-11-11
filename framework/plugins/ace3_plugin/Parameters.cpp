@@ -3,7 +3,7 @@ class p_ace3_medical_level
 	title = "(ACE3) Medical Simulation Level";
 	values[] = {0,1};
 	texts[] = {"Basic", "Advanced"};
-	default = 0;
+	default = 1;
 	code = "param_ace3_medical_level = %1";
 };
 

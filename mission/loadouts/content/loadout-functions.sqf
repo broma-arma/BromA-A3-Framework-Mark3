@@ -4,14 +4,14 @@ Modular Gear Script made by Nife and Royal for BromA
 
 */
 
-private 
+private
 ["_isLeader","_bandage","_morphine","_epi","_bloodbag","_radio","_medkit","_wsmoke","_gsmoke","_rsmoke",
 "_backpack","_addBinocs","_addRadio","_addAmmo","_addWeapon","_wep","_ammoamount","_isMan",
 "_fieldDressing", "_packingBandage", "_elasticBandage","_quickClot", "_personalAidKit",
-"_tourniquet", "_atrophine", "_saline1000", "_saline500", "_saline250","_blood1000", 
+"_tourniquet", "_atrophine", "_saline1000", "_saline500", "_saline250","_blood1000",
 "_blood500", "_blood250", "_plasma1000", "_plasma500", "_plasma250", "_surgKit", "_bodyBag",
 "_wFLARE", "_rFLARE", "_gFLARE", "_yFLARE", "_cableTie", "_uavBattery", "_mapTools",
-"_spareBarrel", "_kestrel", "_IRStrobe", "_clacker", "_M26clacker", "_defusalKit", 
+"_spareBarrel", "_kestrel", "_IRStrobe", "_clacker", "_M26clacker", "_defusalKit","_defib",
 "_deadManSwitch", "_earBuds", "_cellphone", "_microDAGR", "_NVGEN1", "_NVGEN2",
 "_NVGEN4", "_NVWIDE", "_suppliesMEDIC", "_suppliesNORMAL", "_countBANDAGE",
 "_countMORPHINE", "_countEPI", "_countBLOODBAG", "_countBandageCARGO",
@@ -65,7 +65,7 @@ _attachToWeapon = {
 
 _addRadio = {
     _kind = _this select 0;
-    
+
     switch (true) do {
         case (mission_TFAR_enabled): {
             _side = side _unit;
@@ -83,17 +83,17 @@ _addRadio = {
                         case "LR": { _unit addItem "tf_fadak" };
                         case "BP": { removeBackpack _unit; _unit addBackPack "tf_mr3000" };
                     };
-                };     
+                };
                 case RESISTANCE: {
                     switch(_kind) do {
                         case "SR": { _unit linkItem "tf_anprc154" };
                         case "LR": { _unit addItem "tf_anprc148jem" };
                         case "BP": { removeBackpack _unit; _unit addBackPack "tf_anprc155" };
                     };
-                };            
-            };        
+                };
+            };
         };
-        
+
         case (mission_ACRE2_enabled): {
             switch(_kind) do {
                 case "SR": { _unit addItem "ACRE_PRC343" };
@@ -112,7 +112,7 @@ _stripUnit = {
     removeUniform (_this select 0);
 };
 
-_addEmptyBackpack = {    
+_addEmptyBackpack = {
     _unit addBackpack (_this select 0);
     clearAllItemsFromBackpack _unit;
 };
@@ -122,7 +122,7 @@ _useUniform = {
     _uniform = (_this select 1);
     _vest = (_this select 2);
     _backpack = (_this select 3);
-    
+
     switch(_headgear) do {
         case ("keep"): {};
         case ("empty"): { removeHeadgear _unit };
@@ -132,7 +132,7 @@ _useUniform = {
         case ("keep"): {};
         case ("empty"): { removeUniform _unit };
         default { removeUniform _unit; [[{}, _unit forceaddUniform _uniform], "BIS_fnc_spawn", true] call BIS_fnc_MP }
-    };    
+    };
     switch(_vest) do {
         case ("keep"): {};
         case ("empty"): { removeVest _unit };
@@ -142,8 +142,8 @@ _useUniform = {
         case ("keep"): {};
         case ("empty"): { removeBackpack _unit };
         default { removeBackpack _unit; [_backpack] call _addEmptyBackpack };
-    };    
-    
+    };
+
 };
 
 _addAmmo = {
@@ -151,20 +151,20 @@ _addAmmo = {
     _amount = _this select 1;
     if _isMan then {
         if (typeName _kind == "ARRAY") then {
-            for "_i" from 1 to _amount do { 
+            for "_i" from 1 to _amount do {
                 if ((vest _unit) == "") then {
                     _unit addMagazine (_kind select 1);
-                } else { 
+                } else {
                     if (_unit canAddItemToVest (_kind select 1)) exitWith { _unit addItemToVest (_kind select 1) };
                     if (_unit canAddItemToBackpack (_kind select 1)) exitWith { _unit addItemToBackpack (_kind select 1) };
                     if (_unit canAddItemToUniform (_kind select 1)) exitWith { _unit addItemToUniform (_kind select 1) };
                 };
             };
-        } else { 
+        } else {
             for "_i" from 1 to _amount do {
-                if ((vest _unit) == "") then { 
+                if ((vest _unit) == "") then {
                     _unit addMagazine _kind;
-                } else { 
+                } else {
                     if (_unit canAddItemToVest (_kind)) exitWith { _unit addItemToVest (_kind) };
                     if (_unit canAddItemToBackpack (_kind)) exitWith { _unit addItemToBackpack (_kind) };
                     if (_unit canAddItemToUniform (_kind)) exitWith { _unit addItemToUniform (_kind) };
@@ -195,12 +195,12 @@ _linkItem = {
 
 _addWeapon = {
     _kind = _this select 0;
-    if _isMan then {    
-        if (typeName _kind == "ARRAY") then { _unit addWeapon (_kind select 0); } 
+    if _isMan then {
+        if (typeName _kind == "ARRAY") then { _unit addWeapon (_kind select 0); }
         else { _unit addWeapon _kind; };
     } else {
         _amount = _this select 1;
-        if (typeName _kind == "ARRAY") then { _unit addWeaponCargoGlobal [_kind select 0,_amount]; } 
+        if (typeName _kind == "ARRAY") then { _unit addWeaponCargoGlobal [_kind select 0,_amount]; }
         else { _unit addWeaponCargoGlobal [_kind,_amount] };
     };
 };
@@ -208,33 +208,33 @@ _addWeapon = {
 _addtoUniform = {
     _array = _this select 0;
     _unit = _array select 0;
-    
+
     for "_i" from 1 to (count _array) do {
         for "_j" from 1 to ((_array select _i)select 1) do {
             _unit addItemToUniform ((_array select _i)select 0);
-        };        
+        };
     };
 };
 
-_addtoVest = {  
+_addtoVest = {
     _array = _this select 0;
     _unit = _array select 0;
-    
+
     for "_i" from 1 to (count _array) do {
         for "_j" from 1 to ((_array select _i)select 1) do {
             _unit addItemToVest ((_array select _i)select 0);
-        };        
+        };
     };
 };
 
 _addtoBackpack = {
     _array = _this select 0;
     _unit = _array select 0;
-    
+
     for "_i" from 1 to (count _array) do {
         for "_j" from 1 to ((_array select _i)select 1) do {
             _unit addItemToBackpack ((_array select _i)select 0);
-        };        
+        };
     };
 };
 
@@ -252,7 +252,7 @@ _addtoCargo = {
     _array = _this select 0;
     _unit = _array select 0;
     _type = _array select 1;
-    
+
     for "_i" from 2 to (count _array) do {
         switch(_type) do {
             case("weapon"): { _unit addWeaponCargoGlobal [((_array select _i)select 0),((_array select _i)select 1)]};
@@ -268,11 +268,11 @@ _addRadioToCargo = {
     _kind = _this select 1;
     _side = _this select 2;
     _amount = _this select 3;
-    
+
     _isBP = false;
-    
+
     private ["_radio"];
-    
+
     switch (true) do {
         case (mission_TFAR_enabled): {
             switch(_side) do {
@@ -289,7 +289,7 @@ _addRadioToCargo = {
                         case "LR": { _radio = "tf_fadak" };
                         case "BP": { _radio = "tf_mr3000"; _isBP = true };
                     };
-                };     
+                };
                 case RESISTANCE: {
                     switch(_kind) do {
                         case "SR": { _radio = "tf_anprc154" };
@@ -299,7 +299,7 @@ _addRadioToCargo = {
                 };
             };
         };
-        
+
         case (mission_ACRE2_enabled): {
             switch(_kind) do {
                 case "SR": { _radio = "ACRE_PRC343" };
@@ -308,7 +308,7 @@ _addRadioToCargo = {
             };
         };
     };
-    
+
     if (_isBP) then { _unit addBackpackCargoGlobal [_radio, _amount];
     } else { _unit addItemCargoGlobal [_radio, _amount] };
 };

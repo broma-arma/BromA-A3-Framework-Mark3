@@ -10,41 +10,43 @@ switch (true) do {
         _bandage = "AGM_Bandage";
         _morphine = "AGM_Morphine";
         _epi = "AGM_Epipen";
-        _bloodbag = "AGM_Bloodbag";         
+        _bloodbag = "AGM_Bloodbag";
     };
     case (mission_ACE3_enabled): {
         _fieldDressing = "ACE_fieldDressing";
         _bandage = _fieldDressing;
         _packingBandage = "ACE_packingBandage";
         _elasticBandage = "ACE_elasticBandage";
-        
+
         _quickClot = "ACE_quikclot";
         _personalAidKit = "ACE_personalAidKit";
-        
+
         _tourniquet = "ACE_tourniquet";
-        
+
         _morphine = "ACE_morphine";
         _atrophine = "ACE_atropine";
         _epi = "ACE_epinephrine";
-        
+
         _saline1000 = "ACE_salineIV";
         _saline500 = "ACE_salineIV_500";
         _saline250 = "ACE_salineIV_250";
-        
+
         _blood1000 = "ACE_bloodIV";
         _blood500 = "ACE_bloodIV_500";
         _blood250 = "ACE_bloodIV_250";
-        
+
         _plasma1000 = "ACE_plasmaIV";
         _plasma500 = "ACE_plasmaIV_500";
         _plasma250 = "ACE_plasmaIV_250";
-        
+
         _bloodbag = _blood1000;
-        
+
         _surgKit = "ACE_surgicalKit";
-        
+
         _bodyBag = "ACE_bodyBag";
-    };    
+
+        _defib = "ACE_Defibillator";
+    };
 };
 
 // GRENADES ====================================================================
@@ -90,14 +92,14 @@ switch (true) do {
         _wFLARE = "AGM_HandFlare_White";
         _rFLARE = "AGM_HandFlare_Red";
         _gFLARE = "AGM_HandFlare_Green";
-        _yFLARE = "AGM_HandFlare_Yellow";        
+        _yFLARE = "AGM_HandFlare_Yellow";
     };
     case (mission_ACE3_enabled): {
         _wFLARE = "ACE_HandFlare_White";
         _rFLARE = "ACE_HandFlare_Red";
         _gFLARE = "ACE_HandFlare_Green";
         _yFLARE = "ACE_HandFlare_Yellow";
-    };   
+    };
     default {
         _wFLARE = "";
         _rFLARE = "";
@@ -124,17 +126,17 @@ _atMINEblufor = "rhs_mine_M19_mag";
 // AP Mines
 
 _apMINE = "APERSMine_Range_Mag";
-_apBoundingMINE = "APERSBoundingMine_Range_Mag"; 
+_apBoundingMINE = "APERSBoundingMine_Range_Mag";
 _apTRIPWIRE = "APERSTripMine_Wire_Mag";
 _claymore = "ClaymoreDirectionalMine_Remote_Mag";
 _apMINEopfor = "rhs_mine_pmn2_mag";
 
 // Explosives
 
-_SLAM = "SLAMDirectionalMine_Wire_Mag"; 
+_SLAM = "SLAMDirectionalMine_Wire_Mag";
 _C4 = "DemoCharge_Remote_Mag";
 _satchelCharge = "SatchelCharge_Remote_Mag";
- 
+
 // UTILITY =====================================================================
 
 _mineDetector = "MineDetector";
@@ -152,7 +154,7 @@ switch (true) do {
         _M26clacker = "AGM_M26_Clacker";
         _defusalKit = "AGM_DefusalKit";
         _deadManSwitch = "AGM_DeadManSwitch";
-        _earBuds = "AGM_EarBuds";      
+        _earBuds = "AGM_EarBuds";
     };
     case (mission_ACE3_enabled): {
         _spareBarrel = "ACE_SpareBarrel";
@@ -168,7 +170,7 @@ switch (true) do {
         _mapTools = "ACE_MapTools";
         _uavBattery = "ACE_UAVBattery";
         _kestrel = "ACE_Kestrel";
-    }; 
+    };
     default {
         _spareBarrel = "";
         _IRStrobe = "";
@@ -182,7 +184,7 @@ switch (true) do {
         _microDAGR = "";
         _mapTools = "";
         _uavBattery = "";
-        _kestrel = "";    
+        _kestrel = "";
     };
 };
 

@@ -91,7 +91,7 @@ switch (true) do {
                 _suppliesNORMAL = [[_unit,[_fieldDressing, 2], [_morphine,1],[_epi, 1]]];
             };
             case 1: { // ADVANCED
-                _suppliesMEDIC = [[_unit,[_packingBandage,_countBANDAGE], [_morphine,_countMORPHINE],[_epi,_countEPI],[_saline250,_countBLOODBAG],[_defib,1]]];
+                _suppliesMEDIC = [[_unit,[_packingBandage,_countBANDAGE], [_morphine,_countMORPHINE],[_epi,_countEPI],[_saline250,_countBLOODBAG],[_defib,1],[_surgKit,1]]];
                 _suppliesNORMAL = [[_unit,[_fieldDressing, 2],[_packingBandage, 1],[_tourniquet, 1],[_morphine,1],[_epi,1]]];
             };
         };
@@ -109,7 +109,7 @@ _headsLIST = [
     "rhs_6b26",
     "rhs_6b26_bala",
     "rhs_6b26_ess",
-	"rhs_6b26_ess_bala"
+    "rhs_6b26_ess_bala"
 ];
 
 _randomHEAD = _headsLIST call BIS_fnc_selectRandom;

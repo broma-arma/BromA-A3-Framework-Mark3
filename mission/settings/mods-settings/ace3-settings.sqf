@@ -19,7 +19,7 @@ ACE_medicalTreatment_allowLitter = true;
 
 // Delay for removing litter objects in seconds.
 // number (seconds) -1 is forever
-ACE_medicalTreatment_litterRemove = 3000;
+ACE_medicalTreatment_litterRemove = 1000;
 
 // Enable screams of pain.
 // true/false

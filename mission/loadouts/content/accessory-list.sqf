@@ -14,6 +14,8 @@ _sup45 = "muzzle_snds_acp";
 _sup556 = "muzzle_snds_M";
 _sup762 = "muzzle_snds_B";
 _supLMG = "muzzle_snds_H_MG";
+_sup93 = "muzzle_snds_93mmg_tan";
+_sup338 = "muzzle_snds_338_sand";
 
 // Scopes
 
@@ -32,6 +34,12 @@ _TWSmg = "optic_tws_mg";
 
 _flashlight = "acc_flashlight";
 _laser = "acc_pointer_IR";
+
+// Bipods
+
+_bipodBLU = "bipod_01_F_snd";
+_bipodOP = "bipod_02_F_hex";
+_bipodIND = "bipod_03_F_oli";
 
 // =============================================================================
 

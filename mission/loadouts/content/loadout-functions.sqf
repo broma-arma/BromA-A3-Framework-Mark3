@@ -10,7 +10,7 @@ private
 "_fieldDressing", "_packingBandage", "_elasticBandage","_quickClot", "_personalAidKit",
 "_tourniquet", "_atrophine", "_saline1000", "_saline500", "_saline250","_blood1000",
 "_blood500", "_blood250", "_plasma1000", "_plasma500", "_plasma250", "_surgKit", "_bodyBag",
-"_wFLARE", "_rFLARE", "_gFLARE", "_yFLARE", "_cableTie", "_uavBattery", "_mapTools",
+"_wFLARE", "_rFLARE", "_gFLARE", "_yFLARE", "_cableTie", "_uavBattery", "_mapTools", "_flashlight",
 "_spareBarrel", "_kestrel", "_IRStrobe", "_clacker", "_M26clacker", "_defusalKit","_defib",
 "_deadManSwitch", "_earBuds", "_cellphone", "_microDAGR", "_NVGEN1", "_NVGEN2",
 "_NVGEN4", "_NVWIDE", "_suppliesMEDIC", "_suppliesNORMAL", "_countBANDAGE",

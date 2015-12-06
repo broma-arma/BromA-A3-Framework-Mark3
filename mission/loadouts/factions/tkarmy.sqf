@@ -16,18 +16,18 @@ _defaultInsignia = "USP_PATCH_IRN_ARMY_13REVGRD";
 
 // WEAPONS =====================================================================
 
-_commonRIFLE = _FNFAL;
+_commonRIFLE = _FNFALRAIL;
 _commonRIFLEGL = _M16A2GL;
 _commonPISTOL = _Makarov;
 _commonMG = _PKM;
 _commonMARKSMAN = _SVDS;
-_commonSNIPER = _Hecate;
-_commonAT = _RPG7PGO;
+_commonSNIPER = _SVDS;
+_commonAT = _RPG26;
 _specAT = _RPG7PGO;
 _commonSMG = _AKS74U;
-_commonRCO = "hlc_optic_suit";
-_commonCCO = "hlc_optic_suit";
-_commonMAGNIFIED = "R3F_NF42";
+_commonRCO = "optic_MRCO";
+_commonCCO = "RH_reflex";
+_commonMAGNIFIED = "rhs_acc_pso1m2";
 _commonSUPPRESSOR = "muzzle_snds_M";
 _commonPISTOLSUPPRESSOR = "rhs_acc_1pn93_1";
 _NVG = _NVGEN2;
@@ -91,7 +91,7 @@ switch (true) do {
                 _suppliesNORMAL = [[_unit,[_fieldDressing, 2], [_morphine,1],[_epi, 1]]];
             };
             case 1: { // ADVANCED
-                _suppliesMEDIC = [[_unit,[_packingBandage,_countBANDAGE], [_morphine,_countMORPHINE],[_epi,_countEPI],[_saline250,_countBLOODBAG],[_defib,1]]];
+                _suppliesMEDIC = [[_unit,[_packingBandage,_countBANDAGE], [_morphine,_countMORPHINE],[_epi,_countEPI],[_saline250,_countBLOODBAG],[_defib,1],[_surgKit,1]]];
                 _suppliesNORMAL = [[_unit,[_fieldDressing, 2],[_packingBandage, 1],[_tourniquet, 1],[_morphine,1],[_epi,1]]];
             };
         };

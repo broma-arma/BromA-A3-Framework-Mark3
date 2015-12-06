@@ -23,12 +23,12 @@ _commonRIFLEGL = _rg;
 _commonPISTOL = _P07;
 _commonMG = _rm;
 _commonMARKSMAN = _rk;
-_commonSNIPER = _GM6;
+_commonSNIPER = _M200;
 _commonAT = _PCML;
 _specAT = _PCML;
 _commonSMG = _rc;
 _commonRCO = _RCO;
-_commonCCO = "optic_ACO_grn";
+_commonCCO = _ACOred;
 _commonMAGNIFIED = _SOS;
 _commonSUPPRESSOR = "muzzle_snds_H";
 _commonPISTOLSUPPRESSOR = "muzzle_snds_L";
@@ -93,7 +93,7 @@ switch (true) do {
                 _suppliesNORMAL = [[_unit,[_fieldDressing, 2], [_morphine,1],[_epi, 1]]];
             };
             case 1: { // ADVANCED
-                _suppliesMEDIC = [[_unit,[_packingBandage,_countBANDAGE], [_morphine,_countMORPHINE],[_epi,_countEPI],[_saline250,_countBLOODBAG],[_defib,1]]];
+                _suppliesMEDIC = [[_unit,[_packingBandage,_countBANDAGE], [_morphine,_countMORPHINE],[_epi,_countEPI],[_saline250,_countBLOODBAG],[_defib,1],[_surgKit,1]]];
                 _suppliesNORMAL = [[_unit,[_fieldDressing, 2],[_packingBandage, 1],[_tourniquet, 1],[_morphine,1],[_epi,1]]];
             };
         };

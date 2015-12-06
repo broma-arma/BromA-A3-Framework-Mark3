@@ -150,6 +150,7 @@ switch (true) do {
         _spareBarrel = "AGM_SpareBarrel";
         _kestrel = "AGM_ItemKestrel";
         _IRStrobe = "AGM_IR_Strobe_Item";
+        _flashlight = "";
         _clacker = "AGM_Clacker";
         _M26clacker = "AGM_M26_Clacker";
         _defusalKit = "AGM_DefusalKit";
@@ -160,6 +161,7 @@ switch (true) do {
         _spareBarrel = "ACE_SpareBarrel";
         _IRStrobe = "ACE_IR_Strobe_Item";
         _cableTie = "ACE_CableTie";
+        _flashlight = "ACE_Flashlight_XL50";
         _clacker = "ACE_Clacker";
         _M26clacker = "ACE_M26_Clacker";
         _defusalKit = "ACE_DefusalKit";
@@ -178,6 +180,7 @@ switch (true) do {
         _clacker = "";
         _M26clacker = "";
         _defusalKit = "";
+        _flashlight = "";
         _deadManSwitch = "";
         _cellphone = "";
         _earBuds = "";

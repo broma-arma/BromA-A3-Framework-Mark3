@@ -18,18 +18,18 @@ _defaultInsignia = "USP_PATCH_UN_BELIEVE";
 
 // WEAPONS =====================================================================
 
-_commonRIFLE = _FNLAR;
-_commonRIFLEGL = _AKMGL;
+_commonRIFLE = _FNFALRAIL;
+_commonRIFLEGL = _M16A2GL;
 _commonPISTOL = _Makarov;
 _commonMG = _PKM;
 _commonMARKSMAN = _SVDS;
-_commonSNIPER = _Hecate;
+_commonSNIPER = _SVDS;
 _commonAT = _RPG26;
 _specAT = _RPG7PGO;
 _commonSMG = _AKS74U;
-_commonRCO = "hlc_optic_suit";
-_commonCCO = "hlc_optic_suit";
-_commonMAGNIFIED = "R3F_NF42";
+_commonRCO = "UK3CB_BAF_SUSAT";
+_commonCCO = "RH_cmore";
+_commonMAGNIFIED = "rhs_acc_pso1m2";
 _commonSUPPRESSOR = "muzzle_snds_M";
 _commonPISTOLSUPPRESSOR = "rhs_acc_1pn93_1";
 _NVG = _NVGEN2;
@@ -119,37 +119,35 @@ _sniperHEAD = _commonHEAD;
 _demoHEAD = _commonHEAD;
 _reconHEAD = _commonHEAD;
 
-_commonUNIFORM = "LOP_U_AFR_Fatigue_04_slv";
-_officerUNIFORM = "LOP_U_AFR_Fatigue_04";
+_commonUNIFORM = "LOP_U_US_Fatigue_02";
+_officerUNIFORM = _commonUNIFORM;
 _pilotUNIFORM = "TRYK_OVERALL_SAGE_BLKboots_nk";
 _sniperUNIFORM = "U_B_GhillieSuit";
 _marksmanUNIFORM = "TRYK_OVERALL_SAGE_BLKboots_nk";
 _helicrewUNIFORM = "TRYK_OVERALL_SAGE_BLKboots_nk";
 _crewUNIFORM = _commonUNIFORM;
 _mgUNIFORM = _commonUNIFORM;
-_medicUNIFORM = "LOP_U_AFR_Fatigue_04";
+_medicUNIFORM = _commonUNIFORM;
 _demoUNIFORM = _commonUNIFORM;
 _reconUNIFORM = _commonUNIFORM;
 
-_commonVEST = "TRYK_V_ChestRig_L";
-_officerVEST = "TRYK_V_ChestRig";
+_commonVEST = "LOP_V_6B23_6Sh92_UN";
+_officerVEST = "LOP_V_6B23_CrewOfficer_UN";
 _ftlVEST = _commonVEST;
-_slVEST = "TRYK_V_ChestRig";
+_slVEST = _commonVEST;
 _mgVEST = _commonVEST;
-_heliVEST = "V_TacVest_blk";
+_heliVEST = _commonVEST;
 _grenadierVEST = _commonVEST;
-_medicVEST = "TRYK_V_ChestRig";
+_medicVEST = _commonVEST;
 _demoVEST = _commonVEST;
-_marksmanVEST = "TRYK_V_ChestRig";
+_marksmanVEST = _commonVEST;
 _reconVEST = _commonVEST;
 
-_commonBACKPACK = "TRYK_B_Alicepack";
-_bigBACKPACK = "TRYK_B_Carryall_wood";
+_commonBACKPACK = "TRYK_B_BAF_BAG_mcamo";
+_bigBACKPACK = "B_Carryall_mcamo";
 
 _HMG = "RHS_M2_Gun_Bag";
 _tripod = "RHS_M2_Tripod_Bag";
-
-_unit addGoggles "TRYK_Spset_PHC2_Glasses";
 
 // =============================================================================
 if (!_isMan) exitWith {};

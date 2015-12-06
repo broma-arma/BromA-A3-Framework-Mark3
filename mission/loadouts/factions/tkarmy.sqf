@@ -16,17 +16,17 @@ _defaultInsignia = "USP_PATCH_IRN_ARMY_13REVGRD";
 
 // WEAPONS =====================================================================
 
-_commonRIFLE = _FNFAL;
+_commonRIFLE = _FNFALRAIL;
 _commonRIFLEGL = _M16A2GL;
 _commonPISTOL = _Makarov;
 _commonMG = _PKM;
 _commonMARKSMAN = _SVDS;
 _commonSNIPER = _SVDS;
-_commonAT = _RPG7PGO;
+_commonAT = _RPG26;
 _specAT = _RPG7PGO;
 _commonSMG = _AKS74U;
-_commonRCO = "rhs_acc_pso1m2";
-_commonCCO = "hlc_optic_suit";
+_commonRCO = "optic_MRCO";
+_commonCCO = "RH_reflex";
 _commonMAGNIFIED = "rhs_acc_pso1m2";
 _commonSUPPRESSOR = "muzzle_snds_M";
 _commonPISTOLSUPPRESSOR = "rhs_acc_1pn93_1";

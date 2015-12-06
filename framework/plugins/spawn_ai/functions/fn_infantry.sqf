@@ -4,13 +4,13 @@
 
 NAME:
     BRM_SpawnAI_fnc_infantry
-    
+
 AUTHOR(s):
     Nife
 
 DESCRIPTION:
     Spawns AI groups with specific parameters, with room for a LOT of variation.
-    
+
 PARAMETERS:
     0 - Side of the units. (SIDE)
     1 - Loadout. (STRING)
@@ -30,14 +30,14 @@ PARAMETERS:
 
 USAGE:
    [WEST, "USARMY", 0, 2, 1, 0.5, "AWARE", "YELLOW", "PARADROP", ["B_Heli_Light_01_F"], true, ["point_2_1"], ["point_2_LZ"], ["point_2_2"], [200,100,50]] spawn BRM_SpawnAI_fnc_infantry;
-   
+
    [EAST, "VDV", 0, 3, 2, 0.7, "COMBAT", "YELLOW", "ATTACK", ["RHS_Ural_MSV_01"], true, ["point_2_1"], [], ["point_2_2"], [200,100,50]] spawn BRM_SpawnAI_fnc_infantry;
-   
+
    [WEST, "CSAT", 2, 5, 1, 1, "COMBAT", "YELLOW", "PATROL", [], true, ["point_2_1","point_1_1","point_3_1"], [], ["point_2_2", "point_1_2"], [200,100,50]] spawn BRM_SpawnAI_fnc_infantry;
-    
+
 RETURNS:
     Nothing.
-    
+
 NOTES:
     It is recommended to use this script inside the mission_AI.sqf file for HC compatibility.
 
@@ -92,19 +92,19 @@ switch (_type) do {
 };
 
 for "_i" from 1 to _amount do {
-    
+
     private ["_leader"];
-    
+
     _group = createGroup _hq;
     _startPos = getMarkerPos (_starting call BIS_fnc_selectRandom);
     _endPos = getMarkerPos (_end call BIS_fnc_selectRandom);
-    
+
     _startPos = [_startPos, [-(_radius select 0), (_radius select 0)],[-(_radius select 0), (_radius select 0)]] call BRM_spawnAI_fnc_addDistance;
     _endPos = [_endPos, [-(_radius select 2), (_radius select 2)],[-(_radius select 2), (_radius select 2)]] call BRM_spawnAI_fnc_addDistance;
-            
+
     for "_j" from 0 to _size do {
         private ["_unitIndex"];
-        
+
         if (_j == 0) then {
             if (_type == 0) then {
             switch (_groupType) do {
@@ -117,27 +117,29 @@ for "_i" from 1 to _amount do {
         } else {
             _unitIndex = [3,(count _uUnits)-1] call BIS_fnc_randomInt;
         };
-        
+
         _unitName = format ["%1_%2_F", _uPrefix, _uUnits select _unitIndex];
-        
+
         _unit = [_group, _unitName, _startPos, _skill, _loadout, _color, _unitIndex] call BRM_SpawnAI_fnc_spawnUnit;
-        
+
         if (_j == 0) then { _leader = _unit };
-        
+
     };
-    
+
     _groupSize = count (units _group);
 
     if (count _transport > 0) then {
-        
+
         _finalLZ = _endPos;
         if (count _LZ > 0) then { _finalLZ = getMarkerPos (_LZ call BIS_fnc_selectRandom) };
-        
+
         _finalLZ = [_finalLZ, [-(_radius select 1), (_radius select 1)],[-(_radius select 1), (_radius select 1)]] call BRM_spawnAI_fnc_addDistance;
-        
+
+        _landingPad = "HeliHEmpty" createVehicle _finalLZ;
+
         _typeVehicle = _transport call BIS_fnc_selectRandom;
         _vehicle = _typeVehicle createVehicle _startPos;
-        
+
         _vehicle spawn {
             _count = 0;
 
@@ -152,14 +154,14 @@ for "_i" from 1 to _amount do {
             };
             sleep 60;
             { deleteVehicle _x } forEach (crew _this); deleteVehicle _this;
-        };        
-        
+        };
+
         _crewGroup = createGroup _hq;
-        
+
         _createdCrew = [];
-        
+
         private ["_crew"];
-        
+
         switch (true) do {
            case (_vehicle isKindOf "Truck"): { _crew = _unitsInfantry };
            case (_vehicle isKindOf "Car"): { _crew = _unitsInfantry };
@@ -168,17 +170,17 @@ for "_i" from 1 to _amount do {
            case (_vehicle isKindOf "Plane"): { _crew = _unitsJet };
            default { _crew = _unitsInfantry };
         };
-        
+
         _driver = [_crewGroup, format ["%1_%2_F", _uPrefix, _crew select 0], _startPos, _skill, _loadout, _color] call BRM_SpawnAI_fnc_spawnUnit;
-        
+
         _driver setVariable ["can_leave_LZ", true];
-        
+
         _driver moveInDriver _vehicle;
-        
+
         _createdCrew pushBack _driver;
-        
+
         _spawnCrew = true;
-        
+
         while {(_spawnCrew)} do {
             switch(true) do {
                 case (_vehicle emptyPositions "commander" > 0) : {
@@ -194,61 +196,61 @@ for "_i" from 1 to _amount do {
                 default { _spawnCrew = false };
             };
         };
-        
+
         _toMove = (units _group);
-        
+
         while {(count _toMove > 0)} do {
             _unit = _toMove select 0;
-            
+
             switch(true) do {
-                case (_vehicle emptyPositions "cargo" > 0) : { 
+                case (_vehicle emptyPositions "cargo" > 0) : {
                     _unit moveinCargo _vehicle;
                     if (vehicle _unit == _unit) then {
                         deleteVehicle _unit;
-                        ["LOCAL", "CHAT", format ["WARNING: %1 is out of spaces in %2", _unit, _vehicle]] call BRM_fnc_doLog;                    
+                        ["LOCAL", "CHAT", format ["WARNING: %1 is out of spaces in %2", _unit, _vehicle]] call BRM_fnc_doLog;
                     };
                 };
-                case (_vehicle emptyPositions "cargo" <= 0) : { 
+                case (_vehicle emptyPositions "cargo" <= 0) : {
                     deleteVehicle _unit;
                     ["LOCAL", "CHAT", format ["WARNING: %1 is out of spaces in %2", _unit, _vehicle]] call BRM_fnc_doLog;
                 };
             };
             _toMove = _toMove - [_unit];
         };
-        
+
         ["LOCAL", "CHAT", format["Group %1 with %2 units finished generating.", _group, count units _group]] call BRM_fnc_doLog;
-        
+
         _wp = _crewGroup addWaypoint [_finalLZ, 0];
         [_crewGroup, 0] setWaypointBehaviour _behavior;
         [_crewGroup, 0] setWaypointCombatMode _combat;
-        
+
         if (_task == "PARADROP") then {
             _driver setVariable ["drop_ready", false];
             _driver setVariable ["can_leave_LZ", false];
-            
+
             _wp setWaypointType "MOVE";
             [_crewGroup, 0] setWaypointSpeed "LIMITED";
             _wp setWaypointStatements ["true", "this setVariable ['drop_ready', true]; this setVariable ['can_leave_LZ', true];"];
-            
+
             _vehicle flyInHeight 100;
-            
+
             ["LOCAL", "CHAT", "Received order to paradrop."] call BRM_fnc_doLog;
-            
+
             [_group, _driver, _endPos] spawn {
                 _group = _this select 0;
                 _driver = _this select 1;
                 _endPos = _this select 2;
-                
+
                 ["LOCAL", "CHAT", "Waiting to approach LZ."] call BRM_fnc_doLog;
                 waitUntil {
                     sleep 1;
                     _driver getVariable ["drop_ready", false]
                 };
-                
+
                 ["LOCAL", "CHAT", "Everyone jump!"] call BRM_fnc_doLog;
-                
+
                 { removeBackpack _x; _x addBackpack "B_Parachute" } forEach (units _group);
-                
+
                 {
                     [_x] orderGetIn false;
                     moveOut _x;
@@ -258,9 +260,9 @@ for "_i" from 1 to _amount do {
                 } forEach (units _group);
             };
         } else {
-            _wp setWaypointType "TR UNLOAD";        
+            _wp setWaypointType "TR UNLOAD";
         };
-        
+
         if (_treturns) then {
             [_crewGroup, _startPos, _driver, _combat] spawn {
                 _crewGroup = _this select 0;
@@ -268,28 +270,28 @@ for "_i" from 1 to _amount do {
                 _driver = _this select 2;
                 _combat = _this select 3;
                 _vehicle = (vehicle _driver);
-                
+
                 waitUntil {(_driver getVariable ["can_leave_LZ", false])};
-                
+
                 sleep 3;
-                
+
                 ["LOCAL", "CHAT", "Transport now returning to base."] call BRM_fnc_doLog;
-                
+
                 _driver moveInDriver _vehicle;
                 _driver assignAsDriver _vehicle;
-                
+
                 _wp3 = _crewGroup addWaypoint [_startPos, 1];
                 [_crewGroup, 1] setWaypointCompletionRadius 50;
                 [_crewGroup, 1] setWaypointBehaviour "CARELESS";
-                [_crewGroup, 1] setWaypointCombatMode _combat; 
+                [_crewGroup, 1] setWaypointCombatMode _combat;
                 [_crewGroup, 1] setWaypointSpeed "FULL";
                 _wp3 setWaypointType "MOVE";
                 _wp3 setWaypointStatements ["true", "{ _veh = vehicle _x; deleteVehicle _x; deleteVehicle _veh } forEach thislist"];
             };
         };
-        
+
         [_task, _vehicle, _group, _groupSize, _endPos, _radius, _behavior, _combat] spawn {
-            
+
             _task = _this select 0;
             _vehicle = _this select 1;
             _group = _this select 2;
@@ -298,11 +300,11 @@ for "_i" from 1 to _amount do {
             _radius = _this select 5;
             _behavior = _this select 6;
             _combat = _this select 7;
-            
+
             if (_task == "PARADROP") then {
                 waitUntil {
                     (((getPos (_vehicle)) select 2) > 5)
-                };            
+                };
                 waitUntil {
                     sleep 1;
                     _count = 0;
@@ -330,7 +332,7 @@ for "_i" from 1 to _amount do {
                 ["LOCAL", "CHAT", format ["All units regrouped, suffered %1 casualties.", _groupSize - (count (units _group))]] call BRM_fnc_doLog;
 
                 [_group, _endPos, 50] call CBA_fnc_taskAttack;
-            };       
+            };
 
             ["LOCAL", "CHAT", "Moving to designated way-point."] call BRM_fnc_doLog;
 
@@ -340,17 +342,17 @@ for "_i" from 1 to _amount do {
                 case "PATROL": { [_group, _endPos, (_radius select 2), 7, "MOVE", _behavior, _combat, "FULL", "NO CHANGE", "", [3,6,9]] call CBA_fnc_taskPatrol };
             };
         };
-        
+
     } else {
         switch (_task) do {
             case "ATTACK": { [_group, _endPos, 50] call CBA_fnc_taskAttack };
             case "DEFEND": { [_group, _endPos, 50, 2, true] call CBA_fnc_taskDefend };
             case "PATROL": { [_group, _endPos, (_radius select 2), 7, "MOVE", _behavior, _combat, "FULL", "NO CHANGE", "", [3,6,9]] call CBA_fnc_taskPatrol };
         };
-        
+
         _group setBehaviour _behavior;
-        _group setCombatMode _combat; 
+        _group setCombatMode _combat;
     };
-    
+
     if (AI_spawn_enable_caching) then { [_group, _loadout, _skill, _color] spawn BRM_SpawnAI_fnc_cacheUnits };
 };

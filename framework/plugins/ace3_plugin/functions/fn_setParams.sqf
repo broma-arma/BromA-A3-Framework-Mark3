@@ -33,3 +33,14 @@ switch (param_ace3_medical_level) do {
 };
 
 // =============================================================================
+//  ACE Medical level
+// =============================================================================
+
+switch (param_ace3_everyone_medic) do {
+    case 0: { mission_ace3_everyone_medic = false; };
+    case 1: { mission_ace3_everyone_medic = true; };
+};
+
+
+// =============================================================================
+

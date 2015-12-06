@@ -3,7 +3,7 @@ class p_ace3_medical_level
 	title = "(ACE3) Medical Simulation Level";
 	values[] = {0,1};
 	texts[] = {"Basic", "Advanced"};
-	default = 0;
+	default = 1;
 	code = "param_ace3_medical_level = %1";
 };
 
@@ -24,5 +24,15 @@ class p_ace3_revive_lives
 	default = 1;
 	code = "param_ace3_revive_lives = %1";
 };
+
+class p_ace3_everyone_medic
+{
+	title = "(ACE3) Everyone as a medic";
+	values[] = {0,1};
+	texts[] = {"Disabled","Enabled"};
+	default = 1;
+	code = "param_ace3_everyone_medic = %1";
+};
+
 
 class p_ace3_bar1 {title = ""; values[] = {0}; texts[] = {""}; default = 0; };

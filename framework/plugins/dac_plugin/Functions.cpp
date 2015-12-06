@@ -13,6 +13,5 @@ class BRM_DAC
 		class createDACCamp {};
 		class createDACZone {};
 		class getDACStat {};
-		class scaleUnits {};
 	};
 }; 

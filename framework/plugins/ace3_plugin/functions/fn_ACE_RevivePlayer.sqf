@@ -2,7 +2,7 @@
 ================================================================================
 
 NAME:
-    BRM_ACE_fnc_AGM_RevivePlayer
+   BRM_ACE3_fnc_ACE_RevivePlayer
     
 AUTHOR(s):
     Nife
@@ -14,7 +14,7 @@ PARAMETERS:
     0 - Player (OBJECT)
 
 USAGE:
-    [player] spawn BRM_ACE_fnc_ACE_RevivePlayer;
+    [player] spawn BRM_ACE3_fnc_ACE_RevivePlayer;
     
 RETURNS:
     Nothing.
@@ -24,8 +24,7 @@ RETURNS:
 
 _unit = _this select 0;
 
-[_unit] call ACE_Medical_fnc_wakeUp;
-[_unit, 0] call ACE_Medical_fnc_setDamage;
+
 
 _unit switchMove "";
 _unit setVariable ["ACE_medical_pain", 0, true];
@@ -57,3 +56,5 @@ _unit setVariable ["ACE_medical_hasLostBlood", 0, true];
 _unit setVariable ["ACE_medical_isBleeding", false, true];
 _unit setVariable ["ACE_medical_hasPain", false, true];
 _unit setVariable ["ACE_medical_painSuppress", 0, true];
+_parts = ["hitHead","hitBody","hitHands","hitLegs"];
+{_unit setHitPointDamage [_x, 0]}count _parts;

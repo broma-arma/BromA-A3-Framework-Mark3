@@ -3,7 +3,7 @@
 
 NAME:
     BRM_fnc_handleScore
-    
+
 AUTHOR(s):
     Nife
 
@@ -13,10 +13,10 @@ DESCRIPTION:
 PARAMETERS:
     0 - Unit killed. (OBJECT)
     1 - Killer of said unit. (OBJECT)
-    
+
 USAGE:
     [player, myKiller] call BRM_fnc_handleScore
-    
+
 RETURNS:
     Nothing.
 

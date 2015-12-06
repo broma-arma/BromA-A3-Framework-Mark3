@@ -15,7 +15,7 @@ switch(_x) do
             [_morphine, _countMorphineCARGO],
             [_epi, _countEpiCARGO],
             [_bloodbag, _countBloodbagCARGO]
-        ]] spawn _addtoCargo;                
+        ]] spawn _addtoCargo;
     };
     case "medical_adv":
     {
@@ -37,7 +37,7 @@ switch(_x) do
                 [_bodyBag, _countBloodbagCARGO]
             ]] spawn _addtoCargo;
         };
-    };    
+    };
     case "ammo":
     {
         [[_object,"magazine",
@@ -47,15 +47,15 @@ switch(_x) do
             [_commonSNIPER select 1,_countSNIPERCARGO],
             [_commonSMG select 1,_countRifleCARGO],
             [_specAT select 1, _countATCARGO],
-            [_40mm, _count40mmCARGO],
+            [_commonRIFLEGL select 2, _count40mmCARGO],
             [_grenade, _countGRENADESCARGO],
             [_wsmoke,25],
             [_rsmoke,25],
             [_gsmoke,25]
         ]] spawn _addtoCargo;
         [[_object,"item",
-            ["AGM_EarBuds",25]
-        ]] spawn _addtoCargo;                
+            [_earBuds, 25]
+        ]] spawn _addtoCargo;
     };
 
     case "ammo_big":
@@ -67,7 +67,7 @@ switch(_x) do
             [_commonSNIPER select 1,_countSNIPERCARGO * 3],
             [_commonSMG select 1,_countRifleCARGO * 3],
             [_specAT select 1, _countATCARGO * 3],
-            [_40mm, _count40mmCARGO * 3],
+            [_commonRIFLEGL select 2, _count40mmCARGO * 3],
             [_grenade, _countGRENADESCARGO * 3],
             [_wsmoke,25 * 3],
             [_rsmoke,25 * 3],
@@ -76,24 +76,24 @@ switch(_x) do
     };
 
     case "at":
-    {				
+    {
         [[_object,"magazine",
             [_specAT select 1,_countATCARGO]
         ]] spawn _addtoCargo;
         [[_object,"weapon",
             [_specAT select 0, 3]
-        ]] spawn _addtoCargo;                    
+        ]] spawn _addtoCargo;
     };
-    
+
     case "radio": {
         [_object, "SR", _factionSide, 50] spawn _addRadioToCargo;
         [_object, "LR", _factionSide, 20] spawn _addRadioToCargo;
         [_object, "BP", _factionSide, 5] spawn _addRadioToCargo;
     };
-    
+
     case "parachutes": {
         [[_object,"backpack",
             [_parachute , 15]
-        ]] spawn _addtoCargo;    
+        ]] spawn _addtoCargo;
     };
 };

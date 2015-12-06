@@ -1,5 +1,5 @@
 
-_ignoredWords = ["hey","please","a","an","with","also","and","but","however","of","amounts","amount","named","called", 
+_ignoredWords = ["hey","please","a","an","with","also","and","but","however","of","amounts","amount","named","called",
                 "respawns","respawn","reinforcements","supporting","assisting","helping","of","in","on","network","ID"];
 
 _aliasRANDOM = ["whatever","anything","random"];
@@ -24,9 +24,3 @@ _aliasTIER1 = ["group","groups","unit","units","team","teams"];
 _aliasTIER2 = ["fire-team","fire-teams"];
 _aliasTIER3 = ["section","sections"];
 _aliasTIER4 = ["squad","squads"];
-
-_aliasHUGE = ["huge","insane","loads"];
-_aliasLARGE = ["large","lots","many"];
-_aliasMEDIUM = ["medium","average","some","regular"];
-_aliasSMALL = ["small","little","few", "not-many","couple"];
-_aliasMINISCULE = ["very-few","almost-no"];

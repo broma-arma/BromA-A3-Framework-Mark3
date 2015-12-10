@@ -3,7 +3,7 @@
 
 NAME:
     BRM_fnc_initPlayer
-    
+
 AUTHOR(s):
     Nife
 
@@ -12,10 +12,10 @@ DESCRIPTION:
 
 PARAMETERS:
     None. All parameters are taken from the unit's "unitInit" object variable.
-    
+
 USAGE:
     [] call BRM_fnc_initPlayer
-    
+
 RETURNS:
     Nothing.
 
@@ -146,6 +146,10 @@ player addEventHandler ["Killed", BRM_fnc_onPlayerKilled];
 
     [-1, { (_this select 0) assignTeam (_this select 1)}, [_player, _color]] call CBA_fnc_globalExecute;
 };
+
+// Disables object recognition to save performance. ============================
+
+if (mission_game_mode == "tvt") then { disableRemoteSensors true };
 
 // Finishes initialization sequence. ===========================================
 

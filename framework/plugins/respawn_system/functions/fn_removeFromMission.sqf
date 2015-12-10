@@ -28,8 +28,13 @@ _unit setPos [0,0,10];
 
 player setVariable ["isDead", true, true];
 
-if ("cssa3_spectator" in usedPlugins) then {
-    ["forced"] spawn CSSA3_fnc_createSpectateDialog;
+switch (true) do {
+    case ("cssa3_spectator" in usedPlugins): {
+        ["forced"] spawn CSSA3_fnc_createSpectateDialog;
+    };
+    case ("ace3_spectator" in usedPlugins): {
+        [true] call ace_spectator_fnc_setSpectator;
+    };
 };
 
 sleep 5;
@@ -39,7 +44,17 @@ _unit removeItem "ItemRadio";
 
 waitUntil{!([getPlayerUID _unit, name _unit, (_unit getVariable "unit_side")] in mission_dead_players)};
 
-titletext ["You are respawning...", "BLACK FADED",0];
+switch (true) do {
+    case ("ace3_spectator" in usedPlugins): {
+        [false] call ace_spectator_fnc_setSpectator;
+    };
+};
+
+0 spawn {
+    titletext ["You are respawning...", "BLACK FADED",0];
+    sleep 3;
+    titletext ["", "PLAIN",0];
+};
 
 closeDialog 0;
 

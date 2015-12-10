@@ -9,6 +9,7 @@ class BRM {
     class plugins {
         file = "framework\engine\functions\engine\plugins";
         class logPlugins{postInit = 1;};
+        class warnConflict {postInit = 1;};
     };
     class init {
         file = "framework\engine\functions\engine\init";
@@ -19,7 +20,7 @@ class BRM {
         class engine_pre{preInit = 1;};
     };
     class unit {
-        file = "framework\engine\functions\engine\unit";        
+        file = "framework\engine\functions\engine\unit";
         class handleScore{};
         class removeJIP{};
         class setAlias{};
@@ -32,7 +33,7 @@ class BRM {
         class getSpawnPoint{};
         class stampTime{};
         class syncTime{};
-        class getSideInfo{};        
+        class getSideInfo{};
     };
     class ending {
         file = "framework\engine\functions\engine\ending";
@@ -70,7 +71,7 @@ class BRM {
         class garrisonUnits{};
         class showText{};
         class colorToHex{};
-        class verboseArray{}; 
+        class verboseArray{};
         class addIfNew{};
         class unitFromName{};
         class callCodeArea{};

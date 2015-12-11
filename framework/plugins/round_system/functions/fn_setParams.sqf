@@ -16,7 +16,7 @@ switch (param_round_sys_rounds) do {
 // =============================================================================
 
 switch (param_round_sys_time_limit) do {
-    case 0: { BRM_round_system_time_limit = 15 };
+    case 0: { BRM_round_system_time_limit = 60*1 };
     case 1: { BRM_round_system_time_limit = 60*5 };
     case 2: { BRM_round_system_time_limit = 60*15 };
     case 3: { BRM_round_system_time_limit = 60*30 };

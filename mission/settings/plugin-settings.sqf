@@ -41,17 +41,17 @@ AI_spawn_cache_distance = 1500;
 //                            == ROUND SYSTEM ==                               |
 // ============================================================================
 
-// How many seconds players will have to prepare themselves.
-round_prep_time_seconds = 1;
+// How many seconds players will have to prepare themselves before the match begins.
+round_prep_time_seconds = 10;
 
 // Seconds in between rounds.
-round_seconds_between = 5;
+round_seconds_between = 15;
 
-// What minutes will the time alert play.
+// What minutes will players be alerted of the remaining time in the round.
 round_alerted_minutes = [1,5,15,30];
 
 // The conditions for victory. These can be left alone, as it is also possible
-// to win without achieving these - see below.
+// to win through other means - see below.
 round_side_a_victory_con = "(sideAcondition)";
 round_side_b_victory_con = "(sideBcondition)";
 round_side_c_victory_con = "(sideCcondition)";

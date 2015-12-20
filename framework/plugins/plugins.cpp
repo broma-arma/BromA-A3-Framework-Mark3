@@ -21,7 +21,7 @@ USAGE:
 #include "headless_client\main.cpp"
 #include "dac_plugin\main.cpp"
 #include "ace3_plugin\main.cpp"
-#include "ace3_spectator\main.cpp"
+#include "cssa3_spectator\main.cpp"
 #include "agm_plugin\main.cpp"
 #include "alive_db\main.cpp"
 #include "tfar_plugin\main.cpp"
@@ -52,5 +52,5 @@ USAGE:
 #include "commander_lock\main.cpp"
 #include "radiofreq\main.cpp"
 
-//#include "cssa3_spectator\main.cpp"
+//#include "ace3_spectator\main.cpp"
 //#include "round_system\main.cpp"

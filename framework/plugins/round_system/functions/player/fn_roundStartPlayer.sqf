@@ -3,7 +3,7 @@ if (!hasInterface) exitWith {};
 
 hint "";
 
-[player, toLower(str(side player))] call BRM_fnc_assignLoadout;
+[player, toLower(str(player getVariable ["unit_side",(side player)]))] call BRM_fnc_assignLoadout;
 
 player setDamage 0;
 

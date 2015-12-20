@@ -7,15 +7,7 @@ _side =   _this select 3;
 _pos = getMarkerPos _logic;
 _dir = 0;
 
-setupZone = false;
-
-[_time, _side] spawn {
-    params["_time", "_side", "_setupZone"];
-
-    sleep _time;
-
-    setupZone = true;
-};
+if (isNil "setupZoneEnd") then { setupZoneEnd = false };
 
 waitUntil {!isNull player};
 
@@ -38,7 +30,7 @@ _timetype = "";
     _barrierHandle = _this select 0;
     _markerName = _this select 1;
 
-    waitUntil {(setupZone)};
+    waitUntil {(setupZoneEnd)};
 
     sandi_barrier_barriers set [_barrierHandle, 0];
     deleteMarkerLocal _markerName;

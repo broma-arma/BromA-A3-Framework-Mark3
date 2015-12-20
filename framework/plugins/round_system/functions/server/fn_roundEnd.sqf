@@ -24,6 +24,8 @@ if (count match_ending_winner > 0) then {
         (_this) call BRM_Round_System_fnc_displayWinner;
     }, round_winner_text] call CBA_fnc_globalExecute;
 
+    { deleteVehicle _x } count (allDead);
+
     ["LOCAL", "CHAT", "Waiting to begin new round...", ROUND_SYSTEM_DEBUG] call BRM_fnc_doLog;
 
     sleep round_seconds_between;

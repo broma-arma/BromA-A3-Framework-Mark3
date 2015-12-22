@@ -42,8 +42,8 @@ switch (true) do {
 };
 
 switch (mission_ACE3_enabled) do {
-    case true: { _killer = _unit getVariable ["last_damage", _this select 0]; };
-    case false: { _killer = _this select 0 };
+    case true: { _killer = _unit getVariable ["last_damage", _this select 1] };
+    case false: { _killer = _this select 1 };
 };
 
 if !(_killer isKindOf "CAManBase") exitWith {};

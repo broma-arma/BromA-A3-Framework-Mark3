@@ -133,6 +133,7 @@ if (mission_AGM_enabled) then {
 // Adds Event Handlers with pre-configured functions. ==========================
 
 player addEventHandler ["Respawn", BRM_fnc_onPlayerRespawn];
+player addEventHandler ["Hit", {(_this select 0)setVariable["last_damage",(_this select 1)]}];
 player addEventHandler ["Killed", BRM_fnc_onPlayerKilled];
 
 // Changes the player's assigned color within its group. =======================

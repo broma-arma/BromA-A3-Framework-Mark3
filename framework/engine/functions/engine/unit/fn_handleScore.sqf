@@ -23,11 +23,10 @@ RETURNS:
 ================================================================================
 */
 
-_unit = _this select 0;
-_killer = _this select 1;
+private ["_killer"];
 
+_unit = _this select 0;
 _side = _unit getVariable ["unit_side", side _unit];
-_sideKiller = _killer getVariable ["unit_side", side _killer];
 
 switch (_side) do {
     case WEST: { mission_dead_west = mission_dead_west + 1; publicVariable "mission_dead_west" };
@@ -42,6 +41,14 @@ switch (true) do {
     case (_side == side_c_side): { mission_dead_side_C = mission_dead_side_C + 1; publicVariable "mission_dead_side_C" };
 };
 
+switch (mission_ACE3_enabled) do {
+    case true: { _killer = _unit getVariable ["last_damage", _this select 0]; };
+    case false: { _killer = _this select 0 };
+};
+
+if !(_killer isKindOf "CAManBase") exitWith {};
+
+_sideKiller = _killer getVariable ["unit_side", side _killer];
 _killerScore = _killer getVariable ["unit_score", 0];
 
 _findIndex = {

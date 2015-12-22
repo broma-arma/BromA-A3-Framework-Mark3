@@ -60,6 +60,7 @@ if (!_initialized) then {
     // Adds the relevant Event Handlers. =======================================
 
     _unit addEventHandler ["Hit", BRM_fnc_setHitFace];
+    _unit addEventHandler ["Hit", {(_this select 0)setVariable["last_damage",(_this select 1)]}];
     _unit addEventHandler ["Killed", BRM_fnc_onAIKilled];
 
     // Adds the Civilian Casualty Cap EHs. =====================================
@@ -68,8 +69,8 @@ if (!_initialized) then {
         if ((mission_dead_civilian_limit > -1)&&(side _unit == civilian)) then {
             waitUntil{(!isNil"fnc_civFiredWeapon")&&(!isNil"fnc_countCivDeaths")};
 
-          _unit addEventHandler ["fired", fnc_civFiredWeapon];
-          _unit addMPEventHandler ["mpkilled", fnc_countCivDeaths];
+            _unit addEventHandler ["fired", fnc_civFiredWeapon];
+            _unit addMPEventHandler ["mpkilled", fnc_countCivDeaths];
         };
     };
 

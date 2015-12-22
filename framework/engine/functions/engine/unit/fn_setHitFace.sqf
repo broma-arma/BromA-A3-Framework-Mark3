@@ -3,7 +3,7 @@
 
 NAME:
     BRM_fnc_setHitFace
-    
+
 AUTHOR(s):
     Nife
 
@@ -13,10 +13,10 @@ DESCRIPTION:
 
 PARAMETERS:
     0 - Unit. (OBJECT)
-    
+
 USAGE:
     [player] call BRM_fnc_setHitFace
-    
+
 RETURNS:
     Nothing.
 

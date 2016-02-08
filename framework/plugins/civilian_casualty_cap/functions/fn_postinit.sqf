@@ -9,6 +9,11 @@ fnc_deadHostileCivilian = {
 
 fnc_civFiredWeapon = {
     _unit = _this select 0;
+
+    _initialized = _unit getVariable ["BRM_civCap_unit_initialized_fnc_civFiredWeapon", false];
+    if (_initialized) exitWith {};
+    _unit setVariable ["BRM_civCap_unit_initialized_fnc_civFiredWeapon", true, true];
+
     _unit addMPEventHandler ["mpkilled", fnc_deadHostileCivilian];
 
     if !(_unit in hostile_civilians) then {
@@ -24,10 +29,16 @@ fnc_countCivDeaths = {
     private ["_killer"];
 
     _killed = _this select 0;
+
+    _initialized = _killed getVariable ["BRM_civCap_unit_initialized_fnc_fnc_countCivDeaths", false];
+    if (_initialized) exitWith {};
+    _killed setVariable ["BRM_civCap_unit_initialized_fnc_fnc_countCivDeaths", true, true];
+
     switch (mission_ACE3_enabled) do {
         case true: { _killer = _killed getVariable ["last_damage", _this select 1] };
         case false: { _killer = _this select 1 };
     };
+
     _sideKiller = _killer getVariable ["unit_side", (side _killer)];
 
     if !(_killed in hostile_civilians) then {
@@ -54,18 +65,18 @@ fnc_countCivDeaths = {
 
     // Checks if the max number of civies is beyond the limit
     if (dead_civilians_side_a >= mission_dead_civilian_limit) then {
-        if (mission_game_mode == "COOP") then {
-            ["defeat"] call BRM_fnc_callEnding;
+        if (mission_game_mode == "coop") then {
+            ["defeat"] spawn BRM_fnc_callEnding;
         } else {
-            ["side_a_defeat"] call BRM_fnc_callEnding;
+            ["side_a_defeat"] spawn BRM_fnc_callEnding;
         };
     };
     if (dead_civilians_side_b >= mission_dead_civilian_limit) then {
-        ["side_b_defeat"] call BRM_fnc_callEnding;
+        ["side_b_defeat"] spawn BRM_fnc_callEnding;
     };
 
     if (dead_civilians_side_c >= mission_dead_civilian_limit) then {
-        ["side_c_defeat"] call BRM_fnc_callEnding;
+        ["side_c_defeat"] spawn BRM_fnc_callEnding;
     };
 };
 
@@ -74,11 +85,14 @@ publicVariable "fnc_civFiredWeapon";
 publicVariable "fnc_countCivDeaths";
 
 0 spawn {
+    sleep 5;
+
     // Add killed EventHandler to all civilians.
     {
         if (side _x == civilian) then {
           _x addEventHandler ["fired", fnc_civFiredWeapon];
           _x addMPEventHandler ["mpkilled", fnc_countCivDeaths];
+          _x addEventHandler ["Hit", {(_this select 0)setVariable["last_damage",(_this select 1)]}];
         };
     } foreach allUnits;
 };

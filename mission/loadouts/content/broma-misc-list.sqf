@@ -45,7 +45,7 @@ switch (true) do {
 
         _bodyBag = "ACE_bodyBag";
 
-        _defib = "ACE_Defibillator";
+        _defib = "ACE_Defibrillator";
     };
 };
 

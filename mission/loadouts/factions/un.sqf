@@ -18,7 +18,7 @@ _defaultInsignia = "USP_PATCH_UN_BELIEVE";
 
 // WEAPONS =====================================================================
 
-_commonRIFLE = _FNFALRAIL;
+_commonRIFLE = _FNFAL;
 _commonRIFLEGL = _M16A2GL;
 _commonPISTOL = _Makarov;
 _commonMG = _PKM;

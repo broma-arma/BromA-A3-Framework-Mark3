@@ -21,7 +21,7 @@ mission_version =    "v0";
 //                          == MISSION GAMEMODE ==                             |
 //                                                                             |
 //                      What is the type of mission?                           |
-//              "coop" - Cooperative missions, players against AI.             |         
+//              "coop" - Cooperative missions, players against AI.             |
 //         "tvt" - Team vs Team, each group of players fight each other.       |
 //     "cotvt" - Same as a COOP, but with enemy players on the other side.     |
 //                                                                             |
@@ -43,7 +43,7 @@ units_AI_useVanillaGear = false;
 //                        == PLAYERS INFORMATION ==                            |
 //                                                                             |
 //            Edit this value with the side the players belong to.             |
-//                            Valid values are:                                |         
+//                            Valid values are:                                |
 //                                                                             |
 //                         west, east, resistance                              |
 //                                                                             |
@@ -88,7 +88,7 @@ side_c_callsigns = ["Papa", "Anna", "Beatrice", "Clara", "Denise",  "Rose", "Sar
 DAC_Res_Side = 1;                    // Side the independent are friendly to:
                                      // 0: EAST / 1: WEST / 2: NOBODY
                                      // (MUST BE THE SAME AS THE EDITOR!)
-                                     
+
 // ============================================================================
 //                           ==   EXTRACTION   ==                              |
 //                                                                             |
@@ -110,7 +110,7 @@ mission_extraction_points_c = [];
 // Enables music playing during the extraction - a random one will be chosen.
 mission_extraction_enable_music = true;
 
-mission_extraction_tracks = 
+mission_extraction_tracks =
 ["LeadTrack01_F", "LeadTrack02_F", "LeadTrack03_F", "LeadTrack01_F_Heli",
 "LeadTrack01_F_Mark", "LeadTrack05_F", "LeadTrack02_F_EPB"];
 
@@ -119,7 +119,7 @@ mission_extraction_tracks =
 mission_extraction_BLU = ["blu_0_0","blu_1_0","blu_1_1","blu_1_2","blu_2_0","blu_2_1","blu_2_2","blu_3_0","blu_3_1","blu_3_2","blu_4_0","blu_4_1","blu_4_2"];
 mission_extraction_OP = ["op_0_0","op_1_0","op_1_1","op_1_2","op_2_0","op_2_1","op_2_2","op_3_0","op_3_1","op_3_2","op_4_0","op_4_1","op_4_2"];
 mission_extraction_IND = ["ind_0_0","ind_1_0","ind_1_1","ind_1_2","ind_2_0","ind_2_1","ind_2_2","ind_3_0","ind_3_1","ind_3_2","ind_4_0","ind_4_1","ind_4_2"];
-mission_extraction_CIV = ["civ_0_0"];                                     
+mission_extraction_CIV = ["civ_0_0"];
 
 // ============================================================================
 //                              == ENDINGS ==                                  |
@@ -134,7 +134,7 @@ endings_victory = "victory";                    // (COOP) Objectives completed.
 endings_defeat = "defeat";                      // (COOP) Critical objective failed.
 
 endings_civilians_killed = "defeat";            // (COOP) Max number of civies killed.
-endings_time_over = "defeat";                   // (COOP) Time limit reached. 
+endings_time_over = "defeat";                   // (COOP) Time limit reached.
 
 endings_tvt_auto = "tvt_end";                   // (TVT) Maximum casualties reached - default TVT ending!
 

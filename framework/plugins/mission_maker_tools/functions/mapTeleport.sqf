@@ -1,1 +1,0 @@
-onMapSingleClick "player setPos _pos";

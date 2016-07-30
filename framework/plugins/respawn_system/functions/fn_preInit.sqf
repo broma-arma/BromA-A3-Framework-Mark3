@@ -1,3 +1,1 @@
-
-if (isNil "mission_dead_players") then { mission_dead_players = [] };
-if (isNil "mission_players_lives") then { mission_players_lives = [] };
+if (!(isNil "BRM_FMK_RespawnSystem_fnc_preInit")) then { [] call BRM_FMK_RespawnSystem_fnc_preInit };

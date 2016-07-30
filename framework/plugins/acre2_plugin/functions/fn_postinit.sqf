@@ -1,3 +1,1 @@
-
-if !(isClass(configFile>>"CfgPatches">>"acre_api")) exitWith {};
-#include "includes\settings.sqf"
+if (!(isNil "BRM_FMK_ACRE2_fnc_postInit")) then { [] call BRM_FMK_ACRE2_fnc_postInit };

@@ -5,10 +5,10 @@
 //                                                                             |
 // ============================================================================
 
-#define GROUPLOGO "mission\images\group-logo.paa"
-#define CREDITS "Thank you for playing.<br/><br/>Made with the BromA Framework A3."
+#define GROUPLOGO "\broma_framework\assets\images\group-logo.paa"
+#define CREDITS "Thank you for playing.<br/><br/>Made with the BromA Framework MK 4."
 
-class victory 
+class victory
 {
     title = "MISSION OVER";
     subtitle = "All objectives accomplished - good job.";

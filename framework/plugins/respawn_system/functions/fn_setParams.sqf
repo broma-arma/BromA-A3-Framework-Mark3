@@ -1,34 +1,7 @@
-
-// =============================================================================
-//  Enable respawn
-// =============================================================================
-
-switch (param_allow_respawn) do {
-    case 0: { mission_allow_respawn = false };
-    case 1: { mission_allow_respawn = true };
+if (!(isNil "BRM_FMK_RespawnSystem_fnc_setParams")) then {
+    [
+        ["p_allow_respawn", 0] call BIS_fnc_getParamValue,
+        ["p_player_lives", 3] call BIS_fnc_getParamValue,
+        ["p_respawn_objective", 10] call BIS_fnc_getParamValue
+    ] call BRM_FMK_RespawnSystem_fnc_setParams;
 };
-
-// =============================================================================
-//  Player lives
-// =============================================================================
-
-switch (param_player_lives) do {
-    case 0: { mission_player_lives = 1 };
-    case 1: { mission_player_lives = 3 };
-    case 2: { mission_player_lives = 5 };
-    case 3: { mission_player_lives = 10 };
-};
-
-// =============================================================================
-//  Respawn per objective
-// =============================================================================
-
-switch (param_respawn_objective) do {
-    case 0: { mission_respawn_objective = 0 };
-    case 1: { mission_respawn_objective = 3 };
-    case 2: { mission_respawn_objective = 5 };
-    case 3: { mission_respawn_objective = 10 };
-    case 4: { mission_respawn_objective = 99 };
-};
-
-// =============================================================================

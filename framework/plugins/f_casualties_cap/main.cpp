@@ -1,15 +1,9 @@
 
 #ifdef BRM_PLUGIN_META
-	class f_casualties_cap
-	{
-		name = "Casualty cap";
-		version = 1;
-		authors[] = {"Fer", "Head", "Xiathorn", "Headspace", "Wolfenswan"};
-		description = "Ends the mission after a certain parameter determined percentage of mission set groups have died.";
-	};
+	class f_casualties_cap {};
 #endif
 
-#ifdef BRM_PARAMS_PLAYER
+#ifdef BRM_PARAMS_TIME
 	#include "Parameters.cpp"
 #endif
 

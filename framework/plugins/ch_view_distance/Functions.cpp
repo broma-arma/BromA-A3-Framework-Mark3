@@ -1,19 +1,8 @@
-class CHVD
-{
-	tag = "CHVD";
+class BRM_CHVD {
+	tag = "BRM_CHVD";
 	class functions
 	{
 		file = "framework\plugins\ch_view_distance\functions";
-		class onCheckedChanged {};
-		class onSliderChange {};
-		class onLBSelChanged {};
-		class onEBinput {};
-		class onEBterrainInput {};
-		class selTerrainQuality {};
-		class updateTerrain {};
-		class updateSettings {};		
-		class openDialog {};
-		class keyIsPressed {};
 		class postinit {postInit = 1;};
 	};
 };

@@ -1,4 +1,4 @@
-    
+
 // ============================================================================
 //                                                                             |
 //   This is where you set the plugin parameters for your mission, have fun!   |
@@ -49,9 +49,7 @@ ACE_Medical_bleeding = 1;
 // default : 1
 ACE_Medical_pain = 1;
 
-
 // Advanced Medical Settings ===================================================
-
 
 // Select what units the medical system will be enabled for (adv only).
 // 0 = players; 1 = players and AI

@@ -9,7 +9,8 @@
 // ============================================================================
 
 if (!isServer) exitWith {};
-waitUntil{scriptDone(mission_settings)};
+
+[{scriptDone(mission_settings) && !(isNil "server_vehicles_created")}, {
 // =============================================================================
 
 // =============================================================================
@@ -18,13 +19,21 @@ waitUntil{scriptDone(mission_settings)};
 side_a_side,
 
 // ID of the task.
-"newTaskBLU1", 
+"newTaskBLU1",
 
 // Name of the task.
-["Kill the Scientist and protect the Pilot.", 
+["Kill the Scientist and protect the Pilot",
 
 // Description.
-"My description 1"],
+"My description 1",
+
+// Type
+// See all types: https://community.bistudio.com/wiki/Arma_3_Tasks_Overhaul#Appendix
+"attack",
+
+// Position
+(getPos tgt1)
+],
 
 // Condition for: task to be assigned / to be completed / to fail (OPTIONAL)
 ["(true)","(not alive tgt1)", "(not alive tgt2)"],
@@ -36,20 +45,22 @@ side_a_side,
 // Code executed at certain events related to the task.
 // Task assigned | Task completed | Task failed
 ["", "", ""]
-] spawn BRM_fnc_newTask;
+] spawn BRM_FMK_fnc_newTask;
 // =============================================================================
 
 // =============================================================================
 //  This is an example of how to make an optional task.
+//  Notice that we leave the position value empty to show that we do not want to give a position.
 [
-side_a_side, 
-"newTaskBLU2", 
-["Kill Nikos, maybe?", 
-"Nikos needs to die. Or not. It's up to you - doesn't matter either way."],
+side_a_side,
+"newTaskBLU2",
+["Kill Nikos, maybe?",
+"Nikos needs to die. Or not. It's up to you - doesn't matter either way.",
+"kill", []],
 ["(true)","(not alive nikos_npc)"],
 0,
 ["", "", ""]
-] spawn BRM_fnc_newTask;
+] spawn BRM_FMK_fnc_newTask;
 // =============================================================================
 
 // =============================================================================
@@ -61,11 +72,13 @@ side_a_side,
 //  more important than "optional" objectives.
 
 [side_a_side, "newTaskBLU3",
-["Destroy the Fennek.", 
-"There's a Fennek lying close. I don't like it. Destroy it!"],
-["(true)","(not alive car1)"], 1, ["", "", ""]] spawn BRM_fnc_newTask;
+["Destroy the enemy vehicle.",
+"There's an enemy vehicle right in front of you. I don't like it. Destroy it!",
+"destroy", (getPos TaskEnemyVehicle)],
+["(true)","(not alive TaskEnemyVehicle)"], 1, ["", "", ""]] spawn BRM_FMK_fnc_newTask;
 // =============================================================================
 
-[] spawn BRM_fnc_checkTasks;
+[] spawn BRM_FMK_fnc_checkTasks;
 
 true
+}, []] call CBA_fnc_waitUntilAndExecute;

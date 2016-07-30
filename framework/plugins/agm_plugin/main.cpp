@@ -1,12 +1,6 @@
 
 #ifdef BRM_PLUGIN_META
-	class agm_plugin
-	{
-		name = "AGM Plugin";
-		version = 1;
-		authors[] = {"Nife"};	
-		description = "Based on parameters and mission settings, configures whatever desired AGM modules, including Medical and respawning system.";
-	};
+	class agm_plugin {};
 #endif
 
 #ifdef BRM_PARAMS_PLAYER

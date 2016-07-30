@@ -1,8 +1,9 @@
 class p_cas_cap
 {
 	title = "Casualty Cap";
-	values[] = {0,1,2,3,4};
+	values[] = {-1, 80, 90, 95, 100};
 	texts[] = {"Disabled","80%","90%","95%","100%"};
-	default = 0;
-	code = "param_cas_cap = %1";
+	default = -1;
 };
+
+class p_fcas_bar1 {title = ""; values[] = {0}; texts[] = {""}; default = 0; };

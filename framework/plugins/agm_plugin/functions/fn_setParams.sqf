@@ -1,34 +1,7 @@
-
-// =============================================================================
-//  AGM Revive Time
-// =============================================================================
-
-switch (param_agm_revive_time) do {
-    case 0: { mission_agm_revive_time = 1 };
-    case 1: { mission_agm_revive_time = 120 };
-    case 2: { mission_agm_revive_time = 300 };
-    case 3: { mission_agm_revive_time = 600 };
-    case 4: { mission_agm_revive_time = -1 };
+if (!(isNil "BRM_FMK_AGM_fnc_setParams")) then {
+    [
+        ["p_agm_revive_time", 3] call BIS_fnc_getParamValue,
+        ["p_agm_single_bandage", 1] call BIS_fnc_getParamValue,
+        ["p_agm_insta_death", 0] call BIS_fnc_getParamValue
+    ] call BRM_FMK_AGM_fnc_setParams;
 };
-
-// =============================================================================
-//  AGM Enable Single-bandage
-// =============================================================================
-
-switch (param_agm_single_bandage) do {
-    case 0: { mission_agm_single_bandage = true };
-    case 1: { mission_agm_single_bandage = false };
-};
-
-// =============================================================================
-
-// =============================================================================
-//  AGM Prevent Instant Death
-// =============================================================================
-
-switch (param_agm_insta_death) do {
-    case 0: { mission_agm_insta_death = true };
-    case 1: { mission_agm_insta_death = false };
-};
-
-// =============================================================================

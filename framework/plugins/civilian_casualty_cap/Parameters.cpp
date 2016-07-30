@@ -1,8 +1,7 @@
 class p_dead_civies
 {
 	title = "Tolerance with civilian deaths";
-	values[] = {0,1,2,3};
+	values[] = {-1, 5, 15, 30};
 	texts[] = {"Disabled","Low","Medium","High"};
-	default = 0;
-	code = "param_dead_civies = %1";
+	default = -1;
 };

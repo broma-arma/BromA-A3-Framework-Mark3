@@ -1,1 +1,0 @@
-if (isNil "tp_allowed_units") then { tp_allowed_units = [] };

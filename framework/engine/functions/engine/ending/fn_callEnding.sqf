@@ -3,7 +3,7 @@
 
 NAME:
     BRM_fnc_callEnding
-    
+
 AUTHOR(s):
     Nife
 
@@ -12,10 +12,10 @@ DESCRIPTION:
 
 PARAMETERS:
     0 - Ending event that should be called (STRING)
-    
+
 USAGE:
     ["victory"] call BRM_fnc_callEnding
-    
+
 RETURNS:
     Nothing.
 
@@ -28,39 +28,38 @@ if (!mission_running) exitWith {};
 mission_running = false; publicVariable "mission_running";
 
 // Calls the event globally on both clients and server.
+[{
+    [-2, {
+        private["_ending","_stats","_showEnding","_success"];
 
-sleep 3;
+        _ending = _this;
 
-[-2, {
-    private["_ending","_stats","_showEnding","_success"];
+        if (isServer) then {
+            // Server reads all mission-related ending cases.
+            [_ending] call compile preprocessFile "mission\settings\endings.sqf";
 
-    _ending = _this;
-    
-    if (isServer) then {
-        // Server reads all mission-related ending cases.
-        [_ending] call compile preprocessFile "mission\settings\endings.sqf";
-        
-        // Server processes all mission relevant stats.
-        [] call BRM_fnc_endingGetStats;
-    };
-    // Players wait until server is finished.
-    waitUntil{!isNil "mission_ending_details"};
-    
-    player allowDamage false;
-    
-    // Players get their own personal results according to the ending.
-    [] call BRM_fnc_endingGetContext;
+            // Server processes all mission relevant stats.
+            [] call BRM_FMK_fnc_endingGetStats;
+        };
+        // Players wait until server is finished.
+        waitUntil{!isNil "mission_ending_details"};
 
-    // Display the ending screen if configured to.
-    if (mission_ending_details select 2) then {
-        _showEnding = [] spawn BRM_fnc_endingScreen;
-        waitUntil{(scriptDone _showEnding)};
-    };
+        player allowDamage false;
 
-    // Server waits before ending mission.
-    if (isServer) then { sleep 3 };
-    
-    // Ends the mission to all players, taking in account winner status.
-    [_ending, (mission_ending_personal select 0), true] spawn BIS_fnc_endMission;
-    
-}, _this select 0] call CBA_fnc_globalExecute;
+        // Players get their own personal results according to the ending.
+        [] call BRM_FMK_fnc_endingGetContext;
+
+        // Display the ending screen if configured to.
+        if (mission_ending_details select 2) then {
+            _showEnding = [] spawn BRM_FMK_fnc_endingScreen;
+            waitUntil{(scriptDone _showEnding)};
+        };
+
+        // Server waits before ending mission.
+        if (isServer) then { sleep 3 };
+
+        // Ends the mission to all players, taking in account winner status.
+        [_ending, (mission_ending_personal select 0), true] spawn BIS_fnc_endMission;
+
+    }, _this select 0] call CBA_fnc_globalExecute;
+}, _this, 3] call CBA_fnc_waitAndExecute;

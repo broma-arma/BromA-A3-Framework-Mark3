@@ -3,7 +3,7 @@
 
 NAME:
     BRM_fnc_loadSettings
-    
+
 AUTHOR(s):
     Nife
 
@@ -12,10 +12,10 @@ DESCRIPTION:
 
 PARAMETERS:
     None.
-    
+
 USAGE:
     [] call BRM_fnc_loadSettings;
-    
+
 RETURNS:
     Nothing.
 

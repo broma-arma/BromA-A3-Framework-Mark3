@@ -21,7 +21,7 @@ maxPlayers = 50;
 onLoadName = "MISSION NAME";
 author = "MISSION MAKER";
 onLoadMission = "Powered by BromA Framework Mark 3 for ArmA 3";
-loadScreen = "mission\images\loading-screen.jpg";
+loadScreen = "\broma_framework\assets\images\loading-screen.jpg";
 
 // Disables certain radio channels in the mission. =============================
 
@@ -44,5 +44,7 @@ respawndelay = 4;
 disabledAI = 1;
 enableDebugConsole = 1;
 saving = 0;
+disableRandomization[] = {"Man"};
+taskManagement_propagate = 1;
 
 // =============================================================================

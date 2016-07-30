@@ -1,13 +1,1 @@
-
-// =============================================================================
-//  Allow third person parameters
-// =============================================================================
-
-switch (param_allow_tp_veh) do {
-    case 0: { mission_allow_tp_veh = "disabled" };
-    case 1: { mission_allow_tp_veh = "everyone" };
-    case 2: { mission_allow_tp_veh = "drivers" };
-};
-publicVariable "mission_allow_tp_veh";
-
-// =============================================================================
+if (!(isNil "BRM_FMK_BlockThirdPerson_fnc_setParams")) then { [["p_allow_tp_veh", 2] call BIS_fnc_getParamValue] call BRM_FMK_BlockThirdPerson_fnc_setParams };

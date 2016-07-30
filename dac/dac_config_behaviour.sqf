@@ -1,15 +1,4 @@
 
-
-    //////////////////////////////
-    //    Dynamic-AI-Creator    //
-    //    Version 3.1b - 2014   //
-    //--------------------------//
-    //    DAC_Config_Behaviour  //
-    //--------------------------//
-    //    Script by Silola      //
-    //    silola@freenet.de     //
-    //////////////////////////////
-
     private ["_array","_setSkill","_setCombat","_setBehav","_setSpeed","_setForm","_setPatrol","_setSearch","_setFleeing","_setHeliVal","_setPause","_setBldgBeh","_setSupport","_setJoin","_setEmpVeh","_setSupTime","_setHidTime"];
 
     // =============================================================================
@@ -45,7 +34,7 @@
         case 1: // NORMAL
         {
             //_setSkill = ["aimingAccuracy","aimingShake","aimingSpeed","Endurance","spotDistance","spotTime","courage","reloadSpeed","commanding","general"];
-            _setSkill   = [   [0.7,0.8],      [0.4,0.5],    [0.4,0.5],    [0.8,0.9],   [0.7,0.8],  [0.6,0.7], [0.8,0.9],  [0.2,0.4],   [0.8,0.9],  [0.7,0.8]];
+            _setSkill   = [mission_DAC_AI_skill, [0.4,0.5], [0.4,0.5], mission_DAC_AI_skill, mission_DAC_AI_skill, [0.6,0.7], [0.8,0.9], [0.2,0.4], mission_DAC_AI_skill, mission_DAC_AI_skill];
             _setCombat  = ["green","white","yellow"];
             _setBehav   = ["careless","safe","aware"];
             _setSpeed   = ["limited","normal","full"];

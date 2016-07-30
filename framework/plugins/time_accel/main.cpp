@@ -1,12 +1,6 @@
 
 #ifdef BRM_PLUGIN_META
-	class time_accel
-	{
-		name = "Time Acceleration";
-		version = 1;
-		authors[] = {"Nife"};
-		description = "Accelerates time as determined by mission parameters.";
-	};
+	class time_accel {};
 #endif
 
 #ifdef BRM_PARAMS_TIME

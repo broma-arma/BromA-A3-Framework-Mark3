@@ -1,9 +1,6 @@
 
-// =============================================================================
-//  Headless Client parameters
-// =============================================================================
-
-switch (param_hc_enabled) do {
-    case 0: { mission_enable_hc = false };
-    case 1: { mission_enable_hc = true };
+if (!(isNil "BRM_FMK_HC_fnc_setParams")) then {
+    [
+        (["p_enable_hc", 0] call BIS_fnc_getParamValue)
+    ] call BRM_FMK_HC_fnc_setParams;
 };

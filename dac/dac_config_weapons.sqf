@@ -1,13 +1,3 @@
-//////////////////////////////
-//    Dynamic-AI-Creator    //
-//    Version 3.1b - 2014   //
-//--------------------------//
-//    DAC_Config_Weapons    //
-//--------------------------//
-//    Script by Silola      //
-//    silola@freenet.de     //
-//////////////////////////////
-
 private ["_TypNumber","_TempArray","_Weapon_Pool","_Magazine_Pool"];
 
 _TypNumber = _this select 0;_TempArray = [];
@@ -43,8 +33,8 @@ switch (_TypNumber) do
   case 6: {
     _Weapon_Pool  = ["SVD","ItemCompass","ItemMap"];
     _Magazine_Pool  = [["10Rnd_762x54_SVD",8]];
-  }; 
-//-------------------------------------------------------------------------------------------------  
+  };
+//-------------------------------------------------------------------------------------------------
 Default
 {
   if(DAC_Basic_Value != 5) then

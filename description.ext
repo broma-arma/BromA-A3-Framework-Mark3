@@ -1,18 +1,25 @@
 
 // ============================================================================
+//    Mission parameters.                                                      |
+// ============================================================================
+class Params {
+    #include "params.sqf"
+};
+
+// ============================================================================
 //    Initializes Engine, API and plugin functions.                            |
 // ============================================================================
 class CfgFunctions {
-        #include "framework\engine\configs\cfgFunctions.sqf"
-        #define BRM_PLUGIN_FUNCTIONS
-            #include "framework\plugins\plugins.cpp"
-        #undef BRM_PLUGIN_FUNCTIONS
-        class BRM_endLoading {
-            class Functions {
-                file = "framework\engine\functions\engine\init";
-                class endLoading {postInit = 1;};
-            };
+    #include "framework\engine\configs\cfgFunctions.sqf"
+    #define BRM_PLUGIN_FUNCTIONS
+        #include "framework\plugins\plugins.cpp"
+    #undef BRM_PLUGIN_FUNCTIONS
+    class BRM_endLoading {
+        class Functions {
+            file = "framework\engine\functions\engine\init";
+            class endLoading {postInit = 1;};
         };
+    };
 };
 
 // ============================================================================
@@ -21,9 +28,9 @@ class CfgFunctions {
 #include "mission\mission-info.sqf"
 
 // ============================================================================
-//    Loads engine and plugin dialog files.                                    | 
+//    Loads engine and plugin dialog files.                                    |
 // ============================================================================
-#include "framework\engine\dialogs\loadDialogs.cpp"
+#include "framework\engine\dialogs\load_dialogs.cpp"
 
 #define BRM_PLUGIN_DIALOGS
     #include "framework\plugins\plugins.cpp"
@@ -37,10 +44,12 @@ class Mission {
 };
 
 // ============================================================================
-//    Mission parameters.                                                      |
+//    Read plugin meta-data.                                                   |
 // ============================================================================
-class Params {
-    #include "params.sqf"
+class CfgPlugins {
+    #define BRM_PLUGIN_META
+        #include "framework\plugins\plugins.cpp"
+    #undef BRM_PLUGIN_META
 };
 
 // ============================================================================
@@ -48,15 +57,6 @@ class Params {
 // ============================================================================
 class CfgDebriefing {
     #include "mission\objectives\debriefing.sqf"
-};
-
-// ============================================================================
-//    Read plugin meta-data.                                                   |
-// ============================================================================
-class CfgPlugins {
-    #define BRM_PLUGIN_META
-        #include "framework\plugins\plugins.cpp"
-    #undef BRM_PLUGIN_META
 };
 
 // ============================================================================

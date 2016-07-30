@@ -1,25 +1,15 @@
-//////////////////////////////
-//    Dynamic-AI-Creator    //
-//    Version 3.1b - 2014   //
-//--------------------------//
-//    DAC_Config_Events     //
-//--------------------------//
-//    Script by Silola      //
-//    silola@freenet.de     //
-//////////////////////////////
 
 private [
-			"_TypNumber","_TempArray","_Events_Vehicle","_loadout",
-			"_Events_Unit_S","_Events_Unit_V","_Events_Unit_T","_Events_Unit_A","_Events_Unit_C","_Events_Unit_H"
-		];
+"_TypNumber","_TempArray","_Events_Vehicle","_loadout",
+"_Events_Unit_S","_Events_Unit_V","_Events_Unit_T","_Events_Unit_A","_Events_Unit_C","_Events_Unit_H"
+];
 
-			_TypNumber = _this select 0;_TempArray = [];
+_TypNumber = _this select 0;_TempArray = [];
 
-_initGroup = { format ["{ [_x, '%1'] spawn BRM_fnc_initAI } forEach units _group;", _this] };
-_initUnit = { format ["[_unit, '%1'] spawn BRM_fnc_initAI", _this] };
+_initGroup = { format ["{{ [_x, '%1'] call BRM_fnc_initAI } forEach (crew (vehicle _x)) } forEach (units _group);", _this] };
+_initUnit = { format ["{{ [_x, '%1'] call BRM_fnc_initAI } forEach (crew (vehicle _x)) } forEach (units (group ((crew (vehicle _unit)) select 0)));", _this] };
 
-switch (_TypNumber) do
-{
+switch (_TypNumber) do {
 //-------------------------------------------------------------------------------------------------------------------------------------------
 //------------ Events => Create | ReachWP | NotAliveGroup | NotAliveUnit | (BeforeReduce) | (AfterBuildUp)  | (DetectEnemys) ----------------
 //-------------------------------------------------------------------------------------------------------------------------------------------

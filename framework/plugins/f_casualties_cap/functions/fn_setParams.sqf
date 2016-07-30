@@ -1,14 +1,5 @@
-
-// =============================================================================
-//  Player casualty cap
-// =============================================================================
-
-switch (param_cas_cap) do {
-    case 0: { mission_cas_cap = -1 };
-    case 1: { mission_cas_cap = 80 };
-    case 2: { mission_cas_cap = 90 };
-    case 3: { mission_cas_cap = 95 };
-    case 4: { mission_cas_cap = 100 };
+if (!(isNil "BRM_FMK_f_cas_cap_fnc_setParams")) then {
+    [
+        ["p_cas_cap", -1] call BIS_fnc_getParamValue
+    ] call BRM_FMK_f_cas_cap_fnc_setParams;
 };
-
-// =============================================================================

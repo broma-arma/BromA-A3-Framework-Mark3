@@ -1,3 +1,1 @@
-
-if !(isClass(configFile>>"CfgPatches">>"task_force_radio")) exitWith {};
-#include "includes\settings.sqf"
+if (!(isNil "BRM_FMK_TFAR_fnc_postInit")) then { [] call BRM_FMK_TFAR_fnc_postInit };

@@ -1,16 +1,14 @@
-class p_round_params
-{
+
+class p_round_params {
 	title = "Amount of rounds needed to win";
-	values[] = {0,1,2,3,4};
+	values[] = {1,2,3,4,5};
 	texts[] = {"1","2","3","4","5"};
-	default = 2;
-	code = "param_round_sys_rounds = %1";
+	default = 3;
 };
-class p_round_time_limit
-{
+
+class p_round_time_limit {
 	title = "Time limit per round";
-	values[] = {0,1,2,3,4,5};
+	values[] = {1, 5, 15, 30, 60, 99999999};
 	texts[] = {"1 minute","5 minutes","15 minutes","30 minutes","1 hour", "No limit"};
-	default = 2;
-	code = "param_round_sys_time_limit = %1";
+	default = 15;
 };

@@ -20,7 +20,7 @@ if ((_DAC_WP_Typ < 5) && (_DAC_WP_Typ >= 0)) then {
 	{
 		case 0:	{
                     //----------------- #Sol----#Veh----#Tan----#Air----#Camp----;
-                    _CheckRadius1 	= [3, 3, 3, 3, 3];
+                    _CheckRadius1 	= [3, 10, 10, 10, 3];
                     _CheckRadius2 	= [	15,		20,		20,		40,		40		];
                     _checkAreaH   	= [	40,		15,		20,		10,		20		];
                     _checkMaxH    	= [	5000,	5000,	5000,	5000,	5000	];
@@ -35,7 +35,7 @@ if ((_DAC_WP_Typ < 5) && (_DAC_WP_Typ >= 0)) then {
                 };
 		case 1:	{
                     //----------------- #Sol----#Veh----#Tan----#Air----#Camp----;
-                    _CheckRadius1 	= [3, 3, 3, 3, 3];
+                    _CheckRadius1 	= [3, 10, 10, 10, 3];
                     _CheckRadius2 	= [	12,		15,		15,		30,		30		];
                     _checkAreaH   	= [	50,		20,		25,		15,		15		];
                     _checkMaxH    	= [	5000,	5000,	5000,	5000,	5000	];
@@ -50,7 +50,7 @@ if ((_DAC_WP_Typ < 5) && (_DAC_WP_Typ >= 0)) then {
                 };
 		case 2:	{
                     //----------------- #Sol----#Veh----#Tan----#Air----#Camp----;
-                    _CheckRadius1 	= [3, 3, 3, 3, 3];
+                    _CheckRadius1 	= [3, 10, 10, 10, 3];
                     _CheckRadius2 	= [	10,		10,		10,		20,		20		];
                     _checkAreaH   	= [	75,		25,		25,		20,		20		];
                     _checkMaxH    	= [	5000,	5000,	5000,	5000,	5000	];
@@ -65,7 +65,7 @@ if ((_DAC_WP_Typ < 5) && (_DAC_WP_Typ >= 0)) then {
                 };
 		case 3:	{
                     //----------------- #Sol----#Veh----#Tan----#Air----#Camp----;
-                    _CheckRadius1 	= [3, 3, 3, 3, 3];
+                    _CheckRadius1 	= [3, 10, 10, 10, 3];
                     _CheckRadius2 	= [	50,		30,		30,		40,		50		];
                     _checkAreaH   	= [	100,	1,		1,		10,		10		];
                     _checkMaxH    	= [	5000,	5000,	5000,	5000,	5000	];
@@ -80,7 +80,7 @@ if ((_DAC_WP_Typ < 5) && (_DAC_WP_Typ >= 0)) then {
                 };
 		case 4:	{
                     //----------------- #Sol----#Veh----#Tan----#Air----#Camp----;
-                    _CheckRadius1 	= [3, 3, 3, 3, 3];
+                    _CheckRadius1 	= [3, 10, 10, 10, 3];
                     _CheckRadius2 	= [ 0,		0,		0,		0,		0		];
                     _checkAreaH   	= [	50,		50,		50,		50,		50		];
                     _checkMaxH    	= [	5000,	5000,	5000,	5000,	5000	];
@@ -95,7 +95,7 @@ if ((_DAC_WP_Typ < 5) && (_DAC_WP_Typ >= 0)) then {
                 };
 		case 5:	{
                     //----------------- #Sol----#Veh----#Tan----#Air----#Camp----;
-                    _CheckRadius1 	= [3, 3, 3, 3, 3];
+                    _CheckRadius1 	= [3, 10, 10, 10, 3];
                     _CheckRadius2 	= [	10,		10,		10,		20,		20		];
                     _checkAreaH   	= [	50,		50,		50,		50,		50		];
                     _checkMaxH    	= [	5000,	5000,	5000,	5000,	5000	];

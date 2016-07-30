@@ -16,10 +16,10 @@ class EditorData
 	};
 	class Camera
 	{
-		pos[]={245.12724,22.29171,878.60907};
-		dir[]={0.017804882,-0.46605045,0.88458157};
-		up[]={0.0093788402,0.88475585,0.46596155};
-		aside[]={0.99980068,-2.5320332e-009,-0.020123992};
+		pos[]={240.15529,78.288292,840.28809};
+		dir[]={0.022671744,-0.29598305,0.95495391};
+		up[]={0.0070256204,0.95518446,0.29593039};
+		aside[]={0.99974567,1.4066063e-007,-0.02373527};
 	};
 };
 binarizationWanted=0;
@@ -7493,7 +7493,7 @@ class Mission
 			{
 				position[]={291.77301,5,949.07098};
 			};
-			title="DAC Trigger";
+			title="DAC Zone";
 			description="This trigger will spawn a DAC zone. See more at your ""mission\objectives\mission_AI.sqf"" script.";
 			id=556;
 		};

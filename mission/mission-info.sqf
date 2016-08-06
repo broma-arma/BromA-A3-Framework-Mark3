@@ -20,7 +20,7 @@ maxPlayers = 50;
 
 onLoadName = "MISSION NAME";
 author = "MISSION MAKER";
-onLoadMission = "Powered by BromA Framework Mark 3 for ArmA 3";
+onLoadMission = "Powered by BromA Framework MK 4 for ArmA 3";
 loadScreen = "\broma_framework\assets\images\loading-screen.jpg";
 
 // Disables certain radio channels in the mission. =============================

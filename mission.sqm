@@ -8,7 +8,7 @@ class EditorData
 	toggles=513;
 	class ItemIDProvider
 	{
-		nextID=564;
+		nextID=604;
 	};
 	class MarkerIDProvider
 	{
@@ -16,10 +16,10 @@ class EditorData
 	};
 	class Camera
 	{
-		pos[]={240.15529,78.288292,840.28809};
-		dir[]={0.022671744,-0.29598305,0.95495391};
-		up[]={0.0070256204,0.95518446,0.29593039};
-		aside[]={0.99974567,1.4066063e-007,-0.02373527};
+		pos[]={309.87659,30,812.44238};
+		dir[]={0,-0.70710683,0.70710683};
+		up[]={0,0.70710677,0.70710677};
+		aside[]={0.99999994,0,0};
 	};
 };
 binarizationWanted=0;
@@ -30,13 +30,14 @@ addons[]=
 	"A3_Characters_F",
 	"cba_xeh",
 	"A3_Characters_F_Exp_Civil",
-	"A3_Modules_F"
+	"A3_Modules_F",
+	"A3_Data_F_Exp_A_Virtual"
 };
 class AddonsMetaData
 {
 	class List
 	{
-		items=5;
+		items=6;
 		class Item0
 		{
 			className="A3_Ui_F";
@@ -72,22 +73,30 @@ class AddonsMetaData
 			author="Bohemia Interactive";
 			url="http://www.arma3.com";
 		};
+		class Item5
+		{
+			className="A3_Data_F_Exp_A";
+			name="Arma 3 Nexus Update - Main Configuration";
+			author="Bohemia Interactive";
+			url="http://www.arma3.com";
+		};
 	};
 };
 randomSeed=14247174;
 class ScenarioData
 {
 	author="Nife";
+	overviewText="Edit this description with a short explanation and important details about your mission.";
 };
 class CustomAttributes
 {
 	class Category0
 	{
-		name="Scenario";
+		name="Multiplayer";
 		class Attribute0
 		{
-			property="EnableDebugConsole";
-			expression="true";
+			property="SharedObjectives";
+			expression="if (isMultiplayer) then {[_value] spawn bis_fnc_sharedObjectives;};";
 			class Value
 			{
 				class data
@@ -99,7 +108,7 @@ class CustomAttributes
 							"SCALAR"
 						};
 					};
-					value=0;
+					value=2;
 				};
 			};
 		};
@@ -110,7 +119,7 @@ class Mission
 {
 	class Intel
 	{
-		briefingName="> SANDBOX 250 - BromA Framework MK 4 APEX 07";
+		briefingName="> SANDBOX 250 - BromA Framework MK 4 APEX 0721";
 		overviewText="Edit this description with a short explanation and important details about your mission.";
 		startWeather=0;
 		startWind=0.099999994;
@@ -128,7 +137,7 @@ class Mission
 	};
 	class Entities
 	{
-		items=164;
+		items=166;
 		class Item0
 		{
 			dataType="Marker";
@@ -6807,527 +6816,182 @@ class Mission
 		class Item90
 		{
 			dataType="Marker";
-			position[]={239.70111,1.1157339e+029,882.84503};
+			position[]={241.24091,1.1157339e+029,883.23175};
 			name="veh_blufor_Support_fuel";
-			type="Empty";
+			type="b_service";
 			id=475;
 			atlOffset=1.1157339e+029;
 		};
 		class Item91
 		{
 			dataType="Marker";
-			position[]={230.26685,1.392227e+035,882.83093};
+			position[]={231.80664,1.392227e+035,883.21765};
 			name="veh_blufor_Support_ammo";
-			type="Empty";
+			type="b_service";
 			id=476;
 			atlOffset=1.392227e+035;
 		};
 		class Item92
 		{
 			dataType="Marker";
-			position[]={258.19867,1.1520833e+035,883.20349};
+			position[]={259.7388,5,883.30994};
 			name="veh_blufor_Support_repair";
-			type="Empty";
+			type="b_service";
 			id=477;
-			atlOffset=1.1520833e+035;
 		};
 		class Item93
 		{
 			dataType="Marker";
-			position[]={248.76471,1.1157339e+029,883.20905};
+			position[]={250.30478,2.685768e+008,883.31592};
 			name="veh_blufor_Support_medical";
-			type="Empty";
+			type="b_med";
 			id=478;
-			atlOffset=1.1157339e+029;
+			atlOffset=2.685768e+008;
 		};
 		class Item94
 		{
 			dataType="Marker";
-			position[]={235.60181,1.1157339e+029,867.28906};
+			position[]={236.53055,1.1157339e+029,869.24316};
 			name="veh_blufor_Truck_1";
-			type="Empty";
+			type="b_support";
 			id=479;
 			atlOffset=1.1157339e+029;
 		};
 		class Item95
 		{
 			dataType="Marker";
-			position[]={245.28412,1.1157339e+029,867.47064};
+			position[]={246.21286,1.1157339e+029,869.20404};
 			name="veh_blufor_Truck_2";
-			type="Empty";
+			type="b_support";
 			id=480;
 			atlOffset=1.1157339e+029;
 		};
 		class Item96
 		{
 			dataType="Marker";
-			position[]={255.50983,1.1157339e+029,867.65179};
+			position[]={256.49359,1.1157339e+029,869.27582};
 			name="veh_blufor_Truck_3";
-			type="Empty";
+			type="b_support";
 			id=481;
 			atlOffset=1.1157339e+029;
 		};
 		class Item97
 		{
 			dataType="Marker";
-			position[]={231.6106,1.0789765e+029,853.08301};
+			position[]={231.03418,1.7459475e+008,854.24658};
 			name="veh_blufor_LightVehicle_1";
-			type="Empty";
+			type="b_motor_inf";
 			id=482;
-			atlOffset=1.0789765e+029;
+			atlOffset=1.7459475e+008;
 		};
 		class Item98
 		{
 			dataType="Marker";
-			position[]={238.94794,1.0789765e+029,853.2641};
+			position[]={238.42615,1.0789765e+029,854.26263};
 			name="veh_blufor_LightVehicle_2";
-			type="Empty";
+			type="b_motor_inf";
 			id=483;
 			atlOffset=1.0789765e+029;
 		};
 		class Item99
 		{
 			dataType="Marker";
-			position[]={252.97601,1.0789765e+029,853.44525};
+			position[]={252.3992,1.0789765e+029,854.22357};
 			name="veh_blufor_LightVehicle_4";
-			type="Empty";
+			type="b_motor_inf";
 			id=485;
 			atlOffset=1.0789765e+029;
 		};
 		class Item100
 		{
 			dataType="Marker";
-			position[]={260.22449,1.0789765e+029,853.80707};
+			position[]={259.92273,1.0789765e+029,854.2558};
 			name="veh_blufor_LightVehicle_5";
-			type="Empty";
+			type="b_motor_inf";
 			id=486;
 			atlOffset=1.0789765e+029;
 		};
 		class Item101
 		{
 			dataType="Marker";
-			position[]={236.06982,1.0789765e+029,836.48364};
+			position[]={238.99899,-8.7891316e-024,830.01501};
 			name="veh_blufor_HeavyVehicle_1";
-			type="Empty";
+			type="b_mech_inf";
 			id=488;
-			atlOffset=1.0789765e+029;
+			atlOffset=-5;
 		};
 		class Item102
 		{
 			dataType="Marker";
-			position[]={246.74396,1.0789765e+029,836.80463};
+			position[]={250.5264,1.0789765e+029,829.94037};
 			name="veh_blufor_HeavyVehicle_2";
-			type="Empty";
+			type="b_mech_inf";
 			id=489;
 			atlOffset=1.0789765e+029;
 		};
 		class Item103
 		{
 			dataType="Marker";
-			position[]={230.70715,0,802.62805};
+			position[]={234.01273,5,805.91223};
 			name="veh_blufor_TransportHelo_1";
-			type="Empty";
+			type="b_air";
 			id=490;
-			atlOffset=-5;
 		};
 		class Item104
 		{
 			dataType="Marker";
-			position[]={250.55243,0,803.4057};
+			position[]={254.25229,0,805.90131};
 			name="veh_blufor_TransportHelo_2";
-			type="Empty";
+			type="b_air";
 			id=491;
 			atlOffset=-5;
 		};
 		class Item105
 		{
 			dataType="Marker";
-			position[]={231.35614,0,781.61505};
+			position[]={235.8125,5,780.35236};
 			name="veh_blufor_AttackHelo_1";
-			type="Empty";
+			type="b_air";
 			id=492;
-			atlOffset=-5;
 		};
 		class Item106
 		{
 			dataType="Marker";
-			position[]={251.84949,0,782.39301};
+			position[]={256.68811,0,780.23773};
 			name="veh_blufor_AttackHelo_2";
-			type="Empty";
+			type="b_air";
 			id=493;
 			atlOffset=-5;
 		};
 		class Item107
 		{
 			dataType="Marker";
-			position[]={242.90015,1.498748e+038,755.41406};
+			position[]={245.56248,1.7459475e+008,755.74652};
 			name="veh_blufor_AttackPlane_1";
-			type="Empty";
+			type="b_plane";
 			id=494;
-			atlOffset=1.498748e+038;
+			atlOffset=1.7459475e+008;
 		};
 		class Item108
 		{
 			dataType="Marker";
-			position[]={239.698,7.2347707e+019,957.01099};
+			position[]={239.698,-1678877.5,957.01099};
 			name="vehTaskEnemyVehicle_opfor_LightVehicle_1";
-			type="Empty";
+			type="o_motor_inf";
 			angle=272.72989;
 			id=495;
-			atlOffset=7.2347707e+019;
+			atlOffset=-1678882.5;
 		};
 		class Item109
 		{
 			dataType="Marker";
-			position[]={246.37006,1.0789765e+029,853.53558};
+			position[]={245.84824,1.0789765e+029,854.20404};
 			name="veh_blufor_LightVehicle_3";
-			type="Empty";
+			type="b_motor_inf";
 			id=484;
 			atlOffset=1.0789765e+029;
 		};
 		class Item110
-		{
-			dataType="Marker";
-			position[]={822.49664,0,880.55865};
-			name="veh_indfor_Support_fuel_1";
-			type="Empty";
-			id=506;
-			atlOffset=-5;
-		};
-		class Item111
-		{
-			dataType="Marker";
-			position[]={813.06256,1.392227e+035,880.54492};
-			name="veh_indfor_Support_ammo_1";
-			type="Empty";
-			id=507;
-			atlOffset=1.392227e+035;
-		};
-		class Item112
-		{
-			dataType="Marker";
-			position[]={840.99445,1.1520833e+035,880.91748};
-			name="veh_indfor_Support_repair_1";
-			type="Empty";
-			id=508;
-			atlOffset=1.1520833e+035;
-		};
-		class Item113
-		{
-			dataType="Marker";
-			position[]={831.56036,1.1157339e+029,880.92303};
-			name="veh_indfor_Support_medical_1";
-			type="Empty";
-			id=509;
-			atlOffset=1.1157339e+029;
-		};
-		class Item114
-		{
-			dataType="Marker";
-			position[]={818.39752,1.1157339e+029,865.00305};
-			name="veh_indfor_Truck_4";
-			type="Empty";
-			id=510;
-			atlOffset=1.1157339e+029;
-		};
-		class Item115
-		{
-			dataType="Marker";
-			position[]={828.0799,1.1157339e+029,865.18463};
-			name="veh_indfor_Truck_5";
-			type="Empty";
-			id=511;
-			atlOffset=1.1157339e+029;
-		};
-		class Item116
-		{
-			dataType="Marker";
-			position[]={838.30548,1.1157339e+029,865.36578};
-			name="veh_indfor_Truck_6";
-			type="Empty";
-			id=512;
-			atlOffset=1.1157339e+029;
-		};
-		class Item117
-		{
-			dataType="Marker";
-			position[]={814.40631,1.0789765e+029,850.797};
-			name="veh_indfor_LightVehicle_6";
-			type="Empty";
-			id=513;
-			atlOffset=1.0789765e+029;
-		};
-		class Item118
-		{
-			dataType="Marker";
-			position[]={821.74371,1.0789765e+029,850.97809};
-			name="veh_indfor_LightVehicle_7";
-			type="Empty";
-			id=514;
-			atlOffset=1.0789765e+029;
-		};
-		class Item119
-		{
-			dataType="Marker";
-			position[]={835.77179,1.0789765e+029,851.15924};
-			name="veh_indfor_LightVehicle_8";
-			type="Empty";
-			id=515;
-			atlOffset=1.0789765e+029;
-		};
-		class Item120
-		{
-			dataType="Marker";
-			position[]={843.02008,1.0789765e+029,851.52106};
-			name="veh_indfor_LightVehicle_9";
-			type="Empty";
-			id=516;
-			atlOffset=1.0789765e+029;
-		};
-		class Item121
-		{
-			dataType="Marker";
-			position[]={818.86554,1.0789765e+029,834.19763};
-			name="veh_indfor_HeavyVehicle_3";
-			type="Empty";
-			id=517;
-			atlOffset=1.0789765e+029;
-		};
-		class Item122
-		{
-			dataType="Marker";
-			position[]={829.53961,1.0789765e+029,834.51862};
-			name="veh_indfor_HeavyVehicle_4";
-			type="Empty";
-			id=518;
-			atlOffset=1.0789765e+029;
-		};
-		class Item123
-		{
-			dataType="Marker";
-			position[]={813.50299,0,800.34204};
-			name="veh_indfor_TransportHelo_3";
-			type="Empty";
-			id=519;
-			atlOffset=-5;
-		};
-		class Item124
-		{
-			dataType="Marker";
-			position[]={833.34821,0,801.11969};
-			name="veh_indfor_TransportHelo_4";
-			type="Empty";
-			id=520;
-			atlOffset=-5;
-		};
-		class Item125
-		{
-			dataType="Marker";
-			position[]={814.15192,0,779.32904};
-			name="veh_indfor_AttackHelo_3";
-			type="Empty";
-			id=521;
-			atlOffset=-5;
-		};
-		class Item126
-		{
-			dataType="Marker";
-			position[]={834.64508,0,780.10699};
-			name="veh_indfor_AttackHelo_4";
-			type="Empty";
-			id=522;
-			atlOffset=-5;
-		};
-		class Item127
-		{
-			dataType="Marker";
-			position[]={825.69586,1.498748e+038,753.12805};
-			name="veh_indfor_AttackPlane_2";
-			type="Empty";
-			id=523;
-			atlOffset=1.498748e+038;
-		};
-		class Item128
-		{
-			dataType="Marker";
-			position[]={829.16583,1.0789765e+029,851.24957};
-			name="veh_indfor_LightVehicle_10";
-			type="Empty";
-			id=524;
-			atlOffset=1.0789765e+029;
-		};
-		class Item129
-		{
-			dataType="Marker";
-			position[]={1540.5881,1.1228293e+026,876.0365};
-			name="veh_opfor_Support_fuel_2";
-			type="Empty";
-			id=525;
-			atlOffset=1.1228293e+026;
-		};
-		class Item130
-		{
-			dataType="Marker";
-			position[]={1531.1536,1.392227e+035,876.02234};
-			name="veh_opfor_Support_ammo_2";
-			type="Empty";
-			id=526;
-			atlOffset=1.392227e+035;
-		};
-		class Item131
-		{
-			dataType="Marker";
-			position[]={1559.0857,1.1520833e+035,876.3949};
-			name="veh_opfor_Support_repair_2";
-			type="Empty";
-			id=527;
-			atlOffset=1.1520833e+035;
-		};
-		class Item132
-		{
-			dataType="Marker";
-			position[]={1549.6516,1.1157339e+029,876.40045};
-			name="veh_opfor_Support_medical_2";
-			type="Empty";
-			id=528;
-			atlOffset=1.1157339e+029;
-		};
-		class Item133
-		{
-			dataType="Marker";
-			position[]={1536.4885,1.1157339e+029,860.48047};
-			name="veh_opfor_Truck_7";
-			type="Empty";
-			id=529;
-			atlOffset=1.1157339e+029;
-		};
-		class Item134
-		{
-			dataType="Marker";
-			position[]={1546.1711,1.1157339e+029,860.66205};
-			name="veh_opfor_Truck_8";
-			type="Empty";
-			id=530;
-			atlOffset=1.1157339e+029;
-		};
-		class Item135
-		{
-			dataType="Marker";
-			position[]={1556.3967,1.1157339e+029,860.8432};
-			name="veh_opfor_Truck_9";
-			type="Empty";
-			id=531;
-			atlOffset=1.1157339e+029;
-		};
-		class Item136
-		{
-			dataType="Marker";
-			position[]={1532.4973,1.0789765e+029,846.27441};
-			name="veh_opfor_LightVehicle_11";
-			type="Empty";
-			id=532;
-			atlOffset=1.0789765e+029;
-		};
-		class Item137
-		{
-			dataType="Marker";
-			position[]={1539.8352,1.0789765e+029,846.45551};
-			name="veh_opfor_LightVehicle_12";
-			type="Empty";
-			id=533;
-			atlOffset=1.0789765e+029;
-		};
-		class Item138
-		{
-			dataType="Marker";
-			position[]={1553.863,1.0789765e+029,846.63666};
-			name="veh_opfor_LightVehicle_13";
-			type="Empty";
-			id=534;
-			atlOffset=1.0789765e+029;
-		};
-		class Item139
-		{
-			dataType="Marker";
-			position[]={1561.1116,1.0789765e+029,846.99847};
-			name="veh_opfor_LightVehicle_14";
-			type="Empty";
-			id=535;
-			atlOffset=1.0789765e+029;
-		};
-		class Item140
-		{
-			dataType="Marker";
-			position[]={1536.9568,1.0789765e+029,829.67505};
-			name="veh_opfor_HeavyVehicle_5";
-			type="Empty";
-			id=536;
-			atlOffset=1.0789765e+029;
-		};
-		class Item141
-		{
-			dataType="Marker";
-			position[]={1547.6311,1.0789765e+029,829.99603};
-			name="veh_opfor_HeavyVehicle_6";
-			type="Empty";
-			id=537;
-			atlOffset=1.0789765e+029;
-		};
-		class Item142
-		{
-			dataType="Marker";
-			position[]={1531.594,0,795.81946};
-			name="veh_opfor_TransportHelo_5";
-			type="Empty";
-			id=538;
-			atlOffset=-5;
-		};
-		class Item143
-		{
-			dataType="Marker";
-			position[]={1551.4397,0,796.59711};
-			name="veh_opfor_TransportHelo_6";
-			type="Empty";
-			id=539;
-			atlOffset=-5;
-		};
-		class Item144
-		{
-			dataType="Marker";
-			position[]={1532.2434,0,774.80646};
-			name="veh_opfor_AttackHelo_5";
-			type="Empty";
-			id=540;
-			atlOffset=-5;
-		};
-		class Item145
-		{
-			dataType="Marker";
-			position[]={1552.7366,0,775.58441};
-			name="veh_opfor_AttackHelo_6";
-			type="Empty";
-			id=541;
-			atlOffset=-5;
-		};
-		class Item146
-		{
-			dataType="Marker";
-			position[]={1543.7874,1.498748e+038,748.60547};
-			name="veh_opfor_AttackPlane_3";
-			type="Empty";
-			id=542;
-			atlOffset=1.498748e+038;
-		};
-		class Item147
-		{
-			dataType="Marker";
-			position[]={1547.2571,1.0789765e+029,846.72699};
-			name="veh_opfor_LightVehicle_15";
-			type="Empty";
-			id=543;
-			atlOffset=1.0789765e+029;
-		};
-		class Item148
 		{
 			dataType="Object";
 			class PositionInfo
@@ -7368,7 +7032,7 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item149
+		class Item111
 		{
 			dataType="Object";
 			class PositionInfo
@@ -7409,7 +7073,7 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item150
+		class Item112
 		{
 			dataType="Comment";
 			class PositionInfo
@@ -7420,7 +7084,7 @@ class Mission
 			description="These markers represent the vehicles that will be spawned dynamically depended on the chosen loadout. Preview the mission and try it out!";
 			id=548;
 		};
-		class Item151
+		class Item113
 		{
 			dataType="Comment";
 			class PositionInfo
@@ -7431,7 +7095,7 @@ class Mission
 			description="The units inside the trigger will have their loadout changed and will be properly initialized. Make sure you change the ""side_b"" part to whatever else you want, like ""NATO"", or ""opfor""." \n "" \n "Of course, these are not essential to the mission and can be deleted with no worries.";
 			id=550;
 		};
-		class Item152
+		class Item114
 		{
 			dataType="Comment";
 			class PositionInfo
@@ -7442,7 +7106,7 @@ class Mission
 			description="These units are the main fighting force of the BLUFOR side.";
 			id=551;
 		};
-		class Item153
+		class Item115
 		{
 			dataType="Comment";
 			class PositionInfo
@@ -7453,7 +7117,7 @@ class Mission
 			description="The expert units who have a more defined role within the mission.";
 			id=552;
 		};
-		class Item154
+		class Item116
 		{
 			dataType="Comment";
 			class PositionInfo
@@ -7464,7 +7128,7 @@ class Mission
 			description="SPRG News, always on the scene. These slots are here for fun, feel free to delete them.";
 			id=553;
 		};
-		class Item155
+		class Item117
 		{
 			dataType="Comment";
 			class PositionInfo
@@ -7475,7 +7139,7 @@ class Mission
 			description="These NPCs have been placed here to demonstrate how the Tasks System works - kill them in-game and see what happens. Feel free to delete them, but be careful not to leave them referenced within your Tasks script.";
 			id=554;
 		};
-		class Item156
+		class Item118
 		{
 			dataType="Comment";
 			class PositionInfo
@@ -7486,7 +7150,7 @@ class Mission
 			description="Example ammo box with all the equipment and gear the players will need. You may change ""blufor"" into whatever other valid value, such as ""opfor"" or even a specific loadout like ""NATO""." \n "" \n "Modify the desired cargos into the list" \n "> [""medical"",""medical_adv"",""ammo"",""radio"", ""at""]," \n "where you can add or remove types as you wish.";
 			id=555;
 		};
-		class Item157
+		class Item119
 		{
 			dataType="Comment";
 			class PositionInfo
@@ -7497,7 +7161,7 @@ class Mission
 			description="This trigger will spawn a DAC zone. See more at your ""mission\objectives\mission_AI.sqf"" script.";
 			id=556;
 		};
-		class Item158
+		class Item120
 		{
 			dataType="Comment";
 			class PositionInfo
@@ -7508,7 +7172,7 @@ class Mission
 			description="Defined extraction zones that the players must go to once the mission ends.";
 			id=557;
 		};
-		class Item159
+		class Item121
 		{
 			dataType="Comment";
 			class PositionInfo
@@ -7519,7 +7183,7 @@ class Mission
 			description="The units in charge of running the whole show.";
 			id=558;
 		};
-		class Item160
+		class Item122
 		{
 			dataType="Comment";
 			class PositionInfo
@@ -7530,7 +7194,7 @@ class Mission
 			description="The units of the RESISTANCE/INDFOR side. For more detailed reference, move west to the BLUFOR side.";
 			id=559;
 		};
-		class Item161
+		class Item123
 		{
 			dataType="Comment";
 			class PositionInfo
@@ -7541,7 +7205,7 @@ class Mission
 			description="The units of the EAST/OPFOR side. For more detailed reference, move west to the BLUFOR side.";
 			id=560;
 		};
-		class Item162
+		class Item124
 		{
 			dataType="Comment";
 			class PositionInfo
@@ -7552,7 +7216,7 @@ class Mission
 			description="Nobody knows why does this guy never actually join the sessions, but for some reason every time he's spectating the frames are a bit better, so we let him stay.";
 			id=561;
 		};
-		class Item163
+		class Item125
 		{
 			dataType="Comment";
 			class PositionInfo
@@ -7562,6 +7226,469 @@ class Mission
 			title="Unique Spawned Vehicle";
 			description="This vehicle was generated based on loadout attributes, but it retains an unique ID, that can be referenced in other scripts, such as the mission Tasks." \n "" \n """vehTaskEnemyVehicle"" means the vehicle will be named ""TaskEnemyVehicle"", and leaving it as just ""veh"" will leave it unidentified.";
 			id=563;
+		};
+		class Item126
+		{
+			dataType="Logic";
+			class PositionInfo
+			{
+				position[]={70.738998,5,35.932999};
+			};
+			isPlayable=1;
+			description="Spectator";
+			id=564;
+			type="VirtualSpectator_F";
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="AllowFreeCamera";
+					expression="_this setVariable ['AllowFreeCamera', _value];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"BOOL"
+								};
+							};
+							value=1;
+						};
+					};
+				};
+				class Attribute1
+				{
+					property="WhitelistedSides";
+					expression="_this setVariable ['WhitelistedSides', _value];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"ARRAY"
+								};
+							};
+						};
+					};
+				};
+				class Attribute2
+				{
+					property="ShowFocusInfo";
+					expression="_this setVariable ['ShowFocusInfo', _value];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"BOOL"
+								};
+							};
+							value=1;
+						};
+					};
+				};
+				class Attribute3
+				{
+					property="AllowAi";
+					expression="_this setVariable ['AllowAi', _value];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"BOOL"
+								};
+							};
+							value=1;
+						};
+					};
+				};
+				class Attribute4
+				{
+					property="Allow3PPCamera";
+					expression="_this setVariable ['Allow3PPCamera', _value];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"BOOL"
+								};
+							};
+							value=1;
+						};
+					};
+				};
+				nAttributes=5;
+			};
+		};
+		class Item127
+		{
+			dataType="Comment";
+			class PositionInfo
+			{
+				position[]={76.036003,5,36.013};
+			};
+			title="Spectator";
+			description="Allow less adventurous players to watch the missions as they unfold, without worrying about being blown up.";
+			id=565;
+		};
+		class Item128
+		{
+			dataType="Marker";
+			position[]={821.83398,-2.2294792e-018,878.91803};
+			name="veh_indfor_Support_fuel";
+			type="n_service";
+			id=566;
+			atlOffset=-5;
+		};
+		class Item129
+		{
+			dataType="Marker";
+			position[]={812.39899,-2.230313e-018,878.90399};
+			name="veh_indfor_Support_ammo";
+			type="n_service";
+			id=567;
+			atlOffset=-5;
+		};
+		class Item130
+		{
+			dataType="Marker";
+			position[]={840.33099,-5.4527816e-030,878.99597};
+			name="veh_indfor_Support_repair";
+			type="n_service";
+			id=568;
+			atlOffset=-5;
+		};
+		class Item131
+		{
+			dataType="Marker";
+			position[]={830.89697,-2.2294792e-018,879.00201};
+			name="veh_indfor_Support_medical";
+			type="n_med";
+			id=569;
+			atlOffset=-5;
+		};
+		class Item132
+		{
+			dataType="Marker";
+			position[]={817.12299,-2.230313e-018,864.92999};
+			name="veh_indfor_Truck_1";
+			type="n_support";
+			id=570;
+			atlOffset=-5;
+		};
+		class Item133
+		{
+			dataType="Marker";
+			position[]={826.80603,-5.451265e-030,864.89099};
+			name="veh_indfor_Truck_2";
+			type="n_support";
+			id=571;
+			atlOffset=-5;
+		};
+		class Item134
+		{
+			dataType="Marker";
+			position[]={837.086,-2.2294792e-018,864.96198};
+			name="veh_indfor_Truck_3";
+			type="n_support";
+			id=572;
+			atlOffset=-5;
+		};
+		class Item135
+		{
+			dataType="Marker";
+			position[]={811.62701,-5.4527816e-030,849.93298};
+			name="veh_indfor_LightVehicle_1";
+			type="n_motor_inf";
+			id=573;
+			atlOffset=-5;
+		};
+		class Item136
+		{
+			dataType="Marker";
+			position[]={819.01898,-2.230313e-018,849.94897};
+			name="veh_indfor_LightVehicle_2";
+			type="n_motor_inf";
+			id=574;
+			atlOffset=-5;
+		};
+		class Item137
+		{
+			dataType="Marker";
+			position[]={832.992,-2.2294792e-018,849.90997};
+			name="veh_indfor_LightVehicle_4";
+			type="n_motor_inf";
+			id=575;
+			atlOffset=-5;
+		};
+		class Item138
+		{
+			dataType="Marker";
+			position[]={840.51501,-5.4527816e-030,849.94202};
+			name="veh_indfor_LightVehicle_5";
+			type="n_motor_inf";
+			id=576;
+			atlOffset=-5;
+		};
+		class Item139
+		{
+			dataType="Marker";
+			position[]={819.591,-1.8749087e+009,825.70203};
+			name="veh_indfor_HeavyVehicle_1";
+			type="n_mech_inf";
+			id=577;
+			atlOffset=-1.8749087e+009;
+		};
+		class Item140
+		{
+			dataType="Marker";
+			position[]={831.11902,-68386.844,825.62701};
+			name="veh_indfor_HeavyVehicle_2";
+			type="n_mech_inf";
+			id=578;
+			atlOffset=-68391.844;
+		};
+		class Item141
+		{
+			dataType="Marker";
+			position[]={814.60498,-5.451265e-030,801.599};
+			name="veh_indfor_TransportHelo_1";
+			type="n_air";
+			id=579;
+			atlOffset=-5;
+		};
+		class Item142
+		{
+			dataType="Marker";
+			position[]={834.84497,-2.6470368e+008,801.58801};
+			name="veh_indfor_TransportHelo_2";
+			type="n_air";
+			id=580;
+			atlOffset=-2.6470368e+008;
+		};
+		class Item143
+		{
+			dataType="Marker";
+			position[]={816.40503,-68386.844,776.039};
+			name="veh_indfor_AttackHelo_1";
+			type="n_air";
+			id=581;
+			atlOffset=-68391.844;
+		};
+		class Item144
+		{
+			dataType="Marker";
+			position[]={837.28101,-5.451265e-030,775.92401};
+			name="veh_indfor_AttackHelo_2";
+			type="n_air";
+			id=582;
+			atlOffset=-5;
+		};
+		class Item145
+		{
+			dataType="Marker";
+			position[]={826.15503,-2.6470368e+008,751.43298};
+			name="veh_indfor_AttackPlane_1";
+			type="n_plane";
+			id=583;
+			atlOffset=-2.6470368e+008;
+		};
+		class Item146
+		{
+			dataType="Marker";
+			position[]={826.44098,-1.5414615e+009,849.89099};
+			name="veh_indfor_LightVehicle_3";
+			type="n_motor_inf";
+			id=584;
+			atlOffset=-1.5414615e+009;
+		};
+		class Item147
+		{
+			dataType="Marker";
+			position[]={1540.65,-1.5414615e+009,881.724};
+			name="veh_opfor_Support_fuel";
+			type="o_service";
+			id=585;
+			atlOffset=-1.5414615e+009;
+		};
+		class Item148
+		{
+			dataType="Marker";
+			position[]={1531.215,-1.1740319e-018,881.71002};
+			name="veh_opfor_Support_ammo";
+			type="o_service";
+			id=586;
+			atlOffset=-5;
+		};
+		class Item149
+		{
+			dataType="Marker";
+			position[]={1559.147,-1.5414615e+009,881.802};
+			name="veh_opfor_Support_repair";
+			type="o_service";
+			id=587;
+			atlOffset=-1.5414615e+009;
+		};
+		class Item150
+		{
+			dataType="Marker";
+			position[]={1549.713,-1.5414615e+009,881.80798};
+			name="veh_opfor_Support_medical";
+			type="o_med";
+			id=588;
+			atlOffset=-1.5414615e+009;
+		};
+		class Item151
+		{
+			dataType="Marker";
+			position[]={1535.939,-5.0762931e-024,867.73602};
+			name="veh_opfor_Truck_1";
+			type="o_support";
+			id=589;
+			atlOffset=-5;
+		};
+		class Item152
+		{
+			dataType="Marker";
+			position[]={1545.6219,-5.4527816e-030,867.69702};
+			name="veh_opfor_Truck_2";
+			type="o_support";
+			id=590;
+			atlOffset=-5;
+		};
+		class Item153
+		{
+			dataType="Marker";
+			position[]={1555.902,-5.0731124e-024,867.76801};
+			name="veh_opfor_Truck_3";
+			type="o_support";
+			id=591;
+			atlOffset=-5;
+		};
+		class Item154
+		{
+			dataType="Marker";
+			position[]={1530.443,-1.5414615e+009,852.73901};
+			name="veh_opfor_LightVehicle_1";
+			type="o_motor_inf";
+			id=592;
+			atlOffset=-1.5414615e+009;
+		};
+		class Item155
+		{
+			dataType="Marker";
+			position[]={1537.835,-5.0762931e-024,852.755};
+			name="veh_opfor_LightVehicle_2";
+			type="o_motor_inf";
+			id=593;
+			atlOffset=-5;
+		};
+		class Item156
+		{
+			dataType="Marker";
+			position[]={1551.808,-5.4527816e-030,852.716};
+			name="veh_opfor_LightVehicle_4";
+			type="o_motor_inf";
+			id=594;
+			atlOffset=-5;
+		};
+		class Item157
+		{
+			dataType="Marker";
+			position[]={1559.3311,-5.0731124e-024,852.74799};
+			name="veh_opfor_LightVehicle_5";
+			type="o_motor_inf";
+			id=595;
+			atlOffset=-5;
+		};
+		class Item158
+		{
+			dataType="Marker";
+			position[]={1538.407,-5.0762931e-024,828.508};
+			name="veh_opfor_HeavyVehicle_1";
+			type="o_mech_inf";
+			id=596;
+			atlOffset=-5;
+		};
+		class Item159
+		{
+			dataType="Marker";
+			position[]={1549.9351,-5.4527816e-030,828.43298};
+			name="veh_opfor_HeavyVehicle_2";
+			type="o_mech_inf";
+			id=597;
+			atlOffset=-5;
+		};
+		class Item160
+		{
+			dataType="Marker";
+			position[]={1533.421,-5.0731124e-024,804.40503};
+			name="veh_opfor_TransportHelo_1";
+			type="o_air";
+			id=598;
+			atlOffset=-5;
+		};
+		class Item161
+		{
+			dataType="Marker";
+			position[]={1553.661,-1.5414615e+009,804.39398};
+			name="veh_opfor_TransportHelo_2";
+			type="o_air";
+			id=599;
+			atlOffset=-1.5414615e+009;
+		};
+		class Item162
+		{
+			dataType="Marker";
+			position[]={1535.2209,-3.6901698e-024,778.84497};
+			name="veh_opfor_AttackHelo_1";
+			type="o_air";
+			id=600;
+			atlOffset=-5;
+		};
+		class Item163
+		{
+			dataType="Marker";
+			position[]={1556.097,6.947008e+008,778.72998};
+			name="veh_opfor_AttackHelo_2";
+			type="o_air";
+			id=601;
+			atlOffset=6.947008e+008;
+		};
+		class Item164
+		{
+			dataType="Marker";
+			position[]={1544.9709,-3.1510511e-018,754.23901};
+			name="veh_opfor_AttackPlane_1";
+			type="o_plane";
+			id=602;
+			atlOffset=-5;
+		};
+		class Item165
+		{
+			dataType="Marker";
+			position[]={1545.257,-5.0762931e-024,852.69702};
+			name="veh_opfor_LightVehicle_3";
+			type="o_motor_inf";
+			id=603;
+			atlOffset=-5;
 		};
 	};
 };

@@ -119,7 +119,7 @@ class Mission
 {
 	class Intel
 	{
-		briefingName="> SANDBOX 250 - BromA Framework MK 4 APEX 0721";
+		briefingName="> SANDBOX 250 - BromA Framework MK 4 APEX 073";
 		overviewText="Edit this description with a short explanation and important details about your mission.";
 		startWeather=0;
 		startWind=0.099999994;

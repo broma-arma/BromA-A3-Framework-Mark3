@@ -14,6 +14,7 @@
         _setSupTime = ["5 + ((skill _unit) * (5 * DAC_AI_Level))",2,5];
         _setHidTime = ["(((10 * DAC_AI_Level) + ((skill _leader) * 50)) / ((count units _group) + 1))"];
         _setEmpVeh  = [[500,100],[550,100]];
+        _setSupport = [0,0];
 
     // =============================================================================
 
@@ -28,7 +29,6 @@
             _setBehav   = ["careless","safe","aware"];
             _setSpeed   = ["limited","normal","full"];
             _setForm    = ["line"];
-            _setSupport = [1,0]; //support for other zones
         };
     //-------------------------------------------------------------------------------------------------------------------------
         case 1: // NORMAL
@@ -39,24 +39,21 @@
             _setBehav   = ["careless","safe","aware"];
             _setSpeed   = ["limited","normal","full"];
             _setForm    = ["line","vee","column","wedge","stag column","ech left","ech right","file","diamond"];
-            _setSupport = [1,0]; //support for other zones
         };
 	//-------------------------------------------------------------------------------------------------------------------------
         case 2: // STEALTH, Groups cross open terrain primarily by crawling and with small bounding manoeuvres. In cities groups move as straight as possible to their
 		        // waypoint avoiding roads and using every piece of cover available, peeking around corners, 360 cover, bounding manoeuvres. Not recommended for vehicles.
 
 	{
-		//_setSkill = ["aimingAccuracy","aimingShake","aimingSpeed","Endurance","spotDistance","spotTime","courage","reloadSpeed","commanding","general"];
-		_setSkill   = [   [0.2,0.3],      [0.3,0.4],    [0.3,0.4],    [0.6,0.8],   [0.3,0.5],  [0.2,0.3], [0.5,0.8],  [0.2,0.4],    [0.6,0.8], [0.4,0.6]];
-		_setCombat  = ["red"];
-		_setBehav   = ["stealth"];
-		_setSpeed   = ["full"];
-		_setForm    = ["line","vee","column","wedge","stag column","ech left","ech right","file","diamond"];
-		_setPause   = [[2,5],[5,10],[5,10],[20,30,5,5],[1,3],[0,0]];
-		_setBldgBeh = [0,1,10,600,2]; //? Disabled building garrisoning to speed up movement.
-		_setSupport = [1,0];//support for other zones
-		_setEmpVeh  = [[0,100],[150,100]]; //? Disabled empty vehicle usage since it doesnt make sense with the stealth motive.
-
+            //_setSkill = ["aimingAccuracy","aimingShake","aimingSpeed","Endurance","spotDistance","spotTime","courage","reloadSpeed","commanding","general"];
+            _setSkill   = [   [0.2,0.3],      [0.3,0.4],    [0.3,0.4],    [0.6,0.8],   [0.3,0.5],  [0.2,0.3], [0.5,0.8],  [0.2,0.4],    [0.6,0.8], [0.4,0.6]];
+            _setCombat  = ["red"];
+            _setBehav   = ["stealth"];
+            _setSpeed   = ["full"];
+            _setForm    = ["line","vee","column","wedge","stag column","ech left","ech right","file","diamond"];
+            _setPause   = [[2,5],[5,10],[5,10],[20,30,5,5],[1,3],[0,0]];
+            _setBldgBeh = [0,1,10,600,2]; //? Disabled building garrisoning to speed up movement.
+            _setEmpVeh  = [[0,100],[150,100]]; //? Disabled empty vehicle usage since it doesnt make sense with the stealth motive.
 	};
     //-------------------------------------------------------------------------------------------------------------------------
         case 3: // BASICALLY THE DEATH STAR IN TERMS OF LASERNESS
@@ -67,7 +64,6 @@
             _setBehav   = ["careless","safe","aware"];
             _setSpeed   = ["limited","normal","full"];
             _setForm    = ["line","vee","column","wedge","stag column","ech left","ech right","file","diamond"];
-            _setSupport = [1,0]; //support for other zones
         };
     //-------------------------------------------------------------------------------------------------------------------------
             Default {

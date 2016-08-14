@@ -29,17 +29,17 @@ switch (_MarkerConfig) do {
     _setShowZones 		= 2;
     _setShowWPs 		= 1;
     _setShowUnit 		= [1,1,1,1];
-    _setGroupType 		= 0;
-    _setMarkerText		= ["if(format[""%1"",_group] == ""<NULL-group>"") then {format[""<--- %1"",typeof _unit]} else {format[""%1"",count units _group]}"];
+    _setGroupType 		= 1;
+    _setMarkerText		= ["if(format[""%1"",_group] == ""<NULL-group>"") then {format["""",typeof _unit]} else {format[""(%1)"",count units _group]}"];
     _setMarkerDel 		= 1;
     _setMarkerRefresh           = [0.3,0.3];
-    _setSizeWpLine 		= [0,0];
-    _setSizeLeaderLine          = 0;
+    _setSizeWpLine 		= [1,1];
+    _setSizeLeaderLine          = 1;
     _setSizeZoneLine            = 2;
     _setSizeCampLine            = 4;
     _setSizeZoneBorder          = 4;
     _setArtiMarker 		= 1;
-    _setCampMarker 		= 1;
+    _setCampMarker 		= 2;
     _setSideColor 		= [
         "ColorRed",
         "ColorBlue",

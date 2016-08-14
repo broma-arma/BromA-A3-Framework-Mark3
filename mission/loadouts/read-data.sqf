@@ -2,7 +2,7 @@
 // =============================================================================
 // Includes the loadout sheets.
 
-if ((!((_faction) in read_local_cargo_specific))) then {
+if (_loadoutCondition) then {
     #include "\broma_framework\loadouts\faction-list.sqf"
 } else {
     #include "faction-list.sqf"

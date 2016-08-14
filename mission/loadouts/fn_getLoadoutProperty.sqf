@@ -2,6 +2,7 @@
 params ["_faction"];
 
 _assignLoadoutMode = false;
+_loadoutCondition = (!((_faction) in read_local_loadouts_specific));
 
 #include "\broma_framework\loadouts\includes\private-variables.sqf"
 #include "\broma_framework\loadouts\content\content-list.sqf"

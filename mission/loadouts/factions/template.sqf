@@ -14,8 +14,8 @@ _factionStructure = "HIGH-TIER";
 _factionCallsigns = _defaultCallsignBLUFOR;
 
 _defaultSide = WEST;
-_defaultVoice = [_voiceALTIAN, _voiceAMERICAN, _voiceBRITISH, _voiceFARSI, _voiceRUSSIAN, _voiceCHINESE, _voiceTANOAN];
-_defaultFace = [_faceGREEK, _faceWHITE, _faceBLACK, _faceASIAN, _facePERSIAN, _faceTANOAN];
+_defaultVoice = _allVoices;
+_defaultFace = _allFaces;
 _defaultName = [_nameAMERICAN];
 _defaultInsignia = "";
 _defaultColor = "blue";

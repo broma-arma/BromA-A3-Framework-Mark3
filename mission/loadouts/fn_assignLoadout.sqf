@@ -14,11 +14,11 @@
     if (!_isMan) exitWith {};
     if (!(local _unit)) exitWith {};
 
-    _loadoutCondition = (!((_faction) in read_local_loadouts_specific));
-
     #include "\broma_framework\loadouts\includes\private-variables.sqf"
     #include "\broma_framework\loadouts\includes\faction-info-index.sqf"
     #include "\broma_framework\loadouts\includes\get-faction.sqf"
+
+    _loadoutCondition = (!((_faction) in read_local_loadouts_specific));
 
     _unit setVariable ["BIS_enableRandomization", false];
 

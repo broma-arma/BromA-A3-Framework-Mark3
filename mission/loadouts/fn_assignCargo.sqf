@@ -22,14 +22,14 @@ if (isServer) then {
     _initialized = _object getVariable ["unit_initialized", false];
     if (_initialized) exitWith {};
 
-    _loadoutCondition = (!((_faction) in read_local_cargo_specific));
-
     #include "\broma_framework\loadouts\includes\private-variables.sqf"
     #include "\broma_framework\loadouts\includes\faction-info-index.sqf"
     #include "\broma_framework\loadouts\includes\clear-object.sqf"
     #include "\broma_framework\loadouts\content\content-list.sqf"
     #include "\broma_framework\loadouts\includes\get-faction.sqf"
 
+    _loadoutCondition = (!(_faction in read_local_cargo_specific));
+    
     _assignLoadoutMode = false;
 
     // READ LOADOUT DATA =======================================================

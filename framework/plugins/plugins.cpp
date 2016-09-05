@@ -18,6 +18,7 @@ USAGE:
 ================================================================================
 */
 
+
 #include "headless_client\main.cpp"
 #include "mission_conditions\main.cpp"
 #include "ace3_plugin\main.cpp"
@@ -50,6 +51,7 @@ USAGE:
 #include "agm_plugin\main.cpp"
 #include "loading_screen\main.cpp"
 #include "intros\main.cpp"
+#include "plank_building\main.cpp"
 
 // NOT USED
 // 		#include "round_system\main.cpp"

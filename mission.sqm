@@ -8,7 +8,7 @@ class EditorData
 	toggles=513;
 	class ItemIDProvider
 	{
-		nextID=604;
+		nextID=611;
 	};
 	class MarkerIDProvider
 	{
@@ -16,10 +16,10 @@ class EditorData
 	};
 	class Camera
 	{
-		pos[]={245.07219,9.2249432,915.22198};
-		dir[]={-0.70734936,-0.58786947,0.39252275};
-		up[]={-0.51403302,0.8089512,0.28524712};
-		aside[]={0.48522055,-1.2206874e-007,0.87439626};
+		pos[]={244.78885,17.839855,895.85376};
+		dir[]={0.03058097,-0.49242756,0.86984348};
+		up[]={0.017301917,0.87034398,0.49213549};
+		aside[]={0.9994033,5.6761201e-007,-0.035136607};
 	};
 };
 binarizationWanted=0;
@@ -31,7 +31,7 @@ addons[]=
 	"cba_xeh",
 	"A3_Characters_F_Exp_Civil",
 	"A3_Modules_F",
-	"Desert",
+	"ace_map",
 	"A3_Data_F_Exp_A_Virtual"
 };
 class AddonsMetaData
@@ -76,8 +76,10 @@ class AddonsMetaData
 		};
 		class Item5
 		{
-			className="Desert";
-			name="Desert";
+			className="ace_map";
+			name="ACE3 - Map";
+			author="ACE-Team";
+			url="http://ace3mod.com/";
 		};
 		class Item6
 		{
@@ -134,6 +136,10 @@ class Mission
 		forecastWind=0.099999994;
 		forecastWaves=0.099999994;
 		forecastLightnings=0.099999994;
+		rainForced=1;
+		lightningsForced=1;
+		wavesForced=1;
+		windForced=1;
 		year=2035;
 		day=28;
 		hour=14;
@@ -143,7 +149,7 @@ class Mission
 	};
 	class Entities
 	{
-		items=54;
+		items=55;
 		class Item0
 		{
 			dataType="Marker";
@@ -160,6 +166,15 @@ class Mission
 		};
 		class Item1
 		{
+			dataType="Marker";
+			position[]={237.50394,5,915.66211};
+			name="respawn_west";
+			type="Empty";
+			colorName="ColorWEST";
+			id=1;
+		};
+		class Item2
+		{
 			dataType="Trigger";
 			position[]={288.96051,5,950.07275};
 			class Attributes
@@ -173,7 +188,7 @@ class Mission
 			id=4;
 			type="EmptyDetector";
 		};
-		class Item2
+		class Item3
 		{
 			dataType="Trigger";
 			position[]={230.257,5,921.35199};
@@ -191,12 +206,12 @@ class Mission
 			id=6;
 			type="EmptyDetector";
 		};
-		class Item3
+		class Item4
 		{
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={239.67838,5.8253026,917.85364};
+				position[]={244.39799,5.8253026,918.80402};
 			};
 			side="Empty";
 			flags=4;
@@ -232,7 +247,7 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item4
+		class Item5
 		{
 			dataType="Group";
 			side="West";
@@ -310,7 +325,7 @@ class Mission
 			};
 			id=67;
 		};
-		class Item5
+		class Item6
 		{
 			dataType="Group";
 			side="Civilian";
@@ -340,7 +355,7 @@ class Mission
 			};
 			id=71;
 		};
-		class Item6
+		class Item7
 		{
 			dataType="Group";
 			side="Civilian";
@@ -370,7 +385,7 @@ class Mission
 			};
 			id=73;
 		};
-		class Item7
+		class Item8
 		{
 			dataType="Logic";
 			class PositionInfo
@@ -383,7 +398,7 @@ class Mission
 			id=75;
 			type="HeadlessClient_F";
 		};
-		class Item8
+		class Item9
 		{
 			dataType="Group";
 			side="Civilian";
@@ -513,214 +528,7 @@ class Mission
 			};
 			id=76;
 		};
-		class Item9
-		{
-			dataType="Group";
-			side="West";
-			class Attributes
-			{
-			};
-			id=84;
-		};
 		class Item10
-		{
-			dataType="Group";
-			side="West";
-			class Attributes
-			{
-			};
-			id=88;
-		};
-		class Item11
-		{
-			dataType="Group";
-			side="West";
-			class Attributes
-			{
-			};
-			id=93;
-		};
-		class Item12
-		{
-			dataType="Group";
-			side="West";
-			class Attributes
-			{
-			};
-			id=98;
-		};
-		class Item13
-		{
-			dataType="Group";
-			side="West";
-			class Attributes
-			{
-			};
-			id=102;
-		};
-		class Item14
-		{
-			dataType="Group";
-			side="West";
-			class Attributes
-			{
-			};
-			id=107;
-		};
-		class Item15
-		{
-			dataType="Group";
-			side="West";
-			class Attributes
-			{
-			};
-			id=112;
-		};
-		class Item16
-		{
-			dataType="Group";
-			side="West";
-			class Attributes
-			{
-			};
-			id=116;
-		};
-		class Item17
-		{
-			dataType="Group";
-			side="West";
-			class Attributes
-			{
-			};
-			id=121;
-		};
-		class Item18
-		{
-			dataType="Group";
-			side="West";
-			class Attributes
-			{
-			};
-			id=126;
-		};
-		class Item19
-		{
-			dataType="Group";
-			side="West";
-			class Attributes
-			{
-			};
-			id=130;
-		};
-		class Item20
-		{
-			dataType="Group";
-			side="West";
-			class Attributes
-			{
-			};
-			id=135;
-		};
-		class Item21
-		{
-			dataType="Group";
-			side="West";
-			class Attributes
-			{
-			};
-			id=140;
-		};
-		class Item22
-		{
-			dataType="Group";
-			side="West";
-			class Attributes
-			{
-			};
-			id=145;
-		};
-		class Item23
-		{
-			dataType="Group";
-			side="West";
-			class Attributes
-			{
-			};
-			id=149;
-		};
-		class Item24
-		{
-			dataType="Group";
-			side="West";
-			class Attributes
-			{
-			};
-			id=154;
-		};
-		class Item25
-		{
-			dataType="Group";
-			side="West";
-			class Attributes
-			{
-			};
-			id=159;
-		};
-		class Item26
-		{
-			dataType="Group";
-			side="West";
-			class Attributes
-			{
-			};
-			id=162;
-		};
-		class Item27
-		{
-			dataType="Group";
-			side="West";
-			class Attributes
-			{
-			};
-			id=165;
-		};
-		class Item28
-		{
-			dataType="Group";
-			side="West";
-			class Attributes
-			{
-			};
-			id=169;
-		};
-		class Item29
-		{
-			dataType="Group";
-			side="West";
-			class Attributes
-			{
-			};
-			id=174;
-		};
-		class Item30
-		{
-			dataType="Group";
-			side="West";
-			class Attributes
-			{
-			};
-			id=180;
-		};
-		class Item31
-		{
-			dataType="Group";
-			side="West";
-			class Attributes
-			{
-			};
-			id=183;
-		};
-		class Item32
 		{
 			dataType="Group";
 			side="Civilian";
@@ -773,7 +581,7 @@ class Mission
 			};
 			id=398;
 		};
-		class Item33
+		class Item11
 		{
 			dataType="Group";
 			side="Civilian";
@@ -803,7 +611,7 @@ class Mission
 			};
 			id=401;
 		};
-		class Item34
+		class Item12
 		{
 			dataType="Logic";
 			class PositionInfo
@@ -814,7 +622,7 @@ class Mission
 			id=403;
 			type="LocationEvacPoint_F";
 		};
-		class Item35
+		class Item13
 		{
 			dataType="Logic";
 			class PositionInfo
@@ -825,7 +633,7 @@ class Mission
 			id=404;
 			type="LocationEvacPoint_F";
 		};
-		class Item36
+		class Item14
 		{
 			dataType="Logic";
 			class PositionInfo
@@ -836,7 +644,7 @@ class Mission
 			id=405;
 			type="LocationEvacPoint_F";
 		};
-		class Item37
+		class Item15
 		{
 			dataType="Logic";
 			class PositionInfo
@@ -847,7 +655,7 @@ class Mission
 			id=406;
 			type="LocationEvacPoint_F";
 		};
-		class Item38
+		class Item16
 		{
 			dataType="Logic";
 			class PositionInfo
@@ -858,7 +666,166 @@ class Mission
 			id=407;
 			type="LocationEvacPoint_F";
 		};
-		class Item39
+		class Item17
+		{
+			dataType="Marker";
+			position[]={241.24091,1.1157339e+029,883.23175};
+			name="veh_blufor_Support_fuel";
+			type="b_service";
+			id=475;
+			atlOffset=1.1157339e+029;
+		};
+		class Item18
+		{
+			dataType="Marker";
+			position[]={231.80664,1.392227e+035,883.21765};
+			name="veh_blufor_Support_ammo";
+			type="b_service";
+			id=476;
+			atlOffset=1.392227e+035;
+		};
+		class Item19
+		{
+			dataType="Marker";
+			position[]={259.7388,5,883.30994};
+			name="veh_blufor_Support_repair";
+			type="b_service";
+			id=477;
+		};
+		class Item20
+		{
+			dataType="Marker";
+			position[]={250.30478,2.685768e+008,883.31592};
+			name="veh_blufor_Support_medical";
+			type="b_med";
+			id=478;
+			atlOffset=2.685768e+008;
+		};
+		class Item21
+		{
+			dataType="Marker";
+			position[]={236.53055,1.1157339e+029,869.24316};
+			name="veh_blufor_Truck_1";
+			type="b_support";
+			id=479;
+			atlOffset=1.1157339e+029;
+		};
+		class Item22
+		{
+			dataType="Marker";
+			position[]={246.21286,1.1157339e+029,869.20404};
+			name="veh_blufor_Truck_2";
+			type="b_support";
+			id=480;
+			atlOffset=1.1157339e+029;
+		};
+		class Item23
+		{
+			dataType="Marker";
+			position[]={256.49359,1.1157339e+029,869.27582};
+			name="veh_blufor_Truck_3";
+			type="b_support";
+			id=481;
+			atlOffset=1.1157339e+029;
+		};
+		class Item24
+		{
+			dataType="Marker";
+			position[]={208.89673,1.7459475e+008,853.4458};
+			name="veh_blufor_LightVehicle_1";
+			type="b_motor_inf";
+			id=482;
+			atlOffset=1.7459475e+008;
+		};
+		class Item25
+		{
+			dataType="Marker";
+			position[]={216.2887,1.0789765e+029,853.46185};
+			name="veh_blufor_LightVehicle_2";
+			type="b_motor_inf";
+			id=483;
+			atlOffset=1.0789765e+029;
+		};
+		class Item26
+		{
+			dataType="Marker";
+			position[]={230.26175,1.0789765e+029,853.42279};
+			name="veh_blufor_LightVehicle_4";
+			type="b_motor_inf";
+			id=485;
+			atlOffset=1.0789765e+029;
+		};
+		class Item27
+		{
+			dataType="Marker";
+			position[]={237.78528,1.0789765e+029,853.45502};
+			name="veh_blufor_LightVehicle_5";
+			type="b_motor_inf";
+			id=486;
+			atlOffset=1.0789765e+029;
+		};
+		class Item28
+		{
+			dataType="Marker";
+			position[]={238.99899,-8.7891316e-024,830.01501};
+			name="veh_blufor_HeavyVehicle_1";
+			type="b_mech_inf";
+			id=488;
+			atlOffset=-5;
+		};
+		class Item29
+		{
+			dataType="Marker";
+			position[]={250.5264,1.0789765e+029,829.94037};
+			name="veh_blufor_HeavyVehicle_2";
+			type="b_mech_inf";
+			id=489;
+			atlOffset=1.0789765e+029;
+		};
+		class Item30
+		{
+			dataType="Marker";
+			position[]={234.01273,5,805.91223};
+			name="veh_blufor_TransportHelo_1";
+			type="b_air";
+			id=490;
+		};
+		class Item31
+		{
+			dataType="Marker";
+			position[]={254.25229,0,805.90131};
+			name="veh_blufor_TransportHelo_2";
+			type="b_air";
+			id=491;
+			atlOffset=-5;
+		};
+		class Item32
+		{
+			dataType="Marker";
+			position[]={235.8125,5,780.35236};
+			name="veh_blufor_AttackHelo_1";
+			type="b_air";
+			id=492;
+		};
+		class Item33
+		{
+			dataType="Marker";
+			position[]={256.68811,0,780.23773};
+			name="veh_blufor_AttackHelo_2";
+			type="b_air";
+			id=493;
+			atlOffset=-5;
+		};
+		class Item34
+		{
+			dataType="Marker";
+			position[]={245.56248,1.7459475e+008,755.74652};
+			name="veh_blufor_AttackPlane_1";
+			type="b_plane";
+			id=494;
+			atlOffset=1.7459475e+008;
+		};
+		class Item35
 		{
 			dataType="Marker";
 			position[]={239.698,-1678877.5,957.01099};
@@ -868,7 +835,16 @@ class Mission
 			id=495;
 			atlOffset=-1678882.5;
 		};
-		class Item40
+		class Item36
+		{
+			dataType="Marker";
+			position[]={223.71078,1.0789765e+029,853.40326};
+			name="veh_blufor_LightVehicle_3";
+			type="b_motor_inf";
+			id=484;
+			atlOffset=1.0789765e+029;
+		};
+		class Item37
 		{
 			dataType="Comment";
 			class PositionInfo
@@ -879,7 +855,7 @@ class Mission
 			description="These markers represent the vehicles that will be spawned dynamically depended on the chosen loadout. Preview the mission and try it out!";
 			id=548;
 		};
-		class Item41
+		class Item38
 		{
 			dataType="Comment";
 			class PositionInfo
@@ -890,7 +866,7 @@ class Mission
 			description="The units inside the trigger will have their loadout changed and will be properly initialized. Make sure you change the ""side_b"" part to whatever else you want, like ""NATO"", or ""opfor""." \n "" \n "Of course, these are not essential to the mission and can be deleted with no worries.";
 			id=550;
 		};
-		class Item42
+		class Item39
 		{
 			dataType="Comment";
 			class PositionInfo
@@ -901,7 +877,7 @@ class Mission
 			description="These units are the main fighting force of the BLUFOR side.";
 			id=551;
 		};
-		class Item43
+		class Item40
 		{
 			dataType="Comment";
 			class PositionInfo
@@ -912,7 +888,7 @@ class Mission
 			description="The expert units who have a more defined role within the mission.";
 			id=552;
 		};
-		class Item44
+		class Item41
 		{
 			dataType="Comment";
 			class PositionInfo
@@ -923,7 +899,7 @@ class Mission
 			description="SPRG News, always on the scene. These slots are here for fun, feel free to delete them.";
 			id=553;
 		};
-		class Item45
+		class Item42
 		{
 			dataType="Comment";
 			class PositionInfo
@@ -934,7 +910,7 @@ class Mission
 			description="These NPCs have been placed here to demonstrate how the Tasks System works - kill them in-game and see what happens. Feel free to delete them, but be careful not to leave them referenced within your Tasks script.";
 			id=554;
 		};
-		class Item46
+		class Item43
 		{
 			dataType="Comment";
 			class PositionInfo
@@ -945,7 +921,7 @@ class Mission
 			description="Example ammo box with all the equipment and gear the players will need. You may change ""blufor"" into whatever other valid value, such as ""opfor"" or even a specific loadout like ""NATO""." \n "" \n "Modify the desired cargos into the list" \n "> [""medical"",""medical_adv"",""ammo"",""radio"", ""at""]," \n "where you can add or remove types as you wish.";
 			id=555;
 		};
-		class Item47
+		class Item44
 		{
 			dataType="Comment";
 			class PositionInfo
@@ -956,7 +932,7 @@ class Mission
 			description="This trigger will spawn a DAC zone. See more at your ""mission\objectives\mission_AI.sqf"" script.";
 			id=556;
 		};
-		class Item48
+		class Item45
 		{
 			dataType="Comment";
 			class PositionInfo
@@ -967,7 +943,7 @@ class Mission
 			description="Defined extraction zones that the players must go to once the mission ends.";
 			id=557;
 		};
-		class Item49
+		class Item46
 		{
 			dataType="Comment";
 			class PositionInfo
@@ -978,7 +954,7 @@ class Mission
 			description="The units in charge of running the whole show.";
 			id=558;
 		};
-		class Item50
+		class Item47
 		{
 			dataType="Comment";
 			class PositionInfo
@@ -989,7 +965,7 @@ class Mission
 			description="Nobody knows why does this guy never actually join the sessions, but for some reason every time he's spectating the frames are a bit better, so we let him stay.";
 			id=561;
 		};
-		class Item51
+		class Item48
 		{
 			dataType="Comment";
 			class PositionInfo
@@ -1000,7 +976,7 @@ class Mission
 			description="This vehicle was generated based on loadout attributes, but it retains an unique ID, that can be referenced in other scripts, such as the mission Tasks." \n "" \n """vehTaskEnemyVehicle"" means the vehicle will be named ""TaskEnemyVehicle"", and leaving it as just ""veh"" will leave it unidentified.";
 			id=563;
 		};
-		class Item52
+		class Item49
 		{
 			dataType="Logic";
 			class PositionInfo
@@ -1110,7 +1086,7 @@ class Mission
 				nAttributes=5;
 			};
 		};
-		class Item53
+		class Item50
 		{
 			dataType="Comment";
 			class PositionInfo
@@ -1120,6 +1096,42 @@ class Mission
 			title="Spectator";
 			description="Allow less adventurous players to watch the missions as they unfold, without worrying about being blown up.";
 			id=565;
+		};
+		class Item51
+		{
+			dataType="Marker";
+			position[]={253.909,3.6082795e+022,853.599};
+			name="veh_blufor_MRAPVehicle_1";
+			type="b_motor_inf";
+			id=604;
+			atlOffset=3.6082795e+022;
+		};
+		class Item52
+		{
+			dataType="Marker";
+			position[]={261.30099,9.1601725e+020,853.61499};
+			name="veh_blufor_MRAPVehicle_2";
+			type="b_motor_inf";
+			id=605;
+			atlOffset=9.1601725e+020;
+		};
+		class Item53
+		{
+			dataType="Marker";
+			position[]={275.27399,8.6657777e+013,853.57599};
+			name="veh_blufor_MobileArty_4";
+			type="b_motor_inf";
+			id=606;
+			atlOffset=8.6657777e+013;
+		};
+		class Item54
+		{
+			dataType="Marker";
+			position[]={268.72299,4.2655938e-006,853.55701};
+			name="veh_blufor_AntiAir_3";
+			type="b_motor_inf";
+			id=608;
+			atlOffset=-4.9999957;
 		};
 	};
 };

@@ -1,9 +1,9 @@
 <p align="center">
-  <a href="https://github.com/Neefay/BromA-A3-Framework-Mark3">
-   <img src="http://puu.sh/gvzlF/ab592e6390.png" alt="BromA Framework">
+  <a href="https://github.com/broma-arma/BromA-A3-Framework-Mark3">
+   <img src="https://user-images.githubusercontent.com/204475/176462585-ff1a60ba-f562-49bb-91c4-d82ee31e35a1.png" alt="BromA Framework">
   </a>
    <br/><br/>
-  <a href="https://github.com/Neefay/BromA-A3-Framework-Mark3/commits/master">
+  <a href="https://github.com/broma-arma/BromA-A3-Framework-Mark3/commits/master">
     <img src="https://img.shields.io/badge/build-074-blue.svg" alt="Current version">
   </a>
   <img src="https://img.shields.io/badge/stable-yes-green.svg" alt="Stable">
@@ -36,8 +36,8 @@ Also keeping up with good practices, most functionality is modular and therefore
 *	Very effective loadout system.
 *	Well organized and context-agnostic.
 
-[Full plugin list](https://github.com/Neefay/BromA-A3-Framework-Mark3/wiki/Plugins).
+[Full plugin list](https://github.com/broma-arma/BromA-A3-Framework-Mark3/wiki/Plugins).
 
 The framework is as context agnostic as possible, meaning you can just change one value and your mission will change from a COOP into a TVT or even a COTVT - everything is already pre-configured to be flexible and as little as possible assumptions are made about the mission itself.
 
-For more details on how to develop your own missions, please check out the [Wiki](https://github.com/Neefay/BromA-A3-Framework-Mark3/wiki).
+For more details on how to develop your own missions, please check out the [Wiki](https://github.com/broma-arma/BromA-A3-Framework-Mark3/wiki).

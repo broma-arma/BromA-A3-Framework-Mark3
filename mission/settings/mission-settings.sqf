@@ -166,21 +166,6 @@ endings_tvt_side_c_defeat = "side_a_defeat";    // (TVT) Side C wins the mission
 [] call BRM_FMK_fnc_assignSideProperties;
 
 // =============================================================================
-//  Load the ACE3 settings file.
-// =============================================================================
-#include "mods-settings\ace3-settings.sqf"
-
-// =============================================================================
-//  Load the TFAR settings file.
-// =============================================================================
-#include "mods-settings\tfar-settings.sqf"
-
-// =============================================================================
-//  Load the ACRE2 settings file.
-// =============================================================================
-#include "mods-settings\acre2-settings.sqf"
-
-// =============================================================================
 //  Load the Framework plugins settings file.
 // =============================================================================
 #include "plugin-settings.sqf"

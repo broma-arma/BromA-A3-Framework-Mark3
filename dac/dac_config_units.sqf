@@ -14,13 +14,13 @@ private ["_TypNumber","_TempArray","_Unit_Pool_S","_Unit_Pool_V","_Unit_Pool_T",
 _TypNumber = _this select 0;_TempArray = [];
 
 _OFaction = [EAST, "FACTION"] call BRM_FMK_fnc_getSideInfo;
-_OVehicles = [_OFaction, "VEHICLES"] call BRM_fnc_getLoadoutProperty;
+_OVehicles = [_OFaction, "VEHICLES"] call BRM_FMK_fnc_getLoadoutProperty;
 
 _BFaction = [WEST, "FACTION"] call BRM_FMK_fnc_getSideInfo;
-_BVehicles = [_BFaction, "VEHICLES"] call BRM_fnc_getLoadoutProperty;
+_BVehicles = [_BFaction, "VEHICLES"] call BRM_FMK_fnc_getLoadoutProperty;
 
 _IFaction = [RESISTANCE, "FACTION"] call BRM_FMK_fnc_getSideInfo;
-_IVehicles = [_IFaction, "VEHICLES"] call BRM_fnc_getLoadoutProperty;
+_IVehicles = [_IFaction, "VEHICLES"] call BRM_FMK_fnc_getLoadoutProperty;
 
 // =============================================================================
 

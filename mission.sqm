@@ -252,7 +252,7 @@ class Mission
 			{
 				text="Executes code to the units inside the trigger.";
 				condition="true";
-				onActivation="_nul = [thisTrigger, ""(side _x == civilian)"", ""[_x, 'side_b'] call BRM_fnc_initAI""] spawn BRM_FMK_fnc_callCodeArea";
+				onActivation="_nul = [thisTrigger, ""(side _x == civilian)"", ""[_x, 'side_b'] call BRM_FMK_fnc_initAI""] spawn BRM_FMK_fnc_callCodeArea";
 				sizeA=4.0289998;
 				sizeB=3.6459999;
 				sizeC=0;
@@ -275,7 +275,7 @@ class Mission
 			{
 				skill=1;
 				lock="UNLOCKED";
-				init="[this, ""blufor"", [""medical"",""medical_adv"",""ammo"",""radio"", ""at""]] call BRM_fnc_assignCargo";
+				init="[this, ""blufor"", [""medical"",""medical_adv"",""ammo"",""radio"", ""at""]] call BRM_FMK_fnc_assignCargo";
 			};
 			id=60;
 			type="B_CargoNet_01_ammo_F";
@@ -12648,7 +12648,7 @@ class Mission
 			{
 				skill=1;
 				lock="UNLOCKED";
-				init="[this, ""indfor"", [""medical"",""medical_adv"",""ammo"",""radio"", ""at""]] call BRM_fnc_assignCargo";
+				init="[this, ""indfor"", [""medical"",""medical_adv"",""ammo"",""radio"", ""at""]] call BRM_FMK_fnc_assignCargo";
 			};
 			id=545;
 			type="I_CargoNet_01_ammo_F";
@@ -12689,7 +12689,7 @@ class Mission
 			{
 				skill=1;
 				lock="UNLOCKED";
-				init="[this, ""opfor"", [""medical"",""medical_adv"",""ammo"",""radio"", ""at""]] call BRM_fnc_assignCargo";
+				init="[this, ""opfor"", [""medical"",""medical_adv"",""ammo"",""radio"", ""at""]] call BRM_FMK_fnc_assignCargo";
 			};
 			id=547;
 			type="O_CargoNet_01_ammo_F";

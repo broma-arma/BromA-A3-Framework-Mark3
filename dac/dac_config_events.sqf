@@ -41,8 +41,8 @@ switch (_TypNumber) do {
 	};
 };
 
-private _initGroup = format ["{ [_x, '%1'] call BRM_fnc_initAI } forEach units _group;", _loadout];
-private _initUnit = format ["[_unit, '%1'] call BRM_fnc_initAI;", _loadout];
+private _initGroup = format ["{ [_x, '%1'] call BRM_FMK_fnc_initAI } forEach units _group;", _loadout];
+private _initUnit = format ["[_unit, '%1'] call BRM_FMK_fnc_initAI;", _loadout];
 
 _Events_Unit_S  =	[[_initGroup],[],[],[],[],[_initUnit],[]];
 _Events_Unit_V  = 	[[_initGroup],[],[],[],[],[_initUnit],[]];

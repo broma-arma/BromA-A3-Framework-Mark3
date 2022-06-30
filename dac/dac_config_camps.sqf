@@ -21,7 +21,7 @@ switch (_CampTyp) do {
         _campRandomObj = [];
         _campWall      = _campInfo select CAMP_RET_WALLS;
         _ammoBoxes     = _campInfo select CAMP_RET_AMMO;
-        _campObjInit   = [[],[format ["[_x, 'opfor', %1] remoteExecCall ['BRM_fnc_assignCargo', 2];", _ammoBoxes]],[],[],[],[],[]];
+        _campObjInit   = [[],[format ["[_x, 'opfor', %1] remoteExecCall ['BRM_FMK_fnc_assignCargo', 2];", _ammoBoxes]],[],[],[],[],[]];
     };
 // =============================================================================
     case 1: { // BLUFOR CAMP
@@ -36,7 +36,7 @@ switch (_CampTyp) do {
         _campRandomObj = [];
         _campWall      = _campInfo select CAMP_RET_WALLS;
         _ammoBoxes     = _campInfo select CAMP_RET_AMMO;
-        _campObjInit   = [[],[format ["[_x, 'blufor', %1] remoteExecCall ['BRM_fnc_assignCargo', 2];", _ammoBoxes]],[],[],[],[],[]];
+        _campObjInit   = [[],[format ["[_x, 'blufor', %1] remoteExecCall ['BRM_FMK_fnc_assignCargo', 2];", _ammoBoxes]],[],[],[],[],[]];
     };
 // =============================================================================
     case 2: { // INDFOR CAMP
@@ -51,7 +51,7 @@ switch (_CampTyp) do {
         _campRandomObj = [];
         _campWall      = _campInfo select CAMP_RET_WALLS;
         _ammoBoxes     = _campInfo select CAMP_RET_AMMO;
-        _campObjInit   = [[],[format ["[_x, 'indfor', %1] remoteExecCall ['BRM_fnc_assignCargo', 2];", _ammoBoxes]],[],[],[],[],[]];
+        _campObjInit   = [[],[format ["[_x, 'indfor', %1] remoteExecCall ['BRM_FMK_fnc_assignCargo', 2];", _ammoBoxes]],[],[],[],[],[]];
     };
 // =============================================================================
     default {

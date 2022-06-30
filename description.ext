@@ -68,3 +68,10 @@ class cfgNotifications {
         #include "framework\plugins\plugins.cpp"
     #undef BRM_PLUGIN_NOTIFICATIONS
 };
+
+// ============================================================================
+//    Mission framework version.                                               |
+// ============================================================================
+class BRM_Framework {
+    mission_version[] = {0, 7, 5, 0};
+};

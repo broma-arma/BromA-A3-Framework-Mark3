@@ -171,11 +171,6 @@ endings_tvt_side_c_defeat = "side_a_defeat";    // (TVT) Side C wins the mission
 #include "mods-settings\ace3-settings.sqf"
 
 // =============================================================================
-//  Load the AGM settings file.
-// =============================================================================
-#include "mods-settings\agm-settings.sqf"
-
-// =============================================================================
 //  Load the TFAR settings file.
 // =============================================================================
 #include "mods-settings\tfar-settings.sqf"

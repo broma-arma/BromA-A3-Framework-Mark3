@@ -48,7 +48,6 @@ USAGE:
 #include "commander_lock\main.cpp"
 #include "radiofreq\main.cpp"
 #include "mission_maker_tools\main.cpp"
-#include "agm_plugin\main.cpp"
 #include "loading_screen\main.cpp"
 #include "intros\main.cpp"
 #include "plank_building\main.cpp"

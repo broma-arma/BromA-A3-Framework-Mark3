@@ -4,37 +4,26 @@
 //
 // =============================================================================
 
-switch (true) do {
-    case (mission_AGM_enabled): {
-        _suppliesMEDIC = [[_unit,[_bandage,_countBANDAGE], [_morphine,_countMORPHINE],[_epi,_countEPI],[_bloodbag,_countBLOODBAG]]];
-        _suppliesNORMAL = [[_unit,[_bandage, 2], [_morphine,1],[_epi, 1]]];
-    };
-
-    case (mission_ACE3_enabled): {
-
-        switch (mission_ace3_medical_level) do {
-
-            case 1: { // SIMPLE
-                _suppliesMEDIC = [[_fieldDressing,_countBANDAGE],[_elasticBandage, _countBANDAGE],[_quickClot, _countBANDAGE],[_morphine,_countMORPHINE],[_epi,_countEPI],[_bloodbag,_countBLOODBAG]];
-                _suppliesNORMAL = [[_fieldDressing, 2], [_morphine,1],[_epi, 1]];
-            };
-            case 2: { // ADVANCED
-                _suppliesMEDIC = [
-                    [_packingBandage, _countBANDAGE],[_elasticBandage, _countBANDAGE],[_quickClot, _countBANDAGE],
-                    [_tourniquet, _countCAT],
-                    [_morphine, _countMORPHINE],[_epi, _countEPI],
-                    [_blood500, _countBLOODBAG],
-                    [_defib, 1],[_surgKit, 1]
-                ];
-                _suppliesNORMAL = [[_fieldDressing, 2],[_packingBandage, 3],[_quickClot, 2],[_elasticBandage, 2],[_tourniquet, 1],[_morphine,1],[_epi,1]];
-            };
-        };
-    };
-
-    default {
-        _suppliesMEDIC = [["FirstAidKit",20],["Medikit",1]];
-        _suppliesNORMAL = [["FirstAidKit",3]];
-    };
+if (mission_ACE3_enabled) then {
+	switch (mission_ace3_medical_level) do {
+		case 1: { // SIMPLE
+			_suppliesMEDIC = [[_fieldDressing,_countBANDAGE],[_elasticBandage, _countBANDAGE],[_quickClot, _countBANDAGE],[_morphine,_countMORPHINE],[_epi,_countEPI],[_bloodbag,_countBLOODBAG]];
+			_suppliesNORMAL = [[_fieldDressing, 2], [_morphine,1],[_epi, 1]];
+		};
+		case 2: { // ADVANCED
+			_suppliesMEDIC = [
+				[_packingBandage, _countBANDAGE],[_elasticBandage, _countBANDAGE],[_quickClot, _countBANDAGE],
+				[_tourniquet, _countCAT],
+				[_morphine, _countMORPHINE],[_epi, _countEPI],
+				[_blood500, _countBLOODBAG],
+				[_defib, 1],[_surgKit, 1]
+			];
+			_suppliesNORMAL = [[_fieldDressing, 2],[_packingBandage, 3],[_quickClot, 2],[_elasticBandage, 2],[_tourniquet, 1],[_morphine,1],[_epi,1]];
+		};
+	};
+} else {
+	_suppliesMEDIC = [["FirstAidKit",20],["Medikit",1]];
+	_suppliesNORMAL = [["FirstAidKit",3]];
 };
 // =============================================================================
 

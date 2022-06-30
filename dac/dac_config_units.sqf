@@ -30,9 +30,9 @@ switch (_TypNumber) do {
 // ============================================================================
     case 0: {
         _Unit_Pool_S = [EAST] call BRM_FMK_fnc_getUnitsArray;
-        _Unit_Pool_V = [_OVehicles, [LIGHT_VEHICLES, TRANSPORT_TRUCKS]] call BRM_FMK_fnc_getFactionVehicles;
-        _Unit_Pool_T = [_OVehicles, [MEDIUM_VEHICLES, HEAVY_VEHICLES]] call BRM_FMK_fnc_getFactionVehicles;
-        _Unit_Pool_A = [_OVehicles, [ATTACK_HELOS, TRANSPORT_HELOS]] call BRM_FMK_fnc_getFactionVehicles;
+        _Unit_Pool_V = [_OVehicles, [LIGHT_VEHICLES, TRANSPORT_TRUCKS]] call BRM_FMK_fnc_appendIndices;
+        _Unit_Pool_T = [_OVehicles, [MEDIUM_VEHICLES, HEAVY_VEHICLES]] call BRM_FMK_fnc_appendIndices;
+        _Unit_Pool_A = [_OVehicles, [ATTACK_HELOS, TRANSPORT_HELOS]] call BRM_FMK_fnc_appendIndices;
     };
 
 // ============================================================================
@@ -40,9 +40,9 @@ switch (_TypNumber) do {
 // ============================================================================
     case 1: {
         _Unit_Pool_S = [WEST] call BRM_FMK_fnc_getUnitsArray;
-        _Unit_Pool_V = [_BVehicles, [LIGHT_VEHICLES, TRANSPORT_TRUCKS]] call BRM_FMK_fnc_getFactionVehicles;
-        _Unit_Pool_T = [_BVehicles, [MEDIUM_VEHICLES, HEAVY_VEHICLES]] call BRM_FMK_fnc_getFactionVehicles;
-        _Unit_Pool_A = [_BVehicles, [ATTACK_HELOS, TRANSPORT_HELOS]] call BRM_FMK_fnc_getFactionVehicles;
+        _Unit_Pool_V = [_BVehicles, [LIGHT_VEHICLES, TRANSPORT_TRUCKS]] call BRM_FMK_fnc_appendIndices;
+        _Unit_Pool_T = [_BVehicles, [MEDIUM_VEHICLES, HEAVY_VEHICLES]] call BRM_FMK_fnc_appendIndices;
+        _Unit_Pool_A = [_BVehicles, [ATTACK_HELOS, TRANSPORT_HELOS]] call BRM_FMK_fnc_appendIndices;
     };
 
 // ============================================================================
@@ -51,9 +51,9 @@ switch (_TypNumber) do {
     case 2:
     {
         _Unit_Pool_S = [RESISTANCE] call BRM_FMK_fnc_getUnitsArray;
-        _Unit_Pool_V = [_IVehicles, [LIGHT_VEHICLES, TRANSPORT_TRUCKS]] call BRM_FMK_fnc_getFactionVehicles;
-        _Unit_Pool_T = [_IVehicles, [MEDIUM_VEHICLES, HEAVY_VEHICLES]] call BRM_FMK_fnc_getFactionVehicles;
-        _Unit_Pool_A = [_IVehicles, [ATTACK_HELOS, TRANSPORT_HELOS]] call BRM_FMK_fnc_getFactionVehicles;
+        _Unit_Pool_V = [_IVehicles, [LIGHT_VEHICLES, TRANSPORT_TRUCKS]] call BRM_FMK_fnc_appendIndices;
+        _Unit_Pool_T = [_IVehicles, [MEDIUM_VEHICLES, HEAVY_VEHICLES]] call BRM_FMK_fnc_appendIndices;
+        _Unit_Pool_A = [_IVehicles, [ATTACK_HELOS, TRANSPORT_HELOS]] call BRM_FMK_fnc_appendIndices;
     };
 
 // ============================================================================

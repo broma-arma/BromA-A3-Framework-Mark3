@@ -57,7 +57,6 @@ USAGE:
 
 // CONFLICTING
 // 		#include "ace3_spectator\main.cpp"
-//		#include "cssa3_spectator\main.cpp"
 
 // DEPRECATED
 // 		#include "alive_db\main.cpp"

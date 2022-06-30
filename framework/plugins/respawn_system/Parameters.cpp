@@ -9,18 +9,18 @@ class p_allow_respawn
 
 class p_player_lives
 {
-	title = "Player lives";
-	values[] = {1,3,5,10};
-	texts[] = {"1","3","5","10"};
-	default = 3;
+	title = "Player immediate respawn lives";
+	values[] = {1,3,5,10,-1};
+	texts[] = {"1","3","5","10","Infinite"};
+	default = -1;
 };
 
 class p_respawn_objective
 {
-	title = "Respawns per completed objective";
-	values[] = {0,3,5,10,99};
+	title = "Number of players respawned per completed objective";
+	values[] = {0,3,5,10,-1};
 	texts[] = {"0","3","5","10", "Everyone"};
-	default = 10;
+	default = -1;
 };
 
 class p_resp_bar1 {title = ""; values[] = {0}; texts[] = {""}; default = 0; };

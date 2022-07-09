@@ -1,77 +1,55 @@
-
-// ============================================================================
-//    Mission parameters.                                                      |
-// ============================================================================
+// Mission parameters.
 class Params {
-    #include "params.sqf"
+	#include "params.sqf"
 };
 
-// ============================================================================
-//    Initializes Engine, API and plugin functions.                            |
-// ============================================================================
+// Initializes Engine, API and plugin functions.
 class CfgFunctions {
-    #include "framework\engine\configs\cfgFunctions.sqf"
-    #define BRM_PLUGIN_FUNCTIONS
-        #include "framework\plugins\plugins.cpp"
-    #undef BRM_PLUGIN_FUNCTIONS
-    class BRM_endLoading {
-        class Functions {
-            file = "framework\engine\functions\engine\init";
-            class endLoading {postInit = 1;};
-        };
-    };
+	#include "framework\engine\configs\cfgFunctions.sqf"
+	#define BRM_PLUGIN_FUNCTIONS
+		#include "framework\plugins\plugins.cpp"
+	#undef BRM_PLUGIN_FUNCTIONS
+	class BRM_endLoading {
+		class Functions {
+			file = "framework\engine\functions\engine\init";
+			class endLoading {postInit = 1;};
+		};
+	};
 };
 
-// ============================================================================
-//    Mission information.                                                     |
-// ============================================================================
+// Mission information.
 #include "mission\mission-info.sqf"
 
-// ============================================================================
-//    Loads engine and plugin dialog files.                                    |
-// ============================================================================
-#include "framework\engine\dialogs\load_dialogs.cpp"
-
+// Loads plugin dialog files.
 #define BRM_PLUGIN_DIALOGS
-    #include "framework\plugins\plugins.cpp"
+	#include "framework\plugins\plugins.cpp"
 #undef BRM_PLUGIN_DIALOGS
 
-// ============================================================================
-//    Include the mission.sqm so that it may be referenced by scripts.         |
-// ============================================================================
+// Include the mission.sqm so that it may be referenced by scripts.
 class Mission {
-    #include "mission.sqm"
+	#include "mission.sqm"
 };
 
-// ============================================================================
-//    Read plugin meta-data.                                                   |
-// ============================================================================
+// Read plugin meta-data.
 class CfgPlugins {
-    #define BRM_PLUGIN_META
-        #include "framework\plugins\plugins.cpp"
-    #undef BRM_PLUGIN_META
+	#define BRM_PLUGIN_META
+		#include "framework\plugins\plugins.cpp"
+	#undef BRM_PLUGIN_META
 };
 
-// ============================================================================
-//    Debriefing and endings.                                                  |
-// ============================================================================
+// Debriefing and endings.
 class CfgDebriefing {
-    #include "mission\objectives\debriefing.sqf"
+	#include "mission\objectives\debriefing.sqf"
 };
 
-// ============================================================================
-//    Engine/Plugin notifications and alerts,                                  |
-// ============================================================================
-class cfgNotifications {
-    #include "framework\engine\configs\cfgNotifications.sqf"
-    #define BRM_PLUGIN_NOTIFICATIONS
-        #include "framework\plugins\plugins.cpp"
-    #undef BRM_PLUGIN_NOTIFICATIONS
+// Plugin notifications.
+class CfgNotifications {
+	#define BRM_PLUGIN_NOTIFICATIONS
+		#include "framework\plugins\plugins.cpp"
+	#undef BRM_PLUGIN_NOTIFICATIONS
 };
 
-// ============================================================================
-//    Mission framework version.                                               |
-// ============================================================================
+// Mission framework version.
 class BRM_Framework {
-    mission_version[] = {0, 7, 5, 0};
+	mission_version[] = {0, 7, 5, 0};
 };

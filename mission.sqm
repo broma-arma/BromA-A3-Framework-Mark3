@@ -103,7 +103,7 @@ class ScenarioData
 {
 	author="Nife";
 	overviewText="Edit this description with a short explanation and important details about your mission.";
-	onLoadMission="Powered by BromA Framework MK 4 for ArmA 3";
+	onLoadMission="Powered by the BromA Framework";
 	loadScreen="\broma_framework\assets\images\loading-screen.jpg";
 	saving=0;
 	respawnDialog=0;
@@ -209,7 +209,7 @@ class Mission
 {
 	class Intel
 	{
-		briefingName="> SANDBOX 250 - BromA Framework MK 4 APEX 073";
+		briefingName="> SANDBOX 250 - BromA Framework Template Mission";
 		overviewText="Edit this description with a short explanation and important details about your mission.";
 		resistanceEast=1;
 		startWeather=0;

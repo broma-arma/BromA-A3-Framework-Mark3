@@ -1,40 +1,16 @@
 // Mission parameters.
-class Params {
-	#include "params.sqf"
-};
-
-// Initializes Engine, API and plugin functions.
-class CfgFunctions {
-	#include "framework\engine\configs\cfgFunctions.sqf"
-	#define BRM_PLUGIN_FUNCTIONS
-		#include "framework\plugins\plugins.cpp"
-	#undef BRM_PLUGIN_FUNCTIONS
-	class BRM_endLoading {
-		class Functions {
-			file = "framework\engine\functions\engine\init";
-			class endLoading {postInit = 1;};
-		};
-	};
+class Params { // TODO Test if defining a Params class directly in the addon works
+	#if __has_include("\broma_framework\params.sqf")
+	#include "\broma_framework\params.sqf"
+	#endif
 };
 
 // Mission information.
 #include "mission\mission-info.sqf"
 
-// Loads plugin dialog files.
-#define BRM_PLUGIN_DIALOGS
-	#include "framework\plugins\plugins.cpp"
-#undef BRM_PLUGIN_DIALOGS
-
 // Include the mission.sqm so that it may be referenced by scripts.
 class Mission {
 	#include "mission.sqm"
-};
-
-// Read plugin meta-data.
-class CfgPlugins {
-	#define BRM_PLUGIN_META
-		#include "framework\plugins\plugins.cpp"
-	#undef BRM_PLUGIN_META
 };
 
 // Debriefing and endings.
@@ -42,14 +18,7 @@ class CfgDebriefing {
 	#include "mission\objectives\debriefing.sqf"
 };
 
-// Plugin notifications.
-class CfgNotifications {
-	#define BRM_PLUGIN_NOTIFICATIONS
-		#include "framework\plugins\plugins.cpp"
-	#undef BRM_PLUGIN_NOTIFICATIONS
-};
-
 // Mission framework version.
 class BRM_Framework {
-	mission_version[] = {0, 7, 5, 0};
+	mission_version[] = {1, 0, 0, 0};
 };

@@ -83,20 +83,5 @@ mission_allow_jip = true;
 // ============================================================================
 // ENDINGS
 
-// These are the endings that are called when conditions are met.
-// Some can be ignored if you aren't using the related plugin.
-endings_victory = "victory";                    // (COOP) Objectives completed.
-endings_defeat = "defeat";                      // (COOP) Critical objective failed.
-
-endings_civilians_killed = "defeat";            // (COOP) Max number of civies killed.
-endings_time_over = "defeat";                   // (COOP) Time limit reached.
-
-endings_tvt_auto = "tvt_end";                   // (TVT) Maximum casualties reached - default TVT ending!
-
-endings_tvt_side_a_victory = "side_a_victory";  // (TVT) Side A wins the mission.
-endings_tvt_side_b_victory = "side_b_victory";  // (TVT) Side B wins the mission.
-endings_tvt_side_c_victory = "side_c_victory";  // (TVT) Side C wins the mission.
-
-endings_tvt_side_a_defeat = "side_a_defeat";    // (TVT) Side A wins the mission.
-endings_tvt_side_b_defeat = "side_a_defeat";    // (TVT) Side B wins the mission.
-endings_tvt_side_c_defeat = "side_a_defeat";    // (TVT) Side C wins the mission.
+// True to show kill and death statistics before ending the mission.
+mission_ending_stats = true;

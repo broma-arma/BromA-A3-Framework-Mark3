@@ -13,11 +13,6 @@ class Mission {
 	#include "mission.sqm"
 };
 
-// Debriefing and endings.
-class CfgDebriefing {
-	#include "mission\objectives\debriefing.sqf"
-};
-
 // Mission framework version.
 class BRM_Framework {
 	mission_version[] = {1, 0, 0, 0};

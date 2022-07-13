@@ -8,34 +8,32 @@
 	// ID of the task.
 	"newTaskBLU1",
 
-	[
-		// Name of the task.
-		"Kill the Scientist and protect the Pilot",
+	// Name of the task.
+	"Kill the Scientist and protect the Pilot",
 
-		// Description.
-		"My description 1",
+	// Description.
+	"My description 1",
 
-		// Type (https://community.bistudio.com/wiki/Arma_3_Tasks_Overhaul#Appendix)
-		"attack",
+	// Type (https://community.bistudio.com/wiki/Arma_3_Tasks_Overhaul#Appendix)
+	"attack",
 
-		// Position
-		getPos tgt1
+	// Position
+	getPos tgt1,
+
+	true, // Task completion is required for mission completion
+	true, // Task failure causes mission failure
+
+	[ // Condition for task:
+		{ true }, // to be assigned
+		{ !alive tgt1 }, // to be completed
+		{ !alive tgt2 } // to fail
 	],
 
-	[
-		// Condition for: task to be assigned / to be completed / to fail (OPTIONAL)
-		{ true },
-		{ !alive tgt1 },
-		{ !alive tgt2 }
-	],
-
-	// Determine the priority of a task.
-	// 0 - Optional | 1 - Secondary | 2 - Primary (must be completed and not failed)
-	2,
-
-	// Code executed at certain events related to the task.
-	// Task assigned | Task completed | Task failed
-	["", "", ""]
+	[ // Code executed when the task is:
+		{}, // Assigned
+		{}, // Completed
+		{} // Failed
+	]
 ] spawn BRM_FMK_fnc_newTask;
 
 // =============================================================================
@@ -44,10 +42,14 @@
 [
 	side_a_side,
 	"newTaskBLU2",
-	["Kill Nikos, maybe?", "Nikos needs to die. Or not. It's up to you - doesn't matter either way.", "kill", []],
-	["(true)", "(not alive nikos_npc)"],
-	0,
-	["", "", ""]
+	"Kill Nikos, maybe?",
+	"Nikos needs to die. Or not. It's up to you - doesn't matter either way.",
+	"kill",
+	[],
+	false,
+	false,
+	[{true}, {!alive nikos_npc}],
+	[{}, {}, {}]
 ] spawn BRM_FMK_fnc_newTask;
 // =============================================================================
 
@@ -62,6 +64,8 @@
 [
 	side_a_side,
 	"newTaskBLU3",
-	["Destroy the enemy vehicle.", "There's an enemy vehicle right in front of you. I don't like it. Destroy it!", "destroy", getPos TaskEnemyVehicle],
-	["(true)", "(not alive TaskEnemyVehicle)"], 1, ["", "", ""]
+	"Destroy the enemy vehicle.", "There's an enemy vehicle right in front of you. I don't like it. Destroy it!",
+	"destroy", TaskEnemyVehicle,
+	true, false,
+	[{true}, {!alive TaskEnemyVehicle}], [{}, {}, {}]
 ] spawn BRM_FMK_fnc_newTask;

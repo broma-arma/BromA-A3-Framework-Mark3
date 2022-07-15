@@ -58,7 +58,6 @@ mission_extraction_CIV = "*";
 // Example: read_local_loadouts_specific = ["NATO", "CSAT"];
 
 read_local_loadouts_specific = [];
-read_local_cargo_specific = [];
 
 // Reads the specified loadout structures.
 read_local_structure_specific = [];

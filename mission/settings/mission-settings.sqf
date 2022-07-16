@@ -49,31 +49,6 @@ mission_extraction_IND = "*";
 mission_extraction_CIV = "*";
 
 // ============================================================================
-// LOADOUTS
-
-// If these options are enabled, the Framework will use the loadouts located within
-// the mission folder, instead of using those in the mod. Only recommended for
-// testing - all finished loadouts should be submitted to the addon version!
-// 
-// Example: read_local_loadouts_specific = ["NATO", "CSAT"];
-
-read_local_loadouts_specific = [];
-
-// Reads the specified loadout structures.
-read_local_structure_specific = [];
-
-// Reads the locally defined Cargo types.
-read_local_cargo = false;
-
-// These loadouts will load a "mod" sheet from the local "mods" folder, and apply any specified modifications to the designated loadout.
-modified_loadouts = [];
-
-// Change to true for players to use the editor loadout.
-units_player_useVanillaGear = false;
-// Change to true for AI to use the editor loadout.
-units_AI_useVanillaGear = false;
-
-// ============================================================================
 // JOIN IN PROGRESS (JIP)
 
 // If this value is set to false, JIPs will be removed upon joining.

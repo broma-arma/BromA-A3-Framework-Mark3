@@ -1,16 +1,15 @@
-// Mission parameters.
-class Params { // TODO Test if defining a Params class directly in the addon works
+class BRM_Framework {
+	mission_version[] = {1, 0, 0, 0};
+};
+
+class Params {
 	#if __has_include("\broma_framework\params.sqf")
 	#include "\broma_framework\params.sqf"
 	#endif
 };
 
-// Include the mission.sqm so that it may be referenced by scripts.
 class Mission {
 	#include "mission.sqm"
 };
 
-// Mission framework version.
-class BRM_Framework {
-	mission_version[] = {1, 0, 0, 0};
-};
+disableRandomization[] = {"Man"};

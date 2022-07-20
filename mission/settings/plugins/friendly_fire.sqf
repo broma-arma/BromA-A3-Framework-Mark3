@@ -2,8 +2,7 @@
 
 #ifndef PARAMS
 [
-	// TODO Change delay to be specified in seconds
-	1, // delay
+	60, // delay
 	false, // ai
 	false // civilian
 ]

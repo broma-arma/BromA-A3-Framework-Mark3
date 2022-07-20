@@ -1,6 +1,6 @@
 // https://github.com/broma-arma/BromA-A3-Framework-Mark3/wiki/Plugins#plank-building
 
-#ifndef PARAM_SETTINGS
+#ifndef PARAMS
 [
 	1, // speed
 	[ // objects

@@ -1,8 +1,8 @@
 // https://github.com/broma-arma/BromA-A3-Framework-Mark3/wiki/Plugins#round-system
 
-#ifdef PARAM_SETTINGS
-//#define PLUGIN_PARAM_ROUND_SYSTEM_ROUNDS 3
-//#define PLUGIN_PARAM_ROUND_SYSTEM_TIME 15
+#ifdef PARAMS
+//#define ROUNDS 3
+//#define TIME 15
 #else
 [
 	10, // area

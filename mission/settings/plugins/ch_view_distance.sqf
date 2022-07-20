@@ -1,6 +1,6 @@
 // https://github.com/broma-arma/BromA-A3-Framework-Mark3/wiki/Plugins#ch-view-distance
 
-#ifndef PARAM_SETTINGS
+#ifndef PARAMS
 [
 	// Allows players to turn grass off - recommended FALSE for TVTs.
 	mission_game_mode == "coop", // grass

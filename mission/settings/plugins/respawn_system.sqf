@@ -1,8 +1,15 @@
-//==============================================================================
-// RESPAWN SYSTEM
+// https://github.com/broma-arma/BromA-A3-Framework-Mark3/wiki/Plugins#respawn-system
 
-// How many lives each side will get. Leave at -1 if you want it to be tied to the parameter.
-// Remember that respawning must still be enabled in the parameters.
-mission_lives_side_a = -1;
-mission_lives_side_b = -1;
-mission_lives_side_c = -1;
+#ifdef PARAM_SETTINGS
+//#define PLUGIN_PARAM_RESPAWN_SYSTEM_INSTANT 0
+//#define PLUGIN_PARAM_RESPAWN_SYSTEM_LIVES -1
+//#define PLUGIN_PARAM_RESPAWN_SYSTEM_OBJECTIVE -1
+#else
+[
+	[ // lives
+		-1, // A
+		-1, // B
+		-1  // C
+	]
+]
+#endif

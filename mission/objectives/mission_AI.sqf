@@ -2,11 +2,11 @@
 // Keep in mind that only the AI Controller will run these scripts.
 // A few DAC zones and camps examples have already been configured below.
 
-if ("spawn_ai" in usedPlugins) then {
+if ("spawn_ai" in BRM_plugins) then {
 	// Call relevant Spawn AI plugin functions here
 };
 
-if ("dac_plugin" in usedPlugins) then {
+if ("dac" in BRM_plugins) then {
 	// Call relevant DAC plugin functions here
 	[trg1, "Create an activated normal default friendly zone named zone1 on network 1, with 1 group of infantry and 2 groups of vehicles."] call BRM_FMK_DAC_fnc_new;
 

@@ -1,5 +1,9 @@
-//==============================================================================
-// SPAWN PROTECTION
-// Determines how large, in meters, the spawn protection zone is.
+// https://github.com/broma-arma/BromA-A3-Framework-Mark3/wiki/Plugins#spawn-protection
 
-setup_zone_area = 50;
+#ifdef PARAM_SETTINGS
+//#define PLUGIN_PARAM_SPAWN_PROTECTION_TIME -1
+#else
+[
+	50 // area
+]
+#endif

@@ -1,5 +1,7 @@
-//==============================================================================
-// DISABLE RESLOTTING
+// https://github.com/broma-arma/BromA-A3-Framework-Mark3/wiki/Plugins#prevent-reslot
 
-// How long players have until their current slot is locked (in seconds).
-mission_preventreslot_timer = 5*60;
+#ifndef PARAM_SETTINGS
+[
+	300 // time
+]
+#endif

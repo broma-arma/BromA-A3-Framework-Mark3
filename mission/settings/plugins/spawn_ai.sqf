@@ -1,8 +1,8 @@
-//==============================================================================
-// AI SPAWNING
+// https://github.com/broma-arma/BromA-A3-Framework-Mark3/wiki/Plugins#spawn-ai
 
-// Enable AI Caching.
-AI_spawn_enable_caching = true;
-
-// Distance from players in which the AI will start to be cached.
-AI_spawn_cache_distance = 1500;
+#ifndef PARAM_SETTINGS
+[
+	true, // cache
+	1500 // distance
+]
+#endif

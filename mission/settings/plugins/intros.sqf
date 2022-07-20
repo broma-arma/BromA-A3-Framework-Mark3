@@ -1,4 +1,7 @@
-//==============================================================================
-// INTRO CUTSCENE
+// https://github.com/broma-arma/BromA-A3-Framework-Mark3/wiki/Plugins#intros
 
-intro_cutscene = "TEXT"; // "ESTABLISHING", "TEXT", "CINEMA" or "NONE".
+#ifndef PARAM_SETTINGS
+[
+	"TEXT" // intro
+]
+#endif

@@ -1,5 +1,10 @@
-//==============================================================================
-// TIME LIMIT
+// https://github.com/broma-arma/BromA-A3-Framework-Mark3/wiki/Plugins#time-limit
 
-// This setting decides when players will get a reminder of how much time is there still left in the mission.
-time_alerted_minutes = [120, 60, 15, 1];
+#ifdef PARAM_SETTINGS
+//#define PLUGIN_PARAM_TIME_LIMIT_LIMIT -1
+//#define PLUGIN_PARAM_TIME_LIMIT_OBJECTIVE 0
+#else
+[
+	[120, 60, 15, 1] // minuteAlerts
+]
+#endif

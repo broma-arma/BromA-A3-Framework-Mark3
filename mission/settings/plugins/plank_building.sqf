@@ -1,4 +1,6 @@
 // https://github.com/broma-arma/BromA-A3-Framework-Mark3/wiki/Plugins#plank-building
+
+#ifndef PARAM_SETTINGS
 [
 	1, // speed
 	[ // objects
@@ -23,3 +25,4 @@
 		["Bunker Tower",           "Land_BagBunker_Tower_F", 7,    90,  360, {},   60,    [0,  5,  2,  1,  25  ]]
 	]
 ]
+#endif

@@ -1,4 +1,4 @@
-[ // Briefings (don't forget to add a "<br/>" every time you want to break a line down)
+[ // https://github.com/broma-arma/BromA-A3-Framework-Mark3/wiki/Briefings
 
 // WEST
 	"

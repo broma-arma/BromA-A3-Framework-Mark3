@@ -1,4 +1,3 @@
-// TODO Rename this to ai.sqf?
 // TODO Split spawn_ai and dac into seperate files?
 // https://github.com/broma-arma/BromA-A3-Framework-Mark3/wiki/Mission-AI
 

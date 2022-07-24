@@ -1,6 +1,4 @@
-// TODO Arrayify this?
-// TODO Rename Wiki Tasks-System to Tasks
-// https://github.com/broma-arma/BromA-A3-Framework-Mark3/wiki/Tasks-System
+// https://github.com/broma-arma/BromA-A3-Framework-Mark3/wiki/Tasks
 
 [
 	side_a_side, // side

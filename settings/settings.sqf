@@ -1,4 +1,4 @@
-// https://github.com/broma-arma/BromA-A3-Framework-Mark3/wiki/Mission-Settings
+// https://github.com/broma-arma/BromA-A3-Framework-Mark3/wiki/Settings
 [
 	// mission_game_mode
 	"coop", // mode

@@ -6,15 +6,14 @@
 	[ // A
 		WEST, // side
 		"NATO", // faction
-		true, // extract
-		[], // extractPoints
-		"*" // extractGroups
+		[[], "*"], // extraction
 	],
-	[EAST, "CSAT", false, [], "*"], // B
-	[RESISTANCE, "", false, [], "*"], // C
+	[EAST, "CSAT", [[], "*"]], // B
+	[RESISTANCE, "", [[], "*"]], // C
 
 	"*", // extractMusic
 	true, // jip
+	// TODO Remove stats?
 	true, // stats
 
 	[ // plugins

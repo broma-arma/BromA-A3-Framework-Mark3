@@ -7670,7 +7670,7 @@ class Mission
 						rank="CORPORAL";
 						init="this setVariable [""unitInit"", [""blue"", ""*"", ""*"", ""*""]];";
 						name="ind_7_0_2";
-						description="'2 -  Gunner (HMG)";
+						description="'2 - Gunner (HMG)";
 						isPlayable=1;
 					};
 					id=334;

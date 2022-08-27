@@ -8,8 +8,4 @@ class Params {
 	#endif
 };
 
-class Mission {
-	#include "mission.sqm"
-};
-
 disableRandomization[] = {"Man"};

@@ -26,7 +26,7 @@ class EditorData
 		aside[]={0.99999994,0,-0};
 	};
 };
-binarizationWanted=0;
+binarizationWanted=1;
 sourceName="BromA-A3-Framework-Mark3";
 addons[]=
 {

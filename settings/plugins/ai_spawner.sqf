@@ -92,77 +92,113 @@
 	],
 
 	[ // aiSpawners: AI Spawners
-		/* // --- DEFENSE SPAWNER ---
+		// --- DEFENSE SPAWNER ---
+		/*
 		[
 			"defense",                              // type
 			"Defense Spawner",                      // id
 			east,                                   // side
-			zone_1,                                 // trigger
-			[                                       // Groups, 1- Group Type, 2- count, 3- Waypoint Settings, 4- Waypoint Count
-				["Infantry Team",2,"SAFE",10],
+			"CSAT",                                 // loadout
+			"DEFAULT",                              // spawner settings
+			aiSpawner_defense_1,                    // trigger
+			[                                       // Groups
+				[
+					"Infantry Team",                // Group Type
+					2,                              // count
+					"SAFE",                         // Waypoint Settings
+					10                              // Waypoint Count
+				],
 				["Cars",2,"SAFE",5]
 			],
-			[
+			[                                       // camps
+				[
+					aiSpawner_defense_camp_1,       // position
+					"Infantry Team",                // group type
+					5,                              // spawn count
+					5,                              // spawn delay
+					200                             // distance to inactivate if players near
+				]
+			],
+			[                                      // conditions, 1- start  2- end
 				{(true)},
 				{(false)}
-			],                                      // conditions, 1- start  2- end
-			"CSAT",                                 // loadout
-			[                                       // camps, 1- position, 2- group type, 3- spawn count, 4- spawn delay, 5- distance to inactivate if players near
-				[camp_1,"Infantry Team",5,5,200]
 			],
-			"DEFAULT"                               // spawner settings
+			[
+				"",                                 // start event
+				"",                                 // end event
+				"",                                 // each wave event
+				""                                  // waypoint on complete event
+			]
 		],
 		*/
-
-		/* // --- ATTACK SPAWNER ---
+		// --- ATTACK SPAWNER ---
+		/*
 		[
 			"attack",                               // type
 			"Attack Spawner",                       // id
 			east,                                   // side
-			[
-				[                                   // positions 1- spawn position, 2- attack position
-					"inf_spawn_1",
-					"inf_spawn_2"
-				],
-				zone_1
-			],
-			"Tanks",                                // type of units
-			[                                       // conditions, 1- start condition, 2- end condition
-				{(true)},
-				{(false)}
-			],
-			3,                                      // group limit
-			0,                                      // delay before start
-			5,                                      // delay each wave
 			"CSAT",                                 // loadout
-			"AWARE",                                // waypoint settings
-			["","","",""],                          // events 1 - start, 2 - end, 3 - each wave, 4 - waypoint on complete event
-			"DEFAULT"                               // spawner settings
+			"DEFAULT",                              // spawner settings
+			aiSpawner_attack_1,                     // attack position
+			[
+				[
+					"Tanks",                            // Group Type
+					3,                                  // count
+					"AWARE"                             // Waypoint Settings
+				]
+			],
+			[
+				[                                   // spawn positions
+					"aiSpawner_attack_spawn_1",
+					"aiSpawner_attack_spawn_2"
+				],
+				0,                                  // delay before start
+				5                                   // delay each wave
+			],
+			[
+				{(true)},                           // start condition
+				{(false)}                           // end condition
+			],
+			[
+				"",                                 // start event
+				"",                                 // end event
+				"",                                 // each wave event
+				""                                  // waypoint on complete event
+			]
 		],
 		*/
-
-		/* // --- STALK SPAWNER ---
+		// --- STALK SPAWNER ---
+		/*
 		[
 			"stalk",                                // type
 			"Stalk Spawner",                        // id
 			east,                                   // side
-			[
-				1000,
-				group player
-			],                                      // positions 1- spawn radius around the group , 2- group to be stalked
-			"Infantry Team",                        // type of units
-			[                                       // conditions, 1- start condition, 2- end condition
-				{(true)},
-				{(false)}
-			],
-			1,                                      // group limit
-			0,                                      // delay before start
-			5,                                      // delay each wave
 			"CSAT",                                 // loadout
-			"AWARE",
-			["","","",""],                          // events 1 - start, 2 - end, 3 - each wave, 4 - waypoint on complete event
-			"DEFAULT"                               // cleanup
-		],
+			"DEFAULT",                              // spawner settings
+			aiSpawner_stalk_1,                     // attack position
+			[
+				[
+					"Infantry Team",                            // Group Type
+					1,                                  // count
+					"AWARE"                             // Waypoint Settings
+				]
+			],
+			[
+				1000,                               // spawn radius around the target
+				0,                                  // delay before start
+				5                                   // delay each wave
+			],
+			[
+				{(true)},                           // start condition
+				{(false)}                           // end condition
+			],
+			[
+				"",                                 // start event
+				"",                                 // end event
+				"",                                 // each wave event
+				""                                  // waypoint on complete event
+			]
+		]
 		*/
 	]
 ]

@@ -6,7 +6,7 @@
 	[ // A
 		WEST, // side
 		"NATO", // faction
-		[[], "*"], // extraction
+		[[], "*"] // extraction
 	],
 	[EAST, "CSAT", [[], "*"]], // B
 	[RESISTANCE, "", [[], "*"]], // C

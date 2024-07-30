@@ -1,7 +1,5 @@
-
 #ifdef BRM_PLUGIN_META
-	class alive_db
-	{
+	class alive_db {
 		name = "ALIVE DB Connection";
 		version = 1;
 		authors[] = {"Nife"};

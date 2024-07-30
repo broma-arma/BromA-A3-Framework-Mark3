@@ -5,56 +5,52 @@
 // ============================================================================================
 
 if (isServer) then {
-[{!(isNil "mission_settings_loaded")}, {
-[{((pluginsLoaded) && (!isNull (_this select 0)))}, {
+	[{ !(isNil "mission_settings_loaded") }, {
+		[{ ((pluginsLoaded) && (!isNull (_this select 0))) }, {
+			params ["_object", "_faction", "_type"];
 
-    params ["_object", "_faction", "_type"];
+			_unit = _object;
+			if (typeName _type != "ARRAY") then { _type = [_type] };
 
-    _unit = _object;
-    if (typeName _type != "ARRAY") then { _type = [_type] };
+			_isLeader = false;
+			_isMan = _unit isKindOf "Man";
+			if (_isMan) then {
+				_isLeader = isFormationLeader _unit;
+			};
 
-    _isLeader = false;
-    _isMan = _unit isKindOf "Man";
-    if (_isMan) then {
-        _isLeader = isFormationLeader _unit;
-    };
+			_initialized = _object getVariable ["unit_initialized", false];
+			if (_initialized) exitWith {};
 
-    _initialized = _object getVariable ["unit_initialized", false];
-    if (_initialized) exitWith {};
+			#include "\broma_framework\loadouts\includes\private-variables.sqf"
+			#include "\broma_framework\loadouts\includes\faction-info-index.sqf"
+			#include "\broma_framework\loadouts\includes\clear-object.sqf"
+			#include "\broma_framework\loadouts\content\content-list.sqf"
+			#include "\broma_framework\loadouts\includes\get-faction.sqf"
 
-    #include "\broma_framework\loadouts\includes\private-variables.sqf"
-    #include "\broma_framework\loadouts\includes\faction-info-index.sqf"
-    #include "\broma_framework\loadouts\includes\clear-object.sqf"
-    #include "\broma_framework\loadouts\content\content-list.sqf"
-    #include "\broma_framework\loadouts\includes\get-faction.sqf"
+			_loadoutCondition = (!(_faction in read_local_cargo_specific));
 
-    _loadoutCondition = (!(_faction in read_local_cargo_specific));
-    
-    _assignLoadoutMode = false;
+			_assignLoadoutMode = false;
 
-    // READ LOADOUT DATA =======================================================
+			// READ LOADOUT DATA =======================================================
+			#include "read-data.sqf"
 
-    #include "read-data.sqf"
+			// =========================================================================
+			// Include the Cargo types.
+			if (read_local_cargo) then {
+				{
+					#include "cargo-list.sqf"
+				} forEach _type;
+			} else {
+				{
+					#include "\broma_framework\loadouts\cargo-list.sqf"
+				} forEach _type;
+			};
+			// =========================================================================
 
-    // =========================================================================
-    // Include the Cargo types.
+			_object setVariable ["unit_initialized", true, true];
 
-    if (read_local_cargo) then {
-        {
-            #include "cargo-list.sqf"
-        } forEach _type;
-    } else {
-        {
-            #include "\broma_framework\loadouts\cargo-list.sqf"
-        } forEach _type;
-    };
-    // =========================================================================
+			// =========================================================================
 
-    _object setVariable ["unit_initialized", true, true];
-
-    // =========================================================================
-
-}, _this] call CBA_fnc_waitUntilAndExecute;
-}, _this] call CBA_fnc_waitUntilAndExecute;
+		}, _this] call CBA_fnc_waitUntilAndExecute;
+	}, _this] call CBA_fnc_waitUntilAndExecute;
 };
-// ============================================================================================

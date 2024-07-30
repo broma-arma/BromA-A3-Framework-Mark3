@@ -66,7 +66,7 @@
 #define Color_Text_Default Color_Main_Foreground1
 
 #define LB_TEXTURES 0x10
-#define LB_MULTI 0x20 
+#define LB_MULTI 0x20
 
 #define SL_DIR 0x400
 #define SL_VERT 0
@@ -74,7 +74,6 @@
 
 #define true 1
 #define false 0
-
 
 class HW_RscText {
 	idc = -1;
@@ -97,7 +96,7 @@ class HW_RscStructuredText {
 	style = ST_LEFT;
 	colorBackground[] = { 1, 1, 1, 1 };
 	x = 0.1; y = 0.1;
-	w = 0.3; h = 0.1;	
+	w = 0.3; h = 0.1;
 	size = 0.018;
 	text = "";
 	class Attributes {
@@ -134,7 +133,7 @@ class HW_RscButton {
 	soundEnter[] = { "", 0, 1 }; // no sound
 	soundPush[] = { "buttonpushed.ogg", 0.1, 1 };
 	soundClick[] = { "", 0, 1 }; // no sound
-	soundEscape[] = { "", 0, 1 }; // no sound 
+	soundEscape[] = { "", 0, 1 }; // no sound
 	x = 0.4;
 	y = 0.475;
 	w = 0.2;
@@ -143,10 +142,9 @@ class HW_RscButton {
 	action = "";
 };
 
-
 class HW_RscBackground {
-	idc = -1; 
-	type = CT_STATIC; 
+	idc = -1;
+	type = CT_STATIC;
 	style = ST_LEFT;
 	colorBackground[] = { 0, 0, 0, 0.9 };
 	colorText[] = { 0, 0, 0, 1 };
@@ -155,11 +153,10 @@ class HW_RscBackground {
 	x = -1; y = -1;
 	w = 3; h = 3;
 	text = "";
-}; 
-
+};
 
 class HW_RscPicture {
-	idc = -1; 
+	idc = -1;
 	type = CT_STATIC;
 	style = ST_PICTURE;
 	colorBackground[] = { };
@@ -169,8 +166,7 @@ class HW_RscPicture {
 	x = 0.0; y = 0.2;
 	w = 0.2; h = 0.2;
 	text = "";
-}; 
-
+};
 
 class HW_RscSlider {
 	type = CT_SLIDER;
@@ -181,10 +177,9 @@ class HW_RscSlider {
 	//colorActive[] = Color_White;
 };
 
-
 class HW_RscXSlider {
 	type = CT_XSLIDER;
-	style = 0x400  + 0x10;
+	style = 0x400 + 0x10;
 	x = 0; y = 0; w = 1; h = 1;
 	color[] = {1, 1, 1, 0.4};
 	colorActive[] = {1, 1, 1, 1};
@@ -194,7 +189,6 @@ class HW_RscXSlider {
 	border = "\ca\ui\data\ui_border_frame_ca.paa";
 	thumb = "\ca\ui\data\ui_slider_bar_ca.paa";
 };
-
 
 class HW_RscListBox {
 	type = 5;
@@ -214,7 +208,7 @@ class HW_RscListBox {
 	autoScrollSpeed = -1;
 	autoScrollDelay = 5;
 	autoScrollRewind = 0;
-	
+
 	class ScrollBar {
 		color[] = {1, 1, 1, 0.6};
 		colorActive[] = {1, 1, 1, 1};
@@ -225,7 +219,6 @@ class HW_RscListBox {
 		border = "\ca\ui\data\ui_border_scroll_ca.paa";
 	};
 };
-
 
 class HW_RscGUIListBox : HW_RscListBox {
 	color[] = {1, 1, 1, 1};
@@ -249,34 +242,31 @@ class HW_RscGUIListBox : HW_RscListBox {
 	};
 };
 
-
 class HW_RscComboBox : HW_RscText {
-		type = CT_COMBO;
-		style = ST_LEFT;
-		rowHeight = 0.028;
-		wholeHeight = 13 * 0.028;
-		color[] = {1,1,1,1};
-		colorSelect[] = {0.70, 0.99, 0.65, 1};
-		colorBackground[] = {0.28, 0.36, 0.26, 1};
-		colorSelectBackground[] = {0.36, 0.46, 0.36, 1};
-		soundSelect[] = {"", 0.0, 1};
-		soundExpand[] = {"", 0.0, 1};
-		soundCollapse[] = {"", 0.0, 1};
-		arrowEmpty = "\ca\ui\data\ui_arrow_combo_ca.paa";
-		arrowFull = "\ca\ui\data\ui_arrow_combo_active_ca.paa";
-		maxHistoryDelay = 1;
-		class ScrollBar
-		{
-			color[] = {1, 1, 1, 0.6};
-			colorActive[] = {1, 1, 1, 1};
-			colorDisabled[] = {1, 1, 1, 0.3};
-			thumb = "\ca\ui\data\ui_scrollbar_thumb_ca.paa";
-			arrowFull = "\ca\ui\data\ui_arrow_top_active_ca.paa";
-			arrowEmpty = "\ca\ui\data\ui_arrow_top_ca.paa";
-			border = "\ca\ui\data\ui_border_scroll_ca.paa";
-		};
+	type = CT_COMBO;
+	style = ST_LEFT;
+	rowHeight = 0.028;
+	wholeHeight = 13 * 0.028;
+	color[] = {1, 1, 1, 1};
+	colorSelect[] = {0.70, 0.99, 0.65, 1};
+	colorBackground[] = {0.28, 0.36, 0.26, 1};
+	colorSelectBackground[] = {0.36, 0.46, 0.36, 1};
+	soundSelect[] = {"", 0.0, 1};
+	soundExpand[] = {"", 0.0, 1};
+	soundCollapse[] = {"", 0.0, 1};
+	arrowEmpty = "\ca\ui\data\ui_arrow_combo_ca.paa";
+	arrowFull = "\ca\ui\data\ui_arrow_combo_active_ca.paa";
+	maxHistoryDelay = 1;
+	class ScrollBar {
+		color[] = {1, 1, 1, 0.6};
+		colorActive[] = {1, 1, 1, 1};
+		colorDisabled[] = {1, 1, 1, 0.3};
+		thumb = "\ca\ui\data\ui_scrollbar_thumb_ca.paa";
+		arrowFull = "\ca\ui\data\ui_arrow_top_active_ca.paa";
+		arrowEmpty = "\ca\ui\data\ui_arrow_top_ca.paa";
+		border = "\ca\ui\data\ui_border_scroll_ca.paa";
 	};
-
+};
 
 class HW_RscShortcutButton {
 	type = 16;
@@ -292,21 +282,21 @@ class HW_RscShortcutButton {
 	colorDisabled[] = {1, 1, 1, 0.25};
 	periodFocus = 1.2;
 	periodOver = 0.8;
-	
+
 	class HitZone {
 		left = 0.004;
 		top = 0.029;
 		right = 0.004;
 		bottom = 0.029;
 	};
-	
+
 	class ShortcutPos {
 		left = 0.004;
 		top = 0.026;
 		w = 0.0392157;
 		h = 0.0522876;
 	};
-	
+
 	class TextPos {
 		left = 0.05;
 		top = 0.034;
@@ -330,14 +320,14 @@ class HW_RscShortcutButton {
 	soundClick[] = {"\ca\ui\data\sound\mouse3", 0.07, 1};
 	soundEscape[] = {"\ca\ui\data\sound\mouse1", 0.09, 1};
 	action = "";
-	
+
 	class Attributes {
 		font = "Zeppelin32";
 		color = "#E5E5E5";
 		align = "left";
 		shadow = "true";
 	};
-	
+
 	class AttributesImage {
 		font = "Zeppelin32";
 		color = "#E5E5E5";
@@ -354,21 +344,21 @@ class HW_RscGUIShortcutButton : HW_RscShortcutButton {
 	colorBackground[] = {1, 1, 1, 1};
 	colorbackground2[] = {1, 1, 1, 0.85};
 	colorDisabled[] = {1, 1, 1, 0.4};
-	
+
 	class HitZone {
 		left = 0.002;
 		top = 0.003;
 		right = 0.002;
 		bottom = 0.016;
 	};
-	
+
 	class ShortcutPos {
 		left = -0.006;
 		top = -0.007;
 		w = 0.0392157;
 		h = 0.0522876;
 	};
-	
+
 	class TextPos {
 		left = 0.002;
 		top = 0.0;
@@ -382,7 +372,7 @@ class HW_RscGUIShortcutButton : HW_RscShortcutButton {
 	animTexturePressed = "\ca\ui\data\igui_button_down_ca.paa";
 	animTextureDefault = "\ca\ui\data\igui_button_normal_ca.paa";
 	animTextureNoShortcut = "\ca\ui\data\igui_button_normal_ca.paa";
-	
+
 	class Attributes {
 		font = "Zeppelin32";
 		color = "#E5E5E5";
@@ -390,7 +380,6 @@ class HW_RscGUIShortcutButton : HW_RscShortcutButton {
 		shadow = "true";
 	};
 };
-
 
 class RscMap {
 
@@ -400,7 +389,7 @@ class RscMap {
 
 	x = 0; y = 0;
 	w = 1; h = 1;
-	
+
 	colorBackground[] = {1.00, 1.00, 1.00, 0};
 	colorText[] = {0.00, 0.00, 0.00, 1.00};
 	colorSea[] = {0.56, 0.80, 0.98, 0.50};
@@ -446,16 +435,16 @@ class RscMap {
 	sizeExInfo = 0.034000;
 	fontLevel = "Zeppelin32";
 	sizeExLevel = 0.034000;
-    
-	maxSatelliteAlpha = 0;     // Alpha to 0 by default
+
+	maxSatelliteAlpha = 0; // Alpha to 0 by default
 	alphaFadeStartScale = 1.0; 
-	alphaFadeEndScale = 1.1;   // Prevent div/0
+	alphaFadeEndScale = 1.1; // Prevent div/0
 
 	showCountourInterval=2;
 	scaleDefault = 0.1;
 	onMouseButtonClick = "";
 	onMouseButtonDblClick = "";
-	
+
 	text = "\ca\ui\data\map_background2_co.paa";
 
 	class CustomMark {
@@ -480,7 +469,7 @@ class RscMap {
 
 	class Bunker {
 		icon = "\ca\ui\data\map_bunker_ca.paa";
-        color[] = {0, 0.900000, 0, 1};
+		color[] = {0, 0.900000, 0, 1};
 		size = 14;
 		importance = "1.5 * 14 * 0.05";
 		coefMin = 0.250000;
@@ -516,7 +505,7 @@ class RscMap {
 
 	class Cross {
 		icon = "\ca\ui\data\map_cross_ca.paa";
-        color[] = {0, 0.900000, 0, 1};
+		color[] = {0, 0.900000, 0, 1};
 		size = 16;
 		importance = "0.7 * 16 * 0.05";
 		coefMin = 0.250000;
@@ -525,7 +514,7 @@ class RscMap {
 
 	class Fortress {
 		icon = "\ca\ui\data\map_bunker_ca.paa";
-        color[] = {0, 0.900000, 0, 1};
+		color[] = {0, 0.900000, 0, 1};
 		size = 16;
 		importance = "2 * 16 * 0.05";
 		coefMin = 0.250000;
@@ -534,7 +523,7 @@ class RscMap {
 
 	class Fuelstation {
 		icon = "\ca\ui\data\map_fuelstation_ca.paa";
-        color[] = {0, 0.900000, 0, 1};
+		color[] = {0, 0.900000, 0, 1};
 		size = 16;
 		importance = "2 * 16 * 0.05";
 		coefMin = 0.750000;
@@ -561,7 +550,7 @@ class RscMap {
 
 	class Chapel {
 		icon = "\ca\ui\data\map_chapel_ca.paa";
-        color[] = {0, 0.900000, 0, 1};
+		color[] = {0, 0.900000, 0, 1};
 		size = 16;
 		importance = "1 * 16 * 0.05";
 		coefMin = 0.900000;
@@ -570,7 +559,7 @@ class RscMap {
 
 	class Church {
 		icon = "\ca\ui\data\map_church_ca.paa";
-        color[] = {0, 0.900000, 0, 1};
+		color[] = {0, 0.900000, 0, 1};
 		size = 16;
 		importance = "2 * 16 * 0.05";
 		coefMin = 0.900000;
@@ -588,7 +577,7 @@ class RscMap {
 
 	class Quay {
 		icon = "\ca\ui\data\map_quay_ca.paa";
-        color[] = {0, 0.900000, 0, 1};
+		color[] = {0, 0.900000, 0, 1};
 		size = 16;
 		importance = "2 * 16 * 0.05";
 		coefMin = 0.500000;
@@ -597,7 +586,7 @@ class RscMap {
 
 	class Rock {
 		icon = "\ca\ui\data\map_rock_ca.paa";
-        color[] = {0, 0.900000, 0, 1};
+		color[] = {0, 0.900000, 0, 1};
 		size = 12;
 		importance = "0.5 * 12 * 0.05";
 		coefMin = 0.250000;
@@ -624,7 +613,7 @@ class RscMap {
 
 	class Stack {
 		icon = "\ca\ui\data\map_stack_ca.paa";
-        color[] = {0, 0.900000, 0, 1};
+		color[] = {0, 0.900000, 0, 1};
 		size = 20;
 		importance = "2 * 16 * 0.05";
 		coefMin = 0.900000;
@@ -651,7 +640,7 @@ class RscMap {
 
 	class Transmitter {
 		icon = "\ca\ui\data\map_transmitter_ca.paa";
-        color[] = {0, 0.900000, 0, 1};
+		color[] = {0, 0.900000, 0, 1};
 		size = 20;
 		importance = "2 * 16 * 0.05";
 		coefMin = 0.900000;
@@ -660,7 +649,7 @@ class RscMap {
 
 	class ViewTower {
 		icon = "\ca\ui\data\map_viewtower_ca.paa";
-        color[] = {0, 0.900000, 0, 1};
+		color[] = {0, 0.900000, 0, 1};
 		size = 16;
 		importance = "2.5 * 16 * 0.05";
 		coefMin = 0.500000;
@@ -678,8 +667,8 @@ class RscMap {
 
 	class Waypoint {
 		icon = "\ca\ui\data\map_waypoint_ca.paa";
-        size = 20;
-        color[] = {0, 0.900000, 0, 1};
+		size = 20;
+		color[] = {0, 0.900000, 0, 1};
 		importance = "1.2 * 16 * 0.05";
 		coefMin = 0.900000;
 		coefMax = 4;
@@ -691,12 +680,12 @@ class RscMap {
 		iconCanceled = "#(argb,8,8,3)color(0,0,1,1)";
 		iconDone = "#(argb,8,8,3)color(0,0,0,1)";
 		iconFailed = "#(argb,8,8,3)color(1,0,0,1)";
-		colorCreated[] = {1,1,1,1};
-		colorCanceled[] = {1,1,1,1};
-		colorDone[] = {1,1,1,1};
-		colorFailed[] = {1,1,1,1};
-        size = 20;
-        color[] = {0, 0.900000, 0, 1};
+		colorCreated[] = {1, 1, 1, 1};
+		colorCanceled[] = {1, 1, 1, 1};
+		colorDone[] = {1, 1, 1, 1};
+		colorFailed[] = {1, 1, 1, 1};
+		size = 20;
+		color[] = {0, 0.900000, 0, 1};
 		importance = "1.2 * 16 * 0.05";
 		coefMin = 0.900000;
 		coefMax = 4;
@@ -704,8 +693,8 @@ class RscMap {
 
 	class WaypointCompleted {
 		icon = "\ca\ui\data\map_waypoint_completed_ca.paa";
-        size = 20;
-        color[] = {0, 0.900000, 0, 1};
+		size = 20;
+		color[] = {0, 0.900000, 0, 1};
 		importance = "1.2 * 16 * 0.05";
 		coefMin = 0.900000;
 		coefMax = 4;
@@ -713,10 +702,10 @@ class RscMap {
 
 	class ActiveMarker {
 		icon = "\ca\ui\data\map_waypoint_completed_ca.paa";
-        size = 20;
-        color[] = {0, 0.900000, 0, 1};
+		size = 20;
+		color[] = {0, 0.900000, 0, 1};
 		importance = "1.2 * 16 * 0.05";
 		coefMin = 0.900000;
 		coefMax = 4;
-	};		
+	};
 };

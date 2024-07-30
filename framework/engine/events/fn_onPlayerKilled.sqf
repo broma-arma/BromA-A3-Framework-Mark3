@@ -1,4 +1,3 @@
-
 // ============================================================================
 //                                                                             |
 //         EVENT SCRIPT: Executes whenever a player unit is killed.            |

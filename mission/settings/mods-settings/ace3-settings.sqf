@@ -1,4 +1,3 @@
-
 // ============================================================================
 //                                                                             |
 //   This is where you set the plugin parameters for your mission, have fun!   |
@@ -9,9 +8,7 @@
 //                           ACE Medical System                                |
 // ============================================================================
 
-
 // Medical Settings ===========================================================
-
 
 // Enables litter and discards upon treatment.
 // true/false

@@ -1,4 +1,3 @@
-
 #ifdef BRM_PLUGIN_META
 	class headless_client {};
 #endif

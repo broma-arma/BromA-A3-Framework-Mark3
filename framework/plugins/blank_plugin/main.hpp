@@ -1,7 +1,5 @@
-
 #ifdef BRM_PLUGIN_META
-	class blank_plugin
-	{
+	class blank_plugin {
 		name = "Blank Plugin";
 		version = 1;
 		authors[] = {""};

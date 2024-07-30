@@ -1,4 +1,3 @@
-
 // ============================================================================
 //                                                                             |
 //       Edit this file with the relevant information about your mission.      |
@@ -6,15 +5,13 @@
 // ============================================================================
 
 class Header {
+	// Mission type. ===============================================================
+	// https://community.bistudio.com/wiki/Multiplayer_Game_Types
+	gameType = coop;
 
-// Mission type. ===============================================================
-
-// https://community.bistudio.com/wiki/Multiplayer_Game_Types
-gameType = coop;
-
-// You can ignore these.
-minPlayers = 2;
-maxPlayers = 50;
+	// You can ignore these.
+	minPlayers = 2;
+	maxPlayers = 50;
 };
 // Mission and Author's name, loading description and loading picture. =========
 
@@ -25,7 +22,7 @@ loadScreen = "\broma_framework\assets\images\loading-screen.jpg";
 
 // Disables certain radio channels in the mission. =============================
 
-disableChannels[]={0,1,2};
+disableChannels[] = {0, 1, 2};
 
 /* 0 = Global
    1 = Side

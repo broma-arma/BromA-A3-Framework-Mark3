@@ -1,4 +1,3 @@
-
 // =============================================================================
 //   These parameters will be used in the mission whenever "Custom" is chosen
 //                    as the mission condition parameter.

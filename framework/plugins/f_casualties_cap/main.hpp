@@ -1,4 +1,3 @@
-
 #ifdef BRM_PLUGIN_META
 	class f_casualties_cap {};
 #endif

@@ -1,1 +1,1 @@
-class FMK_f_evade_escape { };
+class FMK_f_evade_escape {};

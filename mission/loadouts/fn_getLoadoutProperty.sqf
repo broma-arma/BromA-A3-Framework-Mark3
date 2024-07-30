@@ -1,4 +1,3 @@
-
 params ["_faction"];
 
 #include "\broma_framework\loadouts\includes\private-variables.sqf"

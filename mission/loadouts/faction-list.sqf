@@ -1,6 +1,5 @@
-
-switch (toUpper(_faction)) do {
-    default {
-        #include "factions\template.sqf"
-    };
+switch (toUpper _faction) do {
+	default {
+		#include "factions\template.sqf"
+	};
 };

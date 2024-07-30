@@ -1,10 +1,9 @@
-
 /*
 ================================================================================
 
 NAME:
     Plugin List.
-    
+
 AUTHOR(s):
     All collaborators.
 
@@ -17,7 +16,6 @@ USAGE:
 
 ================================================================================
 */
-
 
 #include "headless_client\main.hpp"
 #include "mission_conditions\main.hpp"

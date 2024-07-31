@@ -14,9 +14,9 @@ class p_player_lives {
 
 class p_respawn_objective {
 	title = "Respawns per completed objective";
-	values[] = { 0,   3,   5,   10,         99};
+	values[] = { 0,   3,   5,   10,         -1};
 	texts[] = {"0", "3", "5", "10", "Everyone"};
-	default = 10;
+	default = -1;
 };
 
 class p_resp_bar1 { title = ""; values[] = {0}; texts[] = {""}; default = 0; };

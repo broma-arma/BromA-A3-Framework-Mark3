@@ -46,18 +46,8 @@ USAGE:
 #include "commander_lock\main.hpp"
 #include "radiofreq\main.hpp"
 #include "mission_maker_tools\main.hpp"
-#include "agm_plugin\main.hpp"
 #include "loading_screen\main.hpp"
 #include "intros\main.hpp"
 #include "plank_building\main.hpp"
-
-// NOT USED
-// 		#include "round_system\main.hpp"
-
-// CONFLICTING
-// 		#include "ace3_spectator\main.hpp"
-//		#include "cssa3_spectator\main.hpp"
-
-// DEPRECATED
-// 		#include "alive_db\main.hpp"
-// 		#include "chair_plugin\main.hpp"
+//#include "round_system\main.hpp"
+//#include "ace3_spectator\main.hpp"

@@ -23,15 +23,15 @@ switch (side player) do {
         ["LOCAL", "F_LOG", "PLAYER: ASSIGNING BLUFOR BRIEFING"] call BRM_FMK_fnc_doLog;
         #include "briefing-blufor.sqf";
     };
-    case EAST : {
+    case OPFOR : {
         if (_autoRadio) then {
 			waitUntil { (!isNil "mission_radiochannels_OP") };
 			waitUntil { (!isNil "mission_radiochannels_add_OP") };
 			_radioChannel = mission_radiochannels_OP;
 			_radioFreq = mission_radiochannels_add_OP
 		};
-        ["LOCAL", "F_LOG", "PLAYER: ASSIGNING EAST BRIEFING"] call BRM_FMK_fnc_doLog;
-        #include "briefing-east.sqf";
+        ["LOCAL", "F_LOG", "PLAYER: ASSIGNING OPFOR BRIEFING"] call BRM_FMK_fnc_doLog;
+        #include "briefing-opfor.sqf";
     };
     case RESISTANCE : {
         if (_autoRadio) then {

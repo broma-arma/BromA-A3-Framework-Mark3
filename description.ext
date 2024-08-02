@@ -26,11 +26,6 @@ class CfgFunctions {
 // ============================================================================
 #include "mission\mission-info.hpp"
 
-// ============================================================================
-//    Loads engine and plugin dialog files.                                    |
-// ============================================================================
-#include "framework\engine\dialogs\load_dialogs.hpp"
-
 #define BRM_PLUGIN_DIALOGS
 	#include "framework\plugins\plugins.hpp"
 #undef BRM_PLUGIN_DIALOGS

@@ -38,7 +38,7 @@ if (isServer) then {
 			// Include the Cargo types.
 			if (read_local_cargo) then {
 				{
-					#include "cargo-list.sqf"
+					#include "..\..\..\..\mission\loadouts\cargo-list.sqf"
 				} forEach _type;
 			} else {
 				{

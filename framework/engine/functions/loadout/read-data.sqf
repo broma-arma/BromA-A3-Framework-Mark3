@@ -4,7 +4,7 @@
 if (_loadoutCondition) then {
 	#include "\broma_framework\loadouts\faction-list.sqf"
 } else {
-	#include "faction-list.sqf"
+	#include "..\..\..\..\mission\loadouts\faction-list.sqf"
 };
 // =============================================================================
 
@@ -12,7 +12,7 @@ if (_loadoutCondition) then {
 // Loads any local modifications applied to the loadout.
 
 if (_factionID in modified_loadouts) then {
-	#include "mod-list.sqf"
+	#include "..\..\..\..\mission\loadouts\mod-list.sqf"
 };
 // =============================================================================
 
@@ -26,7 +26,7 @@ if (_assignLoadoutMode) then {
 	if (_UAVTerminal == "auto") then { _UAVTerminal = (([_unit, "vanilla"] call BRM_FMK_fnc_getSideUAV) select 1) };
 
 	if (_factionStructure in read_local_structure_specific) then {
-		#include "structure-list.sqf"
+		#include "..\..\..\..\mission\loadouts\structure-list.sqf"
 	} else {
 		#include "\broma_framework\loadouts\structure-list.sqf"
 	};

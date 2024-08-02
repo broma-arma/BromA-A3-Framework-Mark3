@@ -38,7 +38,7 @@ class BRM {
 		class loadBriefing { postInit = 1; };
 	};
 	class loadout {
-		file = "mission\loadouts";
+		file = "framework\engine\functions\loadout";
 		class assignLoadout {};
 		class assignCargo {};
 		class getLoadoutProperty {};

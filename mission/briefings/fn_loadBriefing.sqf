@@ -50,8 +50,8 @@ switch (side player) do {
 			_radioChannel = mission_radiochannels_CIV;
 			_radioFreq = mission_radiochannels_add_CIV
 		};
-        ["LOCAL", "F_LOG", "PLAYER: ASSIGNING CIVILIAN BRIEFING"] call BRM_FMK_fnc_doLog;
-        #include "briefing-civ.sqf";
+        ["LOCAL", "F_LOG", "PLAYER: ASSIGNING CIVFOR BRIEFING"] call BRM_FMK_fnc_doLog;
+        #include "briefing-civfor.sqf";
     };
 };
 

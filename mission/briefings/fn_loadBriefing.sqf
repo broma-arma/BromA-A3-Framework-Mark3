@@ -33,15 +33,15 @@ switch (side player) do {
         ["LOCAL", "F_LOG", "PLAYER: ASSIGNING OPFOR BRIEFING"] call BRM_FMK_fnc_doLog;
         #include "briefing-opfor.sqf";
     };
-    case RESISTANCE : {
+    case INDEPENDENT : {
         if (_autoRadio) then {
 			waitUntil { (!isNil "mission_radiochannels_IND") };
 			waitUntil { (!isNil "mission_radiochannels_add_IND") };
 			_radioChannel = mission_radiochannels_IND;
 			_radioFreq = mission_radiochannels_add_IND
 		};
-        ["LOCAL", "F_LOG", "PLAYER: ASSIGNING INDEPENDENT BRIEFING"] call BRM_FMK_fnc_doLog;
-        #include "briefing-ind.sqf";
+        ["LOCAL", "F_LOG", "PLAYER: ASSIGNING INDFOR BRIEFING"] call BRM_FMK_fnc_doLog;
+        #include "briefing-indfor.sqf";
     };
     case CIVILIAN : {
         if (_autoRadio) then {

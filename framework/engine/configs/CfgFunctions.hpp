@@ -6,23 +6,23 @@
 
 class BRM {
 	class plugins {
-		file = "framework\engine\functions\engine\plugins";
+		file = "framework\engine\functions\plugins";
 		class logPlugins { postInit = 1; };
 		class warnConflict { postInit = 1; };
 	};
 	class init {
-		file = "framework\engine\functions\engine\init";
+		file = "framework\engine\functions\init";
 		class loadSettings { preInit = 1; };
 		class initVariables { preInit = 1; };
 		class engine_pre { preInit = 1; };
 	};
 	class unit {
-		file = "framework\engine\functions\engine\unit";
+		file = "framework\engine\functions\unit";
 		class defineGroups { postInit = 1; };
 		class createPlayerVehicles { postInit = 1; };
 	};
 	class tasks {
-		file = "framework\engine\functions\engine\tasks";
+		file = "framework\engine\functions\tasks";
 		class readExtraction { postInit = 1; };
 	};
 	class events {

@@ -13,15 +13,15 @@ _autoRadio = ("radiofreq" in usedPlugins);
 [] execVM "broma_framework\credits.sqf";
 
 switch (side player) do {
-    case WEST : {
+    case BLUFOR : {
         if (_autoRadio) then {
 			waitUntil { (!isNil "mission_radiochannels_BLU") };
 			waitUntil { (!isNil "mission_radiochannels_add_BLU") };
 			_radioChannel = mission_radiochannels_BLU;
 			_radioFreq = mission_radiochannels_add_BLU
 		};
-        ["LOCAL", "F_LOG", "PLAYER: ASSIGNING WEST BRIEFING"] call BRM_FMK_fnc_doLog;
-        #include "briefing-west.sqf";
+        ["LOCAL", "F_LOG", "PLAYER: ASSIGNING BLUFOR BRIEFING"] call BRM_FMK_fnc_doLog;
+        #include "briefing-blufor.sqf";
     };
     case EAST : {
         if (_autoRadio) then {

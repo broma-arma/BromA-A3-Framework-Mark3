@@ -34,7 +34,7 @@ class BRM {
 		class onAIKilled {};
 	};
 	class briefing {
-		file = "mission\briefings";
+		file = "framework\engine\functions\briefing";
 		class loadBriefing { postInit = 1; };
 	};
 	class loadout {

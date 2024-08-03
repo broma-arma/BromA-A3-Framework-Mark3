@@ -10,15 +10,6 @@ class Params {
 // ============================================================================
 class CfgFunctions {
 	#include "framework\engine\configs\CfgFunctions.hpp"
-	#define BRM_PLUGIN_FUNCTIONS
-		#include "framework\plugins\plugins.hpp"
-	#undef BRM_PLUGIN_FUNCTIONS
-	class BRM_endLoading {
-		class Functions {
-			file = "framework\engine\functions\engine\init";
-			class endLoading { postInit = 1; };
-		};
-	};
 };
 
 // ============================================================================

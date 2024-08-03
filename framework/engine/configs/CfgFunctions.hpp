@@ -44,3 +44,14 @@ class BRM {
 		class getLoadoutProperty {};
 	};
 };
+
+#define BRM_PLUGIN_FUNCTIONS
+	#include "..\..\plugins\plugins.hpp"
+#undef BRM_PLUGIN_FUNCTIONS
+
+class BRM_endLoading {
+	class Functions {
+		file = "framework\engine\functions\init";
+		class endLoading { postInit = 1; };
+	};
+};

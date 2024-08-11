@@ -1,5 +1,5 @@
-class p_ace3_revive_lives {
-	title = "(ACE3) Revive system lives";
+class p_ace3_second_chances {
+	title = "(ACE3) Second chances";
 	values[] = {        0,   1,   3,   5,         -1};
 	texts[] = {"Disabled", "1", "3", "5", "Infinite"};
 	default = 3;

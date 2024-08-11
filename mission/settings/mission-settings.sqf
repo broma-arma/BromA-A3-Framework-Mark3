@@ -21,27 +21,24 @@
 	side_c_faction = ""; // Leave empty if unneeded
 
 // Loadouts
-	// Faction IDs of the addon loadout to modify.
-	modified_loadouts = [];
+	// Faction IDs of the framework loadout to modify.
+	mission_modified_loadouts = [];
 
-	// Set to true to disable the framework's loadout system for players.
-	units_player_useVanillaGear = false;
+	// Disable the framework's loadout system for players.
+	mission_vanilla_player_loadouts = false;
 
-	// Set to true to disable the framework's loadout system for AI.
-	units_AI_useVanillaGear = false;
+	// Disable the framework's loadout system for AI.
+	mission_vanilla_ai_loadouts = false;
 
-	// Mission defined loadouts (Recommended to use addon loadouts or modified_loadouts above)
+	// Mission defined loadouts (Recommended to use framework loadouts or mission_modified_loadouts above)
 	// Faction IDs that should use the mission's faction-list.sqf, instead of the framework's.
-	read_local_loadouts_specific = [];
+	mission_loadouts = [];
 
-	// Same as above, but for cargo. (Recommended to leave this as is)
-	read_local_cargo_specific = read_local_loadouts_specific;
-
-	// Structure IDs that should use the mission's structure list structure-list.sqf, instead of the framework's.
-	read_local_structure_specific = [];
+	// Structure IDs that should use the mission's structure-list.sqf, instead of the framework's.
+	mission_structures = [];
 
 	// Set to true to use the mission's cargo list cargo-list.sqf, instead of the framework's.
-	read_local_cargo = false;
+	mission_cargo = false;
 
 // JIP
 	// Allow joining in progress.

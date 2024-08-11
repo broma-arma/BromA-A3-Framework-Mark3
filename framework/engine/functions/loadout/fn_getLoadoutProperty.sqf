@@ -6,7 +6,7 @@ params ["_faction"];
 
 _assignLoadoutMode = false;
 
-_loadoutCondition = (!((_faction) in read_local_loadouts_specific));
+_loadoutCondition = (!((_faction) in mission_loadouts));
 
 // READ LOADOUT DATA ===========================================================
 

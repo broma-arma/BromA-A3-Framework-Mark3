@@ -27,7 +27,7 @@ if (isServer) then {
 			#include "\broma_framework\loadouts\content\content-list.sqf"
 			#include "\broma_framework\loadouts\includes\get-faction.sqf"
 
-			_loadoutCondition = (!(_faction in read_local_cargo_specific));
+			_loadoutCondition = (!(_faction in mission_loadouts);
 
 			_assignLoadoutMode = false;
 
@@ -36,7 +36,7 @@ if (isServer) then {
 
 			// =========================================================================
 			// Include the Cargo types.
-			if (read_local_cargo) then {
+			if (mission_cargo) then {
 				{
 					#include "..\..\..\..\mission\loadouts\cargo-list.sqf"
 				} forEach _type;

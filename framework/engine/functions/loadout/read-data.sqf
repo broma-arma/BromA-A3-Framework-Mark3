@@ -11,7 +11,7 @@ if (_loadoutCondition) then {
 // =============================================================================
 // Loads any local modifications applied to the loadout.
 
-if (_factionID in modified_loadouts) then {
+if (_factionID in mission_modified_loadouts) then {
 	#include "..\..\..\..\mission\loadouts\mod-list.sqf"
 };
 // =============================================================================
@@ -25,7 +25,7 @@ if (_assignLoadoutMode) then {
 	if (_UAVBAg == "auto") then { _UAVBag = (([_unit, "vanilla"] call BRM_FMK_fnc_getSideUAV) select 0) };
 	if (_UAVTerminal == "auto") then { _UAVTerminal = (([_unit, "vanilla"] call BRM_FMK_fnc_getSideUAV) select 1) };
 
-	if (_factionStructure in read_local_structure_specific) then {
+	if (_factionStructure in mission_structures) then {
 		#include "..\..\..\..\mission\loadouts\structure-list.sqf"
 	} else {
 		#include "\broma_framework\loadouts\structure-list.sqf"

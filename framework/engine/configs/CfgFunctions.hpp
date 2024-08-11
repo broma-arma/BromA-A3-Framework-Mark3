@@ -21,6 +21,10 @@ class BRM {
 		class defineGroups { postInit = 1; };
 		class createPlayerVehicles { postInit = 1; };
 	};
+	class ending {
+		file = "framework\engine\functions\ending";
+		class getEnding {};
+	};
 	class tasks {
 		file = "framework\engine\functions\tasks";
 		class readExtraction { postInit = 1; };

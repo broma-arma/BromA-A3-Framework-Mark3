@@ -44,6 +44,10 @@ class CfgDebriefing {
 	#include "mission\objectives\debriefing.hpp"
 };
 
+class BRM_CfgEnding {
+	#include "mission\ending.hpp"
+};
+
 // ============================================================================
 //    Engine/Plugin notifications and alerts,                                  |
 // ============================================================================

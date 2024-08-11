@@ -48,4 +48,4 @@ mission_settings_loaded = true;
 mission_objectives = [] execVM "mission\objectives\tasks.sqf";
 
 // Runs any scripts related to AI in the mission.
-mission_init_enemies = [] execVM "mission\objectives\mission_AI.sqf";
+mission_init_enemies = [] execVM "mission\objectives\ai.sqf";

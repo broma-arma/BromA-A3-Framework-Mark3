@@ -1,9 +1,3 @@
-// ============================================================================================
-//
-//	This script allows for loading of cargo into any type of vehicle that is placed in the editor.
-//
-// ============================================================================================
-
 if (isServer) then {
 	[{ !(isNil "mission_settings_loaded") }, {
 		[{ ((pluginsLoaded) && (!isNull (_this select 0))) }, {
@@ -31,11 +25,8 @@ if (isServer) then {
 
 			_assignLoadoutMode = false;
 
-			// READ LOADOUT DATA =======================================================
 			#include "read-data.sqf"
 
-			// =========================================================================
-			// Include the Cargo types.
 			if (mission_cargo) then {
 				{
 					#include "..\..\..\..\mission\loadouts\cargo-list.sqf"
@@ -45,12 +36,8 @@ if (isServer) then {
 					#include "\broma_framework\loadouts\cargo-list.sqf"
 				} forEach _type;
 			};
-			// =========================================================================
 
 			_object setVariable ["unit_initialized", true, true];
-
-			// =========================================================================
-
 		}, _this] call CBA_fnc_waitUntilAndExecute;
 	}, _this] call CBA_fnc_waitUntilAndExecute;
 };

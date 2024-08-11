@@ -1,22 +1,3 @@
-/*
-================================================================================
-
-NAME:
-    Plugin List.
-
-AUTHOR(s):
-    All collaborators.
-
-DESCRIPTION:
-    This is where the magic happens: simply comment any line you want
-	and the Plugin will be entirely included into the mission.
-
-USAGE:
-    #include "my_plugin\main.hpp"
-
-================================================================================
-*/
-
 #include "headless_client\main.hpp"
 #include "mission_conditions\main.hpp"
 #include "ace3_plugin\main.hpp"

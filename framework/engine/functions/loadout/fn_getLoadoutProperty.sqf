@@ -8,11 +8,7 @@ _assignLoadoutMode = false;
 
 _loadoutCondition = (!((_faction) in mission_loadouts));
 
-// READ LOADOUT DATA ===========================================================
-
 #include "read-data.sqf"
-
-// =============================================================================
 
 _ret = [];
 

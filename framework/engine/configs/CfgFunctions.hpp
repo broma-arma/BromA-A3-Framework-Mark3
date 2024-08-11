@@ -1,9 +1,3 @@
-// ============================================================================
-//                                                                             |
-//     Initializes all main Framework functions, including inits and API.      |
-//                                                                             |
-// ============================================================================
-
 class BRM {
 	class plugins {
 		file = "framework\engine\functions\plugins";

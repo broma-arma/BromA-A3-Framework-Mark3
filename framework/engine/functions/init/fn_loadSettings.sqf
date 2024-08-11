@@ -1,28 +1,3 @@
-/*
-================================================================================
-
-NAME:
-    BRM_fnc_loadSettings
-
-AUTHOR(s):
-    Nife
-
-DESCRIPTION:
-    Initializes several mission related scripts.
-
-PARAMETERS:
-    None.
-
-USAGE:
-    [] call BRM_fnc_loadSettings;
-
-RETURNS:
-    Nothing.
-
-================================================================================
-*/
-
-// Load mission settings.
 mission_settings_loaded = false;
 
 call compile preprocessFileLineNumbers "mission\settings\mission-settings.sqf";
@@ -49,7 +24,6 @@ call compile preprocessFileLineNumbers "mission\settings\plugin-settings.sqf";
 
 mission_settings_loaded = true;
 
-// Initializes the mission tasks and other objective related functions.
 if (isServer) then {
 	[{ missionNamespace getVariable ["server_vehicles_created", false] }, {
 		[] call compile preprocessFileLineNumbers "mission\objectives\tasks.sqf";
@@ -57,7 +31,6 @@ if (isServer) then {
 	}, []] call CBA_fnc_waitUntilAndExecute;
 };
 
-// Runs any scripts related to AI in the mission.
 if (!didJIP) then {
 	[{ !isNil "mission_AI_controller_name" }, {
 		if (mission_AI_controller) then {

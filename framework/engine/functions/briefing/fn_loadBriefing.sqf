@@ -1,58 +1,16 @@
-// ============================================================================
-//                                                                             |
-//                    Executes all mission Briefings.                          |
-//                                                                             |
-// ============================================================================
+if (!hasInterface) exitWith {};
 
-0 spawn {
+call compile preprocessFileLineNumbers "\broma_framework\credits.sqf";
 
-private ["_radioChannel", "_radioFreq"];
+private _briefing = [
+	"opfor", "blufor", "indfor", "civfor",
+	"unknown", "enemy", "friendly",
+	"logic", "empty", "ambient"
+] select (side player call BIS_fnc_sideID);
 
-_autoRadio = ("radiofreq" in usedPlugins);
-
-[] execVM "broma_framework\credits.sqf";
-
-switch (side player) do {
-    case BLUFOR : {
-        if (_autoRadio) then {
-			waitUntil { (!isNil "mission_radiochannels_BLU") };
-			waitUntil { (!isNil "mission_radiochannels_add_BLU") };
-			_radioChannel = mission_radiochannels_BLU;
-			_radioFreq = mission_radiochannels_add_BLU
-		};
-        ["LOCAL", "F_LOG", "PLAYER: ASSIGNING BLUFOR BRIEFING"] call BRM_FMK_fnc_doLog;
-        #include "briefing-blufor.sqf";
-    };
-    case OPFOR : {
-        if (_autoRadio) then {
-			waitUntil { (!isNil "mission_radiochannels_OP") };
-			waitUntil { (!isNil "mission_radiochannels_add_OP") };
-			_radioChannel = mission_radiochannels_OP;
-			_radioFreq = mission_radiochannels_add_OP
-		};
-        ["LOCAL", "F_LOG", "PLAYER: ASSIGNING OPFOR BRIEFING"] call BRM_FMK_fnc_doLog;
-        #include "briefing-opfor.sqf";
-    };
-    case INDEPENDENT : {
-        if (_autoRadio) then {
-			waitUntil { (!isNil "mission_radiochannels_IND") };
-			waitUntil { (!isNil "mission_radiochannels_add_IND") };
-			_radioChannel = mission_radiochannels_IND;
-			_radioFreq = mission_radiochannels_add_IND
-		};
-        ["LOCAL", "F_LOG", "PLAYER: ASSIGNING INDFOR BRIEFING"] call BRM_FMK_fnc_doLog;
-        #include "briefing-indfor.sqf";
-    };
-    case CIVILIAN : {
-        if (_autoRadio) then {
-			waitUntil { (!isNil "mission_radiochannels_CIV") };
-			waitUntil { (!isNil "mission_radiochannels_add_CIV") };
-			_radioChannel = mission_radiochannels_CIV;
-			_radioFreq = mission_radiochannels_add_CIV
-		};
-        ["LOCAL", "F_LOG", "PLAYER: ASSIGNING CIVFOR BRIEFING"] call BRM_FMK_fnc_doLog;
-        #include "briefing-civfor.sqf";
-    };
-};
-
+private _file = format ["mission\briefings\briefing-%1.sqf", _briefing];
+private _fileExists = fileExists _file;
+["LOCAL", "F_LOG", format ["PLAYER: %1 %2 BRIEFING", ["SKIPPING", "ASSIGNING"] select _fileExists, toUpper _briefing]] call BRM_FMK_fnc_doLog;
+if (_fileExists) then {
+	call compile preprocessFileLineNumbers _file;
 };

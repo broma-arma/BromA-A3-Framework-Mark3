@@ -19,9 +19,6 @@ _defaultName = [_nameAMERICAN];
 _defaultInsignia = "";
 _defaultColor = "blue";
 
-//               Aiming Accuracy, Aiming Shake, Aiming Speed, Endurance,  Spot Distance, Spot Time,  Courage,    Reload Speed, Commanding, General
-//_factionSkill = [[0.7, 0.8],      [0.8, 0.9],   [0.7, 0.8],   [0.7, 0.9], [0.8, 0.9],    [0.7, 0.8], [0.8, 0.9], [0.7, 0.8],   [0.7, 0.9], [0.7, 0.8]];
-
 // WEAPONS =====================================================================
 
 _commonRIFLE = _Mk20;
@@ -68,7 +65,7 @@ _count40mmCARGO = 40;
 _countBANDAGE = 20;
 _countMORPHINE = 10;
 _countEPI = 5;
-_countCAT = 3;
+_countTourniquet = 3;
 _countBLOODBAG = 5;
 _countPAK = 2;
 
@@ -107,9 +104,9 @@ _vestsLIST = [
 _gogglesLIST = [
 ];
 
-_randomHEAD = _headsLIST call BIS_fnc_selectRandom;
-_randomUNIFORM = _uniformsLIST call BIS_fnc_selectRandom;
-_randomVEST = _vestsLIST call BIS_fnc_selectRandom;
+_randomHEAD = selectRandom _headsLIST;
+_randomUNIFORM = selectRandom _uniformsLIST;
+_randomVEST = selectRandom _vestsLIST;
 
 _commonHEAD = _randomHEAD;
 _leaderHEAD = _commonHEAD;

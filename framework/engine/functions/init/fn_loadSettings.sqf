@@ -45,7 +45,12 @@ call compile preprocessFileLineNumbers "mission\settings\plugin-settings.sqf";
 mission_settings_loaded = true;
 
 // Initializes the mission tasks and other objective related functions.
-mission_objectives = [] execVM "mission\objectives\tasks.sqf";
+if (isServer) then {
+	[{ missionNamespace getVariable ["server_vehicles_created", false] }, {
+		[] call compile preprocessFileLineNumbers "mission\objectives\tasks.sqf";
+		[] spawn BRM_FMK_fnc_checkTasks;
+	}, []] call CBA_fnc_waitUntilAndExecute;
+};
 
 // Runs any scripts related to AI in the mission.
 if (!didJIP) then {

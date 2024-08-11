@@ -1,76 +1,53 @@
-// ============================================================================
-//                                                                             |
-//         Use this script to execute the functions related to objectives      |
-//     and tasks, but keep in mind they will only be executed server-side.     |
-//                                                                             |
-//         For more help on the Task system, read the documentation.           |
-//                                                                             |
-// ============================================================================
+// Use this file to call any functions or scripts related to tasks.
+// Only the Server will execute this file.
 
-if (!isServer) exitWith {};
-
-[{ scriptDone(mission_settings) && !(isNil "server_vehicles_created") }, {
-// =============================================================================
-// =============================================================================
+// Primary task
+[
+	side_a_side, // SIDE / GROUP / UNIT that the task will be assigned to
+	"a1", // Unique task identifier
 	[
-		side_a_side, // SIDE / UNIT that the task will be assigned to.
-		"newTaskBLU1", // ID of the task.
-		[
-			"Kill the Scientist and protect the Pilot", // Name of the task.
-			"My description 1", // Description.
-			"attack", // Type. See all types: https://community.bistudio.com/wiki/Arma_3_Tasks_Overhaul#Appendix
-			(getPos tgt1) // Position
-		],
+		"Kill the Scientist", // Name
+		"The Scientist knows too much, eliminate them.", // Description
+		"attack", // Type (See https://community.bistudio.com/wiki/Arma_3:_Task_Framework#Task_Icons)
+		tgt1 // POSITION / OBJECT / MARKER denoting the position of the task
+	],
+	[ // Condition for task to ...
+		{ true }, // be assigned
+		{ !alive tgt1 }, // complete
+		{ false } // fail (OPTIONAL)
+	],
+	2, // Priority: 0 - Optional, 1 - Secondary, 2 - Primary, 3 - Abortive
+		// Completing Primary and Secondary tasks, or failing Secondary, are required to win the mission
+		// Failing Primary or Abortive tasks will fail the mission
+	[ // Code executed when task is ...
+		{}, // assigned
+		{}, // completed
+		{} // failed
+	]
+] spawn BRM_FMK_fnc_newTask;
 
-		[ // Condition for task to ...
-			"(true)", // be assigned
-			"(not alive tgt1)", // complete
-			"(not alive tgt2)" // fail (OPTIONAL)
-		],
-
-		2, // Determine the priority of a task. 0 - Optional | 1 - Secondary | 2 - Primary (must be completed and not failed)
-
-		[ // Code executed at certain events related to the task.
-			"", // Assigned
-			"", // Completed
-			"" // Failed
-		]
-	] spawn BRM_FMK_fnc_newTask;
-// =============================================================================
-
-// =============================================================================
-//  This is an example of how to make an optional task.
-//  Notice that we leave the position value empty to show that we do not want to give a position.
+// Secondary task
+[
+	side_a_side,
+	"a2",
 	[
-		side_a_side,
-		"newTaskBLU2",
-		["Kill Nikos, maybe?",
-		"Nikos needs to die. Or not. It's up to you - doesn't matter either way.",
-		"kill", []],
-		["(true)", "(not alive nikos_npc)"],
-		0,
-		["", "", ""]
-	] spawn BRM_FMK_fnc_newTask;
-// =============================================================================
-
-// =============================================================================
-//  This task isn't considered a primary task - it doesn't have to be completed
-//  and won't end the mission if it is failed.
-//
-//  This is useful for TvT objectives, like defending a certain zone,
-//  which can be failed but won't end the whole mission, but are also
-//  more important than "optional" objectives.
-
-	[
-		side_a_side, "newTaskBLU3",
-		["Destroy the enemy vehicle.",
+		"Destroy the enemy vehicle.",
 		"There's an enemy vehicle right in front of you. I don't like it. Destroy it!",
-		"destroy", (getPos TaskEnemyVehicle)],
-		["(true)", "(not alive TaskEnemyVehicle)"], 1, ["", "", ""]
-	] spawn BRM_FMK_fnc_newTask;
-// =============================================================================
+		"destroy",
+		getPos TaskEnemyVehicle // This causes the task position to not follow the object
+	],
+	[{ true }, { !alive TaskEnemyVehicle }],
+	1,
+	[{}, {}, {}]
+] spawn BRM_FMK_fnc_newTask;
 
-	[] spawn BRM_FMK_fnc_checkTasks;
+// Optional task
+[side_a_side, "a3", [
+	"Kill Nikos?", "To kill Nikos, or not to kill Nikos, that is the question. Though, we don't care what the answer is.",
+	"kill", objNull // Use objNull for no position
+], [{ true }, { !alive nikos_npc }], 0, [{}, {}, {}]] spawn BRM_FMK_fnc_newTask;
 
-	true
-}, []] call CBA_fnc_waitUntilAndExecute;
+// Abortive task
+[side_a_side, "a4", ["Protect the Pilot", "Don't let the Pilot die.", "defend", tgt2],
+	[{ true }, { false }, { !alive tgt2 }], 3, [{}, {}, {}]
+] spawn BRM_FMK_fnc_newTask;

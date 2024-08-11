@@ -1,36 +1,17 @@
-// ============================================================================
-//                                                                             |
-//           Include all endings related to your mission here.                 |
-//                                                                             |
-// ============================================================================
-
-#define GROUPLOGO "\broma_framework\assets\images\group-logo.paa"
-#define CREDITS "Thank you for playing.<br/><br/>Made with the BromA Framework MK 4."
+// Include all endings related to your mission here. (See https://community.bistudio.com/wiki/Arma_3:_Debriefing#Debriefing)
 
 class victory {
 	title = "MISSION OVER";
 	subtitle = "All objectives accomplished - good job.";
-	description = CREDITS;
-	picture = GROUPLOGO;
+	description = "Thank you for playing.<br/><br/>Made with the BromA Framework MK 4.";
+	picture = "\broma_framework\assets\images\group-logo.paa";
 };
 
-class defeat {
+class defeat: victory {
 	title = "MISSION FAILED";
 	subtitle = "You have failed your objectives.";
-	description = CREDITS;
-	picture = GROUPLOGO;
 };
 
-class tvt_end {
-	title = "MISSION OVER";
+class tvt_end: victory {
 	subtitle = "A team is no longer combat effective.";
-	description = CREDITS;
-	picture = GROUPLOGO;
-};
-
-class custom {
-	title = "MISSION OVER";
-	subtitle = "TEST";
-	description = CREDITS;
-	picture = GROUPLOGO;
 };

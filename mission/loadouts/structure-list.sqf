@@ -1,5 +1,7 @@
 switch (_factionStructure) do {
-	default {
+	case "TEMPLATE": {
 		#include "structures\template.sqf"
 	};
+
+	default { _frameworkStructure = true; };
 };

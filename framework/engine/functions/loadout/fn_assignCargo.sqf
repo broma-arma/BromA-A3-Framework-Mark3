@@ -17,16 +17,15 @@ _object setVariable ["unit_initialized", true];
 	#include "\broma_framework\loadouts\content\content-list.sqf"
 	#include "\broma_framework\loadouts\includes\get-faction.sqf"
 
-	_loadoutCondition = !(_faction in mission_loadouts);
 	_assignLoadoutMode = false;
 
 	#include "read-data.sqf"
 
 	{
 		_x = toLower _x;
-		if (mission_cargo) then {
-			#include "..\..\..\..\mission\loadouts\cargo-list.sqf"
-		} else {
+		private _overrideCargo = true;
+		#include "..\..\..\..\mission\loadouts\cargo-list.sqf"
+		if (!_overrideCargo) then {
 			#include "\broma_framework\loadouts\cargo-list.sqf"
 		};
 	} forEach _type;

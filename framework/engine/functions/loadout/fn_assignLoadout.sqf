@@ -15,7 +15,6 @@ if !(_unit isKindOf "Man" && local _unit) exitWith {};
 	#include "\broma_framework\loadouts\includes\get-type.sqf"
 	#include "\broma_framework\loadouts\includes\classes-list.sqf"
 
-	_loadoutCondition = !(_faction in mission_loadouts);
 	_assignLoadoutMode = true;
 
 	#include "read-data.sqf"

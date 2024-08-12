@@ -1,5 +1,5 @@
 switch (_faction) do {
-	default {
+	case "TEMPLATE": {
 		#include "factions\template.sqf"
 	};
 };

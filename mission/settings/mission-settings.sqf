@@ -20,24 +20,11 @@
 	side_c_faction = ""; // Leave empty if unneeded
 
 // Loadouts
-	// Faction IDs of the framework loadout to modify.
-	mission_modified_loadouts = [];
-
 	// Disable the framework's loadout system for players.
 	mission_vanilla_player_loadouts = false;
 
 	// Disable the framework's loadout system for AI.
 	mission_vanilla_ai_loadouts = false;
-
-	// Mission defined loadouts (Recommended to use framework loadouts or mission_modified_loadouts above)
-	// Faction IDs that should use the mission's faction-list.sqf, instead of the framework's.
-	mission_loadouts = [];
-
-	// Structure IDs that should use the mission's structure-list.sqf, instead of the framework's.
-	mission_structures = [];
-
-	// Set to true to use the mission's cargo list cargo-list.sqf, instead of the framework's.
-	mission_cargo = false;
 
 // JIP
 	// Allow joining in progress.

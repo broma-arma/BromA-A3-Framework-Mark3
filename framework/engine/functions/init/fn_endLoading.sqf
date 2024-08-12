@@ -8,7 +8,13 @@ if (isServer) then {
 };
 
 if (!didJIP && mission_AI_controller) then {
-	[] execVM "mission\objectives\ai.sqf";
+	if ("dac_plugin" in usedPlugins) then {
+		[{ !isNil "DAC_InCreate" || DAC_Basic_Value > 0 }, {
+			[] execVM "mission\objectives\ai.sqf";
+		}] call CBA_fnc_waitUntilAndExecute;
+	} else {
+		[] execVM "mission\objectives\ai.sqf";
+	};
 };
 
 if (hasInterface) then {

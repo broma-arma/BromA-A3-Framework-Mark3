@@ -9,8 +9,7 @@
 // Side Config
 	// Side and faction of the players.
 	side_a_side = BLUFOR;
-	//side_a_faction = "NATO";
-	side_a_faction = "CSAT";
+	side_a_faction = "NATO";
 
 	// Side and faction of the enemy.
 	side_b_side = OPFOR;

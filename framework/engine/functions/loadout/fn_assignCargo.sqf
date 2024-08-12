@@ -1,43 +1,33 @@
-if (isServer) then {
-	[{ !(isNil "mission_settings_loaded") }, {
-		[{ ((pluginsLoaded) && (!isNull (_this select 0))) }, {
-			params ["_object", "_faction", "_type"];
+params ["_object", "_faction", "_type"];
 
-			_unit = _object;
-			if (typeName _type != "ARRAY") then { _type = [_type] };
+if (!isServer || _object isKindOf "Man" || _object getVariable ["unit_initialized", false]) exitWith {};
+_object setVariable ["unit_initialized", true];
 
-			_isLeader = false;
-			_isMan = _unit isKindOf "Man";
-			if (_isMan) then {
-				_isLeader = isFormationLeader _unit;
-			};
+[{ missionNamespace getVariable ["pluginsLoaded", false] }, {
+	params ["_object", "_faction", "_type"];
 
-			_initialized = _object getVariable ["unit_initialized", false];
-			if (_initialized) exitWith {};
+	private _unit = _object;
+	if !(_type isEqualType []) then { _type = [_type] };
 
-			#include "\broma_framework\loadouts\includes\private-variables.sqf"
-			#include "\broma_framework\loadouts\includes\faction-info-index.sqf"
-			#include "\broma_framework\loadouts\includes\clear-object.sqf"
-			#include "\broma_framework\loadouts\content\content-list.sqf"
-			#include "\broma_framework\loadouts\includes\get-faction.sqf"
+	private _isMan = false;
+	private _isLeader = false;
 
-			_loadoutCondition = (!(_faction in mission_loadouts);
+	#include "\broma_framework\loadouts\includes\private-variables.sqf"
+	#include "\broma_framework\loadouts\includes\clear-object.sqf"
+	#include "\broma_framework\loadouts\content\content-list.sqf"
+	#include "\broma_framework\loadouts\includes\get-faction.sqf"
 
-			_assignLoadoutMode = false;
+	_loadoutCondition = !(_faction in mission_loadouts);
+	_assignLoadoutMode = false;
 
-			#include "read-data.sqf"
+	#include "read-data.sqf"
 
-			if (mission_cargo) then {
-				{
-					#include "..\..\..\..\mission\loadouts\cargo-list.sqf"
-				} forEach _type;
-			} else {
-				{
-					#include "\broma_framework\loadouts\cargo-list.sqf"
-				} forEach _type;
-			};
-
-			_object setVariable ["unit_initialized", true, true];
-		}, _this] call CBA_fnc_waitUntilAndExecute;
-	}, _this] call CBA_fnc_waitUntilAndExecute;
-};
+	{
+		_x = toLower _x;
+		if (mission_cargo) then {
+			#include "..\..\..\..\mission\loadouts\cargo-list.sqf"
+		} else {
+			#include "\broma_framework\loadouts\cargo-list.sqf"
+		};
+	} forEach _type;
+}, _this] call CBA_fnc_waitUntilAndExecute;

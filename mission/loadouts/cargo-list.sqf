@@ -1,24 +1,22 @@
-switch(_x) do {
+switch (_x) do {
 	case "medical": {
-		[[_object, "magazine",
+		[_object,
 			[_bchemlight, 25],
 			[_rchemlight, 25],
 			[_gchemlight, 25],
 			[_wsmoke, 25],
 			[_rsmoke, 25],
-			[_gsmoke, 25]
-		]] call BRM_FMK_fnc_addtoCargo;
-		[[_object, "item",
+			[_gsmoke, 25],
 			[_bandage, _countBandageCARGO],
 			[_morphine, _countMorphineCARGO],
 			[_epi, _countEpiCARGO],
 			[_bloodbag, _countBloodbagCARGO]
-		]] call BRM_FMK_fnc_addtoCargo;
+		] call BRM_FMK_fnc_addItems;
 	};
 
 	case "medical_adv": {
 		if (mission_ACE3_enabled) then {
-			[[_object, "item",
+			[_object,
 				[_fieldDressing, _countBandageCARGO],
 				[_packingBandage, _countBandageCARGO],
 				[_elasticBandage, _countBandageCARGO],
@@ -34,12 +32,12 @@ switch(_x) do {
 				[_surgKit, 5],
 				[_defib, 5],
 				[_bodyBag, _countBloodbagCARGO]
-			]] call BRM_FMK_fnc_addtoCargo;
+			] call BRM_FMK_fnc_addItems;
 		};
 	};
 
 	case "ammo": {
-		[[_object, "magazine",
+		[_object,
 			[_commonRIFLE select RAMMO, _countRifleCARGO],
 			[_commonMG select RAMMO, _countMGCARGO],
 			[_commonMARKSMAN select RAMMO, _countRifleCARGO],
@@ -50,15 +48,13 @@ switch(_x) do {
 			[_grenade, _countGRENADESCARGO],
 			[_wsmoke, 25],
 			[_rsmoke, 25],
-			[_gsmoke, 25]
-		]] call BRM_FMK_fnc_addtoCargo;
-		[[_object, "item",
+			[_gsmoke, 25],
 			[_earBuds, 25]
-		]] call BRM_FMK_fnc_addtoCargo;
+		] call BRM_FMK_fnc_addItems;
 	};
 
 	case "ammo_big": {
-		[[_object, "magazine",
+		[_object,
 			[_commonRIFLE select RAMMO, _countRifleCARGO * 3],
 			[_commonMG select RAMMO, _countMGCARGO * 3],
 			[_commonMARKSMAN select RAMMO, _countRifleCARGO * 3],
@@ -70,16 +66,14 @@ switch(_x) do {
 			[_wsmoke, 25 * 3],
 			[_rsmoke, 25 * 3],
 			[_gsmoke, 25 * 3]
-		]] call BRM_FMK_fnc_addtoCargo;
+		] call BRM_FMK_fnc_addItems;
 	};
 
 	case "at": {
-		[[_object, "magazine",
-			[_specAT select RAMMO, _countATCARGO]
-		]] call BRM_FMK_fnc_addtoCargo;
-		[[_object, "weapon",
+		[_object,
+			[_specAT select RAMMO, _countATCARGO],
 			[_specAT select GUN, 3]
-		]] call BRM_FMK_fnc_addtoCargo;
+		] call BRM_FMK_fnc_addItems;
 	};
 
 	case "radio": {
@@ -89,8 +83,8 @@ switch(_x) do {
 	};
 
 	case "parachutes": {
-		[[_object, "backpack",
+		[_object,
 			[_parachute , 15]
-		]] call BRM_FMK_fnc_addtoCargo;
+		] call BRM_FMK_fnc_addItems;
 	};
 };

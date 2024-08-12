@@ -1,4 +1,4 @@
-switch (toUpper _faction) do {
+switch (_faction) do {
 	default {
 		#include "factions\template.sqf"
 	};

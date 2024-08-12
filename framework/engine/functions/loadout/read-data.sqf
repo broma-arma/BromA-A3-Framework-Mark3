@@ -1,3 +1,4 @@
+_faction = toUpper _faction;
 if (_loadoutCondition) then {
 	#include "\broma_framework\loadouts\faction-list.sqf"
 } else {
@@ -8,12 +9,16 @@ if (_factionID in mission_modified_loadouts) then {
 	#include "..\..\..\..\mission\loadouts\mod-list.sqf"
 };
 
-_factionVehicles = _factionVehicles call BRM_FMK_fnc_setVehiclesArray;
+#include "\broma_framework\loadouts\includes\default-equipment.sqf"
 
 if (_assignLoadoutMode) then {
-	if (_UAVBAg == "auto") then { _UAVBag = (([_unit, "vanilla"] call BRM_FMK_fnc_getSideUAV) select 0) };
-	if (_UAVTerminal == "auto") then { _UAVTerminal = (([_unit, "vanilla"] call BRM_FMK_fnc_getSideUAV) select 1) };
+	if (_UAVBag in ["auto", "ar2", "al6", "al6med"]) then {
+		if (_UAVBag == "auto") then { _UAVBag = "ar2" };
+		_UAVBag = [_unit, _UAVBag] call BRM_FMK_fnc_getSideUAV select 0;
+	};
+	if (_UAVTerminal == "auto") then { _UAVTerminal = [_unit, "vanilla"] call BRM_FMK_fnc_getSideUAV select 1; };
 
+	_factionStructure = toUpper _factionStructure;
 	if (_factionStructure in mission_structures) then {
 		#include "..\..\..\..\mission\loadouts\structure-list.sqf"
 	} else {
@@ -21,4 +26,5 @@ if (_assignLoadoutMode) then {
 	};
 };
 
+#include "\broma_framework\loadouts\includes\faction-info-index.sqf"
 #include "\broma_framework\loadouts\includes\default-values.sqf"

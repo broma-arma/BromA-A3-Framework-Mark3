@@ -23,18 +23,3 @@ call compile preprocessFileLineNumbers "mission\settings\plugin-settings.sqf";
 [] call BRM_FMK_fnc_assignSideProperties;
 
 mission_settings_loaded = true;
-
-if (isServer) then {
-	[{ missionNamespace getVariable ["server_vehicles_created", false] }, {
-		[] call compile preprocessFileLineNumbers "mission\objectives\tasks.sqf";
-		[] spawn BRM_FMK_fnc_checkTasks;
-	}, []] call CBA_fnc_waitUntilAndExecute;
-};
-
-if (!didJIP) then {
-	[{ !isNil "mission_AI_controller_name" }, {
-		if (mission_AI_controller) then {
-			[] execVM "mission\objectives\ai.sqf";
-		};
-	}] call CBA_fnc_waitUntilAndExecute;
-};

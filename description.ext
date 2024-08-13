@@ -1,5 +1,5 @@
 class Params {
-	#include "params.hpp"
+	#include "framework\engine\configs\params.hpp"
 };
 
 class CfgFunctions {

@@ -1,5 +1,5 @@
 class p_enable_hc {
-	title = "Enable Headless Client";
+	title = "Headless Client";
 	values[] = {        0,         1,      2};
 	texts[] = {"Disabled", "Enabled", "Auto"};
 	default = 2;

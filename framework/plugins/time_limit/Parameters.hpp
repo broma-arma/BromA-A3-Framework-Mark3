@@ -1,7 +1,7 @@
 class p_time_limit {
-	title = "Time Limit";
-	values[] = {       -1,     10800,      7200,     3600,         2700,         1800,          900,          600,         65};
-	texts[] = {"No limit", "3 hours", "2 hours", "1 hour", "45 minutes", "30 minutes", "15 minutes", "10 minutes", "1 minute"};
+	title = "Time limit";
+	values[] = {       -1,         60,          600,          900,         1800,         2700,     3600,      7200,     10800};
+	texts[] = {"No limit", "1 minute", "10 minutes", "15 minutes", "30 minutes", "45 minutes", "1 hour", "2 hours", "3 hours"};
 	default = -1;
 };
 

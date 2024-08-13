@@ -21,11 +21,14 @@ private _initGroup = format ["{ [_x, '%1'] call BRM_fnc_initAI; } forEach units 
 private _initUnit = format ["[_unit, '%1'] call BRM_fnc_initAI;", _faction];
 
 [
-	[[_initGroup], [], [], [], [], [_initUnit], []],
-	[[_initGroup], [], [], [], [], [_initUnit], []],
-	[[_initGroup], [], [], [], [], [_initUnit]],
-	[[_initGroup], [], [], []],
-	[[_initGroup], [], [], [], [], [_initUnit]],
-	[[], [], [], []],
-	[[], [], []]
+// Create, ReachWP, NotAliveGroup, NotAliveUnit, BeforeReduce, AfterBuildUp, EnemyDetected
+	[[_initGroup], [], [], [], [], [_initUnit], []], // Infantry
+	[[_initGroup], [], [], [], [], [_initUnit], []], // Wheeled
+	[[_initGroup], [], [], [], [], [_initUnit]], // Tracked
+	[[_initGroup], [], [], []], // Helicopter crew
+	[[_initGroup], [], [], [], [], [_initUnit]], // Camp group
+	[[], [], [], []], // Helicopter group
+
+	// Wheeled, Tracked, Helicopter
+	[[], [], []] // Vehicle init
 ]

@@ -27,7 +27,7 @@ private _initUnit = format ["[_unit, '%1'] call BRM_fnc_initAI;", _faction];
 	[[_initGroup], [], [], [], [], [_initUnit]], // Tracked
 	[[_initGroup], [], [], []], // Helicopter crew
 	[[_initGroup], [], [], [], [], [_initUnit]], // Camp group
-	[[], [], [], []], // Helicopter group
+	[[_initGroup], [], [], []], // Helicopter group
 
 	// Wheeled, Tracked, Helicopter
 	[[], [], []] // Vehicle init

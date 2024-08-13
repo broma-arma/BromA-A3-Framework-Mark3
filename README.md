@@ -16,11 +16,11 @@ Since this could only be made thanks to shared scripts, missions and all sorts o
 Also keeping up with good practices, most functionality is modular and therefore optional to the user: adding and disabling plugins from the mission is extremely easy.
 
 ### SOME FEATURES
-*	ACE3, AGM, TFAR, ACRE2, ALIVE and DAC are fully integrated.
+*	ACE3, TFAR, ACRE2 and DAC are fully integrated.
 *	AI spawning system, complete with unit caching for performance.
 *	Cargo loading made simple.
-*	Casualty Cap and Body Removal, taken from the F3 Framework with given credits.
-*	Casualty Cap for civilians.
+*	Body Removal.
+*	Casualty Cap and Casualty Cap for civilians.
 *	Commander Lock.
 *	JIPs can teleport to their squadmates when joining.
 *	Limit player movement to the AO.

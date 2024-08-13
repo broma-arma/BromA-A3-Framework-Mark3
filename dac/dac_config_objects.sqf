@@ -1,8 +1,8 @@
-private ["_TypNumber", "_TempArray", "_Object_Pool"];
+params ["_type"];
 
-_TypNumber = _this select 0; _TempArray = [];
+private _Object_Pool = [];
 
-switch (_TypNumber) do {
+switch (_type) do {
 // =============================================================================
 	// use this config if you want to create positions only
 	case 0:	{
@@ -60,14 +60,12 @@ switch (_TypNumber) do {
 		];
 	};
 // =============================================================================
-	Default {
+	default {
 		if (DAC_Basic_Value != 5) then {
-			DAC_Basic_Value = 5; publicvariable "DAC_Basic_Value";
-			hintc "Error: DAC_Config_Objects > No valid config number";
+			DAC_Basic_Value = 5; publicVariable "DAC_Basic_Value";
+			hintC "Error: DAC_Config_Objects > No valid config number";
 		};
-		if (true) exitwith {};
 	};
 };
 
-_TempArray = _Object_Pool;
-_TempArray
+_Object_Pool

@@ -1,76 +1,105 @@
-private ["_array", "_setSkill", "_setCombat", "_setBehav", "_setSpeed", "_setForm", "_setPatrol", "_setSearch", "_setFleeing", "_setHeliVal", "_setPause", "_setBldgBeh", "_setSupport", "_setJoin", "_setEmpVeh", "_setSupTime", "_setHidTime"];
+params ["_type"];
+
+// Default values.
+
+private _setSkill   = [[0.2, 0.8], [0.2, 0.8], [0.2, 0.8], [0.2, 0.8], [0.2, 0.8], [0.2, 0.8], [0.2, 0.8], [0.2, 0.8], [0.2, 0.8], [0.2, 0.8]];
+private _setCombat  = ["green", "white", "yellow"];
+private _setBehav   = ["careless", "safe", "aware"];
+private _setSpeed   = ["limited", "normal", "full"];
+private _setForm    = ["line", "vee", "column", "wedge", "stag column", "ech left", "ech right", "file", "diamond"];
+private _setFleeing = [0, 200];
+private _setHeliVal = [100, 600, 1, 0];
+private _setPause   = [[5, 10], [5, 10], [5, 10], [20, 30, 5, 5], [1, 3], [0, 0]];
+private _setBldgBeh = [5, 50, 300, 600, 2];
+private _setPatrol  = ["45 + (20 * (skill _leader))", "(60 + (random 60)) + ((skill _leader) * 50)"];
+private _setSearch  = ["40 + ((skill _leader) * 150)", "50 + ((skill _leader) * 50)"];
+private _setSupport = [0, 0];
+private _setJoin    = 2;
+private _setEmpVeh  = [[200, 80], [100, 80]];
+private _setSupTime = ["5 + ((skill _unit) * (5 * DAC_AI_Level))", 2, 5];
+private _setHidTime = ["(((10 * DAC_AI_Level) + ((skill _leader) * 50)) / ((count units _group) + 1))"];
 
 // =============================================================================
-// Default values you shouldn't worry about.
 
-_setFleeing = [0, 200];
-_setHeliVal = [100, 600, 1, 0];
-_setPause   = [[5, 10], [5, 10], [5, 10], [20, 30, 5, 5], [1, 3], [0, 0]];
-_setBldgBeh = [5, 250, 200, 600, 2];
-_setPatrol  = ["45 + (20 * (skill _leader))", "(60 + (random 60)) + ((skill _leader) * 50)"];
-_setSearch  = ["40 + ((skill _leader) * 150)", "50 + ((skill _leader) * 50)"];
-_setJoin    = 2;
-_setSupTime = ["5 + ((skill _unit) * (5 * DAC_AI_Level))", 2, 5];
-_setHidTime = ["(((10 * DAC_AI_Level) + ((skill _leader) * 50)) / ((count units _group) + 1))"];
-_setEmpVeh  = [[500, 100], [550, 100]];
-_setSupport = [0, 0];
-
-// =============================================================================
-
-switch (_this select 0) do {
-//-------------------------------------------------------------------------------------------------------------------------
-	case 0: { // ROOKIES
-		//_setSkill = ["aimingAccuracy", "aimingShake", "aimingSpeed", "Endurance", "spotDistance", "spotTime", "courage", "reloadSpeed", "commanding", "general"];
-		_setSkill   = [   [0.2, 0.2],      [0.2, 0.2],    [0.2, 0.2],    [0.2, 0.2],   [0.2, 0.2],  [0.2, 0.2], [0.2, 0.2],  [0.2, 0.2],    [0.2, 0.2], [0.2, 0.2]];
-		_setCombat  = ["green"];
-		_setBehav   = ["careless", "safe", "aware"];
-		_setSpeed   = ["limited", "normal", "full"];
-		_setForm    = ["line"];
+switch (_type) do {
+	case 0: { // EASY
+		_setSkill = [
+			[0.2, 0.2], // Aiming Accuracy
+			[0.2, 0.2], // Aiming Shake
+			[0.2, 0.2], // Aiming Speed
+			[0.2, 0.2], // Endurance
+			[0.2, 0.2], // Spot Distance
+			[0.2, 0.2], // Spot Time
+			[0.2, 0.2], // Courage
+			[0.2, 0.2], // Reload Speed
+			[0.2, 0.2], // Commanding
+			[0.2, 0.2] // General
+		];
+		_setCombat = ["green"];
+		_setForm = ["line"];
 	};
-//-------------------------------------------------------------------------------------------------------------------------
+
 	case 1: { // NORMAL
-		//_setSkill = ["aimingAccuracy", "aimingShake", "aimingSpeed", "Endurance", "spotDistance", "spotTime", "courage", "reloadSpeed", "commanding", "general"];
-		_setSkill   = [mission_DAC_AI_skill, [0.4, 0.5], [0.4, 0.5], mission_DAC_AI_skill, mission_DAC_AI_skill, [0.6, 0.7], [0.8, 0.9], [0.2, 0.4], mission_DAC_AI_skill, mission_DAC_AI_skill];
-		_setCombat  = ["green", "white", "yellow"];
-		_setBehav   = ["careless", "safe", "aware"];
-		_setSpeed   = ["limited", "normal", "full"];
-		_setForm    = ["line", "vee", "column", "wedge", "stag column", "ech left", "ech right", "file", "diamond"];
+		_setSkill = [
+			mission_DAC_AI_skill, // Aiming Accuracy
+			[0.4, 0.5], // Aiming Shake
+			[0.4, 0.5], // Aiming Speed
+			mission_DAC_AI_skill, // Endurance
+			mission_DAC_AI_skill, // Spot Distance
+			[0.6, 0.7], // Spot Time
+			[0.8, 0.9], // Courage
+			[0.2, 0.4], // Reload Speed
+			mission_DAC_AI_skill, // Commanding
+			mission_DAC_AI_skill // General
+		];
 	};
-//-------------------------------------------------------------------------------------------------------------------------
-	case 2: { // STEALTH, Groups cross open terrain primarily by crawling and with small bounding manoeuvres. In cities groups move as straight as possible to their
-				// waypoint avoiding roads and using every piece of cover available, peeking around corners, 360 cover, bounding manoeuvres. Not recommended for vehicles.
-		//_setSkill = ["aimingAccuracy", "aimingShake", "aimingSpeed", "Endurance", "spotDistance", "spotTime", "courage", "reloadSpeed", "commanding", "general"];
-		_setSkill   = [   [0.2, 0.3],      [0.3, 0.4],    [0.3, 0.4],    [0.6, 0.8],   [0.3, 0.5],  [0.2, 0.3], [0.5, 0.8],  [0.2, 0.4],    [0.6, 0.8], [0.4, 0.6]];
-		_setCombat  = ["red"];
-		_setBehav   = ["stealth"];
-		_setSpeed   = ["full"];
-		_setForm    = ["line", "vee", "column", "wedge", "stag column", "ech left", "ech right", "file", "diamond"];
-		_setPause   = [[2, 5], [5, 10], [5, 10], [20, 30, 5, 5], [1, 3], [0, 0]];
-		_setBldgBeh = [0, 1, 10, 600, 2]; //? Disabled building garrisoning to speed up movement.
-		_setEmpVeh  = [[0, 100], [150, 100]]; //? Disabled empty vehicle usage since it doesnt make sense with the stealth motive.
-};
-//-------------------------------------------------------------------------------------------------------------------------
-	case 3: { // BASICALLY THE DEATH STAR IN TERMS OF LASERNESS
-		//_setSkill = ["aimingAccuracy", "aimingShake", "aimingSpeed", "Endurance", "spotDistance", "spotTime", "courage", "reloadSpeed", "commanding", "general"];
-		_setSkill   = [   [0.7, 0.8],      [0.7, 0.8],    [0.7, 0.8],    [0.7, 0.8],    [0.5, 0.6],   [0.5, 0.6], [0.7, 0.8], [0.7, 0.8],    [0.7, 0.8], [0.7, 0.8]];
-		_setCombat  = ["green", "white", "yellow"];
-		_setBehav   = ["careless", "safe", "aware"];
-		_setSpeed   = ["limited", "normal", "full"];
-		_setForm    = ["line", "vee", "column", "wedge", "stag column", "ech left", "ech right", "file", "diamond"];
+
+	case 2: { // STEALTH
+		_setSkill = [
+			[0.2, 0.3], // Aiming Accuracy
+			[0.3, 0.4], // Aiming Shake
+			[0.3, 0.4], // Aiming Speed
+			[0.6, 0.8], // Endurance
+			[0.3, 0.5], // Spot Distance
+			[0.2, 0.3], // Spot Time
+			[0.5, 0.8], // Courage
+			[0.2, 0.4], // Reload Speed
+			[0.6, 0.8], // Commanding
+			[0.4, 0.6] // General
+		];
+		_setCombat = ["red"];
+		_setBehav = ["stealth"];
+		_setSpeed = ["full"];
+		_setPause set [0, [2, 5]]; // Reduce infantry waypoint wait time
+		_setBldgBeh set [0, 0]; // Disable building garrisoning
+		_setEmpVeh select 0 set [0, 0]; // Disable empty vehicle usage.
 	};
-//-------------------------------------------------------------------------------------------------------------------------
-	Default {
+
+	case 3: { // HARD
+		_setSkill = [
+			[0.7, 0.8], // Aiming Accuracy
+			[0.7, 0.8], // Aiming Shake
+			[0.7, 0.8], // Aiming Speed
+			[0.7, 0.8], // Endurance
+			[0.5, 0.6], // Spot Distance
+			[0.5, 0.6], // Spot Time
+			[0.7, 0.8], // Courage
+			[0.7, 0.8], // Reload Speed
+			[0.7, 0.8], // Commanding
+			[0.7, 0.8] // General
+		];
+	};
+
+	default {
 		if (DAC_Basic_Value != 5) then {
-			DAC_Basic_Value = 5; publicvariable "DAC_Basic_Value";
-			hintc "Error: DAC_Config_Behaviour > No valid config number";
+			DAC_Basic_Value = 5; publicVariable "DAC_Basic_Value";
+			hintC "Error: DAC_Config_Behaviour > No valid config number";
 		};
-		if (true) exitwith {};
 	};
 };
 
-_array = [
+[
 	_setSkill, _setCombat, _setBehav, _setSpeed, _setForm, _setFleeing,
 	_setHeliVal, _setPause, _setBldgBeh, _setPatrol, _setSearch,
 	_setSupport, _setJoin, _setEmpVeh, _setSupTime, _setHidTime
-];
-_array
+]

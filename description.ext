@@ -12,10 +12,6 @@ class CfgFunctions {
 	#include "framework\plugins\plugins.hpp"
 #undef BRM_PLUGIN_DIALOGS
 
-class Mission {
-	#include "mission.sqm"
-};
-
 class CfgPlugins {
 	#define BRM_PLUGIN_META
 		#include "framework\plugins\plugins.hpp"

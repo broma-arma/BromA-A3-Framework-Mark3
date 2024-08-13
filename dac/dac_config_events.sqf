@@ -25,7 +25,7 @@ private _initUnit = format ["[_unit, '%1'] call BRM_fnc_initAI;", _faction];
 	[[_initGroup], [], [], [], [], [_initUnit], []],
 	[[_initGroup], [], [], [], [], [_initUnit]],
 	[[_initGroup], [], [], []],
-	[[], [], [], [], [], []],
+	[[_initGroup], [], [], [], [], [_initUnit]],
 	[[], [], [], []],
 	[[], [], []]
 ]

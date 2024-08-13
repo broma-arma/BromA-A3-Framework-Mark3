@@ -33,7 +33,11 @@ if (isNil "DAC_Del_PlayerBody") then { DAC_Del_PlayerBody = [0, 0] };
 if (isNil "DAC_Com_Values") then { DAC_Com_Values = [[1, 2, 0, 0], [0, 0, 0, 0]] select isMultiplayer };
 if (isNil "DAC_AI_AddOn") then { DAC_AI_AddOn = 1 };
 if (isNil "DAC_AI_Level") then { DAC_AI_Level = 3 };
-if (isNil "DAC_Res_Side") then { DAC_Res_Side = 0 };
+if (isNil "DAC_Res_Side") then {
+	getMissionConfigValue ["IntelIndepAllegiance", [1, 0]] params ["_west", "_east"];
+	_east = _east > 0;
+	DAC_Res_Side = [[2, 0] select _east, [1, 2] select _east] select (_west > 0);
+};
 if (isNil "DAC_Marker") then { DAC_Marker = parseNumber !isMultiplayer };
 if (isNil "DAC_WP_Speed") then { DAC_WP_Speed = 0.01 };
 if (isNil "DAC_Join_Action") then { DAC_Join_Action = false };

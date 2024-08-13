@@ -41,7 +41,7 @@ class CfgPlugins {
 //    Debriefing and endings.                                                  |
 // ============================================================================
 class CfgDebriefing {
-	#include "mission\objectives\debriefing.hpp"
+	#include "mission\debriefing.hpp"
 };
 
 class BRM_CfgEnding {

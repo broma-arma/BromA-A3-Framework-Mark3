@@ -67,7 +67,7 @@ switch (_type) do {
 			[0.6, 0.8], // Commanding
 			[0.4, 0.6] // General
 		];
-		_setCombat = ["red"];
+		_setCombat = ["red", "white"];
 		_setBehav = ["stealth"];
 		_setSpeed = ["full"];
 		_setPause set [0, [2, 5]]; // Reduce infantry waypoint wait time

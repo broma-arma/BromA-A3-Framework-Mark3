@@ -86,6 +86,18 @@ class ScenarioData
 {
 	author="You";
 	overviewText="Edit this description with a short explanation and important details about your mission.";
+	onLoadMission="Powered by BromA Framework MK 4 for ArmA 3";
+	loadScreen="\broma_framework\assets\images\loading-screen.jpg";
+	saving=0;
+	respawnDialog=0;
+	disabledAI=1;
+	respawn=3;
+	respawnDelay=4;
+	class Header
+	{
+		minPlayers=2;
+		maxPlayers=64;
+	};
 };
 class CustomAttributes
 {

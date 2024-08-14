@@ -6,8 +6,6 @@ class CfgFunctions {
 	#include "framework\engine\configs\CfgFunctions.hpp"
 };
 
-#include "mission\mission-info.hpp"
-
 #define BRM_PLUGIN_DIALOGS
 	#include "framework\plugins\plugins.hpp"
 #undef BRM_PLUGIN_DIALOGS
@@ -32,3 +30,6 @@ class CfgNotifications {
 		#include "framework\plugins\plugins.hpp"
 	#undef BRM_PLUGIN_NOTIFICATIONS
 };
+
+disableRandomization[] = {"CAManBase"};
+disableChannels[] = {0, 1, 2};

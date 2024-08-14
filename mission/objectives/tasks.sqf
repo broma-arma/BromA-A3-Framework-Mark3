@@ -9,11 +9,11 @@
 		"Kill the Scientist", // Name
 		"The Scientist knows too much, eliminate them.", // Description
 		"attack", // Type (See https://community.bistudio.com/wiki/Arma_3:_Task_Framework#Task_Icons)
-		tgt1 // POSITION / OBJECT / MARKER denoting the position of the task
+		taskScientist // POSITION / OBJECT / MARKER denoting the position of the task
 	],
 	[ // Condition for task to ...
 		{ true }, // be assigned
-		{ !alive tgt1 }, // complete
+		{ !alive taskScientist }, // complete
 		{ false } // fail (OPTIONAL)
 	],
 	2, // Priority: 0 - Optional, 1 - Secondary, 2 - Primary, 3 - Abortive
@@ -45,9 +45,9 @@
 [side_a_side, "a3", [
 	"Kill Nikos?", "To kill Nikos, or not to kill Nikos, that is the question. Though, we don't care what the answer is.",
 	"kill", objNull // Use objNull for no position
-], [{ true }, { !alive nikos_npc }], 0, [{}, {}, {}]] spawn BRM_FMK_fnc_newTask;
+], [{ true }, { !alive taskNikos }], 0, [{}, {}, {}]] spawn BRM_FMK_fnc_newTask;
 
 // Abortive task
-[side_a_side, "a4", ["Protect the Pilot", "Don't let the Pilot die.", "defend", tgt2],
-	[{ true }, { false }, { !alive tgt2 }], 3, [{}, {}, {}]
+[side_a_side, "a4", ["Protect the Pilot", "Don't let the Pilot die.", "defend", taskPilot],
+	[{ true }, { false }, { !alive taskPilot }], 3, [{}, {}, {}]
 ] spawn BRM_FMK_fnc_newTask;

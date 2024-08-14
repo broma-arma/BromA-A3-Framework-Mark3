@@ -41,16 +41,16 @@ switch (_type) do {
 
 	case 1: { // NORMAL
 		_setSkill = [
-			mission_DAC_AI_skill, // Aiming Accuracy
+			[0.8, 0.9], // Aiming Accuracy
 			[0.4, 0.5], // Aiming Shake
 			[0.4, 0.5], // Aiming Speed
-			mission_DAC_AI_skill, // Endurance
-			mission_DAC_AI_skill, // Spot Distance
+			[0.8, 0.9], // Endurance
+			[0.8, 0.9], // Spot Distance
 			[0.6, 0.7], // Spot Time
 			[0.8, 0.9], // Courage
 			[0.2, 0.4], // Reload Speed
-			mission_DAC_AI_skill, // Commanding
-			mission_DAC_AI_skill // General
+			[0.8, 0.9], // Commanding
+			[0.8, 0.9] // General
 		];
 	};
 
@@ -97,6 +97,13 @@ switch (_type) do {
 		};
 	};
 };
+
+private _difficulty = DAC_AI_Level / 3; // 0.3, 0.6, 1, 1.3
+{
+	for "_i" from 0 to 1 do {
+		_x set [_i, _x#_i * _difficulty min 1];
+	};
+} forEach _setSkill;
 
 [
 	_setSkill, _setCombat, _setBehav, _setSpeed, _setForm, _setFleeing,

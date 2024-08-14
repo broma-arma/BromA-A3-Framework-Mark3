@@ -305,7 +305,7 @@ class Mission
 						rank="COLONEL";
 						init="if (local this) then { this setVariable [""unitInit"", [""white"", ""*"", ""*"", ""*""], true]; };";
 						name="blu_0_0_1";
-						description="Zero Actual - Commander";
+						description="Actual - Commander@Zero";
 						isPlayer=1;
 						isPlayable=1;
 					};
@@ -327,7 +327,7 @@ class Mission
 						rank="SERGEANT";
 						init="if (local this) then { this setVariable [""unitInit"", [""yellow"", ""*"", ""rto"", ""*""], true]; };";
 						name="blu_0_0_2";
-						description="     Zero '2 - RTO";
+						description="'2 - RTO@Zero";
 						isPlayable=1;
 					};
 					id=69;
@@ -348,7 +348,7 @@ class Mission
 						rank="CORPORAL";
 						init="if (local this) then { this setVariable [""unitInit"", [""green"", ""*"", ""*"", ""*""], true]; };";
 						name="blu_0_0_3";
-						description="     Zero '3 - Medic";
+						description="'3 - Medic@Zero";
 						isPlayable=1;
 					};
 					id=70;
@@ -520,7 +520,7 @@ class Mission
 						rank="LIEUTENANT";
 						init="if (local this) then { this setVariable [""unitInit"", [""white"", ""*"", ""*"", ""*""], true]; };";
 						name="blu_1_0_1";
-						description="Alpha Actual - Squad Leader";
+						description="Actual - Squad Leader@Alpha";
 						isPlayable=1;
 					};
 					id=85;
@@ -541,7 +541,7 @@ class Mission
 						rank="SERGEANT";
 						init="if (local this) then { this setVariable [""unitInit"", [""yellow"", ""*"", ""rto"", ""*""], true]; };";
 						name="blu_1_0_2";
-						description="     Alpha '2 - RTO";
+						description="'2 - RTO@Alpha";
 						isPlayable=1;
 					};
 					id=86;
@@ -562,7 +562,7 @@ class Mission
 						rank="CORPORAL";
 						init="if (local this) then { this setVariable [""unitInit"", [""green"", ""*"", ""*"", ""*""], true]; };";
 						name="blu_1_0_3";
-						description="     Alpha '3 - Medic";
+						description="'3 - Medic@Alpha";
 						isPlayable=1;
 					};
 					id=87;
@@ -597,7 +597,7 @@ class Mission
 						rank="SERGEANT";
 						init="if (local this) then { this setVariable [""unitInit"", [""blue"", ""*"", ""*"", ""*""], true]; };";
 						name="blu_1_1_1";
-						description="     Alpha 1'1 - Team Leader";
+						description="'1 - Team Leader@Alpha 1";
 						isPlayable=1;
 					};
 					id=89;
@@ -618,7 +618,7 @@ class Mission
 						rank="CORPORAL";
 						init="if (local this) then { this setVariable [""unitInit"", [""blue"", ""*"", ""*"", ""*""], true]; };";
 						name="blu_1_1_2";
-						description="          Alpha 1'2 - Rifleman";
+						description="'2 - Rifleman@Alpha 1";
 						isPlayable=1;
 					};
 					id=90;
@@ -639,7 +639,7 @@ class Mission
 						rank="CORPORAL";
 						init="if (local this) then { this setVariable [""unitInit"", [""red"", ""*"", ""*"", ""*""], true]; };";
 						name="blu_1_1_3";
-						description="          Alpha 1'3 - Rifleman (AT)";
+						description="'3 - Rifleman (AT)@Alpha 1";
 						isPlayable=1;
 					};
 					id=91;
@@ -660,7 +660,7 @@ class Mission
 						rank="CORPORAL";
 						init="if (local this) then { this setVariable [""unitInit"", [""red"", ""*"", ""*"", ""*""], true]; };";
 						name="blu_1_1_4";
-						description="          Alpha 1'4 - Autorifleman";
+						description="'4 - Autorifleman@Alpha 1";
 						isPlayable=1;
 					};
 					id=92;
@@ -695,7 +695,7 @@ class Mission
 						rank="SERGEANT";
 						init="if (local this) then { this setVariable [""unitInit"", [""blue"", ""*"", ""*"", ""*""], true]; };";
 						name="blu_1_2_1";
-						description="     Alpha 2'1 - Team Leader";
+						description="'1 - Team Leader@Alpha 2";
 						isPlayable=1;
 					};
 					id=94;
@@ -716,7 +716,7 @@ class Mission
 						rank="CORPORAL";
 						init="if (local this) then { this setVariable [""unitInit"", [""blue"", ""*"", ""*"", ""*""], true]; };";
 						name="blu_1_2_2";
-						description="          Alpha 2'2 - Rifleman";
+						description="'2 - Rifleman@Alpha 2";
 						isPlayable=1;
 					};
 					id=95;
@@ -737,7 +737,7 @@ class Mission
 						rank="CORPORAL";
 						init="if (local this) then { this setVariable [""unitInit"", [""red"", ""*"", ""*"", ""*""], true]; };";
 						name="blu_1_2_3";
-						description="          Alpha 2'3 - Rifleman (AT)";
+						description="'3 - Rifleman (AT)@Alpha 2";
 						isPlayable=1;
 					};
 					id=96;
@@ -758,7 +758,7 @@ class Mission
 						rank="CORPORAL";
 						init="if (local this) then { this setVariable [""unitInit"", [""red"", ""*"", ""*"", ""*""], true]; };";
 						name="blu_1_2_4";
-						description="          Alpha 2'4 - Autorifleman";
+						description="'4 - Autorifleman@Alpha 2";
 						isPlayable=1;
 					};
 					id=97;
@@ -793,7 +793,7 @@ class Mission
 						rank="LIEUTENANT";
 						init="if (local this) then { this setVariable [""unitInit"", [""white"", ""*"", ""*"", ""*""], true]; };";
 						name="blu_2_0_1";
-						description="Bravo Actual - Squad Leader";
+						description="Actual - Squad Leader@Bravo";
 						isPlayable=1;
 					};
 					id=99;
@@ -814,7 +814,7 @@ class Mission
 						rank="SERGEANT";
 						init="if (local this) then { this setVariable [""unitInit"", [""yellow"", ""*"", ""rto"", ""*""], true]; };";
 						name="blu_2_0_2";
-						description="     Bravo '2 - RTO";
+						description="'2 - RTO@Bravo";
 						isPlayable=1;
 					};
 					id=100;
@@ -835,7 +835,7 @@ class Mission
 						rank="CORPORAL";
 						init="if (local this) then { this setVariable [""unitInit"", [""green"", ""*"", ""*"", ""*""], true]; };";
 						name="blu_2_0_3";
-						description="     Bravo '3 - Medic";
+						description="'3 - Medic@Bravo";
 						isPlayable=1;
 					};
 					id=101;
@@ -870,7 +870,7 @@ class Mission
 						rank="SERGEANT";
 						init="if (local this) then { this setVariable [""unitInit"", [""blue"", ""*"", ""*"", ""*""], true]; };";
 						name="blu_2_1_1";
-						description="     Bravo 1'1 - Team Leader";
+						description="'1 - Team Leader@Bravo 1";
 						isPlayable=1;
 					};
 					id=103;
@@ -891,7 +891,7 @@ class Mission
 						rank="CORPORAL";
 						init="if (local this) then { this setVariable [""unitInit"", [""blue"", ""*"", ""*"", ""*""], true]; };";
 						name="blu_2_1_2";
-						description="          Bravo 1'2 - Rifleman";
+						description="'2 - Rifleman@Bravo 1";
 						isPlayable=1;
 					};
 					id=104;
@@ -912,7 +912,7 @@ class Mission
 						rank="CORPORAL";
 						init="if (local this) then { this setVariable [""unitInit"", [""red"", ""*"", ""*"", ""*""], true]; };";
 						name="blu_2_1_3";
-						description="          Bravo 1'3 - Rifleman (AT)";
+						description="'3 - Rifleman (AT)@Bravo 1";
 						isPlayable=1;
 					};
 					id=105;
@@ -933,7 +933,7 @@ class Mission
 						rank="CORPORAL";
 						init="if (local this) then { this setVariable [""unitInit"", [""red"", ""*"", ""*"", ""*""], true]; };";
 						name="blu_2_1_4";
-						description="          Bravo 1'4 - Autorifleman";
+						description="'4 - Autorifleman@Bravo 1";
 						isPlayable=1;
 					};
 					id=106;
@@ -968,7 +968,7 @@ class Mission
 						rank="SERGEANT";
 						init="if (local this) then { this setVariable [""unitInit"", [""blue"", ""*"", ""*"", ""*""], true]; };";
 						name="blu_2_2_1";
-						description="     Bravo 2'1 - Team Leader";
+						description="'1 - Team Leader@Bravo 2";
 						isPlayable=1;
 					};
 					id=108;
@@ -989,7 +989,7 @@ class Mission
 						rank="CORPORAL";
 						init="if (local this) then { this setVariable [""unitInit"", [""blue"", ""*"", ""*"", ""*""], true]; };";
 						name="blu_2_2_2";
-						description="          Bravo 2'2 - Rifleman";
+						description="'2 - Rifleman@Bravo 2";
 						isPlayable=1;
 					};
 					id=109;
@@ -1010,7 +1010,7 @@ class Mission
 						rank="CORPORAL";
 						init="if (local this) then { this setVariable [""unitInit"", [""red"", ""*"", ""*"", ""*""], true]; };";
 						name="blu_2_2_3";
-						description="          Bravo 2'3 - Rifleman (AT)";
+						description="'3 - Rifleman (AT)@Bravo 2";
 						isPlayable=1;
 					};
 					id=110;
@@ -1031,7 +1031,7 @@ class Mission
 						rank="CORPORAL";
 						init="if (local this) then { this setVariable [""unitInit"", [""red"", ""*"", ""*"", ""*""], true]; };";
 						name="blu_2_2_4";
-						description="          Bravo 2'4 - Autorifleman";
+						description="'4 - Autorifleman@Bravo 2";
 						isPlayable=1;
 					};
 					id=111;
@@ -1066,7 +1066,7 @@ class Mission
 						rank="LIEUTENANT";
 						init="if (local this) then { this setVariable [""unitInit"", [""white"", ""*"", ""*"", ""*""], true]; };";
 						name="blu_3_0_1";
-						description="Charlie Actual - Squad Leader";
+						description="Actual - Squad Leader@Charlie";
 						isPlayable=1;
 					};
 					id=113;
@@ -1087,7 +1087,7 @@ class Mission
 						rank="SERGEANT";
 						init="if (local this) then { this setVariable [""unitInit"", [""yellow"", ""*"", ""rto"", ""*""], true]; };";
 						name="blu_3_0_2";
-						description="     Charlie '2 - RTO";
+						description="'2 - RTO@Charlie";
 						isPlayable=1;
 					};
 					id=114;
@@ -1108,7 +1108,7 @@ class Mission
 						rank="CORPORAL";
 						init="if (local this) then { this setVariable [""unitInit"", [""green"", ""*"", ""*"", ""*""], true]; };";
 						name="blu_3_0_3";
-						description="     Charlie '3 - Medic";
+						description="'3 - Medic@Charlie";
 						isPlayable=1;
 					};
 					id=115;
@@ -1143,7 +1143,7 @@ class Mission
 						rank="SERGEANT";
 						init="if (local this) then { this setVariable [""unitInit"", [""blue"", ""*"", ""*"", ""*""], true]; };";
 						name="blu_3_1_1";
-						description="     Charlie 1'1 - Team Leader";
+						description="'1 - Team Leader@Charlie 1";
 						isPlayable=1;
 					};
 					id=117;
@@ -1164,7 +1164,7 @@ class Mission
 						rank="CORPORAL";
 						init="if (local this) then { this setVariable [""unitInit"", [""blue"", ""*"", ""*"", ""*""], true]; };";
 						name="blu_3_1_2";
-						description="          Charlie 1'2 - Rifleman";
+						description="'2 - Rifleman@Charlie 1";
 						isPlayable=1;
 					};
 					id=118;
@@ -1185,7 +1185,7 @@ class Mission
 						rank="CORPORAL";
 						init="if (local this) then { this setVariable [""unitInit"", [""red"", ""*"", ""*"", ""*""], true]; };";
 						name="blu_3_1_3";
-						description="          Charlie 1'3 - Rifleman (AT)";
+						description="'3 - Rifleman (AT)@Charlie 1";
 						isPlayable=1;
 					};
 					id=119;
@@ -1206,7 +1206,7 @@ class Mission
 						rank="CORPORAL";
 						init="if (local this) then { this setVariable [""unitInit"", [""red"", ""*"", ""*"", ""*""], true]; };";
 						name="blu_3_1_4";
-						description="          Charlie 1'4 - Autorifleman";
+						description="'4 - Autorifleman@Charlie 1";
 						isPlayable=1;
 					};
 					id=120;
@@ -1241,7 +1241,7 @@ class Mission
 						rank="SERGEANT";
 						init="if (local this) then { this setVariable [""unitInit"", [""blue"", ""*"", ""*"", ""*""], true]; };";
 						name="blu_3_2_1";
-						description="     Charlie 2'1 - Team Leader";
+						description="'1 - Team Leader@Charlie 2";
 						isPlayable=1;
 					};
 					id=122;
@@ -1262,7 +1262,7 @@ class Mission
 						rank="CORPORAL";
 						init="if (local this) then { this setVariable [""unitInit"", [""blue"", ""*"", ""*"", ""*""], true]; };";
 						name="blu_3_2_2";
-						description="          Charlie 2'2 - Rifleman";
+						description="'2 - Rifleman@Charlie 2";
 						isPlayable=1;
 					};
 					id=123;
@@ -1283,7 +1283,7 @@ class Mission
 						rank="CORPORAL";
 						init="if (local this) then { this setVariable [""unitInit"", [""red"", ""*"", ""*"", ""*""], true]; };";
 						name="blu_3_2_3";
-						description="          Charlie 2'3 - Rifleman (AT)";
+						description="'3 - Rifleman (AT)@Charlie 2";
 						isPlayable=1;
 					};
 					id=124;
@@ -1304,7 +1304,7 @@ class Mission
 						rank="CORPORAL";
 						init="if (local this) then { this setVariable [""unitInit"", [""red"", ""*"", ""*"", ""*""], true]; };";
 						name="blu_3_2_4";
-						description="          Charlie 2'4 - Autorifleman";
+						description="'4 - Autorifleman@Charlie 2";
 						isPlayable=1;
 					};
 					id=125;
@@ -1339,7 +1339,7 @@ class Mission
 						rank="LIEUTENANT";
 						init="if (local this) then { this setVariable [""unitInit"", [""white"", ""*"", ""*"", ""*""], true]; };";
 						name="blu_4_0_1";
-						description="Delta Actual - Squad Leader";
+						description="Actual - Squad Leader@Delta";
 						isPlayable=1;
 					};
 					id=127;
@@ -1360,7 +1360,7 @@ class Mission
 						rank="SERGEANT";
 						init="if (local this) then { this setVariable [""unitInit"", [""yellow"", ""*"", ""rto"", ""*""], true]; };";
 						name="blu_4_0_2";
-						description="     Delta '2 - RTO";
+						description="'2 - RTO@Delta";
 						isPlayable=1;
 					};
 					id=128;
@@ -1381,7 +1381,7 @@ class Mission
 						rank="CORPORAL";
 						init="if (local this) then { this setVariable [""unitInit"", [""green"", ""*"", ""*"", ""*""], true]; };";
 						name="blu_4_0_3";
-						description="     Delta '3 - Medic";
+						description="'3 - Medic@Delta";
 						isPlayable=1;
 					};
 					id=129;
@@ -1416,7 +1416,7 @@ class Mission
 						rank="SERGEANT";
 						init="if (local this) then { this setVariable [""unitInit"", [""blue"", ""*"", ""*"", ""*""], true]; };";
 						name="blu_4_1_1";
-						description="     Delta 1'1 - Team Leader";
+						description="'1 - Team Leader@Delta 1";
 						isPlayable=1;
 					};
 					id=131;
@@ -1437,7 +1437,7 @@ class Mission
 						rank="CORPORAL";
 						init="if (local this) then { this setVariable [""unitInit"", [""blue"", ""*"", ""*"", ""*""], true]; };";
 						name="blu_4_1_2";
-						description="          Delta 1'2 - Rifleman";
+						description="'2 - Rifleman@Delta 1";
 						isPlayable=1;
 					};
 					id=132;
@@ -1458,7 +1458,7 @@ class Mission
 						rank="CORPORAL";
 						init="if (local this) then { this setVariable [""unitInit"", [""red"", ""*"", ""*"", ""*""], true]; };";
 						name="blu_4_1_3";
-						description="          Delta 1'3 - Rifleman (AT)";
+						description="'3 - Rifleman (AT)@Delta 1";
 						isPlayable=1;
 					};
 					id=133;
@@ -1479,7 +1479,7 @@ class Mission
 						rank="CORPORAL";
 						init="if (local this) then { this setVariable [""unitInit"", [""red"", ""*"", ""*"", ""*""], true]; };";
 						name="blu_4_1_4";
-						description="          Delta 1'4 - Autorifleman";
+						description="'4 - Autorifleman@Delta 1";
 						isPlayable=1;
 					};
 					id=134;
@@ -1514,7 +1514,7 @@ class Mission
 						rank="SERGEANT";
 						init="if (local this) then { this setVariable [""unitInit"", [""blue"", ""*"", ""*"", ""*""], true]; };";
 						name="blu_4_2_1";
-						description="     Delta 2'1 - Team Leader";
+						description="'1 - Team Leader@Delta 2";
 						isPlayable=1;
 					};
 					id=136;
@@ -1535,7 +1535,7 @@ class Mission
 						rank="CORPORAL";
 						init="if (local this) then { this setVariable [""unitInit"", [""blue"", ""*"", ""*"", ""*""], true]; };";
 						name="blu_4_2_2";
-						description="          Delta 2'2 - Rifleman";
+						description="'2 - Rifleman@Delta 2";
 						isPlayable=1;
 					};
 					id=137;
@@ -1556,7 +1556,7 @@ class Mission
 						rank="CORPORAL";
 						init="if (local this) then { this setVariable [""unitInit"", [""red"", ""*"", ""*"", ""*""], true]; };";
 						name="blu_4_2_3";
-						description="          Delta 2'3 - Rifleman (AT)";
+						description="'3 - Rifleman (AT)@Delta 2";
 						isPlayable=1;
 					};
 					id=138;
@@ -1577,7 +1577,7 @@ class Mission
 						rank="CORPORAL";
 						init="if (local this) then { this setVariable [""unitInit"", [""red"", ""*"", ""*"", ""*""], true]; };";
 						name="blu_4_2_4";
-						description="          Delta 2'4 - Autorifleman";
+						description="'4 - Autorifleman@Delta 2";
 						isPlayable=1;
 					};
 					id=139;
@@ -1612,7 +1612,7 @@ class Mission
 						rank="SERGEANT";
 						init="if (local this) then { this setVariable [""unitInit"", [""blue"", ""*"", ""*"", ""*""], true]; };";
 						name="blu_6_0_1";
-						description="Sierra '1 - Sniper";
+						description="'1 - Sniper@Sierra";
 						isPlayable=1;
 					};
 					id=141;
@@ -1633,7 +1633,7 @@ class Mission
 						rank="SERGEANT";
 						init="if (local this) then { this setVariable [""unitInit"", [""blue"", ""*"", ""*"", ""*""], true]; };";
 						name="blu_6_0_2";
-						description="     Sierra '2 - Spotter";
+						description="'2 - Spotter@Sierra";
 						isPlayable=1;
 					};
 					id=142;
@@ -1654,7 +1654,7 @@ class Mission
 						rank="SERGEANT";
 						init="if (local this) then { this setVariable [""unitInit"", [""red"", ""*"", ""*"", ""*""], true]; };";
 						name="blu_6_0_3";
-						description="Sierra '3 - Sniper";
+						description="'3 - Sniper@Sierra";
 						isPlayable=1;
 					};
 					id=143;
@@ -1675,7 +1675,7 @@ class Mission
 						rank="SERGEANT";
 						init="if (local this) then { this setVariable [""unitInit"", [""red"", ""*"", ""*"", ""*""], true]; };";
 						name="blu_6_0_4";
-						description="     Sierra '4 - Spotter";
+						description="'4 - Spotter@Sierra";
 						isPlayable=1;
 					};
 					id=144;
@@ -1710,7 +1710,7 @@ class Mission
 						rank="SERGEANT";
 						init="if (local this) then { this setVariable [""unitInit"", [""blue"", ""*"", ""*"", ""*""], true]; };";
 						name="blu_8_0_1";
-						description="Shocker '1 - Repair Specialist";
+						description="'1 - Repair Specialist@Shocker";
 						isPlayable=1;
 					};
 					id=146;
@@ -1731,7 +1731,7 @@ class Mission
 						rank="SERGEANT";
 						init="if (local this) then { this setVariable [""unitInit"", [""red"", ""*"", ""*"", ""*""], true]; };";
 						name="blu_8_0_2";
-						description="Shocker '2 - Explosive Specialist";
+						description="'2 - Explosive Specialist@Shocker";
 						isPlayable=1;
 					};
 					id=147;
@@ -1752,7 +1752,7 @@ class Mission
 						rank="SERGEANT";
 						init="if (local this) then { this setVariable [""unitInit"", [""yellow"", ""*"", ""*"", ""*""], true]; };";
 						name="blu_8_0_3";
-						description="Shocker '3 - Engineer";
+						description="'3 - Engineer@Shocker";
 						isPlayable=1;
 					};
 					id=148;
@@ -1787,7 +1787,7 @@ class Mission
 						rank="SERGEANT";
 						init="if (local this) then { this setVariable [""unitInit"", [""white"", ""*"", ""*"", ""*""], true]; };";
 						name="blu_5_0_1";
-						description="Razor '1 - Recon Team Leader";
+						description="'1 - Recon Team Leader@Razor";
 						isPlayable=1;
 					};
 					id=150;
@@ -1808,7 +1808,7 @@ class Mission
 						rank="CORPORAL";
 						init="if (local this) then { this setVariable [""unitInit"", [""blue"", ""*"", ""*"", ""*""], true]; };";
 						name="blu_5_0_2";
-						description="     Razor '2 - Recon Scout";
+						description="'2 - Recon Scout@Razor";
 						isPlayable=1;
 					};
 					id=151;
@@ -1829,7 +1829,7 @@ class Mission
 						rank="CORPORAL";
 						init="if (local this) then { this setVariable [""unitInit"", [""green"", ""*"", ""*"", ""*""], true]; };";
 						name="blu_5_0_3";
-						description="     Razor '3 - Recon Paramedic";
+						description="'3 - Recon Paramedic@Razor";
 						isPlayable=1;
 					};
 					id=152;
@@ -1850,7 +1850,7 @@ class Mission
 						rank="CORPORAL";
 						init="if (local this) then { this setVariable [""unitInit"", [""blue"", ""*"", ""*"", ""*""], true]; };";
 						name="blu_5_0_4";
-						description="     Razor '4 - Demo Specialist";
+						description="'4 - Demo Specialist@Razor";
 						isPlayable=1;
 					};
 					id=153;
@@ -1885,7 +1885,7 @@ class Mission
 						rank="SERGEANT";
 						init="if (local this) then { this setVariable [""unitInit"", [""blue"", ""*"", ""*"", ""*""], true]; };";
 						name="blu_7_0_1";
-						description="Wizard '1 - Gunner (HMG)";
+						description="'1 - Gunner (HMG)@Wizard";
 						isPlayable=1;
 					};
 					id=155;
@@ -1906,7 +1906,7 @@ class Mission
 						rank="CORPORAL";
 						init="if (local this) then { this setVariable [""unitInit"", [""blue"", ""*"", ""*"", ""*""], true]; };";
 						name="blu_7_0_2";
-						description="Wizard '2 - Asst. Gunner (HMG)";
+						description="'2 - Asst. Gunner (HMG)@Wizard";
 						isPlayable=1;
 					};
 					id=156;
@@ -1927,7 +1927,7 @@ class Mission
 						rank="CORPORAL";
 						init="if (local this) then { this setVariable [""unitInit"", [""red"", ""*"", ""*"", ""*""], true]; };";
 						name="blu_7_0_3";
-						description="Wizard '3 - Gunner (HMG)";
+						description="'3 - Gunner (HMG)@Wizard";
 						isPlayable=1;
 					};
 					id=157;
@@ -1948,7 +1948,7 @@ class Mission
 						rank="CORPORAL";
 						init="if (local this) then { this setVariable [""unitInit"", [""red"", ""*"", ""*"", ""*""], true]; };";
 						name="blu_7_0_4";
-						description="Wizard '4 - Asst. Gunner (HMG)";
+						description="'4 - Asst. Gunner (HMG)@Wizard";
 						isPlayable=1;
 					};
 					id=158;
@@ -1983,7 +1983,7 @@ class Mission
 						rank="SERGEANT";
 						init="if (local this) then { this setVariable [""unitInit"", [""green"", ""*"", ""*"", ""*""], true]; };";
 						name="blu_9_0_1";
-						description="Paradise '1 - Paramedic";
+						description="'1 - Paramedic@Paradise";
 						isPlayable=1;
 					};
 					id=160;
@@ -2004,7 +2004,7 @@ class Mission
 						rank="SERGEANT";
 						init="if (local this) then { this setVariable [""unitInit"", [""green"", ""*"", ""*"", ""*""], true]; };";
 						name="blu_9_0_2";
-						description="Paradise '2 - Paramedic";
+						description="'2 - Paramedic@Paradise";
 						isPlayable=1;
 					};
 					id=161;
@@ -2038,8 +2038,8 @@ class Mission
 						skill=1;
 						rank="SERGEANT";
 						init="if (local this) then { this setVariable [""unitInit"", [""white"", ""*"", ""*"", ""*""], true]; };";
-						name="blu_10_1_2";
-						description="Meteor 1'2 - Mortar Asst.";
+						name="blu_10_1_1";
+						description="'1 - Mortar Gunner@Meteor 1";
 						isPlayable=1;
 					};
 					id=164;
@@ -2059,8 +2059,8 @@ class Mission
 						skill=1;
 						rank="SERGEANT";
 						init="if (local this) then { this setVariable [""unitInit"", [""blue"", ""*"", ""*"", ""*""], true]; };";
-						name="blu_10_1_1";
-						description="Meteor 1'1 - Mortar Gunner";
+						name="blu_10_1_2";
+						description="'2 - Mortar Asst.@Meteor 1";
 						isPlayable=1;
 					};
 					id=409;
@@ -2095,7 +2095,7 @@ class Mission
 						rank="LIEUTENANT";
 						init="if (local this) then { this setVariable [""unitInit"", [""white"", ""*"", ""*"", ""*""], true]; };";
 						name="blu_11_1_1";
-						description="Lancer 1'1 - Commander";
+						description="'1 - Commander@Lancer 1";
 						isPlayable=1;
 					};
 					id=166;
@@ -2116,7 +2116,7 @@ class Mission
 						rank="SERGEANT";
 						init="if (local this) then { this setVariable [""unitInit"", [""red"", ""*"", ""gunner"", ""*""], true]; };";
 						name="blu_11_1_2";
-						description="     Lancer 1'2 - Gunner";
+						description="'2 - Gunner@Lancer 1";
 						isPlayable=1;
 					};
 					id=167;
@@ -2137,7 +2137,7 @@ class Mission
 						rank="SERGEANT";
 						init="if (local this) then { this setVariable [""unitInit"", [""blue"", ""*"", ""driver"", ""*""], true]; };";
 						name="blu_11_1_3";
-						description="     Lancer 1'2 - Driver";
+						description="'3 - Driver@Lancer 1";
 						isPlayable=1;
 					};
 					id=168;
@@ -2172,7 +2172,7 @@ class Mission
 						rank="LIEUTENANT";
 						init="if (local this) then { this setVariable [""unitInit"", [""white"", ""*"", ""*"", ""*""], true]; };";
 						name="blu_12_1_1";
-						description="Titan 1'1 - Commander";
+						description="'1 - Commander@Titan 1";
 						isPlayable=1;
 					};
 					id=170;
@@ -2193,7 +2193,7 @@ class Mission
 						rank="SERGEANT";
 						init="if (local this) then { this setVariable [""unitInit"", [""red"", ""*"", ""gunner"", ""*""], true]; };";
 						name="blu_12_1_2";
-						description="     Titan - Gunner";
+						description="'2 - Gunner@Titan 1";
 						isPlayable=1;
 					};
 					id=171;
@@ -2214,7 +2214,7 @@ class Mission
 						rank="SERGEANT";
 						init="if (local this) then { this setVariable [""unitInit"", [""blue"", ""*"", ""driver"", ""*""], true]; };";
 						name="blu_12_1_3";
-						description="     Titan 1'3 - Driver";
+						description="'3 - Driver@Titan 1";
 						isPlayable=1;
 					};
 					id=172;
@@ -2235,7 +2235,7 @@ class Mission
 						rank="SERGEANT";
 						init="if (local this) then { this setVariable [""unitInit"", [""yellow"", ""*"", ""loader"", ""*""], true]; };";
 						name="blu_12_1_4";
-						description="     Titan 1'4 - Loader";
+						description="'4 - Loader@Titan 1";
 						isPlayable=1;
 					};
 					id=173;
@@ -2270,7 +2270,7 @@ class Mission
 						rank="LIEUTENANT";
 						init="if (local this) then { this setVariable [""unitInit"", [""white"", ""*"", ""*"", ""*""], true]; };";
 						name="blu_13_1_1";
-						description="Havoc 1'1 - Pilot";
+						description="'1 - Pilot@Havoc 1";
 						isPlayable=1;
 					};
 					id=175;
@@ -2291,7 +2291,7 @@ class Mission
 						rank="LIEUTENANT";
 						init="if (local this) then { this setVariable [""unitInit"", [""white"", ""*"", ""*"", ""*""], true]; };";
 						name="blu_13_1_2";
-						description="Havoc 1'2 - Co-pilot";
+						description="'2 - Co-pilot@Havoc 1";
 						isPlayable=1;
 					};
 					id=176;
@@ -2312,7 +2312,7 @@ class Mission
 						rank="CORPORAL";
 						init="if (local this) then { this setVariable [""unitInit"", [""blue"", ""*"", ""*"", ""*""], true]; };";
 						name="blu_13_1_3";
-						description="     Havoc 1'3 - Crew";
+						description="'3 - Crew@Havoc 1";
 						isPlayable=1;
 					};
 					id=177;
@@ -2333,7 +2333,7 @@ class Mission
 						rank="CORPORAL";
 						init="if (local this) then { this setVariable [""unitInit"", [""blue"", ""*"", ""*"", ""*""], true]; };";
 						name="blu_13_1_4";
-						description="     Havoc 1'4 - Crew";
+						description="'4 - Crew@Havoc 1";
 						isPlayable=1;
 					};
 					id=178;
@@ -2354,7 +2354,7 @@ class Mission
 						rank="CORPORAL";
 						init="if (local this) then { this setVariable [""unitInit"", [""blue"", ""*"", ""*"", ""*""], true]; };";
 						name="blu_13_1_5";
-						description="     Havoc 1'5 - Crew";
+						description="'5 - Crew@Havoc 1";
 						isPlayable=1;
 					};
 					id=179;
@@ -2389,7 +2389,7 @@ class Mission
 						rank="LIEUTENANT";
 						init="if (local this) then { this setVariable [""unitInit"", [""white"", ""*"", ""*"", ""*""], true]; };";
 						name="blu_14_1_1";
-						description="Pegasus 1'1 - Pilot";
+						description="'1 - Pilot@Pegasus 1";
 						isPlayable=1;
 					};
 					id=181;
@@ -2410,7 +2410,7 @@ class Mission
 						rank="LIEUTENANT";
 						init="if (local this) then { this setVariable [""unitInit"", [""blue"", ""*"", ""*"", ""*""], true]; };";
 						name="blu_14_1_2";
-						description="Pegasus 1'2 - Co-pilot";
+						description="'2 - Co-pilot@Pegasus 1";
 						isPlayable=1;
 					};
 					id=182;
@@ -2445,7 +2445,7 @@ class Mission
 						rank="LIEUTENANT";
 						init="if (local this) then { this setVariable [""unitInit"", [""white"", ""*"", ""*"", ""*""], true]; };";
 						name="blu_14_2_1";
-						description="Pegasus 2'1 - Pilot";
+						description="'1 - Pilot@Pegasus 2";
 						isPlayable=1;
 					};
 					id=184;
@@ -2466,7 +2466,7 @@ class Mission
 						rank="LIEUTENANT";
 						init="if (local this) then { this setVariable [""unitInit"", [""blue"", ""*"", ""*"", ""*""], true]; };";
 						name="blu_14_2_2";
-						description="Pegasus 2'2 - Co-pilot";
+						description="'2 - Co-pilot@Pegasus 2";
 						isPlayable=1;
 					};
 					id=185;
@@ -2501,7 +2501,7 @@ class Mission
 						rank="COLONEL";
 						init="if (local this) then { this setVariable [""unitInit"", [""white"", ""*"", ""*"", ""*""], true]; };";
 						name="op_0_0_1";
-						description="Godfather Actual - Commander";
+						description="Actual - Commander@Godfather";
 						isPlayable=1;
 					};
 					id=187;
@@ -2522,7 +2522,7 @@ class Mission
 						rank="SERGEANT";
 						init="if (local this) then { this setVariable [""unitInit"", [""yellow"", ""*"", ""rto"", ""*""], true]; };";
 						name="op_0_0_2";
-						description="     Godfather '2 - RTO";
+						description="'2 - RTO@Godfather";
 						isPlayable=1;
 					};
 					id=188;
@@ -2543,7 +2543,7 @@ class Mission
 						rank="CORPORAL";
 						init="if (local this) then { this setVariable [""unitInit"", [""green"", ""*"", ""*"", ""*""], true]; };";
 						name="op_0_0_3";
-						description="     Godfather '3 - Medic";
+						description="'3 - Medic@Godfather";
 						isPlayable=1;
 					};
 					id=189;
@@ -2578,7 +2578,7 @@ class Mission
 						rank="LIEUTENANT";
 						init="if (local this) then { this setVariable [""unitInit"", [""white"", ""*"", ""*"", ""*""], true]; };";
 						name="op_1_0_1";
-						description="Anaconda Actual - Squad Leader";
+						description="Actual - Squad Leader@Anaconda";
 						isPlayable=1;
 					};
 					id=191;
@@ -2599,7 +2599,7 @@ class Mission
 						rank="SERGEANT";
 						init="if (local this) then { this setVariable [""unitInit"", [""yellow"", ""*"", ""rto"", ""*""], true]; };";
 						name="op_1_0_2";
-						description="     Anaconda '2 - RTO";
+						description="'2 - RTO@Anaconda";
 						isPlayable=1;
 					};
 					id=192;
@@ -2620,7 +2620,7 @@ class Mission
 						rank="CORPORAL";
 						init="if (local this) then { this setVariable [""unitInit"", [""green"", ""*"", ""*"", ""*""], true]; };";
 						name="op_1_0_3";
-						description="     Anaconda '3 - Medic";
+						description="'3 - Medic@Anaconda";
 						isPlayable=1;
 					};
 					id=193;
@@ -2655,7 +2655,7 @@ class Mission
 						rank="SERGEANT";
 						init="if (local this) then { this setVariable [""unitInit"", [""blue"", ""*"", ""*"", ""*""], true]; };";
 						name="op_1_1_1";
-						description="     Anaconda 1'1 - Team Leader";
+						description="'1 - Team Leader@Anaconda 1";
 						isPlayable=1;
 					};
 					id=195;
@@ -2676,7 +2676,7 @@ class Mission
 						rank="CORPORAL";
 						init="if (local this) then { this setVariable [""unitInit"", [""blue"", ""*"", ""*"", ""*""], true]; };";
 						name="op_1_1_2";
-						description="          Anaconda 1'2 - Rifleman";
+						description="'2 - Rifleman@Anaconda 1";
 						isPlayable=1;
 					};
 					id=196;
@@ -2697,7 +2697,7 @@ class Mission
 						rank="CORPORAL";
 						init="if (local this) then { this setVariable [""unitInit"", [""red"", ""*"", ""*"", ""*""], true]; };";
 						name="op_1_1_3";
-						description="          Anaconda 1'3 - Rifleman (AT)";
+						description="'3 - Rifleman (AT)@Anaconda 1";
 						isPlayable=1;
 					};
 					id=197;
@@ -2718,7 +2718,7 @@ class Mission
 						rank="CORPORAL";
 						init="if (local this) then { this setVariable [""unitInit"", [""red"", ""*"", ""*"", ""*""], true]; };";
 						name="op_1_1_4";
-						description="          Anaconda 1'4 - Autorifleman";
+						description="'4 - Autorifleman@Anaconda 1";
 						isPlayable=1;
 					};
 					id=198;
@@ -2753,7 +2753,7 @@ class Mission
 						rank="SERGEANT";
 						init="if (local this) then { this setVariable [""unitInit"", [""blue"", ""*"", ""*"", ""*""], true]; };";
 						name="op_1_2_1";
-						description="     Anaconda 2'1 - Team Leader";
+						description="'1 - Team Leader@Anaconda 2";
 						isPlayable=1;
 					};
 					id=200;
@@ -2774,7 +2774,7 @@ class Mission
 						rank="CORPORAL";
 						init="if (local this) then { this setVariable [""unitInit"", [""blue"", ""*"", ""*"", ""*""], true]; };";
 						name="op_1_2_2";
-						description="          Anaconda 2'2 - Rifleman";
+						description="'2 - Rifleman@Anaconda 2";
 						isPlayable=1;
 					};
 					id=201;
@@ -2795,7 +2795,7 @@ class Mission
 						rank="CORPORAL";
 						init="if (local this) then { this setVariable [""unitInit"", [""red"", ""*"", ""*"", ""*""], true]; };";
 						name="op_1_2_3";
-						description="          Anaconda 2'3 - Rifleman (AT)";
+						description="'3 - Rifleman (AT)@Anaconda 2";
 						isPlayable=1;
 					};
 					id=202;
@@ -2816,7 +2816,7 @@ class Mission
 						rank="CORPORAL";
 						init="if (local this) then { this setVariable [""unitInit"", [""red"", ""*"", ""*"", ""*""], true]; };";
 						name="op_1_2_4";
-						description="          Anaconda 2'4 - Autorifleman";
+						description="'4 - Autorifleman@Anaconda 2";
 						isPlayable=1;
 					};
 					id=203;
@@ -2851,7 +2851,7 @@ class Mission
 						rank="LIEUTENANT";
 						init="if (local this) then { this setVariable [""unitInit"", [""white"", ""*"", ""*"", ""*""], true]; };";
 						name="op_2_0_1";
-						description="Boa Actual - Squad Leader";
+						description="Actual - Squad Leader@Boa";
 						isPlayable=1;
 					};
 					id=205;
@@ -2872,7 +2872,7 @@ class Mission
 						rank="SERGEANT";
 						init="if (local this) then { this setVariable [""unitInit"", [""yellow"", ""*"", ""rto"", ""*""], true]; };";
 						name="op_2_0_2";
-						description="     Boa '2 - RTO";
+						description="'2 - RTO@Boa";
 						isPlayable=1;
 					};
 					id=206;
@@ -2893,7 +2893,7 @@ class Mission
 						rank="CORPORAL";
 						init="if (local this) then { this setVariable [""unitInit"", [""green"", ""*"", ""*"", ""*""], true]; };";
 						name="op_2_0_3";
-						description="     Boa '3 - Medic";
+						description="'3 - Medic@Boa";
 						isPlayable=1;
 					};
 					id=207;
@@ -2928,7 +2928,7 @@ class Mission
 						rank="SERGEANT";
 						init="if (local this) then { this setVariable [""unitInit"", [""blue"", ""*"", ""*"", ""*""], true]; };";
 						name="op_2_1_1";
-						description="     Boa 1'1 - Team Leader";
+						description="'1 - Team Leader@Boa 1";
 						isPlayable=1;
 					};
 					id=209;
@@ -2949,7 +2949,7 @@ class Mission
 						rank="CORPORAL";
 						init="if (local this) then { this setVariable [""unitInit"", [""blue"", ""*"", ""*"", ""*""], true]; };";
 						name="op_2_1_2";
-						description="          Boa 1'2 - Rifleman";
+						description="'2 - Rifleman@Boa 1";
 						isPlayable=1;
 					};
 					id=210;
@@ -2970,7 +2970,7 @@ class Mission
 						rank="CORPORAL";
 						init="if (local this) then { this setVariable [""unitInit"", [""red"", ""*"", ""*"", ""*""], true]; };";
 						name="op_2_1_3";
-						description="          Boa 1'3 - Rifleman (AT)";
+						description="'3 - Rifleman (AT)@Boa 1";
 						isPlayable=1;
 					};
 					id=211;
@@ -2991,7 +2991,7 @@ class Mission
 						rank="CORPORAL";
 						init="if (local this) then { this setVariable [""unitInit"", [""red"", ""*"", ""*"", ""*""], true]; };";
 						name="op_2_1_4";
-						description="          Boa 1'4 - Autorifleman";
+						description="'4 - Autorifleman@Boa 1";
 						isPlayable=1;
 					};
 					id=212;
@@ -3026,7 +3026,7 @@ class Mission
 						rank="SERGEANT";
 						init="if (local this) then { this setVariable [""unitInit"", [""blue"", ""*"", ""*"", ""*""], true]; };";
 						name="op_2_2_1";
-						description="     Boa 2'1 - Team Leader";
+						description="'1 - Team Leader@Boa 2";
 						isPlayable=1;
 					};
 					id=214;
@@ -3047,7 +3047,7 @@ class Mission
 						rank="CORPORAL";
 						init="if (local this) then { this setVariable [""unitInit"", [""blue"", ""*"", ""*"", ""*""], true]; };";
 						name="op_2_2_2";
-						description="          Boa 2'2 - Rifleman";
+						description="'2 - Rifleman@Boa 2";
 						isPlayable=1;
 					};
 					id=215;
@@ -3068,7 +3068,7 @@ class Mission
 						rank="CORPORAL";
 						init="if (local this) then { this setVariable [""unitInit"", [""red"", ""*"", ""*"", ""*""], true]; };";
 						name="op_2_2_3";
-						description="          Boa 2'3 - Rifleman (AT)";
+						description="'3 - Rifleman (AT)@Boa 2";
 						isPlayable=1;
 					};
 					id=216;
@@ -3089,7 +3089,7 @@ class Mission
 						rank="CORPORAL";
 						init="if (local this) then { this setVariable [""unitInit"", [""red"", ""*"", ""*"", ""*""], true]; };";
 						name="op_2_2_4";
-						description="          Boa 2'4 - Autorifleman";
+						description="'4 - Autorifleman@Boa 2";
 						isPlayable=1;
 					};
 					id=217;
@@ -3124,7 +3124,7 @@ class Mission
 						rank="LIEUTENANT";
 						init="if (local this) then { this setVariable [""unitInit"", [""white"", ""*"", ""*"", ""*""], true]; };";
 						name="op_3_0_1";
-						description="Cobra Actual - Squad Leader";
+						description="Actual - Squad Leader@Cobra";
 						isPlayable=1;
 					};
 					id=219;
@@ -3145,7 +3145,7 @@ class Mission
 						rank="SERGEANT";
 						init="if (local this) then { this setVariable [""unitInit"", [""yellow"", ""*"", ""rto"", ""*""], true]; };";
 						name="op_3_0_2";
-						description="     Cobra '2 - RTO";
+						description="'2 - RTO@Cobra";
 						isPlayable=1;
 					};
 					id=220;
@@ -3166,7 +3166,7 @@ class Mission
 						rank="CORPORAL";
 						init="if (local this) then { this setVariable [""unitInit"", [""green"", ""*"", ""*"", ""*""], true]; };";
 						name="op_3_0_3";
-						description="     Cobra '3 - Medic";
+						description="'3 - Medic@Cobra";
 						isPlayable=1;
 					};
 					id=221;
@@ -3201,7 +3201,7 @@ class Mission
 						rank="SERGEANT";
 						init="if (local this) then { this setVariable [""unitInit"", [""blue"", ""*"", ""*"", ""*""], true]; };";
 						name="op_3_1_1";
-						description="     Cobra 1'1 - Team Leader";
+						description="'1 - Team Leader@Cobra 1";
 						isPlayable=1;
 					};
 					id=223;
@@ -3222,7 +3222,7 @@ class Mission
 						rank="CORPORAL";
 						init="if (local this) then { this setVariable [""unitInit"", [""blue"", ""*"", ""*"", ""*""], true]; };";
 						name="op_3_1_2";
-						description="          Cobra 1'2 - Rifleman";
+						description="'2 - Rifleman@Cobra 1";
 						isPlayable=1;
 					};
 					id=224;
@@ -3243,7 +3243,7 @@ class Mission
 						rank="CORPORAL";
 						init="if (local this) then { this setVariable [""unitInit"", [""red"", ""*"", ""*"", ""*""], true]; };";
 						name="op_3_1_3";
-						description="          Cobra 1'3 - Rifleman (AT)";
+						description="'3 - Rifleman (AT)@Cobra 1";
 						isPlayable=1;
 					};
 					id=225;
@@ -3264,7 +3264,7 @@ class Mission
 						rank="CORPORAL";
 						init="if (local this) then { this setVariable [""unitInit"", [""red"", ""*"", ""*"", ""*""], true]; };";
 						name="op_3_1_4";
-						description="          Cobra 1'4 - Autorifleman";
+						description="'4 - Autorifleman@Cobra 1";
 						isPlayable=1;
 					};
 					id=226;
@@ -3299,7 +3299,7 @@ class Mission
 						rank="SERGEANT";
 						init="if (local this) then { this setVariable [""unitInit"", [""blue"", ""*"", ""*"", ""*""], true]; };";
 						name="op_3_2_1";
-						description="     Cobra 2'1 - Team Leader";
+						description="'1 - Team Leader@Cobra 2";
 						isPlayable=1;
 					};
 					id=228;
@@ -3320,7 +3320,7 @@ class Mission
 						rank="CORPORAL";
 						init="if (local this) then { this setVariable [""unitInit"", [""blue"", ""*"", ""*"", ""*""], true]; };";
 						name="op_3_2_2";
-						description="          Cobra 2'2 - Rifleman";
+						description="'2 - Rifleman@Cobra 2";
 						isPlayable=1;
 					};
 					id=229;
@@ -3341,7 +3341,7 @@ class Mission
 						rank="CORPORAL";
 						init="if (local this) then { this setVariable [""unitInit"", [""red"", ""*"", ""*"", ""*""], true]; };";
 						name="op_3_2_3";
-						description="          Cobra 2'3 - Rifleman (AT)";
+						description="'3 - Rifleman (AT)@Cobra 2";
 						isPlayable=1;
 					};
 					id=230;
@@ -3362,7 +3362,7 @@ class Mission
 						rank="CORPORAL";
 						init="if (local this) then { this setVariable [""unitInit"", [""red"", ""*"", ""*"", ""*""], true]; };";
 						name="op_3_2_4";
-						description="          Cobra 2'4 - Autorifleman";
+						description="'4 - Autorifleman@Cobra 2";
 						isPlayable=1;
 					};
 					id=231;
@@ -3397,7 +3397,7 @@ class Mission
 						rank="LIEUTENANT";
 						init="if (local this) then { this setVariable [""unitInit"", [""white"", ""*"", ""*"", ""*""], true]; };";
 						name="op_4_0_1";
-						description="Dragon Actual - Squad Leader";
+						description="Actual - Squad Leader@Dragon";
 						isPlayable=1;
 					};
 					id=233;
@@ -3418,7 +3418,7 @@ class Mission
 						rank="SERGEANT";
 						init="if (local this) then { this setVariable [""unitInit"", [""yellow"", ""*"", ""rto"", ""*""], true]; };";
 						name="op_4_0_2";
-						description="     Dragon '2 - RTO";
+						description="'2 - RTO@Dragon";
 						isPlayable=1;
 					};
 					id=234;
@@ -3439,7 +3439,7 @@ class Mission
 						rank="CORPORAL";
 						init="if (local this) then { this setVariable [""unitInit"", [""green"", ""*"", ""*"", ""*""], true]; };";
 						name="op_4_0_3";
-						description="     Dragon '3 - Medic";
+						description="'3 - Medic@Dragon";
 						isPlayable=1;
 					};
 					id=235;
@@ -3474,7 +3474,7 @@ class Mission
 						rank="SERGEANT";
 						init="if (local this) then { this setVariable [""unitInit"", [""blue"", ""*"", ""*"", ""*""], true]; };";
 						name="op_4_1_1";
-						description="     Dragon 1'1 - Team Leader";
+						description="'1 - Team Leader@Dragon 1";
 						isPlayable=1;
 					};
 					id=237;
@@ -3495,7 +3495,7 @@ class Mission
 						rank="CORPORAL";
 						init="if (local this) then { this setVariable [""unitInit"", [""blue"", ""*"", ""*"", ""*""], true]; };";
 						name="op_4_1_2";
-						description="          Dragon 1'2 - Rifleman";
+						description="'2 - Rifleman@Dragon 1";
 						isPlayable=1;
 					};
 					id=238;
@@ -3516,7 +3516,7 @@ class Mission
 						rank="CORPORAL";
 						init="if (local this) then { this setVariable [""unitInit"", [""red"", ""*"", ""*"", ""*""], true]; };";
 						name="op_4_1_3";
-						description="          Dragon 1'3 - Rifleman (AT)";
+						description="'3 - Rifleman (AT)@Dragon 1";
 						isPlayable=1;
 					};
 					id=239;
@@ -3537,7 +3537,7 @@ class Mission
 						rank="CORPORAL";
 						init="if (local this) then { this setVariable [""unitInit"", [""red"", ""*"", ""*"", ""*""], true]; };";
 						name="op_4_1_4";
-						description="          Dragon 1'4 - Autorifleman";
+						description="'4 - Autorifleman@Dragon 1";
 						isPlayable=1;
 					};
 					id=240;
@@ -3572,7 +3572,7 @@ class Mission
 						rank="SERGEANT";
 						init="if (local this) then { this setVariable [""unitInit"", [""blue"", ""*"", ""*"", ""*""], true]; };";
 						name="op_4_2_1";
-						description="     Dragon 2'1 - Team Leader";
+						description="'1 - Team Leader@Dragon 2";
 						isPlayable=1;
 					};
 					id=242;
@@ -3593,7 +3593,7 @@ class Mission
 						rank="CORPORAL";
 						init="if (local this) then { this setVariable [""unitInit"", [""blue"", ""*"", ""*"", ""*""], true]; };";
 						name="op_4_2_2";
-						description="          Dragon 2'2 - Rifleman";
+						description="'2 - Rifleman@Dragon 2";
 						isPlayable=1;
 					};
 					id=243;
@@ -3614,7 +3614,7 @@ class Mission
 						rank="CORPORAL";
 						init="if (local this) then { this setVariable [""unitInit"", [""red"", ""*"", ""*"", ""*""], true]; };";
 						name="op_4_2_3";
-						description="          Dragon 2'3 - Rifleman (AT)";
+						description="'3 - Rifleman (AT)@Dragon 2";
 						isPlayable=1;
 					};
 					id=244;
@@ -3635,7 +3635,7 @@ class Mission
 						rank="CORPORAL";
 						init="if (local this) then { this setVariable [""unitInit"", [""red"", ""*"", ""*"", ""*""], true]; };";
 						name="op_4_2_4";
-						description="          Dragon 2'4 - Autorifleman";
+						description="'4 - Autorifleman@Dragon 2";
 						isPlayable=1;
 					};
 					id=245;
@@ -3670,7 +3670,7 @@ class Mission
 						rank="SERGEANT";
 						init="if (local this) then { this setVariable [""unitInit"", [""blue"", ""*"", ""*"", ""*""], true]; };";
 						name="op_6_0_1";
-						description="Scorpion '1 - Sniper";
+						description="'1 - Sniper@Scorpion";
 						isPlayable=1;
 					};
 					id=247;
@@ -3691,7 +3691,7 @@ class Mission
 						rank="SERGEANT";
 						init="if (local this) then { this setVariable [""unitInit"", [""blue"", ""*"", ""*"", ""*""], true]; };";
 						name="op_6_0_2";
-						description="     Scorpion '2 - Spotter";
+						description="'2 - Spotter@Scorpion";
 						isPlayable=1;
 					};
 					id=248;
@@ -3712,7 +3712,7 @@ class Mission
 						rank="SERGEANT";
 						init="if (local this) then { this setVariable [""unitInit"", [""red"", ""*"", ""*"", ""*""], true]; };";
 						name="op_6_0_3";
-						description="Scorpion '3 - Sniper";
+						description="'3 - Sniper@Scorpion";
 						isPlayable=1;
 					};
 					id=249;
@@ -3733,7 +3733,7 @@ class Mission
 						rank="SERGEANT";
 						init="if (local this) then { this setVariable [""unitInit"", [""red"", ""*"", ""*"", ""*""], true]; };";
 						name="op_6_0_4";
-						description="     Scorpion '4 - Spotter";
+						description="'4 - Spotter@Scorpion";
 						isPlayable=1;
 					};
 					id=250;
@@ -3768,7 +3768,7 @@ class Mission
 						rank="SERGEANT";
 						init="if (local this) then { this setVariable [""unitInit"", [""blue"", ""*"", ""*"", ""*""], true]; };";
 						name="op_8_0_1";
-						description="Sparrow '1 - Repair Specialist";
+						description="'1 - Repair Specialist@Sparrow";
 						isPlayable=1;
 					};
 					id=252;
@@ -3789,7 +3789,7 @@ class Mission
 						rank="SERGEANT";
 						init="if (local this) then { this setVariable [""unitInit"", [""red"", ""*"", ""*"", ""*""], true]; };";
 						name="op_8_0_2";
-						description="Sparrow '2 - Explosive Specialist";
+						description="'2 - Explosive Specialist@Sparrow";
 						isPlayable=1;
 					};
 					id=253;
@@ -3810,7 +3810,7 @@ class Mission
 						rank="SERGEANT";
 						init="if (local this) then { this setVariable [""unitInit"", [""yellow"", ""*"", ""*"", ""*""], true]; };";
 						name="op_8_0_3";
-						description="Sparrow '3 - Engineer";
+						description="'3 - Engineer@Sparrow";
 						isPlayable=1;
 					};
 					id=254;
@@ -3845,7 +3845,7 @@ class Mission
 						rank="SERGEANT";
 						init="if (local this) then { this setVariable [""unitInit"", [""white"", ""*"", ""*"", ""*""], true]; };";
 						name="op_5_0_1";
-						description="Raven '1 - Recon Team Leader";
+						description="'1 - Recon Team Leader@Raven";
 						isPlayable=1;
 					};
 					id=256;
@@ -3866,7 +3866,7 @@ class Mission
 						rank="CORPORAL";
 						init="if (local this) then { this setVariable [""unitInit"", [""blue"", ""*"", ""*"", ""*""], true]; };";
 						name="op_5_0_2";
-						description="     Raven '2 - Recon Scout";
+						description="'2 - Recon Scout@Raven";
 						isPlayable=1;
 					};
 					id=257;
@@ -3887,7 +3887,7 @@ class Mission
 						rank="CORPORAL";
 						init="if (local this) then { this setVariable [""unitInit"", [""green"", ""*"", ""*"", ""*""], true]; };";
 						name="op_5_0_3";
-						description="     Raven '3 - Recon Paramedic";
+						description="'3 - Recon Paramedic@Raven";
 						isPlayable=1;
 					};
 					id=258;
@@ -3908,7 +3908,7 @@ class Mission
 						rank="CORPORAL";
 						init="if (local this) then { this setVariable [""unitInit"", [""blue"", ""*"", ""*"", ""*""], true]; };";
 						name="op_5_0_4";
-						description="     Raven '4 - Demo Specialist";
+						description="'4 - Demo Specialist@Raven";
 						isPlayable=1;
 					};
 					id=259;
@@ -3943,7 +3943,7 @@ class Mission
 						rank="SERGEANT";
 						init="if (local this) then { this setVariable [""unitInit"", [""blue"", ""*"", ""*"", ""*""], true]; };";
 						name="op_7_0_1";
-						description="Weasel '1 - Gunner (HMG)";
+						description="'1 - Gunner (HMG)@Weasel";
 						isPlayable=1;
 					};
 					id=261;
@@ -3964,7 +3964,7 @@ class Mission
 						rank="CORPORAL";
 						init="if (local this) then { this setVariable [""unitInit"", [""blue"", ""*"", ""*"", ""*""], true]; };";
 						name="op_7_0_2";
-						description="Weasel '2 - Asst. Gunner (HMG)";
+						description="'2 - Asst. Gunner (HMG)@Weasel";
 						isPlayable=1;
 					};
 					id=262;
@@ -3985,7 +3985,7 @@ class Mission
 						rank="CORPORAL";
 						init="if (local this) then { this setVariable [""unitInit"", [""red"", ""*"", ""*"", ""*""], true]; };";
 						name="op_7_0_3";
-						description="Weasel '3 - Gunner (HMG)";
+						description="'3 - Gunner (HMG)@Weasel";
 						isPlayable=1;
 					};
 					id=263;
@@ -4006,7 +4006,7 @@ class Mission
 						rank="CORPORAL";
 						init="if (local this) then { this setVariable [""unitInit"", [""red"", ""*"", ""*"", ""*""], true]; };";
 						name="op_7_0_4";
-						description="Weasel '4 - Asst. Gunner (HMG)";
+						description="'4 - Asst. Gunner (HMG)@Weasel";
 						isPlayable=1;
 					};
 					id=264;
@@ -4041,7 +4041,7 @@ class Mission
 						rank="SERGEANT";
 						init="if (local this) then { this setVariable [""unitInit"", [""green"", ""*"", ""*"", ""*""], true]; };";
 						name="op_9_0_1";
-						description="Pelican '1 - Paramedic";
+						description="'1 - Paramedic@Pelican";
 						isPlayable=1;
 					};
 					id=266;
@@ -4062,7 +4062,7 @@ class Mission
 						rank="SERGEANT";
 						init="if (local this) then { this setVariable [""unitInit"", [""green"", ""*"", ""*"", ""*""], true]; };";
 						name="op_9_0_2";
-						description="Pelican '2 - Paramedic";
+						description="'2 - Paramedic@Pelican";
 						isPlayable=1;
 					};
 					id=267;
@@ -4097,7 +4097,7 @@ class Mission
 						rank="SERGEANT";
 						init="if (local this) then { this setVariable [""unitInit"", [""white"", ""*"", ""*"", ""*""], true]; };";
 						name="op_10_1_1";
-						description="Moose 1'1 - Mortar Gunner";
+						description="'1 - Mortar Gunner@Moose 1";
 						isPlayable=1;
 					};
 					id=412;
@@ -4118,7 +4118,7 @@ class Mission
 						rank="SERGEANT";
 						init="if (local this) then { this setVariable [""unitInit"", [""blue"", ""*"", ""*"", ""*""], true]; };";
 						name="op_10_1_2";
-						description="Moose 1'2 - Mortar Asst.";
+						description="'2 - Mortar Asst.@Moose 1";
 						isPlayable=1;
 					};
 					id=413;
@@ -4153,7 +4153,7 @@ class Mission
 						rank="LIEUTENANT";
 						init="if (local this) then { this setVariable [""unitInit"", [""white"", ""*"", ""*"", ""*""], true]; };";
 						name="op_11_1_1";
-						description="Lion 1'1 - Commander";
+						description="'1 - Commander@Lion 1";
 						isPlayable=1;
 					};
 					id=272;
@@ -4174,7 +4174,7 @@ class Mission
 						rank="SERGEANT";
 						init="if (local this) then { this setVariable [""unitInit"", [""red"", ""*"", ""gunner"", ""*""], true]; };";
 						name="op_11_1_2";
-						description="     Lion 1'2 - Gunner";
+						description="'2 - Gunner@Lion 1";
 						isPlayable=1;
 					};
 					id=273;
@@ -4195,7 +4195,7 @@ class Mission
 						rank="SERGEANT";
 						init="if (local this) then { this setVariable [""unitInit"", [""blue"", ""*"", ""driver"", ""*""], true]; };";
 						name="op_11_1_3";
-						description="     Lion 1'2 - Driver";
+						description="'3 - Driver@Lion 1";
 						isPlayable=1;
 					};
 					id=274;
@@ -4230,7 +4230,7 @@ class Mission
 						rank="LIEUTENANT";
 						init="if (local this) then { this setVariable [""unitInit"", [""white"", ""*"", ""*"", ""*""], true]; };";
 						name="op_12_1_1";
-						description="Tiger 1'1 - Commander";
+						description="'1 - Commander@Tiger 1";
 						isPlayable=1;
 					};
 					id=276;
@@ -4251,7 +4251,7 @@ class Mission
 						rank="SERGEANT";
 						init="if (local this) then { this setVariable [""unitInit"", [""red"", ""*"", ""gunner"", ""*""], true]; };";
 						name="op_12_1_2";
-						description="     Tiger - Gunner";
+						description="'2 - Gunner@Tiger 1";
 						isPlayable=1;
 					};
 					id=277;
@@ -4272,7 +4272,7 @@ class Mission
 						rank="SERGEANT";
 						init="if (local this) then { this setVariable [""unitInit"", [""blue"", ""*"", ""driver"", ""*""], true]; };";
 						name="op_12_1_3";
-						description="     Tiger 1'3 - Driver";
+						description="'3 - Driver@Tiger 1";
 						isPlayable=1;
 					};
 					id=278;
@@ -4293,7 +4293,7 @@ class Mission
 						rank="SERGEANT";
 						init="if (local this) then { this setVariable [""unitInit"", [""yellow"", ""*"", ""loader"", ""*""], true]; };";
 						name="op_12_1_4";
-						description="     Tiger 1'4 - Loader";
+						description="'4 - Loader@Tiger 1";
 						isPlayable=1;
 					};
 					id=279;
@@ -4328,7 +4328,7 @@ class Mission
 						rank="LIEUTENANT";
 						init="if (local this) then { this setVariable [""unitInit"", [""white"", ""*"", ""*"", ""*""], true]; };";
 						name="op_13_1_1";
-						description="Hawk 1'1 - Pilot";
+						description="'1 - Pilot@Hawk 1";
 						isPlayable=1;
 					};
 					id=281;
@@ -4349,7 +4349,7 @@ class Mission
 						rank="LIEUTENANT";
 						init="if (local this) then { this setVariable [""unitInit"", [""white"", ""*"", ""*"", ""*""], true]; };";
 						name="op_13_1_2";
-						description="Hawk 1'2 - Co-pilot";
+						description="'2 - Co-pilot@Hawk 1";
 						isPlayable=1;
 					};
 					id=282;
@@ -4370,7 +4370,7 @@ class Mission
 						rank="CORPORAL";
 						init="if (local this) then { this setVariable [""unitInit"", [""blue"", ""*"", ""*"", ""*""], true]; };";
 						name="op_13_1_3";
-						description="     Hawk 1'3 - Crew";
+						description="'3 - Crew@Hawk 1";
 						isPlayable=1;
 					};
 					id=283;
@@ -4391,7 +4391,7 @@ class Mission
 						rank="CORPORAL";
 						init="if (local this) then { this setVariable [""unitInit"", [""blue"", ""*"", ""*"", ""*""], true]; };";
 						name="op_13_1_4";
-						description="     Hawk 1'4 - Crew";
+						description="'4 - Crew@Hawk 1";
 						isPlayable=1;
 					};
 					id=284;
@@ -4412,7 +4412,7 @@ class Mission
 						rank="CORPORAL";
 						init="if (local this) then { this setVariable [""unitInit"", [""blue"", ""*"", ""*"", ""*""], true]; };";
 						name="op_13_1_5";
-						description="     Hawk 1'5 - Crew";
+						description="'5 - Crew@Hawk 1";
 						isPlayable=1;
 					};
 					id=285;
@@ -4447,7 +4447,7 @@ class Mission
 						rank="LIEUTENANT";
 						init="if (local this) then { this setVariable [""unitInit"", [""white"", ""*"", ""*"", ""*""], true]; };";
 						name="op_14_1_1";
-						description="Phoenix 1'1 - Pilot";
+						description="'1 - Pilot@Phoenix 1";
 						isPlayable=1;
 					};
 					id=287;
@@ -4468,7 +4468,7 @@ class Mission
 						rank="LIEUTENANT";
 						init="if (local this) then { this setVariable [""unitInit"", [""blue"", ""*"", ""*"", ""*""], true]; };";
 						name="op_14_1_2";
-						description="Phoenix 1'2 - Co-pilot";
+						description="'2 - Co-pilot@Phoenix 1";
 						isPlayable=1;
 					};
 					id=288;
@@ -4503,7 +4503,7 @@ class Mission
 						rank="LIEUTENANT";
 						init="if (local this) then { this setVariable [""unitInit"", [""white"", ""*"", ""*"", ""*""], true]; };";
 						name="op_14_2_1";
-						description="Phoenix 2'1 - Pilot";
+						description="'1 - Pilot@Phoenix 2";
 						isPlayable=1;
 					};
 					id=290;
@@ -4524,7 +4524,7 @@ class Mission
 						rank="LIEUTENANT";
 						init="if (local this) then { this setVariable [""unitInit"", [""blue"", ""*"", ""*"", ""*""], true]; };";
 						name="op_14_2_2";
-						description="Phoenix 2'2 - Co-pilot";
+						description="'2 - Co-pilot@Phoenix 2";
 						isPlayable=1;
 					};
 					id=291;
@@ -4559,7 +4559,7 @@ class Mission
 						rank="COLONEL";
 						init="if (local this) then { this setVariable [""unitInit"", [""white"", ""*"", ""*"", ""*""], true]; };";
 						name="ind_0_0_1";
-						description="Papa Actual - Commander";
+						description="Actual - Commander@Papa";
 						isPlayable=1;
 					};
 					id=293;
@@ -4580,7 +4580,7 @@ class Mission
 						rank="SERGEANT";
 						init="if (local this) then { this setVariable [""unitInit"", [""yellow"", ""*"", ""rto"", ""*""], true]; };";
 						name="ind_0_0_2";
-						description="     Papa '2 - RTO";
+						description="'2 - RTO@Papa";
 						isPlayable=1;
 					};
 					id=294;
@@ -4601,7 +4601,7 @@ class Mission
 						rank="CORPORAL";
 						init="if (local this) then { this setVariable [""unitInit"", [""green"", ""*"", ""*"", ""*""], true]; };";
 						name="ind_0_0_3";
-						description="     Papa '3 - Medic";
+						description="'3 - Medic@Papa";
 						isPlayable=1;
 					};
 					id=295;
@@ -4636,7 +4636,7 @@ class Mission
 						rank="LIEUTENANT";
 						init="if (local this) then { this setVariable [""unitInit"", [""white"", ""*"", ""*"", ""*""], true]; };";
 						name="ind_1_0_1";
-						description="Anna Actual - Squad Leader";
+						description="Actual - Squad Leader@Anna";
 						isPlayable=1;
 					};
 					id=297;
@@ -4657,7 +4657,7 @@ class Mission
 						rank="SERGEANT";
 						init="if (local this) then { this setVariable [""unitInit"", [""yellow"", ""*"", ""rto"", ""*""], true]; };";
 						name="ind_1_0_2";
-						description="     Anna '2 - RTO";
+						description="'2 - RTO@Anna";
 						isPlayable=1;
 					};
 					id=298;
@@ -4678,7 +4678,7 @@ class Mission
 						rank="CORPORAL";
 						init="if (local this) then { this setVariable [""unitInit"", [""green"", ""*"", ""*"", ""*""], true]; };";
 						name="ind_1_0_3";
-						description="     Anna '3 - Medic";
+						description="'3 - Medic@Anna";
 						isPlayable=1;
 					};
 					id=299;
@@ -4713,7 +4713,7 @@ class Mission
 						rank="SERGEANT";
 						init="if (local this) then { this setVariable [""unitInit"", [""blue"", ""*"", ""*"", ""*""], true]; };";
 						name="ind_1_1_1";
-						description="     Anna 1'1 - Team Leader";
+						description="'1 - Team Leader@Anna 1";
 						isPlayable=1;
 					};
 					id=301;
@@ -4734,7 +4734,7 @@ class Mission
 						rank="CORPORAL";
 						init="if (local this) then { this setVariable [""unitInit"", [""blue"", ""*"", ""*"", ""*""], true]; };";
 						name="ind_1_1_2";
-						description="          Anna 1'2 - Rifleman";
+						description="'2 - Rifleman@Anna 1";
 						isPlayable=1;
 					};
 					id=302;
@@ -4755,7 +4755,7 @@ class Mission
 						rank="CORPORAL";
 						init="if (local this) then { this setVariable [""unitInit"", [""red"", ""*"", ""*"", ""*""], true]; };";
 						name="ind_1_1_3";
-						description="          Anna 1'3 - Rifleman (AT)";
+						description="'3 - Rifleman (AT)@Anna 1";
 						isPlayable=1;
 					};
 					id=303;
@@ -4776,7 +4776,7 @@ class Mission
 						rank="CORPORAL";
 						init="if (local this) then { this setVariable [""unitInit"", [""red"", ""*"", ""*"", ""*""], true]; };";
 						name="ind_1_1_4";
-						description="          Anna 1'4 - Autorifleman";
+						description="'4 - Autorifleman@Anna 1";
 						isPlayable=1;
 					};
 					id=304;
@@ -4811,7 +4811,7 @@ class Mission
 						rank="SERGEANT";
 						init="if (local this) then { this setVariable [""unitInit"", [""blue"", ""*"", ""*"", ""*""], true]; };";
 						name="ind_1_2_1";
-						description="     Anna 2'1 - Team Leader";
+						description="'1 - Team Leader@Anna 2";
 						isPlayable=1;
 					};
 					id=306;
@@ -4832,7 +4832,7 @@ class Mission
 						rank="CORPORAL";
 						init="if (local this) then { this setVariable [""unitInit"", [""blue"", ""*"", ""*"", ""*""], true]; };";
 						name="ind_1_2_2";
-						description="          Anna 2'2 - Rifleman";
+						description="'2 - Rifleman@Anna 2";
 						isPlayable=1;
 					};
 					id=307;
@@ -4853,7 +4853,7 @@ class Mission
 						rank="CORPORAL";
 						init="if (local this) then { this setVariable [""unitInit"", [""red"", ""*"", ""*"", ""*""], true]; };";
 						name="ind_1_2_3";
-						description="          Anna 2'3 - Rifleman (AT)";
+						description="'3 - Rifleman (AT)@Anna 2";
 						isPlayable=1;
 					};
 					id=308;
@@ -4874,7 +4874,7 @@ class Mission
 						rank="CORPORAL";
 						init="if (local this) then { this setVariable [""unitInit"", [""red"", ""*"", ""*"", ""*""], true]; };";
 						name="ind_1_2_4";
-						description="          Anna 2'4 - Autorifleman";
+						description="'4 - Autorifleman@Anna 2";
 						isPlayable=1;
 					};
 					id=309;
@@ -4909,7 +4909,7 @@ class Mission
 						rank="LIEUTENANT";
 						init="if (local this) then { this setVariable [""unitInit"", [""white"", ""*"", ""*"", ""*""], true]; };";
 						name="ind_2_0_1";
-						description="Beatrice Actual - Squad Leader";
+						description="Actual - Squad Leader@Beatrice";
 						isPlayable=1;
 					};
 					id=311;
@@ -4930,7 +4930,7 @@ class Mission
 						rank="SERGEANT";
 						init="if (local this) then { this setVariable [""unitInit"", [""yellow"", ""*"", ""rto"", ""*""], true]; };";
 						name="ind_2_0_2";
-						description="     Beatrice '2 - RTO";
+						description="'2 - RTO@Beatrice";
 						isPlayable=1;
 					};
 					id=312;
@@ -4951,7 +4951,7 @@ class Mission
 						rank="CORPORAL";
 						init="if (local this) then { this setVariable [""unitInit"", [""green"", ""*"", ""*"", ""*""], true]; };";
 						name="ind_2_0_3";
-						description="     Beatrice '3 - Medic";
+						description="'3 - Medic@Beatrice";
 						isPlayable=1;
 					};
 					id=313;
@@ -4986,7 +4986,7 @@ class Mission
 						rank="SERGEANT";
 						init="if (local this) then { this setVariable [""unitInit"", [""blue"", ""*"", ""*"", ""*""], true]; };";
 						name="ind_2_1_1";
-						description="     Beatrice 1'1 - Team Leader";
+						description="'1 - Team Leader@Beatrice 1";
 						isPlayable=1;
 					};
 					id=315;
@@ -5007,7 +5007,7 @@ class Mission
 						rank="CORPORAL";
 						init="if (local this) then { this setVariable [""unitInit"", [""blue"", ""*"", ""*"", ""*""], true]; };";
 						name="ind_2_1_2";
-						description="          Beatrice 1'2 - Rifleman";
+						description="'2 - Rifleman@Beatrice 1";
 						isPlayable=1;
 					};
 					id=316;
@@ -5028,7 +5028,7 @@ class Mission
 						rank="CORPORAL";
 						init="if (local this) then { this setVariable [""unitInit"", [""red"", ""*"", ""*"", ""*""], true]; };";
 						name="ind_2_1_3";
-						description="          Beatrice 1'3 - Rifleman (AT)";
+						description="'3 - Rifleman (AT)@Beatrice 1";
 						isPlayable=1;
 					};
 					id=317;
@@ -5049,7 +5049,7 @@ class Mission
 						rank="CORPORAL";
 						init="if (local this) then { this setVariable [""unitInit"", [""red"", ""*"", ""*"", ""*""], true]; };";
 						name="ind_2_1_4";
-						description="          Beatrice 1'4 - Autorifleman";
+						description="'4 - Autorifleman@Beatrice 1";
 						isPlayable=1;
 					};
 					id=318;
@@ -5084,7 +5084,7 @@ class Mission
 						rank="SERGEANT";
 						init="if (local this) then { this setVariable [""unitInit"", [""blue"", ""*"", ""*"", ""*""], true]; };";
 						name="ind_2_2_1";
-						description="     Beatrice 2'1 - Team Leader";
+						description="'1 - Team Leader@Beatrice 2";
 						isPlayable=1;
 					};
 					id=320;
@@ -5105,7 +5105,7 @@ class Mission
 						rank="CORPORAL";
 						init="if (local this) then { this setVariable [""unitInit"", [""blue"", ""*"", ""*"", ""*""], true]; };";
 						name="ind_2_2_2";
-						description="          Beatrice 2'2 - Rifleman";
+						description="'2 - Rifleman@Beatrice 2";
 						isPlayable=1;
 					};
 					id=321;
@@ -5126,7 +5126,7 @@ class Mission
 						rank="CORPORAL";
 						init="if (local this) then { this setVariable [""unitInit"", [""red"", ""*"", ""*"", ""*""], true]; };";
 						name="ind_2_2_3";
-						description="          Beatrice 2'3 - Rifleman (AT)";
+						description="'3 - Rifleman (AT)@Beatrice 2";
 						isPlayable=1;
 					};
 					id=322;
@@ -5147,7 +5147,7 @@ class Mission
 						rank="CORPORAL";
 						init="if (local this) then { this setVariable [""unitInit"", [""red"", ""*"", ""*"", ""*""], true]; };";
 						name="ind_2_2_4";
-						description="          Beatrice 2'4 - Autorifleman";
+						description="'4 - Autorifleman@Beatrice 2";
 						isPlayable=1;
 					};
 					id=323;
@@ -5182,7 +5182,7 @@ class Mission
 						rank="LIEUTENANT";
 						init="if (local this) then { this setVariable [""unitInit"", [""white"", ""*"", ""*"", ""*""], true]; };";
 						name="ind_3_0_1";
-						description="Clara Actual - Squad Leader";
+						description="Actual - Squad Leader@Clara";
 						isPlayable=1;
 					};
 					id=325;
@@ -5203,7 +5203,7 @@ class Mission
 						rank="SERGEANT";
 						init="if (local this) then { this setVariable [""unitInit"", [""yellow"", ""*"", ""rto"", ""*""], true]; };";
 						name="ind_3_0_2";
-						description="     Clara '2 - RTO";
+						description="'2 - RTO@Clara";
 						isPlayable=1;
 					};
 					id=326;
@@ -5224,7 +5224,7 @@ class Mission
 						rank="CORPORAL";
 						init="if (local this) then { this setVariable [""unitInit"", [""green"", ""*"", ""*"", ""*""], true]; };";
 						name="ind_3_0_3";
-						description="     Clara '3 - Medic";
+						description="'3 - Medic@Clara";
 						isPlayable=1;
 					};
 					id=327;
@@ -5259,7 +5259,7 @@ class Mission
 						rank="SERGEANT";
 						init="if (local this) then { this setVariable [""unitInit"", [""blue"", ""*"", ""*"", ""*""], true]; };";
 						name="ind_3_1_1";
-						description="     Clara 1'1 - Team Leader";
+						description="'1 - Team Leader@Clara 1";
 						isPlayable=1;
 					};
 					id=329;
@@ -5280,7 +5280,7 @@ class Mission
 						rank="CORPORAL";
 						init="if (local this) then { this setVariable [""unitInit"", [""blue"", ""*"", ""*"", ""*""], true]; };";
 						name="ind_3_1_2";
-						description="          Clara 1'2 - Rifleman";
+						description="'2 - Rifleman@Clara 1";
 						isPlayable=1;
 					};
 					id=330;
@@ -5301,7 +5301,7 @@ class Mission
 						rank="CORPORAL";
 						init="if (local this) then { this setVariable [""unitInit"", [""red"", ""*"", ""*"", ""*""], true]; };";
 						name="ind_3_1_3";
-						description="          Clara 1'3 - Rifleman (AT)";
+						description="'3 - Rifleman (AT)@Clara 1";
 						isPlayable=1;
 					};
 					id=331;
@@ -5322,7 +5322,7 @@ class Mission
 						rank="CORPORAL";
 						init="if (local this) then { this setVariable [""unitInit"", [""red"", ""*"", ""*"", ""*""], true]; };";
 						name="ind_3_1_4";
-						description="          Clara 1'4 - Autorifleman";
+						description="'4 - Autorifleman@Clara 1";
 						isPlayable=1;
 					};
 					id=332;
@@ -5357,7 +5357,7 @@ class Mission
 						rank="SERGEANT";
 						init="if (local this) then { this setVariable [""unitInit"", [""blue"", ""*"", ""*"", ""*""], true]; };";
 						name="ind_3_2_1";
-						description="     Clara 2'1 - Team Leader";
+						description="'1 - Team Leader@Clara 2";
 						isPlayable=1;
 					};
 					id=334;
@@ -5378,7 +5378,7 @@ class Mission
 						rank="CORPORAL";
 						init="if (local this) then { this setVariable [""unitInit"", [""blue"", ""*"", ""*"", ""*""], true]; };";
 						name="ind_3_2_2";
-						description="          Clara 2'2 - Rifleman";
+						description="'2 - Rifleman@Clara 2";
 						isPlayable=1;
 					};
 					id=335;
@@ -5399,7 +5399,7 @@ class Mission
 						rank="CORPORAL";
 						init="if (local this) then { this setVariable [""unitInit"", [""red"", ""*"", ""*"", ""*""], true]; };";
 						name="ind_3_2_3";
-						description="          Clara 2'3 - Rifleman (AT)";
+						description="'3 - Rifleman (AT)@Clara 2";
 						isPlayable=1;
 					};
 					id=336;
@@ -5420,7 +5420,7 @@ class Mission
 						rank="CORPORAL";
 						init="if (local this) then { this setVariable [""unitInit"", [""red"", ""*"", ""*"", ""*""], true]; };";
 						name="ind_3_2_4";
-						description="          Clara 2'4 - Autorifleman";
+						description="'4 - Autorifleman@Clara 2";
 						isPlayable=1;
 					};
 					id=337;
@@ -5455,7 +5455,7 @@ class Mission
 						rank="LIEUTENANT";
 						init="if (local this) then { this setVariable [""unitInit"", [""white"", ""*"", ""*"", ""*""], true]; };";
 						name="ind_4_0_1";
-						description="Denise Actual - Squad Leader";
+						description="Actual - Squad Leader@Denise";
 						isPlayable=1;
 					};
 					id=339;
@@ -5476,7 +5476,7 @@ class Mission
 						rank="SERGEANT";
 						init="if (local this) then { this setVariable [""unitInit"", [""yellow"", ""*"", ""rto"", ""*""], true]; };";
 						name="ind_4_0_2";
-						description="     Denise '2 - RTO";
+						description="'2 - RTO@Denise";
 						isPlayable=1;
 					};
 					id=340;
@@ -5497,7 +5497,7 @@ class Mission
 						rank="CORPORAL";
 						init="if (local this) then { this setVariable [""unitInit"", [""green"", ""*"", ""*"", ""*""], true]; };";
 						name="ind_4_0_3";
-						description="     Denise '3 - Medic";
+						description="'3 - Medic@Denise";
 						isPlayable=1;
 					};
 					id=341;
@@ -5532,7 +5532,7 @@ class Mission
 						rank="SERGEANT";
 						init="if (local this) then { this setVariable [""unitInit"", [""blue"", ""*"", ""*"", ""*""], true]; };";
 						name="ind_4_1_1";
-						description="     Denise 1'1 - Team Leader";
+						description="'1 - Team Leader@Denise 1";
 						isPlayable=1;
 					};
 					id=343;
@@ -5553,7 +5553,7 @@ class Mission
 						rank="CORPORAL";
 						init="if (local this) then { this setVariable [""unitInit"", [""blue"", ""*"", ""*"", ""*""], true]; };";
 						name="ind_4_1_2";
-						description="          Denise 1'2 - Rifleman";
+						description="'2 - Rifleman@Denise 1";
 						isPlayable=1;
 					};
 					id=344;
@@ -5574,7 +5574,7 @@ class Mission
 						rank="CORPORAL";
 						init="if (local this) then { this setVariable [""unitInit"", [""red"", ""*"", ""*"", ""*""], true]; };";
 						name="ind_4_1_3";
-						description="          Denise 1'3 - Rifleman (AT)";
+						description="'3 - Rifleman (AT)@Denise 1";
 						isPlayable=1;
 					};
 					id=345;
@@ -5595,7 +5595,7 @@ class Mission
 						rank="CORPORAL";
 						init="if (local this) then { this setVariable [""unitInit"", [""red"", ""*"", ""*"", ""*""], true]; };";
 						name="ind_4_1_4";
-						description="          Denise 1'4 - Autorifleman";
+						description="'4 - Autorifleman@Denise 1";
 						isPlayable=1;
 					};
 					id=346;
@@ -5630,7 +5630,7 @@ class Mission
 						rank="SERGEANT";
 						init="if (local this) then { this setVariable [""unitInit"", [""blue"", ""*"", ""*"", ""*""], true]; };";
 						name="ind_4_2_1";
-						description="     Denise 2'1 - Team Leader";
+						description="'1 - Team Leader@Denise 2";
 						isPlayable=1;
 					};
 					id=348;
@@ -5651,7 +5651,7 @@ class Mission
 						rank="CORPORAL";
 						init="if (local this) then { this setVariable [""unitInit"", [""blue"", ""*"", ""*"", ""*""], true]; };";
 						name="ind_4_2_2";
-						description="          Denise 2'2 - Rifleman";
+						description="'2 - Rifleman@Denise 2";
 						isPlayable=1;
 					};
 					id=349;
@@ -5672,7 +5672,7 @@ class Mission
 						rank="CORPORAL";
 						init="if (local this) then { this setVariable [""unitInit"", [""red"", ""*"", ""*"", ""*""], true]; };";
 						name="ind_4_2_3";
-						description="          Denise 2'3 - Rifleman (AT)";
+						description="'3 - Rifleman (AT)@Denise 2";
 						isPlayable=1;
 					};
 					id=350;
@@ -5693,7 +5693,7 @@ class Mission
 						rank="CORPORAL";
 						init="if (local this) then { this setVariable [""unitInit"", [""red"", ""*"", ""*"", ""*""], true]; };";
 						name="ind_4_2_4";
-						description="          Denise 2'4 - Autorifleman";
+						description="'4 - Autorifleman@Denise 2";
 						isPlayable=1;
 					};
 					id=351;
@@ -5728,7 +5728,7 @@ class Mission
 						rank="SERGEANT";
 						init="if (local this) then { this setVariable [""unitInit"", [""blue"", ""*"", ""*"", ""*""], true]; };";
 						name="ind_6_0_1";
-						description="Sarah '1 - Sniper";
+						description="'1 - Sniper@Sarah";
 						isPlayable=1;
 					};
 					id=353;
@@ -5749,7 +5749,7 @@ class Mission
 						rank="SERGEANT";
 						init="if (local this) then { this setVariable [""unitInit"", [""blue"", ""*"", ""*"", ""*""], true]; };";
 						name="ind_6_0_2";
-						description="     Sarah '2 - Spotter";
+						description="'2 - Spotter@Sarah";
 						isPlayable=1;
 					};
 					id=354;
@@ -5770,7 +5770,7 @@ class Mission
 						rank="SERGEANT";
 						init="if (local this) then { this setVariable [""unitInit"", [""red"", ""*"", ""*"", ""*""], true]; };";
 						name="ind_6_0_3";
-						description="Sarah '3 - Sniper";
+						description="'3 - Sniper@Sarah";
 						isPlayable=1;
 					};
 					id=355;
@@ -5791,7 +5791,7 @@ class Mission
 						rank="SERGEANT";
 						init="if (local this) then { this setVariable [""unitInit"", [""red"", ""*"", ""*"", ""*""], true]; };";
 						name="ind_6_0_4";
-						description="     Sarah '4 - Spotter";
+						description="'4 - Spotter@Sarah";
 						isPlayable=1;
 					};
 					id=356;
@@ -5826,7 +5826,7 @@ class Mission
 						rank="SERGEANT";
 						init="if (local this) then { this setVariable [""unitInit"", [""blue"", ""*"", ""*"", ""*""], true]; };";
 						name="ind_8_0_1";
-						description="Shirley '1 - Repair Specialist";
+						description="'1 - Repair Specialist@Shirley";
 						isPlayable=1;
 					};
 					id=358;
@@ -5847,7 +5847,7 @@ class Mission
 						rank="SERGEANT";
 						init="if (local this) then { this setVariable [""unitInit"", [""red"", ""*"", ""*"", ""*""], true]; };";
 						name="ind_8_0_2";
-						description="Shirley '2 - Explosive Specialist";
+						description="'2 - Explosive Specialist@Shirley";
 						isPlayable=1;
 					};
 					id=359;
@@ -5868,7 +5868,7 @@ class Mission
 						rank="SERGEANT";
 						init="if (local this) then { this setVariable [""unitInit"", [""yellow"", ""*"", ""*"", ""*""], true]; };";
 						name="ind_8_0_3";
-						description="Shirley '3 - Engineer";
+						description="'3 - Engineer@Shirley";
 						isPlayable=1;
 					};
 					id=360;
@@ -5903,7 +5903,7 @@ class Mission
 						rank="SERGEANT";
 						init="if (local this) then { this setVariable [""unitInit"", [""white"", ""*"", ""reconleader"", ""*""], true]; };";
 						name="ind_5_0_1";
-						description="Rose '1 - Recon Team Leader";
+						description="'1 - Recon Team Leader@Rose";
 						isPlayable=1;
 					};
 					id=362;
@@ -5924,7 +5924,7 @@ class Mission
 						rank="CORPORAL";
 						init="if (local this) then { this setVariable [""unitInit"", [""blue"", ""*"", ""*"", ""*""], true]; };";
 						name="ind_5_0_2";
-						description="     Rose '2 - Recon Scout";
+						description="'2 - Recon Scout@Rose";
 						isPlayable=1;
 					};
 					id=363;
@@ -5945,7 +5945,7 @@ class Mission
 						rank="CORPORAL";
 						init="if (local this) then { this setVariable [""unitInit"", [""green"", ""*"", ""reconmedic"", ""*""], true]; };";
 						name="ind_5_0_3";
-						description="     Rose '3 - Recon Paramedic";
+						description="'3 - Recon Paramedic@Rose";
 						isPlayable=1;
 					};
 					id=364;
@@ -5966,7 +5966,7 @@ class Mission
 						rank="CORPORAL";
 						init="if (local this) then { this setVariable [""unitInit"", [""blue"", ""*"", ""recondemo"", ""*""], true]; };";
 						name="ind_5_0_4";
-						description="     Rose '4 - Demo Specialist";
+						description="'4 - Demo Specialist@Rose";
 						isPlayable=1;
 					};
 					id=365;
@@ -6001,7 +6001,7 @@ class Mission
 						rank="SERGEANT";
 						init="if (local this) then { this setVariable [""unitInit"", [""blue"", ""*"", ""*"", ""*""], true]; };";
 						name="ind_7_0_1";
-						description="Whitney '1 - Gunner (HMG)";
+						description="'1 - Gunner (HMG)@Whitney";
 						isPlayable=1;
 					};
 					id=367;
@@ -6022,7 +6022,7 @@ class Mission
 						rank="CORPORAL";
 						init="if (local this) then { this setVariable [""unitInit"", [""blue"", ""*"", ""*"", ""*""], true]; };";
 						name="ind_7_0_2";
-						description="Whitney '2 - Asst. Gunner (HMG)";
+						description="'2 - Asst. Gunner (HMG)@Whitney";
 						isPlayable=1;
 					};
 					id=368;
@@ -6043,7 +6043,7 @@ class Mission
 						rank="CORPORAL";
 						init="if (local this) then { this setVariable [""unitInit"", [""red"", ""*"", ""*"", ""*""], true]; };";
 						name="ind_7_0_3";
-						description="Whitney '3 - Gunner (HMG)";
+						description="'3 - Gunner (HMG)@Whitney";
 						isPlayable=1;
 					};
 					id=369;
@@ -6064,7 +6064,7 @@ class Mission
 						rank="CORPORAL";
 						init="if (local this) then { this setVariable [""unitInit"", [""red"", ""*"", ""*"", ""*""], true]; };";
 						name="ind_7_0_4";
-						description="Whitney '4 - Asst. Gunner (HMG)";
+						description="'4 - Asst. Gunner (HMG)@Whitney";
 						isPlayable=1;
 					};
 					id=370;
@@ -6099,7 +6099,7 @@ class Mission
 						rank="SERGEANT";
 						init="if (local this) then { this setVariable [""unitInit"", [""green"", ""*"", ""*"", ""*""], true]; };";
 						name="ind_9_0_1";
-						description="Penny '1 - Paramedic";
+						description="'1 - Paramedic@Penny";
 						isPlayable=1;
 					};
 					id=372;
@@ -6120,7 +6120,7 @@ class Mission
 						rank="SERGEANT";
 						init="if (local this) then { this setVariable [""unitInit"", [""green"", ""*"", ""*"", ""*""], true]; };";
 						name="ind_9_0_2";
-						description="Penny '2 - Paramedic";
+						description="'2 - Paramedic@Penny";
 						isPlayable=1;
 					};
 					id=373;
@@ -6155,7 +6155,7 @@ class Mission
 						rank="SERGEANT";
 						init="if (local this) then { this setVariable [""unitInit"", [""white"", ""*"", ""*"", ""*""], true]; };";
 						name="ind_10_1_1";
-						description="Mary 1'1 - Mortar Gunner";
+						description="'1 - Mortar Gunner@Mary 1";
 						isPlayable=1;
 					};
 					id=410;
@@ -6176,7 +6176,7 @@ class Mission
 						rank="SERGEANT";
 						init="if (local this) then { this setVariable [""unitInit"", [""blue"", ""*"", ""*"", ""*""], true]; };";
 						name="ind_10_1_2";
-						description="Mary 1'2 - Mortar Asst.";
+						description="'2 - Mortar Asst.@Mary 1";
 						isPlayable=1;
 					};
 					id=411;
@@ -6211,7 +6211,7 @@ class Mission
 						rank="LIEUTENANT";
 						init="if (local this) then { this setVariable [""unitInit"", [""white"", ""*"", ""*"", ""*""], true]; };";
 						name="ind_11_1_1";
-						description="Lucy 1'1 - Commander";
+						description="'1 - Commander@Lucy 1";
 						isPlayable=1;
 					};
 					id=378;
@@ -6232,7 +6232,7 @@ class Mission
 						rank="SERGEANT";
 						init="if (local this) then { this setVariable [""unitInit"", [""red"", ""*"", ""gunner"", ""*""], true]; };";
 						name="ind_11_1_2";
-						description="     Lucy 1'2 - Gunner";
+						description="'2 - Gunner@Lucy 1";
 						isPlayable=1;
 					};
 					id=379;
@@ -6253,7 +6253,7 @@ class Mission
 						rank="SERGEANT";
 						init="if (local this) then { this setVariable [""unitInit"", [""blue"", ""*"", ""driver"", ""*""], true]; };";
 						name="ind_11_1_3";
-						description="     Lucy 1'2 - Driver";
+						description="'3 - Driver@Lucy 1";
 						isPlayable=1;
 					};
 					id=380;
@@ -6288,7 +6288,7 @@ class Mission
 						rank="LIEUTENANT";
 						init="if (local this) then { this setVariable [""unitInit"", [""white"", ""*"", ""*"", ""*""], true]; };";
 						name="ind_12_1_1";
-						description="Tanya 1'1 - Commander";
+						description="'1 - Commander@Tanya 1";
 						isPlayable=1;
 					};
 					id=382;
@@ -6309,7 +6309,7 @@ class Mission
 						rank="SERGEANT";
 						init="if (local this) then { this setVariable [""unitInit"", [""red"", ""*"", ""gunner"", ""*""], true]; };";
 						name="ind_12_1_2";
-						description="     Tanya - Gunner";
+						description="'2 - Gunner@Tanya 1";
 						isPlayable=1;
 					};
 					id=383;
@@ -6330,7 +6330,7 @@ class Mission
 						rank="SERGEANT";
 						init="if (local this) then { this setVariable [""unitInit"", [""blue"", ""*"", ""driver"", ""*""], true]; };";
 						name="ind_12_1_3";
-						description="     Tanya 1'3 - Driver";
+						description="'3 - Driver@Tanya 1";
 						isPlayable=1;
 					};
 					id=384;
@@ -6351,7 +6351,7 @@ class Mission
 						rank="SERGEANT";
 						init="if (local this) then { this setVariable [""unitInit"", [""yellow"", ""*"", ""loader"", ""*""], true]; };";
 						name="ind_12_1_4";
-						description="     Tanya 1'4 - Loader";
+						description="'4 - Loader@Tanya 1";
 						isPlayable=1;
 					};
 					id=385;
@@ -6386,7 +6386,7 @@ class Mission
 						rank="LIEUTENANT";
 						init="if (local this) then { this setVariable [""unitInit"", [""white"", ""*"", ""*"", ""*""], true]; };";
 						name="ind_13_1_1";
-						description="Helen 1'1 - Pilot";
+						description="'1 - Pilot@Helen 1";
 						isPlayable=1;
 					};
 					id=387;
@@ -6407,7 +6407,7 @@ class Mission
 						rank="LIEUTENANT";
 						init="if (local this) then { this setVariable [""unitInit"", [""white"", ""*"", ""*"", ""*""], true]; };";
 						name="ind_13_1_2";
-						description="Helen 1'2 - Co-pilot";
+						description="'2 - Co-pilot@Helen 1";
 						isPlayable=1;
 					};
 					id=388;
@@ -6428,7 +6428,7 @@ class Mission
 						rank="CORPORAL";
 						init="if (local this) then { this setVariable [""unitInit"", [""blue"", ""*"", ""*"", ""*""], true]; };";
 						name="ind_13_1_3";
-						description="     Helen 1'3 - Crew";
+						description="'3 - Crew@Helen 1";
 						isPlayable=1;
 					};
 					id=389;
@@ -6449,7 +6449,7 @@ class Mission
 						rank="CORPORAL";
 						init="if (local this) then { this setVariable [""unitInit"", [""blue"", ""*"", ""*"", ""*""], true]; };";
 						name="ind_13_1_4";
-						description="     Helen 1'4 - Crew";
+						description="'4 - Crew@Helen 1";
 						isPlayable=1;
 					};
 					id=390;
@@ -6470,7 +6470,7 @@ class Mission
 						rank="CORPORAL";
 						init="if (local this) then { this setVariable [""unitInit"", [""blue"", ""*"", ""*"", ""*""], true]; };";
 						name="ind_13_1_5";
-						description="     Helen 1'5 - Crew";
+						description="'5 - Crew@Helen 1";
 						isPlayable=1;
 					};
 					id=391;
@@ -6505,7 +6505,7 @@ class Mission
 						rank="LIEUTENANT";
 						init="if (local this) then { this setVariable [""unitInit"", [""white"", ""*"", ""*"", ""*""], true]; };";
 						name="ind_14_1_1";
-						description="Petunia 1'1 - Pilot";
+						description="'1 - Pilot@Petunia 1";
 						isPlayable=1;
 					};
 					id=393;
@@ -6526,7 +6526,7 @@ class Mission
 						rank="LIEUTENANT";
 						init="if (local this) then { this setVariable [""unitInit"", [""blue"", ""*"", ""*"", ""*""], true]; };";
 						name="ind_14_1_2";
-						description="Petunia 1'2 - Co-pilot";
+						description="'2 - Co-pilot@Petunia 1";
 						isPlayable=1;
 					};
 					id=394;
@@ -6561,7 +6561,7 @@ class Mission
 						rank="LIEUTENANT";
 						init="if (local this) then { this setVariable [""unitInit"", [""white"", ""*"", ""*"", ""*""], true]; };";
 						name="ind_14_2_1";
-						description="Petunia 2'1 - Pilot";
+						description="'1 - Pilot@Petunia 2";
 						isPlayable=1;
 					};
 					id=396;
@@ -6582,7 +6582,7 @@ class Mission
 						rank="LIEUTENANT";
 						init="if (local this) then { this setVariable [""unitInit"", [""blue"", ""*"", ""*"", ""*""], true]; };";
 						name="ind_14_2_2";
-						description="Petunia 2'2 - Co-pilot";
+						description="'2 - Co-pilot@Petunia 2";
 						isPlayable=1;
 					};
 					id=397;
@@ -6616,7 +6616,7 @@ class Mission
 						skill=1;
 						init="if (local this) then { this setVariable [""unitInit"", [""white"", ""SPRG"", ""reporter"", ""SPRG Report""], true]; };";
 						name="civ_0_0_1";
-						description="SPRG Report - Reporter";
+						description="Reporter@SPRG Report";
 						isPlayable=1;
 					};
 					id=399;
@@ -6636,7 +6636,7 @@ class Mission
 						skill=1;
 						init="if (local this) then { this setVariable [""unitInit"", [""white"", ""SPRG"", ""cameraman"", ""SPRG Report""], true]; };";
 						name="civ_0_0_2";
-						description="SPRG Report - Cameraman";
+						description="Cameraman@SPRG Report";
 						isPlayable=1;
 					};
 					id=400;

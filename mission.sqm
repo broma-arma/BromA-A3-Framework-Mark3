@@ -22,7 +22,7 @@ class EditorData
 		aside[]={0.99999994,0,0};
 	};
 };
-binarizationWanted=0;
+binarizationWanted=1;
 addons[]=
 {
 	"A3_Ui_F",

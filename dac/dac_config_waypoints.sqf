@@ -25,7 +25,7 @@ switch (_type) do {
 		_checkAreaH   = [40,    15,    20,    10,    20    ];
 		_checkMaxH    = [5000,  5000,  5000,  5000,  5000  ];
 		_checkMinH    = [1,     1,     1,     1,     3     ];
-		_checkNear    = [20,    30,    30,    100,   300   ];
+		_checkNear    = [20,    30,    30,    100,   100   ];
 		_checkObjH1   = [1.5,   0.5,   0.5,   0.2,   2     ];
 		_checkObjH2   = [30,    15,    15,    5,     30    ];
 		_checkCount   = [200,   200,   200,   500,   1500  ];

@@ -16,21 +16,21 @@ private _setShowZones = 2;
 private _setShowWPs = 1;
 private _setShowUnit = [1, 1, 1, 1];
 private _setGroupType = 1;
-private _setMarkerText = ["if (isNull _group) then { """" } else { format [""(%1)"", count units _group] }"];
+private _setMarkerText = ["if (isNull _group) then { """" } else { format [""%1"", count units _group] }"];
 private _setMarkerDel = 1;
-private _setMarkerRefresh = [0.3, 0.3];
-private _setSizeWpLine = [1, 1];
-private _setSizeLeaderLine = 1;
-private _setSizeZoneLine = 2;
-private _setSizeCampLine = 4;
-private _setSizeZoneBorder = 4;
+private _setMarkerRefresh = [0.5, 1];
+private _setSizeWpLine = [0.3, 0.5];
+private _setSizeLeaderLine = 0.1;
+private _setSizeZoneLine = 0.7;
+private _setSizeCampLine = 0.9;
+private _setSizeZoneBorder = 1;
 private _setArtiMarker = 1;
-private _setCampMarker = 2;
+private _setCampMarker = 0;
 private _setSideColor = [
-	"ColorRed",
-	"ColorBlue",
-	"ColorYellow",
-	"ColorGreen",
+	"ColorOPFOR",
+	"ColorBLUFOR",
+	"ColorIndependent",
+	"ColorCivilian",
 	"ColorWhite",
 	"ColorBlack",
 	"ColorBlack",

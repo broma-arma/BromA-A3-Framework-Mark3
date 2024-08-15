@@ -24,16 +24,16 @@ private _setHidTime = ["(((10 * DAC_AI_Level) + ((skill _leader) * 50)) / ((coun
 switch (_type) do {
 	case 0: { // EASY
 		_setSkill = [
-			[0.2, 0.2], // Aiming Accuracy
-			[0.2, 0.2], // Aiming Shake
-			[0.2, 0.2], // Aiming Speed
-			[0.2, 0.2], // Endurance
-			[0.2, 0.2], // Spot Distance
-			[0.2, 0.2], // Spot Time
-			[0.2, 0.2], // Courage
-			[0.2, 0.2], // Reload Speed
-			[0.2, 0.2], // Commanding
-			[0.2, 0.2] // General
+			[0.2, 0.3], // Aiming Accuracy
+			[0.2, 0.3], // Aiming Shake
+			[0.2, 0.3], // Aiming Speed
+			[0.2, 0.3], // Endurance
+			[0.2, 0.3], // Spot Distance
+			[0.2, 0.3], // Spot Time
+			[0.2, 0.3], // Courage
+			[0.2, 0.3], // Reload Speed
+			[0.2, 0.3], // Commanding
+			[0.2, 0.3] // General
 		];
 		_setCombat = ["green"];
 		_setForm = ["line"];

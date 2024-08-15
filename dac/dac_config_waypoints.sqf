@@ -33,7 +33,7 @@ switch (_type) do {
 	};
 	case 1: {
 		//---------------#Sol---#Veh---#Tan---#Air---#Camp
-		_CheckRadius1 = [3,     10,    10,    10,    3     ];
+		_CheckRadius1 = [8,     8,      8,    15,    15    ];
 		_CheckRadius2 = [12,    15,    15,    30,    30    ];
 		_checkAreaH   = [50,    20,    25,    15,    15    ];
 		_checkMaxH    = [5000,  5000,  5000,  5000,  5000  ];
@@ -46,7 +46,7 @@ switch (_type) do {
 	};
 	case 2: {
 		//---------------#Sol---#Veh---#Tan---#Air---#Camp
-		_CheckRadius1 = [3,     10,    10,    10,    3     ];
+		_CheckRadius1 = [5,     5,     5,     10,    10    ];
 		_CheckRadius2 = [10,    10,    10,    20,    20    ];
 		_checkAreaH   = [75,    25,    25,    20,    20    ];
 		_checkMaxH    = [5000,  5000,  5000,  5000,  5000  ];
@@ -59,7 +59,7 @@ switch (_type) do {
 	};
 	case 3: {
 		//---------------#Sol---#Veh---#Tan---#Air---#Camp
-		_CheckRadius1 = [3,     10,    10,    10,    3     ];
+		_CheckRadius1 = [10,    10,    10,    20,    20    ];
 		_CheckRadius2 = [50,    30,    30,    40,    50    ];
 		_checkAreaH   = [100,   1,     1,     10,    10    ];
 		_checkMaxH    = [5000,  5000,  5000,  5000,  5000  ];
@@ -72,7 +72,7 @@ switch (_type) do {
 	};
 	case 4: {
 		//---------------#Sol---#Veh---#Tan---#Air---#Camp
-		_CheckRadius1 = [3,     10,    10,    10,    3     ];
+		_CheckRadius1 = [0,     0,     0,     0,     0     ];
 		_CheckRadius2 = [0,     0,     0,     0,     0     ];
 		_checkAreaH   = [50,    50,    50,    50,    50    ];
 		_checkMaxH    = [5000,  5000,  5000,  5000,  5000  ];
@@ -85,7 +85,7 @@ switch (_type) do {
 	};
 	case 5: {
 		//---------------#Sol---#Veh---#Tan---#Air---#Camp
-		_CheckRadius1 = [3,     10,    10,    10,    3     ];
+		_CheckRadius1 = [5,     5,     5,     10,    10    ];
 		_CheckRadius2 = [10,    10,    10,    20,    20    ];
 		_checkAreaH   = [50,    50,    50,    50,    50    ];
 		_checkMaxH    = [5000,  5000,  5000,  5000,  5000  ];

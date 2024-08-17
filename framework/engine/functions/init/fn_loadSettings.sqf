@@ -20,6 +20,8 @@ mission_enable_side_c = side_c_faction != "";
 units_player_useVanillaGear = mission_vanilla_player_loadouts;
 units_AI_useVanillaGear = mission_vanilla_ai_loadouts;
 read_local_cargo = false;
+mission_author_name = [getMissionConfigValue ["Author", "Unknown"]];
+mission_version = missionName splitString "_" param [3, "v0"];
 
 call compile preprocessFileLineNumbers "mission\settings\plugin-settings.sqf";
 [] call BRM_FMK_fnc_assignSideProperties;

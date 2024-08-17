@@ -1,7 +1,3 @@
-// Credits
-	mission_author_name = ["You"];
-	mission_version = "v0";
-
 // Gamemode
 	// "coop" (Players vs AI), "tvt" (Players vs Players), "cotvt" (Players vs Players/AI)
 	mission_game_mode = "coop";

@@ -1,14 +1,11 @@
 class Params {
+	#include "mission\params.hpp"
 	#include "framework\engine\configs\params.hpp"
 };
 
 class CfgFunctions {
 	#include "framework\engine\configs\CfgFunctions.hpp"
 };
-
-#define BRM_PLUGIN_DIALOGS
-	#include "framework\engine\configs\plugins.hpp"
-#undef BRM_PLUGIN_DIALOGS
 
 class CfgPlugins {
 	#define BRM_PLUGIN_META
@@ -26,9 +23,6 @@ class BRM_CfgEnding {
 
 class CfgNotifications {
 	#include "framework\engine\configs\CfgNotifications.hpp"
-	#define BRM_PLUGIN_NOTIFICATIONS
-		#include "framework\engine\configs\plugins.hpp"
-	#undef BRM_PLUGIN_NOTIFICATIONS
 };
 
 disableRandomization[] = {"CAManBase"};

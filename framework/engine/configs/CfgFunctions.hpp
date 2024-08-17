@@ -44,6 +44,13 @@ class BRM_MissionConditions {
 	};
 };
 
+class BRM_DAC {
+	class init {
+		file = "framework\engine\functions\plugins\dac_plugin";
+		class postInit {};
+	};
+};
+
 class BRM_Round_System {
 	class init {
 		file = "framework\engine\functions\plugins\round_system";

@@ -7,12 +7,12 @@ class CfgFunctions {
 };
 
 #define BRM_PLUGIN_DIALOGS
-	#include "framework\plugins\plugins.hpp"
+	#include "framework\engine\configs\plugins.hpp"
 #undef BRM_PLUGIN_DIALOGS
 
 class CfgPlugins {
 	#define BRM_PLUGIN_META
-		#include "framework\plugins\plugins.hpp"
+		#include "framework\engine\configs\plugins.hpp"
 	#undef BRM_PLUGIN_META
 };
 
@@ -27,7 +27,7 @@ class BRM_CfgEnding {
 class CfgNotifications {
 	#include "framework\engine\configs\CfgNotifications.hpp"
 	#define BRM_PLUGIN_NOTIFICATIONS
-		#include "framework\plugins\plugins.hpp"
+		#include "framework\engine\configs\plugins.hpp"
 	#undef BRM_PLUGIN_NOTIFICATIONS
 };
 

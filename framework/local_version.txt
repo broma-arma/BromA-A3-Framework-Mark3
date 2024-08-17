@@ -1,1 +1,4 @@
-"075"
+// DEPRECATED
+
+#include "engine\version.hpp"
+__BRM_VERSION_STR__

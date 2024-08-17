@@ -1,3 +1,5 @@
+if (!isNil "BRM_FMK_fnc_loadSettings") then { _this call BRM_FMK_fnc_loadSettings };
+
 mission_settings_loaded = false;
 
 call compile preprocessFileLineNumbers "mission\settings\mission-settings.sqf";

@@ -17,8 +17,8 @@ if (_type > 0 && _type < count _factions + 1) then {
 	};
 };
 
-private _initGroup = format ["{ [_x, '%1'] call BRM_fnc_initAI; } forEach units _group;", _faction];
-private _initUnit = format ["[_unit, '%1'] call BRM_fnc_initAI;", _faction];
+private _initGroup = format ["{ [_x, '%1'] call BRM_FMK_fnc_initAI; } forEach units _group;", _faction];
+private _initUnit = format ["[_unit, '%1'] call BRM_FMK_fnc_initAI;", _faction];
 
 [
 	// Create, ReachWP, NotAliveGroup, NotAliveUnit, BeforeReduce, AfterBuildUp, EnemyDetected

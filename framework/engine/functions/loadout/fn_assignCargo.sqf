@@ -1,3 +1,5 @@
+if (!isNil "BRM_FMK_fnc_assignCargo") then { _this call BRM_FMK_fnc_assignCargo };
+
 params ["_object", "_faction", "_type"];
 
 if (!isServer || _object isKindOf "Man" || _object getVariable ["unit_initialized", false]) exitWith {};

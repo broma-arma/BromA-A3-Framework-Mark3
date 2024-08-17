@@ -1,31 +1,18 @@
 class BRM {
-	class plugins {
-		file = "framework\engine\functions\plugins";
-		class logPlugins { postInit = 1; };
-		class warnConflict { postInit = 1; };
-	};
 	class init {
 		file = "framework\engine\functions\init";
-		class loadSettings { preInit = 1; };
-		class initVariables { preInit = 1; };
-		class engine_pre { preInit = 1; };
-	};
-	class unit {
-		file = "framework\engine\functions\unit";
-		class defineGroups { postInit = 1; };
-		class createPlayerVehicles { postInit = 1; };
+		class preInit { preInit = 1; };
+		class postInit { postInit = 1; };
+
+		class loadSettings {};
+		class endLoading {};
 	};
 	class ending {
 		file = "framework\engine\functions\ending";
 		class getEnding {};
 	};
-	class tasks {
-		file = "framework\engine\functions\tasks";
-		class readExtraction { postInit = 1; };
-	};
 	class events {
-		file = "framework\engine\events";
-		class initPlayer { postInit = 1; };
+		file = "framework\engine\functions\events";
 		class onPlayerKilled {};
 		class onPlayerRespawn {};
 		class initAI {};
@@ -33,7 +20,7 @@ class BRM {
 	};
 	class briefing {
 		file = "framework\engine\functions\briefing";
-		class loadBriefing { postInit = 1; };
+		class loadBriefing {};
 	};
 	class loadout {
 		file = "framework\engine\functions\loadout";
@@ -43,13 +30,30 @@ class BRM {
 	};
 };
 
-#define BRM_PLUGIN_FUNCTIONS
-	#include "..\..\plugins\plugins.hpp"
-#undef BRM_PLUGIN_FUNCTIONS
+class BRM_HC {
+	class init {
+		file = "framework\engine\functions\plugins\headless_client";
+		class setParams {};
+	};
+};
 
-class BRM_endLoading {
-	class Functions {
-		file = "framework\engine\functions\init";
-		class endLoading { postInit = 1; };
+class BRM_MissionConditions {
+	class init {
+		file = "framework\engine\functions\plugins\mission_conditions";
+		class setParams {};
+	};
+};
+
+class BRM_Round_System {
+	class init {
+		file = "framework\engine\functions\plugins\round_system";
+		class postInit {};
+	};
+};
+
+class BRM_PlankBuilding {
+	class init {
+		file = "framework\engine\functions\plugins\plank_building";
+		class postInit {};
 	};
 };

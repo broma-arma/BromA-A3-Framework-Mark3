@@ -1,3 +1,5 @@
+if (!isNil "BRM_FMK_fnc_getEnding") then { _this call BRM_FMK_fnc_getEnding };
+
 params ["_ending"];
 
 private _title = "Mission over";

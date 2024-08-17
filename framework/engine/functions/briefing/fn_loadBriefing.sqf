@@ -1,3 +1,5 @@
+if (!isNil "BRM_FMK_fnc_loadBriefing") then { _this call BRM_FMK_fnc_loadBriefing };
+
 if (!hasInterface) exitWith {};
 
 call compile preprocessFileLineNumbers "\broma_framework\credits.sqf";

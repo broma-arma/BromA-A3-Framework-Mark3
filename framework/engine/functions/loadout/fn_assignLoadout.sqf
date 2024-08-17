@@ -1,3 +1,5 @@
+if (!isNil "BRM_FMK_fnc_assignLoadout") then { _this call BRM_FMK_fnc_assignLoadout };
+
 params ["_unit", "_faction", ["_type", ""]];
 
 if !(_unit isKindOf "Man" && local _unit) exitWith {};

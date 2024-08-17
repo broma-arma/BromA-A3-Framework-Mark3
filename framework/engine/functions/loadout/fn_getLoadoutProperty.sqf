@@ -1,3 +1,5 @@
+if (!isNil "BRM_FMK_fnc_getLoadoutProperty") then { _this call BRM_FMK_fnc_getLoadoutProperty };
+
 params ["_faction", "_property"];
 
 #include "\broma_framework\loadouts\includes\private-variables.sqf"

@@ -254,7 +254,7 @@ class Mission
 			{
 				text="Executes code to the units inside the trigger.";
 				condition="true";
-				onActivation="[thisTrigger, ""side _x == civilian"", ""[_x, 'side_b'] call BRM_fnc_initAI""] spawn BRM_FMK_fnc_callCodeArea;";
+				onActivation="[thisTrigger, ""side _x == civilian"", ""[_x, 'side_b'] call BRM_FMK_fnc_initAI""] spawn BRM_FMK_fnc_callCodeArea;";
 				sizeA=2;
 				sizeB=2;
 				sizeC=0;

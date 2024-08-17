@@ -1,3 +1,5 @@
+if (!isNil "BRM_FMK_fnc_endLoading") then { _this call BRM_FMK_fnc_endLoading };
+
 pluginsLoaded = true;
 
 if (isServer) then {

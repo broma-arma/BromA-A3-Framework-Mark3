@@ -1,3 +1,5 @@
+// Framework ending config, see https://github.com/broma-arma/BromA-A3-Framework-Mark3/wiki/Ending-System
+
 // Reason
 //   %1 - Winners
 //   %2 - Losers

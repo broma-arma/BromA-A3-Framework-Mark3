@@ -1,4 +1,4 @@
-// Include all endings related to your mission here. (See https://community.bistudio.com/wiki/Arma_3:_Debriefing#Debriefing)
+// Debriefing config, see https://community.bistudio.com/wiki/Arma_3:_Debriefing#Debriefing
 
 class victory {
 	title = "MISSION OVER";

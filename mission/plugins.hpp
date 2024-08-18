@@ -6,7 +6,7 @@
 #define RESPAWN_SYSTEM 1
 #define DAC_PLUGIN 1
 #define TIME_ACCEL 1
-#define VANILLA_SPECTATOR 1
+#define ACE3_SPECTATOR 1
 #define TFAR_PLUGIN 1
 #define ACRE2_PLUGIN 1
 #define SPAWN_AI 1
@@ -36,5 +36,5 @@
 // Conflicts with spawn_protection, f_casualties_cap, and commander_lock plugin.
 //#define ROUND_SYSTEM 1
 
-// Conflicts with vanilla_spectator plugin.
-//#define ACE3_SPECTATOR 1
+// Conflicts with ace3_spectator plugin.
+//#define VANILLA_SPECTATOR 1

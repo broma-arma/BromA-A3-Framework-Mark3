@@ -2,7 +2,7 @@ if (!isNil "BRM_FMK_fnc_loadSettings") then { _this call BRM_FMK_fnc_loadSetting
 
 mission_settings_loaded = false;
 
-call compile preprocessFileLineNumbers "mission\settings\mission-settings.sqf";
+call compile preprocessFileLineNumbers "mission\settings\mission.sqf";
 
 endings_victory = "victory";
 endings_defeat = "defeat";
@@ -23,7 +23,7 @@ read_local_cargo = false;
 mission_author_name = [getMissionConfigValue ["Author", "Unknown"]];
 mission_version = missionName splitString "_" param [3, "v0"];
 
-call compile preprocessFileLineNumbers "mission\settings\plugin-settings.sqf";
+call compile preprocessFileLineNumbers "mission\settings\plugin.sqf";
 [] call BRM_FMK_fnc_assignSideProperties;
 
 mission_settings_loaded = true;

@@ -41,13 +41,13 @@
 	[{}, {}, {}]
 ] spawn BRM_FMK_fnc_newTask;
 
+// Abortive, failure causes mission failure.
+[side_a_side, "a3", ["Protect the Pilot", "Don't let the Pilot die.", "defend", taskPilot],
+	[{ true }, { false }, { !alive taskPilot }], 3, [{}, {}, {}]
+] spawn BRM_FMK_fnc_newTask;
+
 // Optional, outcome doesn't affect mission outcome.
-[side_a_side, "a3", [
+[side_a_side, "a4", [
 	"Kill Nikos?", "To kill Nikos, or not to kill Nikos, that is the question. Though, we don't care what the answer is.",
 	"kill", objNull // Use objNull for no position
 ], [{ true }, { !alive taskNikos }], 0, [{}, {}, {}]] spawn BRM_FMK_fnc_newTask;
-
-// Abortive, failure causes mission failure.
-[side_a_side, "a4", ["Protect the Pilot", "Don't let the Pilot die.", "defend", taskPilot],
-	[{ true }, { false }, { !alive taskPilot }], 3, [{}, {}, {}]
-] spawn BRM_FMK_fnc_newTask;

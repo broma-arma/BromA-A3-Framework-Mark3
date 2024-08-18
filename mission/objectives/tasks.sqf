@@ -1,7 +1,7 @@
 // Use this file to call any functions or scripts related to tasks.
 // Only the Server will execute this file.
 
-// Primary task
+// Primary, completion required to complete mission and failure causes mission failure.
 [
 	side_a_side, // SIDE / GROUP / UNIT that the task will be assigned to
 	"a1", // Unique task identifier
@@ -26,7 +26,7 @@
 	]
 ] spawn BRM_FMK_fnc_newTask;
 
-// Secondary task
+// Secondary, completion or failure required to complete mission.
 [
 	side_a_side,
 	"a2",
@@ -41,13 +41,13 @@
 	[{}, {}, {}]
 ] spawn BRM_FMK_fnc_newTask;
 
-// Optional task
+// Optional, outcome doesn't affect mission outcome.
 [side_a_side, "a3", [
 	"Kill Nikos?", "To kill Nikos, or not to kill Nikos, that is the question. Though, we don't care what the answer is.",
 	"kill", objNull // Use objNull for no position
 ], [{ true }, { !alive taskNikos }], 0, [{}, {}, {}]] spawn BRM_FMK_fnc_newTask;
 
-// Abortive task
+// Abortive, failure causes mission failure.
 [side_a_side, "a4", ["Protect the Pilot", "Don't let the Pilot die.", "defend", taskPilot],
 	[{ true }, { false }, { !alive taskPilot }], 3, [{}, {}, {}]
 ] spawn BRM_FMK_fnc_newTask;

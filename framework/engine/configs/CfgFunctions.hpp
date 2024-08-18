@@ -5,6 +5,7 @@ class BRM {
 		class postInit { postInit = 1; };
 
 		class loadSettings {};
+		class loadBriefing {};
 		class endLoading {};
 	};
 	class ending {
@@ -17,10 +18,6 @@ class BRM {
 		class onPlayerRespawn {};
 		class initAI {};
 		class onAIKilled {};
-	};
-	class briefing {
-		file = "framework\engine\functions\briefing";
-		class loadBriefing {};
 	};
 	class loadout {
 		file = "framework\engine\functions\loadout";

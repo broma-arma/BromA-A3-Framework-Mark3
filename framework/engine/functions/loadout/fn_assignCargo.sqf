@@ -25,7 +25,7 @@ _object setVariable ["unit_initialized", true];
 
 	{
 		_x = toLower _x;
-		private _overrideCargo = true;
+		private _overrideCargo = false;
 		#include "..\..\..\..\mission\loadouts\cargo-list.sqf"
 		if (!_overrideCargo) then {
 			#include "\broma_framework\loadouts\cargo-list.sqf"

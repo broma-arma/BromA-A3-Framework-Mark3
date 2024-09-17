@@ -237,7 +237,7 @@ class Mission
 			position[]={250,5,450};
 			class Attributes
 			{
-				name="trg1";
+				name="dacZone_1";
 				condition="false";
 				sizeA=100;
 				sizeB=100;

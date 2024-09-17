@@ -1,13 +1,13 @@
 // Use this file to call any functions or scripts that spawn AI units.
 // Only the AI Controller (Server or Headless Client) will execute this file.
 
-[trg1, "Create an activated normal default friendly zone named zone1 on network 1, with 1 group of infantry and 2 groups of vehicles."] call BRM_FMK_DAC_fnc_new;
+[dacZone_1, "Create an activated normal default friendly zone named zone1 on network 1, with 1 group of infantry and 2 groups of vehicles."] call BRM_FMK_DAC_fnc_new;
 
 // DAC Zone Examples
 //   Enemy zone:
-//[trg1, "Create an activated normal default enemy zone named anything on network random, with 1 squad of infantry."] call BRM_FMK_DAC_fnc_new;
+//[dacZone_1, "Create an activated normal default enemy zone named anything on network random, with 1 squad of infantry."] call BRM_FMK_DAC_fnc_new;
 //   Combined arms enemy zone:
-//[trg1, "Create an activated normal default enemy zone named anything on network random, with 2 squads of infantry, 2 fire-teams of vehicles and 1 group of armor."] call BRM_FMK_DAC_fnc_new;
+//[dacZone_1, "Create an activated normal default enemy zone named anything on network random, with 2 squads of infantry, 2 fire-teams of vehicles and 1 group of armor."] call BRM_FMK_DAC_fnc_new;
 
 // DAC Camp Examples
 //   Camp supporting a network:

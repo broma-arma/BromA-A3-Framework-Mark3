@@ -8,10 +8,6 @@ class BRM {
 		class loadBriefing {};
 		class endLoading {};
 	};
-	class ending {
-		file = "framework\engine\functions\ending";
-		class getEnding {};
-	};
 	class events {
 		file = "framework\engine\functions\events";
 		class onPlayerKilled {};

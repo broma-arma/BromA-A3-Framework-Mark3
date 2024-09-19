@@ -13,16 +13,8 @@ class CfgPlugins {
 	#undef BRM_PLUGIN_META
 };
 
-class CfgDebriefing {
-	#include "mission\debriefing.hpp"
-};
-
 class BRM_CfgEnding {
 	#include "mission\ending.hpp"
-};
-
-class CfgNotifications {
-	#include "framework\engine\configs\CfgNotifications.hpp"
 };
 
 disableRandomization[] = {"CAManBase"};

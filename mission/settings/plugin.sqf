@@ -2,13 +2,6 @@
 	// Units that are allowed to use third person, regardless of settings.
 	tp_allowed_units = [];
 
-// Body Removal
-	// Delay, in seconds, until bodies are removed.
-	f_var_removeBodyDelay = 120;
-
-	// Minimum distance, in meters, players need to be for bodies to be removed.
-	f_var_removeBodyDistance = 300;
-
 // Casualty Cap
 	// BLUFOR groups
 	casualty_group_BLU = "[blu_0_0, blu_1_0, blu_1_1, blu_1_2, blu_2_0, blu_2_1, blu_2_2, blu_3_0, blu_3_1, blu_3_2, blu_4_0, blu_4_1, blu_4_2]";

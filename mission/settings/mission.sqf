@@ -13,7 +13,7 @@
 
 	// Side and faction of the third faction.
 	side_c_side = INDEPENDENT;
-	side_c_faction = ""; // Leave empty if unneeded
+	side_c_faction = "AAF"; // Change to empty string if unneeded: ""
 
 // Loadouts
 	// Disable the framework's loadout system for players.
@@ -31,7 +31,7 @@
 	mission_require_extraction = [side_a_side];
 
 	// Extraction objects for each side. Can be a Game Logic or regular vehicle/object.
-	// Any objects that match the regex "(blu|op|ind|civ)_extraction_.*" will be added automatically. E.g. "blu_extraction_1" or "ind_extraction_point"
+	// Any LocationEvacPoint_F object that match the regex "(blu|op|ind|civ)_extraction_.*" will be added automatically. E.g. "blu_extraction_1" or "ind_extraction_point"
 	mission_extraction_points_a = [];
 	mission_extraction_points_b = [];
 	mission_extraction_points_c = [];

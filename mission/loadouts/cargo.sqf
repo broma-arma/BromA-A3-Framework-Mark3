@@ -1,3 +1,4 @@
+#include "\broma_framework\mission\cargo.hpp"
 switch (_x) do {
 	/*
 	case "ammo": {

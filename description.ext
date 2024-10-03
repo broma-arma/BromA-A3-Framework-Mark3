@@ -1,21 +1,27 @@
+// You do not need to edit anything in this file. It is needed for framework functionality.
+// For advanced usage, see https://community.bistudio.com/wiki/Description.ext for documentation.
+// Do note that many of the settings can be set in the editor.
+
+disableRandomization[] = {"CAManBase"}; // Disable randomization of people
+
+// The following is needed by the framework.
+#include "mission\plugins.hpp"
 class Params {
 	#include "mission\params.hpp"
-	#include "framework\engine\configs\params.hpp"
+	#if __has_include("\broma_framework\mission\Params.hpp")
+	#include "\broma_framework\mission\Params.hpp"
+	#endif
 };
 
-class CfgFunctions {
-	#include "framework\engine\configs\CfgFunctions.hpp"
+class CfgDebriefingSections {
+	#if __has_include("\broma_framework\mission\CfgDebriefingSections.hpp")
+	#include "\broma_framework\mission\CfgDebriefingSections.hpp"
+	#endif
 };
 
-class CfgPlugins {
-	#define BRM_PLUGIN_META
-		#include "framework\engine\configs\plugins.hpp"
-	#undef BRM_PLUGIN_META
+class BRM_FMK {
+	missionVersion[] = {0, 8, 0, 0};
+	#if __has_include("\broma_framework\mission\BRM_FMK.hpp")
+	#include "\broma_framework\mission\BRM_FMK.hpp"
+	#endif
 };
-
-class BRM_CfgEnding {
-	#include "mission\ending.hpp"
-};
-
-disableRandomization[] = {"CAManBase"};
-disableChannels[] = {0, 1, 2};

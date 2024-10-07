@@ -1,0 +1,7 @@
+// Mission Conditions
+#ifdef PARAMS
+	//#define MISCONDITIONS_PARAM_TIME 41
+	//#define MISCONDITIONS_PARAM_WEATHER 10
+	//#define MISCONDITIONS_PARAM_FOG 15
+	//#define MISCONDITIONS_PARAM_WIND 11
+#endif

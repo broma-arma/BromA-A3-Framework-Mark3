@@ -7,8 +7,6 @@
 #define DAC_PLUGIN 1
 #define TIME_ACCEL 1
 #define ACE3_SPECTATOR 1
-#define TFAR_PLUGIN 1
-#define ACRE2_PLUGIN 1
 #define SPAWN_AI 1
 #define BLOCK_TP 1
 #define F_EVADE_ESCAPE 1

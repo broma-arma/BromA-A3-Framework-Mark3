@@ -9,7 +9,72 @@ disableRandomization[] = {"CAManBase"}; // Disable randomization of people
 class Params {
 	#include "mission\params.hpp"
 	#if __has_include("\broma_framework\mission\Params.hpp")
+	#define PARAMS 1
+	#if __has_include("mission\settings\plugins\ace3_plugin.sqf")
+	#include "mission\settings\plugins\ace3_plugin.sqf"
+	#endif
+	#if __has_include("mission\settings\plugins\block_tp.sqf")
+	#include "mission\settings\plugins\block_tp.sqf"
+	#endif
+	#if __has_include("mission\settings\plugins\casualty_cap.sqf")
+	#include "mission\settings\plugins\casualty_cap.sqf"
+	#endif
+	#if __has_include("mission\settings\plugins\ch_view_distance.sqf")
+	#include "mission\settings\plugins\ch_view_distance.sqf"
+	#endif
+	#if __has_include("mission\settings\plugins\civilian_casualty_cap.sqf")
+	#include "mission\settings\plugins\civilian_casualty_cap.sqf"
+	#endif
+	#if __has_include("mission\settings\plugins\commander_lock.sqf")
+	#include "mission\settings\plugins\commander_lock.sqf"
+	#endif
+	#if __has_include("mission\settings\plugins\dac_plugin.sqf")
+	#include "mission\settings\plugins\dac_plugin.sqf"
+	#endif
+	#if __has_include("mission\settings\plugins\friendly_fire.sqf")
+	#include "mission\settings\plugins\friendly_fire.sqf"
+	#endif
+	#if __has_include("mission\settings\plugins\headless_client.sqf")
+	#include "mission\settings\plugins\headless_client.sqf"
+	#endif
+	#if __has_include("mission\settings\plugins\intros.sqf")
+	#include "mission\settings\plugins\intros.sqf"
+	#endif
+	#if __has_include("mission\settings\plugins\mission_conditions.sqf")
+	#include "mission\settings\plugins\mission_conditions.sqf"
+	#endif
+	#if __has_include("mission\settings\plugins\plank_building.sqf")
+	#include "mission\settings\plugins\plank_building.sqf"
+	#endif
+	#if __has_include("mission\settings\plugins\prevent_reslot.sqf")
+	#include "mission\settings\plugins\prevent_reslot.sqf"
+	#endif
+	#if __has_include("mission\settings\plugins\respawn_system.sqf")
+	#include "mission\settings\plugins\respawn_system.sqf"
+	#endif
+	#if __has_include("mission\settings\plugins\round_system.sqf")
+	#include "mission\settings\plugins\round_system.sqf"
+	#endif
+	#if __has_include("mission\settings\plugins\setup_zone.sqf")
+	#include "mission\settings\plugins\setup_zone.sqf"
+	#endif
+	#if __has_include("mission\settings\plugins\spawn_ai.sqf")
+	#include "mission\settings\plugins\spawn_ai.sqf"
+	#endif
+	#if __has_include("mission\settings\plugins\spawn_protection.sqf")
+	#include "mission\settings\plugins\spawn_protection.sqf"
+	#endif
+	#if __has_include("mission\settings\plugins\time_accel.sqf")
+	#include "mission\settings\plugins\time_accel.sqf"
+	#endif
+	#if __has_include("mission\settings\plugins\time_limit.sqf")
+	#include "mission\settings\plugins\time_limit.sqf"
+	#endif
+	#if __has_include("mission\settings\plugins\vanilla_spectator.sqf")
+	#include "mission\settings\plugins\vanilla_spectator.sqf"
+	#endif
 	#include "\broma_framework\mission\Params.hpp"
+	#undef PARAMS
 	#endif
 };
 

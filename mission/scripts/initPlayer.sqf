@@ -1,7 +1,8 @@
-// This script will be run only for the players.
+// Executed only on players, when mission is started or JIP. (File can be deleted, if unneeded)
 
 
 
-sleep 0.001; // Anything below this line will be executed beyond the briefing screen.
+{ // Code in here will be executed beyond the briefing screen.
 
 
+}

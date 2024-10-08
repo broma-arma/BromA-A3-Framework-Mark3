@@ -9,8 +9,6 @@
 #define ACE3_SPECTATOR 1
 #define SPAWN_AI 1
 #define BLOCK_TP 1
-#define F_EVADE_ESCAPE 1
-#define F_REMOVE_BODY 1
 #define SPAWN_PROTECTION 1
 #define MAP_COVER 1
 #define SETUP_ZONE 1

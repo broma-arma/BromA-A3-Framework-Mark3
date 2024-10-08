@@ -15,7 +15,7 @@
 #define CH_VIEW_DISTANCE 1
 #define CIVILIAN_CASUALTY_CAP 1
 #define TIME_LIMIT 1
-#define F_CASUALTIES_CAP 1
+#define CASUALTY_CAP 1
 #define PREVENT_RESLOT 1
 #define SYNC_STATUS 1
 #define FRIENDLY_FIRE 1
@@ -29,7 +29,7 @@
 #define INTROS 1
 #define PLANK_BUILDING 1
 
-// Conflicts with spawn_protection, f_casualties_cap, and commander_lock plugin.
+// Conflicts with spawn_protection, casualty_cap, and commander_lock plugin.
 //#define ROUND_SYSTEM 1
 
 // Conflicts with ace3_spectator plugin.

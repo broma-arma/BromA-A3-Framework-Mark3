@@ -2,7 +2,7 @@
 switch (_x) do {
 	/*
 	case "ammo": {
-		 // Also add a GPS and 5 Mine Detectors to "ammo" cargo
+		// Also add a GPS and 5 Mine Detectors to "ammo" cargo
 		[_object,
 			"ItemGPS",
 			["MineDetector", 5]
@@ -10,7 +10,7 @@ switch (_x) do {
 	};
 
 	case "explosives": {
-		_overrideCargo = true; // Override framework's "explosives" cargo
+		_override = true; // Override framework's "explosives" cargo
 
 		[_object,
 			["DemoCharge_Remote_Mag",    20],

@@ -7,7 +7,9 @@ disableRandomization[] = {"CAManBase"}; // Disable randomization of people
 // The following is needed by the framework.
 #include "mission\plugins.hpp"
 class Params {
+	#if __has_include("mission\params.hpp")
 	#include "mission\params.hpp"
+	#endif
 	#if __has_include("\broma_framework\mission\Params.hpp")
 	#define PARAMS 1
 	#if __has_include("mission\settings\plugins\ace3_plugin.sqf")

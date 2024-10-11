@@ -6714,20 +6714,18 @@ class Mission
 		class Item89
 		{
 			dataType="Marker";
-			position[]={245,1.1157339e+029,225};
+			position[]={245,5,225};
 			name="veh_blufor_Support_fuel";
 			type="b_support";
 			id=475;
-			atlOffset=1.1157339e+029;
 		};
 		class Item90
 		{
 			dataType="Marker";
-			position[]={235,1.392227e+035,225};
+			position[]={235,5,225};
 			name="veh_blufor_Support_ammo";
 			type="b_support";
 			id=476;
-			atlOffset=1.392227e+035;
 		};
 		class Item91
 		{
@@ -6740,47 +6738,42 @@ class Mission
 		class Item92
 		{
 			dataType="Marker";
-			position[]={255,2.685768e+008,225};
+			position[]={255,5,225};
 			name="veh_blufor_Support_medical";
 			type="b_med";
 			id=478;
-			atlOffset=2.685768e+008;
 		};
 		class Item93
 		{
 			dataType="Marker";
-			position[]={235,1.1157339e+029,210};
+			position[]={235,5,210};
 			name="veh_blufor_Truck_1";
 			type="b_motor_inf";
 			id=479;
-			atlOffset=1.1157339e+029;
 		};
 		class Item94
 		{
 			dataType="Marker";
-			position[]={245,1.1157339e+029,210};
+			position[]={245,5,210};
 			name="veh_blufor_Truck_2";
 			type="b_motor_inf";
 			id=480;
-			atlOffset=1.1157339e+029;
 		};
 		class Item95
 		{
 			dataType="Marker";
-			position[]={255,1.7459475e+008,210};
+			position[]={255,5,210};
 			name="veh_blufor_LightVehicle_1";
 			type="b_motor_inf";
 			id=482;
-			atlOffset=1.7459475e+008;
 		};
 		class Item96
 		{
 			dataType="Marker";
-			position[]={265,1.0789765e+029,210};
+			position[]={265,5,210};
 			name="veh_blufor_LightVehicle_2";
 			type="b_motor_inf";
 			id=483;
-			atlOffset=1.0789765e+029;
 		};
 		class Item97
 		{
@@ -6793,11 +6786,10 @@ class Mission
 		class Item98
 		{
 			dataType="Marker";
-			position[]={255,1.0789765e+029,195};
+			position[]={255,5,195};
 			name="veh_blufor_HeavyVehicle_2";
 			type="b_armor";
 			id=489;
-			atlOffset=1.0789765e+029;
 		};
 		class Item99
 		{
@@ -6834,11 +6826,10 @@ class Mission
 		class Item103
 		{
 			dataType="Marker";
-			position[]={250,1.7459475e+008,130};
+			position[]={250,5,130};
 			name="veh_blufor_AttackPlane_1";
 			type="b_plane";
 			id=494;
-			atlOffset=1.7459475e+008;
 		};
 		class Item104
 		{
@@ -7234,7 +7225,7 @@ class Mission
 		class Item142
 		{
 			dataType="Marker";
-			position[]={985.31702,5,210.039};
+			position[]={985,5,210};
 			name="veh_opfor_Truck_1";
 			type="o_motor_inf";
 			id=589;
@@ -7306,11 +7297,10 @@ class Mission
 		class Item151
 		{
 			dataType="Marker";
-			position[]={1010,6.947008e+008,150};
+			position[]={1010,5,150};
 			name="veh_opfor_AttackHelo_2";
 			type="o_air";
 			id=601;
-			atlOffset=6.947008e+008;
 		};
 		class Item152
 		{

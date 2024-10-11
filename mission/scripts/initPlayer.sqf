@@ -1,4 +1,4 @@
-// Executed only on players, when mission is started or JIP. (File can be deleted, if unneeded)
+// Executed on players, when mission is started or JIP.
 
 
 

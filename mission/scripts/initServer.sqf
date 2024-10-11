@@ -1,4 +1,4 @@
-// Executed only on server, when mission is started. (File can be deleted, if unneeded)
+// Executed on server, when mission is started.
 
 
 

@@ -1,4 +1,4 @@
-// Executed only on server, when player joins mission. (File can be deleted, if unneeded)
+// Executed on server, when player joins mission.
 params ["_player", "_didJIP"];
 
 

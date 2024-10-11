@@ -1,4 +1,4 @@
-// Executed on server, headless client, and players, when mission is started or JIP. (File can be deleted, if unneeded)
+// Executed on server, headless client, and players, when mission is started or JIP.
 
 
 

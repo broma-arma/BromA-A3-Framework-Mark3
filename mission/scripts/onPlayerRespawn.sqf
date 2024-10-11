@@ -1,4 +1,4 @@
-// Executed on players, when player respawns. (File can be deleted, if unneeded)
+// Executed on players, when player respawns.
 params ["_unit", "_corpse"];
 
 

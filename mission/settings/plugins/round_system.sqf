@@ -42,6 +42,8 @@
 	_respawnMarkersB = [format ["respawn_%1", toLower str side_b_side]];
 	_respawnMarkersC = [format ["respawn_%1", toLower str side_c_side]];
 #else
+	// Amount of rounds needed to win - 1: 1, 2: 2, 3: 3, 4: 4, 5: 5
 	//#define ROUNDSYS_PARAM_ROUNDS 3
+	// Time limit per round - 1: 1 minute, 5: 5 minutes, 15: 15 minutes, 30: 30 minutes, 60: 1 hour, -1: No limit
 	//#define ROUNDSYS_PARAM_TIME 15
 #endif
